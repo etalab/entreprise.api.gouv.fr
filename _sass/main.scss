@@ -1,0 +1,81 @@
+.hero {
+  background-color: #0081D5;
+}
+
+.hero h1,
+.hero p {
+  color: #fff;
+}
+
+.hero__small .hero__container {
+  height: 18vh;
+}
+
+.hero .illustration {
+  width: 50%;
+}
+
+.city-illustration {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero__container {
+    height: auto;
+    padding: 2em;
+  }
+
+  .hero .illustration {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .row p + p {
+    margin-top: 1em;
+  }
+}
+
+.ecosystem .row {
+  justify-content: center;
+}
+
+.tools .row {
+  margin-bottom: 3em;
+}
+
+.tools .row:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .tools .dashboard {
+    order: 2
+  }
+}
+
+.tools .column,
+.tools .column h2 {
+  text-align: left;
+}
+
+.tools .dashboard,
+.tools .dashboard h2 {
+  text-align: right;
+}
+
+.tools .icon {
+  flex: none;
+  width: 20%;
+}
+
+.tools p {
+  margin-bottom: 2em;
+}
+
+.tools .doc .button {
+  margin-right: 1em;
+}
+
+.api-access .column {
+  margin: auto;
+}

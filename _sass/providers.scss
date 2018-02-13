@@ -1,0 +1,56 @@
+.providers ul {
+  padding: 0;
+  list-style-type: none;
+  justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.providers li {
+  margin-top: 3em;
+  display: inline-block;
+  padding: 0 2em;
+}
+
+.providers ul img {
+  width: auto;
+}
+
+.providers__main {
+  margin-bottom: 0;
+}
+
+.providers__others {
+  margin-top: 0;
+}
+
+.providers__main img {
+  height: 80px;
+}
+
+.providers__others img {
+  height: 50px;
+}
+
+.providers-list article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.providers-list .providers__logo {
+  width: 120px;
+  margin-right: 2em;
+}
+
+.providers-list .providers__logo img {
+  width: 100%;
+}
+
+.providers-list .providers__info {
+  flex: 1;
+}
+
+.providers-list .providers__info h2 {
+  margin-top: 0;
+}

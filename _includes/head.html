@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ site.title }}</title>
+
+  <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/template.css %}">
+  <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "/assets/main.css" | relative_url }}">
+
+  <!-- Search Engine -->
+  <meta name="description" content="{{ site.description }}">
+  <meta name="image" content="https://etalab.github.io/template.data.gouv.fr/images/preview.png">
+  <!-- Schema.org for Google -->
+  <meta itemprop="name" content="{{ site.title }}">
+  <meta itemprop="description" content="{{ site.description }}">
+  <meta itemprop="image" content="https://etalab.github.io/template.data.gouv.fr/images/preview.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+  <meta name="og:title" content="{{ site.title }}">
+  <meta name="og:description" content="{{ site.description }}">
+  <meta name="og:image" content="https://etalab.github.io/template.data.gouv.fr/images/preview_fb.png">
+  <meta name="og:url" content="{{ site.url }}">
+  <meta name="og:site_name" content="{{ site.title }}">
+  <meta name="og:locale" content="fr_FR">
+  <meta name="og:type" content="website">
+
+  <!-- Favicons -->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}{% link assets/images/favicons/apple-icon-180x180.png %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}{% link assets/images/favicons/favicon-16x16.png %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}{% link assets/images/favicons/favicon-32x32.png %}">
+  <link rel="manifest" href="{{ site.baseurl }}{% link assets/images/favicons/manifest.json %}">
+  <link rel="mask-icon" href="{{ site.baseurl }}{% link assets/images/favicons/safari-pinned-tab.svg %}" color="#5bbad5">
+</head>
