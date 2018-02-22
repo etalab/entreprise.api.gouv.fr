@@ -23,7 +23,7 @@ url: "https://sandbox.entreprise.api.gouv.fr" # the base hostname & protocol for
 twitter_username: jekyllrb
 github_username:  jekyll
 
-destination: ../public/website/
+destination: ./_site
 
 permalink: pretty
 
