@@ -27,3 +27,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Deployment
 gem 'mina'
+gem 'colorize'
