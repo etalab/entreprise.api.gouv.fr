@@ -18,7 +18,7 @@ set :user, 'deploy'
 set :application_name, 'entreprise.api.gouv.fr'
 set :domain, ENV['domain']
 
-set :deploy_to, "/var/www/entreprise.api.gouv.fr_#{ENV['to']}"
+set :deploy_to, "/var/www/entreprise.api.gouv.fr"
 set :repository, 'git@github.com:etalab/entreprise.api.gouv.fr.git'
 
 set :forward_agent, true
