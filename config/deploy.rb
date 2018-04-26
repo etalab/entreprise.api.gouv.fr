@@ -4,21 +4,20 @@ require 'mina/git'
 require 'mina/rbenv'
 require 'colorize'
 
-
 ENV['domain'] || raise('no domain provided'.red)
 
-ENV['to'] ||= "production"
+ENV['to'] ||= "sandbox"
 unless %w[sandbox staging production].include?(ENV['to'])
   raise("target environment (#{ENV['to']}) not in the list")
 end
 
-print "Deploy to #{ENV['to']} environment\n".green
+comment "Deploy to #{ENV['to'].green} environment on #{ENV['domain'].green}"
 
+set :commit, ENV['commit']
 set :user, 'deploy'
 set :application_name, 'entreprise.api.gouv.fr'
-set :domain, ENV['domain']
 
-set :deploy_to, "/var/www/entreprise.api.gouv.fr"
+set :deploy_to, "/var/www/entreprise.api.gouv.fr_#{ENV['to']}"
 set :repository, 'git@github.com:etalab/entreprise.api.gouv.fr.git'
 
 set :forward_agent, true
@@ -58,5 +57,4 @@ task :deploy do
     command %{ bundle exec jekyll build }
     invoke :'deploy:cleanup'
   end
-
 end
