@@ -28,9 +28,7 @@ branch = ENV['branch'] || begin
                             case ENV['to']
                             when 'production'
                               'master'
-                            when 'staging'
-                              'staging'
-                            when 'development', 'sandbox'
+                            when 'development', 'sandbox', 'staging'
                               'develop'
                             end
                           end
