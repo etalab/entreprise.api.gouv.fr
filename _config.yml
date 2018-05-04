@@ -20,6 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   leurs données et documents administratifs.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sandbox.entreprise.api.gouv.fr" # the base hostname & protocol for your site, e.g. http://example.com
+cgu_file_link: https://dashboard.entreprise.api.gouv.fr/static/cgu.pdf
 twitter_username: jekyllrb
 github_username:  jekyll
 
