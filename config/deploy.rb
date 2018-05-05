@@ -6,32 +6,20 @@ require 'colorize'
 
 ENV['domain'] || raise('no domain provided'.red)
 
-ENV['to'] ||= "sandbox"
-unless %w[sandbox staging production].include?(ENV['to'])
-  raise("target environment (#{ENV['to']}) not in the list")
-end
-
-comment "Deploy to #{ENV['to'].green} environment on #{ENV['domain'].green}"
+ENV['to'] = "production"
+comment "Deploy to #{ENV['domain'].green}"
 
 set :commit, ENV['commit']
 set :user, 'deploy'
 set :application_name, 'entreprise.api.gouv.fr'
 
-set :deploy_to, "/var/www/entreprise.api.gouv.fr_#{ENV['to']}"
+set :deploy_to, "/var/www/entreprise.api.gouv.fr"
 set :repository, 'git@github.com:etalab/entreprise.api.gouv.fr.git'
 
 set :forward_agent, true
 set :port, 22
 
-branch = ENV['branch'] || begin
-                            case ENV['to']
-                            when 'production'
-                              'master'
-                            when 'development', 'sandbox', 'staging'
-                              'develop'
-                            end
-                          end
-
+branch = ENV['branch'] || 'master'
 set :branch, branch
 ensure!(:branch)
 
