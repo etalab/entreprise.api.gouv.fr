@@ -35,7 +35,7 @@ collections:
 # API Entreprise specific variables
 api_documentation_url: https://entreprise.api.gouv.fr/documentation
 dashboard_url: https://dashboard.entreprise.api.gouv.fr
-gitbook_url: https://etalab-entreprise.gitbooks.io/api-entreprise-documentation-infra/content/
+gitbook_url: https://etalab-entreprise.gitbook.io/api-entreprise-documentation-infra
 
 # Build settings
 markdown: kramdown
