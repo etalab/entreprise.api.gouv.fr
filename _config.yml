@@ -33,7 +33,7 @@ collections:
   - providers
 
 # API Entreprise specific variables
-api_documentation_url: https://entreprise.api.gouv.fr/documentation
+api_documentation_url: https://doc.entreprise.api.gouv.fr
 dashboard_url: https://dashboard.entreprise.api.gouv.fr
 gitbook_url: https://etalab-entreprise.gitbooks.io/api-entreprise-documentation-infra/content/
 
