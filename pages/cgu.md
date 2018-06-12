@@ -3,8 +3,9 @@ layout: page
 title: Conditions Générales d'Utilisation de l'API Entreprise
 ---
 
-Ce document, ci-après les « CGU », présente les modalités d’utilisation de l’API Entreprise
-par les personnes y ayant accès, ci-après les « Partenaires ».
+Ce document, ci-après les « CGU », présente les modalités d’utilisation de l’API Entreprise par les personnes y ayant accès, ci-après les « Partenaires ».
+
+Les CGU sont disponibles en PDF [ICI](https://dashboard.entreprise.api.gouv.fr/static/cgu.pdf)
 
 ## 1. Présentation
 
