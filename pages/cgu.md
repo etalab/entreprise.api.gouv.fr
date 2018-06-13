@@ -32,7 +32,7 @@ Elles s’inscrivent dans le cadre :
 - Des articles [L. 114-8 et suivants du code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/affichCode.do%3Bjsessionid=AC5DECE620E35683EFD6CD54C0964732.tplgfr35s_3?idSectionTA=LEGISCTA000031367410&cidTexte=LEGITEXT000031366350&dateTexte=20170808) relatifs à l’échange de données entre administrations,
 - De la loi n° 78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés,
 - Du [décret n° 2010-112 du 2 février 2010](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000021779444&categorieLien=id) pris pour l'application des articles 9, 10 et 12 de l'ordonnance n° 2005-1516 du 8 décembre 2005 relative aux échanges électroniques entre les usagers et les autorités administratives et entre les autorités administratives,
-- De [l’arrêté du 23 juillet 2013](LIEN HS), pour les collectivités et leurs établissements, autorisant la mise en œuvre par les collectivités territoriales, les établissements publics de coopération intercommunale, les syndicats mixtes, les établissements publics locaux qui leur sont rattachés ainsi que les groupements d'intérêt public et les sociétés publiques locales dont ils sont membres de traitements automatisés de données à caractère personnel ayant pour objet la mise à disposition des usagers d'un ou de plusieurs téléservices de l'administration électronique.
+- De [l’arrêté du 4 juillet 2013](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027697207), pour les collectivités et leurs établissements, autorisant la mise en œuvre par les collectivités territoriales, les établissements publics de coopération intercommunale, les syndicats mixtes, les établissements publics locaux qui leur sont rattachés ainsi que les groupements d'intérêt public et les sociétés publiques locales dont ils sont membres de traitements automatisés de données à caractère personnel ayant pour objet la mise à disposition des usagers d'un ou de plusieurs téléservices de l'administration électronique.
 
 La demande de raccordement du Partenaire au Service emporte acceptation des présentes CGU.
 
@@ -40,7 +40,7 @@ La demande de raccordement du Partenaire au Service emporte acceptation des pré
 
 ### Adhésion
 
-- **Le Partenaire** vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : [https://signup.entreprise.api.gouv.fr](https://signup.entreprise.api.gouv.fr)
+- **Le Partenaire** vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : [http://signup.entreprise.api.gouv.fr](http://signup.entreprise.api.gouv.fr)
 
 - **Le Partenaire demande l’accès aux seules données strictement nécessaires à la
 réalisation d’une démarche administrative.**
@@ -75,7 +75,7 @@ réalisation d’une démarche administrative.**
 
 - La DINSIC met en œuvre et opère le Service conformément aux dispositions légales et règlementaires en vigueur. A ce titre, la DINSIC s’engage à respecter les obligations légales liées au traitement, notamment celles relevant de la loi n° 78-17 du 6 janvier 1978 relative à l’informatique aux fichiers et aux libertés.
 
-- La DINSIC procède au raccordement du Partenaire qui en a préalablement fait la demande à partir du site internet : [https://signup.entreprise.api.gouv.fr](https://signup.entreprise.api.gouv.fr) et qui remplit les conditions présentées dans les présentes CGU.
+- La DINSIC procède au raccordement du Partenaire qui en a préalablement fait la demande à partir du site internet : [http://signup.entreprise.api.gouv.fr](http://signup.entreprise.api.gouv.fr) et qui remplit les conditions présentées dans les présentes CGU.
 
 - La DINSIC s’engage à proposer aux Partenaires une assistance technique et fonctionnelle leur permettant de définir et de mettre en œuvre au mieux l’usage qu’ils réalisent du Service.
 
