@@ -40,7 +40,7 @@ La demande de raccordement du Partenaire au Service emporte acceptation des pré
 
 ### Adhésion
 
-- **Le Partenaire** vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : [http://signup.entreprise.api.gouv.fr](http://signup.entreprise.api.gouv.fr)
+- **Le Partenaire** vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : [https://signup.entreprise.api.gouv.fr](https://signup.entreprise.api.gouv.fr)
 
 - **Le Partenaire demande l’accès aux seules données strictement nécessaires à la
 réalisation d’une démarche administrative.**
@@ -75,7 +75,7 @@ réalisation d’une démarche administrative.**
 
 - La DINSIC met en œuvre et opère le Service conformément aux dispositions légales et règlementaires en vigueur. A ce titre, la DINSIC s’engage à respecter les obligations légales liées au traitement, notamment celles relevant de la loi n° 78-17 du 6 janvier 1978 relative à l’informatique aux fichiers et aux libertés.
 
-- La DINSIC procède au raccordement du Partenaire qui en a préalablement fait la demande à partir du site internet : [http://signup.entreprise.api.gouv.fr](http://signup.entreprise.api.gouv.fr) et qui remplit les conditions présentées dans les présentes CGU.
+- La DINSIC procède au raccordement du Partenaire qui en a préalablement fait la demande à partir du site internet : [https://signup.entreprise.api.gouv.fr](https://signup.entreprise.api.gouv.fr) et qui remplit les conditions présentées dans les présentes CGU.
 
 - La DINSIC s’engage à proposer aux Partenaires une assistance technique et fonctionnelle leur permettant de définir et de mettre en œuvre au mieux l’usage qu’ils réalisent du Service.
 
