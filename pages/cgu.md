@@ -4,7 +4,7 @@ title: Conditions Générales d'Utilisation de l'API Entreprise
 permalink: /cgu/
 urlcolor: blue
 geometry: margin=1in
-mainfont: Ubuntu
+mainfont: Lato
 fontsize: 12pt
 ---
 
