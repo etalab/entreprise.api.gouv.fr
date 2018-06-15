@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: cgu
 title: Conditions Générales d'Utilisation de l'API Entreprise
 permalink: /cgu/
 urlcolor: blue
@@ -7,10 +7,6 @@ geometry: margin=1in
 mainfont: Liberation Sans
 fontsize: 12pt
 ---
-
-Ce document, ci-après les « CGU », présente les modalités d’utilisation de l’API Entreprise par les personnes y ayant accès, ci-après les « Partenaires ».
-
-Les CGU sont disponibles en PDF [ICI](https://entreprise.api.gouv.fr/assets/cgu.pdf)
 
 ## 1. Présentation
 
@@ -26,7 +22,7 @@ Pour ce faire, le Service consiste en un dispositif d’échange permettant :
 
 Le Service est ouvert aux administrations au sens de l’article L. 100-3 du code des relations du public et de l’administration, c’est-à-dire les administrations de l'Etat, les collectivités territoriales, leurs établissements publics administratifs respectifs et les organismes et personnes de droit public et de droit privé chargés d'une mission de service public administratif, y compris les organismes de sécurité sociale.
 
-**Le Service donne accès à des données et pièces justificatives émanant d’administrations diverses, que le Service fédère, à partir d’interfaces de programmation (API) ou, exceptionnellement, de bases mises à sa disposition, dans des conditions assurant la protection des données et le respect des règles de confidentialité. Le périmètre précis est défini dans la [documentation technique](https://entreprise.api.gouv.fr/documentation).**
+**Le Service donne accès à des données et pièces justificatives émanant d’administrations diverses, que le Service fédère, à partir d’interfaces de programmation (API) ou, exceptionnellement, de bases mises à sa disposition, dans des conditions assurant la protection des données et le respect des règles de confidentialité. Le périmètre précis est défini dans la [documentation technique](https://entreprise.api.gouv.fr/documentation){:target="_blank"}.**
 
 ## 2. Objet
 
@@ -34,10 +30,10 @@ Les CGU ont pour objet de définir les conditions d’utilisation du Service par
 
 Elles s’inscrivent dans le cadre :
 
-- Des articles [L. 114-8 et suivants du code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/affichCode.do%3Bjsessionid=AC5DECE620E35683EFD6CD54C0964732.tplgfr35s_3?idSectionTA=LEGISCTA000031367410&cidTexte=LEGITEXT000031366350&dateTexte=20170808) relatifs à l’échange de données entre administrations,
+- Des articles [L. 114-8 et suivants du code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/affichCode.do%3Bjsessionid=AC5DECE620E35683EFD6CD54C0964732.tplgfr35s_3?idSectionTA=LEGISCTA000031367410&cidTexte=LEGITEXT000031366350&dateTexte=20170808){:target="_blank"} relatifs à l’échange de données entre administrations,
 - De la loi n° 78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés,
-- Du [décret n° 2010-112 du 2 février 2010](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000021779444&categorieLien=id) pris pour l'application des articles 9, 10 et 12 de l'ordonnance n° 2005-1516 du 8 décembre 2005 relative aux échanges électroniques entre les usagers et les autorités administratives et entre les autorités administratives,
-- De [l’arrêté du 4 juillet 2013](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027697207), pour les collectivités et leurs établissements, autorisant la mise en œuvre par les collectivités territoriales, les établissements publics de coopération intercommunale, les syndicats mixtes, les établissements publics locaux qui leur sont rattachés ainsi que les groupements d'intérêt public et les sociétés publiques locales dont ils sont membres de traitements automatisés de données à caractère personnel ayant pour objet la mise à disposition des usagers d'un ou de plusieurs téléservices de l'administration électronique.
+- Du [décret n° 2010-112 du 2 février 2010](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000021779444&categorieLien=id){:target="_blank"} pris pour l'application des articles 9, 10 et 12 de l'ordonnance n° 2005-1516 du 8 décembre 2005 relative aux échanges électroniques entre les usagers et les autorités administratives et entre les autorités administratives,
+- De [l’arrêté du 4 juillet 2013](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000027697207){:target="_blank"}, pour les collectivités et leurs établissements, autorisant la mise en œuvre par les collectivités territoriales, les établissements publics de coopération intercommunale, les syndicats mixtes, les établissements publics locaux qui leur sont rattachés ainsi que les groupements d'intérêt public et les sociétés publiques locales dont ils sont membres de traitements automatisés de données à caractère personnel ayant pour objet la mise à disposition des usagers d'un ou de plusieurs téléservices de l'administration électronique.
 
 La demande de raccordement du Partenaire au Service emporte acceptation des présentes CGU.
 
@@ -45,7 +41,7 @@ La demande de raccordement du Partenaire au Service emporte acceptation des pré
 
 ### Adhésion
 
-- **Le Partenaire** vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : [https://signup.entreprise.api.gouv.fr](https://signup.entreprise.api.gouv.fr)
+- **Le Partenaire** vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : [{{ site.signup_url }}]({{ site.signup_url }}){:target="_blank"}
 
 - **Le Partenaire demande l’accès aux seules données strictement nécessaires à la
 réalisation d’une démarche administrative.**
@@ -70,7 +66,7 @@ réalisation d’une démarche administrative.**
 
 - Le Partenaire s’engage à ne pas commercialiser les données reçues et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
 
-- Le Partenaire s’engage à mettre en œuvre les mesures de sécurité techniques et organisationnelles nécessaires au bon fonctionnement du Service, notamment en matière de traçabilité interne, et à informer, le cas échéant, le DINSIC de toute difficulté de nature à compromettre le bon fonctionnement du Service. En particulier, il garantit la confidentialité du jeton. **Dès lors que la confidentialité du jeton a pu être compromise, y compris de manière accidentelle, le jeton est révoqué. A cette fin, l’organisme s’engage à alerter sans délai la DINSIC en envoyant un email à :** [tech@entreprise.api.gouv.fr](mailto:tech@entreprise.api.gouv.fr).
+- Le Partenaire s’engage à mettre en œuvre les mesures de sécurité techniques et organisationnelles nécessaires au bon fonctionnement du Service, notamment en matière de traçabilité interne, et à informer, le cas échéant, le DINSIC de toute difficulté de nature à compromettre le bon fonctionnement du Service. En particulier, il garantit la confidentialité du jeton. **Dès lors que la confidentialité du jeton a pu être compromise, y compris de manière accidentelle, le jeton est révoqué. A cette fin, l’organisme s’engage à alerter sans délai la DINSIC en envoyant un email à :** [{{ site.email }}](mailto:{{ site.email }}).
 
 - En cas d’incident grave dans l’utilisation du Service, le Partenaire s’engage à coopérer avec la DINSIC dans la réalisation d’un audit, en fournissant toutes les informations nécessaires.
 
@@ -80,7 +76,8 @@ réalisation d’une démarche administrative.**
 
 - La DINSIC met en œuvre et opère le Service conformément aux dispositions légales et règlementaires en vigueur. A ce titre, la DINSIC s’engage à respecter les obligations légales liées au traitement, notamment celles relevant de la loi n° 78-17 du 6 janvier 1978 relative à l’informatique aux fichiers et aux libertés.
 
-- La DINSIC procède au raccordement du Partenaire qui en a préalablement fait la demande à partir du site internet : [https://signup.entreprise.api.gouv.fr](https://signup.entreprise.api.gouv.fr) et qui remplit les conditions présentées dans les présentes CGU.
+- La DINSIC procède au raccordement du Partenaire qui en a préalablement fait la demande à partir du site internet : [{{ site.signup_url }}]({{ site.signup_url }}){:target="_blank"}
+ et qui remplit les conditions présentées dans les présentes CGU.
 
 - La DINSIC s’engage à proposer aux Partenaires une assistance technique et fonctionnelle leur permettant de définir et de mettre en œuvre au mieux l’usage qu’ils réalisent du Service.
 
