@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Conditions Générales d'Utilisation de l'API Entreprise
+permalink: /cgu/
 ---
 
 Ce document, ci-après les « CGU », présente les modalités d’utilisation de l’API Entreprise par les personnes y ayant accès, ci-après les « Partenaires ».
