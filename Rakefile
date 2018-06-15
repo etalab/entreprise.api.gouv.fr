@@ -13,5 +13,5 @@ task :deploy do
 end
 
 task :cgu_to_pdf do
-  sh 'pandoc pages/cgu.md -o assets/cgu.pdf --latex-engine=xelatex'
+  sh 'pandoc pages/cgu.md -o _site/assets/cgu.pdf --latex-engine=xelatex'
 end
