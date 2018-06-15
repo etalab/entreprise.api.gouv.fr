@@ -50,6 +50,6 @@ end
 
 task :cgu_to_pdf do
   comment 'Generating PDF version of CGU'.green
-  command %(sudo apt-get install -y textlive textlive-xetex pandoc)
+  command %(sudo apt-get install -y texlive texlive-xetex pandoc)
   command %(pandoc pages/cgu.md -o assets/cgu.pdf --latex-engine=xelatex)
 end
