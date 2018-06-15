@@ -6,14 +6,14 @@ require 'colorize'
 
 ENV['domain'] || raise('no domain provided'.red)
 
-ENV['to'] = "production"
+ENV['to'] = 'production'
 comment "Deploy to #{ENV['domain'].green}"
 
 set :commit, ENV['commit']
 set :user, 'deploy'
 set :application_name, 'entreprise.api.gouv.fr'
 
-set :deploy_to, "/var/www/entreprise.api.gouv.fr"
+set :deploy_to, '/var/www/entreprise.api.gouv.fr'
 set :repository, 'git@github.com:etalab/entreprise.api.gouv.fr.git'
 
 set :forward_agent, true
@@ -31,7 +31,7 @@ task :remote_environment do
   end
 end
 
-desc "Deploys the current version to the server."
+desc 'Deploys the current version to the server.'
 task :deploy do
   # uncomment this line to make sure you pushed your local branch to the remote origin
   # invoke :'git:ensure_pushed'
@@ -42,7 +42,14 @@ task :deploy do
     invoke :'deploy:link_shared_paths'
     set :bundle_options, fetch(:bundle_options) + ' --clean'
     invoke :'bundle:install'
-    command %{ bundle exec jekyll build }
+    command %( bundle exec jekyll build )
+    invoke :cgu_to_pdf
     invoke :'deploy:cleanup'
   end
+end
+
+task :cgu_to_pdf do
+  comment 'Generating PDF version of CGU'.green
+  command %(sudo apt-get install -y texlive texlive-xetex pandoc)
+  command %(pandoc pages/cgu.md -o _site/assets/cgu.pdf --latex-engine=xelatex)
 end

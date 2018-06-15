@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   leurs données et documents administratifs.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://entreprise.api.gouv.fr" # the base hostname & protocol for your site, e.g. http://example.com
-cgu_file_link: https://dashboard.entreprise.api.gouv.fr/static/cgu.pdf
+cgu_file_link: 'https://entreprise.api.gouv.fr/assets/cgu.pdf'
 signup_url: 'https://signup.entreprise.api.gouv.fr'
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -34,7 +34,7 @@ collections:
   - providers
 
 # API Entreprise specific variables
-api_documentation_url: https://entreprise.api.gouv.fr/documentation
+api_documentation_url: https://doc.entreprise.api.gouv.fr
 dashboard_url: https://dashboard.entreprise.api.gouv.fr
 gitbook_url: https://etalab-entreprise.gitbooks.io/api-entreprise-documentation-infra/content/
 

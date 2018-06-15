@@ -11,3 +11,7 @@ task :deploy do
     sh "bundle exec mina deploy domain=#{domain}"
   end
 end
+
+task :cgu_to_pdf do
+  sh 'pandoc pages/cgu.md -o _site/assets/cgu.pdf --latex-engine=xelatex'
+end

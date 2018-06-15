@@ -1,12 +1,12 @@
 ---
-layout: page
+layout: cgu
 title: Conditions Générales d'Utilisation de l'API Entreprise
 permalink: /cgu/
+urlcolor: blue
+geometry: margin=1in
+mainfont: Lato
+fontsize: 12pt
 ---
-
-Ce document, ci-après les « CGU », présente les modalités d’utilisation de l’API Entreprise par les personnes y ayant accès, ci-après les « Partenaires ».
-
-Les CGU sont disponibles en PDF [ICI](https://dashboard.entreprise.api.gouv.fr/static/cgu.pdf)
 
 ## 1. Présentation
 
@@ -22,7 +22,7 @@ Pour ce faire, le Service consiste en un dispositif d’échange permettant :
 
 Le Service est ouvert aux administrations au sens de l’article L. 100-3 du code des relations du public et de l’administration, c’est-à-dire les administrations de l'Etat, les collectivités territoriales, leurs établissements publics administratifs respectifs et les organismes et personnes de droit public et de droit privé chargés d'une mission de service public administratif, y compris les organismes de sécurité sociale.
 
-**Le Service donne accès à des données et pièces justificatives émanant d’administrations diverses, que le Service fédère, à partir d’interfaces de programmation (API) ou, exceptionnellement, de bases mises à sa disposition, dans des conditions assurant la protection des données et le respect des règles de confidentialité. Le périmètre précis est défini dans la [documentation technique](https://entreprise.api.gouv.fr/documentation).**
+**Le Service donne accès à des données et pièces justificatives émanant d’administrations diverses, que le Service fédère, à partir d’interfaces de programmation (API) ou, exceptionnellement, de bases mises à sa disposition, dans des conditions assurant la protection des données et le respect des règles de confidentialité. Le périmètre précis est défini dans la [documentation technique](https://doc.entreprise.api.gouv.fr).**
 
 ## 2. Objet
 
@@ -109,3 +109,6 @@ DINSIC
 20 avenue de Ségur
 
 75007 PARIS
+
+---
+Daté du 15 juin 2018
