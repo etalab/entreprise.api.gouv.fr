@@ -2,11 +2,15 @@
 layout: page
 title: Conditions Générales d'Utilisation de l'API Entreprise
 permalink: /cgu/
+urlcolor: blue
+geometry: margin=1in
+mainfont: Liberation Sans
+fontsize: 12pt
 ---
 
 Ce document, ci-après les « CGU », présente les modalités d’utilisation de l’API Entreprise par les personnes y ayant accès, ci-après les « Partenaires ».
 
-Les CGU sont disponibles en PDF [ICI](https://dashboard.entreprise.api.gouv.fr/static/cgu.pdf)
+Les CGU sont disponibles en PDF [ICI](https://entreprise.api.gouv.fr/assets/cgu.pdf)
 
 ## 1. Présentation
 
@@ -109,3 +113,6 @@ DINSIC
 20 avenue de Ségur
 
 75007 PARIS
+
+---
+Daté du 15 juin 2018
