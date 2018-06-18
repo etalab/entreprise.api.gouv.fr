@@ -46,4 +46,14 @@ que, suite à l'une des situations décrites plus haut elle n'est pas présente
 dans le JSON de réponse, le champs correspondant contient le label "Donnée
 indisponible" et le code retour HTTP vaut 206.
 
+## Je suis protégé par un filtre anti-spam
+
+Un certain de nombre de messages sont envoyés à notre équipe support depuis des
+adresses e-mails protégées par des filtres anti-spam comme MailInBlack. Or il est
+nécessaires que nos usagers reçoivent certains emails envoyés automatiquement
+ne serait-ce que pour activer leur compte.
+
+Merci de vérifier que votre adresse email n'est pas protégée par un service
+anti-spams dans le cas où vous ne recevriez pas de réponse.
+
 [email-address]: mailto:{{ site.email }}
