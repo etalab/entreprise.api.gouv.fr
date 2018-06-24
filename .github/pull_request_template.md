@@ -1,15 +1,12 @@
-#### What does this PR do?
+#### Que fait cette PR ?
 
-##### Why are we doing this? Any context or related work?
+#### Pourquoi fait-on ça ? Contexte, PR, issue liée ?
 
-#### Where should a reviewer start?
+#### Par où commencer ?
 
-#### Manual testing steps?
+#### Etapes de tests manuels ?
 
 ---
+#### Instructions de déploiement
 
-#### Database changes
-
-#### Deployment instructions
-
-#### New ENV variables
+#### Secrets et mises à jours Ansible
