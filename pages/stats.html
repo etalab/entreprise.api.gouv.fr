@@ -4,12 +4,49 @@ title: Statistiques
 permalink: /stats
 ---
 
-  <div class="hero hero__small">
-    <div class="hero__container">
-      <h1>{{ page.title }}</h1>
+<div class="hero hero__small">
+  <div class="hero__container">
+    <h1>{{ page.title }}</h1>
+  </div>
+</div>
+<section class="section-white">
+  <div class="container">
+    <div class="stat-cards">
+      <div class="stat-card stat-card-half big-number-card pull-left">
+        <span class="big-number-card-title long-title">
+          Informations non redemandées 30 derniers jours
+        </span>
+        <span class="big-number-card-number" id=last-30-days-usage>
+        </span>
+        <span class="big-number-card-detail">
+          appels uniques
+        </span>
+      </div>
     </div>
   </div>
-  <section class="section-white providers-list">
-    <div class="container">
-    </div>
-  </section>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event){
+    function loadLast30DaysUsage() {
+      var xhttp = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("last-30-days-usage").innerHTML = this.responseText;
+         }
+      };
+
+      xhttp.open(
+        "GET",
+        "https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage",
+        true
+      );
+
+      xhttp.setRequestHeader("Content-type", "application/json");
+      xhttp.send();
+    };
+
+    loadLast30DaysUsage();
+  });
+</script>
