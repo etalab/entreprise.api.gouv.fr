@@ -58,7 +58,7 @@ si ce n'est déjà fait.
 
 Une fois connecté.e à votre compte démarches simplifiées, vous pouvez vous rendre
 sur le formulaire de demande d'accès à API Entreprise en vous rendant à l'addresse
-suivante : [https://signup.entreprise.api.gouv.fr](https://signup.entreprise.api.gouv.fr)
+suivante : [https://demarches-simplifiees.fr/commencer/api-entreprise](https://demarches-simplifiees.fr/commencer/api-entreprise)
 
 Une fois fait, voici les étapes suivantes :
 
