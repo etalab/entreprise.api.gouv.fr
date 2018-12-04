@@ -16,7 +16,7 @@ Munissez vous à cet effet :
 * du **numéro siret de votre administration**, vous pouvez vous aider de
   (https://entreprise.data.gouv.fr) pour le retrouver. Ex: commune de meaux
   ou chu nantes
-* pour le périmètre de données demandé, **le cadre administratif et légal** vous autorisant
+* pour le périmètre de données demandées, **le cadre administratif et légal** vous autorisant
   a en connaître. Liens et/ou pièces jointes.
 * des **coordonnées de votre DPO** (Délégué.e à la protection des données) ainsi que
   des différentes parties prenantes administratives, métiers et techniques. Ces
@@ -40,7 +40,7 @@ Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
     important de données sensibles pour aider les agents instructeurs
 
 La région s'est vue remettre un espace client avec 3 tokens d'accès aux
-permissions différentes
+permissions différentes.
 
 #### Acceptions des CGU
 
@@ -50,7 +50,7 @@ Vous devrez aussi accepter nos [CGU](https://entreprise.api.gouv.fr/cgu/)(Condit
 
 [Créez vous un compte démarches simplifiées](https://www.demarches-simplifiees.fr/users/sign_up).
 Les demandes d'accès à API Entreprise sont instruites sur cette plateforme.
-Des demandes multiples ne demandent pas de création de compte supplémentaire
+Des demandes multiples ne nécessitent pas de création de compte supplémentaire
 sur démarches simplifiées. [Connectez vous](https://www.demarches-simplifiees.fr/users/sign_in)
 si ce n'est déjà fait.
 
@@ -63,10 +63,10 @@ suivante : [https://signup.entreprise.api.gouv.fr](https://signup.entreprise.api
 Une fois fait, voici les étapes suivantes :
 
   1. Remplissez le formulaire de demande d'accès puis validez le. Au cas ou il
-     vous manque une information, vous pourrez reprendre ultérieurement le formulaire qui
+     vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui
      reste à l'état de brouillon dans votre interface
 
-  2. Nous instruions alors votre dossier puis prenons une décision d'acceptation ou de refus
+  2. Nous instruisons alors votre dossier puis prenons une décision d'acceptation ou de refus
      de la demande d'accès. Le cas échéant nous vous demandons des précisions
      supplémentaires
 
@@ -77,7 +77,7 @@ Une fois fait, voici les étapes suivantes :
   4. Une fois votre mot de passe choisi, [connectez vous](https://dashboard.entreprise.api.gouv.fr/login).
      à votre espace client. Votre/vos token(s) vous y attendent.
 
-  5. Vous pouvez commencer à vos tokens pour appeler l'API Entreprise
+  5. Vous pouvez commencer à utiliser vos tokens pour appeler l'API Entreprise
 
 
 
