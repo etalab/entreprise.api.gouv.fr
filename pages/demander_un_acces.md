@@ -1,6 +1,6 @@
 ---
 layout: faq
-title: Nous demander un accès
+title: Demander un accès
 permalink: /demander_un_acces/
 ---
 
