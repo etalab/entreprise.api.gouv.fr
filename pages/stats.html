@@ -22,31 +22,46 @@ permalink: /stats/
           appels uniques
         </span>
       </div>
+
+      <div class="stat-card stat-card-half big-number-card pull-left">
+        <span class="big-number-card-title long-title">
+          Informations non redemandées l'an passé
+        </span>
+        <span class="big-number-card-number" id=last-year-usage>
+        </span>
+        <span class="big-number-card-detail">
+          appels uniques
+        </span>
+      </div>
+
     </div>
   </div>
 </section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function(event){
-    function loadLast30DaysUsage() {
-      var xhttp = new XMLHttpRequest();
+  function loadLastApiUsage(apiNameSnakecase) {
+    var xhttp = new XMLHttpRequest();
+    var apiNameDashcase = apiNameSnakecase.replace(/_/g, '-');
 
-      xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("last-30-days-usage").innerHTML = this.responseText;
-         }
-      };
-
-      xhttp.open(
-        "GET",
-        "https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/last_30_days_usage",
-        true
-      );
-
-      xhttp.setRequestHeader("Content-type", "application/json");
-      xhttp.send();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var number = Number(this.responseText);
+        document.getElementById(apiNameDashcase).innerHTML = number.toLocaleString();
+      }
     };
 
-    loadLast30DaysUsage();
-  });
+    xhttp.open(
+      "GET",
+      "https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/" + apiNameSnakecase,
+      true
+    );
+
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+  };
+
+document.addEventListener("DOMContentLoaded", function(event){
+  loadLastApiUsage('last_30_days_usage');
+  loadLastApiUsage('last_year_usage');
+});
 </script>
