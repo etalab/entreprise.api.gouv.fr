@@ -8,6 +8,9 @@ $blue-hover: rgba(61, 149, 236, 0.8);
 $default-space: 15px;
 
 .stat-cards {
+  display: flex;
+  justify-content: space-between;
+
   .stat-card:nth-of-type(even) {
     margin-right: 0px;
   }
