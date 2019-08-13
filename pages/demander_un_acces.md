@@ -48,36 +48,32 @@ Vous devrez aussi accepter nos [CGU](https://entreprise.api.gouv.fr/cgu/)(Condit
 
 ## Faire votre demande d'accès
 
-[Créez vous un compte démarches simplifiées](https://www.demarches-simplifiees.fr/users/sign_up).
+Vous aurez besoin d'un compte utilisateur sur la plate-forme [api.gouv.fr](https://signup.api.gouv.fr).
 Les demandes d'accès à API Entreprise sont instruites sur cette plateforme.
-Des demandes multiples ne nécessitent pas de création de compte supplémentaire
-sur démarches simplifiées. [Connectez vous](https://www.demarches-simplifiees.fr/users/sign_in)
-si ce n'est déjà fait.
+
+[Connectez vous](https://auth.api.gouv.fr/users/sign-in) avec vos identifiants.
 
 #### Etapes
 
-Une fois connecté.e à votre compte démarches simplifiées, vous pouvez vous rendre
-sur le formulaire de demande d'accès à API Entreprise en vous rendant à l'addresse
-suivante : [https://demarches-simplifiees.fr/commencer/api-entreprise](https://demarches-simplifiees.fr/commencer/api-entreprise)
+Une fois connecté.e à votre espace sur [signup.api.gouv.fr](https://signup.api.gouv.fr),
+vous avez accès à la liste et au statut de vos demandes. Pour soumettre une
+demande d'accès à API Entreprise, veuillez suivre les étapes suivantes :
 
-Une fois fait, voici les étapes suivantes :
+  1. Cliquer sur le bouton "Nouvelle Demmande" en bas de l'écran ;
 
-  1. Remplissez le formulaire de demande d'accès puis validez le. Au cas ou il
-     vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui
-     reste à l'état de brouillon dans votre interface
+  2. Cliquer sur la vignette API Entreprise sur la page sur laquelle vous venez
+     d'être redirigé ;
 
-  2. Nous instruisons alors votre dossier puis prenons une décision d'acceptation ou de refus
-     de la demande d'accès. Le cas échéant nous vous demandons des précisions
-     supplémentaires
+  3. Cliquez enfin sur le bouton "Demandez l'accès" ;
 
-  3. Une fois votre dossier validé, nous créons votre compte et vous envoyons un
-     email de confirmation. Cet email vous indique les CGU (Conditions Générales
-     d'Utilisation), et fournit un lien pour le choix de votre mot de passe
+  4. Remplissez dès lors le formulaire. Notez que vous pouvez sauvgarder un
+     brouillon pour reprendre votre demande ultérieurement ;
 
-  4. Une fois votre mot de passe choisi, [connectez vous](https://dashboard.entreprise.api.gouv.fr/login).
-     à votre espace client. Votre/vos token(s) vous y attendent.
+  5. S'ensuit la phase d'instruction où il pourra vous être demandé de fournir
+     des précisions ;
 
-  5. Vous pouvez commencer à utiliser vos tokens pour appeler l'API Entreprise
-
-
-
+  6. Lorsque votre demande sera validée, vous recevrez un email vous notifiant
+     qu'un compte d'accès à API Entreprise vous a été créé. Cliquez sur le lien
+     de confirmation. Il vous sera demandé de renseigner un mot de passe. Vous
+     avez à présent accès à l'[espace client](https://dashboard.entreprise.api.gouv.fr/login)
+     API Entreprise ! Vous pourrez y récupérer votre/vos jetons !
