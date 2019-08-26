@@ -48,7 +48,7 @@ Vous devrez aussi accepter nos [CGU](https://entreprise.api.gouv.fr/cgu/)(Condit
 
 ## Faire votre demande d'accès
 
-Les demandes d'accès à API Entreprise sont instruites sur cette plateforme(https://signup.api.gouv.fr/api-entreprise).
+Les demandes d'accès à API Entreprise sont instruites sur la plateforme [api.gouv.fr](https://signup.api.gouv.fr/api-entreprise).
 Si vous n'en disposez pas déjà, il vous sera demandé de vous créer un compte. Des demandes multiples ne nécessitent pas de création de compte supplémentaire.
 
 
@@ -56,7 +56,7 @@ Si vous n'en disposez pas déjà, il vous sera demandé de vous créer un compte
 
 Les étapes d'obtention d'un accès aux données sont les suivantes :
 
-  1. Remplissez le formulaire de demande d'accès puis validez le. Au cas ou il
+  1. Remplissez [le formulaire de demande d'accès](https://signup.api.gouv.fr/api-entreprise) puis validez le. Au cas ou il
      vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui
      reste à l'état de brouillon dans votre interface
 
