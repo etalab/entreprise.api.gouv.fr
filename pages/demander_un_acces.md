@@ -48,36 +48,32 @@ Vous devrez aussi accepter nos [CGU](https://entreprise.api.gouv.fr/cgu/)(Condit
 
 ## Faire votre demande d'accès
 
-[Créez vous un compte démarches simplifiées](https://www.demarches-simplifiees.fr/users/sign_up).
-Les demandes d'accès à API Entreprise sont instruites sur cette plateforme.
-Des demandes multiples ne nécessitent pas de création de compte supplémentaire
-sur démarches simplifiées. [Connectez vous](https://www.demarches-simplifiees.fr/users/sign_in)
-si ce n'est déjà fait.
+Les demandes d'accès à API Entreprise sont instruites sur cette plateforme(https://signup-staging.api.gouv.fr/api-entreprise).
+Si vous n'en disposez pas déjà, il vous sera demandé de vous créer un compte. Des demandes multiples ne nécessitent pas de création de compte supplémentaire.
+
 
 #### Etapes
 
-Une fois connecté.e à votre compte démarches simplifiées, vous pouvez vous rendre
-sur le formulaire de demande d'accès à API Entreprise en vous rendant à l'addresse
-suivante : [https://demarches-simplifiees.fr/commencer/api-entreprise](https://demarches-simplifiees.fr/commencer/api-entreprise)
-
-Une fois fait, voici les étapes suivantes :
+Les étapes d'obtention d'un accès aux données sont les suivantes :
 
   1. Remplissez le formulaire de demande d'accès puis validez le. Au cas ou il
      vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui
      reste à l'état de brouillon dans votre interface
 
   2. Nous instruisons alors votre dossier puis prenons une décision d'acceptation ou de refus
-     de la demande d'accès. Le cas échéant nous vous demandons des précisions
-     supplémentaires
+     de la demande d'accès. Le cas échéant nous vous demanderons des précisions
+     supplémentaires.
 
-  3. Une fois votre dossier validé, nous créons votre compte et vous envoyons un
-     email de confirmation. Cet email vous indique les CGU (Conditions Générales
-     d'Utilisation), et fournit un lien pour le choix de votre mot de passe
+  3. Une fois votre dossier validé, nous créons votre compte d'accès à un espace client (dashboard) et vous envoyons un email de confirmation. Cet email vous indique les CGU (Conditions Générales d'Utilisation), et fournit un lien pour le choix de votre mot de passe.
 
   4. Une fois votre mot de passe choisi, [connectez vous](https://dashboard.entreprise.api.gouv.fr/login).
      à votre espace client. Votre/vos token(s) vous y attendent.
 
-  5. Vous pouvez commencer à utiliser vos tokens pour appeler l'API Entreprise
+  5. Vous pouvez commencer à utiliser Votre/vos token(s) pour appeler l'API Entreprise. Le dashboard vous permet aussi d'avoir accès à des statistiques d'utilisation des données.
 
+#### Accès aux demandes d'accès réalisées avec démarches simplifiées (antérieur au 27/08/2019)
+
+Les demandes effectuées avant le 27/08/2019 sont toujours accessibles à l'adresse suivante :
+https://www.demarches-simplifiees.fr/commencer/api-entreprise
 
 
