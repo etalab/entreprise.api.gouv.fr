@@ -48,7 +48,7 @@ Vous devrez aussi accepter nos [CGU](https://entreprise.api.gouv.fr/cgu/)(Condit
 
 ## Faire votre demande d'accès
 
-Les demandes d'accès à API Entreprise sont instruites sur cette plateforme(https://signup-staging.api.gouv.fr/api-entreprise).
+Les demandes d'accès à API Entreprise sont instruites sur cette plateforme(https://signup.api.gouv.fr/api-entreprise).
 Si vous n'en disposez pas déjà, il vous sera demandé de vous créer un compte. Des demandes multiples ne nécessitent pas de création de compte supplémentaire.
 
 
