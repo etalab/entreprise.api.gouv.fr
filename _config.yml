@@ -37,7 +37,9 @@ permalink: pretty
 
 # Collections
 collections:
-  - providers
+  providers:
+  use_cases:
+      output: true
 
 # API Entreprise specific variables
 api_documentation_url: https://doc.entreprise.api.gouv.fr

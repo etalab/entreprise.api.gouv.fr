@@ -1,0 +1,33 @@
+---
+layout: global
+title: Les cas d'usage d'API Entreprise
+permalink: /cas_usage/
+---
+
+<div class="hero hero__small">
+  <div class="hero__container">
+    <h1>{{ page.title }}</h1>
+  </div>
+</div>
+<section class="section-white providers-list">
+  <div class="container">
+    <article class="content">
+      <div>
+        La vocation première d'API Entreprise consiste en la simplification
+        des démarches des entreprises en mettant, pour leur compte, les documents
+        et les données administratives les concernant à disposition des <b>acteurs
+        publics et administrations</b>.
+      </div>
+    </article>
+
+    <ul>
+      {% for use_case in site.use_cases %}
+        <li>
+          <a href="{{ use_case.url }}">{{ use_case.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+
