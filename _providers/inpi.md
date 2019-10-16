@@ -1,5 +1,6 @@
 ---
 title: INPI
+label: inpi
 logo: "/assets/images/providers/inpi.png"
 ---
 

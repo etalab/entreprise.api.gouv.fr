@@ -32,6 +32,8 @@ permalink: pretty
 # Collections
 collections:
   providers:
+  available_data:
+    output: true
   use_cases:
       output: true
 

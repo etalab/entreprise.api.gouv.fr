@@ -1,5 +1,6 @@
 ---
 title: Qualibat
+label: qualibat
 logo: "/assets/images/providers/qualibat.png"
 sources_url: https://www.qualibat.com/nos-missions/qualification-des-competences/
 ---

@@ -1,5 +1,6 @@
 ---
 title: AGEFIPH
+label: agefiph
 logo: "/assets/images/providers/agefiph.png"
 sources_url: https://www.agefiph.fr/Entreprise/Vos-obligations-et-demarches/La-declaration-et-la-contribution-Agefiphhttps://www.agefiph.fr/Entreprise/Vos-obligations-et-demarches/La-declaration-et-la-contribution-Agefiph
 ---

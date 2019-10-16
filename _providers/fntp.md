@@ -1,5 +1,6 @@
 ---
 title: FNTP
+label: fntp
 logo: "/assets/images/providers/fntp.png"
 sources_url: https://www.fntp.fr/outils/carte-professionnelle/tout-savoir-sur-la-carte-professionnelle-tp
 ---

@@ -1,5 +1,6 @@
 ---
 title: ADEME
+label: ademe
 logo: "/assets/images/providers/ademe.png"
 sources_url: https://www.ademe.fr/particuliers-eco-citoyens/habitation/reponses-a-questions#qr-9822
 ---
