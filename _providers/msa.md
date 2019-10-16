@@ -1,5 +1,6 @@
 ---
 title: MSA
+label: msa
 logo: "/assets/images/providers/msa.png"
 ---
 

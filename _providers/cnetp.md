@@ -1,5 +1,6 @@
 ---
 title: CNETP
+label: cnetp
 logo: "/assets/images/providers/cnetp.svg"
 ---
 
