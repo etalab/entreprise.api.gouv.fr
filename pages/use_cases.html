@@ -20,13 +20,15 @@ permalink: /cas_usage/
       </div>
     </article>
 
-    <ul>
-      {% for use_case in site.use_cases %}
-        <li>
-          <a href="{{ use_case.url }}">{{ use_case.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    <article class="content">
+      <ul>
+        {% for use_case in site.use_cases %}
+          <li>
+            <a href="{{ use_case.url }}">{{ use_case.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
   </div>
 </section>
 

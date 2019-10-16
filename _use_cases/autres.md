@@ -1,8 +1,7 @@
 ---
+layout: article
 title: Les autres usages
 ---
-
-# Les autres usages
 
 L'API Entreprise est utilisée pour des besoins variés
 de simplifications de démarches administratives.
