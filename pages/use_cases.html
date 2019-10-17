@@ -24,7 +24,7 @@ permalink: /cas_usage/
       <ul>
         {% for use_case in site.use_cases %}
           <li>
-            <a href="{{ use_case.url }}">{{ use_case.title }}</a>
+            <a href="{{ use_case.url | relative_url }}">{{ use_case.title }}</a>
           </li>
         {% endfor %}
       </ul>
