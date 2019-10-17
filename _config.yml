@@ -14,12 +14,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: API Entreprise
-email: tech@entreprise.api.gouv.fr
+email: support@entreprise.api.gouv.fr
 description: > # this means to ignore newlines until "baseurl:"
   Simplifier les démarches des entreprises en récupérant pour elles
   leurs données et documents administratifs.
-baseurl: "" # the subpath of your site, e.g. /blog
+
+# The baseurl option is set for links (especialy assets links) to work
+# with Github pages. For the production environment the website is built
+# with the `--baseurl ''` option so the site can be served from the root
+# domain. This way links will work in both environment.
+baseurl: "/entreprise.api.gouv.fr" # the subpath of your site, e.g. /blog
 url: "https://entreprise.api.gouv.fr" # the base hostname & protocol for your site, e.g. http://example.com
+
 cgu_file_link: 'https://entreprise.api.gouv.fr/assets/cgu.pdf'
 signup_url: 'https://signup.entreprise.api.gouv.fr'
 twitter_username: jekyllrb
