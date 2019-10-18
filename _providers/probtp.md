@@ -1,5 +1,6 @@
 ---
 title: PROBTP
+label: probtp
 logo: "/assets/images/providers/probtp.png"
 sources_url: http://www.cibtp-grandest.fr/declarations-et-cotisations/attestation-marches-publics/
 ---

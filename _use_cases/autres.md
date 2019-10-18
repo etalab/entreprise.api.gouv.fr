@@ -1,0 +1,14 @@
+---
+layout: article
+title: Les autres usages
+---
+
+L'API Entreprise est utilisée pour des besoins variés
+de simplifications de démarches administratives.
+A titre d'exemple on peut citer :
+- la gestion de la formation professionnelle et de l'apprentissage (régions Normandie, Auvergne Rhone Alpes, Bretagne...)
+- Gestion des marchés forains (ville de Marseille)
+- Délivrance aux professionnels de badges ou de macarons pour l'accès en zone piétonne ou en zone de trafic (métropole de Grenoble)
+- Gestion des accès professionnels à la déchetterie (Communauté de communes Vaison Ventoux)
+
+Par ailleurs, l'API entreprise est utilisée dans [démarches-simplifiée](Demarches-simplifiees.fr), outil de dématérialisation des démarches administratives.

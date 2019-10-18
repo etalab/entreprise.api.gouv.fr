@@ -1,5 +1,6 @@
 ---
 title: OPQIBI
+label: opqibi
 logo: "/assets/images/providers/opqibi.png"
 sources_url: https://www.opqibi.com/page-certificats-delivres.htm
 ---

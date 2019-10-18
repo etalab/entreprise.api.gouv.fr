@@ -1,5 +1,6 @@
 ---
 title: DGFIP
+label: dgfip
 logo: "/assets/images/providers/dgfip.png"
 sources_url: https://www.impots.gouv.fr/portail/professionnel/questions/comment-obtenir-une-attestation-de-regularite-fiscale
 ---

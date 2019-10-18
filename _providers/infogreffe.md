@@ -1,5 +1,6 @@
 ---
 title: Infogreffe
+label: infogreffe
 logo: "/assets/images/providers/infogreffe.png"
 ---
 

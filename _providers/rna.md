@@ -1,5 +1,6 @@
 ---
 title: RNA
+label: rna
 logo: "/assets/images/providers/rna.svg"
 sources_url: http://www.associations.gouv.fr/le-rna-repertoire-national-des-associations.html
 ---
