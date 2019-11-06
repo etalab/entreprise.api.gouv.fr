@@ -119,4 +119,4 @@ L'adhésion du Partenaire au Service emporte l'acceptation des présentes CGU.
 - Le Partenaire pourra librement se désengager du Service en adressant sa demande par courriel à l’adresse suivante : support@entreprise.api.gouv.fr.
 
 ---
-Daté du XX novembre 2019
+Le 6 novembre 2019
