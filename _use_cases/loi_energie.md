@@ -20,7 +20,7 @@ Deux point d'attention sont à prendre en compte :
 - il s'agit de tranches d'effectif "code_effectif_entreprise"  de la nomenclature  l'INSEE.
 - Les données des entreprises qui lors de leur enregistrement ont déclaré ne pas souhaiter faire l'objet d'un démarchage commercial ne sont exposées que si l'on précise un paramettre dans la requete.
 
-[documentation technique](https://doc.entreprise.api.gouv.fr/#entreprises)
+[documentation technique entreprise](https://doc.entreprise.api.gouv.fr/#entreprises)
 
 ## Données chiffres d’affaires
 
@@ -28,14 +28,17 @@ Les données de chiffres d'affaires (chiffre d'affaire comptable) sont accessibl
 Ces données sont issues de la liasse fiscale pour les entreprises soumises à l'impôt sur les sociétés qui ont déposés leurs comptes annuels aux greffes. 
 L'API fourni les 3 derniers exercices.
 
-[documentation technique](https://doc.entreprise.api.gouv.fr/#exercices)
+[documentation technique exercices](https://doc.entreprise.api.gouv.fr/#exercices)
 
 ## Données relatives aux recettes et au total de bilan annuels
 Ces données sont accessibles en utilisant le "end point" ***liasses fiscales dgfip***
 
-Attention, les capacités techniques du fournisseur de données ne sont en deça des 2000 requêtes.
+Pour les recettes, il s’agit dans le numéro d’imprimé 2033B (millésime 2018) de la valeur contenue pour le code_NREF 304456
+Pour le chiffre d’affaire, il s’agit dans le numéro d’imprimé 2033B (millésime 2018) de la valeur contenue pour le code_NREF 304451
 
-[documentation technique](https://doc.entreprise.api.gouv.fr/#liasses-fiscales-dgfip)
+Pour cette donnée, il est demandé de limiter les appels à une requete par seconde.
+
+[documentation technique liasse fiscale](https://doc.entreprise.api.gouv.fr/#liasses-fiscales-dgfip)
 
 # Methodologie d'usage 
 Afin d'avoir accès à ces données, merci de consulter la page suivante :
