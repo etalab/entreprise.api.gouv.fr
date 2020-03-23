@@ -1,6 +1,6 @@
 ---
-layout: article
-title : Utilisation de l'API entreprise en application de l'article 64
+layout: usecases
+title : Application de l’article 64
 ---
 # Introduction
 L'article 64 de la loi relative à l’énergie et au climat autorise, pour une période de huit mois suivant la promulgation de la loi, un accès à certaines données (***les effectifs, chiffres d’affaires, recettes et total de bilan annuels***) de l'API entreprise pour les fournisseurs d'énergie assurant les missions de service public.
