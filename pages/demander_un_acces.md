@@ -1,79 +1,94 @@
 ---
-layout: faq
-title: Demander un accès
+layout: acces
+title: Comment demander un accès à l’API Entreprise
 permalink: /demander_un_acces/
 ---
 
 ## Conditions d'accès
 
-Actuellement, seules les administrations et les sociétés chargées d'une mission
-de Service Publique sont éligibles.
+Seules les administrations et les sociétés chargées d’une mission de service public sont éligibles.
 
-Il vous faudra nous indiquer qui vous êtes et justifier de la recevabilité de la demande.
+## Anticiper la demande d’accès
 
-Munissez vous à cet effet :
+__Voici les informations qui vous seront demandées :__
 
-* du **numéro siret de votre administration**, vous pouvez vous aider de
-  (https://entreprise.data.gouv.fr) pour le retrouver. Ex: commune de meaux
-  ou chu nantes
-* pour le périmètre de données demandées, **le cadre administratif et légal** vous autorisant
-  a en connaître. Liens et/ou pièces jointes.
-* des **coordonnées de votre DPO** (Délégué.e à la protection des données) ainsi que
-  des différentes parties prenantes administratives, métiers et techniques. Ces
-  données seront strictement utilisées pour communiquer avec vous
+* **Le numéro siret de votre administration**
+  <br />
+  Vous pouvez vous aider de
+  [entreprise.data.gouv.fr](https://entreprise.data.gouv.fr) pour le retrouver.
 
-Il vous sera demandé de préciser à quelles données vous souhaitez accéder. Une
-demande d'accès ne peut couvrir plusieurs contextes métiers différents et doit
-être adaptée au public utilisateur final.
+* **Les données que vous souhaitez demander**
+  <br />
+  Consultez la rubrique [cas d’usage](pages/use_cases.html) qui vous aidera à connaitre les données délivrées en fonction des utilisations les plus fréquentes et consultez la documentation pour connaitre l’exhaustivité de l’offre.
+  <br />
+  Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
-Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander
-un accès, il vous faudra formuler une demande par contexte.
+> **Exemple de la région Occitanie :**
+> Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
+> * Une demande pour l'aide à l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ;
+> * Une demande pour la pré-qualification de dossiers d’aides publiques avec l’accès à quelques données sensisbles ;
+> * Une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
 
-#### Exemple de la Région Occitanie
+> La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.
 
-Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
-  * Une demande pour l'aide à l'usager en pré-remplissant des formulaires à
-    partir d'un numéro de SIRET
-  * Une demande pour la pré-qualification de dossiers d'aides publiques avec
-    l'accès à quelques données sensibles
-  * Une demande pour l'instruction de dossiers avec l'accès à un nombre
-    important de données sensibles pour aider les agents instructeurs
+* **Le cadre administratif et légal** 
+Texte ou délibération/décision qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte.
 
-La région s'est vue remettre un espace client avec 3 tokens d'accès aux
-permissions différentes.
+* **Les coordonnées de votre délégué·e à la protection des données (DPD)**
+Votre DPD s’assure que votre organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C’est généralement une personne qui appartient à l’organisme demandeur.
 
-#### Acceptions des CGU
+* **Les coordonnées du ou de la responsable du traitement**
+Le/la responsable du traitement des données détermine les finalités et les moyens du traitement des données à caractère personnel. Seule une personne appartenant à l’organisme demandeur peut être renseignée.
 
-Vous devrez aussi accepter nos [CGU](https://entreprise.api.gouv.fr/cgu/)(Conditions Générales d'Utilisation)
+* **Les coordonnées de l’interlocut·eur·rice métier**
 
-## Faire votre demande d'accès
+* **Les coordonnées de l’interlocut·eur·rice technique**
+La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’inter-connection effective avec API Entreprise.
 
-Les demandes d'accès à API Entreprise sont instruites sur la plateforme [api.gouv.fr](https://signup.api.gouv.fr/api-entreprise).
-Si vous n'en disposez pas déjà, il vous sera demandé de vous créer un compte. Des demandes multiples ne nécessitent pas de création de compte supplémentaire.
+* Vous devrez aussi accepter **nos Conditions Générales d’Utilisation** que nous vous recommandons de consulter en amont ;
+
+> L’ensemble des coordonnées renseignées seront strictement utilisées pour communiquer avec vous.
 
 
-#### Etapes
 
-Les étapes d'obtention d'un accès aux données sont les suivantes :
+## Les étapes de la demande
 
-  1. Remplissez [le formulaire de demande d'accès](https://signup.api.gouv.fr/api-entreprise) puis validez le. Au cas ou il
-     vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui
-     reste à l'état de brouillon dans votre interface
+Les étapes d’obtention d’un accès aux données sont les suivantes :
 
-  2. Nous instruisons alors votre dossier puis prenons une décision d'acceptation ou de refus
-     de la demande d'accès. Le cas échéant nous vous demanderons des précisions
-     supplémentaires.
+1. **Créer un compte**
+  <br />
+  Si vous n’en disposez pas déjà, vous devez vous créer un compte sur l’interface SignUp prévue à cet effet.
+  Un seul compte par organisation suffit pour une demande, comme pour plusieurs demandes (exemple de la région Occitanie).
+  Votre nom, prénom et adresse mail vous seront demandés… Ainsi que le numéro de SIRET de votre organisation :arrow_down:
 
-  3. Une fois votre dossier validé, nous créons votre compte d'accès à un espace client (dashboard) et vous envoyons un email de confirmation. Cet email vous indique les CGU (Conditions Générales d'Utilisation), et fournit un lien pour le choix de votre mot de passe.
+2. **Rejoindre une organisation avec son numéro de SIRET**
+  <br />
+  À ce stade trois possibilités existent :
+  * Aucun mail n’est rattaché au SIRET transmis, ce qui signifie qu’aucun compte n’existe.
+  * Un ou plusieurs mails avec le même nom de domaine sont déjà rattachés au SIRET transmis : un compte existe déjà. Dans ce cas, les membres déjà créés dans votre organisation sont notifiés de votre inscription.
+  * Un ou plusieurs mails sont déjà rattachés au SIRET transmis mais les noms de domaines sont différents, un compte existe mais la création du compte est suspendue, un message vous indique de contacter le support.
 
-  4. Une fois votre mot de passe choisi, [connectez vous](https://dashboard.entreprise.api.gouv.fr/login).
-     à votre espace client. Votre/vos token(s) vous y attendent.
+3. **Activer le compte grâce au mail d’activation**
+  <br />
+  Vous le recevez à l’adresse mail indiquée lors de la création du compte.
 
-  5. Vous pouvez commencer à utiliser Votre/vos token(s) pour appeler l'API Entreprise. Le dashboard vous permet aussi d'avoir accès à des statistiques d'utilisation des données.
+4. **Remplir le formulaire de demande d’accès**
+  <br />
+  L’ensemble des informations nécessaires sont détaillées plus haut, remplissez votre formulaire en n’oubliant pas de sauvegarder votre brouillon régulièrement.
+  Validez-le.
 
-#### Accès aux demandes d'accès réalisées avec démarches simplifiées (antérieur au 27/08/2019)
+5. **Nous instruisons votre dossier et prenons une décision d’acceptation ou de refus de la demande d’accès.**
+* Votre demande est refusée : Vous recevrez un mail vous indiquant pourquoi, s’il nous manque des informations, nous vous demanderons des précisions supplémentaires.
+* Votre demande est validée : nous créons votre compte d’accès et vous envoyons un email de confirmation. Cet email vous indique les CGU (Conditions Générales d’Utilisation), et fournit un lien pour le choix de votre mot de passe.
 
-Les demandes effectuées avant le 27/08/2019 sont toujours accessibles à l'adresse suivante :
-https://www.demarches-simplifiees.fr/commencer/api-entreprise
+6. **Se connecter à son tableau de bord**
+  <br />
+Avec votre adresse mail et votre mot de passe, vous pouvez vous connecter à votre espace client que nous appellons tableau de bord car il vous permet de gérer vos clés d’accès et de suivre l’état de vos endpoints.
 
+7. **Utiliser votre ou vos jetons d’accès pour appeler l’API Entreprise.**
+  <br />
+Ils vous attendent dans l’onglet “jetons”.
+Accès aux demandes d’accès réalisées avec démarches simplifiées (antérieur au 27/08/2019)
 
+Les demandes effectuées avant le 27/08/2019 sont toujours accessibles à l’adresse suivante :
+[https://www.demarches-simplifiees.fr/commencer/api-entreprise](https://www.demarches-simplifiees.fr/commencer/api-entreprise)
