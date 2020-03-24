@@ -43,9 +43,9 @@ Pour cette donnée, il est demandé de limiter les appels à une requete par sec
 [documentation technique liasse fiscale](https://doc.entreprise.api.gouv.fr/#liasses-fiscales-dgfip)
 
 ## Demander un accès aux données
-Afin d'avoir accès à ces données, merci de consulter la page suivante :
-https://entreprise.api.gouv.fr/demander_un_acces/
 
-Les droits d'accès seront accordés jusqu'au 8 juillet 2020.  
+Pour demander un accès, [veuillez consulter la page "Demander un accès"](https://entreprise.api.gouv.fr/demander_un_acces/), un déroulé des étapes à suivre vous sera décrit.
+
+Comme expliqué dans l'introduction, les droits d'accès seront accordés jusqu'au 8 juillet 2020.  
 
 
