@@ -10,7 +10,7 @@ permalink: /cas_usage/
   </div>
 </div>
 
-<section class="tpl-section tpl-bg--lightest-grey">
+<section class="tpl-section tpl-bg--lightest-grey use-cases">
   <div class="tpl-container">
     <article class="content">
       <div>
@@ -21,15 +21,10 @@ permalink: /cas_usage/
       </div>
     </article>
 
-    <article class="content">
-      <ul>
-        {% for use_case in site.use_cases %}
-          <li>
-            <a href="{{ use_case.url | relative_url }}">{{ use_case.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </article>
+    <div class="tpl-grid use-cases__list">
+      {% include usecases.html %}
+    </div>
+    <a class="tpl-button tpl-button--alternate">Tous les cas d’usages</a>
   </div>
 </section>
 
