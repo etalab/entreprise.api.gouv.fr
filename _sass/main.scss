@@ -5,6 +5,15 @@ blockquote {
   border-left: var(--blockquote-border-width) solid var(--blockquote-border-color);
 }
 
+.tpl-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.tpl-main :last-child {
+  flex-grow: 1;
+}
+
 .tpl-footer img {
   height: 2em;
 }
@@ -22,19 +31,15 @@ blockquote {
   margin: 0;
 }
 
-.home .tpl-hero {
-  background: url('../assets/images/saut-difficultes-administratives.png') right bottom no-repeat;
-  background-size: contain;
-}
-
 .home .tpl-hero__title {
-  line-height: 1.5em;
   font-size: 2.5em;
   text-align: center;
 }
 
 .home .tpl-hero__title .subtext {
   font-size: 0.625em;
+  line-height: 1.25em;
+  margin-top: 1em;
 }
 
 .home .tpl-hero__title .alternate {
@@ -76,7 +81,7 @@ blockquote {
     width: 0;
   }
   10%, 40% {
-    width: 5.65em;
+    width: 9.5em;
   }
 }
 
@@ -86,7 +91,7 @@ blockquote {
   }
   
   60%, 90% {
-    width: 6.35em;
+    width: 19.5em;
   }
 }
 
@@ -103,19 +108,25 @@ blockquote {
   background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #DAEAFE;
 }
 
+.use-cases .tpl-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .use-cases h2 {
   text-align: center;
 }
 
 .use-cases__list {
   padding: var(--spacing-m) 0;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  width: auto;
-  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .use-cases__list .tpl-card {
+  flex: 1 1 0;
   display: inline-flex;
   width: 25em;
   white-space: normal;
@@ -143,6 +154,11 @@ blockquote {
 .use-cases .card__icon {
   margin: 0 auto;
   height: 8em;
+}
+
+.use-cases .tpl-button {
+  margin: auto;
+  background: var(--white);
 }
 
 .access {
@@ -174,8 +190,9 @@ blockquote {
   margin: var(--spacing-s);
 }
 
-.join .tpl-card .tpl-description-list {
+.join .tpl-card dl.tpl-description-list {
   text-align: left;
+  font-size: 16px;
 }
 
 .join .tpl-card .tpl-description-list dt {
@@ -212,10 +229,6 @@ blockquote {
 
 .small-hero .tpl-container {
   align-items: start;
-}
-
-.tpl-documentation {
-  border-top: 1px solid var(--lighter-grey);
 }
 
 .tpl-documentation .tpl-container {
