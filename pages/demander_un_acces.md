@@ -53,6 +53,8 @@ La personne ou l’équipe en charge du développement de l’interface logiciel
 
 ## Les étapes de la demande
 
+#### Aujourd'hui et depuis août 2019, les demandes se font par la plateforme SignUp dédiée
+
 Les étapes d’obtention d’un accès aux données sont les suivantes :
 
 1. **Créer un compte**
@@ -90,5 +92,7 @@ Avec votre adresse mail et votre mot de passe, vous pouvez vous connecter à vot
 Ils vous attendent dans l’onglet “jetons”.
 Accès aux demandes d’accès réalisées avec démarches simplifiées (antérieur au 27/08/2019)
 
-Les demandes effectuées avant le 27/08/2019 sont toujours accessibles à l’adresse suivante :
+#### Les demandes effectuées avant le 27/08/2019 
+
+Les demandes effectuées avant cette date sur Démarches Simplifiées sont toujours accessibles à l’adresse suivante :
 [https://www.demarches-simplifiees.fr/commencer/api-entreprise](https://www.demarches-simplifiees.fr/commencer/api-entreprise)
