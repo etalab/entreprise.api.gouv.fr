@@ -1,196 +1,169 @@
 ---
-layout: global
+layout: default
 ---
 
-
-<div class="hero">
-  <div class="container hero__container">
-    <div class="row">
-      <div class="column illustration">
-        <img class="city-illustration" src="{{ site.baseurl }}{% link assets/images/city.svg %}" alt="City">
-      </div>
-      <div class="column">
-        <h1>
-          entreprise.api.gouv.fr
-        </h1>
-        <p>
-          Les données entreprises à travers API pour simplifier vos démarches !
-        </p>
+<div class="home">
+  <section class="tpl-hero">
+    <div class="tpl-container tpl-flex-row tpl-flex-jc-sa">
+      <h1 class="tpl-hero__title">
+        <div class="headline">Simplifier les démarches des <span class="alternate">entreprises</span><span class="alternate2">associations</span></div>
+        <div class="subtext">en récupérant pour elles leurs informations administratives</div>
+    </div>
+  </section>
+  <section class="tpl-section use-cases">
+    <div class="tpl-container">
+      <h2>Dans quels cas utiliser API Entreprise ?</h2>
+      <div id="test2" class="use-cases__list">
+        <a href="{{ site.baseurl }}{% link _use_cases/marches_publics.md %}" class="tpl-card tpl-shadow">
+          <div class="tpl-card__header">
+            <h3 class="tpl-card__title">Faciliter les dossiers de candidature aux <strong>marchés publics</strong></h3>
+          </div>
+          <div class="tpl-card__content">
+            <img class="card__icon" src="{{ site.baseurl }}{% link assets/images/usecases/marches-publics-1.svg %}" alt="" />
+            <p>Pré-remplissez les formulaires des entreprises postulant à vos appels d’offre et récupérez leurs justificatifs.</p>
+          </div>
+        </a>
+        <a href="{{ site.baseurl }}{% link _use_cases/aides_publiques.md %}" class="tpl-card tpl-shadow">
+          <div class="tpl-card__header">
+            <h3 class="tpl-card__title">Faciliter le dépôt et l’instruction des demandes d’<strong>aides publiques</strong></h3>
+          </div>
+          <div class="tpl-card__content">
+            <img class="card__icon" src="{{ site.baseurl }}{% link assets/images/usecases/aide-publique.svg %}" alt="" />
+            <p>Récupérez les justificatifs administratifs de vos utilisateurs demandant des aides publiques.</p>
+          </div>
+        </a>
+        <a href="{{ site.baseurl }}{% link _use_cases/loi_energie.md %}" class="tpl-card tpl-shadow">
+          <div class="tpl-card__header">
+            <h3 class="tpl-card__title">Appliquer <strong>l’Article 64 de la loi énergie</strong></h3>
+          </div>
+          <div class="tpl-card__content">
+            <img class="card__icon" src="{{ site.baseurl }}{% link assets/images/usecases/loi-energie.svg %}" alt="" />
+            <p>Vérifiez l’éligibilité de vos clients aux tarifs réglementés d’énergie en accédant à une partie de leurs données (Article 64 de la loi énergie).</p>
+          </div>
+        </a>
+        <a id="test" href="{{ site.baseurl }}{% link _use_cases/autres.md %}" class="tpl-card tpl-shadow">
+          <div class="tpl-card__header">
+            <h3 class="tpl-card__title"><strong>Les autres utilisations</strong> d’API Entreprise</h3>
+          </div>
+          <div class="tpl-card__content">
+            <img class="card__icon" src="{{ site.baseurl }}{% link assets/images/usecases/marches-publics.svg %}" alt="" />
+            <p>Gérez des accès, de la formation professionnelles, en simplifiant les démarches administratives.</p>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
+  </section>
+  <section class="tpl-section access">
+    <div class="tpl-container">
+      <h2>Comment demander un accès à l’API Entreprise ?</h2>
+      <p>Seules les administrations et les sociétés chargées d’une mission de service publique sont éligibles.</p>
+      <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}{% link pages/demander_un_acces.md %}">
+        Les conditions d’accès
+      </a>
+      <p>Vous n’êtes pas une administration ? Utilisez <a href="https://entreprise.data.gouv.fr">entreprise.data.gouv.fr</a></p>
+    </div>
+  </section>
+  <section class="tpl-section join">
+    <div class="tpl-container">
+      <h2>Pourquoi utiliser API Entreprise ?</h2>
+      <div class="tpl-flex-row">
+        <div class="tpl-card">
+          <div class="tpl-card__header">
+            <img class="card__icon bullhorn" src="{{ site.baseurl }}{% link assets/images/join/bullhorn.svg %}" alt="" />
+            <h3>Nous regroupons les fournisseurs de données pour vous ! </h3>
+          </div>
+          <div class="tpl-card__content">
+            <dl class="tpl-description-list">
+              <dt>Avant :</dt>
+              <dd>Vous deviez aller demander toutes les données dont vous aviez besoins auprès des différentes des administrations. Cette recherche n’était pas toujours fructueuse car les organisations n'ont pas toujours un site ou un contact public pour leurs API.
+              </dd>
+              <dt>Aujourd’hui, avec API Entreprise :</dt>
+              <dd>API Entreprise s’occupe de démarcher les administrations et de faire les différentes demandes d’accès.
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="tpl-card">
+          <div class="tpl-card__header">
+            <img class="card__icon plug" src="{{ site.baseurl }}{% link assets/images/join/plug.svg %}" alt="" />
+            <h3>Nous réalisons l’interfaçage technique avec les différentes API</h3>
+          </div>
+          <div class="tpl-card__content">
+            <dl class="tpl-description-list">
+              <dt>Avant :</dt>
+              <dd>Vous étiez obligés de vous connecter et de vous adapter à tous les formats différents des API. Vous passiez beaucoup de temps à lire les documentations techniques  de chaque DSI afin d’effectuer  les différentes intégrations.
+              </dd>
+              <dt>Aujourd’hui, avec API Entreprise :</dt>
+              <dd>Désormais, API Entreprise s’occupe de tout. L’interfaçage ne se fait qu’avec nous, dans des standards à jour des contraintes industrielles. 
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="tpl-card">
+          <div class="tpl-card__header">
+            <img class="card__icon grip" src="{{ site.baseurl }}{% link assets/images/join/grip.svg %}" alt="" />
+            <h3>Un seul compte, un seul interlocuteur, plusieurs données</h3>
+          </div>
+          <div class="tpl-card__content">
+            <dl class="tpl-description-list">
+              <dt>Avant :</dt>
+              <dd>Vous deviez gérer plusieurs mots  de passe, plusieurs contacts techniques et métiers.
+              </dd>
+              <dt>Aujourd’hui, avec API Entreprise :</dt>
+              <dd>Vous avez une seule clé d’accès sécurisée, nous nous occupons d’agréger et de vous restituer  les connaissances techniques  et métiers.
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="tpl-section providers">
+    <div class="tpl-container">
+      <h2>Nos fournisseurs de données</h2>
+      <ul class="providers__main text-center">
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/insee.png %}" alt="INSEE">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/infogreffe.png %}" alt="Infogreffe">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/dgfip.png %}" alt="Direction Générale des Finances Publiques">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/acoss.png %}" alt="ACOSS">
+        </li>
+      </ul>
+      <ul class="providers__others text-center">
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/inpi.png %}" alt="INPI">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/qualibat.png %}" alt="Qualibat">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/rna.svg %}" alt="Répertoire National des Associations">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/cnetp.svg %}" alt="CNETP">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/probtp.png %}" alt="ProBTP">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/msa.png %}" alt="MSA">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/opqibi.png %}" alt="OPQIBI">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/fntp.png %}" alt="FNTP">
+        </li>
+        <li>
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/agefiph.png %}" alt="AGEFIPH">
+        </li>
+      </ul>
+    </div>
+  </section>
 </div>
-<section class="section-dark">
-  <div class="container">
-    <div class="row">
-      <div class="column">
-        <h2 class="text-center">
-          Validité des données
-        </h2>
-        <p>
-          Les données servies par l'API Entreprise sont issues directement des organismes de références.
-        </p>
-      </div>
-      <div class="column">
-        <h2 class="text-center">
-          Echanges sécurisés
-        </h2>
-        <p>
-          Les échanges s’appuient sur le format standard REST et nécessitent un token unique pour une identification simplifiée.
-        </p>
-      </div>
-      <div class="column">
-        <h2 class="text-center">
-          JSON et PDFs
-        </h2>
-        <p>
-          Les données sont servies au format JSON ou PDF selon que vous demandez de la donnée ou une attestation.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container providers">
-    <h2 class="text-center">
-      Nos fournisseurs de données
-    </h2>
-    <ul class="providers__main text-center">
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/insee.png %}" alt="INSEE">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/infogreffe.png %}" alt="Infogreffe">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/dgfip.png %}" alt="Direction Générale des Finances Publiques">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/acoss.png %}" alt="ACOSS">
-      </li>
-    </ul>
-    <ul class="providers__others text-center">
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/inpi.png %}" alt="INPI">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/qualibat.png %}" alt="Qualibat">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/rna.svg %}" alt="Répertoire National des Associations">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/cnetp.svg %}" alt="CNETP">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/probtp.png %}" alt="ProBTP">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/msa.png %}" alt="MSA">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/opqibi.png %}" alt="OPQIBI">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/fntp.png %}" alt="FNTP">
-      </li>
-      <li>
-        <img class="" src="{{ site.baseurl }}{% link assets/images/providers/agefiph.png %}" alt="AGEFIPH">
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section class="section-color ecosystem">
-  <div class="container">
-    <div class="row">
-      <div class="column">
-        <h2 class="text-center">
-          data.gouv.fr
-        </h2>
-        <p>
-          Si vous êtes à la recherche de la <a style="text-decoration: underline; color: white" href="https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/">base SIRENE de l'INSEE</a> ou des données ouvertes du <a style="text-decoration: underline; color: white" href="https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations-rna/">Répertoire National des Associations</a>, ou de données sur d’autres sujets, vous pourrez les télécharger sur <a style="text-decoration: underline; color: white" href="https://www.data.gouv.fr/">data.gouv.fr</a>.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="tools">
-  <div class="container">
-    <div class="row">
-      <div class="column icon">
-        <img class="" src="{{ site.baseurl }}{% link assets/images/icons/icon-documentation.svg %}" alt="Icon documentation">
-      </div>
-      <div class="column doc">
-        <h2>
-          Documentation technique
-        </h2>
-        <p>
-          Vous voulez évaluer les possibilités de l'API Entreprise ou commencer à vous interfacer&nbsp;? La documentation technique est faite pour vous. Vous y trouverez les informations techniques génériques, ainsi que le détail de chaque endpoint.
-        </p>
-        <button class="button" onclick='window.open("{{ site.api_documentation_url }}")'>
-          Voir la documentation
-        </button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column dashboard">
-        <h2>
-          Tableau de bord
-        </h2>
-        <p>
-        Il est important de connaître la santé de nos dispositifs. Notre tableau de bord comporte les disponibilités historisées sur 7 jours, les disponibilités en temps réel ainsi que la liste des incidents. Ces fonctionnalités sont amenées à s'enrichir et à évoluer en fonction des retours et besoins remontés par les clients de l'API Entreprise.
-        </p>
-        <button class="button" onclick='window.open("{{ site.dashboard_url }}")'>
-          Accéder au tableau de bord
-        </button>
-      </div>
-      <div class="column icon">
-        <img class="" src="{{ site.baseurl }}{% link assets/images/icons/icon-dashboard.svg %}" alt="Icon dashboard">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-grey api-access">
-  <div class="container">
-    <div class="row">
-      <div class="column">
-        <h2 class="text-center">
-          Comment avoir accès à l'API Entreprise ?
-        </h2>
-        <p>
-          La demande de connexion à l'API Entreprise est possible pour tout opérateur public qui souhaite opérer pour son compte, ou faire opérer par un éditeur privé, un service de dématérialisation ou de simplification administratives qui nécessite la mise en relation avec des fournisseurs d'informations publiques. La demande est effectuée à partir du service Démarches Simplifiées. Vous serez invité.e à vous créer un compte en deux clics, puis indiquer le SIRET de votre organisme, et compléter le formulaire de demande. Les échanges avant l'ouverture d'un compte d'accès à l'API Entreprise se feront au travers de ce service, qui vous invitera à préciser le périmètre de votre projet de simplification.
-        </p>
-
-        <div class="text-center">
-          <a class="button" href="{{ site.baseurl }}{% link pages/demander_un_acces.md %}">
-            Demander un accès
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="api-access">
-  <div class="container">
-    <div class="row">
-      <div class="column">
-        <h2 class="text-center">
-          Vous n'êtes pas une administration, utilisez <i><a href="https://entreprise.data.gouv.fr">entreprise.data.gouv.fr</a></i>
-        </h2>
-        <p>
-          Le service API Entreprise est réservé aux administrations publiques dans le cadres de simplifications de démarches publiques. Une API est disponible pour accéder à toutes les données publiques issues de la base SIRENE de l'INSEE.
-        </p>
-        <div class="text-center">
-          <a class="button" href="https://entreprise.data.gouv.fr" target="_blank" rel="noopener noreferrer">
-            entreprise.data.gouv.fr
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
