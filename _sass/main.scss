@@ -1,3 +1,31 @@
+.tpl-main-header__logo {
+  height: 2em;
+}
+
+table {
+  background-color: var(--white);
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: var(--box-shadow-bottom);
+}
+
+table th {
+  color: var(--text-color-alternate);
+  font-family: var(--font-family-title);
+  text-align: left;
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
+table tr:hover {
+  background-color: var(--table-hover-color);
+}
+
+table td {
+  border-top: 1px solid var(--table-border-color);
+  padding: var(--spacing-xs) var(--spacing-s);
+}
+
+
 blockquote {
   margin: 0;
   padding: var(--spacing-xxs) var(--spacing-m);
@@ -108,12 +136,6 @@ blockquote {
   background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #DAEAFE;
 }
 
-.use-cases .tpl-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .use-cases h2 {
   text-align: center;
 }
@@ -126,28 +148,24 @@ blockquote {
 }
 
 .use-cases__list .tpl-card {
-  flex: 1 1 0;
+  flex: 0 1 25%;
   display: inline-flex;
   width: 25em;
   white-space: normal;
-  text-decoration: none;;
+  text-decoration: none;
   scroll-snap-align: start;
 }
 
-.use-cases__list .tpl-card + .tpl-card {
-  margin-left: var(--spacing-l);
-}
-
-.use-cases__list .tpl-card__title {
+.use-cases .tpl-card__title {
   font-size:  1.25em;
   font-weight: 400;
 }
 
-.use-cases__list .tpl-card__title strong {
+.use-cases .tpl-card__title strong {
   color: var(--primary);
 }
 
-.use-cases__list .covid .tpl-card__title strong {
+.use-cases .covid .tpl-card__title strong {
   color: var(--danger);
 }
 
@@ -248,4 +266,13 @@ blockquote {
 
 .tpl-documentation__content {
   scroll-snap-type: y mandatory;
+}
+
+/* cas d'usage */
+.use-cases .contact {
+  margin-top: 3em;
+}
+
+.use-cases a.tpl-card {
+  text-decoration: none;
 }

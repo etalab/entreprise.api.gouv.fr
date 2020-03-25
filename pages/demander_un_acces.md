@@ -1,6 +1,6 @@
 ---
 layout: acces
-title: Comment demander un accès à l’API Entreprise
+title: Comment demander un accès à l’API Entreprise ?
 permalink: /demander_un_acces/
 ---
 
@@ -19,7 +19,7 @@ __Voici les informations qui vous seront demandées :__
 
 * **Les données que vous souhaitez demander**
   <br />
-  Consultez la rubrique [cas d’usage](pages/use_cases.html) qui vous aidera à connaitre les données délivrées en fonction des utilisations les plus fréquentes et consultez la documentation pour connaitre l’exhaustivité de l’offre.
+  Consultez la rubrique [cas d’usage]({{ site.baseurl }}/cas_usage/) qui vous aidera à connaitre les données délivrées en fonction des utilisations les plus fréquentes et consultez la documentation pour connaitre l’exhaustivité de l’offre.
   <br />
   Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
