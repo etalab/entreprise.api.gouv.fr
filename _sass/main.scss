@@ -33,6 +33,10 @@ blockquote {
   border-left: var(--blockquote-border-width) solid var(--blockquote-border-color);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .tpl-main {
   display: flex;
   flex-direction: column;
@@ -148,7 +152,7 @@ blockquote {
 }
 
 .use-cases__list .tpl-card {
-  flex: 0 1 25%;
+  flex: 1 1 25%;
   display: inline-flex;
   width: 25em;
   white-space: normal;
