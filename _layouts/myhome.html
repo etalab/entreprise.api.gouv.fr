@@ -6,8 +6,8 @@ layout: default
   <section class="tpl-hero">
     <div class="tpl-container tpl-flex-row tpl-flex-jc-sa">
       <h1 class="tpl-hero__title">
-        <div class="headline">Vous êtes <span class="alternate">une administration</span><span class="alternate2">éditeur prestataire d'une administration</span></div>
-        <div class="subtext">Simplifier les démarches des entreprises et des associations en récupérant pour elles leurs informations administratives</div>
+        <div class="headline">Vous êtes <span class="alternate">une administration</span><span class="alternate2">éditeur prestataire d'une administration</span>?</div>
+        <div class="subtext">Simplifiez les démarches des entreprises et des associations<br />en récupérant pour elles leurs informations administratives</div>
     </div>
   </section>
   <section class="tpl-section use-cases">
@@ -16,13 +16,13 @@ layout: default
       <div id="test2" class="use-cases__list">
         {% include usecases.html %}
       </div>
-      <a class="tpl-button tpl-button--alternate">Tous les cas d’usages</a>
+      <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}{% link pages/use_cases.html %}">Tous les cas d’usages</a>
     </div>
   </section>
   <section class="tpl-section access">
     <div class="tpl-container">
       <h2>Comment demander un accès à l’API Entreprise ?</h2>
-      <p>Seules les administrations et les sociétés chargées d’une mission de service publique sont éligibles.</p>
+      <p>Seules les administrations et les sociétés chargées d’une mission de service public sont éligibles.</p>
       <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}{% link pages/demander_un_acces.md %}">
         Demander un accès
       </a>
@@ -36,7 +36,7 @@ layout: default
         <div class="tpl-card">
           <div class="tpl-card__header">
             <img class="card__icon bullhorn" src="{{ site.baseurl }}{% link assets/images/join/bullhorn.svg %}" alt="" />
-            <h3>Nous regroupons les fournisseurs de données pour vous ! </h3>
+            <h3>Nous regroupons<br />les fournisseurs de données pour vous ! </h3>
           </div>
           <div class="tpl-card__content">
             <dl class="tpl-description-list">
@@ -57,10 +57,7 @@ layout: default
           <div class="tpl-card__content">
             <dl class="tpl-description-list">
               <dt>Avant :</dt>
-              <dd>Vous étiez obligés de vous connecter et de vous adapter à tous les formats différents des API. Vous passiez beaucoup de temps à lire
-les documentations techniques 
-de chaque DSI afin d’effectuer 
-les différentes intégrations.
+              <dd>Vous étiez obligés de vous connecter et de vous adapter à tous les formats différents des API. Vous passiez beaucoup de temps à lire les documentations techniques de chaque DSI afin d’effectuer les différentes intégrations.
               </dd>
               <dt>Aujourd’hui, avec API Entreprise :</dt>
               <dd>Désormais, API Entreprise s’occupe de tout. L’interfaçage ne se fait qu’avec nous, dans des standards à jour des contraintes industrielles. 
@@ -71,18 +68,15 @@ les différentes intégrations.
         <div class="tpl-card">
           <div class="tpl-card__header">
             <img class="card__icon grip" src="{{ site.baseurl }}{% link assets/images/join/grip.svg %}" alt="" />
-            <h3>Un seul compte, un seul interlocuteur, plusieurs données</h3>
+            <h3>Un seul compte,<br />un seul interlocuteur, plusieurs données</h3>
           </div>
           <div class="tpl-card__content">
             <dl class="tpl-description-list">
               <dt>Avant :</dt>
-              <dd>Vous deviez gérer plusieurs mots 
-de passe, plusieurs contacts techniques et métiers.
+              <dd>Vous deviez gérer plusieurs mots de passe, plusieurs contacts techniques et métiers.
               </dd>
               <dt>Aujourd’hui, avec API Entreprise :</dt>
-              <dd>Vous avez une seule clé d’accès sécurisée, nous nous occupons d’agréger et de vous restituer 
-les connaissances techniques 
-et métiers.
+              <dd>Vous avez une seule clé d’accès sécurisée, nous nous occupons d’agréger et de vous restituer les connaissances techniques et métiers.
               </dd>
             </dl>
           </div>

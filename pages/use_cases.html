@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Les cas d'usage d'API Entreprise
+title: Dans quels cas utiliser API Entreprise ?
 permalink: /cas_usage/
 ---
 
@@ -12,19 +12,22 @@ permalink: /cas_usage/
 
 <section class="tpl-section tpl-bg--lightest-grey use-cases">
   <div class="tpl-container">
-    <article class="content">
-      <div>
-        La vocation première d'API Entreprise consiste en la simplification
-        des démarches des entreprises en mettant, pour leur compte, les documents
-        et les données administratives les concernant à disposition des <b>acteurs
-        publics et administrations</b>.
-      </div>
-    </article>
-
-    <div class="tpl-grid use-cases__list">
+    <div class="tpl-grid">
       {% include usecases.html %}
+      <a href="{{ site.baseurl }}{% link _use_cases/autres.md %}" class="tpl-card tpl-shadow">
+        <div class="tpl-card__header">
+          <h3 class="tpl-card__title"><strong>Les autres utilisations</strong> d’API Entreprise</h3>
+        </div>
+        <div class="tpl-card__content">
+          <img class="card__icon" src="{{ site.baseurl }}{% link assets/images/usecases/marches-publics-1.svg %}" alt="" />
+          <p>Gérez des accès, de la formation professionnelle, en simplifiant les démarches administratives.</p>
+        </div>
+      </a>
     </div>
-    <a class="tpl-button tpl-button--alternate">Tous les cas d’usages</a>
+    <div class="contact">
+      <h3>Vous utilisez API Entreprise dans d’autres situations ?</h3>
+      <p>Signalez-le nous pour que votre expérience bénéficie à d’autres.<br />Contactez-nous sur le mail de <a href="mailto:support@entreprise.api.gouv.fr">support@entreprise.api.gouv.fr</a></p>
+    </div>
   </div>
 </section>
 

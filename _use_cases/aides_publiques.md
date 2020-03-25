@@ -27,7 +27,7 @@ L’utilisation de ces données répond à un certain nombre de principes :
 
 Certaines données sont publiques et d’autres réservées à l’administration. Dans la mesure où il n’existe pas encore de système d’identification pour les personnes morales, il convient de ne pas communiquer les informations confidentielles dans les services en ligne qui leur sont proposés ouverts au public, sans authentification à l'entrée.
 
-#### Le pré-remplissage avec des données publiques
+### Le pré-remplissage avec des données publiques
 
 Les données publiques sont peuvent être utilisées pour pré-remplir les formulaires d’inscription dans les dispositifs d’aide et de subvention. 
 
@@ -41,7 +41,7 @@ Deux options se présentent dans ce cas :
 2. Ne pas afficher les données en front, mais récupérer les données pour que vos agents en bénéficient.
 Les données confidentielles sont donc visibles en back-office pour les agents sous forme de données structurées ou de pdf.
 
-#### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
+### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
     
 En utilisant API Entreprise, les entreprises et associations en demande d’aide publiques n’ont plus besoin de vous fournir certains justificatifs. Les documents et données sont récupérées automatiquement, ce qui facilite grandement l’instruction de leurs dossiers.
 
@@ -71,7 +71,7 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 | Certificat PROBTP | données JSON | publiques  | PROBTP | / |
 | Certificat RGE | données JSON | publiques  | ADEME | / |
 
-Les informations précises sur les données de l’API Entreprise sont disponibles sur la page suivante : https://doc.entreprise.api.gouv.fr/#introduction.
+Les informations précises sur les données de l’API Entreprise sont disponibles dans [notre documentation](https://doc.entreprise.api.gouv.fr/#introduction).
 Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support@entreprise.api.gouv.fr)
 
 ## Liste des éditeurs et intégrateurs
@@ -82,7 +82,7 @@ Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support
 | MGDIS      | Portail des Aides  | Mi-avril 2020          |
 | Entrouvert | Publik             | A préciser             |
 
-Vous souhaitez apparaitre dans cette liste demandez en écrivant à support@entreprise.gouv.fr
+Vous souhaitez apparaitre dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr)
 
 ## Demander un accès aux données
 
