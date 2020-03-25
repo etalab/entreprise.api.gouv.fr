@@ -3,13 +3,14 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="tpl-body">
 
+    {% include icons.html %}
     {% include header.html %}
 
-    <div id="content">
+    <main class="tpl-main">
       {{ content }}
-    </div>
+    </main>
 
     {% include footer.html %}
 

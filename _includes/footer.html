@@ -1,20 +1,32 @@
-<footer class="footer">
-  <div class="container">
-    <ul class="footer__links">
-      <li><h4>Produit</h4></li>
-      <li><a target="_blank" href="{{ site.api_documentation_url }}" rel="noopener noreferrer">API - Documentation</a></li>
-      <li><a target="_blank" href="{{ site.dashboard_url }}" rel="noopener noreferrer">Dashboard</a></li>
-    </ul>
-    <ul class="footer__links">
-      <li><h4>Aide</h4></li>
-      <li><a target="_blank" href="mailto:{{ site.email }}" rel="noopener noreferrer">Contact</a></li>
-      <li><a href="{{ site.baseurl }}{% link pages/faq.md %}">FAQ</a></li>
-      <li><a target="_blank" href="{{ site.gitbook_url }}" rel="noopener noreferrer">Infrastructure - Documentation</a></li>
-    </ul>
-    <ul class="footer__links">
-      <li><h4>Légal</h4></li>
-      <li><a href="{{ site.baseurl }}{% link pages/mentions.md %}">Mentions</a></li>
-      <li><a href="{{ site.baseurl }}{% link pages/cgu.md %}">CGU</a></li>
-    </ul>
+<footer class="tpl-footer" role="contentinfo">
+  <div class="tpl-container">
+    <div class="tpl-flex-row tpl-flex-jc-sb">
+      <ul class="tpl-footer__links">
+        <li>
+          <h2>Un service de la DINUM réalisé par <a href="https://etalab.gouv.fr"><img src="{{ site.baseurl }}{% link assets/images/etalab.svg %}" /></a></h2>
+        </li>
+      </ul>
+      <ul class="tpl-footer__links">
+        <li>
+          <h3>Aide</h3>
+        </li>
+        <li><a target="_blank" href="mailto:{{ site.email }}" rel="noopener noreferrer">Contact</a></li>
+        <li><a target="_blank" href="{{ site.gitbook_url }}" rel="noopener noreferrer">Infrastructure - Documentation</a></li>
+      </ul>
+      <ul class="tpl-footer__links">
+        <li>
+          <h3>Légal</h3>
+        </li>
+        <li><a href="{{ site.baseurl }}{% link pages/mentions.md %}">Mentions</a></li>
+        <li><a href="{{ site.baseurl }}{% link pages/cgu.md %}">CGU</a></li>
+      </ul>
+      <ul class="tpl-footer__links">
+        <li><h3>Produit</h3></li>
+        <li><a target="_blank" href="{{ site.api_documentation_url }}" rel="noopener noreferrer">API - Documentation</a></li>
+        <li><a target="_blank" href="{{ site.dashboard_url }}" rel="noopener noreferrer">Dashboard</a></li>
+        <li><a target="_blank" href="{{ site.baseurl }}{% link pages/use_cases.html %}">Cas d’usage</a></li>
+        <li><a target="_blank" href="{{ site.signup_url }}">Demander un accès</a></li>
+      </ul>
+    </div>
   </div>
 </footer>

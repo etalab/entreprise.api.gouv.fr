@@ -1,6 +1,6 @@
 ---
-layout: article
-title: Les Marchés Publics
+layout: usecases
+title: Marchés Publics
 ---
 
 Les places de marchés représentent plus de 40% des acteurs utilisant

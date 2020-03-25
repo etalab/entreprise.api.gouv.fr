@@ -1,6 +1,6 @@
 ---
-layout: article
-title: Les autres usages
+layout: usecases
+title: Autres usages
 ---
 
 L'API Entreprise est utilisée pour des besoins variés
