@@ -50,7 +50,7 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 ## Quelles sont les données autorisées pour le cas d'usage des aides et subventions ? 
 
 
-
+{:.tpl-table}
 | Données    | Type         | Ouvertes /confidentielles | Producteur         | Commentaires                            |
 | ---------- | ------------ | ------------------------- | ------------------ | --------------------------------------- |
 | Entreprise | données JSON | publiques                 | INSEE & Infogreffe | Les mendataires sont issus d'infogreffe |                                       |
