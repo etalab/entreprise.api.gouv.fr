@@ -11,11 +11,8 @@ layout: default
   <div class="tpl-container">
     <aside class="tpl-documentation__sidebar">
       <nav class="tpl-documentation__links">
-        <a class="tpl-documentation__link" href="#introduction">Introduction</a>
-        <a class="tpl-documentation__link" href="#comment-utiliser-lapi-entreprise-">Comment utiliser l’API Entreprise</a>
-        <a class="tpl-documentation__link" href="#quelles-sont-les-données-autorisées-pour-ce-cas-dusage">Quelles sont les données autorisées pour ce cas d’usage</a>
-        <a class="tpl-documentation__link" href="#liste-des-éditeurs-et-intégrateurs">Liste des éditeurs et intégrateurs</a>
-        <a class="tpl-button tpl-button--gradient" href="{% link pages/use_cases.html %}">Demander un accès</a>
+        {% include toc.html html=content %}
+        <a class="tpl-button tpl-button--gradient" href="https://signup.api.gouv.fr/">Demander un accès</a>
       </nav>
     </aside>
     <div class="tpl-documentation__content">

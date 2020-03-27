@@ -2,6 +2,7 @@
 layout: usecases
 title: Marchés Publics
 ---
+
 # introduction
 L’API entreprise est faite pour être utilisée dans le cadre de logiciels métiers.
 
