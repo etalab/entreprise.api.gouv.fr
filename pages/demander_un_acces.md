@@ -21,15 +21,7 @@ __Voici les informations qui vous seront demandées :__
   <br />
   Consultez la rubrique [cas d’usage]({{ site.baseurl }}/cas_usage/) qui vous aidera à connaitre les données délivrées en fonction des utilisations les plus fréquentes et consultez la documentation pour connaitre l’exhaustivité de l’offre.
   <br />
-  Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
-
-> **Exemple de la région Occitanie :**
-> Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
-> * Une demande pour l'aide à l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ;
-> * Une demande pour la pré-qualification de dossiers d’aides publiques avec l’accès à quelques données sensisbles ;
-> * Une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
-
-> La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.
+  Il vous faut effectuer une demande d'accès par démarche sauf si plusieurs démarches relevent du même contexte et utilisent le même périmettre de données. 
 
 * **Le cadre administratif et légal** 
 Texte ou délibération/décision qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte.
@@ -47,13 +39,12 @@ La personne ou l’équipe en charge du développement de l’interface logiciel
 
 * Vous devrez aussi accepter **nos Conditions Générales d’Utilisation** que nous vous recommandons de consulter en amont ;
 
-> L’ensemble des coordonnées renseignées seront strictement utilisées pour communiquer avec vous.
-
+> Les coordonnées renseignées seront utilisées pour communiquer avec vous.
 
 
 ## Les étapes de la demande
 
-#### Aujourd'hui et depuis août 2019, les demandes se font par la plateforme SignUp dédiée
+#### Les demandes se font par l'outil d'habilitation dénomé "SignUp"
 
 Les étapes d’obtention d’un accès aux données sont les suivantes :
 
@@ -92,7 +83,3 @@ Avec votre adresse mail et votre mot de passe, vous pouvez vous connecter à vot
 Ils vous attendent dans l’onglet “jetons”.
 Accès aux demandes d’accès réalisées avec démarches simplifiées (antérieur au 27/08/2019)
 
-#### Les demandes effectuées avant le 27/08/2019 
-
-Les demandes effectuées avant cette date sur Démarches Simplifiées sont toujours accessibles à l’adresse suivante :
-[https://www.demarches-simplifiees.fr/commencer/api-entreprise](https://www.demarches-simplifiees.fr/commencer/api-entreprise)
