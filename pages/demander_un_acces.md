@@ -44,7 +44,7 @@ La personne ou l’équipe en charge du développement de l’interface logiciel
 
 ## Les étapes de la demande
 
-#### Les demandes se font par l'outil d'habilitation dénomé "SignUp"
+#### Les demandes se font par le formulaire d'habilitation dénomé "SignUp"
 
 Les étapes d’obtention d’un accès aux données sont les suivantes :
 
@@ -72,14 +72,28 @@ Les étapes d’obtention d’un accès aux données sont les suivantes :
 
 5. **Nous instruisons votre dossier et prenons une décision d’acceptation ou de refus de la demande d’accès.**
 * Votre demande est refusée : Vous recevrez un mail vous indiquant pourquoi, s’il nous manque des informations, nous vous demanderons des précisions supplémentaires.
-* Votre demande est validée : nous créons votre compte d’accès et vous envoyons un email de confirmation. Cet email vous indique les CGU (Conditions Générales d’Utilisation), et fournit un lien pour le choix de votre mot de passe.
+* Votre demande est validée : nous vous en informons et créons votre compte d’accès au tableau de bord.
 
-6. **Se connecter à son tableau de bord**
-  <br />
-Avec votre adresse mail et votre mot de passe, vous pouvez vous connecter à votre espace client que nous appellons tableau de bord car il vous permet de gérer vos clés d’accès et de suivre l’état de vos endpoints.
+#### Le jetons d’accès est disponible dans le tableau de bord
 
-7. **Utiliser votre ou vos jetons d’accès pour appeler l’API Entreprise.**
+Votre jeton d'accès est stocké dans le tableau de bord à  l'adresse suivante : 
+http://dashboard.entreprise.api.gouv.fr 
+
+1. **Initialisation de votre compte d'accès au tableau de bord**
   <br />
-Ils vous attendent dans l’onglet “jetons”.
-Accès aux demandes d’accès réalisées avec démarches simplifiées (antérieur au 27/08/2019)
+Le compte d'accès au tableau de bord est différent de celui utilisé pour le formulaire d'habilitation "signup".
+
+Dès la validation de votre demande vous recevrez un mail vous permettant d'activer votre compte dans le tableau de bord grâce à un lien d'accès à ce site.
+
+Vous pouvez aussi activer votre compte directement à l'adresse suivante https://dashboard.entreprise.api.gouv.fr/login
+
+7. **Utiliser votre jetons d’accès pour appeler l’API Entreprise.**
+  <br />
+  
+Vous pourrez récupérer votre jetons d’accès (token) dans l’onglet “jetons”.
+
+Vous pourrez aussi consulter les statistiques d'usage des données, contrôler le volume de votre consommation et prendre connaissance des erreurs d'appel. 
+
+Les techniciens pourront lire le détail des dernières requêtes effectuées par leur application. 
+
 
