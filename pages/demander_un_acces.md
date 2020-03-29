@@ -21,15 +21,7 @@ __Voici les informations qui vous seront demandées :__
   <br />
   Consultez la rubrique [cas d’usage]({{ site.baseurl }}/cas_usage/) qui vous aidera à connaitre les données délivrées en fonction des utilisations les plus fréquentes et consultez la documentation pour connaitre l’exhaustivité de l’offre.
   <br />
-  Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
-
-> **Exemple de la région Occitanie :**
-> Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
-> * Une demande pour l'aide à l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ;
-> * Une demande pour la pré-qualification de dossiers d’aides publiques avec l’accès à quelques données sensisbles ;
-> * Une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
-
-> La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.
+  Il vous faut effectuer une demande d'accès par démarche sauf si plusieurs démarches relevent du même contexte et utilisent le même périmettre de données. 
 
 * **Le cadre administratif et légal** 
 Texte ou délibération/décision qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte.
@@ -47,13 +39,12 @@ La personne ou l’équipe en charge du développement de l’interface logiciel
 
 * Vous devrez aussi accepter **nos Conditions Générales d’Utilisation** que nous vous recommandons de consulter en amont ;
 
-> L’ensemble des coordonnées renseignées seront strictement utilisées pour communiquer avec vous.
-
+> Les coordonnées renseignées seront utilisées pour communiquer avec vous.
 
 
 ## Les étapes de la demande
 
-#### Aujourd'hui et depuis août 2019, les demandes se font par la plateforme SignUp dédiée
+#### Les demandes se font par le formulaire d'habilitation dénomé "SignUp"
 
 Les étapes d’obtention d’un accès aux données sont les suivantes :
 
@@ -81,18 +72,28 @@ Les étapes d’obtention d’un accès aux données sont les suivantes :
 
 5. **Nous instruisons votre dossier et prenons une décision d’acceptation ou de refus de la demande d’accès.**
 * Votre demande est refusée : Vous recevrez un mail vous indiquant pourquoi, s’il nous manque des informations, nous vous demanderons des précisions supplémentaires.
-* Votre demande est validée : nous créons votre compte d’accès et vous envoyons un email de confirmation. Cet email vous indique les CGU (Conditions Générales d’Utilisation), et fournit un lien pour le choix de votre mot de passe.
+* Votre demande est validée : nous vous en informons et créons votre compte d’accès au tableau de bord.
 
-6. **Se connecter à son tableau de bord**
+#### Le jetons d’accès est disponible dans le tableau de bord
+
+Votre jeton d'accès est stocké dans le tableau de bord à  l'adresse suivante : 
+http://dashboard.entreprise.api.gouv.fr 
+
+1. **Initialisation de votre compte d'accès au tableau de bord**
   <br />
-Avec votre adresse mail et votre mot de passe, vous pouvez vous connecter à votre espace client que nous appellons tableau de bord car il vous permet de gérer vos clés d’accès et de suivre l’état de vos endpoints.
+Le compte d'accès au tableau de bord est différent de celui utilisé pour le formulaire d'habilitation "signup".
 
-7. **Utiliser votre ou vos jetons d’accès pour appeler l’API Entreprise.**
+Dès la validation de votre demande vous recevrez un mail vous permettant d'activer votre compte dans le tableau de bord grâce à un lien d'accès à ce site.
+
+Vous pouvez aussi activer votre compte directement à l'adresse suivante https://dashboard.entreprise.api.gouv.fr/login
+
+7. **Utiliser votre jetons d’accès pour appeler l’API Entreprise.**
   <br />
-Ils vous attendent dans l’onglet “jetons”.
-Accès aux demandes d’accès réalisées avec démarches simplifiées (antérieur au 27/08/2019)
+  
+Vous pourrez récupérer votre jetons d’accès (token) dans l’onglet “jetons”.
 
-#### Les demandes effectuées avant le 27/08/2019 
+Vous pourrez aussi consulter les statistiques d'usage des données, contrôler le volume de votre consommation et prendre connaissance des erreurs d'appel. 
 
-Les demandes effectuées avant cette date sur Démarches Simplifiées sont toujours accessibles à l’adresse suivante :
-[https://www.demarches-simplifiees.fr/commencer/api-entreprise](https://www.demarches-simplifiees.fr/commencer/api-entreprise)
+Les techniciens pourront lire le détail des dernières requêtes effectuées par leur application. 
+
+

@@ -1,0 +1,66 @@
+.tpl-documentation__links ul {
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: smooth;
+}
+
+.tpl-documentation__links li {
+  padding: var(--spacing-xs) var(--spacing-m);
+  border: 1px solid transparent;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.tpl-documentation__link--active {
+  color: var(--primary);
+  font-weight: 700;
+  position: relative;
+  border-color: var(--primary);
+}
+
+.tpl-documentation__link--active::before {
+  content: "";
+  background-color: var(--primary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0.5em;
+}
+
+.tpl-documentation__links li {
+  pointer-events:none
+}
+
+.tpl-documentation__links li:hover {
+  background-color: var(--lighter-grey);;
+}
+
+.tpl-documentation__links li a {
+  display: inline-block;
+  pointer-events:all;
+  text-decoration: none;
+}
+
+.tpl-documentation__links li ul {
+  display: none;
+}
+
+.tpl-documentation__content {
+  flex-grow: 1;
+}
+
+.tpl-documentation__content dt {
+  font-family: var(--font-family-title);
+  font-weight: 700;
+  color: var(--text-color-default);
+}
+
+.tpl-documentation__sidebar + .tpl-documentation__content,
+.tpl-documentation__content + .tpl-documentation__sidebar {
+  margin-left: var(--spacing-l);
+}
+
+.tpl-documentation .tpl-button {
+  margin: var(--spacing-m);
+}
