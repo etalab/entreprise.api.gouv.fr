@@ -42,7 +42,7 @@ blockquote {
   flex-direction: column;
 }
 
-.tpl-main :last-child {
+.tpl-main > :last-child {
   flex-grow: 1;
 }
 
@@ -147,13 +147,14 @@ blockquote {
 .use-cases__list {
   padding: var(--spacing-m) 0;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .use-cases__list .tpl-card {
-  flex: 1 1 25%;
+  flex: 0 1 30%;
   display: inline-flex;
+  justify-content: space-between;
   width: 25em;
   white-space: normal;
   text-decoration: none;
@@ -171,6 +172,10 @@ blockquote {
 
 .use-cases .covid .tpl-card__title strong {
   color: var(--danger);
+}
+
+.use-cases .tpl-card__content p {
+  margin-bottom: 0;
 }
 
 .use-cases .card__icon {
