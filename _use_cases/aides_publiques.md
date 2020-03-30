@@ -7,19 +7,18 @@ title: Aides et subventions
 
 L’API entreprise délivre des données et des documents (pdf) afin de simplifier la délivrance des aides et des subventions aux entreprises et aux associations.
 
-Depuis le 18 janvier 2019, les administrations ne doivent plus demander de pièces justificatives aux personnes morales, pourvu qu’elles soient en mesure de se les procurer dans la sphère administrative. C’est le principe du “dites le nous une fois” édicté par le code des relations entre le public et l’administration.
+Depuis le 18 janvier 2019, les administrations ne doivent plus demander de pièces justificatives aux personnes morales, pourvu qu’elles soient en mesure de se les procurer dans la sphère administrative. C’est le principe du “dites le nous une fois” du code des relations entre le public et l’administration.
 
 > **Références des décrets :**
-> [Décret n° 2019-31 du 18 janvier 2019 relatif aux échanges d’informations et de données entre administrations dans le cadre des démarches administratives et à l’expérimentation prévue par l’article 40 de la loi n° 2018-727 du 10 août 2018 pour un Etat au service d’une société de confiance](https://https://www.legifrance.gouv.fr/eli/decret/2019/1/18/CPAJ1832097D/jo/texte)
-
-> [Décret n° 2019-33 du 18 janvier 2019 fixant la liste des pièces justificatives que le public n’est plus tenu de produire à l’appui des procédures administratives en application de l’application de l’article L. 113-13 du code des relations entre le public et l’administration](https://https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=545051CE2BCBB4B31C7610D89872D330.tplgfr23s_1?cidTexte=JORFTEXT000038029642&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000038029181)
+> [Décret n° 2019-31 du 18 janvier 2019 relatif aux échanges d’informations et de données entre administrations dans le cadre des démarches administratives et à l’expérimentation prévue par l’article 40 de la loi n° 2018-727 du 10 août 2018 pour un Etat au service d’une société de confiance](https://https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029589&dateTexte=20190201)
+> [Décret n° 2019-33 du 18 janvier 2019 fixant la liste des pièces justificatives que le public n’est plus tenu de produire à l’appui des procédures administratives en application de l’article L. 113-13 du code des relations entre le public et l’administration](https://https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029642&categorieLien=id)
 
 La mise en œuvre de ce principe juridique peut s’effectuer par tout moyen informatique. L’API entreprise a été conçue pour répondre à ce besoin en regroupant des fournisseurs de données relatifs aux personnes morales et éviter aux administrations d’avoir à conventionner avec “15 administrations différentes”.
 
 L’utilisation de ces données répond à un certain nombre de principes :
 * Les droits d’accès sont accordés par démarche.
 * Si plusieurs aides délivrées requièrent les même données, une demande d’accès est suffisante.
-* Chaque démarche permet d’accéder au strictes données nécessaires. C’est le principe de proportionnalité.
+* Chaque démarche permet d’accéder aux strictes données nécessaires. C’est le principe de proportionnalité.
 * La personne morale concernée par les données (exemple : entreprise, associations) est informée de leur utilisation.
 * Certaines données relatives aux personnes morales sont publiques et peuvent être exposées, d’autres sont confidentielles et ne doivent être disponibles que pour les agents habilités à les traiter.
 
@@ -43,7 +42,7 @@ Les données confidentielles sont donc visibles en back-office pour les agents s
 
 ### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
     
-En utilisant API Entreprise, les entreprises et associations en demande d’aide publiques n’ont plus besoin de vous fournir certains justificatifs. Les documents et données sont récupérées automatiquement, ce qui facilite grandement l’instruction de leurs dossiers.
+En utilisant API Entreprise, les entreprises et associations en demande d’aide publiques n’ont plus besoin de vous fournir certains justificatifs. Les documents et données sont récupérés automatiquement, ce qui facilite grandement l’instruction de leurs dossiers.
 
 40% des utilisateurs  d’API Entreprise (régionaux, départements, communes, Banque Publique d’Investissement  notamment) utilisent notre service dans ce cadre.
 
@@ -53,23 +52,23 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 
 | Données    | Type         | Ouvertes /confidentielles | Producteur         | Commentaires                            |
 | ---------- | ------------ | ------------------------- | ------------------ | --------------------------------------- |
-| Entreprise | données JSON | publiques                 | INSEE & Infogreffe | Les mendataires sont issus d'infogreffe |                                       |
+| Entreprise | données JSON | publiques                 | INSEE & Infogreffe | Les mandataires sont issus d'infogreffe |                                       |
 | Etablissement | données JSON | publiques  | INSEE | / |
 | Association | données JSON | publiques  | Ministère de l'Intérieur| / |
 | Document association | PDF (image) | publiques  | Ministère de l'Intérieur | / |
-| Attestation fiscale | PDF (texte) | confidentielles  | DGFIP | Parfois instables. Pour une meme entreprise l'API peu retourner une réponse ou non à quelques minutes de différence. |
-| Attesation sociale | PDF (texte) | confidentielles  | ACOSS| Asynchrone pour certaines entreprises |
+| Attestation fiscale | PDF (texte) | confidentielles  | DGFIP | Parfois instables. Pour une même entreprise l'API peut retourner une réponse ou non à quelques minutes de différence. |
+| Attestation sociale | PDF (texte) | confidentielles  | ACOSS| Asynchrone pour certaines entreprises |
 | Cotisation MSA | données JSON | confidentielles  | MSA | / |
 | Attestation AGEFIPH | données JSON | confidentielles  | AGEFIPH | / |
 | Bilan entreprise | données JSON | confidentielles  | Banque de France | Indisponibilités récurentes et prévisibles |
 | Exercices | données JSON | confidentielles  | DGFIP | Données issues de la liasse fiscale |
 | Liasse fiscale | données JSON | confidentielles  | DGFIP | Données complexes dont la structure varie chaque année |
-| Extrat RCS | données JSON | publiques | Infogreffe| / |
-| Extrait INPI | données JSON | publiques  | INPI | / |
-| Certificat CNETP | données JSON | publiques  | CNETP | / |
+| Extrait  RCS | données JSON | publiques | Infogreffe| Observation existantes sur le kbis : changements de capital, les transferts de siège, les fusions, les redressements et liquidations judiciaires (si publiques) |
+| Extrait INPI | données JSON | publiques  | INPI | marques et brevets déposés  |
+| Certificat CNETP | PDF | publiques  | CNETP | / |
 | Certificat OPQIBI | données JSON | publiques  | OPQIBI | / |
 | Certificat PROBTP | données JSON | publiques  | PROBTP | / |
-| Certificat RGE | données JSON | publiques  | ADEME | / |
+| Certificat RGE | données JSON et PDF | publiques  | ADEME | / |
 
 Les informations précises sur les données de l’API Entreprise sont disponibles dans [notre documentation](https://doc.entreprise.api.gouv.fr/#introduction).
 Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support@entreprise.api.gouv.fr)
@@ -82,7 +81,7 @@ Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support
 | MGDIS      | Portail des Aides  | Mi-avril 2020          |
 | Entrouvert | Publik             | A préciser             |
 
-Vous souhaitez apparaitre dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr)
+Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr)
 
 ## Demander un accès aux données
 
