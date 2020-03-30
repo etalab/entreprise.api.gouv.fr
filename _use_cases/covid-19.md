@@ -14,11 +14,11 @@ Elle s'adresse aux parties prenantes (régions et éditeurs prestataires) de l'i
 Les entreprises et associations éligibles devront remplir un formulaire proposé par les régions. 
 
 API Entreprise vous permet de : 
-- faciliter le traitement de la demande de subventions, en vous donnant accès à des données déterminantes de l'éligibilité de l'entreprise ou association demandeuse ;
-- de mettre en place le "dîtes le nous une fois", y compris dans ce contexte inédit.
+- faciliter le traitement de la demande de subvention, en vous donnant accès à des données déterminantes de l'éligibilité de l'entreprise ou association demandeuse ;
+- mettre en oeuvre le "dîtes le nous une fois".
  
 :::info
-Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide spécifique de l’Etat, merci de consulter la page dédiée ["aides et subventions"](https://entreprise.api.gouv.fr/use_cases/aides_publiques/).
+Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide de l’Etat, merci de consulter la page dédiée ["aides et subventions"](https://entreprise.api.gouv.fr/use_cases/aides_publiques/).
 :::
 
 ## Le cadre légal
