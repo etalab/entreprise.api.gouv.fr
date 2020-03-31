@@ -5,13 +5,14 @@ title: Instruction régionale de l'aide d’urgence aux TPE
 
 ## Introduction
 
-Cette fiche pratique propose les éléments de mise en œuvre techniques et fonctionnels du fonds de solidarité à destination des entreprises particulièrement touchées par les conséquences économiques, financières et sociales de la propagation de l’épidémie de covid-19. 
+Dans le cadre inédit de la propagation de l'épidémie du Covid-19, un fonds de solidarité à destination des entreprises et associations, de taille petite à moyenne, particulièrement touchées par les conséquences économiques, financières et sociales liées à cette épidémie a été mis en place.
+Ce fonds propose sous certaines conditions deux aides : 
+- un première aide forfaitaire de 1500 euros ; 
+- une aide complémentaire forfaitaire de 2000 euros.
 
-Pour que les entrperises pyuissent .... ellles doivent remplir un formualaires proposées par les régions 
-Pour que ces régions. 
-A CHANGER Les entreprises et associations éligibles devront remplir un formulaire proposé par les régions. 
+**C'est dans le cadre de la mise en oeuvre de cette seconde aide complémentaire qu'API Entreprise intervient.**
+Et cette fiche pratique s'adresse aux parties prenantes de l'instruction des dossiers, à savoir les régions et leurs éditeurs prestataires.
 
-Elle s'adresse aux parties prenantes (régions et éditeurs prestataires) de l'instruction des dossiers et délivrance de l'aide.
 
 ## Le rôle d'API Entreprise 
 
@@ -37,7 +38,7 @@ Voici les deux décrets qui organisent les échanges :
 
 API Entreprise regroupe les données de plusieurs administrations, et les mets à disposition au travers d'une API unique. 
 
-Dans le cadre de cette demande d'aide d'urgence la majeures parties des justficatifs sont des déclarations sur l'honneur de l'entreprise ou de l'association. Les données d'API Entreprise peuvent vous permettre de vérifier ces informations.
+Dans le cadre de cette demande d'aide d'urgence, la majeures parties des justficatifs sont des déclarations sur l'honneur de l'entreprise ou de l'association. Les données d'API Entreprise peuvent vous permettre de vérifier ces informations.
  
 
 > Par exemple : 
