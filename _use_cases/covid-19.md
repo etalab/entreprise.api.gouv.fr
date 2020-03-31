@@ -18,14 +18,13 @@ Cette fiche pratique s'adresse aux parties prenantes de cette phase de vérifica
 API Entreprise vous permet de : 
 - faciliter le traitement de la demande de subvention, en vous donnant accès à des données déterminantes de l'éligibilité de l'entreprise ou association demandeuse ;
 - mettre en oeuvre le "dîtes le nous une fois".
- 
-{:.tpl-notification}
-Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide de l’État, merci de consulter la page dédiée ["aides et subventions"](https://entreprise.api.gouv.fr/use_cases/aides_publiques/).
+
+{:.tpl-notification} Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide de l’État, merci de consulter la page dédiée ["aides et subventions"](../_use_cases/aides_publiques.md).
 
 ## Le cadre réglementaire
 
 #### Aide d'urgence
-Cette aide d'urgence aux TPE/PME est encadrée par le [décret relatif au fonds de solidarité à destination des entreprises particulièrement touchées par les conséquences économiques, financières et sociales de la propagation de l’épidémie de covid-19 et des mesures prises pour limiter cette propagation](ee). Ce décret spécifie les conditions d'éligibilité des entreprises et associations, les justificatifs demandés, ainsi que les éléments de mise en oeuvre et d'instruction de la demande de subvention.
+Cette aide d'urgence aux TPE/PME est encadrée par le [décret relatif au fonds de solidarité à destination des entreprises particulièrement touchées par les conséquences économiques, financières et sociales de la propagation de l’épidémie de covid-19 et des mesures prises pour limiter cette propagation](https://www.legifrance.gouv.fr/eli/decret/2020/3/30/2020-371/jo/texte). Ce décret spécifie les conditions d'éligibilité des entreprises et associations, les justificatifs demandés, ainsi que les éléments de mise en oeuvre et d'instruction de la demande de subvention.
 
 #### Application du "dîtes le nous une fois"
 Le code des relations entre le public et l’administration permet et contraint les administrations à ne plus demander certaines pièces justificatives aux personnes morales.
@@ -35,32 +34,23 @@ Voici les deux décrets qui organisent les échanges :
 
 ### Les données disponibles sur API Entreprise
 
+Dans le cadre de cette demande d'aide d'urgence, l'entreprise ou l'association déclare sur l'honneur qu'elle remplit les conditions demandées.
+L'API Entreprise regroupe des données administratives utiles à l'instruction de cette déclaration sur l'honneur, et les mets à disposition au travers d'une API unique. 
 
-API Entreprise regroupe les données de plusieurs administrations, et les mets à disposition au travers d'une API unique. 
-
-Dans le cadre de cette demande d'aide d'urgence, la majeures parties des justficatifs sont des déclarations sur l'honneur de l'entreprise ou de l'association. Les données d'API Entreprise peuvent vous permettre de vérifier ces informations.
- 
-
-> Par exemple : 
-> - L'effectif indiqué peut être recoupé avec les données de l'ACOSS ;
-> - Les observations des greffes peuvent aider à mieux connaître la situation de l'entreprise ;
-> - Les chiffres d'affaires connus de la DGFIP peuvent faciliter l'examen du caractère raisonnable de la demande prêt.
-
-
-Voici la liste des endpoints adpatés à ce cas d'utilisation : 
+Voici la liste des endpoints adaptés à ce cas d'usage : 
 
 {:.tpl-table}
 | Point d'accès | fournisseur        | commentaire                                                                                  | Documentation |
 | ------------- | ------------------ | -------------------------------------------------------------------------------------------- | ----------- |
+| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | Ce point d'accès est en cours de réalisation        |          |
 | Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint entreprise_insee](https://doc.entreprise.api.gouv.fr/?json#entreprises)      |                              |
-| Association   | Min Intérieur      | Données d'indentité des associations (RNA) | [Endpoint associations_rna](https://doc.entreprise.api.gouv.fr/?json#associations-rna)      |                                                               |
+| Association   | Min Intérieur      | Données d'indentité des associations (RNA) | [Endpoint associations_rna](https://doc.entreprise.api.gouv.fr/?json#associations-rna)      |                                                             |
 | Extrait RCS   | INFOGREFFE         | Observations présentes dans le Kbis                                                                 | [Endpoint extraits_rcs_infogreffe](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)      |         |
-| Effectifs     | ACOSS              | Données collectés par l'ACOSS aupres de la DSN.      | Ce point d'accès est en cours de réalisation        |          |
+| Exercices | DGFIP         | Chiffre d'affaire de l'entreprise &#42;                                                              | [Endpoint exercices](https://doc.entreprise.api.gouv.fr/?json#exercices)      |         |
 
-Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support@entreprise.api.gouv.fr).
+&#42; En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.
 
 ## Liste des éditeurs et intégrateurs
-
 {:.tpl-table}
 | Editeurs   | Nom de la solution | Date de mise en oeuvre |
 | ---------- | ------------------ | ---------------------- |
@@ -72,17 +62,21 @@ Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [sup
 ## Conditions d'accès
 
 L'accès à l'API Entreprise dans le cadre de ce cas d'usage sera strictement réservé aux administrations concernées par l'instruction des dossiers de cette aide d'urgence :
-- aux régions,
-- à la collectivité de Corse,
-- aux collectivités territoriales de Guyane et de Martinique
-- au conseil départemental de Mayotte,
-- aux assemblées de Saint-Barthélemy, de Saint-Martin, de Saint-Pierre-et-Miquelon ou de Wallis-et-Futuna, 
+- aux régions, 
 - ainsi qu'à leurs éditeurs prestataires.
 
-Pour votre demande d'accès, [veuillez consulter la page "Demander un accès](https://etalab.github.io/entreprise.api.gouv.fr/demander_un_acces/), un déroulé des étapes vous sera décrit.
+Chaque région doit effectuer une demande d'accès avec les données indiquées plus haut. Chaque région aura la charge de transmettre à ces prestataires la clé d'accès obtenue. 
 
-## La gestion de vos clés d'accès
+Pour votre demande d'accès, veuillez consulter la page ["Demander un accès"](../pages/demander_un_acces.md), un déroulé des étapes vous sera décrit.
 
-Une demande de token par région. 
+## Gestion des clés d'accès
 
+Vous réalisez les développements ?
+Nous avons besoin que vous remplissiez [les paramètres obligatoires](https://doc.entreprise.api.gouv.fr/?json#param-tres-obligatoires) de la façon suivante : 
 
+{:.tpl-table}
+| Paramètre   | Présence      | Description                                           |
+| ----------  | ------------- | ----------------------------------------------------- |
+| context     | Obligatoire   | Nom de la région, ex : *bourgogne_franche_comte*         |
+| recipient   | Obligatoire   | Siret de l'Administration destinatrice des données    |
+| object      | Obligatoire   | *aide_volet_2*                                          |
