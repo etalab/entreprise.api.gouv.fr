@@ -13,7 +13,6 @@ Ce fonds propose sous certaines conditions deux aides :
 **C'est dans le cadre de l'instruction des demandes de cette seconde aide complémentaire qu'API Entreprise intervient.**
 Cette fiche pratique s'adresse aux parties prenantes de cette phase de vérification, à savoir les régions et leurs éditeurs prestataires.
 
-
 ## Le rôle d'API Entreprise 
 
 API Entreprise vous permet de : 
@@ -68,7 +67,7 @@ Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support
 
 Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr).
 
-## Demander un accès
+## Conditions d'accès
 
 L'accès à l'API Entreprise dans le cadre de ce cas d'usage sera strictement réservé aux administrations concernées par l'instruction des dossiers de cette aide d'urgence :
 - aux régions,
