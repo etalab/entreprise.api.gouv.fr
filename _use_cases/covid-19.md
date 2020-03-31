@@ -51,16 +51,6 @@ Voici la liste des endpoints adaptés à ce cas d'usage :
 
 &#42; En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.
 
-## Liste des éditeurs et intégrateurs
-
-{:.tpl-table}
-| Editeurs   | Nom de la solution | Date de mise en oeuvre |
-| ---------- | ------------------ | ---------------------- |
-| MGDIS      | Portail des Aides  | Mi-avril 2020          |
-| Entrouvert | Publik             | À préciser             |
-
-Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr).
-
 ## Conditions d'accès
 
 L'accès à l'API Entreprise dans le cadre de ce cas d'usage sera strictement réservé aux administrations concernées par l'instruction des dossiers de cette aide d'urgence :
