@@ -9,9 +9,9 @@ L’API entreprise délivre des données et des documents (pdf) afin de simplifi
 
 Depuis le 18 janvier 2019, les administrations ne doivent plus demander de pièces justificatives aux personnes morales, pourvu qu’elles soient en mesure de se les procurer dans la sphère administrative. C’est le principe du “dites le nous une fois” du code des relations entre le public et l’administration.
 
-> **Références des décrets :**
-> [Décret n° 2019-31 du 18 janvier 2019 relatif aux échanges d’informations et de données entre administrations dans le cadre des démarches administratives et à l’expérimentation prévue par l’article 40 de la loi n° 2018-727 du 10 août 2018 pour un Etat au service d’une société de confiance](https://https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029589&dateTexte=20190201)
-> [Décret n° 2019-33 du 18 janvier 2019 fixant la liste des pièces justificatives que le public n’est plus tenu de produire à l’appui des procédures administratives en application de l’article L. 113-13 du code des relations entre le public et l’administration](https://https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029642&categorieLien=id)
+**Références des décrets :**
+[Décret n° 2019-31 du 18 janvier 2019 relatif aux échanges d’informations et de données entre administrations dans le cadre des démarches administratives et à l’expérimentation prévue par l’article 40 de la loi n° 2018-727 du 10 août 2018 pour un Etat au service d’une société de confiance](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029589&categorieLien=id)
+> [Décret n° 2019-33 du 18 janvier 2019 fixant la liste des pièces justificatives que le public n’est plus tenu de produire à l’appui des procédures administratives en application de l’article L. 113-13 du code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029642&categorieLien=id)
 
 La mise en œuvre de ce principe juridique peut s’effectuer par tout moyen informatique. L’API entreprise a été conçue pour répondre à ce besoin en regroupant des fournisseurs de données relatifs aux personnes morales et éviter aux administrations d’avoir à conventionner avec “15 administrations différentes”.
 
