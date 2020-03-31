@@ -50,25 +50,26 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 
 
 {:.tpl-table}
-| Données    | Type         | Ouvertes /confidentielles | Producteur         | Commentaires                            |
-| ---------- | ------------ | ------------------------- | ------------------ | --------------------------------------- |
-| Entreprise | données JSON | publiques                 | INSEE & Infogreffe | Les mandataires sont issus d'infogreffe |                                       |
-| Etablissement | données JSON | publiques  | INSEE | / |
-| Association | données JSON | publiques  | Ministère de l'Intérieur| / |
-| Document association | PDF (image) | publiques  | Ministère de l'Intérieur | / |
-| Attestation fiscale | PDF (texte) | confidentielles  | DGFIP | Parfois instables. Pour une même entreprise l'API peut retourner une réponse ou non à quelques minutes de différence. |
-| Attestation sociale | PDF (texte) | confidentielles  | ACOSS| Asynchrone pour certaines entreprises |
-| Cotisation MSA | données JSON | confidentielles  | MSA | / |
-| Attestation AGEFIPH | données JSON | confidentielles  | AGEFIPH | / |
-| Bilan entreprise | données JSON | confidentielles  | Banque de France | Indisponibilités récurentes et prévisibles |
-| Exercices | données JSON | confidentielles  | DGFIP | Données issues de la liasse fiscale |
-| Liasse fiscale | données JSON | confidentielles  | DGFIP | Données complexes dont la structure varie chaque année |
-| Extrait  RCS | données JSON | publiques | Infogreffe| Observation existantes sur le kbis : changements de capital, les transferts de siège, les fusions, les redressements et liquidations judiciaires (si publiques) |
-| Extrait INPI | données JSON | publiques  | INPI | marques et brevets déposés  |
-| Certificat CNETP | PDF | publiques  | CNETP | / |
-| Certificat OPQIBI | données JSON | publiques  | OPQIBI | / |
-| Certificat PROBTP | données JSON | publiques  | PROBTP | / |
-| Certificat RGE | données JSON et PDF | publiques  | ADEME | / |
+| Données              | Type         | Ouverture       | Producteur               | Commentaires             |
+| -------------------  | ------------ | --------------- | ------------------------ | ----------------------   |
+| Entreprise           | données JSON | publiques       | INSEE & Infogreffe       | Les mandataires sont issus d'infogreffe      |                                       |
+| Etablissement        | données JSON | publiques       | INSEE                    | /                                                      |
+| Extrait  RCS         | données JSON | publiques       | Infogreffe.              | Observation existantes sur le kbis : changements de capital, les transferts de siège, les fusions, les redressements et liquidations judiciaires (si publiques).         |
+| Association          | données JSON | publiques       | Ministère de l'Intérieur | /                                             |
+| Document association | PDF (image)  | publiques       | Ministère de l'Intérieur | /                                               |
+| Exercices            | données JSON | confidentielles | DGFIP                    | Données issues de la liasse fiscale            |
+| Bilan entreprise    | données JSON | confidentielles | Banque de France         | Indisponibilités récurentes et prévisibles |
+| Liasse fiscale       | données JSON | confidentielles | DGFIP                    | Données complexes dont la structure varie chaque année.                                                                                                                        |
+| Attestation fiscale  | PDF (texte)  | confidentielles | DGFIP                    | Parfois instables. Pour une même entreprise l'API peut retourner une réponse ou non à quelques minutes de différence.                                                |
+| Attestation sociale  | PDF (texte)  | confidentielles | ACOSS                    | Asynchrone pour certaines entreprises     |
+| Attestation AGEFIPH  | données JSON | confidentielles | AGEFIPH                  | /                                            |
+| Cotisation MSA       | données JSON | confidentielles | MSA                      | /                                            |
+| Certificat PROBTP    | données JSON | publiques       | PROBTP                   | /                                               |
+| Certificat CNETP     | PDF          | publiques       | CNETP                    | /                                            |
+| Certificat RGE       | données JSON et PDF | publiques| ADEME                    | /                                              |
+| Certificat OPQIBI    | données JSON | publiques       | OPQIBI                   | /                                              |
+| Extrait INPI         | données JSON | publiques       | INPI                     | marques et brevets déposés                     |
+
 
 Les informations précises sur les données de l’API Entreprise sont disponibles dans [notre documentation](https://doc.entreprise.api.gouv.fr/#introduction).
 Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support@entreprise.api.gouv.fr)
