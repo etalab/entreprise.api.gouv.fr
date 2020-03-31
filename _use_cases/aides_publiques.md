@@ -49,7 +49,7 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 ## Quelles sont les données autorisées pour le cas d'usage des aides et subventions ? 
 
 
-
+{:.tpl-table}
 | Données    | Type         | Ouvertes /confidentielles | Producteur         | Commentaires                            |
 | ---------- | ------------ | ------------------------- | ------------------ | --------------------------------------- |
 | Entreprise | données JSON | publiques                 | INSEE & Infogreffe | Les mandataires sont issus d'infogreffe |                                       |
@@ -75,7 +75,7 @@ Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support
 
 ## Liste des éditeurs et intégrateurs
 
-
+{:.tpl-table}
 | Editeurs   | Nom de la solution | Date de mise en oeuvre |
 | ---------- | ------------------ | ---------------------- |
 | MGDIS      | Portail des Aides  | Mi-avril 2020          |
