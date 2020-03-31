@@ -13,7 +13,7 @@ Ce fonds propose sous certaines conditions deux aides :
 **C'est dans le cadre de l'instruction des demandes de cette seconde aide complémentaire qu'API Entreprise intervient.**
 Cette fiche pratique s'adresse aux parties prenantes de cette phase de vérification, à savoir les régions et leurs éditeurs prestataires.
 
-## Le rôle d'API Entreprise 
+## Rôle d'API Entreprise 
 
 API Entreprise vous permet de : 
 - faciliter le traitement de la demande de subvention, en vous donnant accès à des données déterminantes de l'éligibilité de l'entreprise ou association demandeuse ;
@@ -22,7 +22,7 @@ API Entreprise vous permet de :
 {:.tpl-notification}
 Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide de l’État, merci de consulter la page dédiée ["aides et subventions"](../_use_cases/aides_publiques.md).
 
-## Le cadre réglementaire
+## Cadre réglementaire
 
 #### Aide d'urgence
 Cette aide d'urgence aux TPE/PME est encadrée par le [décret relatif au fonds de solidarité à destination des entreprises particulièrement touchées par les conséquences économiques, financières et sociales de la propagation de l’épidémie de covid-19 et des mesures prises pour limiter cette propagation](https://www.legifrance.gouv.fr/eli/decret/2020/3/30/2020-371/jo/texte). Ce décret spécifie les conditions d'éligibilité des entreprises et associations, les justificatifs demandés, ainsi que les éléments de mise en oeuvre et d'instruction de la demande de subvention.
