@@ -19,7 +19,8 @@ API Entreprise vous permet de :
 - faciliter le traitement de la demande de subvention, en vous donnant accès à des données déterminantes de l'éligibilité de l'entreprise ou association demandeuse ;
 - mettre en oeuvre le "dîtes le nous une fois".
 
-{:.tpl-notification} Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide de l’État, merci de consulter la page dédiée ["aides et subventions"](../_use_cases/aides_publiques.md).
+{:.tpl-notification}
+Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide de l’État, merci de consulter la page dédiée ["aides et subventions"](../_use_cases/aides_publiques.md).
 
 ## Le cadre réglementaire
 
@@ -51,6 +52,7 @@ Voici la liste des endpoints adaptés à ce cas d'usage :
 &#42; En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.
 
 ## Liste des éditeurs et intégrateurs
+
 {:.tpl-table}
 | Editeurs   | Nom de la solution | Date de mise en oeuvre |
 | ---------- | ------------------ | ---------------------- |
