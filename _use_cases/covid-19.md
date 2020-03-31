@@ -20,7 +20,7 @@ API Entreprise vous permet de :
 - mettre en oeuvre le "dîtes le nous une fois".
 
 {:.tpl-notification}
-Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide de l’État, merci de consulter la page dédiée ["aides et subventions"](../_use_cases/aides_publiques.md).
+Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide, merci de consulter la page dédiée ["aides et subventions"](../_use_cases/aides_publiques.md).
 
 ## Cadre réglementaire
 
