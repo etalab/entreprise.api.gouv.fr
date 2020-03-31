@@ -7,11 +7,11 @@ title: Instruction régionale de l'aide d’urgence aux TPE
 
 Dans le cadre inédit de la propagation de l'épidémie du Covid-19, un fonds de solidarité à destination des entreprises et associations, de taille petite à moyenne, particulièrement touchées par les conséquences économiques, financières et sociales liées à cette épidémie a été mis en place.
 Ce fonds propose sous certaines conditions deux aides : 
-- un première aide forfaitaire de 1500 euros ; 
+- un première aide forfaitaire de 1500 euros,  
 - une aide complémentaire forfaitaire de 2000 euros.
 
-**C'est dans le cadre de la mise en oeuvre de cette seconde aide complémentaire qu'API Entreprise intervient.**
-Et cette fiche pratique s'adresse aux parties prenantes de l'instruction des dossiers, à savoir les régions et leurs éditeurs prestataires.
+**C'est dans le cadre de l'instruction des demandes de cette seconde aide complémentaire qu'API Entreprise intervient.**
+Cette fiche pratique s'adresse aux parties prenantes de cette phase de vérification, à savoir les régions et leurs éditeurs prestataires.
 
 
 ## Le rôle d'API Entreprise 
