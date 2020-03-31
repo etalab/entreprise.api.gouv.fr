@@ -99,7 +99,7 @@ Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support
 
 ## Liste des éditeurs et intégrateurs
 
-Pour 
+
 
 | Editeurs   | Nom de la solution | Date de mise en oeuvre |
 | ---------- | ------------------ | ---------------------- |
@@ -115,7 +115,7 @@ L'accès à l'API Entreprise dans le cadre de ce cas d'usage sera strictement r�
 - à la collectivité de Corse,
 - aux collectivités territoriales de Guyane et de Martinique
 - au conseil départemental de Mayotte, 
-- aux assemblées de Saint-Barthélemy, de Saint-Martin, de Saint-Pierre-et-Miquelon ou de Wallis-et-Futuna ; 
+- aux assemblées de Saint-Barthélemy, de Saint-Martin, de Saint-Pierre-et-Miquelon ou de Wallis-et-Futuna, 
 
 - ainsi qu'à leurs éditeurs prestataires.
 
