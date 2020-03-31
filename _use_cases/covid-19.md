@@ -32,7 +32,6 @@ Voici les deux décrets qui organisent les échanges :
 - [Décret n° 2019-31 du 18 janvier 2019 relatif aux échanges d’informations et de données entre administrations dans le cadre des démarches administratives et à l’expérimentation prévue par l’article 40 de la loi n° 2018-727 du 10 août 2018 pour un Etat au service d’une société de confiance](https://https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029589&dateTexte=20190201)
 - [Décret n° 2019-33 du 18 janvier 2019 fixant la liste des pièces justificatives que le public n’est plus tenu de produire à l’appui des procédures administratives en application de l’article L. 113-13 du code des relations entre le public et l’administration](https://https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029642&categorieLien=id)
 
->
 
 ## Les données nécessaires 
 
@@ -95,7 +94,6 @@ API Entreprise regroupe les données de plusieurs administrations, et les mets �
 | Effectifs     | ACOSS              | Données collectés par l'ACOSS aupres de la DSN.      | Ce point d'accès est en cours de réalisation        |          |
 
 
-
 Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support@entreprise.api.gouv.fr)
 
 
@@ -110,6 +108,20 @@ Pour
 
 Vous souhaitez apparaitre dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr)
 
-## Demander un accès aux données
+## Demander un accès
 
-Pour demander un accès, [veuillez consulter la page "Demander un accès](https://etalab.github.io/entreprise.api.gouv.fr/demander_un_acces/), un déroulé des étapes vous sera décrit.
+L'accès à l'API Entreprise dans le cadre de ce cas d'usage sera strictement réservé aux administrations concernées par l'instruction des dossiers de cette aide d'urgence :
+- aux régions,
+- à la collectivité de Corse,
+- aux collectivités territoriales de Guyane et de Martinique
+- au conseil départemental de Mayotte, 
+- aux assemblées de Saint-Barthélemy, de Saint-Martin, de Saint-Pierre-et-Miquelon ou de Wallis-et-Futuna ; 
+
+- ainsi qu'à leurs éditeurs prestataires.
+
+Pour votre demande d'accès, [veuillez consulter la page "Demander un accès](https://etalab.github.io/entreprise.api.gouv.fr/demander_un_acces/), un déroulé des étapes vous sera décrit.
+
+## La gestion de vos clés d'accès
+
+
+
