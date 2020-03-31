@@ -51,7 +51,8 @@ signup_url: https://signup.entreprise.api.gouv.fr
 
 # Build settings
 markdown: kramdown
-theme: minima
+kramdown:
+  parse_block_html: true
 plugins:
   - jekyll-feed
   - jekyll-target-blank

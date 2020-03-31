@@ -1,0 +1,33 @@
+---
+columns:
+  -
+    label: Aide
+    children:
+      -
+        label: Contact
+        url: mailto:support@entreprise.api.gouv.fr
+  -
+    label: Produit
+    children:
+      -
+        label: API - Documentation
+        url: https://doc.entreprise.api.gouv.fr
+      -
+        label: Tableau de bord
+        url: https://dashboard.entreprise.api.gouv.fr
+      -
+        label: Cas d’usage
+        target: pages/use_cases.html
+      -
+        label: Demander un accès
+        url: https://signup.entreprise.api.gouv.fr
+  - 
+    label: Légal
+    children:
+      -
+        label: Mentions
+        target: pages/mentions.md
+      -
+        label: CGU
+        target: pages/cgu.md
+
