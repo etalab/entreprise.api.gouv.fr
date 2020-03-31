@@ -24,8 +24,6 @@ Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au 
 
 ## Cadre réglementaire
 
-<br/>
-
 #### Aide d'urgence
 Cette aide d'urgence aux TPE/PME est encadrée par le [décret relatif au fonds de solidarité à destination des entreprises particulièrement touchées par les conséquences économiques, financières et sociales de la propagation de l’épidémie de covid-19 et des mesures prises pour limiter cette propagation](https://www.legifrance.gouv.fr/eli/decret/2020/3/30/2020-371/jo/texte). Ce décret spécifie les conditions d'éligibilité des entreprises et associations, les justificatifs demandés, ainsi que les éléments de mise en oeuvre et d'instruction de la demande de subvention.
 
