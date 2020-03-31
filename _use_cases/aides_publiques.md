@@ -86,6 +86,6 @@ Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [sup
 
 ## Demander un accès aux données
 
-Pour demander un accès, [veuillez consulter la page "Demander un accès](https://etalab.github.io/entreprise.api.gouv.fr/demander_un_acces/), un déroulé des étapes vous sera décrit.
+Pour demander un accès, [veuillez consulter la page "Demander un accès]({{ site.baseurl }}{% link pages/demander_un_acces.md %}), un déroulé des étapes vous sera décrit.
 
        

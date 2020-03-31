@@ -44,7 +44,7 @@ Pour cette donnée, il est demandé de limiter les appels à une requete par sec
 
 ## Demander un accès aux données
 
-Pour demander un accès, [veuillez consulter la page "Demander un accès"](https://entreprise.api.gouv.fr/demander_un_acces/), un déroulé des étapes à suivre vous sera décrit.
+Pour demander un accès, [veuillez consulter la page "Demander un accès"]({{ site.baseurl }}{% link pages/demander_un_acces.md %}), un déroulé des étapes à suivre vous sera décrit.
 
 Comme expliqué dans l'introduction, les droits d'accès seront accordés jusqu'au 8 juillet 2020.  
 
