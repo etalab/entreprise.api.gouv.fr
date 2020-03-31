@@ -1,7 +1,20 @@
-
 .home .tpl-hero__title {
-  font-size: 2.5em;
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5em;;
   text-align: center;
+}
+
+.home .tpl-hero__title .headline {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center
+}
+
+.home .tpl-hero__title .headline-core {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .home .tpl-hero__title .subtext {
