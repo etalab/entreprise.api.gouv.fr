@@ -74,6 +74,16 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 Les informations précises sur les données de l’API Entreprise sont disponibles dans [notre documentation](https://doc.entreprise.api.gouv.fr/#introduction).
 Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support@entreprise.api.gouv.fr)
 
+## Liste des éditeurs et intégrateurs
+
+{:.tpl-table}
+| Editeurs   | Nom de la solution | Date de mise en oeuvre |
+| ---------- | ------------------ | ---------------------- |
+| MGDIS      | Portail des Aides  | Mi-avril 2020          |
+| Entrouvert | Publik             | A préciser             |
+
+Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr)
+
 ## Demander un accès aux données
 
 {:.tpl-notification}
