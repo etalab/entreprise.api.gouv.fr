@@ -3,7 +3,7 @@ layout: usecases
 title: Marchés Publics
 ---
 
-# Introduction
+## Introduction
 L’API entreprise est faite pour être utilisée dans le cadre de logiciels métiers.
 
 Le profil acheteur devrait donc vous permettre d’accéder aux données délivrées par l’API entreprise grâce au DUME (ou DUME simplifié) ou directement dans l'interface de votre logiciel si l'entreprise n'a pas utilisé le DUME.
@@ -14,7 +14,7 @@ De ce fait, ***il n’est pas nécessaire de demander un accès*** sauf si votre
 
 Si vous souhaitez utiliser l’API dans le cadre d’une application spécifique, il convient de nous préciser le cas d’utilisation.
 
-# Places de marchés dotées d'un droit d'accès 
+## Places de marchés dotées d'un droit d'accès 
 
 - achatpublic.com
 - Atexo 
@@ -23,7 +23,7 @@ Si vous souhaitez utiliser l’API dans le cadre d’une application spécifique
 
 Par ailleurs, certains opérateurs publics opèrent des solutions du marché.
 
-# Données diffusées dans le cadre des marchés publics
+## Données utiles
 
 {:.tpl-table}
 | Données              | Type         | Ouverture       | Producteur               | Commentaires             |
