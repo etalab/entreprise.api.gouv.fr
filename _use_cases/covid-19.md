@@ -43,13 +43,16 @@ Voici la liste des endpoints adaptés à ce cas d'usage :
 {:.tpl-table}
 | Point d'accès | fournisseur        | commentaire                                          | Documentation |
 | ------------- | ------------------ |------------------------------------------------------|--------------- |
-| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | Ce point d'accès est en cours de réalisation          |                                                                               |
+| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | Ce point d'accès est en cours de réalisation                                                                                                                            |
 | Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |
-| Association   | Min Intérieur      | Données d'indentité des associations (RNA) | [Endpoint `associations_rna`](https://doc.entreprise.api.gouv.fr/?json#associations-rna)                                                                |                                                            
-| Extrait RCS   | INFOGREFFE         | Observations présentes dans le Kbis                                                                 | [Endpoint `extraits_rcs_infogreffe`](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)              |
-| Exercices     | DGFIP              | Chiffre d'affaire de l'entreprise &#42;                                                              | [Endpoint `exercices`](https://doc.entreprise.api.gouv.fr/?json#exercices)                                           |        
-
+| Association&#42;  | Min Intérieur      | Données d'indentité des associations (RNA) | [Endpoint `associations_rna`](https://doc.entreprise.api.gouv.fr/?json#associations-rna)                                                                                |                                                            
+| Extrait RCS&#42;  | INFOGREFFE         | Observations présentes dans le Kbis                                                                 | [Endpoint `extraits_rcs_infogreffe`](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)                                           |
+| Exercices&#42;     | DGFIP              | Chiffre d'affaire de l'entreprise. En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.                                                                                                           | [Endpoint `exercices`](https://doc.entreprise.api.gouv.fr/?json#exercices)                                                           |        
+ 
 &#42; En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.
+
+{:.tpl-notification}
+Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des trois endpoints `Exercices`, `Extrait RCS` et `Association`pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera disponible en temps réel dans votre futur tableau de bord. 
 
 ## Conditions d'accès
 
