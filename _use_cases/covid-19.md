@@ -36,18 +36,18 @@ Voici les deux décrets qui organisent les échanges :
 ### Les données disponibles sur API Entreprise
 
 Dans le cadre de cette demande d'aide d'urgence, l'entreprise ou l'association déclare sur l'honneur qu'elle remplit les conditions demandées.
-L'API Entreprise regroupe des données administratives utiles à l'instruction de cette déclaration sur l'honneur, et les mets à disposition au travers d'une API unique. 
+L'API Entreprise regroupe des données administratives utiles à l'instruction de cette déclaration sur l'honneur, et les met à disposition au travers d'une API unique. 
 
 Voici la liste des endpoints adaptés à ce cas d'usage : 
 
 {:.tpl-table}
-| Point d'accès | fournisseur        | commentaire                                                                                  | Documentation |
-| ------------- | ------------------ | -------------------------------------------------------------------------------------------- | ----------- |
-| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | Ce point d'accès est en cours de réalisation        |          |
-| Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint entreprise_insee](https://doc.entreprise.api.gouv.fr/?json#entreprises)      |                              |
-| Association   | Min Intérieur      | Données d'indentité des associations (RNA) | [Endpoint associations_rna](https://doc.entreprise.api.gouv.fr/?json#associations-rna)      |                                                             |
-| Extrait RCS   | INFOGREFFE         | Observations présentes dans le Kbis                                                                 | [Endpoint extraits_rcs_infogreffe](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)      |         |
-| Exercices | DGFIP         | Chiffre d'affaire de l'entreprise &#42;                                                              | [Endpoint exercices](https://doc.entreprise.api.gouv.fr/?json#exercices)      |         |
+| Point d'accès | fournisseur        | commentaire                                          | Documentation |
+| ------------- | ------------------ |------------------------------------------------------|--------------- |
+| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | Ce point d'accès est en cours de réalisation          |                                                                               |
+| Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint entreprise_insee](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |
+| Association   | Min Intérieur      | Données d'indentité des associations (RNA) | [Endpoint associations_rna](https://doc.entreprise.api.gouv.fr/?json#associations-rna)                                                                |                                                            
+| Extrait RCS   | INFOGREFFE         | Observations présentes dans le Kbis                                                                 | [Endpoint extraits_rcs_infogreffe](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)              |
+| Exercices     | DGFIP              | Chiffre d'affaire de l'entreprise &#42;                                                              | [Endpoint exercices](https://doc.entreprise.api.gouv.fr/?json#exercices)                                           |        
 
 &#42; En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.
 
