@@ -52,7 +52,7 @@ Voici la liste des endpoints adaptés à ce cas d'usage :
 &#42; En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.
 
 {:.tpl-notification}
-Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des trois endpoints `Exercices`, `Extrait RCS` et `Association`pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera disponible en temps réel dans votre futur tableau de bord. 
+Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des trois endpoints `Exercices`, `Extrait RCS` et `Association`pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
 
 ## Conditions d'accès
 
