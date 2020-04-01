@@ -2,7 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+@import "css/template.min.css";
 @import "main";
+@import "home";
 @import "sidenav";
 @import "providers";
 @import "stats";
+@import "usecases";

@@ -12,40 +12,49 @@ Cette autorisation d’accès est valide pour une période de huit mois suivant 
 
 Les fournisseurs mettent en œuvre un traitement automatisé des données issues de cette interface afin de n’avoir accès qu’aux données nécessaires pour déterminer l’éligibilité aux tarifs réglementés et conservent les données nécessaires pour déterminer l’éligibilité pendant une durée maximale de trois mois.
 
-## Quelles sont les données autorisées pour le cas d'usage "Application de la loi énergie" ?
+## Données utiles
 
-### Les données d'effectifs
+{:.tpl-table}
+| Données              | Type         | Ouverture       | Producteur               | Commentaires             |
+| -------------------  | ------------ | --------------- | ------------------------ | ----------------------   |
+| Entreprise           | données JSON | publiques       | INSEE & Infogreffe       | /                                             |                                       
+| Etablissement        | données JSON | publiques       | INSEE                    | /                                                      |
+| Exercices            | données JSON | confidentielles | DGFIP                    | Chiffres d'affaire des trois dernières années de l'entreprise                                                                                                         |
+| Liasse fiscale       | données JSON | confidentielles | DGFIP                    | Données complexes dont la structure varie chaque année.                                                                                                                        |
 
-Les données d'effectif sont disponibles en utilisant les endpoints ***entreprises et etablissements*** qui s'appuient sur l'API SIREN de l'INSEE.
+#### Les données d'effectifs
+
+Les données d'effectif sont disponibles en utilisant les endpoints `entreprises` et `etablissements` qui s'appuient sur l'API SIREN de l'INSEE.
 
 Deux point d'attention sont à prendre en compte :
 - il s'agit de tranches d'effectif "code_effectif_entreprise"  de la nomenclature  l'INSEE.
-- Les données des entreprises qui lors de leur enregistrement ont déclaré ne pas souhaiter faire l'objet d'un démarchage commercial ne sont exposées que si l'on précise un paramettre dans la requete.
+- Les données des entreprises qui lors de leur enregistrement ont déclaré ne pas souhaiter faire l'objet d'un démarchage commercial ne sont exposées que si l'on précise un paramètre dans la requête.
 
 [documentation technique entreprise](https://doc.entreprise.api.gouv.fr/#entreprises)
 
-### Les chiffres d’affaires
+#### Les chiffres d’affaires
 
-Les données de chiffres d'affaires (chiffre d'affaire comptable) sont accessibles en utilisant le endpoint ***Exercices issues*** 
+Les données de chiffres d'affaires (chiffre d'affaire comptable) sont accessibles en utilisant le endpoint `Exercices`
 Ces données sont issues de la liasse fiscale pour les entreprises soumises à l'impôt sur les sociétés qui ont déposés leurs comptes annuels aux greffes. 
 L'API fourni les 3 derniers exercices.
 
 [documentation technique exercices](https://doc.entreprise.api.gouv.fr/#exercices)
 
-### Les données relatives aux recettes et au total de bilan annuels
-Ces données sont accessibles en utilisant le endpoint ***liasses fiscales dgfip***
+#### Les données relatives aux recettes et au total de bilan annuels
+Ces données sont accessibles en utilisant le endpoint `liasses_fiscales_dgfip`
 
 Pour les recettes, il s’agit dans le numéro d’imprimé 2033B (millésime 2018) de la valeur contenue pour le code_NREF 304456
 Pour le chiffre d’affaire, il s’agit dans le numéro d’imprimé 2033B (millésime 2018) de la valeur contenue pour le code_NREF 304451
 
-Pour cette donnée, il est demandé de limiter les appels à une requete par seconde.
+Pour cette donnée, il est demandé de limiter les appels à une requête par seconde.
 
 [documentation technique liasse fiscale](https://doc.entreprise.api.gouv.fr/#liasses-fiscales-dgfip)
 
 ## Demander un accès aux données
 
-Pour demander un accès, [veuillez consulter la page "Demander un accès"](https://entreprise.api.gouv.fr/demander_un_acces/), un déroulé des étapes à suivre vous sera décrit.
+{:.tpl-notification}
+Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance de nos endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
+
+Pour demander un accès, [veuillez consulter la page "Demander un accès"]({{ site.baseurl }}{% link pages/demander_un_acces.md %}), un déroulé des étapes à suivre vous sera décrit.
 
 Comme expliqué dans l'introduction, les droits d'accès seront accordés jusqu'au 8 juillet 2020.  
-
-

@@ -6,27 +6,19 @@
           <h2>Un service de la DINUM réalisé par <a href="https://etalab.gouv.fr"><img src="{{ site.baseurl }}{% link assets/images/etalab.svg %}" /></a></h2>
         </li>
       </ul>
-      <ul class="tpl-footer__links">
-        <li>
-          <h3>Aide</h3>
-        </li>
-        <li><a target="_blank" href="mailto:{{ site.email }}" rel="noopener noreferrer">Contact</a></li>
-        <li><a target="_blank" href="{{ site.gitbook_url }}" rel="noopener noreferrer">Infrastructure - Documentation</a></li>
-      </ul>
-      <ul class="tpl-footer__links">
-        <li>
-          <h3>Légal</h3>
-        </li>
-        <li><a href="{{ site.baseurl }}{% link pages/mentions.md %}">Mentions</a></li>
-        <li><a href="{{ site.baseurl }}{% link pages/cgu.md %}">CGU</a></li>
-      </ul>
-      <ul class="tpl-footer__links">
-        <li><h3>Produit</h3></li>
-        <li><a target="_blank" href="{{ site.api_documentation_url }}" rel="noopener noreferrer">API - Documentation</a></li>
-        <li><a target="_blank" href="{{ site.dashboard_url }}" rel="noopener noreferrer">Dashboard</a></li>
-        <li><a target="_blank" href="{{ site.baseurl }}{% link pages/use_cases.html %}">Cas d’usage</a></li>
-        <li><a target="_blank" href="{{ site.signup_url }}">Demander un accès</a></li>
-      </ul>
+      {% for column in site.data.footer.columns %}
+        <ul class="tpl-footer__links">
+        <li><h3>{{ column.label }}<h3><li>
+          {% for link in column.children %}
+            {% if link.target %}
+              {% assign target = site.pages | where:"path", link.target | first %}
+              <li><a href="{{ site.baseurl }}{{ target.url }}">{{ link.label }}</a></li>
+            {% elsif link.url %}
+              <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
   </div>
 </footer>

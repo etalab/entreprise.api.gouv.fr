@@ -2,11 +2,7 @@
 layout: default
 ---
 
-<div class="tpl-hero small-hero">
-  <div class="tpl-container">
-    <h1>{{ page.title }}</h1>
-  </div>
-</div>
+{% include hero.html page=page %}
 <section class="tpl-section tpl-documentation tpl-bg--lightest-grey">
   <div class="tpl-container">
     <aside class="tpl-documentation__sidebar">
@@ -14,7 +10,7 @@ layout: default
         <a class="tpl-documentation__link" href="#conditions-daccès">Conditions d’accès</a>
         <a class="tpl-documentation__link" href="#anticiper-la-demande-daccès">Anticiper la demande</a>
         <a class="tpl-documentation__link" href="#les-étapes-de-la-demande">Les étapes de la demande</a>
-        <a class="tpl-button tpl-button--gradient" href="https://signup.api.gouv.fr/">Demander un accès</a>
+        <a class="tpl-button tpl-button--gradient" href="https://signup.api.gouv.fr/api-entreprise">Demander un accès</a>
       </nav>
     </aside>
     <div class="tpl-documentation__content">

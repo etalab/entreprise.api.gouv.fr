@@ -2,17 +2,18 @@
 layout: default
 ---
 
-<div class="tpl-hero small-hero">
+<section class="tpl-hero left">
   <div class="tpl-container">
     <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="tpl-hero__subtitle">{{ page.subtitle }}</p>{% endif %}
   </div>
-</div>
+</section>
 <section class="tpl-section tpl-documentation tpl-bg--lightest-grey">
   <div class="tpl-container">
     <aside class="tpl-documentation__sidebar">
       <nav class="tpl-documentation__links">
         {% include toc.html html=content %}
-        <a class="tpl-button tpl-button--gradient" href="https://signup.api.gouv.fr/">Demander un accès</a>
+        <a class="tpl-button tpl-button--gradient" href="https://signup.api.gouv.fr/api-entreprise">Demander un accès</a>
       </nav>
     </aside>
     <div class="tpl-documentation__content">

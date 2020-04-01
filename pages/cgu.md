@@ -2,10 +2,6 @@
 layout: cgu
 title: Conditions Générales d'Utilisation de l'API Entreprise
 permalink: /cgu/
-urlcolor: blue
-geometry: margin=1in
-mainfont: Lato
-fontsize: 12pt
 ---
 
 # 1. Présentation

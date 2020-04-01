@@ -6,18 +6,21 @@ layout: default
   <section class="tpl-hero">
     <div class="tpl-container tpl-flex-row tpl-flex-jc-sa">
       <h1 class="tpl-hero__title">
-        <div class="headline">Vous êtes <span class="alternate">une administration</span><span class="alternate2">éditeur prestataire d'une administration</span>?</div>
+        <div class="headline">
+          <span class="headline-core">Vous êtes&nbsp;</span><span class="alternate">une administration ?</span><span class="alternate2">éditeur prestataire d'une administration ?</span></div>
         <div class="subtext">Simplifiez les démarches des entreprises et des associations<br />en récupérant pour elles leurs informations administratives</div>
     </div>
   </section>
   <section class="tpl-section use-cases">
     <div class="tpl-container">
       <h2>Dans quels cas utiliser API Entreprise ?</h2>
-      <div id="test2" class="use-cases__list">
+      <div class="use-cases__list">
         {% include usecases.html %}
       </div>
       <div class="text-center">
-        <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}{% link pages/use_cases.html %}">Tous les cas d’usages</a>
+        <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}{% link pages/use_cases.html %}">
+        Tous les cas d'usages
+        </a>
       </div>
     </div>
   </section>

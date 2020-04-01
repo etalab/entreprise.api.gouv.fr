@@ -1,21 +1,27 @@
 <header class="tpl-main-header" role="banner">
-  <a class="tpl-main-header__link" href="{{ site.baseurl }}/">
-    <img class="tpl-main-header__logo" src="{{ site.baseurl }}{% link assets/images/logo_site.svg %}" alt="{{ .Site.Title }}" />
-  </a>
-  <nav class="tpl-site-nav" role="navigation">
-    <ul class="tpl-site-nav__links">
-      <li class="tpl-site-nav__item">
-        <a href="https://doc.entreprise.api.gouv.fr/" title="Documentation">Documentation<svg class="tpl-icon" viewBox="0 0 24 24"><use xlink:href="#external-link"></use></svg></a>
-      </li>
-      <li class="tpl-site-nav__item">
-        <a href="{{ site.baseurl }}{% link pages/use_cases.html %}" title="Cas d’usage">Cas d’usage</a>
-      </li>
-      <li class="tpl-site-nav__item">
-        <a href="{{ site.baseurl }}{% link pages/stats.html %}" title="Stats">Stats</a>
-      </li>
-      <li class="tpl-site-nav__item">
-        <a href="{{ site.dashboard_url }}" class="tpl-button tpl-button--alternate" title="Tableau de bord">Tableau de bord</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="tpl-container">
+    <a class="tpl-main-header__link" href="{{ site.baseurl }}/">
+      <img class="tpl-main-header__logo" src="{{ site.baseurl }}{% link assets/images/logo_site.svg %}" alt="{{ .Site.Title }}" />
+    </a>
+    <nav class="tpl-site-nav" role="navigation">
+      <ul class="tpl-site-nav__links">
+        {% for link in site.data.header %}
+          {% if link.target %}
+            {% assign target = site.pages | where:"path",link.target | first %}
+            <li class="tpl-site-nav__item 
+            {% if link.button %}no-underline{% endif %}">
+              <a href="{{ site.baseurl }}{{ target.url }}" {% if link.class %}class="tpl-button {{ link.button }}"{% endif %}>{{ link.label }}</a>
+              {% if link.icon %}<svg class="tpl-icon" viewBox="0 0 24 24"><use xlink:href="#{{ link.icon }}"></use></svg>{% endif %}
+            </li>
+          {% elsif link.url %}
+            <li class="tpl-site-nav__item
+            {% if link.button %}no-underline{% endif %}">
+              <a href="{{ link.url }}" {% if link.button %}class="tpl-button {{ link.buttonclass }}"{% endif %}>{{ link.label }}</a>
+              {% if link.icon %}<svg class="tpl-icon" viewBox="0 0 24 24"><use xlink:href="#{{ link.icon }}"></use></svg>{% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
 </header>
