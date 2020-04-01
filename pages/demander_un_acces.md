@@ -37,9 +37,9 @@ Le/la responsable du traitement des données détermine les finalités et les mo
 * **Les coordonnées de l’interlocut·eur·rice technique**
 La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’inter-connection effective avec API Entreprise.
 
-* Vous devrez aussi accepter **nos Conditions Générales d’Utilisation** que nous vous recommandons de consulter en amont ;
+* Vous devrez aussi accepter [**nos conditions générales d’utilisation**]({{ site.baseurl }}/cgu/) que nous vous recommandons de consulter en amont ;
 
-> Les coordonnées renseignées seront utilisées pour communiquer avec vous.
+*Les coordonnées renseignées seront utilisées pour communiquer avec vous.*
 
 
 ## Les étapes de la demande
