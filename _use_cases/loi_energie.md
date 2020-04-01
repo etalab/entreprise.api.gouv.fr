@@ -12,7 +12,7 @@ Cette autorisation d’accès est valide pour une période de huit mois suivant 
 
 Les fournisseurs mettent en œuvre un traitement automatisé des données issues de cette interface afin de n’avoir accès qu’aux données nécessaires pour déterminer l’éligibilité aux tarifs réglementés et conservent les données nécessaires pour déterminer l’éligibilité pendant une durée maximale de trois mois.
 
-## Quelles sont les données autorisées pour le cas d'usage "Application de la loi énergie" ?
+## Données utiles
 
 ### Les données d'effectifs
 
