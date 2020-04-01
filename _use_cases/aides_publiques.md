@@ -46,7 +46,7 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 
 40% des utilisateurs  d’API Entreprise (régionaux, départements, communes, Banque Publique d’Investissement  notamment) utilisent notre service dans ce cadre.
 
-## Données utiles sur API Entreprise 
+## Données utiles
 
 
 {:.tpl-table}
