@@ -32,7 +32,7 @@ Deux point d'attention sont à prendre en compte :
 
 [documentation technique entreprise](https://doc.entreprise.api.gouv.fr/#entreprises)
 
-### Les chiffres d’affaires
+#### Les chiffres d’affaires
 
 Les données de chiffres d'affaires (chiffre d'affaire comptable) sont accessibles en utilisant le endpoint ***Exercices*** 
 Ces données sont issues de la liasse fiscale pour les entreprises soumises à l'impôt sur les sociétés qui ont déposés leurs comptes annuels aux greffes. 
@@ -40,7 +40,7 @@ L'API fourni les 3 derniers exercices.
 
 [documentation technique exercices](https://doc.entreprise.api.gouv.fr/#exercices)
 
-### Les données relatives aux recettes et au total de bilan annuels
+#### Les données relatives aux recettes et au total de bilan annuels
 Ces données sont accessibles en utilisant le endpoint ***liasses fiscales dgfip***
 
 Pour les recettes, il s’agit dans le numéro d’imprimé 2033B (millésime 2018) de la valeur contenue pour le code_NREF 304456
