@@ -53,7 +53,7 @@ Pour cette donnée, il est demandé de limiter les appels à une requête par se
 ## Demander un accès aux données
 
 {:.tpl-notification}
-Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des nos endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
+Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance de nos endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
 
 Pour demander un accès, [veuillez consulter la page "Demander un accès"]({{ site.baseurl }}{% link pages/demander_un_acces.md %}), un déroulé des étapes à suivre vous sera décrit.
 
