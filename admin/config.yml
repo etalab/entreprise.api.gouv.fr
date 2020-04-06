@@ -2,11 +2,28 @@
 
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: netlify-test # Branch to update (optional; defaults to master)
+local_backend: true
 media_folder: 'assets/uploads'
 collections:
   - name: 'pages'
     label: 'Pages'
     folder: 'pages/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
     fields:
       - { name: Title }
+  - name: 'catalogue'
+    label: 'Catalogue de données'
+    label_singular: 'Endpoint'
+    folder: '_catalogue/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Categorie', name: 'category', widget: 'string' }
+      - { label: 'Nom', name: 'title', widget: 'string' }
+      - { label: 'Référence', name: 'reference', widget: 'string' }
