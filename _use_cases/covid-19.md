@@ -43,12 +43,11 @@ Voici la liste des endpoints adaptés à ce cas d'usage :
 {:.tpl-table}
 | Point d'accès | fournisseur        | commentaire                                          | Documentation |
 | ------------- | ------------------ |------------------------------------------------------|--------------- |
-| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss
-Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril)                                                                                                                          |
+| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss) Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril                                                                                             |
 | Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |
 | Association&#42;  | Min Intérieur      | Données d'indentité des associations (RNA) | [Endpoint `associations_rna`](https://doc.entreprise.api.gouv.fr/?json#associations-rna)                                                                                |                                                            
 | Extrait RCS&#42;  | INFOGREFFE         | Observations présentes dans le Kbis                                                                 | [Endpoint `extraits_rcs_infogreffe`](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)                                           |
-| Exercices&#42;     | DGFIP              | Chiffre d'affaire de l'entreprise. En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.                                                                                                           | [Endpoint `exercices`](https://doc.entreprise.api.gouv.fr/?json#exercices)                                                           |        
+| Exercices&#42;     | DGFIP              | Chiffre d'affaire de l'entreprise. En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.                                                                                                           | [Endpoint `exercices`](https://doc.entreprise.api.gouv.fr/?json#exercices)                                                           |
  
 Pour des raisons techniques il est **impératif de demander l'accès au point d'accès Liasse fiscale** même s'ils n'est pas utilisé dans le cadre de ce projet. 
 
