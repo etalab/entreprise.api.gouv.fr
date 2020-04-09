@@ -2,7 +2,9 @@
 
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  repo: etalab/entreprise.api.gouv.fr
+  branch: gh-pages
+  site_domain: ecstatic-noether-69093c.netlify.com/
 media_folder: 'assets/uploads'
 collections:
   - name: 'pages'
@@ -10,3 +12,14 @@ collections:
     folder: 'pages/'
     fields:
       - { name: Title }
+  - name: 'endpoint'
+    label: 'Endpoint'
+    folder: '_collections/catalogue'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Categorie', name: 'category', widget: 'string' }
+      - { label: 'Nom', name: 'title', widget: 'string' }
+      - { label: 'Référence', name: 'reference', widget: 'string' }
