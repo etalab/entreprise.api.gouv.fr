@@ -44,7 +44,7 @@ Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage et à ind
 | Point d'accès API Entreprise | Fournisseur        | Commentaire                                          | Documentation |
 | -------------    | ------------------ |------------------------------------------------------|--------------- |
 | Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss) Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril                                                                                             |
-| Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |                                                      
+| Entreprise    | INSEE & INFOGREFFE | Données d'identité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |                                                      
  
 Les données sur les associations sont disponibles directement en open data :
 
