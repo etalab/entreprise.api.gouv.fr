@@ -46,9 +46,7 @@ Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage à indiqu
 | Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss) Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril                                                                                             |
 | Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |                                                      
  
-Les données sur les associations sont disponibles directement en open data.
-
-Informations utiles, ne nécessitant pas demande d'accès : 
+Les données sur les associations sont disponibles directement en open data :
 
 {:.tpl-table}
 | API en open data | fournisseur        | commentaire                                          | Documentation |
@@ -56,8 +54,8 @@ Informations utiles, ne nécessitant pas demande d'accès :
 | API du Répertoire National des Associations (RNA)      | Étalab             | Données d'identité des associations (RNA)            | [`API RNA` disponible sur entreprise.data.gouv.fr](https://entreprise.data.gouv.fr/api_doc_rna)                                                                                |     
 
 {:.tpl-notification}
-Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
-Nous vous remercions également de veiller à consommer l'API open data le plus modérément possible, afin de limiter les incidents de charge pour tous.
+Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des endpoints pourrait être affectée. N'hésitez pas à **faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée.** L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
+Nous vous remercions également de **veiller à consommer l'API open data le plus modérément possible**, afin de limiter les incidents de charge pour tous.
 
 
 ## Conditions d'accès
