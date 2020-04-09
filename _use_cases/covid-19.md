@@ -38,7 +38,7 @@ Voici les deux décrets qui organisent les échanges :
 Dans le cadre de cette demande d'aide d'urgence, l'entreprise ou l'association déclare sur l'honneur qu'elle remplit les conditions demandées.
 L'API Entreprise regroupe des données administratives utiles à l'instruction de cette déclaration sur l'honneur, et les met à disposition au travers d'une API unique. 
 
-Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage à indiquer dans votre demande d'accès : 
+Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage et à indiquer dans votre demande d'accès : 
 
 {:.tpl-table}
 | Point d'accès API Entreprise | fournisseur        | commentaire                                          | Documentation |
