@@ -42,7 +42,7 @@ Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage et à ind
 
 {:.tpl-table}
 | Point d'accès API Entreprise | fournisseur        | commentaire                                          | Documentation |
-| ------------- | ------------------ |------------------------------------------------------|--------------- |
+| -------------    | ------------------ |------------------------------------------------------|--------------- |
 | Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss) Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril                                                                                             |
 | Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |                                                      
  
