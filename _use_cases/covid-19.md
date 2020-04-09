@@ -49,6 +49,7 @@ Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage à indiqu
 Les données sur les associations sont disponibles directement en open data.
 
 Informations utiles, ne nécessitant pas demande d'accès : 
+
 {:.tpl-table}
 | API en open data | fournisseur        | commentaire                                          | Documentation |
 | -------------    | ------------------ |------------------------------------------------------|--------------- | 
