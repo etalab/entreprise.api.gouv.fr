@@ -38,21 +38,26 @@ Voici les deux décrets qui organisent les échanges :
 Dans le cadre de cette demande d'aide d'urgence, l'entreprise ou l'association déclare sur l'honneur qu'elle remplit les conditions demandées.
 L'API Entreprise regroupe des données administratives utiles à l'instruction de cette déclaration sur l'honneur, et les met à disposition au travers d'une API unique. 
 
-Voici la liste des endpoints adaptés à ce cas d'usage : 
+Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage à indiquer dans votre demande d'accès : 
 
 {:.tpl-table}
 | Point d'accès | fournisseur        | commentaire                                          | Documentation |
 | ------------- | ------------------ |------------------------------------------------------|--------------- |
 | Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss) Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril                                                                                             |
-| Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |
-| Association&#42;  | Min Intérieur      | Données d'indentité des associations (RNA) | [Endpoint `associations_rna`](https://doc.entreprise.api.gouv.fr/?json#associations-rna)                                                                                |                                                            
-| Extrait RCS&#42;  | INFOGREFFE         | Observations présentes dans le Kbis                                                                 | [Endpoint `extraits_rcs_infogreffe`](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)                                           |
-| Exercices&#42;     | DGFIP              | Chiffre d'affaire de l'entreprise. En cours d'évaluation quant à la possibilité de l'utiliser dans ce cas d'usage.                                                                                                           | [Endpoint `exercices`](https://doc.entreprise.api.gouv.fr/?json#exercices)                                                           |
+| Entreprise    | INSEE & INFOGREFFE | Données d'indentité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |                                                      
  
-Pour des raisons techniques il est **impératif de demander l'accès au point d'accès Liasse fiscale** même s'ils n'est pas utilisé dans le cadre de ce projet. 
+Les données sur les associations sont disponibles directement en open data.
+
+Informations utiles, ne nécessitant pas demande d'accès : 
+{:.tpl-table}
+| API en open data | fournisseur        | commentaire                                          | Documentation |
+| -------------    | ------------------ |------------------------------------------------------|--------------- | 
+| API du Répertoire National des Associations (RNA)      | Étalab             | Données d'identité des associations (RNA)            | [`API RNA` disponible sur entreprise.data.gouv.fr](https://entreprise.data.gouv.fr/api_doc_rna)                                                                                |     
 
 {:.tpl-notification}
-&#42;Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des trois endpoints `Exercices`, `Extrait RCS` et `Association`pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
+Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
+Nous vous remercions également de veiller à consommer l'API open data le plus modérément possible, afin de limiter les incidents de charge pour tous.
+
 
 ## Conditions d'accès
 
