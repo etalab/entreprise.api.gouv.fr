@@ -44,7 +44,7 @@ La personne ou l’équipe en charge du développement de l’interface logiciel
 
 ## Les étapes de la demande
 
-#### Les demandes se font par le formulaire d'habilitation dénommé SignUp
+#### Les demandes se font par [le formulaire d'habilitation dénommé SignUp](https://signup.api.gouv.fr/api-entreprise) 
 
 Les étapes d’obtention d’un accès aux données sont les suivantes :
 
