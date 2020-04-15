@@ -2,7 +2,9 @@
 
 backend:
   name: git-gateway
-  branch: netlify-test # Branch to update (optional; defaults to master)
+  branch: gh-pages # Branch to update (optional; defaults to master)
+  repo: etalab/entreprise.api.gouv.fr
+  site_domain: nostalgic-panini-814b9c.netlify.com
 local_backend: true
 media_folder: 'assets/uploads'
 collections:
