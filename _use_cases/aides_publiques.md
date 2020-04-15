@@ -51,7 +51,7 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 
 {:.tpl-table}
 | Données              | Type         | Ouverture       | Producteur               | Commentaires             |
-| -------------------  | ------------ | --------------- | ------------------------ | ----------------------   |
+| -------------------  | :----------: | :-------------: | :----------------------: | ----------------------   |
 | Entreprise           | données JSON | publiques       | INSEE & Infogreffe       | Les mandataires sont issus d'infogreffe      |                                       |
 | Etablissement        | données JSON | publiques       | INSEE                    | /                                                      |
 | Extrait  RCS         | données JSON | publiques       | Infogreffe.              | Observation existantes sur le kbis : changements de capital, les transferts de siège, les fusions, les redressements et liquidations judiciaires (si publiques).         |
