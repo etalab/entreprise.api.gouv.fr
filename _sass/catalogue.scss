@@ -1,0 +1,204 @@
+
+.documentation-card {
+  background-color: var(--white);
+  padding: 0;
+  position: relative;
+}
+
+.documentation-card+.documentation-card {
+  margin-top: var(--spacing-l);
+}
+
+.documentation-card h4 {
+  display: flex;
+  align-items: center;
+}
+
+.documentation-card h4 .tpl-icon {
+  margin-right: var(--spacing-xs);
+}
+
+.documentation-card ul {
+  padding-left: var(--spacing-s);
+}
+
+.documentation-card__header {
+  padding: var(--spacing-m) var(--spacing-xxl);
+}
+
+.documentation-card__header h3 {
+  margin-top: 0;
+  display: inline-flex;
+}
+
+.documentation-card__header code {
+  margin-left: var(--spacing-xs);
+}
+
+.endpoint-scope {
+  position: absolute;
+  left: 0;
+  top: var(--spacing-m);
+}
+
+.endpoint-scope__item {
+  padding: var(--spacing-xxs);
+  display: flex;
+  align-items: center;
+}
+
+.endpoint-scope__item .icon {
+  color: var(--white);
+  fill: var(--white);
+  stroke: var(--white);
+}
+
+.description ul {
+  padding-left: var(--spacing-s);
+}
+
+.description .tpl-description-list {
+  flex-basis: 35%;
+}
+
+.providers {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.providers img {
+  height: 3em;
+  margin-top: var(--spacing-s);
+}
+
+.tab-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a.tab {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-s) var(--spacing-m);
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 5px solid transparent;
+}
+
+a.tab.tab--active {
+  border-color: var(--primary);
+}
+
+a.tab .tpl-icon {
+  margin-right: var(--spacing-xs);
+}
+
+.tab-content {
+  padding: var(--spacing-m);
+  /* display: none; */
+}
+
+.tab-content--active {
+  display: block;
+}
+
+.catalog summary h4 {
+  display: inline;
+}
+
+.technical-documentation .columns>div {
+  margin: var(--spacing-s);
+  flex-shrink: 1;
+  flex-grow: 0;
+  width: 45%;
+}
+
+.technical-documentation .perimeter {
+  padding: var(--spacing-xs) 0;
+}
+
+.json-example {
+  background-color: var(--grey);
+  margin-top: var(--spacing-m);
+}
+
+.json-example h5 {
+  padding: var(--spacing-xs) var(--spacing-s);
+  margin: 0;
+}
+
+.json-example pre {
+  margin: 0;
+}
+
+.json-example code {
+  background-color: var(--dark-grey);
+  max-height: 25em;
+  white-space: normal;
+}
+
+.technical-documentation code div {
+  padding-left: var(--spacing-s);
+}
+
+.technical-documentation .comment {
+  font-family: var(--font-family-default);
+  line-height: 1.25em;
+  padding-left: var(--spacing-s);
+  font-style: italic;
+  color: var(--white);
+}
+
+.technical-documentation code em {
+  color: var(--white);
+  font-family: var(--font-family-default);
+  line-height: 1.25em;
+  display: block;
+}
+
+.availability-status {
+  padding: var(--spacing-xxs) var(--spacing-s);
+  color: var(--white);
+  display: inline-block;
+}
+
+.availability-status.OK {
+  background-color: var(--success);
+}
+
+.availability-status.KO {
+  background-color: var(--danger);
+}
+
+.tpl-documentation__links h3 {
+  padding: var(--spacing-s);
+  padding-bottom: 0;
+  font-size: 1em;
+}
+
+.tpl-documentation__links summary {
+  margin: 0 var(--spacing-s);
+}
+
+.tpl-documentation__links h4 {
+  font-size: 0.75em;
+}
+
+.tpl-documentation__link {
+  display: flex;
+}
+
+.general-doc {
+  padding: 0 var(--spacing-s);
+}
+
+.general-doc .tpl-icon {
+  width: 4em;
+  height: 4em;
+  margin-right: var(--spacing-xs);
+}
