@@ -1,7 +1,7 @@
 # config.yml
 
 backend:
-  name: git-gateway
+  name: github
   branch: gh-pages # Branch to update (optional; defaults to master)
   repo: etalab/entreprise.api.gouv.fr
   site_domain: nostalgic-panini-814b9c.netlify.com
