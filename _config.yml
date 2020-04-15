@@ -18,13 +18,13 @@ email: support@entreprise.api.gouv.fr
 description: > # this means to ignore newlines until "baseurl:"
   Simplifier les démarches des entreprises en récupérant pour elles
   leurs données et documents administratifs.
+baseurl: "/entreprise.api.gouv.fr" # the subpath of your site, e.g. /blog
+url: "https://entreprise.api.gouv.fr" # the base hostname & protocol for your site, e.g. http://example.com
 
 # The baseurl option is set for links (especialy assets links) to work
 # with Github pages. For the production environment the website is built
 # with the `--baseurl ''` option so the site can be served from the root
 # domain. This way links will work in both environment.
-baseurl: "/entreprise.api.gouv.fr" # the subpath of your site, e.g. /blog
-url: "https://entreprise.api.gouv.fr" # the base hostname & protocol for your site, e.g. http://example.com
 
 cgu_file_link: 'https://entreprise.api.gouv.fr/assets/cgu.pdf'
 signup_url: 'https://signup.entreprise.api.gouv.fr'
@@ -42,8 +42,10 @@ collections:
     output: true
   use_cases:
       output: true
+  catalogue:
 
 # API Entreprise specific variables
+api_url: https://entreprise.api.gouv.fr/v2/
 api_documentation_url: https://doc.entreprise.api.gouv.fr
 dashboard_url: https://dashboard.entreprise.api.gouv.fr
 gitbook_url: https://etalab-entreprise.gitbook.io/api-entreprise-documentation-infra
@@ -56,6 +58,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-target-blank
+  - jekyll-last-modified-at
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

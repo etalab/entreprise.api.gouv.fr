@@ -18,7 +18,7 @@ collections:
   - name: 'catalogue'
     label: 'Catalogue de données'
     label_singular: 'Endpoint'
-    folder: '_catalogue/'
+    folder: '_catalogue'
     create: true
     slug: '{{slug}}'
     editor:
@@ -27,3 +27,204 @@ collections:
       - { label: 'Categorie', name: 'category', widget: 'string' }
       - { label: 'Nom', name: 'title', widget: 'string' }
       - { label: 'Référence', name: 'reference', widget: 'string' }
+      - label: 'Scope'
+        name: 'scope'
+        widget: 'select'
+        multiple: true
+        options: ['entreprises', 'associations']
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - label: 'Cas d’usage'
+        name: 'usecases'
+        widget: 'list'
+        default: ['Aides publiques', "Marchés publics"]
+      - { label: 'Accès', name: 'access', widget: 'string' }
+      - label: 'Fournisseurs'
+        name: 'providers'
+        widget: 'select'
+        multiple: true
+        options:
+          - { label: 'Infogreffe', value: 'infogreffe' }
+          - { label: 'INSEE', value: 'insee' }
+          - { label: 'DGFIP', value: 'dgfip' }
+          - { label: 'ACOSS', value: 'acoss' }
+          - { label: 'INPI', value: 'inpi' }
+          - { label: 'Qualibat', value: 'qualibat' }
+          - { label: 'Répertoire National des Assocations', value: 'rna' }
+          - { label: 'CNETP', value: 'cnetp' }
+          - { label: 'ProBTP', value: 'probtp' }
+          - { label: 'MSA', value: 'msa' }
+          - { label: 'OPQIBI', value: 'opqibi' }
+          - { label: 'FNTP', value: 'fntp' }
+          - { label: 'agefiph', value: 'agefiph' }
+      - { label: 'Nouvelle option disponible', name: 'new', required: false , widget: 'markdown' }
+      - label: 'Périmètre'
+        name: 'perimeter'
+        widget: 'object'
+        fields:
+        - label: 'Périmètre 1'
+          name: 'perimeter1'
+          widget: 'object'
+          fields:
+            - label: 'Label'
+              name: 'label'
+              widget: 'string'
+            - label: 'Description'
+              name: 'description'
+              widget: 'markdown'
+        - label: 'Périmètre 2'
+          name: 'perimeter2'
+          required: false
+          widget: 'object'
+          fields:
+            - label: 'Label'
+              name: 'label'
+              widget: 'string'
+            - label: 'Description'
+              name: 'description'
+              widget: 'markdown'
+        - label: 'Périmètre 3'
+          name: 'perimeter3'
+          required: false
+          widget: 'object'
+          fields:
+            - label: 'Label'
+              name: 'label'
+              widget: 'string'
+            - label: 'Description'
+              name: 'description'
+              widget: 'markdown'
+      - label: 'Requête'
+        name: 'request'
+        widget: 'object'
+        fields:
+          - label: 'Variable'
+            name: 'variable'
+            widget: 'string'
+          - label: 'Paramètres'
+            name: 'parameters'
+            widget: 'object'
+            fields:
+            - label: 'Paramètre'
+              name: 'param1'
+              widget: 'object'
+              fields:
+                - label: 'Paramètre'
+                  name: 'label'
+                  widget: 'string'
+                - label: 'Description'
+                  name: 'description'
+                  widget: 'markdown'
+            - label: 'Paramètre'
+              name: 'param2'
+              required: false
+              widget: 'object'
+              fields:
+                - label: 'Paramètre'
+                  name: 'label'
+                  widget: 'string'
+                - label: 'Description'
+                  name: 'description'
+                  widget: 'markdown'
+            - label: 'Paramètre'
+              name: 'param3'
+              required: false
+              widget: 'object'
+              fields:
+                - label: 'Paramètre'
+                  name: 'label'
+                  widget: 'string'
+                - label: 'Description'
+                  name: 'description'
+                  widget: 'markdown'
+            - label: 'Paramètre'
+              name: 'param4'
+              required: false
+              widget: 'object'
+              fields:
+                - label: 'Paramètre'
+                  name: 'label'
+                  widget: 'string'
+                - label: 'Description'
+                  name: 'description'
+                  widget: 'markdown'
+            - label: 'Paramètre'
+              name: 'param5'
+              required: false
+              widget: 'object'
+              fields:
+                - label: 'Paramètre'
+                  name: 'label'
+                  widget: 'string'
+                - label: 'Description'
+                  name: 'description'
+                  widget: 'markdown'
+          - label: 'Options'
+            name: 'options'
+            widget: 'object'
+            fields:
+              - label: 'Option 1'
+                name: 'option1'
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre'
+                    name: 'param'
+                    required: false
+                    widget: 'string'
+                  - label: 'Description'
+                    name: 'description'
+                    required: false
+                    width: 'markdown'
+                  - label: 'Commentaire'
+                    name: 'comment'
+                    required: false
+                    widget: 'string'
+              - label: 'Option 2'
+                name: 'option2'
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre'
+                    name: 'param'
+                    required: false
+                    widget: 'string'
+                  - label: 'Description'
+                    name: 'description'
+                    required: false
+                    width: 'markdown'
+                  - label: 'Commentaire'
+                    name: 'comment'
+                    required: false
+                    widget: 'string'
+              - label: 'Option 3'
+                name: 'option3'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre'
+                    name: 'param'
+                    required: false
+                    widget: 'string'
+                  - label: 'Description'
+                    name: 'description'
+                    required: false
+                    width: 'markdown'
+                  - label: 'Commentaire'
+                    name: 'comment'
+                    required: false
+                    widget: 'string'
+      - label: 'Réponse'
+        name: 'response'
+        widget: 'object'
+        fields:
+          - label: 'Format'
+            name: 'format'
+            default: 'Données structurées JSON'
+            widget: 'string'
+          - label: 'Timeout'
+            name: 'timeout'
+            widget: 'string'
+          - label: 'Description'
+            name: 'description'
+            widget: 'markdown'
+      - label: 'Historique'
+        name: 'history'
+        widget: 'markdown'
