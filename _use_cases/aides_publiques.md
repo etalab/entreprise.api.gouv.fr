@@ -26,7 +26,7 @@ L’utilisation de ces données répond à un certain nombre de principes :
 
 Certaines données sont publiques et d’autres réservées à l’administration. Dans la mesure où il n’existe pas encore de système d’identification pour les personnes morales, il convient de ne pas communiquer les informations confidentielles dans les services en ligne qui leur sont proposés ouverts au public, sans authentification à l'entrée.
 
-### Le pré-remplissage avec des données publiques
+#### Le pré-remplissage avec des données publiques
 
 Les données publiques sont peuvent être utilisées pour pré-remplir les formulaires d’inscription dans les dispositifs d’aide et de subvention. 
 
@@ -40,7 +40,7 @@ Deux options se présentent dans ce cas :
 2. Ne pas afficher les données en front, mais récupérer les données pour que vos agents en bénéficient.
 Les données confidentielles sont donc visibles en back-office pour les agents sous forme de données structurées ou de pdf.
 
-### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
+#### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
     
 En utilisant API Entreprise, les entreprises et associations en demande d’aide publiques n’ont plus besoin de vous fournir certains justificatifs. Les documents et données sont récupérés automatiquement, ce qui facilite grandement l’instruction de leurs dossiers.
 
@@ -48,13 +48,14 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 
 ## Données utiles
 
-Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers. 
+Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.** 
+
 Vous trouverez ci-dessous un tableau récapitulatif de ces données, distribuées dans les catégories suivantes : 
-- informations générales
-- informations financières
-- Attestations sociales et fiscales
-- Certifiacts professionnels
-- Propriété intellectuelle.
+- informations générales,
+- informations financières,
+- attestations sociales et fiscales,
+- certifiacts professionnels,
+- propriété intellectuelle.
 
 
 {:.tpl-table}
