@@ -1,7 +1,7 @@
 ---
 category: Informations générales
 title: Données de référence
-reference: entreprises_insee
+label: entreprises_insee
 scope:
   - entreprises
   - associations

@@ -1,7 +1,7 @@
 ---
 category: Informations générales
 title: Informations déclaratives  d’une association
-reference: associations
+label: associations
 scope:
   - associations
 description: Obtenir les informations déclarées par une association à la

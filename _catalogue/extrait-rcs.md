@@ -1,7 +1,7 @@
 ---
 category: Informations générales
 title: Extrait RCS
-reference: extrait_rcs_infogreffe
+label: extrait_rcs_infogreffe
 scope:
   - entreprises
 description: Obtenir un extrait des données présentes dans le Registre du
