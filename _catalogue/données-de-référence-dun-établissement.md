@@ -27,26 +27,45 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
 request:
-  variable: Numéro de Siret de l’établissement
+  variable: Le numéro de Siret de l’établissement
   parameters:
     param1:
-      label: Lorem ipsum
-      description: Lorem ipsum
+      label: etablissement_insee
+      description: SiretDeL'Entreprise
     param2:
-      label: Lorem ipsum
-      description: Lorem ipsum
+      label: token
+      description: JetonD’Habilitation
     param3:
-      label: Lorem ipsum
-      description: Lorem ipsum
+      label: context
+      description: CadreDeLaRequête
     param4:
-      label: Lorem ipsum
-      description: Lorem ipsum
+      label: recipient
+      description: BénéficiaireDeL'appel
     param5:
-      label: Lorem ipsum
-      description: Lorem ipsum
+      label: object
+      description: RaisonDeL'AppelOuIdentifiant
+  options:
+    option1:
+      param: non_diffusable=true
+      description: ""
+      comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
 response:
   format: Données structurées JSON
   timeout: 5 secondes
-  description: Lorem ipsum
+  description: |-
+    Des informations générales sur l’établissement : 
+
+    * S’agit-il du siège social ?
+    * Quels sont les codes et libellés naf ?
+    * Quelle est la date de mise à jour ? 
+    * Combien y-a-t-il de salariés ? 
+    * La date de création de l’établissement 
+
+    Des informations géographiques : 
+
+    * commune, région et pays d’implantation 
+    * Adresse 
+
+    Enfin, l’état administratif de l’établissement.
 history: Lorem ipsum
 ---
