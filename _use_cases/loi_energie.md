@@ -15,13 +15,16 @@ Les fournisseurs mettent en œuvre un traitement automatisé des données issues
 ## Données utiles
 
 {:.tpl-table}
-| Données              | Type         | Ouverture       | Producteur               | Commentaires             |
-| -------------------  | ------------ | --------------- | ------------------------ | ----------------------   |
-| Entreprise           | données JSON | publiques       | INSEE & Infogreffe       | /                                             |                                       
-| Etablissement        | données JSON | publiques       | INSEE                    | /                                                      |
-| Exercices            | données JSON | confidentielles | DGFIP                    | Chiffres d'affaire des trois dernières années de l'entreprise                                                                                                         |
-| Liasse fiscale       | données JSON | confidentielles | DGFIP                    | Données complexes dont la structure varie chaque année.                                                                                                                        |
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| **Informations sur les effectifs**                            |                          |                                           |                     |                 |
+| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises)                 |    INSEE & Infogreffe    |            `entreprises_insee`            |    données JSON     |    publiques    |
+| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements)               |          INSEE           |          `etablissements_insee`           |    données JSON     |    publiques    |
+| **Informations financières**                          |                          |                                           |                     |                 |
+| [Chiffre d'affaires](https://doc.entreprise.api.gouv.fr/?json#exercices)                                    |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
+| [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales)      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
 
+            
 #### Les données d'effectifs
 
 Les données d'effectif sont disponibles en utilisant les endpoints `entreprises` et `etablissements` qui s'appuient sur l'API SIREN de l'INSEE.
