@@ -3,7 +3,7 @@ category: Informations générales
 title: Informations déclaratives  d’une association
 reference: associations
 scope:
-  - entreprises
+  - associations
 description: Obtenir les informations déclarées par une association à la
   préfecture ; informations générales issues du Répertoire National des
   Associations (RNA) telles que la date de création, l’ adresse du siège et les
