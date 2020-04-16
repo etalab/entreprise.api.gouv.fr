@@ -2,17 +2,16 @@
 layout: page
 title: Catalogue de données
 permalink: /catalogue/
+additional_js: catalogue.js
 ---
 
-<div class="tpl-container">
+<section class="catalog">
   <p>Visibilité de 24 sur 24 données API Entreprise</p>
-</div>
-<section class="tpl-documentation catalog">
-  <div class="tpl-container">
+  <div class="tpl-documentation">
     <div class="tpl-documentation__content">
       <h3>Informations générales</h3>
       {% for endpoint in site.catalogue %}
-      <div class="tpl-panel documentation-card">
+      <div class="tpl-panel documentation-card" id="#{{ endpoint.label }}">
         <div class="documentation-card__header">
           <div class="endpoint-scope">
             {% for scope in endpoint.scope %}
@@ -37,7 +36,7 @@ permalink: /catalogue/
             {% endif %}
             {% endfor %}
           </div>
-          <h3>{{ endpoint.title }} <code class="tpl-code">{{ endpoint.reference }}</code></h3>
+          <h3>{{ endpoint.title }} <code class="tpl-code">{{ endpoint.label }}</code></h3>
           <p></p>
           <div class="tpl-flex-row tpl-flex-jc-sb description">
             <dl class="tpl-description-list">
@@ -181,12 +180,14 @@ permalink: /catalogue/
                 <dt>Dernière mise à jour de la doc :</dt>
                 <dd>{{ page.last_modified_at | date: '%d-%m-%y' }}</dd>
               </dl>
+              {% if endpoint.history %}
               <details>
                 <summary>
                   <h4>Historique</h4>
                 </summary>
                 {{ endpoint.history | markdownify }}
               </details>
+              {% endif %}
             </div>
           </div>
           <div id="availability" class="availability tab-content tpl-bg--gradient-light">
@@ -231,12 +232,10 @@ permalink: /catalogue/
           <a href="">Vous êtes perdu·e ? Commencez par lire la documentation générale.</a>
         </div>
         <h3>Catalogue des données</h3>
-        <a class="tpl-documentation__link tpl-documentation__link--active">Description</a>
-        <a class="tpl-documentation__link">Liste des données</a>
-        <a class="tpl-documentation__link">Documentaion technique</a>
-        <a class="tpl-documentation__link">Réutilisations</a>
-        <a class="tpl-documentation__link">Contact de l’API</a>
-        <a class="tpl-documentation__link">Licence</a>
+        {% for endpoint in site.catalogue %}
+        {% capture anchor %}{{ '#' | append: endpoint.label }}{% endcapture %}
+        <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }}</a>
+        {% endfor %}
         <button class="tpl-button tpl-button--gradient">Tester l’API <svg class="tpl-icon" viewBox="0 0 24 24">
             <use xlink:href="#arrow-up-right"></use>
           </svg></button>

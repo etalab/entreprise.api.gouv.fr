@@ -1,3 +1,6 @@
+.tpl-documentation {
+  display: flex;
+}
 
 .documentation-card {
   background-color: var(--white);
@@ -20,6 +23,14 @@
 
 .documentation-card ul {
   padding-left: var(--spacing-s);
+}
+
+.documentation-card hr {
+  border-color: var(--grey);
+}
+
+.documentation-card summary {
+  cursor: pointer;
 }
 
 .documentation-card__header {
@@ -74,7 +85,7 @@
   margin-top: var(--spacing-s);
 }
 
-.tab-list {
+ul.tab-list {
   display: flex;
   list-style-type: none;
   padding: 0;
@@ -100,7 +111,7 @@ a.tab .tpl-icon {
 
 .tab-content {
   padding: var(--spacing-m);
-  /* display: none; */
+  display: none;
 }
 
 .tab-content--active {
@@ -112,10 +123,10 @@ a.tab .tpl-icon {
 }
 
 .technical-documentation .columns>div {
-  margin: var(--spacing-s);
   flex-shrink: 1;
   flex-grow: 0;
-  width: 45%;
+  margin: var(--spacing-s) 0;
+  width: 48%;
 }
 
 .technical-documentation .perimeter {

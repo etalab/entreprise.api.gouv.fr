@@ -28,7 +28,7 @@ collections:
     fields:
       - { label: 'Categorie', name: 'category', widget: 'string' }
       - { label: 'Nom', name: 'title', widget: 'string' }
-      - { label: 'Référence', name: 'reference', widget: 'string' }
+      - { label: 'Endpoint', name: 'endpoint', widget: 'string' }
       - label: 'Scope'
         name: 'scope'
         widget: 'select'
@@ -101,9 +101,11 @@ collections:
         fields:
           - label: 'Variable'
             name: 'variable'
+            required: false
             widget: 'string'
           - label: 'Paramètres'
             name: 'parameters'
+            required: false
             widget: 'object'
             fields:
             - label: 'Paramètre'
@@ -162,6 +164,7 @@ collections:
                   widget: 'markdown'
           - label: 'Options'
             name: 'options'
+            required: false
             widget: 'object'
             fields:
               - label: 'Option 1'
@@ -215,6 +218,7 @@ collections:
                     widget: 'string'
       - label: 'Réponse'
         name: 'response'
+        required: false
         widget: 'object'
         fields:
           - label: 'Format'
@@ -229,4 +233,5 @@ collections:
             widget: 'markdown'
       - label: 'Historique'
         name: 'history'
+        required: false
         widget: 'markdown'

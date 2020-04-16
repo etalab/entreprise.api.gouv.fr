@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="tpl-body">
+<body class="tpl-body">
 
-    {% include icons.html %}
-    {% include header.html %}
+  {% include icons.html %}
+  {% include header.html %}
 
-    <main class="tpl-main">
-      {{ content }}
-    </main>
+  <main class="tpl-main">
+    {{ content }}
+  </main>
 
-    {% include footer.html %}
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-  </body>
+  {% include footer.html %}
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  {% for file in page.additional_js %}
+  <script type="text/javascript"
+    src="{% if file contains '://' %}{{ file }}{% else %}{{ site.baseurl }}/assets/js/{{ file }}{% endif %}"></script>
+  {% endfor %}
+</body>
+
 </html>
