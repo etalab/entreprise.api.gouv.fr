@@ -25,23 +25,23 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
 request:
-  variable: Numéro de Siren de l’entreprise
+  variable: Le numéro de Siren de l’entreprise
   parameters:
     param1:
-      label: Lorem Ipsum
-      description: Lorem Ipsum
+      label: extrait_rcs_infogreffe
+      description: SirenDeL'Entreprise
     param2:
-      label: Lorem Ipsum
-      description: Lorem Ipsum
+      label: token
+      description: JetonD'Habilitation
     param3:
-      label: Lorem Ipsum
-      description: Lorem Ipsum
+      label: context
+      description: CadreDeLaRequête
     param4:
-      label: Lorem Ipsum
-      description: Lorem Ipsum
+      label: recipient
+      description: BénéficiaireDeL'appel
     param5:
-      label: Lorem Ipsum
-      description: Lorem Ipsum
+      label: object
+      description: RaisonDeL'AppelOuIdentifiant
   options:
     option1:
       param: Lorem Ipsum
@@ -58,6 +58,9 @@ request:
 response:
   format: Données structurées JSON
   timeout: 5 secondes
-  description: Lorem Ipsum
+  description: |-
+    * Date d'immatriculation RCS
+    * Observation sur l'extrait de données
+    * Date de l'extrait de données
 history: Lorem Ipsum
 ---
