@@ -30,7 +30,7 @@ Certaines données sont publiques et d’autres réservées à l’administratio
 
 Les données publiques sont peuvent être utilisées pour pré-remplir les formulaires d’inscription dans les dispositifs d’aide et de subvention. 
 
-> Quel avantage à passer par API Entreprise si les données sont libres ? API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.
+*Quel avantage à passer par API Entreprise si les données sont libres ? API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.*
 
 Attention, certaines personnes morales n’ont pas souhaité apparaître dans les données diffusées publiquement (voir non diffusés de l’INSEE). De ce fait, vous ne pouvez pas utiliser ces données pour le pré-remplissage. 
 
@@ -48,27 +48,41 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 
 ## Données utiles
 
+Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers. 
+Vous trouverez ci-dessous un tableau récapitulatif de ces données, distribuées dans les catégories suivantes : 
+- informations générales
+- informations financières
+- Attestations sociales et fiscales
+- Certifiacts professionnels
+- Propriété intellectuelle.
+
 
 {:.tpl-table}
-| Données              | Type         | Ouverture       | Producteur               | Commentaires             |
-| -------------------  | :----------: | :-------------: | :----------------------: | ----------------------   |
-| Entreprise           | données JSON | publiques       | INSEE & Infogreffe       | Les mandataires sont issus d'infogreffe      |                                       |
-| Etablissement        | données JSON | publiques       | INSEE                    | /                                                      |
-| Extrait  RCS         | données JSON | publiques       | Infogreffe.              | Observation existantes sur le kbis : changements de capital, les transferts de siège, les fusions, les redressements et liquidations judiciaires (si publiques).         |
-| Association          | données JSON | publiques       | Ministère de l'Intérieur | /                                             |
-| Document association | PDF (image)  | publiques       | Ministère de l'Intérieur | /                                               |
-| Exercices            | données JSON | confidentielles | DGFIP                    | Données issues de la liasse fiscale            |
-| Bilan entreprise    | données JSON | confidentielles | Banque de France         | Indisponibilités récurentes et prévisibles |
-| Liasse fiscale       | données JSON | confidentielles | DGFIP                    | Données complexes dont la structure varie chaque année.                                                                                                                        |
-| Attestation fiscale  | PDF (texte)  | confidentielles | DGFIP                    | Parfois instables. Pour une même entreprise l'API peut retourner une réponse ou non à quelques minutes de différence.                                                |
-| Attestation sociale  | PDF (texte)  | confidentielles | ACOSS                    | Asynchrone pour certaines entreprises     |
-| Attestation AGEFIPH  | données JSON | confidentielles | AGEFIPH                  | /                                            |
-| Cotisation MSA       | données JSON | confidentielles | MSA                      | /                                            |
-| Certificat PROBTP    | données JSON | publiques       | PROBTP                   | /                                               |
-| Certificat CNETP     | PDF          | publiques       | CNETP                    | /                                            |
-| Certificat RGE       | données JSON et PDF | publiques| ADEME                    | /                                              |
-| Certificat OPQIBI    | données JSON | publiques       | OPQIBI                   | /                                              |
-| Extrait INPI         | données JSON | publiques       | INPI                     | marques et brevets déposés                     |
+| Données                                               |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| **Informations générales**                            |                          |                                           |                     |                 |
+| Données de référence d'une entreprise                 |    INSEE & Infogreffe    |            `entreprises_insee`            |    données JSON     |    publiques    |
+| Données de référence d'un établissement               |          INSEE           |          `etablissements_insee`           |    données JSON     |    publiques    |
+| Extrait  RCS                                          |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    publiques    |
+| Données déclaratives d'une association                | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
+| Divers documents d'une association                    | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
+| **Informations financières**                          |                          |                                           |                     |                 |
+| Chiffre d'affaires                                    |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
+| Bilans entreprise                                     |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
+| Déclarations et dictionnaire de liasses fiscales      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
+| **Attestations sociales et fiscales**                 |                          |                                           |                     |                 |
+| Attestation fiscale                                   |          DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | confidentielles |
+| Attestation de vigilance                              |          ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | confidentielles |
+| Conformité emploi des travailleurs handicapés AGEFIPH |         AGEFIPH          |          `attestations_agefiph`           |    données JSON     | confidentielles |
+| Cotisation de sécurité sociale agricole               |           MSA            |             `cotisations_msa`             |    données JSON     | confidentielles |
+| Attestations cotisation retraite                      |          PROBTP          | `attestations_cotisation_retraite_probtp` |    données JSON     |    publiques    |
+| Cotisations congés payés & chômage intempéries        |          CNETP           |            `certificats_cnetp`            |         PDF         |    publiques    |
+| **Certificats professionnels**                        |                          |                                           |                     |                 |
+| Certification RGE                                     |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
+| Certification de qualification OPQIBI                 |          OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
+| **Propriété intellectuelle**                          |                          |                                           |                     |                 |
+| Brevets, modèles et marques déposées                  |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
+
 
 
 Les informations précises sur les données de l’API Entreprise sont disponibles dans [notre documentation](https://doc.entreprise.api.gouv.fr/#introduction).
