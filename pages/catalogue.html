@@ -73,7 +73,7 @@ additional_js: catalogue.js
         <div class="documentation__tabs">
           <ul class="tab-list">
             <li>
-              <a href="#technical-documentation" class="tab">
+              <a href="#technical-documentation--{{ endpoint.label }}" class="tab">
                 <svg class="tpl-icon" viewBox="0 0 24 24">
                   <use xlink:href="#list"></use>
                 </svg>
@@ -81,7 +81,7 @@ additional_js: catalogue.js
               </a>
             </li>
             <li>
-              <a href="#availability" class="tab">
+              <a href="#availability--{{ endpoint.label }}" class="tab">
                 <svg class="tpl-icon" viewBox="0 0 24 24">
                   <use xlink:href="#bar-chart"></use>
                 </svg>
@@ -89,7 +89,8 @@ additional_js: catalogue.js
               </a>
             </li>
           </ul>
-          <div id="technical-documentation" class="technical-documentation tab-content tpl-bg--gradient-light">
+          <div id="technical-documentation--{{ endpoint.label }}"
+            class="technical-documentation tab-content tpl-bg--gradient-light">
             {% if endpoint.new %}
             <div class="new">
               <h4>
@@ -190,7 +191,7 @@ additional_js: catalogue.js
               {% endif %}
             </div>
           </div>
-          <div id="availability" class="availability tab-content tpl-bg--gradient-light">
+          <div id="availability--{{ endpoint.label }}" class="availability tab-content tpl-bg--gradient-light">
 
             <div class="tpl-flex-row tpl-flex-jc-sb">
               <dl class="tpl-description-list">
