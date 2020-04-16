@@ -1,7 +1,7 @@
 ---
 category: Informations générales
 title: Données de référence d'un établissement
-reference: etablissement
+reference: etablissements_insee
 scope:
   - entreprises
   - associations
