@@ -14,7 +14,7 @@ usecases:
   - Applications de la loi énergie – Art.64
   - Marchés publics
   - Répertoire de tiers
-access: Restreint par Signup
+access: "Restreint "
 providers:
   - insee
   - infogreffe
@@ -40,11 +40,11 @@ perimeter:
       edocebat inplorans subsidia, quorum metu tumor notissimus Caesaris
       exhalaret.
 request:
-  variable: Le siren de la personne physique ou morale recherchée
+  variable: Le numéro de siren de la personne physique ou morale recherchée
   endpoint: entreprises
   parameters:
     param1:
-      label: entreprises
+      label: entreprises_insee
       description: SirenDeL’Entreprise
     param2:
       label: token
