@@ -14,7 +14,7 @@ De ce fait, ***il n’est pas nécessaire de demander un accès*** sauf si votre
 
 Si vous souhaitez utiliser l’API dans le cadre d’une application spécifique, il convient de nous préciser le cas d’utilisation.
 
-## Places de marchés dotées d'un droit d'accès 
+## Liste des places de marchés dotées d'un droit d'accès 
 
 - achatpublic.com
 - Atexo 
