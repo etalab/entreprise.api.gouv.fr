@@ -62,7 +62,7 @@ Vous trouverez ci-dessous les données classées dans différentes catégories :
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises)                 |    INSEE & Infogreffe    |            `entreprises_insee`            |    données JSON     |    publiques    |
+| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises ){:target="_blank"}                 |    INSEE & Infogreffe    |            `entreprises_insee`            |    données JSON     |    publiques    |
 | [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements)               |          INSEE           |          `etablissements_insee`           |    données JSON     |    publiques    |
 | [Extrait  RCS](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)                                          |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    publiques    |
 | [Données déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna)                | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
