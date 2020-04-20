@@ -50,38 +50,57 @@ En utilisant API Entreprise, les entreprises et associations en demande d’aide
 
 Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.** 
 
-Vous trouverez ci-dessous un tableau récapitulatif de ces données, distribuées dans les catégories suivantes : 
-- informations générales,
-- informations financières,
-- attestations sociales et fiscales,
-- certifiacts professionnels,
-- propriété intellectuelle.
+Vous trouverez ci-dessous les données classées dans différentes catégories : 
+- [Informations générales](#infos_generales),
+- [Informations financières](#infos_financieres),
+- [Attestations sociales et fiscales](#attestations_sociales_fiscales),
+- [Certificats professionnels](#certificats_pro),
+- [Propriété intellectuelle](#propriete_intellectuelle).
 
+#### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| **Informations générales**                            |                          |                                           |                     |                 |
 | [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises)                 |    INSEE & Infogreffe    |            `entreprises_insee`            |    données JSON     |    publiques    |
 | [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements)               |          INSEE           |          `etablissements_insee`           |    données JSON     |    publiques    |
 | [Extrait  RCS](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs)                                          |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    publiques    |
 | [Données déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna)                | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 | [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association)                    | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
-| **Informations financières**                          |                          |                                           |                     |                 |
+
+#### Informations financières <a id="infos_financieres"></a>                                    
+
+{:.tpl-table}
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Chiffre d'affaires](https://doc.entreprise.api.gouv.fr/?json#exercices)                                    |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
 | [Bilans entreprise](https://doc.entreprise.api.gouv.fr/?json#bilans-entreprises-bdf-banque-de-france)                                     |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
 | [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales)      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
-| **Attestations sociales et fiscales**                 |                          |                                           |                     |                 |
+#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>  
+
+{:.tpl-table}
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Attestation fiscale](https://doc.entreprise.api.gouv.fr/?json#attestation-fiscale-dgfip)                                   |          DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | confidentielles |
 | [Attestation de vigilance](https://doc.entreprise.api.gouv.fr/?json#attestation-sociale-acoss)                              |          ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | confidentielles |
 | [Conformité emploi des travailleurs handicapés AGEFIPH](https://doc.entreprise.api.gouv.fr/?json#attestation-agefiph) |         AGEFIPH          |          `attestations_agefiph`           |    données JSON     | confidentielles |
 | [Cotisation de sécurité sociale agricole](https://doc.entreprise.api.gouv.fr/?json#cotisations-msa)               |           MSA            |             `cotisations_msa`             |    données JSON     | confidentielles |
 | [Attestations cotisation retraite](https://doc.entreprise.api.gouv.fr/?json#cotisations-retraite-probtp)                      |          PROBTP          | `attestations_cotisation_retraite_probtp` |    données JSON     |    publiques    |
 | [Cotisations congés payés & chômage intempéries](https://doc.entreprise.api.gouv.fr/?json#certificats-cnetp)        |          CNETP           |            `certificats_cnetp`            |         PDF         |    publiques    |
-| **Certificats professionnels**                        |                          |                                           |                     |                 |
+
+#### Certificats professionnels <a id="certificats_pro"></a>  
+
+{:.tpl-table}
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Certification RGE](https://doc.entreprise.api.gouv.fr/?json#certificats-rge-ademe)                                     |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
 | [Certification de qualification OPQIBI](https://doc.entreprise.api.gouv.fr/?json#certificats-opqibi)                 |          OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
-| **Propriété intellectuelle**                          |                          |                                           |                     |                 |
+
+#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>  
+
+{:.tpl-table}
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Brevets, modèles et marques déposées](https://doc.entreprise.api.gouv.fr/?json#extraits-courts-inpi)                  |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
 
 
