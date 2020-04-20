@@ -26,9 +26,10 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
 request:
-  variable: Le numéro de Siret de l’association ou le numéro RNA
+  id:
+    param: SiretDeL’Entreprise
+    description: 'Le numéro de Siret de l’association ou le numéro RNA'
   parameters:
-    id: SirenDeL'Entreprise
     param1:
       label: token
       description: JetonD’Habilitation

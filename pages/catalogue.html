@@ -126,7 +126,7 @@ additional_js: catalogue.js
                     </svg>Votre appel</h4>
                   <dl class="tpl-description-list">
                     <dt>Paramètre d’appel</dt>
-                    <dd>{{ endpoint.request.variable }}</dd>
+                    <dd>{{ endpoint.request.id.description }}</dd>
                     {% if endpoint.request.options %}
                     <dt>Options d’appel à ajouter (voir requête HTTP ⬇): </dt>
                     <dd>
@@ -142,9 +142,8 @@ additional_js: catalogue.js
                   <div class="json-example">
                     <h5>Requête HTTP</h5>
                     <pre class="tpl-pre"><code class="tpl-code">
-                        <b>{{ site.api_url }}</b>{% for param in endpoint.request.parameters %}
+                        <b>{{ site.api_url }}{{ endpoint.label }}/</b>{%if endpoint.request.id %}{{ endpoint.request.id.param }}{% endif %}{% for param in endpoint.request.parameters %}
                         {% if forloop.index == 1 %}
-                        <b>{{ param[1].label }}/</b>{{ param[1].description }}{% elsif forloop.index == 2 %}
                         <b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}
                         <b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}
                         {% endfor %}

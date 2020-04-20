@@ -27,9 +27,10 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
 request:
-  variable: Le numéro de Siret de l’établissement
+  id:
+    param: SiretDeL’Entreprise
+    description: 'Le numéro de Siret de l’établissement'
   parameters:
-    id: SiretDeL'Entreprise
     param1:
       label: token
       description: JetonD’Habilitation

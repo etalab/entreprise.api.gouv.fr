@@ -103,20 +103,24 @@ collections:
         name: 'request'
         widget: 'object'
         fields:
-          - label: 'Variable'
-            name: 'variable'
-            required: false
-            widget: 'string'
           - label: 'Paramètres'
             name: 'parameters'
             required: false
             widget: 'object'
             fields:
-            - label: 'Paramètre identifiant'
+            - label: 'Paramètre d’appel'
               name: 'id'
-              description: 'A remplir avec le paramètre permettant d\identifier une entité'
+              description: 'A remplir avec le paramètre permettant d’identifier une entité'
               required: false
-              widget: 'string'
+              widget: 'object'
+                - label: 'Paramètre d’appel'
+                  name: 'parameter'
+                  required: false
+                  widget: 'string'
+                - label: 'Description'
+                  name: 'description'
+                  required: false
+                  widget: 'string'
             - label: 'Paramètre'
               name: 'param1'
               required: false

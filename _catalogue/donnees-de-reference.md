@@ -40,10 +40,10 @@ perimeter:
       edocebat inplorans subsidia, quorum metu tumor notissimus Caesaris
       exhalaret.
 request:
-  variable: Le numéro de siren de la personne physique ou morale recherchée
-  endpoint: entreprises
+  id:
+    param: SirenDeL’Entreprise
+    description: 'Le numéro de siren de la personne physique ou morale recherchée'
   parameters:
-    id: SirenDeL’Entreprise
     param1:
       label: token
       description: JetonD’Habilitation

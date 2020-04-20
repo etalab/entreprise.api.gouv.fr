@@ -25,9 +25,10 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
 request:
-  variable: Le numéro de Siren de l’entreprise
+  id:
+    param: SirenDeL’Entreprise
+    description: 'Le numéro de siren de l’entreprise'
   parameters:
-    id: SirenDeL'Entreprise
     param1:
       label: token
       description: JetonD'Habilitation
