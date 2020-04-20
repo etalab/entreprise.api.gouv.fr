@@ -134,7 +134,7 @@ a.tpl-main-header__link:hover {
 
 .tpl-documentation a.tpl-button {
   color: var(--white);
-  margin-top: 1em;
+  margin: var(--spacing-m) 0;
 }
 
 .tpl-documentation__content {
