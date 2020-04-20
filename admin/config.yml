@@ -62,9 +62,11 @@ collections:
       - label: 'Périmètre'
         name: 'perimeter'
         widget: 'object'
+        required: false
         fields:
         - label: 'Périmètre 1'
           name: 'perimeter1'
+          required: false
           widget: 'object'
           fields:
             - label: 'Label'
@@ -134,7 +136,7 @@ collections:
                 - label: 'Description'
                   name: 'description'
                   required: false
-                  widget: 'markdown'
+                  widget: 'string'
             - label: 'Paramètre'
               name: 'param2'
               required: false
@@ -147,7 +149,7 @@ collections:
                 - label: 'Description'
                   name: 'description'
                   required: false
-                  widget: 'markdown'
+                  widget: 'string'
             - label: 'Paramètre'
               name: 'param3'
               required: false
@@ -160,7 +162,7 @@ collections:
                 - label: 'Description'
                   name: 'description'
                   required: false
-                  widget: 'markdown'
+                  widget: 'string'
             - label: 'Paramètre'
               name: 'param4'
               required: false
@@ -173,7 +175,7 @@ collections:
                 - label: 'Description'
                   name: 'description'
                   required: false
-                  widget: 'markdown'
+                  widget: 'string'
             - label: 'Paramètre'
               name: 'param5'
               required: false
@@ -186,7 +188,7 @@ collections:
                 - label: 'Description'
                   name: 'description'
                   required: false
-                  widget: 'markdown'
+                  widget: 'string'
           - label: 'Options'
             name: 'options'
             required: false
@@ -204,7 +206,7 @@ collections:
                   - label: 'Description'
                     name: 'description'
                     required: false
-                    width: 'markdown'
+                    width: 'string'
                   - label: 'Commentaire'
                     name: 'comment'
                     required: false
@@ -221,7 +223,7 @@ collections:
                   - label: 'Description'
                     name: 'description'
                     required: false
-                    width: 'markdown'
+                    width: 'string'
                   - label: 'Commentaire'
                     name: 'comment'
                     required: false
@@ -238,7 +240,7 @@ collections:
                   - label: 'Description'
                     name: 'description'
                     required: false
-                    width: 'markdown'
+                    width: 'string'
                   - label: 'Commentaire'
                     name: 'comment'
                     required: false
