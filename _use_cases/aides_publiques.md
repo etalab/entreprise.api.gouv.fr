@@ -76,6 +76,7 @@ Vous trouverez ci-dessous les données classées dans différentes catégories :
 | [Chiffre d'affaires](https://doc.entreprise.api.gouv.fr/?json#exercices)                                    |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
 | [Bilans entreprise](https://doc.entreprise.api.gouv.fr/?json#bilans-entreprises-bdf-banque-de-france)                                     |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
 | [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales)      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
+
 #### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>  
 
 {:.tpl-table}
