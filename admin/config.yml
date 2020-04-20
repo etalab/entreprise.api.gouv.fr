@@ -26,7 +26,10 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Categorie', name: 'category', widget: 'string' }
+      - label: 'Categorie'
+        name: 'category'
+        widget: 'select'
+        options: ['Informations générales', 'Informations financières']
       - { label: 'Nom', name: 'title', widget: 'string' }
       - { label: 'Endpoint', name: 'label', widget: 'string' }
       - label: 'Scope'
@@ -71,9 +74,11 @@ collections:
           fields:
             - label: 'Label'
               name: 'label'
+              required: false
               widget: 'string'
             - label: 'Description'
               name: 'description'
+              required: false
               widget: 'markdown'
         - label: 'Périmètre 2'
           name: 'perimeter2'
