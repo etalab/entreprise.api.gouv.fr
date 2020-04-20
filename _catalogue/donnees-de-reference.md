@@ -43,19 +43,17 @@ request:
   variable: Le numéro de siren de la personne physique ou morale recherchée
   endpoint: entreprises
   parameters:
+    id: SirenDeL’Entreprise
     param1:
-      label: entreprises_insee
-      description: SirenDeL’Entreprise
-    param2:
       label: token
       description: JetonD’Habilitation
-    param3:
+    param2:
       label: context
       description: CadreDeLaRequête
-    param4:
+    param3:
       label: recipient
       description: BénéficiaireDeL'appel
-    param5:
+    param4:
       label: object
       description: RaisonDeL'AppelOuIdentifiant
   options:

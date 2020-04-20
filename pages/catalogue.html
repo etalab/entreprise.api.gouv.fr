@@ -128,7 +128,7 @@ additional_js: catalogue.js
                     <dt>Paramètre d’appel</dt>
                     <dd>{{ endpoint.request.variable }}</dd>
                     {% if endpoint.request.options %}
-                    <dt>Options d’appel à ajouter (voir requête HTTP ⬇️): </dt>
+                    <dt>Options d’appel à ajouter (voir requête HTTP ⬇): </dt>
                     <dd>
                       <ul>
                         {% for option in endpoint.request.options %}
@@ -173,9 +173,6 @@ additional_js: catalogue.js
                   <div class="json-example">
                     <h5>Réponse JSON</h5>
                   </div>
-                  <details>
-                    <summary>Que signifie le code erreur 403 ?</summary>
-                  </details>
                 </div>
               </div>
               <div class="documentation__content-footer">
@@ -184,7 +181,8 @@ additional_js: catalogue.js
                   <dd>{{ page.last_modified_at | date: '%d-%m-%y' }}</dd>
                 </dl>
                 {% if endpoint.history %}
-                <details>
+                <hr />
+                <details class="history">
                   <summary>
                     <h4>Historique</h4>
                   </summary>

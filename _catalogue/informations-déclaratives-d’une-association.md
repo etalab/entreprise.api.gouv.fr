@@ -28,19 +28,17 @@ perimeter:
 request:
   variable: Le numéro de Siret de l’association ou le numéro RNA
   parameters:
+    id: SirenDeL'Entreprise
     param1:
-      label: associations
-      description: SirenDeL'Entreprise
-    param2:
       label: token
       description: JetonD’Habilitation
-    param3:
+    param2:
       label: context
       description: CadreDeLaRequête
-    param4:
+    param3:
       label: recipient
       description: BénéficiaireDeL'appel
-    param5:
+    param4:
       label: object
       description: RaisonDeL'AppelOuIdentifiant
   options:

@@ -34,7 +34,7 @@
 }
 
 .documentation-card__header {
-  padding: var(--spacing-m) var(--spacing-xxl);
+  padding: var(--spacing-l) var(--spacing-xxl);
 }
 
 .documentation-card__header h3 {
@@ -110,7 +110,7 @@ a.tab .tpl-icon {
 }
 
 .tab-content {
-  padding: var(--spacing-m);
+  padding: var(--spacing-l);
   display: none;
 }
 
@@ -130,25 +130,29 @@ a.tab .tpl-icon {
 }
 
 .technical-documentation .perimeter {
-  padding: var(--spacing-xs) 0;
+  padding: var(--spacing-s) 0;
 }
 
 .json-example {
   background-color: var(--grey);
+  border-radius: var(--border-radius-default);
   margin-top: var(--spacing-m);
 }
 
 .json-example h5 {
   padding: var(--spacing-xs) var(--spacing-s);
   margin: 0;
+  text-transform: initial;
 }
 
 .json-example pre {
+  border: 0;
   margin: 0;
 }
 
 .json-example code {
   background-color: var(--dark-grey);
+  border-radius: 0;
   max-height: 25em;
   white-space: normal;
 }
@@ -170,6 +174,10 @@ a.tab .tpl-icon {
   font-family: var(--font-family-default);
   line-height: 1.25em;
   display: block;
+}
+
+.history {
+  margin-top: var(--spacing-m);
 }
 
 .availability-status {
