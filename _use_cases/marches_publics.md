@@ -25,7 +25,15 @@ Par ailleurs, certains opérateurs publics opèrent des solutions du marché.
 
 ## Données utiles
 
-#### Informations générales
+Vous trouverez ci-dessous les données classées dans différentes catégories : 
+- [Informations générales](#infos_generales),
+- [Informations financières](#infos_financieres),
+- [Attestations sociales et fiscales](#attestations_sociales_fiscales),
+- [Certificats professionnels](#certificats_pro),
+- [Propriété intellectuelle](#propriete_intellectuelle).
+
+
+#### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -36,7 +44,7 @@ Par ailleurs, certains opérateurs publics opèrent des solutions du marché.
 | [Données déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 | [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
 
-#### Informations financières
+#### Informations financières <a id="infos_financieres"></a>  
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -45,7 +53,7 @@ Par ailleurs, certains opérateurs publics opèrent des solutions du marché.
 | [Bilans entreprise](https://doc.entreprise.api.gouv.fr/?json#bilans-entreprises-bdf-banque-de-france){:target="_blank"}                                      |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
 | [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales){:target="_blank"}       |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
 
-#### Attestations sociales et fiscales
+#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>  
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -58,7 +66,7 @@ Par ailleurs, certains opérateurs publics opèrent des solutions du marché.
 | [Carte professionnelle travaux publics](https://doc.entreprise.api.gouv.fr/?json#cartes-professionnelles-fntp){:target="_blank"}         |          CNETP           |            `cartes_professionnelles_fntp`            |         PDF         |    publiques    |
 | [Cotisations congés payés & chômage intempéries](https://doc.entreprise.api.gouv.fr/?json#certificats-cnetp){:target="_blank"}         |          CNETP           |            `certificats_cnetp`            |         PDF         |    publiques    |
 
-#### Certificats professionnels
+#### Certificats professionnels <a id="certificats_pro"></a>  
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -67,7 +75,7 @@ Par ailleurs, certains opérateurs publics opèrent des solutions du marché.
 | [Certification de qualification OPQIBI](https://doc.entreprise.api.gouv.fr/?json#certificats-opqibi){:target="_blank"}                  |          OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
 | [Certification de qualification Qualibat](https://doc.entreprise.api.gouv.fr/?json#certificats-qualibat){:target="_blank"}                  |          OPQIBI          |           `certificats_qualibat`            |    données JSON     |    publiques    |
 
-#### Propriété intellectuelle
+#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>  
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
