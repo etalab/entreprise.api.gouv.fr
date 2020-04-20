@@ -113,7 +113,8 @@ collections:
               description: 'A remplir avec le paramètre permettant d’identifier une entité'
               required: false
               widget: 'object'
-                - label: 'Paramètre d’appel'
+              fields:
+                - label: 'Paramètre'
                   name: 'parameter'
                   required: false
                   widget: 'string'
