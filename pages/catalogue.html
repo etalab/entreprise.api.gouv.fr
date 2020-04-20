@@ -9,218 +9,221 @@ additional_js: catalogue.js
   <p>Visibilité de 24 sur 24 données API Entreprise</p>
   <div class="tpl-documentation">
     <div class="tpl-documentation__content">
-      <h3>Informations générales</h3>
-      {% for endpoint in site.catalogue %}
-      <div class="tpl-panel documentation-card" id="#{{ endpoint.label }}">
-        <div class="documentation-card__header">
-          <div class="endpoint-scope">
-            {% for scope in endpoint.scope %}
-            {% if scope == "entreprises" %}
-            <div class="endpoint-scope__item tpl-bg--info" title="entreprises">
-              <svg class="tpl-icon" viewBox="0 0 24 24">
-                <use xlink:href="#box"></use>
-              </svg>
-            </div>
-            {% elsif scope == "associations" %}
-            <div class="endpoint-scope__item tpl-bg--warning" title="associations">
-              <svg class="tpl-icon" viewBox="0 0 24 24">
-                <use xlink:href="#home"></use>
-              </svg>
-            </div>
-            {% else %}
-            <div class="endpoint-scope__item tpl-bg--success" title="{{ . }}">
-              <svg class="tpl-icon" viewBox="0 0 24 24">
-                <use xlink:href="#note"></use>
-              </svg>
-            </div>
-            {% endif %}
-            {% endfor %}
-          </div>
-          <h3>{{ endpoint.title }} <code class="tpl-code">{{ endpoint.label }}</code></h3>
-          <p></p>
-          <div class="tpl-flex-row tpl-flex-jc-sb description">
-            <dl class="tpl-description-list">
-              <dt>Cas d’usage</dt>
-              <dd>
-                <ul>
-                  {% for usecase in endpoint.usecases %}
-                  <li>{{ usecase }}</li>
-                  {% endfor %}
-                </ul>
-              </dd>
-            </dl>
-            <dl class="tpl-description-list">
-              <dt>Périmètre</dt>
-              <dd>
-                <ul>
-                  {% for perimeter in endpoint.perimeter %}
-                  <li>{{ perimeter[1].label }}</li>
-                  {% endfor %}
-                </ul>
-              </dd>
-              <dt>Accès</dt>
-              <dd>{{ endpoint.access }}<svg class="tpl-icon" viewBox="0 0 24 24">
-                  <use xlink:href="#lock"></use>
-                </svg></dd>
-            </dl>
-            <div class="providers">
-              {% for provider in endpoint.providers %}
-              <img src="{{ site.baseurl }}/assets/images/providers/{{ provider }}.png" alt="{{ provider }}" />
+      {% assign categories = site.catalogue | group_by: 'category' %}
+      {% for category in categories %}
+        <h3 id="{{ category.name }}">{{ category.name }}</h3>
+        {% for endpoint in category.items %}
+        <div class="tpl-panel documentation-card" id="{{ endpoint.label }}">
+          <div class="documentation-card__header">
+            <div class="endpoint-scope">
+              {% for scope in endpoint.scope %}
+              {% if scope == "entreprises" %}
+              <div class="endpoint-scope__item tpl-bg--info" title="entreprises">
+                <svg class="tpl-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#box"></use>
+                </svg>
+              </div>
+              {% elsif scope == "associations" %}
+              <div class="endpoint-scope__item tpl-bg--warning" title="associations">
+                <svg class="tpl-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#home"></use>
+                </svg>
+              </div>
+              {% else %}
+              <div class="endpoint-scope__item tpl-bg--success" title="{{ . }}">
+                <svg class="tpl-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#note"></use>
+                </svg>
+              </div>
+              {% endif %}
               {% endfor %}
             </div>
-          </div>
-        </div>
-        <div class="documentation__tabs">
-          <ul class="tab-list">
-            <li>
-              <a href="#technical-documentation--{{ endpoint.label }}" class="tab">
-                <svg class="tpl-icon" viewBox="0 0 24 24">
-                  <use xlink:href="#list"></use>
-                </svg>
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a href="#availability--{{ endpoint.label }}" class="tab">
-                <svg class="tpl-icon" viewBox="0 0 24 24">
-                  <use xlink:href="#bar-chart"></use>
-                </svg>
-                Disponibilité
-              </a>
-            </li>
-          </ul>
-          <div id="technical-documentation--{{ endpoint.label }}"
-            class="technical-documentation tab-content tpl-bg--gradient-light">
-            {% if endpoint.new %}
-            <div class="new">
-              <h4>
-                <svg class="tpl-icon" viewBox="0 0 24 24">
-                  <use xlink:href="#gift"></use>
-                </svg>
-                Nouvelle option disponible
-              </h4>
-              <p>{{ endpoint.new }}</p>
-            </div>
-            <hr />
-            {% endif %}
-            {% if endpoint.perimeter %}
-            <details class="perimeter">
-              <summary>
-                <h4>Périmètre</h4>
-              </summary>
+            <h3>{{ endpoint.title }} <code class="tpl-code">{{ endpoint.label }}</code></h3>
+            <p></p>
+            <div class="tpl-flex-row tpl-flex-jc-sb description">
               <dl class="tpl-description-list">
-                {% for perimeter in endpoint.perimeter %}
-                <dt>{{ perimeter[1].label }}</dt>
-                <dd>{{ perimeter[1].description }}</dd>
+                <dt>Cas d’usage</dt>
+                <dd>
+                  <ul>
+                    {% for usecase in endpoint.usecases %}
+                    <li>{{ usecase }}</li>
+                    {% endfor %}
+                  </ul>
+                </dd>
+              </dl>
+              <dl class="tpl-description-list">
+                <dt>Périmètre</dt>
+                <dd>
+                  <ul>
+                    {% for perimeter in endpoint.perimeter %}
+                    <li>{{ perimeter[1].label }}</li>
+                    {% endfor %}
+                  </ul>
+                </dd>
+                <dt>Accès</dt>
+                <dd>{{ endpoint.access }}<svg class="tpl-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#lock"></use>
+                  </svg></dd>
+              </dl>
+              <div class="providers">
+                {% for provider in endpoint.providers %}
+                <img src="{{ site.baseurl }}/assets/images/providers/{{ provider }}.png" alt="{{ provider }}" />
                 {% endfor %}
-              </dl>
-            </details>
-            <hr />
-            {% endif %}
-            <div class="columns tpl-flex-row tpl-flex-jc-sb">
-              <div class="request">
-                <h4><svg class="tpl-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#call-phone"></use>
-                  </svg>Votre appel</h4>
-                <dl class="tpl-description-list">
-                  <dt>Paramètre d’appel</dt>
-                  <dd>{{ endpoint.request.variable }}</dd>
-                  {% if endpoint.request.options %}
-                  <dt>Options d’appel à ajouter (voir requête HTTP ⬇️): </dt>
-                  <dd>
-                    <ul>
-                      {% for option in endpoint.request.options %}
-                      <li>{{ option[1].description }}</li>
-                      {% endfor %}
-                    </ul>
-                  </dd>
-                  {% endif %}
-                </dl>
-
-                <div class="json-example">
-                  <h5>Requête HTTP</h5>
-                  <pre class="tpl-pre"><code class="tpl-code">
-                      <b>{{ site.api_url }}</b>{% for param in endpoint.request.parameters %}
-                      {% if forloop.index == 1 %}
-                      <b>{{ param[1].label }}/</b>{{ param[1].description }}{% elsif forloop.index == 2 %}
-                      <b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}
-                      <b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}
-                      {% endfor %}
-                      
-                      {% for option in endpoint.request.options %}<br /><br />
-                        {% if option[1].comment %}
-                          <em>{{ option[1].comment }}</em>
-                        {% endif %}
-                          <b>{{ option[1].param ]}}</b>
-                      {% endfor %}
-                    </code></pre>
-                </div>
-
               </div>
-              <div class="response">
-                <h4><svg class="tpl-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#file-text"></use>
-                  </svg> La réponse de l’API</h4>
-                <dl class="tpl-description-list">
-                  <dt>Format</dt>
-                  <dd>{{ endpoint.response.format }}</dd>
-                  <dt>Timeout</dt>
-                  <dd>{{ endpoint.response.timeout }}</dd>
-                </dl>
-                <p>{{ endpoint.response.description | markdownify }}</p>
-                <div class="json-example">
-                  <h5>Réponse JSON</h5>
-                </div>
-                <details>
-                  <summary>Que signifie le code erreur 403 ?</summary>
-                </details>
-              </div>
-            </div>
-            <div class="documentation__content-footer">
-              <dl class="tpl-description-list">
-                <dt>Dernière mise à jour de la doc :</dt>
-                <dd>{{ page.last_modified_at | date: '%d-%m-%y' }}</dd>
-              </dl>
-              {% if endpoint.history %}
-              <details>
-                <summary>
-                  <h4>Historique</h4>
-                </summary>
-                {{ endpoint.history | markdownify }}
-              </details>
-              {% endif %}
             </div>
           </div>
-          <div id="availability--{{ endpoint.label }}" class="availability tab-content tpl-bg--gradient-light">
+          <div class="documentation__tabs">
+            <ul class="tab-list">
+              <li>
+                <a href="#technical-documentation--{{ endpoint.label }}" class="tab">
+                  <svg class="tpl-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#list"></use>
+                  </svg>
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#availability--{{ endpoint.label }}" class="tab">
+                  <svg class="tpl-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#bar-chart"></use>
+                  </svg>
+                  Disponibilité
+                </a>
+              </li>
+            </ul>
+            <div id="technical-documentation--{{ endpoint.label }}"
+              class="technical-documentation tab-content tpl-bg--gradient-light">
+              {% if endpoint.new %}
+              <div class="new">
+                <h4>
+                  <svg class="tpl-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#gift"></use>
+                  </svg>
+                  Nouvelle option disponible
+                </h4>
+                <p>{{ endpoint.new }}</p>
+              </div>
+              <hr />
+              {% endif %}
+              {% if endpoint.perimeter %}
+              <details class="perimeter">
+                <summary>
+                  <h4>Périmètre</h4>
+                </summary>
+                <dl class="tpl-description-list">
+                  {% for perimeter in endpoint.perimeter %}
+                  <dt>{{ perimeter[1].label }}</dt>
+                  <dd>{{ perimeter[1].description }}</dd>
+                  {% endfor %}
+                </dl>
+              </details>
+              <hr />
+              {% endif %}
+              <div class="columns tpl-flex-row tpl-flex-jc-sb">
+                <div class="request">
+                  <h4><svg class="tpl-icon" viewBox="0 0 24 24">
+                      <use xlink:href="#call-phone"></use>
+                    </svg>Votre appel</h4>
+                  <dl class="tpl-description-list">
+                    <dt>Paramètre d’appel</dt>
+                    <dd>{{ endpoint.request.variable }}</dd>
+                    {% if endpoint.request.options %}
+                    <dt>Options d’appel à ajouter (voir requête HTTP ⬇️): </dt>
+                    <dd>
+                      <ul>
+                        {% for option in endpoint.request.options %}
+                        <li>{{ option[1].description }}</li>
+                        {% endfor %}
+                      </ul>
+                    </dd>
+                    {% endif %}
+                  </dl>
 
-            <div class="tpl-flex-row tpl-flex-jc-sb">
+                  <div class="json-example">
+                    <h5>Requête HTTP</h5>
+                    <pre class="tpl-pre"><code class="tpl-code">
+                        <b>{{ site.api_url }}</b>{% for param in endpoint.request.parameters %}
+                        {% if forloop.index == 1 %}
+                        <b>{{ param[1].label }}/</b>{{ param[1].description }}{% elsif forloop.index == 2 %}
+                        <b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}
+                        <b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}
+                        {% endfor %}
+                        
+                        {% for option in endpoint.request.options %}<br /><br />
+                          {% if option[1].comment %}
+                            <em>{{ option[1].comment }}</em>
+                          {% endif %}
+                            <b>{{ option[1].param ]}}</b>
+                        {% endfor %}
+                      </code></pre>
+                  </div>
+
+                </div>
+                <div class="response">
+                  <h4><svg class="tpl-icon" viewBox="0 0 24 24">
+                      <use xlink:href="#file-text"></use>
+                    </svg> La réponse de l’API</h4>
+                  <dl class="tpl-description-list">
+                    <dt>Format</dt>
+                    <dd>{{ endpoint.response.format }}</dd>
+                    <dt>Timeout</dt>
+                    <dd>{{ endpoint.response.timeout }}</dd>
+                  </dl>
+                  <p>{{ endpoint.response.description | markdownify }}</p>
+                  <div class="json-example">
+                    <h5>Réponse JSON</h5>
+                  </div>
+                  <details>
+                    <summary>Que signifie le code erreur 403 ?</summary>
+                  </details>
+                </div>
+              </div>
+              <div class="documentation__content-footer">
+                <dl class="tpl-description-list">
+                  <dt>Dernière mise à jour de la doc :</dt>
+                  <dd>{{ page.last_modified_at | date: '%d-%m-%y' }}</dd>
+                </dl>
+                {% if endpoint.history %}
+                <details>
+                  <summary>
+                    <h4>Historique</h4>
+                  </summary>
+                  {{ endpoint.history | markdownify }}
+                </details>
+                {% endif %}
+              </div>
+            </div>
+            <div id="availability--{{ endpoint.label }}" class="availability tab-content tpl-bg--gradient-light">
+
+              <div class="tpl-flex-row tpl-flex-jc-sb">
+                <dl class="tpl-description-list">
+                  <dt>Disponibilité actuelle</dt>
+                  <dd class="availability-status {{ .status }}"></dd>
+                </dl>
+                <dl class="tpl-description-list">
+                  <dt>Volumétrie</dt>
+                  <dd></dd>
+                </dl>
+              </div>
               <dl class="tpl-description-list">
-                <dt>Disponibilité actuelle</dt>
-                <dd class="availability-status {{ .status }}"></dd>
-              </dl>
-              <dl class="tpl-description-list">
-                <dt>Volumétrie</dt>
+                <dt>Disponibilité normale</dt>
+                <dd></dd>
+                <dt>Indisponibilités types</dt>
+                <dd></dd>
+                <dt>Indisponibilités moyennes du dernier mois</dt>
                 <dd></dd>
               </dl>
-            </div>
-            <dl class="tpl-description-list">
-              <dt>Disponibilité normale</dt>
-              <dd></dd>
-              <dt>Indisponibilités types</dt>
-              <dd></dd>
-              <dt>Indisponibilités moyennes du dernier mois</dt>
-              <dd></dd>
-            </dl>
 
-            <hr />
-            <div class="metrics">
-              <select>
-                <option value="7">Les 7 derniers jours</option>
-              </select>
+              <hr />
+              <div class="metrics">
+                <select>
+                  <option value="7">Les 7 derniers jours</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        {% endfor %}
       {% endfor %}
     </div>
     <aside class="tpl-documentation__sidebar">
@@ -233,9 +236,15 @@ additional_js: catalogue.js
           <a href="">Vous êtes perdu·e ? Commencez par lire la documentation générale.</a>
         </div>
         <h3>Catalogue des données</h3>
-        {% for endpoint in site.catalogue %}
-        {% capture anchor %}{{ '#' | append: endpoint.label }}{% endcapture %}
-        <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }}</a>
+        {% assign categories = site.catalogue | group_by: 'category' %}
+        {% for category in categories %}
+          <details>
+            <summary>{{ category.name }}</summary>
+            {% for endpoint in category.items %}
+              {% capture anchor %}{{ '#' | append: endpoint.label }}{% endcapture %}
+              <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }}</a>
+            {% endfor %}
+          </details>
         {% endfor %}
         <button class="tpl-button tpl-button--gradient">Tester l’API <svg class="tpl-icon" viewBox="0 0 24 24">
             <use xlink:href="#arrow-up-right"></use>
