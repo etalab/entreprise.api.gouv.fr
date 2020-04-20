@@ -30,8 +30,9 @@ Certaines données sont publiques et d’autres réservées à l’administratio
 
 Les données publiques peuvent être utilisées pour pré-remplir les formulaires d’inscription dans les dispositifs d’aide et de subvention. 
 
-*Quel avantage à passer par API Entreprise si les données sont libres ? 
-API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.*
+
+***Quel avantage à passer par API Entreprise si les données sont libres ?*** 
+*API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.*
 
 {:.tpl-notification}
 Attention, certaines personnes morales n’ont pas souhaité apparaître dans les données diffusées publiquement (voir non diffusés de l’INSEE). De ce fait, vous ne pouvez pas utiliser ces données pour le pré-remplissage. 
@@ -39,6 +40,7 @@ Deux options se présentent dans ce cas :
 1. Signifier à ces personnes morales qu’elles peuvent changer ce statut et bénéficier du pré-remplissage sinon il faut saisir les données.
 2. Ne pas afficher les données en front, mais récupérer les données pour que vos agents en bénéficient.
 Les données confidentielles sont donc visibles en back-office pour les agents sous forme de données structurées ou de pdf.
+{:.tpl-notification}
 
 #### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
     
