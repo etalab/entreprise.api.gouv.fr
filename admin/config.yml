@@ -59,7 +59,7 @@ collections:
           - { label: 'ACOSS', value: 'acoss' }
           - { label: 'INPI', value: 'inpi' }
           - { label: 'Qualibat', value: 'qualibat' }
-          - { label: 'Répertoire National des Assocations', value: 'rna' }
+          - { label: 'Ministère de l'intérieur', value: 'ministere interieur' }
           - { label: 'CNETP', value: 'cnetp' }
           - { label: 'ProBTP', value: 'probtp' }
           - { label: 'MSA', value: 'msa' }
