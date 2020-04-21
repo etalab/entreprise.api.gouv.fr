@@ -46,7 +46,7 @@ collections:
       - label: 'Accès'
         name: 'access'
         widget: 'select'
-        multiple: true
+        multiple: false
         options: ['restreint', 'libre', "restreint, disponible sous d'autres conditions"]
       - label: 'Fournisseurs'
         name: 'providers'
