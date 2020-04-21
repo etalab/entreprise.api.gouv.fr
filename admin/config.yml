@@ -26,10 +26,10 @@ collections:
     editor:
       preview: true
     fields:
-      - label: 'Categorie'
-        name: 'category'
+      - label: 'Type de données'
+        name: 'type'
         widget: 'select'
-        options: ['Informations générales', 'Informations financières']
+        options: ['Informations générales', 'Informations financières', 'Attestations sociales et fiscales', 'Certifications professionnelles', 'Propriété intellectuelle' ]
       - { label: 'Nom', name: 'title', widget: 'string' }
       - { label: 'Endpoint', name: 'label', widget: 'string' }
       - label: 'Scope'
