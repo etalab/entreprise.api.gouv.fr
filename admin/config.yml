@@ -41,7 +41,7 @@ collections:
       - label: 'Cas d’usage'
         name: 'usecases'
         widget: 'list'
-        default: ['Aides publiques', 'Marchés publics', 'Application de la loi énergie - Art.64', 'Répertoire de tiers', 'Aide d'urgence Covid-19']
+        default: ['Aides publiques', 'Marchés publics', 'Application de la loi énergie - Art.64', 'Répertoire de tiers', 'Aide d&apos;urgence Covid-19']
       - { label: 'Accès', name: 'access', widget: 'string' }
       - label: 'Fournisseurs'
         name: 'providers'
