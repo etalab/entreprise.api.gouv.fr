@@ -32,16 +32,16 @@ collections:
         options: ['Informations générales', 'Informations financières', 'Attestations sociales et fiscales', 'Certifications professionnelles', 'Propriété intellectuelle' ]
       - { label: 'Nom', name: 'title', widget: 'string' }
       - { label: 'Endpoint', name: 'label', widget: 'string' }
-      - label: 'Scope'
+      - label: 'Type de personne morale'
         name: 'scope'
         widget: 'select'
         multiple: true
         options: ['entreprises', 'associations']
-      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'Description courte', name: 'description', widget: 'markdown' }
       - label: 'Cas d’usage'
         name: 'usecases'
         widget: 'list'
-        default: ['Aides publiques', "Marchés publics"]
+        default: ['Aides publiques', 'Marchés publics', 'Application de la loi énergie - Art.64', 'Répertoire de tiers', 'Aide d'urgence Covid-19']
       - { label: 'Accès', name: 'access', widget: 'string' }
       - label: 'Fournisseurs'
         name: 'providers'
