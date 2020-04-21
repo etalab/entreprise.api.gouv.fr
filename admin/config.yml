@@ -40,8 +40,9 @@ collections:
       - { label: 'Description courte', name: 'description', widget: 'markdown' }
       - label: 'Cas d’usage'
         name: 'usecases'
-        widget: 'list'
-        default: ['Aides publiques', 'Marchés publics', 'Application de la loi énergie - Art.64', 'Répertoire de tiers', 'Aide d&apos;urgence Covid-19']
+        widget: 'select'
+        multiple: true
+        options: ['Aides publiques', 'Marchés publics', 'Application de la loi énergie - Art.64', 'Répertoire de tiers', 'Aide d&apos;urgence Covid-19']
       - { label: 'Accès', name: 'access', widget: 'string' }
       - label: 'Fournisseurs'
         name: 'providers'
