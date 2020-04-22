@@ -268,12 +268,14 @@ collections:
           - label: 'Format'
             name: 'format'
             required: false
-            default: 'Données structurées JSON'
-            widget: 'string'
+            widget: 'select'
+            multiple: false
+            options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG']          
           - label: 'Timeout'
             name: 'timeout'
-            required: false
-            widget: 'string'
+            widget: 'select'
+            multiple: false
+            options: ['5 secondes', '12 secondes'] 
           - label: 'Description'
             name: 'description'
             required: false
