@@ -82,8 +82,9 @@ collections:
           required: false
           widget: 'object'
           fields:
-            - label: 'Description très courte (2-3 mots)'
+            - label: 'Description très courte'
               name: 'label'
+              descirption : '2-3 mots seulement si plusieurs parties, sinon max 6-7 mots'
               required: false
               widget: 'string'
             - label: 'Description longue'
