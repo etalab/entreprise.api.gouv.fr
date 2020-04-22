@@ -72,7 +72,7 @@ collections:
           - { label: 'FNTP', value: 'fntp' }
           - { label: 'agefiph', value: 'agefiph' }
       - { label: 'Message nouvelle actualité', name: 'new', required: false , widget: 'markdown' }
-      - label: 'Périmètre de l'endpoint'
+      - label: "Périmètre de l'endpoint"
         name: 'perimeter'
         widget: 'object'
         required: false
