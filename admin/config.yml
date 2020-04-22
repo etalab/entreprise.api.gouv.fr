@@ -52,7 +52,7 @@ collections:
         name: 'opening'
         widget: 'select'
         multiple: false
-        options: ['données publiques', 'données confidentielles']
+        options: ['Données publiques', 'Données confidentielles']
       - label: 'Fournisseurs'
         name: 'providers'
         widget: 'select'

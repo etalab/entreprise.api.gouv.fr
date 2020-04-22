@@ -64,6 +64,8 @@ additional_js: catalogue.js
                 <dd>{{ endpoint.access }}<svg class="tpl-icon" viewBox="0 0 24 24">
                     <use xlink:href="#lock"></use>
                   </svg></dd>
+                <dt>Ouverture</dt>
+                <dd>{{ endpoint.opening }}</dd>
               </dl>
               <div class="providers">
                 {% for provider in endpoint.providers %}
