@@ -41,7 +41,7 @@ Si vous avez un doute, renseignez-vous auprès de votre profil acheteur pour sav
 
 ## Données utiles
 
-Vous trouverez ci-dessous les données classées dans différentes catégories : 
+Vous trouverez ci-dessous les données utiles dans le cadre des marchés publics et classées dans différentes catégories : 
 - [Informations générales](#infos_generales),
 - [Informations financières](#infos_financieres),
 - [Attestations sociales et fiscales](#attestations_sociales_fiscales),
