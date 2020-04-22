@@ -5,24 +5,27 @@ title: Marchés Publics
 
 ## Introduction
 
-L'accès aux données de l'API Entreprise dans le cas des marchés publics se fait par l'intermédiaire des places de marchés publics. Depuis le 1er octobre 2018, les acheteurs publics ont l'obligation légale de passer par une plateforme de dématérialisation des procédures de marchés publics (profil acheteur), pour tout marché dont le besoin estimé est supérieur à 25 000 € HT. 
+Depuis le 1er octobre 2018, les acheteurs publics ont l'obligation légale de passer par une plateforme de dématérialisation des procédures de marchés publics (profil acheteur), pour tout marché dont le besoin estimé est supérieur à 25 000 € HT. 
+L'accès aux données de l'API Entreprise dans le cas des marchés publics se fait par l'intermédiaire des places de marchés publics. 
 
 ## Vous avez déjà accès aux données
 
-Il est fort probable que vous ayez en réalité déjà accès aux données d'API Entreprise soit par l'intermédiaire : 
+##### Vous êtes un acheteur public ?
+
+Il est fort probable que vous ayez en réalité déjà accès aux données d'API Entreprise par l'intermédiaire : 
 - du Document Unique du Marché Européen&#42; (DUME) que peut remplir l'entreprise, 
 - de votre profil acheteur si celui-ci utilise le service DUME&#42;, 
 - de votre profil acheteur si l'éditeur nous a demandé un accès direct (cf tableau ci-dessous).
 
 &#42;*Le DUME et le service DUME sont branchés sur API Entreprise.*
 
+Si vous avez un doute : 
+1. Renseignez-vous auprès de votre profil acheteur pour savoir s'il implémente le service DUME ou s'il est connecté directement à API Entreprise.
+2. Si ce n'est pas le cas, votre éditeur peut soit implémenter le DUME et/ou nous demander un accès.
 
-#### Vous êtes un acheteur public et souhaitez accéder aux données de l'API Entreprise ?
-- Renseignez-vous auprès de votre profil acheteur pour savoir s'il implémente le service DUME ou s'il est connecté directement à API Entreprise.
-- Si ce n'est pas le cas, votre éditeur peut soit implémenter le DUME et/ou nous demander un accès.
+##### Vous êtes un éditeur de logiciel prestataire d'acteurs publics et souhaitez accéder aux données de l'API Entreprise ?
 
-#### Vous êtes un éditeur de logiciel prestataire d'acteurs publics et souhaitez accéder aux données de l'API Entreprise ?
-- Renseignez-vous pour mettre en place le DUME. L'État met gratuitement à disposition le service.
+- Renseignez-vous pour mettre en place le DUME : l'État met gratuitement à disposition le service.
 - Si vous souhaitez utiliser l’API dans le cadre d’une application spécifique, il convient de nous préciser le cas d’utilisation, et faire une demande d'accès.
 
 
