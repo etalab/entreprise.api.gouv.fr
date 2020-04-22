@@ -139,59 +139,67 @@ collections:
                   name: 'description'
                   required: false
                   widget: 'string'
-            - label: 'Paramètre'
+            - label: 'Paramètre obligatoire 1'
               name: 'param1'
               required: false
               widget: 'object'
               fields:
                 - label: 'Paramètre'
                   name: 'label'
+                  default: 'token' 
                   required: false
                   widget: 'string'
                 - label: 'Description'
                   name: 'description'
+                  default: "JetonD'Habilitation"
                   required: false
                   widget: 'string'
-            - label: 'Paramètre'
+            - label: 'Paramètre obligatoire 2'
               name: 'param2'
               required: false
               widget: 'object'
               fields:
                 - label: 'Paramètre'
                   name: 'label'
+                  default: 'context' 
                   required: false
                   widget: 'string'
                 - label: 'Description'
                   name: 'description'
+                  default: 'CadreDeLaRequête' 
                   required: false
                   widget: 'string'
-            - label: 'Paramètre'
+            - label: 'Paramètre obligatoire 3'
               name: 'param3'
               required: false
               widget: 'object'
               fields:
                 - label: 'Paramètre'
                   name: 'label'
+                  default: 'recipient' 
                   required: false
                   widget: 'string'
                 - label: 'Description'
                   name: 'description'
+                  default: "BénéficiaireDel'Appel" 
                   required: false
                   widget: 'string'
-            - label: 'Paramètre'
+            - label: 'Paramètre obligatoire 4'
               name: 'param4'
               required: false
               widget: 'object'
               fields:
                 - label: 'Paramètre'
                   name: 'label'
+                  default: 'object' 
                   required: false
                   widget: 'string'
                 - label: 'Description'
                   name: 'description'
+                  default: "RaisonDeL'AppelOuIdentifiant" 
                   required: false
                   widget: 'string'
-            - label: 'Paramètre'
+            - label: 'Paramètre obligatoire 5'
               name: 'param5'
               required: false
               widget: 'object'
@@ -204,12 +212,12 @@ collections:
                   name: 'description'
                   required: false
                   widget: 'string'
-          - label: 'Options'
+          - label: 'Paramètres optionnels'
             name: 'options'
             required: false
             widget: 'object'
             fields:
-              - label: 'Option 1'
+              - label: 'Paramètre optionnel 1'
                 name: 'option1'
                 required: false
                 widget: 'object'
@@ -226,7 +234,7 @@ collections:
                     name: 'comment'
                     required: false
                     widget: 'string'
-              - label: 'Option 2'
+              - label: 'Paramètre optionnel 2'
                 name: 'option2'
                 required: false
                 widget: 'object'
@@ -243,7 +251,7 @@ collections:
                     name: 'comment'
                     required: false
                     widget: 'string'
-              - label: 'Option 3'
+              - label: 'Paramètre optionnel 3'
                 name: 'option3'
                 required: false
                 widget: 'object'
