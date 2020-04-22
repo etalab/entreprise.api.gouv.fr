@@ -64,7 +64,7 @@ collections:
           - { label: 'ACOSS', value: 'acoss' }
           - { label: 'INPI', value: 'inpi' }
           - { label: 'Qualibat', value: 'qualibat' }
-          - { label: "Ministère de l'intérieur", value: 'ministere interieur' }
+          - { label: 'Ministère de l’Intérieur', value: 'mi' }
           - { label: 'CNETP', value: 'cnetp' }
           - { label: 'ProBTP', value: 'probtp' }
           - { label: 'MSA', value: 'msa' }

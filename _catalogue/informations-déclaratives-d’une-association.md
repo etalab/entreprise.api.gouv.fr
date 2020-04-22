@@ -14,7 +14,7 @@ usecases:
   - Répertoire de tiers
 access: Restreint, disponible sous d'autres conditions
 providers:
-  - rna
+  - mi
 perimeter:
   perimeter1:
     label: Lorem ipsum

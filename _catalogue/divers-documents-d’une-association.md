@@ -11,7 +11,7 @@ usecases:
 access: restreint, disponible sous d'autres conditions
 opening: données publiques
 providers:
-  - ministere interieur
+  - mi
 response:
   format: Données structurées JSON
 category: Informations générales
