@@ -1,5 +1,5 @@
 ---
-category: Informations générales
+type: Informations générales
 title: Divers documents d’une association
 label: documents_associations
 scope:
@@ -8,9 +8,11 @@ description: Lorem Ipsum
 usecases:
   - Aides publiques
   - Marchés publics
-access: Restreint
+access: restreint, disponible sous d'autres conditions
+opening: données publiques
 providers:
-  - rna
+  - ministere interieur
 response:
   format: Données structurées JSON
+category: Informations générales
 ---
