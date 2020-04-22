@@ -146,8 +146,8 @@ collections:
               fields:
                 - label: 'Paramètre'
                   name: 'label'
-                  default: 'token' 
                   required: false
+                  default: 'token' 
                   widget: 'string'
                 - label: 'Description'
                   name: 'description'
