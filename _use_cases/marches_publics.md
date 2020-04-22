@@ -19,9 +19,7 @@ Il est fort probable que vous ayez en réalité déjà accès aux données d'API
 
 &#42;*Le DUME et le service DUME sont branchés sur API Entreprise.*
 
-Si vous avez un doute : 
-1. Renseignez-vous auprès de votre profil acheteur pour savoir s'il implémente le service DUME ou s'il est connecté directement à API Entreprise.
-2. Si ce n'est pas le cas, votre éditeur peut soit implémenter le DUME et/ou nous demander un accès.
+Si vous avez un doute, renseignez-vous auprès de votre profil acheteur pour savoir s'il implémente le service DUME ou s'il est connecté directement à API Entreprise. 
 
 ##### Vous êtes un éditeur de place de marchés publics ?
 
