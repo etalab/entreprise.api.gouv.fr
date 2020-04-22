@@ -23,7 +23,7 @@ Si vous avez un doute :
 1. Renseignez-vous auprès de votre profil acheteur pour savoir s'il implémente le service DUME ou s'il est connecté directement à API Entreprise.
 2. Si ce n'est pas le cas, votre éditeur peut soit implémenter le DUME et/ou nous demander un accès.
 
-##### Vous êtes un éditeur de logiciel prestataire d'acteurs publics et souhaitez accéder aux données de l'API Entreprise ?
+##### Vous êtes un éditeur de place de marchés publics ?
 
 - Renseignez-vous pour mettre en place le DUME : l'État met gratuitement à disposition le service.
 - Si vous souhaitez utiliser l’API dans le cadre d’une application spécifique, il convient de nous préciser le cas d’utilisation, et faire une demande d'accès.
