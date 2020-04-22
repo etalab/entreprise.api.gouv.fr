@@ -57,6 +57,9 @@ request:
     param4:
       label: object
       description: RaisonDeL'AppelOuIdentifiant
+    id:
+      parameter: Lorem ipsum 1
+      description: Lorem ipsum 2
   options:
     option1:
       description: pour connaitre l’état administratif de l’entité demandée ;
