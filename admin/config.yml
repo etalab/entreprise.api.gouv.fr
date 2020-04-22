@@ -71,7 +71,7 @@ collections:
           - { label: 'OPQIBI', value: 'opqibi' }
           - { label: 'FNTP', value: 'fntp' }
           - { label: 'agefiph', value: 'agefiph' }
-      - { label: 'Nouvelle option disponible', name: 'new', required: false , widget: 'markdown' }
+      - { label: 'Message nouvelle actualité', name: 'new', required: false , widget: 'markdown' }
       - label: 'Périmètre'
         name: 'perimeter'
         widget: 'object'
