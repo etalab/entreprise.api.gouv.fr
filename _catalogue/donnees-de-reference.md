@@ -1,5 +1,5 @@
 ---
-category: Informations générales
+type: Informations générales
 title: Données de référence
 label: entreprises_insee
 scope:
@@ -14,7 +14,8 @@ usecases:
   - Applications de la loi énergie – Art.64
   - Marchés publics
   - Répertoire de tiers
-access: "Restreint "
+access: restreint, disponible sous d'autres conditions
+opening: données publiques
 providers:
   - insee
   - infogreffe
@@ -42,7 +43,7 @@ perimeter:
 request:
   id:
     param: SirenDeL’Entreprise
-    description: 'Le numéro de siren de la personne physique ou morale recherchée'
+    description: Le numéro de siren de la personne physique ou morale recherchée
   parameters:
     param1:
       label: token
@@ -82,4 +83,5 @@ history: |-
   15/01/2020 Ajout d’un champ `non_diffusable`
 
   03/01/2020 Ajout d’un champ `with_etat_administratif`
+category: Informations générales
 ---
