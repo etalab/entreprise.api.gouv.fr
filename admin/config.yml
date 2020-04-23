@@ -45,9 +45,8 @@ collections:
         options: ['Aides publiques', 'Marchés publics', 'Application de la loi énergie - Art.64', 'Répertoire de tiers', "Aide d'urgence Covid-19"]
       - label: 'Accès'
         name: 'access'
-        widget: 'select'
-        multiple: false
-        options: ['restreint', 'libre', "restreint, disponible sous d'autres conditions"]
+        widget: 'string'
+        default: "restreint / restreint, disponible sous d'autres conditions (ajouter le lien) / libre"
       - label: 'Ouverture'
         name: 'opening'
         widget: 'select'
