@@ -110,6 +110,121 @@ response:
 
     * **gateway error**, indiquant si un fournisseur de données n’a pas fonctionné.
   La réponse est composée de trois ensembles: null
+  sample:
+    code: >-
+      {
+
+      // I- ENTREPRISE 
+
+      // 1-Données générales
+
+      "entreprise": {
+        "siren": "000000000",
+        "capital_social": 00000,
+        "numero_tva_intracommunautaire": "FR00000", // Également appelé numéro d’identification fiscale NIF. Ce numéro est calculé par API Entreprise selon la règle officielle, cette donnée est donc théorique. Dans le cas où l’établissement siège est à l’étranger, la valeur renvoit null. En effet dans ce cas le numéro de TVA est problablement calculé par le pays où se situe l'établissement siège et non par la France. La seule source fiable est alors l'entreprise elle-même.
+        "forme_juridique": "Forme juridique",
+        "forme_juridique_code": "0000", // Ces deux champs sont issus de la nomenclature des catégories juridiques de l’INSEE
+        "nom_commercial": "Mon entreprise",
+        "procedure_collective": false, //toujours false et à ignorer, ce champ sera bientôt supprimé. 
+        "enseigne": null, // ou quelque chose ?
+        "naf_entreprise": "6202A",
+        "libelle_naf_entreprise": "Conseil en systèmes et logiciels informatiques", // issu de la nomenclature d’activités française de l’INSEE. 
+        "raison_sociale": "mon entreprise",
+        "siret_siege_social": "00000000000000",
+        "code_effectif_entreprise": "31",
+        "date_creation": 000000000, // date au format timestamp UNIX
+        "nom": null, // ou quelque chose ?
+        "prenom": null, // ou quelque chose ?
+        "date_radiation": null, // indique null si l’entreprise n’est pas radiée du registre / Dans le cas contraire, la date est fournie au format timestamp UNIX 000000000,
+        "categorie_entreprise": "PME", // ou "TPE" ou "ETI"
+        "tranche_effectif_salarie_entreprise": {
+          "de": 200,
+          "a": 249,
+          "code": "31",
+          "date_reference": "2014",
+          "intitule": "200 à 249 salariés" // ces derniers champs correspondent à la nomenclature INSEE
+        },
+        "mandataires_sociaux": [{
+          "nom": "Henri",
+          "prenom": "Martin",
+          "fonction": "Président du Directoire",
+          "dirigeant": true, // toujours true
+          "date_naissance": "1965-01-27",
+          "date_naissance_timestamp": -155523600,
+          "raison_sociale": "",
+          "identifiant": "",
+          "type": "PP"
+        }, {
+          "nom": "",
+          "prenom": "",
+          "fonction": "COMMISSAIRE AUX COMPTES SUPPLEANT",
+          "dirigeant": true,
+          "date_naissance": "",
+          "date_naissance_timestamp": 0,
+          "raison_sociale": "BCRH & ASSOCIES - SOCIETE A RESPONSABILITE LIMITEE A ASSOCIE UNIQUE",
+          "identifiant": "490092574",
+          "type": "PM"
+        }],
+        "etat_administratif": {
+          "value": "C", // A (actif) ou C (cessé)
+          "date_cessation": 1315173600 // null quand actif (A), un timestamp (un entier) quand cessé (C )
+        },
+        "diffusable_commercialement": true// champ uniquement présent avec l'option non_diffusables=true
+      },
+
+      "etablissement_siege": {
+        "siege_social": true,
+        "siret": "41816609600051",
+        "naf": "6202A",
+        "libelle_naf": "Conseil en systèmes et logiciels informatiques",
+        "date_mise_a_jour": 1449183600,
+        "tranche_effectif_salarie_etablissement": {
+          "de": 200,
+          "a": 249,
+          "code": "31",
+          "date_reference": "2014",
+          "intitule": "200 à 249 salariés"
+        },
+        "date_creation_etablissement": 1108594800,
+        "enseigne": null,
+        "region_implantation": {
+          "code": "11",
+          "value": "Île-de-France"
+        },
+        "commune_implantation": {
+          "code": "75108",
+          "value": "PARIS 8"
+        },
+        "pays_implantation": {
+          "code": null,
+          "value": null
+        },
+        "diffusable_commercialement": true,
+        "adresse": {
+          "l1": "OCTO TECHNOLOGY",
+          "l2": null,
+          "l3": null,
+          "l4": "50 AVENUE DES CHAMPS ELYSEES",
+          "l5": null,
+          "l6": "75008 PARIS",
+          "l7": "FRANCE",
+          "numero_voie": "50",
+          "type_voie": "AV",
+          "nom_voie": "DES CHAMPS ELYSEES",
+          "complement_adresse": null,
+          "code_postal": "75008",
+          "localite": "PARIS 8",
+          "code_insee_localite": "75108",
+          "cedex": null
+        },
+        "etat_administratif": {
+          "value": "F", // A (actif) ou F (fermé)
+          "date_fermeture": 1315173600 // null quand actif (A), un timestamp (un entier) quand fermé (F)
+          }
+        },
+        "gateway_error": false
+      }
+    lang: jsonc
 history: |-
   15/01/2020 Ajout d’un champ `non_diffusable`
 

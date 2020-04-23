@@ -46,7 +46,7 @@ collections:
       - label: 'Accès'
         name: 'access'
         widget: 'string'
-        default: "restreint / restreint, disponible sous d'autres conditions (ajouter le lien) / libre"
+        default: "Restreint / Restreint, disponible sous d'autres conditions (ajouter le lien) / Libre"
       - label: 'Ouverture'
         name: 'opening'
         widget: 'select'
@@ -150,7 +150,7 @@ collections:
                   widget: 'string'
                 - label: 'Description'
                   name: 'description'
-                  default: "JetonD'Habilitation"
+                  default: 'JetonD’Habilitation'
                   required: false
                   widget: 'string'
             - label: 'Paramètre obligatoire 2'
@@ -180,7 +180,7 @@ collections:
                   widget: 'string'
                 - label: 'Description'
                   name: 'description'
-                  default: "BénéficiaireDel'Appel" 
+                  default: 'BénéficiaireDel’Appel'
                   required: false
                   widget: 'string'
             - label: 'Paramètre obligatoire 4'
@@ -195,7 +195,7 @@ collections:
                   widget: 'string'
                 - label: 'Description'
                   name: 'description'
-                  default: "RaisonDeL'AppelOuIdentifiant" 
+                  default: 'RaisonDeL’AppelOuIdentifiant'
                   required: false
                   widget: 'string'
             - label: 'Paramètre obligatoire 5'
@@ -287,6 +287,10 @@ collections:
             name: 'description'
             required: false
             widget: 'markdown'
+          - label: 'Réponse type'
+            name: 'sample'
+            required: false
+            widget: 'code'
       - label: 'Historique'
         name: 'history'
         required: false

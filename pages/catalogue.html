@@ -173,6 +173,9 @@ additional_js: catalogue.js
                   <p>{{ endpoint.response.description | markdownify }}</p>
                   <div class="json-example">
                     <h5>Réponse JSON</h5>
+                    {% highlight json-doc %}
+                      {{ endpoint.response.sample.code }}
+                    {% endhighlight %}
                   </div>
                 </div>
               </div>

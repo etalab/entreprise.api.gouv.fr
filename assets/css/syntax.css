@@ -1,0 +1,5 @@
+.highlight code { width: 100% }
+.highlight code * { float: left }
+.highlight { margin: 0 }
+.highlight .c1 { color: var(--white); font-family: var(--font-family-default) }
+.highlight .nl { clear: both; font-weight: 700 }
