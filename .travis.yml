@@ -1,4 +1,5 @@
 language: ruby
+dist: trusty
 before_script:
   # theses are dependencies of pandoc & pdfinfo
   - sudo apt-get install texlive texlive-xetex lmodern pandoc fonts-lato poppler-utils -y
