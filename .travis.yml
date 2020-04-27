@@ -2,7 +2,7 @@ language: ruby
 dist: trusty
 before_script:
   # theses are dependencies of pandoc & pdfinfo
-  - sudo apt-get install texlive texlive-xetex lmodern pandoc fonts-lato poppler-utils -y
+  - sudo apt-get install texlive texlive-latex-extra texlive-xetex lmodern pandoc fonts-lato poppler-utils -y
 script:
   - bundle exec jekyll build
   - pandoc pages/cgu.md -o _site/assets/cgu.pdf --latex-engine=xelatex
