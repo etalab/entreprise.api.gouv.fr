@@ -26,6 +26,11 @@ collections:
     editor:
       preview: true
     fields:
+      - label: 'Poids'
+        name: 'weight'
+        required: false
+        widget: 'number'
+        description: 'Pour définir l’ordre des endpoints'
       - label: 'Type de données'
         name: 'type'
         widget: 'select'

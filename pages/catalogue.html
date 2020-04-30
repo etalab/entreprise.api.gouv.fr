@@ -9,7 +9,7 @@ additional_js: catalogue.js
   <p>Visibilité de 24 sur 24 données API Entreprise</p>
   <div class="tpl-documentation">
     <div class="tpl-documentation__content">
-      {% assign categories = site.catalogue | group_by: 'category' %}
+      {% assign categories = site.catalogue | group_by: 'category' | sort: 'weight' %}
       {% for category in categories %}
         <h3 id="{{ category.name }}">{{ category.name }}</h3>
         {% for endpoint in category.items %}
