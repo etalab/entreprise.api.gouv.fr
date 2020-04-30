@@ -90,25 +90,27 @@ collections:
         name: 'request'
         widget: 'object'
         fields:
+          - label: 'Paramètre d’appel'
+            name: 'id'
+            description: 'A remplir avec le paramètre permettant d’identifier une entité'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Paramètre'
+                name: 'label'
+                required: false
+                default: SirenDeL’Entreprise
+                widget: 'string'
+              - label: 'Description'
+                name: 'description'
+                required: false
+                default: Le numéro de siren de la personne physique ou morale recherchée
+                widget: 'string'
           - label: 'Paramètres'
             name: 'parameters'
             required: false
             widget: 'object'
             fields:
-            - label: 'Paramètre d’appel'
-              name: 'id'
-              description: 'A remplir avec le paramètre permettant d’identifier une entité'
-              required: false
-              widget: 'object'
-              fields:
-                - label: 'Paramètre'
-                  name: 'parameter'
-                  required: false
-                  widget: 'string'
-                - label: 'Description'
-                  name: 'description'
-                  required: false
-                  widget: 'string'
             - label: 'Paramètre obligatoire 1'
               name: 'param1'
               required: false
