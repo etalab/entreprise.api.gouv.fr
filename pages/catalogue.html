@@ -53,17 +53,9 @@ additional_js: catalogue.js
               </dl>
               <dl class="tpl-description-list">
                 <dt>Périmètre</dt>
-                <dd>
-                  <ul>
-                    {% for perimeter in endpoint.perimeter %}
-                    <li>{{ perimeter[1].label }}</li>
-                    {% endfor %}
-                  </ul>
-                </dd>
+                <dd>{{ endpoint.perimeter.label | markdownify }}</dd>
                 <dt>Accès</dt>
-                <dd>{{ endpoint.access }}<svg class="tpl-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#lock"></use>
-                  </svg></dd>
+                <dd>{{ endpoint.access | markdownify }}</dd>
                 <dt>Ouverture</dt>
                 <dd>{{ endpoint.opening }}</dd>
               </dl>
@@ -113,10 +105,7 @@ additional_js: catalogue.js
                   <h4>Périmètre</h4>
                 </summary>
                 <dl class="tpl-description-list">
-                  {% for perimeter in endpoint.perimeter %}
-                  <dt>{{ perimeter[1].label }}</dt>
-                  <dd>{{ perimeter[1].description | markdownify }}</dd>
-                  {% endfor %}
+                  <dd>{{ endpoint.perimeter.description | markdownify }}</dd>
                 </dl>
               </details>
               <hr />
@@ -143,20 +132,8 @@ additional_js: catalogue.js
 
                   <div class="json-example">
                     <h5>Requête HTTP</h5>
-                    <pre class="tpl-pre"><code class="tpl-code">
-                        <b>{{ site.api_url }}{{ endpoint.label }}/</b>{%if endpoint.request.id %}{{ endpoint.request.id.param }}{% endif %}{% for param in endpoint.request.parameters %}
-                        {% if forloop.index == 1 %}
-                        <b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}
-                        <b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}
-                        {% endfor %}
-                        
-                        {% for option in endpoint.request.options %}<br /><br />
-                          {% if option[1].comment %}
-                            <em>{{ option[1].comment }}</em>
-                          {% endif %}
-                            <b>{{ option[1].param ]}}</b>
-                        {% endfor %}
-                      </code></pre>
+                    <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}{{ endpoint.label }}/</b>{%if endpoint.request.id %}{{ endpoint.request.id.param }}{% endif %}{% for param in endpoint.request.parameters %}{% if forloop.index == 1 %}<b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}<b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}{% endfor %}
+{% for option in endpoint.request.options %}<br /><br />{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}<b>{{ option[1].param ]}}</b>{% endfor %}</code></pre>
                   </div>
 
                 </div>
@@ -173,9 +150,7 @@ additional_js: catalogue.js
                   <p>{{ endpoint.response.description | markdownify }}</p>
                   <div class="json-example">
                     <h5>Réponse JSON</h5>
-                    {% highlight json-doc %}
-                      {{ endpoint.response.sample.code }}
-                    {% endhighlight %}
+                    {% highlight json-doc %}{{ endpoint.response.sample.code }}{% endhighlight %}
                   </div>
                 </div>
               </div>

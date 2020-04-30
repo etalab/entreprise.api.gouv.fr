@@ -24,8 +24,6 @@
       });
     }
   </script>
-  <script src="{{ "/assets/lib/codemirror.js" | relative_url }}"></script>
-  <script src="{{ "/assets/lib/javascript/javascript.js" | relative_url }}"></script>
   {% for file in page.additional_js %}
   <script type=" text/javascript"
     src="{% if file contains '://' %}{{ file }}{% else %}{{ site.baseurl }}/assets/js/{{ file }}{% endif %}"></script>

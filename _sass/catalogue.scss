@@ -155,7 +155,24 @@ a.tab .tpl-icon {
   background-color: var(--dark-grey);
   border-radius: 0;
   max-height: 25em;
-  white-space: normal;
+}
+
+.highlight { 
+  margin: 0;
+}
+
+.highlight code {
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.highlight .c1 {
+  color: var(--white);
+  font-family: var(--font-family-default)
+}
+
+.highlight .nl {
+  font-weight: 700
 }
 
 .technical-documentation code div {
