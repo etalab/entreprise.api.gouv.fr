@@ -73,45 +73,14 @@ collections:
         widget: 'object'
         required: false
         fields:
-        - label: 'Une partie du périmètre (1)'
-          name: 'perimeter1'
-          required: false
-          widget: 'object'
-          fields:
-            - label: 'Description très courte (2-3 mots)'
-              name: 'label'
-              required: false
-              widget: 'string'
-            - label: 'Description longue'
-              name: 'description'
-              required: false
-              widget: 'markdown'
-        - label: 'Une partie du périmètre (2)'
-          name: 'perimeter2'
-          required: false
-          widget: 'object'
-          fields:
-            - label: 'Description très courte (2-3 mots)'
-              name: 'label'
-              required: false
-              widget: 'string'
-            - label: 'Description longue'
-              name: 'description'
-              required: false
-              widget: 'markdown'
-        - label: 'Une partie du périmètre (3)'
-          name: 'perimeter3'
-          required: false
-          widget: 'object'
-          fields:
-            - label: 'Description très courte (2-3 mots)'
-              name: 'label'
-              required: false
-              widget: 'string'
-            - label: 'Description longue'
-              name: 'description'
-              required: false
-              widget: 'markdown'
+          - label: 'Description très courte (2-3 mots)'
+            name: 'label'
+            required: false
+            widget: 'string'
+          - label: 'Description longue'
+            name: 'description'
+            required: false
+            widget: 'markdown'
       - label: 'Requête'
         name: 'request'
         widget: 'object'
