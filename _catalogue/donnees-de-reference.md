@@ -14,7 +14,8 @@ usecases:
   - Marchés publics
   - Répertoire de tiers
   - Application de la loi énergie - Art.64
-access: Restreint, disponible sous d'autres conditions
+access: Restreint, disponible sous d'[autres
+  conditions](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
 opening: Données publiques
 providers:
   - insee
