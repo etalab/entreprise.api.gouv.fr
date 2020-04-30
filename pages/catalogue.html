@@ -115,7 +115,7 @@ additional_js: catalogue.js
                 <dl class="tpl-description-list">
                   {% for perimeter in endpoint.perimeter %}
                   <dt>{{ perimeter[1].label }}</dt>
-                  <dd>{{ perimeter[1].description }}</dd>
+                  <dd>{{ perimeter[1].description | markdownify }}</dd>
                   {% endfor %}
                 </dl>
               </details>
