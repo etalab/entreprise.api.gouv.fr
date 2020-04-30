@@ -166,7 +166,8 @@ a.tab .tpl-icon {
   width: 100%;
 }
 
-.highlight .c1 {
+.highlight .c1,
+.highlight .err {
   color: var(--white);
   font-family: var(--font-family-default)
 }
