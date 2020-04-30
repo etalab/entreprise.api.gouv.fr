@@ -1,5 +1,5 @@
 ---
-category: Informations générales
+type: Informations générales
 title: Données de référence d'un établissement
 label: etablissements_insee
 scope:
@@ -13,7 +13,9 @@ usecases:
   - Marchés publics
   - Répertoire de tiers
   - Application de la loi énergie
-access: Restreint mais disponible sous d'autres conditions
+access: Restreint mais disponible sous d'[autres
+  conditions](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
+opening: Données publiques
 providers:
   - insee
 perimeter:
@@ -29,7 +31,7 @@ perimeter:
 request:
   id:
     param: SiretDeL’Entreprise
-    description: 'Le numéro de Siret de l’établissement'
+    description: Le numéro de Siret de l’établissement
   parameters:
     param1:
       label: token
@@ -67,4 +69,5 @@ response:
 
     Enfin, l’état administratif de l’établissement.
 history: Lorem ipsum
+category: Informations générales
 ---
