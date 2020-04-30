@@ -134,6 +134,32 @@ a.tab .tpl-icon {
   padding: var(--spacing-s) 0;
 }
 
+.qa {
+  background-color: var(--lighter-grey);
+  border-radius: var(--border-radius-default);
+  padding: var(--spacing-xs) var(--spacing-s);
+  position: relative;
+}
+
+.qa + .qa {
+  margin-top: var(--spacing-s);
+}
+
+.qa summary::marker {
+  content: '';
+  display: none;
+}
+
+.qa summary::after {
+  content: '▾';
+  position: absolute;
+  right: var(--spacing-s);
+}
+
+.qa[open] summary:after {
+  content: '▴';
+}
+
 .json-example {
   background-color: var(--grey);
   border-radius: var(--border-radius-default);

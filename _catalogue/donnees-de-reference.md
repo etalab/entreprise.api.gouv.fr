@@ -64,6 +64,52 @@ perimeter:
     **Pour en savoir plus :** [\
 
     Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
+questions:
+  qr1:
+    question: Numéro siren ?
+    answer: >-
+      Lorem very swag. such adipiscing, rate me, oh my ipsum. very layout! need
+      lorem! txt me! wow! oh my ipsum. yes master doge. so consectetur. very
+      full, such layout. want full! go doge! wow, very design! very swag. want
+      word, want swag, such layout. many elit. i can haz lorem. want full! very
+      full, txt me. such text. many word. txt me! much ipsum, yes master doge!
+      oh my ipsum. go amet. much aenean.
+
+
+      i can haz lorem. need doge. wow, plz ipsum, so text! plz swag, many word. want full! such mattis. plz ipsum, much ipsum, many elit. go amet. such text. want full! much ipsum, very word.  so layout. txt me, such text. go amet. many word. want full! wow. plz swag, very word. wow, much doge. wow, plz ipsum, oh my design, so layout. wow. plz ipsum, txt me. plz full, so consectetur. such text. much doge.
+
+
+      much lorem! wow. plz full, need doge. rate me! i iz cute?! oh my ipsum. go doge! very layout! wow, so text! such text. so text! wow! such adipiscing, want swag, oh my design, many word. very layout! txt me! many elit. go amet. want swag, many elit. much doge. such layout. rate me.
+  qr2:
+    question: Etat administratif d'une entreprise
+    answer: >-
+      very swag. such adipiscing, rate me, oh my ipsum. very layout! need lorem!
+      txt me! wow! oh my ipsum. yes master doge. so consectetur. very full, such
+      layout. want full! go doge! wow, very design! very swag. want word, want
+      swag, such layout. many elit. i can haz lorem. want full! very full, txt
+      me. such text. many word. txt me! much ipsum, yes master doge! oh my
+      ipsum. go amet. much aenean.
+
+
+      i can haz lorem. need doge. wow, plz ipsum, so text! plz swag, many word. want full! such mattis. plz ipsum, much ipsum, many elit. go amet. such text. want full! much ipsum, very word.  so layout. txt me, such text. go amet. many word. want full! wow. plz swag, very word. wow, much doge. wow, plz ipsum, oh my design, so layout. wow. plz ipsum, txt me. plz full, so consectetur. such text. much doge.
+
+
+      much lorem! wow. plz full, need doge. rate me! i iz cute?! oh my ipsum. go doge! very layout! wow, so text! such text. so text! wow! such adipiscing, want swag, oh my design, many word. very layout! txt me! many elit. go amet. want swag, many elit. much doge. such layout. rate me.
+  qr3:
+    question: Entreprise non diffusible
+    answer: >-
+      very swag. such adipiscing, rate me, oh my ipsum. very layout! need lorem!
+      txt me! wow! oh my ipsum. yes master doge. so consectetur. very full, such
+      layout. want full! go doge! wow, very design! very swag. want word, want
+      swag, such layout. many elit. i can haz lorem. want full! very full, txt
+      me. such text. many word. txt me! much ipsum, yes master doge! oh my
+      ipsum. go amet. much aenean.
+
+
+      i can haz lorem. need doge. wow, plz ipsum, so text! plz swag, many word. want full! such mattis. plz ipsum, much ipsum, many elit. go amet. such text. want full! much ipsum, very word.  so layout. txt me, such text. go amet. many word. want full! wow. plz swag, very word. wow, much doge. wow, plz ipsum, oh my design, so layout. wow. plz ipsum, txt me. plz full, so consectetur. such text. much doge.
+
+
+      much lorem! wow. plz full, need doge. rate me! i iz cute?! oh my ipsum. go doge! very layout! wow, so text! such text. so text! wow! such adipiscing, want swag, oh my design, many word. very layout! txt me! many elit. go amet. want swag, many elit. much doge. such layout. rate me.
 request:
   id:
     label: SirenDeL’Entreprise

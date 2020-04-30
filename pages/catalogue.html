@@ -129,7 +129,12 @@ additional_js: catalogue.js
                     </dd>
                     {% endif %}
                   </dl>
-
+                  {% for qr in endpoint.questions %}
+                  <details class="qa">
+                    <summary>{{ qr[1].question }}</summary>
+                    {{ qr[1].answer | markdownify }}
+                  </details>
+                  {% endfor %}
                   <div class="json-example">
                     <h5>Requête HTTP</h5>
                     <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}{{ endpoint.label }}/</b>{%if endpoint.request.id %}{{ endpoint.request.id.label }}{% endif %}{% for param in endpoint.request.parameters %}{% if forloop.index == 1 %}<b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}<b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}{% endfor %}
