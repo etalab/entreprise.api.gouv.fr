@@ -5,6 +5,7 @@ permalink: /catalogue/
 additional_js: catalogue.js
 ---
 
+{% assign providers = site.providers_aliases %}
 <section class="catalog">
   <p>Visibilité de 24 sur 24 données API Entreprise</p>
   <div class="tpl-documentation">
@@ -229,13 +230,15 @@ additional_js: catalogue.js
           <a href="">Vous êtes perdu·e ? Commencez par lire la documentation générale.</a>
         </div>
         <h3>Catalogue des données</h3>
-        {% assign categories = site.catalogue | group_by: 'category' %}
+        {% assign categories = site.catalogue | group_by: 'category' | sort: 'weight' %}
         {% for category in categories %}
           <details>
             <summary>{{ category.name }}</summary>
             {% for endpoint in category.items %}
               {% capture anchor %}{{ '#' | append: endpoint.label }}{% endcapture %}
-              <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }}</a>
+              {% assign plist = site.empty_array %}
+              {% for provider in endpoint.providers %}{% assign plist = plist | push: providers[0][provider] %}{% endfor %}
+              <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }} – {{ plist | join: ', ' }}</a>
             {% endfor %}
           </details>
         {% endfor %}

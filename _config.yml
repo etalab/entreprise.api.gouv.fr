@@ -74,3 +74,21 @@ plugins:
 
 sass:
   style: compressed
+
+providers_aliases: 
+  - 
+    infogreffe: 'Infogreffe'
+    insee: 'INSEE'
+    dgfip: 'DGFIP'
+    acoss: 'ACOSS'
+    inpi: 'INPI'
+    qualibat: 'Qualibat'
+    mi: 'Ministère de l’Intérieur'
+    cnetp: 'CNETP'
+    probtp: 'ProBTP'
+    msa: 'MSA'
+    opqibi: 'OPQIBI'
+    fntp: 'FNTP'
+    agefiph: 'agefiph'
+
+empty_array: []
