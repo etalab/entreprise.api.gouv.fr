@@ -66,50 +66,34 @@ perimeter:
     Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
 questions:
   qr1:
-    question: Numéro siren ?
-    answer: >-
-      Lorem very swag. such adipiscing, rate me, oh my ipsum. very layout! need
-      lorem! txt me! wow! oh my ipsum. yes master doge. so consectetur. very
-      full, such layout. want full! go doge! wow, very design! very swag. want
-      word, want swag, such layout. many elit. i can haz lorem. want full! very
-      full, txt me. such text. many word. txt me! much ipsum, yes master doge!
-      oh my ipsum. go amet. much aenean.
-
-
-      i can haz lorem. need doge. wow, plz ipsum, so text! plz swag, many word. want full! such mattis. plz ipsum, much ipsum, many elit. go amet. such text. want full! much ipsum, very word.  so layout. txt me, such text. go amet. many word. want full! wow. plz swag, very word. wow, much doge. wow, plz ipsum, oh my design, so layout. wow. plz ipsum, txt me. plz full, so consectetur. such text. much doge.
-
-
-      much lorem! wow. plz full, need doge. rate me! i iz cute?! oh my ipsum. go doge! very layout! wow, so text! such text. so text! wow! such adipiscing, want swag, oh my design, many word. very layout! txt me! many elit. go amet. want swag, many elit. much doge. such layout. rate me.
+    question: Des conditions d'utilisation spécifiques en raison de la protection
+      des données
+    answer: Tout utlisateur de l'endpoint "entreprise" s’engage à tenir compte du
+      statut de diffusion le plus récent de chaque personne physique. Celui-ci
+      tient compte des oppositions formulées par certaines d’entre elles, à la
+      consultation ou l’utilisation de leurs données Sirene par des tiers autres
+      que les administrations ou organismes habilités. En cas d’octroi d’un
+      accès aux données des personnes physiques pour lesquelles les variables
+      statutDiffusionEtablissement et statutDiffusionUniteLegale sont à la
+      valeur N, le fournisseur de service s’engage à n’utiliser ces informations
+      que dans le cadre strict de ses missions de service public, et à ne pas
+      les rediffuser ni les divulguer auprès de tiers non autorisés. Vous pouvez
+      consulter nos CGU ici :https://entreprise.api.gouv.fr/cgu/
   qr2:
-    question: Etat administratif d'une entreprise
-    answer: >-
-      very swag. such adipiscing, rate me, oh my ipsum. very layout! need lorem!
-      txt me! wow! oh my ipsum. yes master doge. so consectetur. very full, such
-      layout. want full! go doge! wow, very design! very swag. want word, want
-      swag, such layout. many elit. i can haz lorem. want full! very full, txt
-      me. such text. many word. txt me! much ipsum, yes master doge! oh my
-      ipsum. go amet. much aenean.
-
-
-      i can haz lorem. need doge. wow, plz ipsum, so text! plz swag, many word. want full! such mattis. plz ipsum, much ipsum, many elit. go amet. such text. want full! much ipsum, very word.  so layout. txt me, such text. go amet. many word. want full! wow. plz swag, very word. wow, much doge. wow, plz ipsum, oh my design, so layout. wow. plz ipsum, txt me. plz full, so consectetur. such text. much doge.
-
-
-      much lorem! wow. plz full, need doge. rate me! i iz cute?! oh my ipsum. go doge! very layout! wow, so text! such text. so text! wow! such adipiscing, want swag, oh my design, many word. very layout! txt me! many elit. go amet. want swag, many elit. much doge. such layout. rate me.
+    question: Qu'est qu'un numéro de TVA intracommunautaire ? comment est-il calculé ?
+    answer: Le numéro de TVA intracommunautaire identifie les entreprises au niveau
+      du marché unique européen. Il permet aux assujettis à la TVA, établis dans
+      deux Etats membres de l’UE différents, d’exonérer de TVA les ventes
+      intracommunautaires qu’ils réalisent entre eux. Le numéro de TVA
+      intracommunautaire renvoyé n'est pas issu des fournisseurs de données,
+      c'est API Entreprise qui le calcule à partir du numéro siren de
+      l'entreprise. Nous nous appuyons sur la formule de calcul disponible
+      icihttps://www.auditsi.eu/?p=6739. Pour vérifier la validité d’un numéro
+      de TVA intracommunautaire (et donc l’existence d’une entreprise)
+      :http://ec.europa.eu/taxation_customs/vies/?locale=fr
   qr3:
-    question: Entreprise non diffusible
-    answer: >-
-      very swag. such adipiscing, rate me, oh my ipsum. very layout! need lorem!
-      txt me! wow! oh my ipsum. yes master doge. so consectetur. very full, such
-      layout. want full! go doge! wow, very design! very swag. want word, want
-      swag, such layout. many elit. i can haz lorem. want full! very full, txt
-      me. such text. many word. txt me! much ipsum, yes master doge! oh my
-      ipsum. go amet. much aenean.
-
-
-      i can haz lorem. need doge. wow, plz ipsum, so text! plz swag, many word. want full! such mattis. plz ipsum, much ipsum, many elit. go amet. such text. want full! much ipsum, very word.  so layout. txt me, such text. go amet. many word. want full! wow. plz swag, very word. wow, much doge. wow, plz ipsum, oh my design, so layout. wow. plz ipsum, txt me. plz full, so consectetur. such text. much doge.
-
-
-      much lorem! wow. plz full, need doge. rate me! i iz cute?! oh my ipsum. go doge! very layout! wow, so text! such text. so text! wow! such adipiscing, want swag, oh my design, many word. very layout! txt me! many elit. go amet. want swag, many elit. much doge. such layout. rate me.
+    question: ""
+    answer: ""
 request:
   id:
     label: SirenDeL’Entreprise
