@@ -80,10 +80,10 @@ questions:
       #### Comment utiliser leur données ?
 
 
-      Tout utilisateur de l'endpoint `entreprise` s’engage à tenir compte du statut de diffusion le plus récent de chaque personne physique. 
+      En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique. 
 
 
-      Celui-ci tient compte des oppositions formulées par certaines d’entre elles, à la consultation ou l’utilisation de leurs données Sirene par des tiers autres que les administrations ou organismes habilités. En cas d’octroi d’un accès aux données des personnes physiques pour lesquelles les variables `statutDiffusionEtablissement` et `statutDiffusionUniteLegale `sont à la valeur N, le fournisseur de service s’engage à n’utiliser ces informations que dans le cadre strict de ses missions de service public, et à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés. 
+      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés. 
 
 
       Vous pouvez consulter nos [conditions générales d'utilisation](https://entreprise.api.gouv.fr/cgu/).
