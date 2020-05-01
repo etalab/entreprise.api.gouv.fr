@@ -142,6 +142,10 @@ a.tab .tpl-icon {
   padding: var(--spacing-s) 0;
 }
 
+.technical-documentation code {
+  background-color: var(--lighter-grey);
+}
+
 .qa {
   background-color: var(--lighter-grey);
   border-radius: var(--border-radius-default);
