@@ -94,7 +94,7 @@ questions:
 request:
   id:
     label: SirenDeL’Entreprise
-    description: Le numéro de siren de la personne physique ou morale recherchée
+    description: Le numéro de siren de la personne physique ou morale recherchée.
   parameters:
     param1:
       label: token
