@@ -68,7 +68,7 @@ questions:
   qr1:
     question: Comment utiliser les données (privées) des entreprises non diffusibles ?
     answer: >-
-      #### Qu'est-ce qu'une entreprise non diffusible ?
+      ###### Qu'est-ce qu'une entreprise non diffusible ?
 
 
       Parmi les personnes physiques présentes dans le Répertoires Sirene, certaines, très majoritairement des entreprises individuelles, ont explicitement demandé de ne pas figurer en diffusion commerciale, en vertue de l'[article A123-96 du Code du Commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=C505A51DBC1A4EB1FFF3764C69ACDB1C.tpdjo11v_1?idArticle=LEGIARTI000020165030&cidTexte=LEGITEXT000005634379&dateTexte=20100702). Cela signifie qu'elles donnent accord de la diffusion de leur données uniquement à des organismes habilités et à des administrations. **De fait, leurs données ne sont pas publiques.**
@@ -77,7 +77,7 @@ questions:
       ⚠️ D'autres entités, y compris des personnes morales peuvent également être considérées comme non diffusibles, il s'agit notamment de la Défense Nationale.
 
 
-      #### Comment utiliser leur données ?
+      ###### Comment utiliser leur données ?
 
 
       En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique. 
