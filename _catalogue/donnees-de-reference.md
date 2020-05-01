@@ -80,7 +80,7 @@ questions:
       les rediffuser ni les divulguer auprès de tiers non autorisés. Vous pouvez
       consulter nos CGU ici :https://entreprise.api.gouv.fr/cgu/
   qr2:
-    question: Qu'est qu'un numéro de TVA intracommunautaire ? comment est-il calculé ?
+    question: ""
     answer: Le numéro de TVA intracommunautaire identifie les entreprises au niveau
       du marché unique européen. Il permet aux assujettis à la TVA, établis dans
       deux Etats membres de l’UE différents, d’exonérer de TVA les ventes
