@@ -66,19 +66,24 @@ perimeter:
     Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
 questions:
   qr1:
-    question: La base Sirene est publique mais certaines données ne le sont pas,
-      comment utiliser les données des entreprises non diffusibles ?
+    question: Comment utiliser les données (privées) des entreprises non diffusibles ?
     answer: >-
-      Tout utilisateur de l'endpoint `entreprise` s’engage à tenir compte du
-      statut de diffusion le plus récent de chaque personne physique. Celui-ci
-      tient compte des oppositions formulées par certaines d’entre elles, à la
-      consultation ou l’utilisation de leurs données Sirene par des tiers autres
-      que les administrations ou organismes habilités. En cas d’octroi d’un
-      accès aux données des personnes physiques pour lesquelles les variables
-      `statutDiffusionEtablissement` et `statutDiffusionUniteLegale `sont à la
-      valeur N, le fournisseur de service s’engage à n’utiliser ces informations
-      que dans le cadre strict de ses missions de service public, et à ne pas
-      les rediffuser ni les divulguer auprès de tiers non autorisés. 
+      #### Qu'est-ce qu'une entreprise non diffusible ?
+
+
+      Parmi les personnes physiques présentes dans le Répertoires Sirene, certaines, très majoritairement des entreprises individuelles, ont explicitement demandé de ne pas figurer en diffusion commerciale, en vertue de l'[article A123-96 du Code du Commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=C505A51DBC1A4EB1FFF3764C69ACDB1C.tpdjo11v_1?idArticle=LEGIARTI000020165030&cidTexte=LEGITEXT000005634379&dateTexte=20100702). Cela signifie qu'elles donnent accord de la diffusion de leur données uniquement à des organismes habilités et à des administrations. **De fait, leurs données ne sont pas publiques.**
+
+
+      ⚠️ D'autres entités, y compris des personnes morales peuvent également être considérées comme non diffusibles, il s'agit notamment de la Défense Nationale.
+
+
+      #### Comment utiliser leur données ?
+
+
+      Tout utilisateur de l'endpoint `entreprise` s’engage à tenir compte du statut de diffusion le plus récent de chaque personne physique. 
+
+
+      Celui-ci tient compte des oppositions formulées par certaines d’entre elles, à la consultation ou l’utilisation de leurs données Sirene par des tiers autres que les administrations ou organismes habilités. En cas d’octroi d’un accès aux données des personnes physiques pour lesquelles les variables `statutDiffusionEtablissement` et `statutDiffusionUniteLegale `sont à la valeur N, le fournisseur de service s’engage à n’utiliser ces informations que dans le cadre strict de ses missions de service public, et à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés. 
 
 
       Vous pouvez consulter nos [conditions générales d'utilisation](https://entreprise.api.gouv.fr/cgu/).
