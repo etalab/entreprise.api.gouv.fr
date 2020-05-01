@@ -110,7 +110,7 @@ request:
       description: RaisonDeL'AppelOuIdentifiant
   options:
     option1:
-      description: pour connaitre l’état administratif de l’entité demandée ;
+      description: pour connaître l’état administratif de l’entité demandée ;
       param: with_etat_administratif
       comment: "Si vous souhaitez également connaitre l'état administratif de
         l’entreprise, ajoutez le paramètre facultatif suivant :"
