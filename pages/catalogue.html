@@ -96,7 +96,7 @@ additional_js: catalogue.js
                   </svg>
                   Nouvelle option disponible
                 </h4>
-                <p>{{ endpoint.new }}</p>
+                <p>{{ endpoint.new | markdownify }}</p>
               </div>
               <hr />
               {% endif %}
