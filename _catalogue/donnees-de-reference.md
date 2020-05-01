@@ -45,12 +45,14 @@ perimeter:
     **Cet endpoint permet donc d'accéder aux informations de référence concernant :**
 
 
-    * les personnes morales de droit privé : les entreprises. \
-      Pour information, toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene ; 
+    * les personnes morales de droit privé : les entreprises. 
+
+      > ℹ️ Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene ; 
     * les personnes morales de droit public : les institutions et services de l’État et les collectivités territoriales ; 
 
-    * les entrepreneurs individuels exerçant de manière indépendante une profession non salariée(exemple : un commerçant, un médecin), ayant fait une déclaration d'activité. \
-      ⚠️ Les particuliers employeurs ne font pas partie de la base Sirene ;
+    * les entrepreneurs individuels exerçant de manière indépendante une profession non salariée(exemple : un commerçant, un médecin), ayant fait une déclaration d'activité. 
+
+      > ℹ️ Les particuliers employeurs ne font pas partie de la base Sirene ;
     * les associations ayant, en plus de leur numéro RNA, un numéro de SIREN/SIRET délivré lorsqu'elles :
 
       * emploient du personnel salarié ; 
