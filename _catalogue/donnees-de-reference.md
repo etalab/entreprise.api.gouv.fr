@@ -21,10 +21,9 @@ opening: Données publiques sauf non diffusibles
 providers:
   - insee
   - infogreffe
-new: 'Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramètre
-  <code class=\"tpl-code\">non_diffusables: true</code>. Un nouveau champ
-  apparaît dans la réponse, sous la forme : <code
-  class=\"tpl-code\">diffusable_commercialement</code>.'
+new: "Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramètre
+  `non_diffusables: true`. Un nouveau champ apparaît dans la réponse, sous la
+  forme : `diffusable_commercialement`."
 perimeter:
   label: |-
     * Entreprises
