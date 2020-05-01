@@ -81,16 +81,7 @@ questions:
       consulter nos CGU ici :https://entreprise.api.gouv.fr/cgu/
   qr2:
     question: ""
-    answer: Le numéro de TVA intracommunautaire identifie les entreprises au niveau
-      du marché unique européen. Il permet aux assujettis à la TVA, établis dans
-      deux Etats membres de l’UE différents, d’exonérer de TVA les ventes
-      intracommunautaires qu’ils réalisent entre eux. Le numéro de TVA
-      intracommunautaire renvoyé n'est pas issu des fournisseurs de données,
-      c'est API Entreprise qui le calcule à partir du numéro siren de
-      l'entreprise. Nous nous appuyons sur la formule de calcul disponible
-      icihttps://www.auditsi.eu/?p=6739. Pour vérifier la validité d’un numéro
-      de TVA intracommunautaire (et donc l’existence d’une entreprise)
-      :http://ec.europa.eu/taxation_customs/vies/?locale=fr
+    answer: ""
   qr3:
     question: ""
     answer: ""
