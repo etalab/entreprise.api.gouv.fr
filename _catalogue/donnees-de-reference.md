@@ -151,7 +151,7 @@ response:
         "libelle_naf_entreprise": "Conseil en systèmes et logiciels informatiques", // issu de la nomenclature d’activités française de l’INSEE. 
         "raison_sociale": "mon entreprise",
         "siret_siege_social": "00000000000000",
-        "code_effectif_entreprise": "31",
+        "code_effectif_entreprise": "31", //Le code effectif correspond à une fourchette de nombre de salariés, par exemple "31" correspond à "200 à 249 salariés".
         "date_creation": 000000000, // date au format timestamp UNIX
         "nom": null, // ou quelque chose ?
         "prenom": null, // ou quelque chose ?
