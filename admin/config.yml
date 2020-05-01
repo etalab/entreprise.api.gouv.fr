@@ -81,7 +81,7 @@ collections:
           - label: 'Description très courte (2-3 mots)'
             name: 'label'
             required: false
-            widget: 'markdown'
+            widget: 'string'
           - label: 'Description longue'
             name: 'description'
             required: false

@@ -25,10 +25,8 @@ new: "Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramè
   `non_diffusables: true`. Un nouveau champ apparaît dans la réponse, sous la
   forme : `diffusable_commercialement`."
 perimeter:
-  label: |-
-    * Entreprises
-    * institutions administratives
-    * certaines associations et entrepreneurs individuels
+  label: Entreprises, institutions administratives, certaines associations et
+    entrepreneurs individuels
   description: >-
     L'endpoint `entreprises_insee` vous donne accès : 
 
