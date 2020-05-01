@@ -129,7 +129,7 @@ additional_js: catalogue.js
                     </dd>
                     {% endif %}
                   </dl>
-                  {% for qr in endpoint.questions %}
+                  {% for qr in endpoint.request.questions %}
                   {% unless qr[1].question == "" %}
                   <details class="qa">
                     <summary>{{ qr[1].question }}</summary>
@@ -149,6 +149,14 @@ additional_js: catalogue.js
                     <dd>{{ endpoint.response.timeout }}</dd>
                   </dl>
                   <p>{{ endpoint.response.description | markdownify }}</p>
+                  {% for qr in endpoint.response.questions %}
+                  {% unless qr[1].question == "" %}
+                  <details class="qa">
+                    <summary>{{ qr[1].question }}</summary>
+                    {{ qr[1].answer | markdownify }}
+                  </details>
+                  {% endunless %}
+                  {% endfor %}
                 </div>
               </div>
               <div class="examples tpl-flex-row tpl-flex-jc-sb">

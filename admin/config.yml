@@ -86,54 +86,54 @@ collections:
             name: 'description'
             required: false
             widget: 'markdown'
-      - label: 'Questions/réponses'
-        name: 'questions'
-        widget: 'object'
-        required: false
-        fields:
-          - label: 'Question/réponse 1'
-            name: 'qr1'
-            required: false
-            widget: 'object'
-            fields:
-              - label: 'Question'
-                name: 'question'
-                required: false
-                widget: 'string'
-              - label: 'Réponse'
-                name: 'answer'
-                required: false
-                widget: 'markdown'
-          - label: 'Question/réponse 2'
-            name: 'qr2'
-            required: false
-            widget: 'object'
-            fields:
-              - label: 'Question'
-                name: 'question'
-                required: false
-                widget: 'string'
-              - label: 'Réponse'
-                name: 'answer'
-                required: false
-                widget: 'markdown'
-          - label: 'Question/réponse 3'
-            name: 'qr3'
-            required: false
-            widget: 'object'
-            fields:
-              - label: 'Question'
-                name: 'question'
-                required: false
-                widget: 'string'
-              - label: 'Réponse'
-                name: 'answer'
-                required: false
-                widget: 'markdown'
       - label: 'Requête'
         name: 'request'
         widget: 'object'
         fields:
+          - label: 'Questions/réponses'
+            name: 'questions'
+            widget: 'object'
+            required: false
+            fields:
+              - label: 'Question/réponse 1'
+                name: 'qr1'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Question'
+                    name: 'question'
+                    required: false
+                    widget: 'string'
+                  - label: 'Réponse'
+                    name: 'answer'
+                    required: false
+                    widget: 'markdown'
+              - label: 'Question/réponse 2'
+                name: 'qr2'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Question'
+                    name: 'question'
+                    required: false
+                    widget: 'string'
+                  - label: 'Réponse'
+                    name: 'answer'
+                    required: false
+                    widget: 'markdown'
+              - label: 'Question/réponse 3'
+                name: 'qr3'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Question'
+                    name: 'question'
+                    required: false
+                    widget: 'string'
+                  - label: 'Réponse'
+                    name: 'answer'
+                    required: false
+                    widget: 'markdown'
           - label: 'Paramètre d’appel'
             name: 'id'
             description: 'A remplir avec le paramètre permettant d’identifier une entité'
@@ -303,7 +303,51 @@ collections:
           - label: 'Description'
             name: 'description'
             required: false
-            widget: 'markdown'    
+            widget: 'markdown'  
+          - label: 'Questions/réponses'
+            name: 'questions'
+            widget: 'object'
+            required: false
+            fields:
+              - label: 'Question/réponse 1'
+                name: 'qr1'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Question'
+                    name: 'question'
+                    required: false
+                    widget: 'string'
+                  - label: 'Réponse'
+                    name: 'answer'
+                    required: false
+                    widget: 'markdown'
+              - label: 'Question/réponse 2'
+                name: 'qr2'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Question'
+                    name: 'question'
+                    required: false
+                    widget: 'string'
+                  - label: 'Réponse'
+                    name: 'answer'
+                    required: false
+                    widget: 'markdown'
+              - label: 'Question/réponse 3'
+                name: 'qr3'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Question'
+                    name: 'question'
+                    required: false
+                    widget: 'string'
+                  - label: 'Réponse'
+                    name: 'answer'
+                    required: false
+                    widget: 'markdown'  
           - label: 'Réponse type'
             name: 'sample'
             required: false
