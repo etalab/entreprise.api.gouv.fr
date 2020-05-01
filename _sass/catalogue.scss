@@ -33,6 +33,10 @@
   cursor: pointer;
 }
 
+.documentation-card dt {
+  font-family: var(--font-family-default);
+}
+
 .documentation-card__header {
   padding: var(--spacing-l) var(--spacing-xxl);
 }
@@ -40,6 +44,10 @@
 .documentation-card__header h3 {
   margin-top: 0;
   display: inline-flex;
+}
+
+.documentation-card__header dd p {
+  margin-top: 0;
 }
 
 .documentation-card__header code {
@@ -240,6 +248,7 @@ a.tab .tpl-icon {
 }
 
 .tpl-documentation__links {
+  color: var(--primary);
   position: sticky;
   top: 2em;
 }
