@@ -15,9 +15,15 @@
 .documentation-card h4 {
   display: flex;
   align-items: center;
+  text-transform: initial;
 }
 
 .documentation-card h4 .tpl-icon {
+  margin-right: var(--spacing-xs);
+}
+
+.documentation-card h4 img {
+  width: var(--spacing-l);
   margin-right: var(--spacing-xs);
 }
 
