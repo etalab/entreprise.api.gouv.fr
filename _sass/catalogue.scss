@@ -23,7 +23,7 @@
 }
 
 .documentation-card h4 img {
-  width: var(--spacing-l);
+  width: var(--spacing-xxl);
   margin-right: var(--spacing-xs);
 }
 
@@ -50,6 +50,11 @@
 .documentation-card__header h3 {
   margin-top: 0;
   display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.documentation-card__header .documentation__description {
+  width: 80%;
 }
 
 .documentation-card__header dd p {
@@ -63,7 +68,7 @@
 .endpoint-scope {
   position: absolute;
   left: 0;
-  top: var(--spacing-m);
+  top: var(--spacing-l);
 }
 
 .endpoint-scope__item {
@@ -72,10 +77,12 @@
   align-items: center;
 }
 
-.endpoint-scope__item .icon {
+.endpoint-scope__item .tpl-icon {
   color: var(--white);
   fill: var(--white);
   stroke: var(--white);
+  height: var(--spacing-m);
+  width: var(--spacing-m);
 }
 
 .description ul {
