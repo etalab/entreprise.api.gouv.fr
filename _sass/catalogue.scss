@@ -166,6 +166,7 @@ a.tab .tpl-icon {
   content: '▾';
   position: absolute;
   right: var(--spacing-s);
+  top: var(--spacing-xs);
 }
 
 .qa[open] summary:after {
