@@ -47,12 +47,12 @@ response:
         "prenom": null, 
         "date_radiation": null, // indique null si l’entreprise n’est pas radiée du registre. Dans le cas contraire, la date est fournie au format timestamp UNIX 000000000.
         "categorie_entreprise": "PME", // ou "TPE" ou "ETI"
-        "tranche_effectif_salarie_entreprise": {
+        "tranche_effectif_salarie_entreprise": { // Ces derniers champs indiquent en détail l'effectif de salariés de l'entreprise.
           "de": 200,
           "a": 249,
           "code": "31",
           "date_reference": "2014",
-          "intitule": "200 à 249 salariés" // ces derniers champs correspondent à la nomenclature INSEE
+          "intitule": "200 à 249 salariés" 
         },
         "mandataires_sociaux": [{
           // Il y a deux types de mandataires sociaux, les personnes physiques et les personnes morales. 
@@ -79,8 +79,9 @@ response:
           "type": "PM" // signifie personne morale.
         }],
         "etat_administratif": {
-          "value": "C", // A (actif) ou C (cessé)
-          "date_cessation": 1315173600 // null quand actif (A), un timestamp (un entier) quand cessé (C )
+          //L’état administratif est l’état juridique de l’entreprise (source INSEE). 
+          "value": "C", // indique si l'entreprise est juridiquement active, par "A". Ou si elle est jurdiquement cessée, par "C".
+          "date_cessation": 1315173600 // indique "null" quand l'entreprise est jurdiquement active. Quand "value = C", un timestamp (un entier) est renvoyé.
         },
         "diffusable_commercialement": true// champ uniquement présent avec l'option non_diffusables=true
       },
