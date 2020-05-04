@@ -83,7 +83,7 @@ response:
           "value": "C", // indique si l'entreprise est juridiquement active, par "A". Ou si elle est jurdiquement cessée, par "C".
           "date_cessation": 1315173600 // indique "null" quand l'entreprise est jurdiquement active. Quand "value = C", un timestamp (un entier) est renvoyé.
         },
-        "diffusable_commercialement": true// champ uniquement présent avec l'option non_diffusables=true
+        "diffusable_commercialement": true// Ce champ indique si l'entreprise fait partie des non-diffusibles. Il est uniquement présent avec l'option d'appel "non_diffusables=true". La valeur indiquée est "false" dans le cas où l'entreprise est non-diffusible, cela signifie que ces données ne doivent en aucun cas être accessibles au grand public.
       },
 
       "etablissement_siege": {
