@@ -100,7 +100,7 @@ response:
           "intitule": "200 à 249 salariés"
         },
         "date_creation_etablissement": 1108594800,
-        "enseigne": null,
+        "enseigne": null, 
         "region_implantation": {
           "code": "11",
           "value": "Île-de-France"
@@ -115,13 +115,14 @@ response:
         },
         "diffusable_commercialement": true,
         "adresse": {
-          "l1": "OCTO TECHNOLOGY",
-          "l2": null,
-          "l3": null,
-          "l4": "50 AVENUE DES CHAMPS ELYSEES",
-          "l5": null,
-          "l6": "75008 PARIS",
-          "l7": "FRANCE",
+          // Depuis 2018, l'INSEE ne fournit plus d'adresse au format RNVP, nous opérons donc une reconstruction de l'addresse à partir des champs disponibles dans leur nouvelle API ; cette reconstruction n'est en aucun cas un traitement RNVP : Des différences minimes résultant de l'arrêt du RNVP peuvent être constatées.
+          "l1": "OCTO TECHNOLOGY", // Raison sociale, ou civilité + prénom + nom.
+          "l2": null, // Raisons sociales usuelles
+          "l3": null, // Complément d'adresse
+          "l4": "50 AVENUE DES CHAMPS ELYSEES", // Numéro de voie +  indice de répétition + type de voie + libellé voie.
+          "l5": null, // Distribution spéciale
+          "l6": "75008 PARIS", // Code cedex + code cedex ou code postal + libellé commune ou libellé commune à l'étranger.
+          "l7": "FRANCE", // Pays
           "numero_voie": "50",
           "type_voie": "AV",
           "nom_voie": "DES CHAMPS ELYSEES",
@@ -132,7 +133,8 @@ response:
           "cedex": null
         },
         "etat_administratif": {
-          "value": "F", // A (actif) ou F (fermé)
+         // Lors de son inscription au répertoire, un établissement est, sauf exception, à l’état ouvert. Le passage à l’état fermé découle de la prise en compte d’une déclaration de fermeture.
+          "value": "F", // Lorsqu'un établissement est ouvert, la valeur indiquée est "A" (actif). S'il est fermé, l'endpoint renverra "F"(fermé).
           "date_fermeture": 1315173600 // null quand actif (A), un timestamp (un entier) quand fermé (F)
           }
         },
