@@ -1,123 +1,13 @@
 ---
-type: Informations générales
-title: Données de référence
-label: entreprises_insee
-scope:
-  - entreprises
-  - associations
-description: Obtenir des informations concernant une personne physique ou morale
-  du répertoire Sirene telles que les dates de création et de fin ; le code
-  effectif, le numéro de TVA intracommunautaire ; la forme juridique... ou
-  encore les mandataires sociaux et l’état administratif de l’entreprise.
-usecases:
-  - Aides publiques
-  - Marchés publics
-  - Répertoire de tiers
-  - Application de la loi énergie - Art.64
 access: Restreint mais disponible sous d'autres conditions, chez
   [api.insee](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
   et [entreprise.data.gouv](https://entreprise.data.gouv.fr/)
-opening: Données publiques sauf non diffusibles
 providers:
   - insee
   - infogreffe
 new: "Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramètre
   `non_diffusables: true`. Un nouveau champ apparaît dans la réponse, sous la
   forme : `diffusable_commercialement`."
-perimeter:
-  label: |-
-    * Entreprises
-    * institutions administratives
-    * certaines associations et entrepreneurs individuels
-  description: >-
-    L'endpoint `entreprises_insee` vous donne accès : 
-
-
-    * aux données tirées du *Répertoire National d'identification des entreprises et des établissements*, géré par l'INSEE au travers du système Sirene
-
-    * ainsi qu'aux observations d'Infogreffe, quand elles sont disponibles pour le SIREN appelé.
-
-
-    ⚠️ *Il ne concerne pas les établissements, ceux-ci sont appelables avec l'endpoint `etablissement_inse`*`e`
-
-
-    **Cet endpoint permet donc d'accéder aux informations de référence concernant :**
-
-
-    * les personnes morales de droit privé : les entreprises. <br> ℹ️ *Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene* ; 
-
-    * les personnes morales de droit public : les institutions et services de l’État et les collectivités territoriales ;
-
-    * les entrepreneurs individuels exerçant de manière indépendante une profession non salariée(exemple : un commerçant, un médecin), ayant fait une déclaration d'activité. <br>ℹ️ *Les particuliers employeurs ne font pas partie de la base Sirene* ;
-
-    * les associations ayant, en plus de leur numéro RNA, un numéro de SIREN/SIRET délivré lorsqu'elles :
-
-      * emploient du personnel salarié ; 
-      * sont soumises à la TVA ; 
-      * ont demandé ou bénéficient de transferts financiers publics.
-    * Les organismes publics ou privés et les entreprises étrangères qui ont une représentation ou une activité en France.
-
-
-    **Périmètre géographique :** La base Sirene concerne les unités implantées en métropole, dans les DOM et dans les collectivités d'Outre-Mer de Saint Pierre et Miquelon, Saint Barthélémy et Saint Martin. <br>⚠️ *Pour la Nouvelle-Calédonie, la Polynésie française, et Wallis-et-Futuna, seul le secteur public administratif, de l'État ou des communes est répertorié.*
-
-
-    **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
-questions:
-  qr1:
-    question: Comment utiliser les données (privées) des entreprises non diffusibles ?
-    answer: >-
-      ###### Qu'est-ce qu'une entreprise non diffusible ?
-
-
-      Parmi les personnes physiques présentes dans le Répertoires Sirene, certaines, très majoritairement des entreprises individuelles, ont explicitement demandé de ne pas figurer en diffusion commerciale, en vertu de l'[article A123-96 du Code du Commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=C505A51DBC1A4EB1FFF3764C69ACDB1C.tpdjo11v_1?idArticle=LEGIARTI000020165030&cidTexte=LEGITEXT000005634379&dateTexte=20100702). Cela signifie qu'elles donnent accord de la diffusion de leur données uniquement à des organismes habilités et à des administrations. **De fait, leurs données ne sont pas publiques.**
-
-
-      ⚠️ D'autres entités, y compris des personnes morales peuvent également être considérées comme non diffusibles, il s'agit notamment de la Défense Nationale, en vertu de l'[article A 123-95 du Code du commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A50D4E549BAC95B63FFE10B24F86D7A5.tplgfr21s_1?idArticle=LEGIARTI000020165032&cidTexte=LEGITEXT000005634379&dateTexte=20100702), des SIRET immatriculés spécifiquement pour les impôts (Urssaf et comptabilités publiques).
-
-
-      ###### Comment utiliser les données des non diffusibles?
-
-
-      En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique. 
-
-
-      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés. 
-
-
-      De fait, **les fonctionnalités de pré-remplissage de formulaires ne peuvent donc bénéficier de ces données au risque de les voir diffusées**. Il est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr.>
-  qr2:
-    question: ""
-    answer: ""
-  qr3:
-    question: ""
-    answer: ""
-request:
-  id:
-    label: SirenDeL’Entreprise
-    description: Le numéro de siren de la personne physique ou morale recherchée.
-  parameters:
-    param1:
-      label: token
-      description: JetonD’Habilitation
-    param2:
-      label: context
-      description: CadreDeLaRequête
-    param3:
-      label: recipient
-      description: BénéficiaireDeL'appel
-    param4:
-      label: object
-      description: RaisonDeL'AppelOuIdentifiant
-  options:
-    option1:
-      description: pour connaître l’état administratif de l’entité demandée ;
-      param: with_etat_administratif
-      comment: "Si vous souhaitez également connaitre l'état administratif de
-        l’entreprise, ajoutez le paramètre facultatif suivant :"
-    option2:
-      description: pour accéder aux entreprises non diffusibles.
-      param: non_diffusable
-      comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
 response:
   format: Données structurées JSON
   timeout: 5 secondes
@@ -151,7 +41,7 @@ response:
         "libelle_naf_entreprise": "Conseil en systèmes et logiciels informatiques", // issu de la nomenclature d’activités française de l’INSEE. 
         "raison_sociale": "mon entreprise",
         "siret_siege_social": "00000000000000",
-        "code_effectif_entreprise": "31", //Le code effectif correspond à une fourchette de nombre de salariés, celle-ci est indiqué un peu plus loin au champ "tranche_effectif_salarie_entreprise".
+        "code_effectif_entreprise": "31", //Le code effectif correspond à une fourchette de nombre de salariés, celle-ci est indiquée un peu plus loin au champ "tranche_effectif_salarie_entreprise". Ce code respecte [la nomenclature de l'INSEE](http://www.sirene.fr/sirene/public/variable/tefen)
         "date_creation": 000000000, // date au format timestamp UNIX
         "nom": null, 
         "prenom": null, 
@@ -165,6 +55,8 @@ response:
           "intitule": "200 à 249 salariés" // ces derniers champs correspondent à la nomenclature INSEE
         },
         "mandataires_sociaux": [{
+          // Il y a deux types de mandataires sociaux, les personnes physiques et les personnes morales. 
+          // Dans le cas d'une personne physique, voici les données fournies : 
           "nom": "Henri",
           "prenom": "Martin",
           "fonction": "Président du Directoire",
@@ -173,8 +65,9 @@ response:
           "date_naissance_timestamp": -155523600,
           "raison_sociale": "",
           "identifiant": "",
-          "type": "PP"
+          "type": "PP" // signifie personne morale
         }, {
+           // Dans le cas d'une personne morale, voici les données fournies : 
           "nom": "",
           "prenom": "",
           "fonction": "COMMISSAIRE AUX COMPTES SUPPLEANT",
@@ -182,8 +75,8 @@ response:
           "date_naissance": "",
           "date_naissance_timestamp": 0,
           "raison_sociale": "BCRH & ASSOCIES - SOCIETE A RESPONSABILITE LIMITEE A ASSOCIE UNIQUE",
-          "identifiant": "490092574",
-          "type": "PM"
+          "identifiant": "490092574", // élément facultatif de 7 à 9 chiffres, qui peut être vide.
+          "type": "PM" // signifie personne morale.
         }],
         "etat_administratif": {
           "value": "C", // A (actif) ou C (cessé)
@@ -245,6 +138,116 @@ response:
         "gateway_error": false
       }
     lang: jsonc
+questions:
+  qr1:
+    question: Comment utiliser les données (privées) des entreprises non diffusibles ?
+    answer: >-
+      ###### Qu'est-ce qu'une entreprise non diffusible ?
+
+
+      Parmi les personnes physiques présentes dans le Répertoires Sirene, certaines, très majoritairement des entreprises individuelles, ont explicitement demandé de ne pas figurer en diffusion commerciale, en vertu de l'[article A123-96 du Code du Commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=C505A51DBC1A4EB1FFF3764C69ACDB1C.tpdjo11v_1?idArticle=LEGIARTI000020165030&cidTexte=LEGITEXT000005634379&dateTexte=20100702). Cela signifie qu'elles donnent accord de la diffusion de leur données uniquement à des organismes habilités et à des administrations. **De fait, leurs données ne sont pas publiques.**
+
+
+      ⚠️ D'autres entités, y compris des personnes morales peuvent également être considérées comme non diffusibles, il s'agit notamment de la Défense Nationale, en vertu de l'[article A 123-95 du Code du commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A50D4E549BAC95B63FFE10B24F86D7A5.tplgfr21s_1?idArticle=LEGIARTI000020165032&cidTexte=LEGITEXT000005634379&dateTexte=20100702), des SIRET immatriculés spécifiquement pour les impôts (Urssaf et comptabilités publiques).
+
+
+      ###### Comment utiliser les données des non diffusibles?
+
+
+      En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique. 
+
+
+      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés. 
+
+
+      De fait, **les fonctionnalités de pré-remplissage de formulaires ne peuvent donc bénéficier de ces données au risque de les voir diffusées**. Il est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr.>
+  qr2:
+    question: ""
+    answer: ""
+  qr3:
+    question: ""
+    answer: ""
+type: Informations générales
+title: Données de référence
+label: entreprises_insee
+scope:
+  - entreprises
+  - associations
+description: Obtenir des informations concernant une personne physique ou morale
+  du répertoire Sirene telles que les dates de création et de fin ; le code
+  effectif, le numéro de TVA intracommunautaire ; la forme juridique... ou
+  encore les mandataires sociaux et l’état administratif de l’entreprise.
+usecases:
+  - Aides publiques
+  - Marchés publics
+  - Répertoire de tiers
+  - Application de la loi énergie - Art.64
+opening: Données publiques sauf non diffusibles
+perimeter:
+  label: |-
+    * Entreprises
+    * institutions administratives
+    * certaines associations et entrepreneurs individuels
+  description: >-
+    L'endpoint `entreprises_insee` vous donne accès : 
+
+
+    * aux données tirées du *Répertoire National d'identification des entreprises et des établissements*, géré par l'INSEE au travers du système Sirene
+
+    * ainsi qu'aux observations d'Infogreffe, quand elles sont disponibles pour le SIREN appelé.
+
+
+    ⚠️ *Il ne concerne pas les établissements, ceux-ci sont appelables avec l'endpoint `etablissement_inse`*`e`
+
+
+    **Cet endpoint permet donc d'accéder aux informations de référence concernant :**
+
+
+    * les personnes morales de droit privé : les entreprises. <br> ℹ️ *Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene* ; 
+
+    * les personnes morales de droit public : les institutions et services de l’État et les collectivités territoriales ;
+
+    * les entrepreneurs individuels exerçant de manière indépendante une profession non salariée(exemple : un commerçant, un médecin), ayant fait une déclaration d'activité. <br>ℹ️ *Les particuliers employeurs ne font pas partie de la base Sirene* ;
+
+    * les associations ayant, en plus de leur numéro RNA, un numéro de SIREN/SIRET délivré lorsqu'elles :
+
+      * emploient du personnel salarié ; 
+      * sont soumises à la TVA ; 
+      * ont demandé ou bénéficient de transferts financiers publics.
+    * Les organismes publics ou privés et les entreprises étrangères qui ont une représentation ou une activité en France.
+
+
+    **Périmètre géographique :** La base Sirene concerne les unités implantées en métropole, dans les DOM et dans les collectivités d'Outre-Mer de Saint Pierre et Miquelon, Saint Barthélémy et Saint Martin. <br>⚠️ *Pour la Nouvelle-Calédonie, la Polynésie française, et Wallis-et-Futuna, seul le secteur public administratif, de l'État ou des communes est répertorié.*
+
+
+    **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
+request:
+  id:
+    label: SirenDeL’Entreprise
+    description: Le numéro de siren de la personne physique ou morale recherchée.
+  parameters:
+    param1:
+      label: token
+      description: JetonD’Habilitation
+    param2:
+      label: context
+      description: CadreDeLaRequête
+    param3:
+      label: recipient
+      description: BénéficiaireDeL'appel
+    param4:
+      label: object
+      description: RaisonDeL'AppelOuIdentifiant
+  options:
+    option1:
+      description: pour connaître l’état administratif de l’entité demandée ;
+      param: with_etat_administratif
+      comment: "Si vous souhaitez également connaitre l'état administratif de
+        l’entreprise, ajoutez le paramètre facultatif suivant :"
+    option2:
+      description: pour accéder aux entreprises non diffusibles.
+      param: non_diffusable
+      comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
 history: |-
   15/01/2020 Ajout d’un champ `non_diffusable`
 
