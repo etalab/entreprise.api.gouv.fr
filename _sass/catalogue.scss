@@ -268,23 +268,25 @@ a.tab .tpl-icon {
   background-color: var(--danger);
 }
 
-.tpl-documentation__links {
+.catalogue .tpl-documentation__links {
+  background: 0;
+  box-shadow: none;
   color: var(--primary);
   position: sticky;
   top: 2em;
 }
 
-.tpl-documentation__links h3 {
+.catalogue .tpl-documentation__links h3 {
   padding: var(--spacing-s);
   padding-bottom: 0;
   font-size: 1em;
 }
 
-.tpl-documentation__links h4 {
+.catalogue .tpl-documentation__links h4 {
   font-size: 0.75em;
 }
 
-.tpl-documentation__link {
+.catalogue .tpl-documentation__link {
   display: flex;
 }
 
