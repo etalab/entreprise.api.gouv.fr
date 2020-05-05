@@ -60,23 +60,23 @@ response:
           "nom": "Henri",
           "prenom": "Martin",
           "fonction": "Président du Directoire",
-          "dirigeant": true, // toujours true
+          "dirigeant": true, // toujours "true"
           "date_naissance": "1965-01-27",
           "date_naissance_timestamp": -155523600,
-          "raison_sociale": "",
-          "identifiant": "",
-          "type": "PP" // signifie personne morale
+          "raison_sociale": "",//Champ toujours vide car il concerne les personnes morales.
+          "identifiant": "",// Champ vide car il concerne les personnes morales.
+          "type": "PP" // signifie qu'il s'agit d'une personne physique.
         }, {
            // Dans le cas d'une personne morale, voici les données fournies : 
-          "nom": "",
-          "prenom": "",
+          "nom": "", // Champ vide car il concerne les personnes physiques.
+          "prenom": "", // Champ vide car il concerne les personnes physiques.
           "fonction": "COMMISSAIRE AUX COMPTES SUPPLEANT",
-          "dirigeant": true,
-          "date_naissance": "",
-          "date_naissance_timestamp": 0,
+          "dirigeant": true, // toujours "true".
+          "date_naissance": "", // Champ vide car il concerne les personnes physiques.
+          "date_naissance_timestamp": 0, // Champ vide car il concerne les personnes physiques.
           "raison_sociale": "BCRH & ASSOCIES - SOCIETE A RESPONSABILITE LIMITEE A ASSOCIE UNIQUE",
           "identifiant": "490092574", // élément facultatif de 7 à 9 chiffres, qui peut être vide.
-          "type": "PM" // signifie personne morale.
+          "type": "PM" // signifie qu'il s'agit d'une personne morale.
         }],
         "etat_administratif": {
           //L’état administratif est l’état juridique de l’entreprise (source INSEE). 
