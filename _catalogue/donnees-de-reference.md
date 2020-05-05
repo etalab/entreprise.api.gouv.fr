@@ -244,7 +244,7 @@ perimeter:
     * ainsi qu'aux observations d'Infogreffe, quand elles sont disponibles pour le SIREN appelé.
 
 
-    ⚠️ *Il ne concerne pas les établissements, ceux-ci sont appelables avec l'endpoint `etablissement_inse`*`e`
+    ⚠️ *Il ne concerne pas les établissements, ceux-ci sont appelables avec l'endpoint `etablissement_insee`*
 
 
     **Cet endpoint permet donc d'accéder aux informations de référence concernant :**
