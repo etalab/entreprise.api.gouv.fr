@@ -295,7 +295,7 @@ request:
 
 
         ℹ️ Un établissement fermé peut être rouvert.
-      question: Qu'est ce que l'état administratif d'une entreprise ou d'un
+      question: Qu'est ce que l'état administratif d'une entreprise <br> ou d'un
         établissement ?
     qr2:
       answer: >-
