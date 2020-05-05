@@ -143,48 +143,8 @@ response:
     lang: jsonc
   questions:
     qr1:
-      question: Qu'est ce que l'état administratif d'une entreprise ou d'un
-        établissement ?
-      answer: >-
-        ###### L'état administratif d'une entreprise
-
-
-        L’état administratif indique si une entreprise est active (A) ou cessée (C). C'est son état juridique. 
-
-
-        L’entreprise est considérée comme juridiquement cessée pour les personnes morales : 
-
-
-        * au dépôt de la déclaration de disparition de la personne morale.
-
-        * lorsqu’elle a été inscrite sans activité à sa demande. Dans le cas d'une création au répertoire SIRENE mais sans avoir encore démarré une activité (activité principale provisoire “0000Z”).
-
-        * si elle n’a plus d’établissement en activité. 
-
-
-        L’entreprise est considérée comme juridiquement cessée pour les personnes physiques : 
-
-
-        * si l'exploitant de l'entreprise décède 
-
-        * si l'exploitant dépose une cessation d'activité.
-
-
-        En dehors de ces cas, l'état administratif de l'entreprise est toujours actif.
-
-
-        ℹ️ *Pour les personnes physiques, dans le cas où l’exploitant déclare la cessation de son activité, puis la reprend quelque temps plus tard, cet état est réversible. Il est donc normal d'avoir des périodes successives d'état actif puis cessé pour les personnes physiques. Pour les personnes morales, l'état administratif est en théorie irréversible.* 
-
-
-
-
-        ###### L'état administratif d'un établissement
-
-
-        L'état administratif a deux modalités : actif (A) ou fermé (F). Lors de son inscription au répertoire, un établissement est, sauf exception, à l’état "ouvert" (A). Le passage à l’état "fermé" découle de la prise en compte d’une déclaration de fermeture.
-
-
-        ℹ️ Un établissement fermé peut être rouvert.
+      question: ""
+      answer: ""
 questions:
   qr1:
     question: Comment utiliser les données (privées) des entreprises non diffusibles ?
@@ -297,6 +257,47 @@ request:
       comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
   questions:
     qr1:
+      answer: >-
+        ###### L'état administratif d'une entreprise
+
+
+        L’état administratif indique si une entreprise est active (A) ou cessée (C). C'est son état juridique. 
+
+
+        L’entreprise est considérée comme juridiquement cessée pour les personnes morales : 
+
+
+        * au dépôt de la déclaration de disparition de la personne morale.
+
+        * lorsqu’elle a été inscrite sans activité à sa demande. Dans le cas d'une création au répertoire SIRENE mais sans avoir encore démarré une activité (activité principale provisoire “0000Z”).
+
+        * si elle n’a plus d’établissement en activité. 
+
+
+        L’entreprise est considérée comme juridiquement cessée pour les personnes physiques : 
+
+
+        * si l'exploitant de l'entreprise décède 
+
+        * si l'exploitant dépose une cessation d'activité.
+
+
+        En dehors de ces cas, l'état administratif de l'entreprise est toujours actif.
+
+
+        ℹ️ *Pour les personnes physiques, dans le cas où l’exploitant déclare la cessation de son activité, puis la reprend quelque temps plus tard, cet état est réversible. Il est donc normal d'avoir des périodes successives d'état actif puis cessé pour les personnes physiques. Pour les personnes morales, l'état administratif est en théorie irréversible.* 
+
+
+        ###### L'état administratif d'un établissement
+
+
+        L'état administratif a deux modalités : actif (A) ou fermé (F). Lors de son inscription au répertoire, un établissement est, sauf exception, à l’état "ouvert" (A). Le passage à l’état "fermé" découle de la prise en compte d’une déclaration de fermeture.
+
+
+        ℹ️ Un établissement fermé peut être rouvert.
+      question: Qu'est ce que l'état administratif d'une entreprise ou d'un
+        établissement ?
+    qr2:
       answer: >-
         ###### Qu'est-ce qu'un non diffusible ? 
 
