@@ -64,7 +64,35 @@ perimeter:
   perimeter3:
     label: Lorem ipsum
     description: Lorem ipsum
-  description: ""
+  description: >-
+    L'endpoint `etablissements_insee` vous donne accès : 
+
+
+    * aux données "établissements" tirées du *Répertoire National d'identification des entreprises et des établissements*, géré par l'INSEE au travers du système Sirene
+
+
+    ⚠️ *Cet endpoint* ne *concerne pas les entreprises, celles-ci sont appelables avec l'endpoint `entreprises_insee`*
+
+
+    **Cet endpoint permet donc d'accéder aux informations de référence concernant les établissements:**
+
+
+    * des personnes morales de droit privé. <br> ℹ️ *Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene* ; 
+
+    * des personnes morales de droit public : les institutions et services de l’État et les collectivités territoriales ;
+
+    * des associations ayant, en plus de leur numéro RNA, un numéro de SIREN/SIRET délivré lorsqu'elles :
+
+      * emploient du personnel salarié ; 
+      * sont soumises à la TVA ; 
+      * ont demandé ou bénéficient de transferts financiers publics.
+    * des organismes publics ou privés et les entreprises étrangères qui ont une représentation ou une activité en France.
+
+
+    **Périmètre géographique :** La base Sirene concerne les unités implantées en métropole, dans les DOM et dans les collectivités d'Outre-Mer de Saint Pierre et Miquelon, Saint Barthélémy et Saint Martin. <br>⚠️ *Pour la Nouvelle-Calédonie, la Polynésie française, et Wallis-et-Futuna, seul le secteur public administratif, de l'État ou des communes est répertorié.*
+
+
+    **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
 request:
   id:
     param: SiretDeL’Entreprise
