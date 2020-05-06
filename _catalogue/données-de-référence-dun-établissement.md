@@ -27,6 +27,65 @@ response:
 
 
         ℹ️ Un établissement fermé peut être rouvert.
+  sample:
+    code: >
+      {
+        "etablissement": {
+          "siren": "418166096",
+          "nic": "00051", // Numéro interne de classement, l'identifiant à 5 chiffres de l'établissement, qui se trouve à la fin du numéro de SIRET.
+          "siret": "41816609600051",
+          "statut_diffusion": true, // Ce champ indique si les données de l'établissement sont diffusables ("true") ou non ("false").
+          "date_creation": 1108594800, // Format timestamp UNIX.
+          "tranche_effectif_code": "11", // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE(http://www.sirene.fr/sirene/public/variable/tefen)
+          "activite_principale_rnm_code": "123456",
+          "date_dernier_traitement": 1538217704,
+          "siege_social": true,
+          "enseigne_1": null,
+          "enseigne_2": null,
+          "enseigne_3": null,
+          "denomination_usuelle": null,
+          "activite_principale_code": "62.02A",
+          "activite_principale_nomenclature": "NAFRev2",
+          "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques",
+          "caractere_employeur": "O",
+          "etat_administratif": {
+            "value": "A",
+            "date_fermeture": null
+          },
+          "adresse_1": {
+            "complement": "LA PIOLINE",
+            "numero_voie": "10",
+            "indice_repetition": null,
+            "type_voie": "ALL",
+            "libelle_voie": "DES PLATANES LES MILLES",
+            "code_postal": "13290",
+            "commune_code": "13001",
+            "commune_libelle": "AIX-EN-PROVENCE",
+            "commune_etranger_libelle": null,
+            "distribution_speciale": null,
+            "cedex_code": "13546",
+            "cedex_libelle": "AIX EN PROVENCE CEDEX 4",
+            "pays_etranger_code": "",
+            "pays_etranger_libelle": ""
+          },
+          "adresse_2": {
+            "complement": "Le ROC FLEURI",
+            "numero_voie": "1",
+            "indice_repetition": null,
+            "type_voie": "RUE",
+            "libelle_voie": "DE TENAO",
+            "code_postal": null,
+            "commune_code": null,
+            "commune_libelle": null,
+            "commune_etranger_libelle": "MONACO",
+            "distribution_speciale": "BP 345",
+            "cedex_code": null,
+            "cedex_libelle": null,
+            "pays_etranger_code": "99138",
+            "pays_etranger_libelle": "MONACO"
+          }
+        }
+      }
 questions:
   qr1:
     answer: >-
