@@ -309,24 +309,8 @@ request:
         En dehors de ces cas, l'état administratif de l'entreprise est toujours actif.
 
 
-        ℹ️ *Pour les personnes physiques, dans le cas où l’exploitant déclare la cessation de son activité, puis la reprend quelque temps plus tard, cet état est réversible. Il est donc normal d'avoir des périodes successives d'état actif puis cessé pour les personnes physiques. Pour les personnes morales, l'état administratif est en théorie irréversible.* 
-
-
-        ###### L'état administratif d'un établissement
-
-
-        L'état administratif a deux modalités : actif (A) ou fermé (F). Lors de son inscription au répertoire, un établissement est, sauf exception, à l’état "ouvert" (A). Le passage à l’état "fermé" découle de la prise en compte d’une déclaration de fermeture.
-
-
-        ℹ️ Un établissement fermé peut être rouvert.
-
-
-        ###### Comment connaître l'état administratif de l'entité demandée ?
-
-
-        Il vous faudra ajouter l'option d'appel `with_etat_administratif`, deux champs seront alors disponible dans la réponse JSON, vous indiquant l'état de l'entité et la date de cessation si tel est le cas.
-      question: Qu'est ce que l'état administratif d'une entreprise <br> ou d'un
-        établissement ?
+        ℹ️ *Pour les personnes physiques, dans le cas où l’exploitant déclare la cessation de son activité, puis la reprend quelque temps plus tard, cet état est réversible. Il est donc normal d'avoir des périodes successives d'état actif puis cessé pour les personnes physiques. Pour les personnes morales, l'état administratif est en théorie irréversible.*
+      question: Qu'est ce que l'état administratif d'une entreprise <br> ?
     qr2:
       answer: >-
         ###### Qu'est-ce qu'un non diffusible ? 
