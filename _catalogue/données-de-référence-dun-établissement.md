@@ -84,7 +84,7 @@ request:
   options:
     option1:
       param: non_diffusable=true
-      description: pour accéder aux établissements non diffusibles.
+      description: non_diffusable=true ; pour accéder aux établissements non diffusibles.
       comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
 history: Lorem ipsum
 category: Informations générales
