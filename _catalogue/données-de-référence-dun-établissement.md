@@ -64,6 +64,7 @@ perimeter:
   perimeter3:
     label: Lorem ipsum
     description: Lorem ipsum
+  description: ""
 request:
   id:
     param: SiretDeL’Entreprise
