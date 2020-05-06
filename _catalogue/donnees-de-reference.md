@@ -213,10 +213,8 @@ usecases:
   - Application de la loi énergie - Art.64
 opening: Données publiques sauf non diffusibles
 perimeter:
-  label: |-
-    * Entreprises
-    * institutions administratives
-    * certaines associations et entrepreneurs individuels
+  label: Entreprises, institutions administratives, certaines associations et
+    entrepreneurs individuels
   description: >-
     L'endpoint `entreprises_insee` vous donne accès : 
 
