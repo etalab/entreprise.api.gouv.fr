@@ -334,6 +334,15 @@ request:
 
 
         En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique. Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement `de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**. Vous pouvez consulter nos [conditions générales d'utilisation](https://entreprise.api.gouv.fr/cgu/).
+
+
+        **Comment accéder aux données des non-diffusibles avec l'API Entreprise ?**
+
+
+        Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramètre `non_diffusables=true`. Un champ supplémentaire apparaît alors `diffusable_commercialement` indiquant si l'entreprise est diffusée ou non.
+
+
+        ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusible, l'API vous renverra un code HTTP 403, même si votre token comporte les droits d'accès.
       question: Comment utiliser les données privées <br>des entreprises non
         diffusibles ?
 history: |-
