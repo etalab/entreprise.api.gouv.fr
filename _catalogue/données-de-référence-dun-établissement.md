@@ -5,10 +5,10 @@ access: Restreint mais disponible sous d'autres conditions, chez
 providers:
   - insee
 response:
-  format: Données structurées JSON
+  format: Donnée structurée JSON
   timeout: 5 secondes
   description: >-
-    ###### La réponse JSON se décompose en trois catégorie d'informations : 
+    ###### La réponse JSON se décompose en trois catégories d'informations : 
 
 
     * **des données générales** sur l’établissement telles que la date de création, le nombre de salariés et la tranche effectif, l'activité principale et le statut de l'établissement par rapport à l'entreprise : s'agit-il du siège social ?
