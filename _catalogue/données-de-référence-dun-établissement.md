@@ -115,7 +115,10 @@ request:
   options:
     option1:
       param: non_diffusable=true
-      description: non_diffusable=true  pour accéder aux établissements non diffusibles.
+      description: Une option d'appel vous permet d'accéder aux données des
+        entreprises dîtes non-diffusibles, cette option nécessite une
+        autorisation spécifique, accordée ou non par API Entreprise selon votre
+        cas d'usage
       comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
 history: Lorem ipsum
 category: Informations générales
