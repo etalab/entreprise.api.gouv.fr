@@ -131,6 +131,33 @@ request:
         autorisation spécifique, accordée ou non par API Entreprise selon votre
         cas d'usage
       comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
+  questions:
+    qr1:
+      answer: >-
+        ###### Qu'est-ce qu'un établissement non diffusible ?
+
+
+        Certaines personnes morales sont considérées par la loi comme non diffusibles, et à ce titre **leur données réportoriées dans le registre Sirene ne sont pas publiques**. Il s'agit notamment de la Défense Nationale, conformément à l'[article A 123-95 du Code du commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A50D4E549BAC95B63FFE10B24F86D7A5.tplgfr21s_1?idArticle=LEGIARTI000020165032&cidTexte=LEGITEXT000005634379&dateTexte=20100702), ou des SIRET immatriculés spécifiquement pour les impôts (Urssaf et comptabilités publiques). 
+
+
+        Par conséquent, l'ensemble de leurs établissements sont également considérés comme non-diffusibles.
+
+
+        ###### Comment utiliser les données des non diffusibles ?
+
+
+        En utilisant l'endpoint `etablissements_insee`,  **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**. 
+
+
+        ###### Comment accéder aux données des non-diffusibles avec l'API Entreprise ?
+
+
+        Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramètre `non_diffusables=true`. Un champ supplémentaire apparaît alors `diffusable_commercialement` indiquant si l'entreprise est diffusée ou non.
+
+
+        ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusible, l'API vous renverra un code HTTP 403, même si votre token comporte les droits d'accès.
+      question: ⚠️ Comment utiliser les données privées des établissements non
+        diffusibles ?
 history: Lorem ipsum
 category: Informations générales
 ---
