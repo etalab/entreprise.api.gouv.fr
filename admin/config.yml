@@ -246,7 +246,7 @@ collections:
                     name: 'description'
                     required: false
                     width: 'string'
-                  - label: 'Commentaire'
+                  - label: 'Commentaire dans le code'
                     name: 'comment'
                     required: false
                     widget: 'string'
@@ -263,7 +263,7 @@ collections:
                     name: 'description'
                     required: false
                     width: 'string'
-                  - label: 'Commentaire'
+                  - label: 'Commentaire dans le code'
                     name: 'comment'
                     required: false
                     widget: 'string'
@@ -280,7 +280,7 @@ collections:
                     name: 'description'
                     required: false
                     width: 'string'
-                  - label: 'Commentaire'
+                  - label: 'Commentaire dans le code'
                     name: 'comment'
                     required: false
                     widget: 'string'
