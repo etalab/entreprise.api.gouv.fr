@@ -317,6 +317,12 @@ request:
 
 
         ℹ️ Un établissement fermé peut être rouvert.
+
+
+        ###### Comment connaître l'état administratif de l'entité demandée ?
+
+
+        Il vous faudra ajouter l'option d'appel `with_etat_administratif`, deux champs seront alors disponible dans la réponse JSON, vous indiquant l'état de l'entité et la date de cessation si tel est le cas.
       question: Qu'est ce que l'état administratif d'une entreprise <br> ou d'un
         établissement ?
     qr2:
