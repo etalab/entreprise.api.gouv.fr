@@ -45,9 +45,9 @@ label: etablissements_insee
 scope:
   - entreprises
   - associations
-description: Obtenir des informations concernant un établissement d’une personne
-  physique ou morale du répertoire Sirene telles que les dates de création et de
-  fin, l’adresse ou l’état administratif.
+description: Obtenir des informations générales, géographiques et juridiques
+  concernant un établissement du répertoire Sirene telles que les dates de
+  création et de fin, l’adresse ou l’état administratif.
 usecases:
   - Aides publiques
   - Marchés publics
