@@ -10,7 +10,8 @@ response:
   format: Donnée structurée JSON
   timeout: 5 secondes
   description: >-
-    La réponse est composée de trois ensembles :
+    ###### La réponse est composée de trois ensembles
+
 
     * **entreprise**, qui contient les données générales, les mandataires sociaux et l’état administratif de la personne physique ou morale ;
 
