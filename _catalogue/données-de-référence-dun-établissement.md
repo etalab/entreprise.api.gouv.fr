@@ -116,7 +116,7 @@ request:
     option1:
       param: non_diffusable=true
       description: Une option d'appel vous permet d'accéder aux données des
-        entreprises dîtes non-diffusibles, cette option nécessite une
+        établissements dîts non-diffusibles, cette option nécessite une
         autorisation spécifique, accordée ou non par API Entreprise selon votre
         cas d'usage
       comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
