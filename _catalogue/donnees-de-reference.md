@@ -5,11 +5,9 @@ access: Restreint mais disponible sous d'autres conditions, chez
 providers:
   - insee
   - infogreffe
-new: "Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramètre
-  `non_diffusables: true`. Un nouveau champ apparaît dans la réponse, sous la
-  forme : `diffusable_commercialement`."
+new: ""
 response:
-  format: Données structurées JSON
+  format: Donnée structurée JSON
   timeout: 5 secondes
   description: >-
     La réponse est composée de trois ensembles :
@@ -143,8 +141,32 @@ response:
     lang: jsonc
   questions:
     qr1:
-      question: ""
-      answer: ""
+      question: "Numéro de TVA intracommunautaire : <br> qu'est-ce que c'est ? Comment
+        est-il calculé par API Entreprise ?"
+      answer: >-
+        ###### Qu'est-ce que c'est ? 
+
+
+        Le numéro de TVA intracommunautaire est un numéro d’identification individuel attribué aux entreprises assujetties à la TVA et domiciliées au sein de l’Union européenne. En France, il est constitué du code FR et de 11 chiffres (une clé informatique de 2 chiffres, et le numéro de SIREN à 9 chiffres de l'entreprise.)
+
+
+        ###### Comment est-il calculé par API Entreprise ?
+
+
+        Le numéro de TVA intracommunautaire est calculé par API Entreprise selon la [règle officielle](https://fr.wikipedia.org/wiki/Code_Insee#Num%C3%A9ro_de_TVA_intracommunautaire). **Cette donnée est théorique.**
+
+
+        Dans le cas où l'établissement siège est à l'étranger la valeur est systématiquement mise à nul. En effet dans ce cas le numéro de TVA est probablement calculé par le pays où se situe l'établissement siège et *non par la France*. La **seule source** fiable dans ce cas est l'entreprise elle-même.
+    qr2:
+      question: Quelle type d'adresse est fournie par API Entreprise ?
+      answer: >-
+        Depuis 2018, l'INSEE ne fournit plus d'adresse au format RNVP, API
+        Entreprise opère donc une reconstruction de l'addresse à partir des
+        champs disponibles dans leur nouvelle API. **Cette reconstruction n'est
+        en aucun cas un traitement RNVP**. Des différences minimes résultant de
+        l'arrêt du RNVP peuvent être constatées.
+
+         Le détail de chaque champ est indiqué en commentaire dans la réponse JSON ci-dessous ⬇️.
 questions:
   qr1:
     question: Comment utiliser les données (privées) des entreprises non diffusibles ?
