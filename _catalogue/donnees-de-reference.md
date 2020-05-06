@@ -344,9 +344,6 @@ request:
         ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusible, l'API vous renverra un code HTTP 403, même si votre token comporte les droits d'accès.
       question: ⚠️ Comment utiliser les données privées <br>des entreprises non
         diffusibles ?
-history: |-
-  15/01/2020 Ajout d’un champ `non_diffusable`
-
-  03/01/2020 Ajout d’un champ `with_etat_administratif`
+history: 01/12/2019 Ajout de l'option d'appel `non_diffusable`
 category: Informations générales
 ---
