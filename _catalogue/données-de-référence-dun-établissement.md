@@ -1,34 +1,21 @@
 ---
-type: Informations générales
-title: Données de référence d'un établissement
-label: etablissements_insee
-scope:
-  - entreprises
-  - associations
-description: Obtenir des informations concernant un établissement d’une personne
-  physique ou morale du répertoire Sirene telles que les dates de création et de
-  fin, l’adresse ou l’état administratif.
-usecases:
-  - Aides publiques
-  - Marchés publics
-  - Répertoire de tiers
-  - Application de la loi énergie
 access: Restreint mais disponible sous d'autres conditions, chez
   [api.insee](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
   et [entreprise.data.gouv](https://entreprise.data.gouv.fr/)
-opening: Données publiques sauf non diffusibles
 providers:
   - insee
-perimeter:
-  perimeter1:
-    label: Lorem ipsum
-    description: Lorem ipsum
-  perimeter2:
-    label: Lorem ipsum
-    description: Lorem ipsum
-  perimeter3:
-    label: Lorem ipsum
-    description: Lorem ipsum
+response:
+  format: Données structurées JSON
+  timeout: 5 secondes
+  description: >-
+    ###### La réponse JSON se décompose en trois catégorie d'informations : 
+
+
+    * **des données générales** sur l’établissement telles que la date de création, le nombre de salariés et la tranche effectif, l'activité principale et le statut de l'établissement par rapport à l'entreprise : s'agit-il du siège social ?
+
+    * **des données géographiques**, la commune, la région et le pays d'implatation ; ainsi que l'adresse précise reconstruite par API Entreprise.  
+
+    * **une donnée juridique** : l'état administratif de l'établissement et la date de fermeture le cas échéant.
 questions:
   qr1:
     answer: >-
@@ -52,6 +39,31 @@ questions:
 
       De fait, **les fonctionnalités de pré-remplissage de formulaires ne peuvent donc bénéficier de ces données au risque de les voir diffusées**. Il est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr.>
     question: Comment utiliser les données privées des établissements non diffusibles ?
+type: Informations générales
+title: Données de référence d'un établissement
+label: etablissements_insee
+scope:
+  - entreprises
+  - associations
+description: Obtenir des informations concernant un établissement d’une personne
+  physique ou morale du répertoire Sirene telles que les dates de création et de
+  fin, l’adresse ou l’état administratif.
+usecases:
+  - Aides publiques
+  - Marchés publics
+  - Répertoire de tiers
+  - Application de la loi énergie
+opening: Données publiques sauf non diffusibles
+perimeter:
+  perimeter1:
+    label: Lorem ipsum
+    description: Lorem ipsum
+  perimeter2:
+    label: Lorem ipsum
+    description: Lorem ipsum
+  perimeter3:
+    label: Lorem ipsum
+    description: Lorem ipsum
 request:
   id:
     param: SiretDeL’Entreprise
@@ -74,24 +86,6 @@ request:
       param: non_diffusable=true
       description: ""
       comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
-response:
-  format: Données structurées JSON
-  timeout: 5 secondes
-  description: |-
-    Des informations générales sur l’établissement : 
-
-    * S’agit-il du siège social ?
-    * Quels sont les codes et libellés naf ?
-    * Quelle est la date de mise à jour ? 
-    * Combien y-a-t-il de salariés ? 
-    * La date de création de l’établissement 
-
-    Des informations géographiques : 
-
-    * commune, région et pays d’implantation 
-    * Adresse 
-
-    Enfin, l’état administratif de l’établissement.
 history: Lorem ipsum
 category: Informations générales
 ---
