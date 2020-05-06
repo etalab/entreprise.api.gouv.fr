@@ -267,12 +267,15 @@ request:
       description: RaisonDeL'AppelOuIdentifiant
   options:
     option1:
-      description: pour connaître l’état administratif de l’entité demandée ;
+      description: Une option d'appel vous permet de connaître l'étant administratif
+        de l'entreprise, à savoir si l'entreprise est active ou cessée.
       param: with_etat_administratif
       comment: "Si vous souhaitez également connaitre l'état administratif de
         l’entreprise, ajoutez le paramètre facultatif suivant :"
     option2:
-      description: pour accéder aux entreprises non diffusibles.
+      description: Une autre vous donne aux données des entreprises dîtes
+        non-diffusibles, cette option nécessite une autorisation spécifique,
+        accordée ou non par API Entreprise selon votre cas d'usage
       param: non_diffusable
       comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
   questions:
