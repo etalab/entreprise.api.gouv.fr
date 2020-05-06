@@ -34,16 +34,16 @@ response:
           "siren": "418166096",
           "nic": "00051", // Numéro interne de classement, l'identifiant à 5 chiffres de l'établissement, qui se trouve à la fin du numéro de SIRET.
           "siret": "41816609600051",
-          "statut_diffusion": true, // Ce champ indique si les données de l'établissement sont diffusables ("true") ou non ("false").
+          "statut_diffusion": true, // indique si les données de l'établissement sont diffusables ("true") ou non ("false").
           "date_creation": 1108594800, // Format timestamp UNIX.
           "tranche_effectif_code": "11", // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE(http://www.sirene.fr/sirene/public/variable/tefen)
-          "activite_principale_rnm_code": "123456",
-          "date_dernier_traitement": 1538217704,
-          "siege_social": true,
-          "enseigne_1": null,
+          "activite_principale_rnm_code": "123456", // cette série de 6 chiffres désigne le code de l'activité exercée par l'artisan inscrit au registe des métiers, et renvoie à la Nomenclature d'Activités Françaises de l'Artisanat (NAFA) (https://www.entreprises.gouv.fr/secteurs-professionnels/artisanat/la-nafa).
+          "date_dernier_traitement": 1538217704, // informe du dernier traitement de l'unité légale dans le répertoire Sirene. Cette date peut concerner des mises à jour de données du répertoire Sirene, qui ne sont pas diffusées par l'API. Cette date est délivrée au format timestamp UNIX. Cette variable peut-être à "null", notamment pour les unités cessées qui ont été purgées.
+          "siege_social": true, // Ce champ vous permet de savoir si l'établissement appelé est le siège social d'une entreprise ("true") ou non ("false").
+          "enseigne_1": null, 
           "enseigne_2": null,
-          "enseigne_3": null,
-          "denomination_usuelle": null,
+          "enseigne_3": null, // Ces trois derniers champs indique le nom de l'enseigne, c'est à dire l'appelation qui permet de facilement identifier l'établissement. Un établissement peut avoir plusieurs enseignes. Le nom de l'enseigne est parfois découpé sur les trois champs.
+          "denomination_usuelle": null, //C'est le nom sous lequel l'établissement est connu du grand public. Cet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008.
           "activite_principale_code": "62.02A",
           "activite_principale_nomenclature": "NAFRev2",
           "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques",
