@@ -158,6 +158,6 @@ request:
         ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusible, l'API vous renverra un code HTTP 403, même si votre token comporte les droits d'accès.
       question: ⚠️ Comment utiliser les données privées des établissements non
         diffusibles ?
-history: Lorem ipsum
+history: ""
 category: Informations générales
 ---
