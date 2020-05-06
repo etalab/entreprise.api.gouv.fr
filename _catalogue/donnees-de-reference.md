@@ -142,8 +142,8 @@ response:
     lang: jsonc
   questions:
     qr1:
-      question: "Numéro de TVA intracommunautaire : <br> qu'est-ce que c'est ? Comment
-        est-il calculé par API Entreprise ?"
+      question: Qu'est qu'un numéro de TVA intracommunautaire ? <br> Comment est-il
+        calculé ?
       answer: >-
         ###### Qu'est-ce que c'est ? 
 
@@ -310,7 +310,14 @@ request:
 
 
         ℹ️ *Pour les personnes physiques, dans le cas où l’exploitant déclare la cessation de son activité, puis la reprend quelque temps plus tard, cet état est réversible. Il est donc normal d'avoir des périodes successives d'état actif puis cessé pour les personnes physiques. Pour les personnes morales, l'état administratif est en théorie irréversible.*
-      question: Qu'est ce que l'état administratif d'une entreprise <br> ?
+
+
+        ###### Comment connaître l'état administratif de l'entité demandée ?
+
+
+        Il vous faudra ajouter l'option d'appel `with_etat_administratif`, deux champs seront alors disponible dans la réponse JSON, vous indiquant l'état de l'entité et la date de cessation si tel est le cas.
+      question: Qu'est-ce que l'état administratif d'une entreprise ? <br> Comment y
+        accéder avec API Entreprise ?
     qr2:
       answer: >-
         ###### Qu'est-ce qu'un non diffusible ? 
