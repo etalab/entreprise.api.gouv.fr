@@ -276,7 +276,7 @@ request:
     option2:
       description: Une autre vous donne accès aux données des entreprises dîtes
         non-diffusibles, cette option nécessite une autorisation spécifique,
-        accordée ou non par API Entreprise selon votre cas d'usage.
+        accordée ou non par API&nbsp;Entreprise selon votre cas d'usage.
       param: non_diffusable
       comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
   questions:
