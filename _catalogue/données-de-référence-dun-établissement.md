@@ -16,6 +16,17 @@ response:
     * **des données géographiques**, la commune, la région et le pays d'implatation ; ainsi que l'adresse précise reconstruite par API Entreprise.  
 
     * **une donnée juridique** : l'état administratif de l'établissement et la date de fermeture le cas échéant.
+  questions:
+    qr1:
+      question: Qu'est-ce que l'état administratif d'un établissement ?
+      answer: >-
+        L'état administratif d'un établissement a deux modalités : actif (A) ou
+        fermé (F). Lors de son inscription au répertoire, un établissement
+        est, sauf exception, à l’état "ouvert" (A). Le passage à l’état
+        "fermé" découle de la prise en compte d’une déclaration de fermeture.
+
+
+        ℹ️ Un établissement fermé peut être rouvert.
 questions:
   qr1:
     answer: >-
