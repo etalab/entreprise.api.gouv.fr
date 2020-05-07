@@ -16,7 +16,14 @@ collections:
     editor:
       preview: true
     fields:
-      - { name: Title }
+      - label: 'Titre'
+        name: 'title'
+        required: true
+        widget: 'string'
+      - label: 'Contenu'
+        name: 'body'
+        required: true
+        widget: 'markdown'
   - name: 'catalogue'
     label: 'Catalogue de données'
     label_singular: 'Endpoint'
