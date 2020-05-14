@@ -115,10 +115,12 @@ additional_js: catalogue.js
                 <div class="request">
                   <h4><img src="{{ site.baseurl }}/assets/images/icons/call.png" alt="" /> Votre appel</h4>
                   <dl class="tpl-description-list">
-                    <dt>Paramètre d’appel</dt>
+                    <dt>Paramètre d’appel :</dt>
                     <dd>{{ endpoint.request.id.description }}</dd>
+                  </dl>
+                  <dl class="tpl-description-list">
                     {% if endpoint.request.options %}
-                    <dt>Options d’appel à ajouter (voir requête HTTP ⬇): </dt>
+                    <dt>Options d’appel à ajouter (voir requête HTTP ⬇) :</dt>
                     <dd>
                       <ul>
                         {% for option in endpoint.request.options %}
@@ -140,9 +142,11 @@ additional_js: catalogue.js
                 <div class="response">
                   <h4><img src="{{ site.baseurl }}/assets/images/icons/response.png" alt="" /> La réponse de l’API</h4>
                   <dl class="tpl-description-list">
-                    <dt>Format</dt>
+                    <dt>Format :</dt>
                     <dd>{{ endpoint.response.format }}</dd>
-                    <dt>Timeout</dt>
+                  </dl>
+                  <dl class="tpl-description-list">
+                    <dt>Timeout :</dt>
                     <dd>{{ endpoint.response.timeout }}</dd>
                   </dl>
                   <p>{{ endpoint.response.description | markdownify }}</p>

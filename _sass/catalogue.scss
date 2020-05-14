@@ -153,6 +153,15 @@
     width: 48%;
   }
 
+  .technical-documentation dl {
+    display: block;
+  }
+
+  .technical-documentation dt,
+  .technical-documentation dd {
+    display: inline;
+  }
+
   .technical-documentation .perimeter {
     padding: var(--spacing-s) 0;
   }
@@ -269,7 +278,7 @@
     background-color: var(--danger);
   }
 
-  .catalogue .tpl-documentation__links {
+  .tpl-documentation__links {
     background: 0;
     box-shadow: none;
     color: var(--primary);
@@ -277,17 +286,17 @@
     top: 2em;
   }
 
-  .catalogue .tpl-documentation__links h3 {
+  .tpl-documentation__links h3 {
     padding: var(--spacing-s);
     padding-bottom: 0;
     font-size: 1em;
   }
 
-  .catalogue .tpl-documentation__links h4 {
+  .tpl-documentation__links h4 {
     font-size: 0.75em;
   }
 
-  .catalogue .tpl-documentation__link {
+  .tpl-documentation__link {
     display: flex;
   }
 
