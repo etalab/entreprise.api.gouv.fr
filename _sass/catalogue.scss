@@ -145,13 +145,23 @@
     display: inline;
   }
 
-  .technical-documentation .columns>div,
-  .examples .json-example {
+  .technical-documentation .columns {
+    display: flex;
+  }
+
+  .technical-documentation .columns>div {
+    display: flex;
+    flex-basis: 48%;
+    flex-direction: column;
     flex-shrink: 1;
-    flex-grow: 0;
+    flex-grow: 1;
+    justify-content: space-between;
     margin: var(--spacing-s) 0;
     padding: 0;
-    width: 48%;
+  }
+
+  .technical-documentation .columns .response {
+    margin-left: var(--spacing-l);
   }
 
   .technical-documentation dl {
@@ -225,7 +235,7 @@
     border-radius: 0;
     height: 100%;
     line-height: 1.5em;
-    max-height: 25em;
+    height: 25em;
   }
 
   .technical-documentation .highlight { 
@@ -304,5 +314,21 @@
     width: 4em;
     height: 4em;
     margin-right: var(--spacing-xs);
-  }  
+  }
+
+  @media (max-width: 1085px) {
+    .technical-documentation .columns {
+      flex-direction: column;
+    }
+
+    .technical-documentation .columns .response {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .tpl-documentation__sidebar {
+      display: none;
+    }
+  }
 }
