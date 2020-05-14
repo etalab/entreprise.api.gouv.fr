@@ -301,7 +301,7 @@ collections:
             required: false
             widget: 'select'
             multiple: false
-            options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG']          
+            options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']          
           - label: 'Timeout'
             name: 'timeout'
             widget: 'select'
