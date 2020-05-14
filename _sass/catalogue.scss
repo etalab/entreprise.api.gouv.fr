@@ -181,20 +181,24 @@
     margin-top: var(--spacing-s);
   }
 
+  .qa summary {
+    padding-right: var(--spacing-s);
+  }
+
   .qa summary::marker {
     content: '';
     display: none;
   }
 
   .qa summary::after {
-    content: '▾';
+    content: '▸';
     position: absolute;
     right: var(--spacing-s);
     top: var(--spacing-xs);
   }
 
   .qa[open] summary:after {
-    content: '▴';
+    content: '▾';
   }
 
   .json-example {
