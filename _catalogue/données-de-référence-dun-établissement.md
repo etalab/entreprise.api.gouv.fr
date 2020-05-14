@@ -53,37 +53,22 @@ response:
             "date_fermeture": null
           },
           "adresse_1": {
+          // Une entité peut dans certains cas avoir plusieurs adresses, par exemple quand le batiment a deux entrées.
             "complement": "LA PIOLINE",
             "numero_voie": "10",
             "indice_repetition": null,
             "type_voie": "ALL",
             "libelle_voie": "DES PLATANES LES MILLES",
             "code_postal": "13290",
-            "commune_code": "13001",
+            "commune_code": "13001", // cette suite de 5 chiffres correspond au code des communes tel que défini dans le code officiel géographique (COG) géré par l'INSEE et disponible à cette adresse : https://www.insee.fr/fr/information/2028028
             "commune_libelle": "AIX-EN-PROVENCE",
             "commune_etranger_libelle": null,
             "distribution_speciale": null,
             "cedex_code": "13546",
             "cedex_libelle": "AIX EN PROVENCE CEDEX 4",
-            "pays_etranger_code": "",
+            "pays_etranger_code": "", // cette suite de chiffres correspond au code des pays étrangers, tels que définis dans la Codification des pays et territoires étrangers, disponible à cette adresse : https://www.insee.fr/fr/information/2028273
             "pays_etranger_libelle": ""
           },
-          "adresse_2": {
-            "complement": "Le ROC FLEURI",
-            "numero_voie": "1",
-            "indice_repetition": null,
-            "type_voie": "RUE",
-            "libelle_voie": "DE TENAO",
-            "code_postal": null,
-            "commune_code": null,
-            "commune_libelle": null,
-            "commune_etranger_libelle": "MONACO",
-            "distribution_speciale": "BP 345",
-            "cedex_code": null,
-            "cedex_libelle": null,
-            "pays_etranger_code": "99138",
-            "pays_etranger_libelle": "MONACO"
-          }
         }
       }
 questions:
