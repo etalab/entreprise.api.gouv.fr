@@ -49,10 +49,8 @@ response:
           "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques", // indique le libellé du code APET de l'établissement selon la nomenclature concernée.
           "caractere_employeur": "O", // indique si l'établissement a ou non des employés. La variable est "O" si l'établissement est employeur ; la variable est "N" si l'établissement ne l'est pas. La variable est historisée pour les établissements ouverts depuis 2005.
           "etat_administratif": {
-          // indique si l'établissement est actif, par "A". Ou si il est jurdiquement fermé, par "F".
-            "date_fermeture": null
-            "value": "A",
-            "date_fermeture": null
+            "value": "A", // indique si l'établissement est actif, par "A". Ou s'il est jurdiquement fermé, par "F".
+            "date_fermeture": null  
           },
           "adresse_1": {
           // Une entité peut dans certains cas avoir plusieurs adresses, par exemple quand le batiment a deux entrées.
@@ -96,6 +94,7 @@ questions:
 
       De fait, **les fonctionnalités de pré-remplissage de formulaires ne peuvent donc bénéficier de ces données au risque de les voir diffusées**. Il est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr.>
     question: Comment utiliser les données privées des établissements non diffusibles ?
+weight: 2
 type: Informations générales
 title: Données de référence d'un établissement
 label: etablissements_insee
