@@ -145,11 +145,12 @@
     display: inline;
   }
 
-  .technical-documentation .columns>div, 
+  .technical-documentation .columns>div,
   .examples .json-example {
     flex-shrink: 1;
     flex-grow: 0;
     margin: var(--spacing-s) 0;
+    padding: 0;
     width: 48%;
   }
 
@@ -223,45 +224,31 @@
     background-color: var(--dark-grey);
     border-radius: 0;
     height: 100%;
+    line-height: 1.5em;
     max-height: 25em;
   }
 
-  .highlight { 
+  .technical-documentation .highlight { 
     margin: 0;
   }
 
-  .highlight code {
+  .technical-documentation .highlight code {
     white-space: pre-wrap;
     width: 100%;
   }
 
-  .highlight .c1,
-  .highlight .err {
-    color: var(--white);
-    font-family: var(--font-family-default)
-  }
-
-  .highlight .nl {
+  .technical-documentation .highlight .nl {
     font-weight: 700
   }
 
-  .technical-documentation code div {
-    padding-left: var(--spacing-s);
-  }
-
-  .technical-documentation .comment {
+  .technical-documentation code em,
+  .technical-documentation code .c1,
+  .technical-documentation code .err {
+    color: var(--white);
     font-family: var(--font-family-default);
-    line-height: 1.25em;
-    padding-left: var(--spacing-s);
+    font-size: 1.1em;
     font-style: italic;
-    color: var(--white);
-  }
-
-  .technical-documentation code em {
-    color: var(--white);
-    font-family: var(--font-family-default);
-    line-height: 1.25em;
-    display: block;
+    line-height: 1em;
   }
 
   .history {
