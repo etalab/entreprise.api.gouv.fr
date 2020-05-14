@@ -197,6 +197,7 @@ questions:
   qr3:
     question: ""
     answer: ""
+weight: 1
 type: Informations générales
 title: Données de référence
 label: entreprises_insee

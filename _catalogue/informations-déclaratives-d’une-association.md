@@ -1,5 +1,6 @@
 ---
-category: Informations générales
+weight: 4
+type: Informations générales
 title: Informations déclaratives  d’une association
 label: associations
 scope:
@@ -13,6 +14,7 @@ usecases:
   - Marchés publics
   - Répertoire de tiers
 access: Restreint, disponible sous d'autres conditions
+opening: Données publiques
 providers:
   - mi
 perimeter:
@@ -28,7 +30,7 @@ perimeter:
 request:
   id:
     param: SiretDeL’Entreprise
-    description: 'Le numéro de Siret de l’association ou le numéro RNA'
+    description: Le numéro de Siret de l’association ou le numéro RNA
   parameters:
     param1:
       label: token
@@ -66,4 +68,5 @@ response:
     * l’adresse du siège
     * des informations sur les dirigeants ...
 history: Lorem Ipsum
+category: Informations générales
 ---

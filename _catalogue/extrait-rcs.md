@@ -1,5 +1,6 @@
 ---
-category: Informations générales
+weight: 3
+type: Informations générales
 title: Extrait RCS
 label: extrait_rcs_infogreffe
 scope:
@@ -12,6 +13,7 @@ usecases:
   - Marchés publics
   - Répertoire de tiers
 access: Restreint
+opening: Données confidentielles
 providers:
   - infogreffe
 perimeter:
@@ -27,7 +29,7 @@ perimeter:
 request:
   id:
     param: SirenDeL’Entreprise
-    description: 'Le numéro de siren de l’entreprise'
+    description: Le numéro de siren de l’entreprise
   parameters:
     param1:
       label: token
@@ -62,4 +64,5 @@ response:
     * Observation sur l'extrait de données
     * Date de l'extrait de données
 history: Lorem Ipsum
+category: Informations générales
 ---
