@@ -44,11 +44,13 @@ response:
           "enseigne_2": null,
           "enseigne_3": null, // Ces trois derniers champs indique le nom de l'enseigne, c'est à dire l'appelation qui permet de facilement identifier l'établissement. Un établissement peut avoir plusieurs enseignes. Le nom de l'enseigne est parfois découpé sur les trois champs.
           "denomination_usuelle": null, //C'est le nom sous lequel l'établissement est connu du grand public. Cet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008.
-          "activite_principale_code": "62.02A",
-          "activite_principale_nomenclature": "NAFRev2",
-          "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques",
-          "caractere_employeur": "O",
+          "activite_principale_code": "62.02A", //  Il s'agit du code APE de l'établissement (code APET), toujours composé de 4 chiffres et une lettre et codifié selon la Nomenclature d'Activité Française (https://www.insee.fr/fr/information/2120875). Les établissements d'une même entreprise peuvent avoir des activités différentes et de fait des APET différents. Le code APET peut également être identique à l'APE de l'entreprise (APEN) lorsque celle-ci n'a qu'un établissement.
+          "activite_principale_nomenclature": "NAFRev2", // Ce champ indique la nomenclature en vigueur pour l'etablissement appelé. Depuis 2015, la version est la "NAF rév.2."
+          "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques", // indique le libellé du code APET de l'établissement selon la nomenclature concernée.
+          "caractere_employeur": "O", // indique si l'établissement a ou non des employés. La variable est "O" si l'établissement est employeur ; la variable est "N" si l'établissement ne l'est pas. La variable est historisée pour les établissements ouverts depuis 2005.
           "etat_administratif": {
+          // indique si l'établissement est actif, par "A". Ou si il est jurdiquement fermé, par "F".
+            "date_fermeture": null
             "value": "A",
             "date_fermeture": null
           },
