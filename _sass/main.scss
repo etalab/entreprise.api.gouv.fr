@@ -26,6 +26,17 @@ a.tpl-main-header__link:hover {
   content: none;
 }
 
+@media (max-width: 800px) {
+  .tpl-main-header .tpl-container {
+    flex-direction: column;
+    padding-top: 1em;
+  }
+
+  .tpl-site-nav {
+    justify-content: start;
+  }
+}
+
 .text-center {
   text-align: center;
 }
