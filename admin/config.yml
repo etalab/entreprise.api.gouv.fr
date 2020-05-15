@@ -67,18 +67,19 @@ collections:
         multiple: true
         options:
           - { label: 'Infogreffe', value: 'infogreffe' }
-          - { label: 'INSEE', value: 'insee' }
+          - { label: 'Insee', value: 'insee' }
           - { label: 'DGFIP', value: 'dgfip' }
-          - { label: 'ACOSS', value: 'acoss' }
+          - { label: 'Acoss', value: 'acoss' }
           - { label: 'INPI', value: 'inpi' }
           - { label: 'Qualibat', value: 'qualibat' }
           - { label: 'Ministère de l’Intérieur', value: 'mi' }
           - { label: 'CNETP', value: 'cnetp' }
-          - { label: 'ProBTP', value: 'probtp' }
+          - { label: 'PRO BTP', value: 'probtp' }
           - { label: 'MSA', value: 'msa' }
           - { label: 'OPQIBI', value: 'opqibi' }
           - { label: 'FNTP', value: 'fntp' }
-          - { label: 'agefiph', value: 'agefiph' }
+          - { label: 'Agefiph', value: 'agefiph' }
+          - { label: 'Banque de France', value: 'bdf' }
       - { label: 'Message nouvelle actualité', name: 'new', required: false , widget: 'markdown' }
       - label: "Périmètre de l'endpoint"
         name: 'perimeter'
