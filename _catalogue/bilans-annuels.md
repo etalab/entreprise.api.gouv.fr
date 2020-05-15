@@ -38,17 +38,17 @@ response:
     ###### Contenu de la réponse JSON
 
 
-    * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des bilans de l'entité appelée. 
+    * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des bilans de l'entité appelée ;
 
-    * **La liste des bilans, accompagnés de leurs informations génériques**  (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et cloture, la nature de l'archive, son degré de confidentialité, et le numéro de gestion.)
-
-
-    ###### Contenu de l'archive ZIP 🗂 : 
+    * **La liste des bilans, accompagnés de leurs informations génériques** (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et clôture, la nature de l'archive, son degré de confidentialité, et le numéro de gestion.)
 
 
-    * Tous les comptes annuels au format PDF
+    ###### Contenu de l'archive ZIP 🗂 :
 
-    * Toutes les métadonnées de chaque bilan, au format XML, portant le même nom que le PDF associé
+
+    * Tous les comptes annuels au format PDF ;
+
+    * Toutes les métadonnées de chaque bilan, au format XML, portant le même nom que le PDF associé ;
 
     * Un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` du bilan indiqué dans la liste JSON des bilans.
   sample:
