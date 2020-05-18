@@ -32,25 +32,39 @@ response:
       {
         "etablissement": {
           "siren": "418166096",
-          "nic": "00051", // Numéro interne de classement, l'identifiant à 5 chiffres de l'établissement, qui se trouve à la fin du numéro de SIRET.
+          "nic": "00051", 
+          // Numéro interne de classement, l'identifiant à 5 chiffres de l'établissement, qui se trouve à la fin du numéro de SIRET.
           "siret": "41816609600051",
-          "statut_diffusion": true, // indique si les données de l'établissement sont diffusables ("true") ou non ("false").
-          "date_creation": 1108594800, // Format timestamp UNIX.
-          "tranche_effectif_code": "11", // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE(http://www.sirene.fr/sirene/public/variable/tefen)
-          "activite_principale_rnm_code": "123456", // cette série de 6 chiffres désigne le code de l'activité exercée par l'artisan inscrit au registe des métiers, et renvoie à la Nomenclature d'Activités Françaises de l'Artisanat (NAFA) (https://www.entreprises.gouv.fr/secteurs-professionnels/artisanat/la-nafa).
-          "date_dernier_traitement": 1538217704, // informe du dernier traitement de l'unité légale dans le répertoire Sirene. Cette date peut concerner des mises à jour de données du répertoire Sirene, qui ne sont pas diffusées par l'API. Cette date est délivrée au format timestamp UNIX. Cette variable peut-être à "null", notamment pour les unités cessées qui ont été purgées.
-          "siege_social": true, // Ce champ vous permet de savoir si l'établissement appelé est le siège social d'une entreprise ("true") ou non ("false").
+          "statut_diffusion": true, 
+          // Indique si les données de l'établissement sont diffusables ("true") ou non ("false").
+          "date_creation": 1108594800, 
+          // Format timestamp UNIX.
+          "tranche_effectif_code": "11", 
+          // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE(http://www.sirene.fr/sirene/public/variable/tefen)
+          "activite_principale_rnm_code": "123456", 
+          // Cette série de 6 chiffres désigne le code de l'activité exercée par l'artisan inscrit au registe des métiers, et renvoie à la Nomenclature d'Activités Françaises de l'Artisanat (NAFA) (https://www.entreprises.gouv.fr/secteurs-professionnels/artisanat/la-nafa).
+          "date_dernier_traitement": 1538217704, 
+          // Informe du dernier traitement de l'unité légale dans le répertoire Sirene. Cette date peut concerner des mises à jour de données du répertoire Sirene, qui ne sont pas diffusées par l'API. Cette date est délivrée au format timestamp UNIX. Cette variable peut-être à "null", notamment pour les unités cessées qui ont été purgées.
+          "siege_social": true, 
+          // Ce champ vous permet de savoir si l'établissement appelé est le siège social d'une entreprise ("true") ou non ("false").
           "enseigne_1": null, 
           "enseigne_2": null,
-          "enseigne_3": null, // Ces trois derniers champs indique le nom de l'enseigne, c'est à dire l'appelation qui permet de facilement identifier l'établissement. Un établissement peut avoir plusieurs enseignes. Le nom de l'enseigne est parfois découpé sur les trois champs.
-          "denomination_usuelle": null, //C'est le nom sous lequel l'établissement est connu du grand public. Cet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008.
-          "activite_principale_code": "62.02A", //  Il s'agit du code APE de l'établissement (code APET), toujours composé de 4 chiffres et une lettre et codifié selon la Nomenclature d'Activité Française (https://www.insee.fr/fr/information/2120875). Les établissements d'une même entreprise peuvent avoir des activités différentes et de fait des APET différents. Le code APET peut également être identique à l'APE de l'entreprise (APEN) lorsque celle-ci n'a qu'un établissement.
-          "activite_principale_nomenclature": "NAFRev2", // Ce champ indique la nomenclature en vigueur pour l'etablissement appelé. Depuis 2015, la version est la "NAF rév.2."
+          "enseigne_3": null, 
+          // Ces trois derniers champs indique le nom de l'enseigne, c'est à dire l'appelation qui permet de facilement identifier l'établissement. Un établissement peut avoir plusieurs enseignes. Le nom de l'enseigne est parfois découpé sur les trois champs.
+          "denomination_usuelle": null, 
+          // C'est le nom sous lequel l'établissement est connu du grand public. Cet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008.
+          "activite_principale_code": "62.02A", 
+          // Il s'agit du code APE de l'établissement (code APET), toujours composé de 4 chiffres et une lettre et codifié selon la Nomenclature d'Activité Française (https://www.insee.fr/fr/information/2120875). Les établissements d'une même entreprise peuvent avoir des activités différentes et de fait des APET différents. Le code APET peut également être identique à l'APE de l'entreprise (APEN) lorsque celle-ci n'a qu'un établissement.
+          "activite_principale_nomenclature": "NAFRev2", 
+          // Ce champ indique la nomenclature en vigueur pour l'etablissement appelé. Depuis 2015, la version est la "NAF rév.2."
           "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques", // indique le libellé du code APET de l'établissement selon la nomenclature concernée.
-          "caractere_employeur": "O", // indique si l'établissement a ou non des employés. La variable est "O" si l'établissement est employeur ; la variable est "N" si l'établissement ne l'est pas. La variable est historisée pour les établissements ouverts depuis 2005.
+          "caractere_employeur": "O", 
+          // Indique si l'établissement a ou non des employés. La variable est "O" si l'établissement est employeur ; la variable est "N" si l'établissement ne l'est pas. La variable est historisée pour les établissements ouverts depuis 2005.
           "etat_administratif": {
-            "value": "A", // indique si l'établissement est actif, par "A". Ou s'il est jurdiquement fermé, par "F".
+            "value": "A", 
+            // Indique si l'établissement est actif, par "A". Ou s'il est jurdiquement fermé, par "F".
             "date_fermeture": null  
+            // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F" (fermé).
           },
           "adresse_1": {
           // Une entité peut dans certains cas avoir plusieurs adresses, par exemple quand le batiment a deux entrées.
@@ -60,13 +74,15 @@ response:
             "type_voie": "ALL",
             "libelle_voie": "DES PLATANES LES MILLES",
             "code_postal": "13290",
-            "commune_code": "13001", // cette suite de 5 chiffres correspond au code des communes tel que défini dans le code officiel géographique (COG) géré par l'INSEE et disponible à cette adresse : https://www.insee.fr/fr/information/2028028
+            "commune_code": "13001", 
+            // Cette suite de 5 chiffres correspond au code des communes tel que défini dans le code officiel géographique (COG) géré par l'INSEE et disponible à cette adresse : https://www.insee.fr/fr/information/2028028
             "commune_libelle": "AIX-EN-PROVENCE",
             "commune_etranger_libelle": null,
             "distribution_speciale": null,
             "cedex_code": "13546",
             "cedex_libelle": "AIX EN PROVENCE CEDEX 4",
-            "pays_etranger_code": "", // cette suite de chiffres correspond au code des pays étrangers, tels que définis dans la Codification des pays et territoires étrangers, disponible à cette adresse : https://www.insee.fr/fr/information/2028273
+            "pays_etranger_code": "", 
+            // Cette suite de chiffres correspond au code des pays étrangers, tels que définis dans la Codification des pays et territoires étrangers, disponible à cette adresse : https://www.insee.fr/fr/information/2028273
             "pays_etranger_libelle": ""
           },
         }

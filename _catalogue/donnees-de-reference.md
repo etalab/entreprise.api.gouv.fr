@@ -23,7 +23,7 @@ response:
     code: >-
       {
 
-      // I- ENTREPRISE 
+      // I- ENTREPRISE
 
       // 1-Données générales
 
