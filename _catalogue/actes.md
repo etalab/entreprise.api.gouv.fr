@@ -48,12 +48,14 @@ response:
         "url_documents": "https://storage.entreprise.api.gouv.fr/siade_dev/1565606929-1a01ac932854e5632c7534ff4c18e18ec2845ec0-all_documents.zip",
         "actes": [
           {
-            "id_fichier": 24924080, // cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
+            "id_fichier": 24924080, 
+            // cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
             "siren": "788242667",
             "denomination_sociale": null,
             "code_greffe": 7402,
             "date_depot": "20170925",
-            "nature_archive": "A" // indique la nature de l'archive, "A" pour un acte, "R" pour une ordonnance et "P" pour une personne physique.
+            "nature_archive": "A" 
+            // indique la nature de l'archive, "A" pour un acte, "R" pour une ordonnance et "P" pour une personne physique.
           },
           {
             "id_fichier": 213962416,
