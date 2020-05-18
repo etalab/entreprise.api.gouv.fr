@@ -30,23 +30,33 @@ response:
       "entreprise": {
         "siren": "000000000",
         "capital_social": 00000,
-        "numero_tva_intracommunautaire": "FR00000", // Également appelé numéro d’identification fiscale NIF. Ce numéro est calculé par API Entreprise selon la règle officielle, cette donnée est donc théorique. Dans le cas où l’établissement siège est à l’étranger, la valeur renvoit null. En effet dans ce cas le numéro de TVA est problablement calculé par le pays où se situe l'établissement siège et non par la France. La seule source fiable est alors l'entreprise elle-même.
+        "numero_tva_intracommunautaire": "FR00000", 
+        // Également appelé numéro d’identification fiscale NIF. Ce numéro est calculé par API Entreprise selon la règle officielle, cette donnée est donc théorique. Dans le cas où l’établissement siège est à l’étranger, la valeur renvoit null. En effet dans ce cas le numéro de TVA est problablement calculé par le pays où se situe l'établissement siège et non par la France. La seule source fiable est alors l'entreprise elle-même.
         "forme_juridique": "Forme juridique",
-        "forme_juridique_code": "0000", // Ces deux champs sont issus de la nomenclature des catégories juridiques de l’INSEE. Pour les personnes physique, cette variable est à 1000.
-        "nom_commercial": "Mon entreprise",//Cette variable est "null" pour les personnes physiques.
-        "procedure_collective": false, //toujours indiqué comme "false", et à ignorer. Ce champ sera bientôt supprimé. 
-        "enseigne": null, // ou quelque chose ?
+        "forme_juridique_code": "0000", 
+        // Ces deux champs sont issus de la nomenclature des catégories juridiques de l’INSEE. Pour les personnes physique, cette variable est à 1000.
+        "nom_commercial": "Mon entreprise",
+        // Cette variable est "null" pour les personnes physiques.
+        "procedure_collective": false, 
+        // Toujours indiqué comme "false", et à ignorer. Ce champ sera bientôt supprimé. 
+        "enseigne": null,
         "naf_entreprise": "6202A",
-        "libelle_naf_entreprise": "Conseil en systèmes et logiciels informatiques", // issu de la nomenclature d’activités française de l’INSEE. 
+        "libelle_naf_entreprise": "Conseil en systèmes et logiciels informatiques", 
+        // Issu de la nomenclature d’activités française de l’INSEE. 
         "raison_sociale": "mon entreprise",
         "siret_siege_social": "00000000000000",
-        "code_effectif_entreprise": "31", //Le code effectif correspond à une fourchette de nombre de salariés, celle-ci est indiquée un peu plus loin au champ "tranche_effectif_salarie_entreprise". Ce code respecte [la nomenclature de l'INSEE](http://www.sirene.fr/sirene/public/variable/tefen)
-        "date_creation": 000000000, // date au format timestamp UNIX
+        "code_effectif_entreprise": "31", 
+        // Le code effectif correspond à une fourchette de nombre de salariés, celle-ci est indiquée un peu plus loin au champ "tranche_effectif_salarie_entreprise". Ce code respecte [la nomenclature de l'INSEE](http://www.sirene.fr/sirene/public/variable/tefen)
+        "date_creation": 000000000, 
+        // Date au format timestamp UNIX
         "nom": null, 
         "prenom": null, 
-        "date_radiation": null, // indique null si l’entreprise n’est pas radiée du registre. Dans le cas contraire, la date est fournie au format timestamp UNIX 000000000.
-        "categorie_entreprise": "PME", // ou "TPE" ou "ETI"
-        "tranche_effectif_salarie_entreprise": { // Ces derniers champs indiquent en détail l'effectif de salariés de l'entreprise.
+        "date_radiation": null, 
+        // Indique null si l’entreprise n’est pas radiée du registre. Dans le cas contraire, la date est fournie au format timestamp UNIX 000000000.
+        "categorie_entreprise": "PME", 
+        // Trois modalités possibles : "PME", petite ou moyenne entreprise, dont les micros entreprises ; "ETI" entreprise de taille intermédiaire ; ou "GE", grande entreprise. Cette variable est calculée par l'INSEE, selon la méthode explicitée à l'adresse https://www.insee.fr/fr/information/1730869
+        "tranche_effectif_salarie_entreprise": { 
+        // Les champs suivants indiquent en détail l'effectif de salariés de l'entreprise.
           "de": 200,
           "a": 249,
           "code": "31",
@@ -59,30 +69,44 @@ response:
           "nom": "Henri",
           "prenom": "Martin",
           "fonction": "Président du Directoire",
-          "dirigeant": true, // toujours "true"
+          "dirigeant": true, 
+          // Toujours "true"
           "date_naissance": "1965-01-27",
           "date_naissance_timestamp": -155523600,
-          "raison_sociale": "",//Champ toujours vide car il concerne les personnes morales.
-          "identifiant": "",// Champ vide car il concerne les personnes morales.
-          "type": "PP" // signifie qu'il s'agit d'une personne physique.
+          "raison_sociale": "",
+          // Ce champ est toujours vide car il concerne les personnes morales.
+          "identifiant": "",
+          // Ce champ est toujours vide car il concerne les personnes morales.
+          "type": "PP" 
+          // Signifie qu'il s'agit d'une personne physique.
         }, {
            // Dans le cas d'une personne morale, voici les données fournies : 
-          "nom": "", // Champ vide car il concerne les personnes physiques.
-          "prenom": "", // Champ vide car il concerne les personnes physiques.
+          "nom": "", 
+          // Ce champ est vide car il concerne les personnes physiques.
+          "prenom": "", 
+          // Ce champ est vide car il concerne les personnes physiques.
           "fonction": "COMMISSAIRE AUX COMPTES SUPPLEANT",
-          "dirigeant": true, // toujours "true".
-          "date_naissance": "", // Champ vide car il concerne les personnes physiques.
-          "date_naissance_timestamp": 0, // Champ vide car il concerne les personnes physiques.
+          "dirigeant": true, 
+          // Toujours "true".
+          "date_naissance": "", 
+          // Ce champ est vide car il concerne les personnes physiques.
+          "date_naissance_timestamp": 0, 
+          // Ce champ est vide car il concerne les personnes physiques.
           "raison_sociale": "BCRH & ASSOCIES - SOCIETE A RESPONSABILITE LIMITEE A ASSOCIE UNIQUE",
-          "identifiant": "490092574", // élément facultatif de 7 à 9 chiffres, qui peut être vide.
-          "type": "PM" // signifie qu'il s'agit d'une personne morale.
+          "identifiant": "490092574", 
+          // Cet élément de 7 à 9 chiffres est facultatif et peut être vide.
+          "type": "PM" 
+          // Signifie qu'il s'agit d'une personne morale.
         }],
         "etat_administratif": {
-          //L’état administratif est l’état juridique de l’entreprise (source INSEE). 
-          "value": "C", // indique si l'entreprise est juridiquement active, par "A". Ou si elle est jurdiquement cessée, par "C".
-          "date_cessation": 1315173600 // indique "null" quand l'entreprise est jurdiquement active. Quand "value = C", un timestamp (un entier) est renvoyé.
+          // L’état administratif est l’état juridique de l’entreprise (source INSEE). 
+          "value": "C", 
+          // Indique si l'entreprise est juridiquement active, par "A". Ou si elle est jurdiquement cessée, par "C".
+          "date_cessation": 1315173600 
+          // Indique "null" quand l'entreprise est jurdiquement active. Quand "value = C", un timestamp (un entier) est renvoyé.
         },
-        "diffusable_commercialement": true// Ce champ indique si l'entreprise fait partie des non-diffusibles. Il est uniquement présent avec l'option d'appel "non_diffusables=true". La valeur indiquée est "false" dans le cas où l'entreprise est non-diffusible, cela signifie que ces données ne doivent en aucun cas être accessibles au grand public.
+        "diffusable_commercialement": true
+        // Indique si l'entreprise fait partie des non-diffusibles. Il est uniquement présent avec l'option d'appel "non_diffusables=true". La valeur indiquée est "false" dans le cas où l'entreprise est non-diffusible, cela signifie que ces données ne doivent en aucun cas être accessibles au grand public.
       },
 
       "etablissement_siege": {
@@ -115,13 +139,20 @@ response:
         "diffusable_commercialement": true,
         "adresse": {
           // Depuis 2018, l'INSEE ne fournit plus d'adresse au format RNVP, nous opérons donc une reconstruction de l'addresse à partir des champs disponibles dans leur nouvelle API ; cette reconstruction n'est en aucun cas un traitement RNVP : Des différences minimes résultant de l'arrêt du RNVP peuvent être constatées.
-          "l1": "OCTO TECHNOLOGY", // Raison sociale, ou civilité + prénom + nom.
-          "l2": null, // Raisons sociales usuelles
-          "l3": null, // Complément d'adresse
-          "l4": "50 AVENUE DES CHAMPS ELYSEES", // Numéro de voie +  indice de répétition + type de voie + libellé voie.
-          "l5": null, // Distribution spéciale
-          "l6": "75008 PARIS", // Code cedex + code cedex ou code postal + libellé commune ou libellé commune à l'étranger.
-          "l7": "FRANCE", // Pays
+          "l1": "OCTO TECHNOLOGY", 
+          // Raison sociale, ou civilité + prénom + nom.
+          "l2": null, 
+          // Raisons sociales usuelles
+          "l3": null, 
+          // Complément d'adresse
+          "l4": "50 AVENUE DES CHAMPS ELYSEES", 
+          // Numéro de voie +  indice de répétition + type de voie + libellé voie.
+          "l5": null, 
+          // Distribution spéciale
+          "l6": "75008 PARIS", 
+          // Code cedex + code cedex ou code postal + libellé commune ou libellé commune à l'étranger.
+          "l7": "FRANCE", 
+          // Pays
           "numero_voie": "50",
           "type_voie": "AV",
           "nom_voie": "DES CHAMPS ELYSEES",
@@ -133,8 +164,10 @@ response:
         },
         "etat_administratif": {
          // Lors de son inscription au répertoire, un établissement est, sauf exception, à l’état ouvert. Le passage à l’état fermé découle de la prise en compte d’une déclaration de fermeture.
-          "value": "F", // Lorsqu'un établissement est ouvert, la valeur indiquée est "A" (actif). S'il est fermé, l'endpoint renverra "F"(fermé).
-          "date_fermeture": 1315173600 // null quand actif (A), un timestamp (un entier) quand fermé (F)
+          "value": "F", 
+          // Lorsqu'un établissement est ouvert, la valeur indiquée est "A" (actif). S'il est fermé, l'endpoint renverra "F"(fermé).
+          "date_fermeture": 1315173600 
+          // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F".
           }
         },
         "gateway_error": false
