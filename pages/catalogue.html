@@ -10,7 +10,7 @@ additional_js: catalogue.js
   <p>Visibilité de 24 sur 24 données API Entreprise</p>
   <div class="tpl-documentation">
     <div class="tpl-documentation__content">
-      {% assign categories = site.catalogue | group_by: 'category' | sort: 'weight' %}
+      {% assign categories = site.catalogue | group_by: 'type' | sort: 'weight' | reverse %}
       {% for category in categories %}
         <h3 id="{{ category.name }}">{{ category.name }}</h3>
         {% for endpoint in category.items %}
@@ -197,16 +197,20 @@ additional_js: catalogue.js
                   <dd class="availability-status {{ endpoint.status }}"></dd>
                 </dl>
                 <dl class="tpl-description-list">
-                  <dt>Volumétrie</dt>
-                  <dd></dd>
+                  <dt>Volumétrie :</dt>
+                  <dd>{{ endpoint.availability.volumetry }}</dd>
                 </dl>
               </div>
               <dl class="tpl-description-list">
-                <dt>Disponibilité normale</dt>
-                <dd></dd>
-                <dt>Indisponibilités types</dt>
-                <dd></dd>
-                <dt>Indisponibilités moyennes du dernier mois</dt>
+                <dt>Disponibilité normale :</dt>
+                <dd>{{ endpoint.availability.normal_availability }}</dd>
+              </dl>
+              <dl class="tpl-description-list">
+                <dt>Indisponibilités types :</dt>
+                <dd>{{ endpoint.availability.unavailability_types }}</dd>
+              </dl>
+              <dl class="tpl-description-list">
+                <dt>Indisponibilités moyennes du dernier mois :</dt>
                 <dd></dd>
               </dl>
               <hr />
@@ -231,7 +235,7 @@ additional_js: catalogue.js
           <a href="">Vous êtes perdu·e ? Commencez par lire la documentation générale.</a>
         </div>
         <h3>Catalogue des données</h3>
-        {% assign categories = site.catalogue | group_by: 'category' | sort: 'weight' %}
+        {% assign categories = site.catalogue | group_by: 'type' | sort: 'weight' | reverse %}
         {% for category in categories %}
           <details>
             <summary>{{ category.name }}</summary>
