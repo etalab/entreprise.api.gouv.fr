@@ -63,9 +63,10 @@ response:
           "date_reference": "2014",
           "intitule": "200 à 249 salariés" 
         },
-        "mandataires_sociaux": [{
-          // Il y a deux types de mandataires sociaux, les personnes physiques et les personnes morales. 
-          // Dans le cas d'une personne physique, voici les données fournies : 
+        "mandataires_sociaux": [
+        // Il y a deux types de mandataires sociaux, les personnes physiques et les personnes morales. 
+        {
+        // Dans le cas d'une personne physique, voici les données fournies : 
           "nom": "Henri",
           "prenom": "Martin",
           "fonction": "Président du Directoire",
@@ -79,8 +80,9 @@ response:
           // Ce champ est toujours vide car il concerne les personnes morales.
           "type": "PP" 
           // Signifie qu'il s'agit d'une personne physique.
-        }, {
-           // Dans le cas d'une personne morale, voici les données fournies : 
+        }, 
+        {
+        // Dans le cas d'une personne morale, voici les données fournies : 
           "nom": "", 
           // Ce champ est vide car il concerne les personnes physiques.
           "prenom": "", 
@@ -170,7 +172,8 @@ response:
           // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F".
           }
         },
-        "gateway_error": false
+        "gateway_error": false 
+        // Indique si un des deux fournisseurs de données n'a pas fonctionné : INSEE ou Infogreffe.
       }
     lang: jsonc
   questions:
