@@ -2,6 +2,7 @@
 type: Informations générales
 title: "Actes "
 label: actes_inpi
+weight: 4
 scope:
   - entreprises
 description: Obtenir les actes d’une entreprise tels que connus par les greffes

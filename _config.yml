@@ -92,3 +92,5 @@ providers_aliases:
     agefiph: 'agefiph'
 
 empty_array: []
+
+data_types: ['Informations générales', 'Informations financières', 'Attestations sociales et fiscales', 'Certifications professionnelles', 'Propriété intellectuelle' ]
