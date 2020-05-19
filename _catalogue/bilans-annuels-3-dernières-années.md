@@ -1,4 +1,5 @@
 ---
+weight: 8
 type: Informations financières
 title: 3 derniers bilans annuels
 label: bilans_entreprises_bdf
@@ -88,7 +89,9 @@ response:
             // correspond au champ 'EE' de la liasse fiscale 2051.
 
 
+
             
+
 
 
             
