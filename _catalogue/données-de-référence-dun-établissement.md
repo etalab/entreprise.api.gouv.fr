@@ -166,7 +166,7 @@ perimeter:
 
     **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
   label: Établissements d’entreprises, d'entreprenseurs individuels,
-    d'institutions administratives et de certaines associations
+    d'institutions administratives et de certaines associations.
 request:
   id:
     param: SiretDeL’Entreprise

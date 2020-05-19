@@ -5,12 +5,12 @@ access: Restreint mais disponible sous d'autres conditions, chez
 providers:
   - insee
   - infogreffe
-new: TEST
+new: ""
 response:
   format: Donnée structurée JSON
   timeout: 5 secondes
   description: >-
-    ###### La réponse est composée de trois ensembles :
+    La réponse est composée de trois ensembles :
 
 
     * **entreprise**, qui contient les données générales, les mandataires sociaux et l’état administratif de la personne physique ou morale ;
@@ -252,7 +252,7 @@ usecases:
 opening: Données publiques sauf non diffusibles
 perimeter:
   label: Entreprises, entrepreneurs individuels, institutions administratives et
-    certaines associations
+    certaines associations.
   description: >-
     L'endpoint `entreprises_insee` vous donne accès : 
 
