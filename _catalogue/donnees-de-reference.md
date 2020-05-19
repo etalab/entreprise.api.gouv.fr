@@ -385,5 +385,9 @@ request:
       question: ⚠️ Comment utiliser les données privées <br>des entreprises non
         diffusibles ?
 history: 01/12/2019 Ajout de l'option d'appel `non_diffusable`
+availability:
+  normal_availability: test
+  unavailability_types: test
+  volumetry: test
 category: Informations générales
 ---

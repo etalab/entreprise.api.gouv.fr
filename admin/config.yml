@@ -364,3 +364,20 @@ collections:
         name: 'history'
         required: false
         widget: 'markdown'
+      - label: 'Disponibilité'
+        name: 'availability'
+        required: false
+        widget: 'object'
+        fields:
+          - label: 'Disponibilité normale'
+            name: 'normal_availability'
+            required: false
+            widget: string
+          - label: 'Indisponibiltés types'
+            name: 'unavailability_types'
+            required: false
+            widget: 'string'
+          - label: 'Volumétrie'
+            name: 'volumetry'
+            required: false
+            

@@ -141,6 +141,11 @@
     display: block;
   }
 
+  .tab-content dt,
+  .tab-content dd {
+    display: inline;
+  }
+
   .perimeter summary h4 {
     display: inline;
   }
@@ -166,11 +171,6 @@
 
   .technical-documentation dl {
     display: block;
-  }
-
-  .technical-documentation dt,
-  .technical-documentation dd {
-    display: inline;
   }
 
   .technical-documentation .perimeter {
