@@ -34,11 +34,13 @@ perimeter:
 
 
     En revanche, l'endpoint **délivre tous les commentaires laissés par les greffiers**. Ces observations concernent entre autres les changements de capital, les transferts de siège, les fusions, les redressements et liquidations judiciaires (si publiques).
-  label: Toutes les entreprises présentes dans le Registre du commerce et des sociétés
+  label: Toutes les entreprises présentes dans le Registre du commerce et des
+    sociétés.
 request:
   id:
     param: SirenDeL’Entreprise
     description: Le numéro de siren de l’entreprise
+    label: SirenDeL'Entreprise
   parameters:
     param1:
       label: token
