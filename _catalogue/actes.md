@@ -18,11 +18,7 @@ opening: Données confidentielles
 providers:
   - inpi
 perimeter:
-  description: Ces actes comportent des informations  générales telles que la
-    forme juridique de la société, son siège ; des informations sur le capital
-    social et sa répartition comme le nombre et la valeur de chaque part, les
-    modalités de cessions ; ou encore des informations sur les associés ou ce
-    qui est relatif à l'administration de la société.
+  description: ""
 request:
   id:
     label: SirenDeL’Entreprise
