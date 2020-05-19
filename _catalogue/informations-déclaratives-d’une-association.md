@@ -28,6 +28,7 @@ perimeter:
   perimeter3:
     label: Lorem ipsum
     description: Lorem ipsum
+  label: Toutes les associations.
 request:
   id:
     param: SiretDeL’Entreprise

@@ -16,6 +16,8 @@ access: Restreint
 opening: Données confidentielles
 providers:
   - mi
+perimeter:
+  label: Toutes les associations ayant des documents.
 request:
   id:
     label: SiretDel'Association ou NumeroRNA
