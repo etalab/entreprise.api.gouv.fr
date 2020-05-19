@@ -1,5 +1,5 @@
 ---
-weight: 8
+weight: 9
 type: Informations financières
 title: 3 derniers bilans annuels
 label: bilans_entreprises_bdf
@@ -90,7 +90,11 @@ response:
 
 
 
+
+
             
+
+
 
 
 
@@ -150,4 +154,15 @@ response:
             // {bilan 3} même composition.
         ]
       }
+availability:
+  volumetry: 2000 requêtes / 10 minutes par IP
+  normal_availability: 7 jours sur 7, de 5h à 22h.
+  unavailability_types: Opérations de maintenance toutes les nuits entre 22h et
+    5h.  Durant ce laps de temps, la base de données ou une partie de
+    l'applicatif peut être affecté. Il nous est dans ce cas renvoyé divers codes
+    d'erreurs que nous regroupons sous le code HTTP 503 (Service Indisponible)
+    auquel est adjoint un message spécifique expliquant le souci côté Banque De
+    France quand celui ci est connu avec précision.  Vous pouvez toutefois faire
+    des appels après 22h mais devrez prendre en compte ces opérations de
+    maintenance.
 ---

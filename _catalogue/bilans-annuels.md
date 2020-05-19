@@ -1,5 +1,5 @@
 ---
-weight: 5
+weight: 8
 type: Informations financières
 title: Bilans annuels
 label: bilans_inpi
