@@ -103,7 +103,7 @@ response:
         "etat_administratif": {
           // L’état administratif est l’état juridique de l’entreprise (source INSEE). 
           "value": "C", 
-          // Indique si l'entreprise est juridiquement active, par "A". Ou si elle est jurdiquement cessée, par "C".
+          // Indique si l'entreprise est juridiquement active, par "A". Ou si elle est jurdiquement cessée, par "C". Dans certains cas exceptionnels, l'état peut être "null". Par exemple, lorsqu'une entité vient de créer son Siren, mais qu'elle n'a pas encore débuté son activité.
           "date_cessation": 1315173600 
           // Indique "null" quand l'entreprise est jurdiquement active. Quand "value = C", un timestamp (un entier) est renvoyé.
         },
