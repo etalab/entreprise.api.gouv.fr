@@ -5,10 +5,10 @@ title: 3 derniers bilans annuels
 label: bilans_entreprises_bdf
 scope:
   - entreprises
-description: Obtenir les trois derniers bilans d’une entreprise détenus par la
-  Banque de France. Ces bilans permettent d'accéder certaines informations
-  contenues dans la liasse fiscale ; bilans, compte de résulat et annexes
-  confondus.
+description: "Obtenir les trois derniers bilans d’une entreprise détenus par la
+  Banque de France. Ces bilans permettent d'accéder à certaines informations
+  contenues dans la liasse fiscale : bilans, compte de résultat et annexes
+  confondus."
 usecases:
   - Aides publiques
   - Marchés publics
@@ -56,11 +56,11 @@ response:
     majeure partie tirées : 
 
 
-    * des bilans (passif de l'entreprise - liasse 2051), 
+    * des bilans (passif de l'entreprise - [liasse 2051](https://www.impots.gouv.fr/portail/files/formulaires/2051-sd/2018/2051-sd_2146.pdf)) ; 
 
-    * des comptes de résultat (liasses 2052 et 2053) 
+    * des comptes de résultat ([liasse 2052](https://www.impots.gouv.fr/portail/files/formulaires/2052-sd/2018/2052-sd_2117.pdf) et [liasse 2053](https://www.impots.gouv.fr/portail/files/formulaires/2053-sd/2018/2053-sd_2116.pdf)) ;
 
-    * et de l'annexe 2057 concernant l'état des échéances des créances et des dettes à la clôture de l'exercice.
+    * et de l'[annexe 2057](https://www.impots.gouv.fr/portail/files/formulaires/2057-sd/2018/2057-sd_2121.pdf) concernant l'état des échéances des créances et des dettes à la clôture de l'exercice.
 
 
     La Banque de France délivre également une évolution des montants de l'exercice concernés avec l'année N-1, quand les durées d'exercices sont identiques.
@@ -82,34 +82,22 @@ response:
 
             "capitaux_propres_et_assimiles": "5928663",
             // Correspond à la case 'DL' de la liasse fiscale 2051, soit le total des capitaux propres inscrits dans le passif.
-
             "capital_social_inclus_dans_capitaux_propres_et_assimiles": "3800000", 
             // Correspond au capital social ou individuel de la case 'DA' de la liasse fiscale 2051, ce montant est inclu dans la somme précédente 'capitaux_propres_et_assimilés'.
-
             "autres_fonds_propres": "0",
             // Correspond à la case 'DO' de la liasse fiscale 2051.
-
             "total_provisions_pour_risques_et_charges": "1957919",
             // Correspond à la case 'DR' de la liasse fiscale 2051.
-
-
             "dettes1_emprunts_obligataires_et_convertibles": "0",
             // Correspond à la case 'DS' de la liasse fiscale 2051.
-
             "dettes2_autres_emprunts_obligataires": "6552306",
             // Correspond à la case 'DT' de la liasse fiscale 2051.`
-
              "dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit": "0",
             // Correspond à la case 'DU' de la liasse fiscale 2051.
-
             "emprunts_et_dettes_financieres_divers": "430634",
             // Correspond à la case 'DV' de la liasse fiscale 2051.
-
-            
             "total_dettes_stables": "6552306",
-             // Cette valeur est calculée par la Banque de France comme suit : 'dettes1_emprunts_obligataires_et_convertibles' + 'dettes2_autres_emprunts_obligataires' + 'dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit' - 'dettes4_maturite_a_un_an_au_plus'. Dans le cas ou un des termes du calcul ne serait pas renseigné, il est considéré comme ayant une valeur nulle pour le calcul.
-                  
-
+            // Cette valeur est calculée par la Banque de France comme suit : 'dettes1_emprunts_obligataires_et_convertibles' + 'dettes2_autres_emprunts_obligataires' + 'dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit' - 'dettes4_maturite_a_un_an_au_plus'. Dans le cas ou un des termes du calcul ne serait pas renseigné, il est considéré comme ayant une valeur nulle pour le calcul.
             "total_passif": "18478051",
             // Correspond à la somme totale du passif de l'entreprise, soit ses capitaux propres, ses fonds propres, ses provisions pour risques et ses charges, ainsi que ses dettes (case 'EE' de la liasse fiscale 2051).
 
@@ -117,25 +105,23 @@ response:
       // COMPTE DE RESULTAT (liasse 2052 et 2053)
 
             "resultat_exercice": "347126",
-             // correspond au "bénéfice ou perte" de l'entreprise, total des produits - total des charges (case 'HN' de la liasse fiscale 2053).
+            // Correspond au "bénéfice ou perte" de l'entreprise, total des produits - total des charges (case 'HN' de la liasse fiscale 2053).
 
             "chiffre_affaires_ht": "12030700",
-            // Correspond au chiffre d'affaire net total, France et exportations & livraisons intercommunautaires (case 'FL' de la liasse fiscale 2052)
+            // Correspond au chiffre d'affaire net total, France et exportations & livraisons intercommunautaires (case 'FL' de la liasse fiscale 2052).
 
 
-      // ANNEXE : ÉTAT DES ÉCHÉANCES DES CRÉANCES ET DES DETTES LA CLÔTURE DE L'EXERCICE (liasse fiscale 2057)
+      // ANNEXE : ÉTAT DES ÉCHÉANCES DES CRÉANCES ET DES DETTES LA CLÔTURE DE L'EXERCICE (liasse fiscale 2057).
 
             "dettes4_maturite_a_un_an_au_plus": "0",
-            // correspond à la somme des cases 'VG2' et 'VH2', soit les emprunts et dettes auprès des établissements de crédit à un an au plus par rapport à l'exercice.
+            // Correspond à la somme des cases 'VG2' et 'VH2', soit les emprunts et dettes auprès des établissements de crédit à un an au plus par rapport à l'exercice.
 
             "groupes_et_associes": "0",
-            // correspond à l'état des dettes du groupe et des associés, case 'VI' de la liasse fiscale 2057.
-
+            // Correspond à l'état des dettes du groupe et des associés, case 'VI' de la liasse fiscale 2057.
 
 
             
       // INCONNU
-
 
             "valeur_ajoutee_bdf": "7848792",
             "besoin_en_fonds_de_roulement": "-721507",
@@ -177,10 +163,6 @@ response:
             "evolution_ratio_fonds_roulement_net_global_sur_besoin_en_fonds_de_roulement": "",
             "evolution_total_dettes_stables": "",
             
-         
-
-
-
             }, "bilan 2", "bilan 3"
         ]
       }
