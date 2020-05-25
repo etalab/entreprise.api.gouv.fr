@@ -6,7 +6,9 @@ label: bilans_entreprises_bdf
 scope:
   - entreprises
 description: Obtenir les trois derniers bilans d’une entreprise détenus par la
-  Banque de France.
+  Banque de France. Ces bilans permettent d'accéder certaines informations
+  contenues dans la liasse fiscale ; bilans, compte de résulat et annexes
+  confondus.
 usecases:
   - Aides publiques
   - Marchés publics
@@ -49,59 +51,110 @@ response:
   timeout: 5 secondes
   format: Donnée structurée JSON
   description: >-
-    Les 3 bilans sont listés les uns après les autres, le premier étant le plus
-    récent. Chacun d'eux est accompagné des informations suivantes : 
+    Les 3 bilans de la Banque de France sont listés les uns après les autres, le
+    premier étant le plus récent. Chacun d'eux est accompagné d'informations en
+    majeure partie tirées : 
 
 
-    * Durée de l'exercice et date d'arrêt ;
+    * des bilans (passif de l'entreprise - liasse 2051), 
 
-    * Données comptables ;
+    * des comptes de résultat (liasses 2052 et 2053) 
 
-    * Comparaison des montants de ces dernières avec l'année N-1. La clé étant alors précédée de l'intitulé `evolution_`.
+    * et de l'annexe 2057 concernant l'état des échéances des créances et des dettes à la clôture de l'exercice.
+
+
+    La Banque de France délivre également une évolution des montants de l'exercice concernés avec l'année N-1, quand les durées d'exercices sont identiques.
   sample:
     code: >-
       {
         "monnaie": "kEuros",
         "bilans": [
           {
+
+      // INFORMATION SUR L'EXERCICE : 
+
             "duree_exercice": "12",
-            "valeur_ajoutee_bdf": "7848792", 
-            // cette valeur ajoutée n'est pas calculée de la même façon que la valeur ajoutée "classique".
-            "resultat_exercice": "347126", 
-            // correspond au champ 'HN' de la liasse fiscale 2053.
-            "capitaux_propres_et_assimiles": "5928663", 
-            // correspond au champ 'DL' de la liasse fiscale 2051.
-            "total_provisions_pour_risques_et_charges": "1957919", 
-            // correspond au champ 'DR' de la liasse fiscale 2051.
-            "dettes1_emprunts_obligataires_et_convertibles": "0", 
-            // correspond au champ 'DS' de la liasse fiscale 2051.
-            "dettes2_autres_emprunts_obligataires": "6552306", 
-            // correspond au champ 'DT' de la liasse fiscale 2051.
-            "total_dettes_stables": "6552306", 
-            // Que le bilan soit valide ou non, cette valeur est calculée comme suit : 'dettes1_emprunts_obligataires_et_convertibles' + 'dettes2_autres_emprunts_obligataires' + 'dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit' - 'dettes4_maturite_a_un_an_au_plus'. Dans le cas ou un des termes du calcul ne serait pas renseigné, il est considéré comme ayant une valeur nulle pour le calcul.
-            "emprunts_et_dettes_financieres_divers": "430634", 
-            // correspond au champ 'DV' de la liasse fiscale 2051.
-            "groupes_et_associes": "0", 
-            // correspond au champ 'VI' de la liasse fiscale 2057.
+            "date_arret_exercice": "201512",
+
+
+      // BILAN, PASSIF (Liasse 2051)
+
+
+            "capitaux_propres_et_assimiles": "5928663",
+            // Correspond à la case 'DL' de la liasse fiscale 2051, soit le total des capitaux propres inscrits dans le passif.
+
+            "capital_social_inclus_dans_capitaux_propres_et_assimiles": "3800000", 
+            // Correspond au capital social ou individuel de la case 'DA' de la liasse fiscale 2051, ce montant est inclu dans la somme précédente 'capitaux_propres_et_assimilés'.
+
+            "autres_fonds_propres": "0",
+            // Correspond à la case 'DO' de la liasse fiscale 2051.
+
+            "total_provisions_pour_risques_et_charges": "1957919",
+            // Correspond à la case 'DR' de la liasse fiscale 2051.
+
+
+            "dettes1_emprunts_obligataires_et_convertibles": "0",
+            // Correspond à la case 'DS' de la liasse fiscale 2051.
+
+            "dettes2_autres_emprunts_obligataires": "6552306",
+            // Correspond à la case 'DT' de la liasse fiscale 2051.`
+
+             "dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit": "0",
+            // Correspond à la case 'DU' de la liasse fiscale 2051.
+
+            "emprunts_et_dettes_financieres_divers": "430634",
+            // Correspond à la case 'DV' de la liasse fiscale 2051.
+
+            
+            "total_dettes_stables": "6552306",
+             // Cette valeur est calculée par la Banque de France comme suit : 'dettes1_emprunts_obligataires_et_convertibles' + 'dettes2_autres_emprunts_obligataires' + 'dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit' - 'dettes4_maturite_a_un_an_au_plus'. Dans le cas ou un des termes du calcul ne serait pas renseigné, il est considéré comme ayant une valeur nulle pour le calcul.
+                  
+
+            "total_passif": "18478051",
+            // Correspond à la somme totale du passif de l'entreprise, soit ses capitaux propres, ses fonds propres, ses provisions pour risques et ses charges, ainsi que ses dettes (case 'EE' de la liasse fiscale 2051).
+
+
+      // COMPTE DE RESULTAT (liasse 2052 et 2053)
+
+            "resultat_exercice": "347126",
+             // correspond au "bénéfice ou perte" de l'entreprise, total des produits - total des charges (case 'HN' de la liasse fiscale 2053).
+
+            "chiffre_affaires_ht": "12030700",
+            // Correspond au chiffre d'affaire net total, France et exportations & livraisons intercommunautaires (case 'FL' de la liasse fiscale 2052)
+
+
+      // ANNEXE : ÉTAT DES ÉCHÉANCES DES CRÉANCES ET DES DETTES LA CLÔTURE DE L'EXERCICE (liasse fiscale 2057)
+
+            "dettes4_maturite_a_un_an_au_plus": "0",
+            // correspond à la somme des cases 'VG2' et 'VH2', soit les emprunts et dettes auprès des établissements de crédit à un an au plus par rapport à l'exercice.
+
+            "groupes_et_associes": "0",
+            // correspond à l'état des dettes du groupe et des associés, case 'VI' de la liasse fiscale 2057.
+
+
+
+            
+      // INCONNU
+
+
+            "valeur_ajoutee_bdf": "7848792",
             "besoin_en_fonds_de_roulement": "-721507",
+            "fonds_roulement_net_global": "2464585",
+            "ratio_fonds_roulement_net_global_sur_besoin_en_fonds_de_roulement": "-"
             "disponibilites": "1983051",
-            "total_passif": "18478051", 
-            // correspond au champ 'EE' de la liasse fiscale 2051.
+            "capacite_autofinancement": "891914",
+            "excedent_brut_exploitation": "-1876863",
 
 
+      // ÉVOLUTION
 
 
+      // En plus, des informations précédentes de l'exercice concerné, la Banque de France renvoit également des données d'évolution par rapport à l'année précédente. 
 
+      Les calculs d'évolution sont calculés en comparant l'année N par rapport à l'année N - 1. Ces montants ne sont fournis que si les liasses fiscales N et N-1 ont la même durée d'exercice.
+
+      Les champs sont calculés par la Banque de France sur le mode suivant : (valeur à date N - valeur à date N-1) *100 / valeur absolue (valeur à date N-1).    
             
-
-
-
-
-
-            
-      // ÉVOLUTIONS
-
-      // Les calculs d'évolution ne se font que si les bilans ont la même durée d'exercice et se fait de l'année N par rapport à l'année N - 1. Les champs sont calculés par la BdF sur le mode suivant : (valeur à date N - valeur à date N-1) *100 / valeur absolue (valeur à date N-1).
             "evolution_valeur_ajoutee_bdf": "",
             "evolution_resultat_exercice": "",
             "evolution_capitaux_propres_et_assimiles": "",
@@ -113,26 +166,6 @@ response:
             "evolution_besoin_en_fonds_de_roulement": "",
             "evolution_disponibilites": "",
             "evolution_total_passif": "",
-            
-         
-            "chiffre_affaires_ht": "12030700", 
-            // correspond au champ 'FL' de la liasse fiscale 2052.
-            "capacite_autofinancement": "891914",
-            "date_arret_exercice": "201512",
-            "dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit": "0", 
-            // correspond au champ 'DU' de la liasse fiscale 2051.
-            "dettes4_maturite_a_un_an_au_plus": "0", 
-            // correspond à la somme des champs 'VG2' et 'VH2' de la liasse fiscale 2057.
-            "autres_fonds_propres": "0", 
-            // correspond au champ 'DO' de la liasse fiscale 2051.
-            "capital_social_inclus_dans_capitaux_propres_et_assimiles": "3800000", 
-            // correspond au champ 'DA' de la liasse fiscale 2051.
-            "excedent_brut_exploitation": "-1876863",
-
-
-      // ÉVOLUTIONS
-
-      // Les calculs d'évolution ne se font que si les bilans ont la même durée d'exercice et se fait de l'année N par rapport à l'année N - 1. Les champs sont calculés par la BdF sur le mode suivant : (valeur à date N - valeur à date N-1) *100 / valeur absolue (valeur à date N-1).    
             "evolution_chiffre_affaires_ht": "",
             "evolution_capacite_autofinancement": "",
             "evolution_dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit": "",
@@ -144,14 +177,11 @@ response:
             "evolution_ratio_fonds_roulement_net_global_sur_besoin_en_fonds_de_roulement": "",
             "evolution_total_dettes_stables": "",
             
-            
-            "fonds_roulement_net_global": "2464585",
-            "ratio_fonds_roulement_net_global_sur_besoin_en_fonds_de_roulement": "-" 
-            // Cette valeur est calculée en faisant le ratio 'fonds_roulement_net_global' * 100 / 'besoin_en_fonds_de_roulement', si ces deux champs ne sont pas négatifs.
-            }, 
-            
-            // {bilan 2} même composition,
-            // {bilan 3} même composition.
+         
+
+
+
+            }, "bilan 2", "bilan 3"
         ]
       }
 availability:
