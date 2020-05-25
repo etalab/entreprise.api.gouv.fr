@@ -63,7 +63,7 @@ response:
     * et de l'[annexe 2057](https://www.impots.gouv.fr/portail/files/formulaires/2057-sd/2018/2057-sd_2121.pdf) concernant l'état des échéances des créances et des dettes à la clôture de l'exercice.
 
 
-    La Banque de France délivre également une évolution des montants de l'exercice concernés avec l'année N-1, quand les durées d'exercices sont identiques.
+    La Banque de France délivre également une évolution des montants de l'exercice concerné avec l'année N-1, quand les durées d'exercices sont identiques.
   sample:
     code: >-
       {
@@ -137,7 +137,7 @@ response:
 
       // En plus, des informations précédentes de l'exercice concerné, la Banque de France renvoit également des données d'évolution par rapport à l'année précédente. 
 
-      Les calculs d'évolution sont calculés en comparant l'année N par rapport à l'année N - 1. Ces montants ne sont fournis que si les liasses fiscales N et N-1 ont la même durée d'exercice.
+      Les calculs d'évolution sont calculés en comparant l'année N par rapport à l'année N-1. Ces montants ne sont fournis que si les liasses fiscales N et N-1 ont la même durée d'exercice.
 
       Les champs sont calculés par la Banque de France sur le mode suivant : (valeur à date N - valeur à date N-1) *100 / valeur absolue (valeur à date N-1).    
             
