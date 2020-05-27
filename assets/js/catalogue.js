@@ -2,21 +2,23 @@ window.onload = function (e) {
   function onTabClick(event) {
     event.stopPropagation()
     event.preventDefault()
-    const activeTab = document.querySelectorAll('.tab--active')
-    const activeTabContent = document.querySelectorAll('.tab-content--active')
+
+    const clickedTab = event.target
+    const clickedParent = clickedTab.closest('.documentation__tabs')
+    const activeTab = clickedParent.querySelectorAll('.tab--active')
+    const activeTabContent = clickedParent.querySelectorAll('.tab-content--active')
 
     // deactivate existing active tab and panel
-    for (let i = 0; i < activeTab.length; i++) {
-      activeTab[i].className = activeTab[i].className.replace(' tab--active', '');
-    }
-
-    for (let i = 0; i < activeTabContent.length; i++) {
-      activeTabContent[i].className = activeTabContent[i].className.replace(' tab-content--active', '');
+    if (activeTab.length) {
+      activeTab[0].classList.remove('tab--active')
+      activeTabContent[0].classList.remove('tab-content--active')
     }
 
     // activate new tab and panel
-    event.target.className += ' tab--active';
-    document.getElementById(event.target.href.split('#')[1]).className += ' tab-content--active';
+    if (clickedTab != activeTab[0]) {
+      clickedTab.className += ' tab--active';
+      document.getElementById(clickedTab.href.split('#')[1]).className += ' tab-content--active'
+    }
   }
 
   const el = document.getElementsByClassName('tab-list')
