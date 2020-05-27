@@ -11,7 +11,7 @@
         {% assign target = site.pages | where:"path",link.target | first %}
         <li class="tpl-site-nav__item 
             {% if link.button %}no-underline{% endif %}">
-          <a href="{% link target.url %}" {% if link.class %}class="tpl-button {{ link.button }}"
+          <a href="{{ site.baseurl }}{{ target.url }}" {% if link.class %}class="tpl-button {{ link.button }}"
             {% endif %}>{{ link.label }}</a>
           {% if link.icon %}<svg class="tpl-icon" viewBox="0 0 24 24">
             <use xlink:href="#{{ link.icon }}"></use>

@@ -3,7 +3,7 @@
     <div class="tpl-flex-row tpl-flex-jc-sb">
       <ul class="tpl-footer__links">
         <li>
-          <h2>Un service de la DINUM réalisé par <a href="https://etalab.gouv.fr"><img src="{% linkassets/images/etalab.svg %}" /></a></h2>
+          <h2>Un service de la DINUM réalisé par <a href="https://etalab.gouv.fr"><img src="{% link assets/images/etalab.svg %}" /></a></h2>
         </li>
       </ul>
       {% for column in site.data.footer.columns %}
@@ -12,7 +12,7 @@
           {% for link in column.children %}
             {% if link.target %}
               {% assign target = site.pages | where:"path", link.target | first %}
-              <li><a href="{ù link target.url %}">{{ link.label }}</a></li>
+              <li><a href="{{ site.baseurl }}{{ target.url }}">{{ link.label }}</a></li>
             {% elsif link.url %}
               <li><a href="{{ link.url }}">{{ link.label }}</a></li>
             {% endif %}
