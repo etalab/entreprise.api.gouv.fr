@@ -129,7 +129,9 @@ additional_js: catalogue.js
                           <dd>
                             <ul>
                               {% for option in endpoint.request.options %}
-                              <li>{{ option[1].description }}</li>
+                                {% if option[1].description != "" %}
+                                <li>{{ option[1].description }}</li>
+                                {% endif %}
                               {% endfor %}
                             </ul>
                           </dd>
