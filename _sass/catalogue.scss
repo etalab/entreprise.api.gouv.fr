@@ -216,12 +216,23 @@
     background-color: var(--grey);
     border-radius: var(--border-radius-default);
     margin-top: var(--spacing-m);
+    position: relative;
   }
 
   .json-example h5 {
     padding: var(--spacing-xs) var(--spacing-s);
     margin: 0;
     text-transform: initial;
+  }
+
+  .json-example .tpl-input__group {
+    position: absolute;
+    right: var(--spacing-xs);
+    top: var(--spacing-xs);
+
+    .tpl-switch {
+      margin-left: var(--spacing-xs);
+    }
   }
 
   .json-example pre {

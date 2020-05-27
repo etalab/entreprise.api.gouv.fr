@@ -21,9 +21,26 @@ window.onload = function (e) {
     }
   }
 
-  const el = document.getElementsByClassName('tab-list')
+  function toggleComments(event) {
+    const toggle = event.target
+    const container = toggle.closest('.json-example').querySelectorAll('code')
+    
+    const comments = container[0].querySelectorAll('.c1, .err')
+
+    for (i = 0; i < comments.length; i++) {
+      if (toggle.checked) {
+        comments[i].style.display = 'inline'
+      } else {
+        comments[i].style.display = 'none'
+      }
+    }
+  }
+
+  const el = document.getElementsByClassName('documentation-card')
+  const commentSwitches = document.getElementsByClassName('toggle-comments')
 
   for (let i = 0; i < el.length; i++) {
-    el[i].addEventListener('click', onTabClick, false)
+    el[i].querySelectorAll('.tab-list')[0].addEventListener('click', onTabClick, false)
+    commentSwitches[i].addEventListener('click', toggleComments, false)
   }
 }
