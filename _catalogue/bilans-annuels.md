@@ -64,7 +64,7 @@ response:
             "code_greffe": 7402,
             "date_depot": "20180116",
             "nature_archive": "B-S", 
-            // indique la nature du bilan, "B_C" pour bilan consolidé, "B-S" pour bilan simplifié, "B-CO" pour bilan complet et "B-BA" pour les bilan de banques et assurances.
+            // indique la nature du bilan, "B_C" pour bilan consolidé, "B-S" pour bilan simplifié, "B-CO" pour bilan complet et "B-BA" pour les bilans de banques et assurances.
             "confidentiel": 0, 
             // Ce champ peut contenir plusieurs valeurs, "0" signifie que le bilan est public, "1" indique que le bilan est confidentiel, "2", que le bilan est partiellement confidentiel.
             "date_cloture": "2016-12-31T00:00:00.000Z",

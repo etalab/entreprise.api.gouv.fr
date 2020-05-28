@@ -120,13 +120,14 @@ response:
             // Correspond à l'état des dettes du groupe et des associés, case 'VI' de la liasse fiscale 2057.
 
 
+
             
       // INCONNU
 
             "valeur_ajoutee_bdf": "7848792",
             "besoin_en_fonds_de_roulement": "-721507",
             "fonds_roulement_net_global": "2464585",
-            "ratio_fonds_roulement_net_global_sur_besoin_en_fonds_de_roulement": "-"
+            "ratio_fonds_roulement_net_global_sur_besoin_en_fonds_de_roulement": "-",
             "disponibilites": "1983051",
             "capacite_autofinancement": "891914",
             "excedent_brut_exploitation": "-1876863",
@@ -161,7 +162,7 @@ response:
             "evolution_excedent_brut_exploitation": "",
             "evolution_fonds_roulement_net_global": "",
             "evolution_ratio_fonds_roulement_net_global_sur_besoin_en_fonds_de_roulement": "",
-            "evolution_total_dettes_stables": "",
+            "evolution_total_dettes_stables": ""
             
             }, "bilan 2", "bilan 3"
         ]
