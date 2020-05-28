@@ -5,7 +5,7 @@
   <base href="{{ site.url }}{{ site.baseurl }}">
   <title>{{ site.title }}</title>
 
-  <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" type="text/css" media="screen,projection" href="{% link assets/main.scss %}">
   <script type="text/javascript">
     if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
       document.write('<script src="https://unpkg.com/@babel/polyfill@7.0.0/dist/polyfill.js"><\/script>');
