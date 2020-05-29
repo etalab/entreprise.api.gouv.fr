@@ -94,11 +94,11 @@ response:
       question: Quelle est la définition du chiffre d'affaire transmis ?
   description: >-
     Les exercices renvoyés par la DGFIP sont listés les uns après les autres, le
-    premier étant le plus récent. Le nombre d'exercice renvoyé varie de 1 à 3.
+    premier étant le plus récent. Le nombre d'exercices renvoyés varie de 1 à 3.
     Pour chaque exercice, deux informations sont transmises : 
 
 
     * le chiffre d'affaire en euros ;
 
-    * la date de fin de l'exercice, communiquée au format standard NNNN-MM-JJ et au format Timestamp UNIX.
+    * la date de fin de l'exercice, communiquée au format textuel AAAA-MM-JJ et au format timestamp UNIX.
 ---
