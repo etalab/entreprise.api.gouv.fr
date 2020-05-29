@@ -23,7 +23,7 @@ perimeter:
 
     * avoir **au moins** trois exercices ;
 
-    * être soumis à l'impôt sur les sociétés selon les règles des régimes d'imposition réel, normal ou simplifié ;
+    * être soumis à l'impôt sur les sociétés selon les règles des régimes d'imposition réels, normal ou simplifié ;
 
     * transmettre ses comptes annuels aux greffes.
 
