@@ -17,15 +17,15 @@ providers:
   - dgfip
 perimeter:
   description: >-
-    Cet endpoint ne renvoie les chiffres d'affaire que pour les entreprises qui
-    vérifient les conditions suivantes :
+    Cet endpoint ne renvoie les chiffres d'affaire des entreprises qui vérifient
+    les conditions suivantes :
 
 
-    * Il existe pour cette entreprise **au moins** 3 exercices ;
+    * avoir **au moins** trois exercices ;
 
-    * L'entreprise est soumise à l'impôt sur les sociétés selon les règles des régimes d'imposition réels normal ou simplifié ;
+    * être soumis à l'impôt sur les sociétés selon les règles des régimes d'imposition réel, normal ou simplifié ;
 
-    * L'entreprise à transmis ses comptes annuels aux greffes.
+    * transmettre ses comptes annuels aux greffes.
 
 
     Cet endpoint vous permet d'accéder aux trois derniers exercices. ℹ️ Ceux-ci ne sont pas forcément les exercices des trois dernières années car il peut y avoir plusieurs exercices dans une même année.
