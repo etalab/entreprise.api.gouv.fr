@@ -74,14 +74,31 @@ response:
   questions:
     qr1:
       answer: >-
-        Dans le cas du régime réel normal, le chiffre d'affaire correspond au
-        montant porté en case FL de l’[imprimé
-        2052](https://www.impots.gouv.fr/portail/formulaire/2052-sd/compte-de-resultat-de-lexercice-en-liste). 
+        ###### Le cas du régime réel normal
 
 
-        Dans le cas du régime réel simplifié, il correspond à la somme des montants indiqués dans les cases 210, 214 et 218 du formulaire 2033B.
-      question: À quoi correspondent les chiffres d'affaires renvoyés ?
-  description: Le json renvoit un tableau de 1 à 3 exercices, le premier étant le
-    plus récent. Pour chaque exercice, le chiffre d'affaire et la date de fin de
-    l'exercice sont
+        Le chiffre d'affaire correspond au montant porté en case FL du [formulaire 2052 - compte de résultat de l'exercice](https://www.impots.gouv.fr/portail/files/formulaires/2052-sd/2018/2052-sd_2117.pdf), c'est-à-dire, le total des chiffres d'affaire nets de France et d'exportations et livraisons intracommunautaires.
+
+
+        ###### Le cas du régime réel simplifié
+
+
+        Le chiffre d'affaire correspond à la somme des montants indiqués dans les cases 210, 214 et 218 du [formulaire 2033B - compte de résultat simplifié de l'exercice](https://www.impots.gouv.fr/portail/files/formulaires/2033-sd/2018/2033-sd_2094.pdf) ; c'est à dire le total : 
+
+
+        * des ventes de marchandises (dont export et livraisons intracommunautaires) ;
+
+        * de la production vendue des biens ;
+
+        * de la production vendue des services, c'est à dire "*du montant des travaux, études et prestations de services exécutés, comprenant le cas échéant les produits des activités annexes (services exploités dans l'intérêt du personnel, commissions et courtages, locations diverses, mises à disposition de personnel facturées, ports et frais accessoires facturés, boni sur remises d'emballages consignés)."* [Source : impôts.gouv](https://www.impots.gouv.fr/portail/files/formulaires/2033-sd/2019/2033-sd_2570.pdf)
+      question: Quelle est la définition du chiffre d'affaire transmis ?
+  description: >-
+    Les exercices renvoyés par la DGFIP sont listés les uns après les autres, le
+    premier étant le plus récent. Le nombre d'exercice renvoyé varie de 1 à 3.
+    Pour chaque exercice, deux informations sont transmises : 
+
+
+    * le chiffre d'affaire en euros ;
+
+    * la date de fin de l'exercice, communiquée au format standard NNNN-MM-JJ et au format Timestamp UNIX.
 ---
