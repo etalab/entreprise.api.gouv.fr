@@ -113,7 +113,7 @@ Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support
 | Editeurs   | Nom de la solution | Date de mise en oeuvre |
 | ---------- | ------------------ | ---------------------- |
 | MGDIS      | Portail des Aides  | Mi-avril 2020          |
-| Entrouvert | Publik             | A préciser             |
+| Entrouvert | Publik             | À préciser             |
 | mon-territoire.fr | Atelier économique             | Juin 2020            |
 
 
