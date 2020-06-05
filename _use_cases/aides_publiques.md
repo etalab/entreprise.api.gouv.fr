@@ -114,6 +114,8 @@ Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support
 | ---------- | ------------------ | ---------------------- |
 | MGDIS      | Portail des Aides  | Mi-avril 2020          |
 | Entrouvert | Publik             | A préciser             |
+| mon-territoire.fr | Atelier économique             | Juin 2020            |
+
 
 Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr)
 
