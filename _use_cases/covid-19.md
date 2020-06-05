@@ -53,11 +53,6 @@ Les données sur les associations sont disponibles en open data (sans demande d'
 | -------------    | ------------------ |------------------------------------------------------|--------------- | 
 | API du Répertoire National des Associations (RNA)      | Étalab             | Données d'identité des associations (RNA)            | [`API RNA` disponible sur entreprise.data.gouv.fr](https://entreprise.data.gouv.fr/api_doc_rna)                                                                                |     
 
-{:.tpl-notification}
-Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des endpoints pourrait être affectée. N'hésitez pas à **faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée.** L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
-Nous vous remercions également de **veiller à consommer l'API open data le plus modérément possible**, afin de limiter les incidents de charge pour tous.
-
-
 ## Conditions d'accès
 
 L'accès à l'API Entreprise dans le cadre de ce cas d'usage sera strictement réservé aux administrations concernées par l'instruction des dossiers de cette aide d'urgence :
