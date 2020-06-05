@@ -18,8 +18,8 @@ email: support@entreprise.api.gouv.fr
 description: > # this means to ignore newlines until "baseurl:"
   Simplifier les démarches des entreprises en récupérant pour elles
   leurs données et documents administratifs.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://etalab.github.io/entreprise.api.gouv.fr" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/entreprise.api.gouv.fr" # the subpath of your site, e.g. /blog
+url: "https://entreprise.api.gouv.fr" # the base hostname & protocol for your site, e.g. http://example.com
 
 # The baseurl option is set for links (especialy assets links) to work
 # with Github pages. For the production environment the website is built
