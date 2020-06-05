@@ -28,27 +28,27 @@ Certaines données sont publiques et d’autres réservées à l’administratio
 
 #### Le pré-remplissage avec des données publiques
 
-Les données publiques peuvent être utilisées pour pré-remplir les formulaires d’inscription dans les dispositifs d’aide et de subvention. 
+Les données publiques peuvent être utilisées pour pré-remplir les formulaires d’inscription dans les dispositifs d’aide et de subvention.
 
 
-***Quel avantage à passer par API Entreprise si les données sont libres ?*** 
+***Quel avantage à passer par API Entreprise si les données sont libres ?***
 *API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.*
 
 {:.tpl-notification}
-Attention, **certaines personnes morales n’ont pas souhaité apparaître dans les données diffusées publiquement** (voir non diffusés de l’INSEE). De ce fait, **vous ne pouvez pas utiliser ces données pour le pré-remplissage**. 
+Attention, **certaines personnes morales n’ont pas souhaité apparaître dans les données diffusées publiquement** (voir non diffusés de l’INSEE). De ce fait, **vous ne pouvez pas utiliser ces données pour le pré-remplissage**.
 Deux options se présentent dans ce cas : <br> 1. Signifier à ces personnes morales qu’elles peuvent changer ce statut et bénéficier du pré-remplissage sinon il faut saisir les données. <br> 2. Ne pas afficher les données en front, mais récupérer les données pour que vos agents en bénéficient. <br> Les données confidentielles sont donc visibles en back-office pour les agents sous forme de données structurées ou de pdf.
 
 #### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
-    
+
 En utilisant API Entreprise, les entreprises et associations en demande d’aide publiques n’ont plus besoin de vous fournir certains justificatifs. Les documents et données sont récupérés automatiquement, ce qui facilite grandement l’instruction de leurs dossiers.
 
 40% des utilisateurs  d’API Entreprise (régionaux, départements, communes, Banque Publique d’Investissement  notamment) utilisent notre service dans ce cadre.
 
 ## Données utiles
 
-Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.** 
+Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.**
 
-Vous trouverez ci-dessous les données classées dans différentes catégories : 
+Vous trouverez ci-dessous les données classées dans différentes catégories :
 - [Informations générales](#infos_generales),
 - [Informations financières](#infos_financieres),
 - [Attestations sociales et fiscales](#attestations_sociales_fiscales),
@@ -66,7 +66,7 @@ Vous trouverez ci-dessous les données classées dans différentes catégories :
 | [Données déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna){:target="_blank"}                | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 | [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                    | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
 
-#### Informations financières <a id="infos_financieres"></a>                                    
+#### Informations financières <a id="infos_financieres"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -75,7 +75,7 @@ Vous trouverez ci-dessous les données classées dans différentes catégories :
 | [Bilans entreprise](https://doc.entreprise.api.gouv.fr/?json#bilans-entreprises-bdf-banque-de-france){:target="_blank"}                                     |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
 | [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales){:target="_blank"}      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
 
-#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>  
+#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -87,7 +87,7 @@ Vous trouverez ci-dessous les données classées dans différentes catégories :
 | [Attestations cotisation retraite](https://doc.entreprise.api.gouv.fr/?json#cotisations-retraite-probtp){:target="_blank"}                      |          PROBTP          | `attestations_cotisation_retraite_probtp` |    données JSON     |    publiques    |
 | [Cotisations congés payés & chômage intempéries](https://doc.entreprise.api.gouv.fr/?json#certificats-cnetp){:target="_blank"}        |          CNETP           |            `certificats_cnetp`            |         PDF         |    publiques    |
 
-#### Certificats professionnels <a id="certificats_pro"></a>  
+#### Certificats professionnels <a id="certificats_pro"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -95,7 +95,7 @@ Vous trouverez ci-dessous les données classées dans différentes catégories :
 | [Certification RGE](https://doc.entreprise.api.gouv.fr/?json#certificats-rge-ademe){:target="_blank"}                                     |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
 | [Certification de qualification OPQIBI](https://doc.entreprise.api.gouv.fr/?json#certificats-opqibi){:target="_blank"}                 |          OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
 
-#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>  
+#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -121,6 +121,6 @@ Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [sup
 
 ## Demander un accès aux données
 
-Pour demander un accès, [veuillez consulter la page "Demander un accès]({{ site.baseurl }}{% link pages/demander_un_acces.md %}), un déroulé des étapes vous sera décrit.
+Pour demander un accès, [veuillez consulter la page "Demander un accès]({% link pages/demander_un_acces.md %}), un déroulé des étapes vous sera décrit.
 
-       
+
