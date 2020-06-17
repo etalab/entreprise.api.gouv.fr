@@ -83,10 +83,10 @@ Votre jeton d'accès est disponible dans votre espace client à l'adresse suivan
   <br />
 
 Depuis le printemps 2020, vous pouvez accéder à votre espace client en utilisant les identifiants de votre
-compte API Gouv que vous avez utilisé pour soumettre le formulaire de demande d'accès
+compte API Gouv que vous avez utilisés pour soumettre le formulaire de demande d'accès
 via l'outil Signup. Pour cela, il vous suffit d'utiliser le bouton _Identifiez-vous avec votre compte API Gouv_.
 
-Avant cela, des comptes spécifiques d'accès au dashboard API Entreprise étaient
+Par le passé, des comptes spécifiques d'accès au dashboard API Entreprise étaient
 créés. Ils sont toujours fonctionnels et vous pouvez les utiliser pour vous
 connecter (via la dénommée _Connexion habituelle_ de la page d'authentification)
 si un tel compte vous avait été créé par le passé.
