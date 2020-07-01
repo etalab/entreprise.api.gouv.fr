@@ -1,12 +1,12 @@
 ---
 weight: 10
 type: Informations financières
-title: Déclarations de résultats
+title: Déclarations de résultat
 label: liasses_fiscales_dgfip
 scope:
   - entreprises
 description: Obtenir les données contenues dans les liasses fiscales, issues des
-  déclarations de résultats d’une entreprise pour une année donnée auprès de la
+  déclarations de résultat d’une entreprise pour une année donnée auprès de la
   direction des finances publiques (DGFIP).
 usecases:
   - Aides publiques
@@ -39,10 +39,9 @@ perimeter:
   label: Entreprises BIC, BA, BNC, ou soumises à l'IS, IS groupe.
 request:
   id:
-    label: AnneeDeLaLiasseDemandée
-    description: L'année de la liasse fiscale demandée + le numéro de SIREN de
-      l'entreprise (dans le cas  d'une recherche de déclaration ou de
-      déclaration + dictionnaire)
+    label: AnneeDeLaLiasseDemandée/declarations/SirenDeL'Entreprise
+    description: "L'année de la liasse fiscale demandée + le paramètre
+      \"declarations\" + le numéro de SIREN de l'entreprise "
   parameters:
     param1:
       label: token
