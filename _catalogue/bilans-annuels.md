@@ -14,6 +14,8 @@ access: Restreint
 opening: Données confidentielles
 providers:
   - inpi
+perimeter:
+  label: Tous les bilans non-confidentiels des entreprises depuis 2017
 request:
   id:
     label: SirenDeL’Entreprise
