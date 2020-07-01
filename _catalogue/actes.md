@@ -18,7 +18,14 @@ opening: Données confidentielles
 providers:
   - inpi
 perimeter:
-  description: ""
+  description: >-
+    Tous les actes établis par les greffes depuis 1993 sont transmis par cet
+    endpoint. Théoriquement, les actes sont transmis à l'INPI par le greffe dans
+    un délai de 24h.
+
+
+    ℹ️ Il se peut que certains actes soient manquants, dans ce cas, vous pouvez nous [envoyer un mail]([support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)) avec le numéro de SIRET concerné. L'INPI peut tenter de nuémriser le document manquant.
+  label: Tous les actes des entreprises depuis 1993
 request:
   id:
     label: SirenDeL’Entreprise
