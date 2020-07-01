@@ -5,8 +5,8 @@ title: Chiffre d'affaires
 label: exercices
 scope:
   - entreprises
-description: Obtenir les trois dernières déclarations de chiffre d'affaire
-  faites auprès de la DGFIP, et porté sur la liasse fiscale.
+description: Obtenir les déclarations de chiffre d'affaire faites auprès de la
+  DGFIP, et porté sur la liasse fiscale.
 usecases:
   - Aides publiques
   - Marchés publics
@@ -20,8 +20,6 @@ perimeter:
     Cet endpoint ne renvoie les chiffres d'affaire des entreprises qui vérifient
     les conditions suivantes :
 
-
-    * avoir **au moins** trois exercices ;
 
     * être soumis à l'impôt sur les sociétés selon les règles des régimes d'imposition réels, normal ou simplifié ;
 
