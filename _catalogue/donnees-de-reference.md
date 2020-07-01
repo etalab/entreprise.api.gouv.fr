@@ -363,7 +363,7 @@ request:
         Parmi les entités présentes dans le Répertoires Sirene, certaines, très majoritairement des personnes physiques, ont explicitement demandé de ne pas figurer en diffusion commerciale, en vertu de l'[article A123-96 du Code du Commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=C505A51DBC1A4EB1FFF3764C69ACDB1C.tpdjo11v_1?idArticle=LEGIARTI000020165030&cidTexte=LEGITEXT000005634379&dateTexte=20100702). Cela signifie qu'elles donnent accord de la diffusion de leur données uniquement à des organismes habilités et à des administrations. **De fait, leurs données ne sont pas publiques.**
 
 
-        ℹ️ D'autres entités, y compris des personnes morales peuvent également être considérées comme non diffusibles, il s'agit notamment de la Défense Nationale, conformément à l'[article A 123-95 du Code du commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A50D4E549BAC95B63FFE10B24F86D7A5.tplgfr21s_1?idArticle=LEGIARTI000020165032&cidTexte=LEGITEXT000005634379&dateTexte=20100702), des SIRET immatriculés spécifiquement pour les impôts (Urssaf et comptabilités publiques). 
+        ℹ️ Les unités de la Défense Nationale font également partie des non-diffusibles mais ne sont accessibles que sur autorisation du Ministère de la Défense, conformément à l'[article A 123-95 du Code du commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A50D4E549BAC95B63FFE10B24F86D7A5.tplgfr21s_1?idArticle=LEGIARTI000020165032&cidTexte=LEGITEXT000005634379&dateTexte=20100702).
 
 
         ###### Comment utiliser les données des non diffusibles ?
@@ -382,6 +382,17 @@ request:
 
 
         ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusible, l'API vous renverra un code HTTP 403, même si votre token comporte les droits d'accès.
+
+
+        ###### Cas particulier d'unités présentes dans la base Sirene mais non disponibles
+
+
+        Certaines unités ont été immatriculées pour les seuls besoins de certaines administrations (les impôts, les URSSAF, la DGCP ...). Leur diffusion à d'autres administrations n'est pas prévue. Il s'agit : 
+
+
+        * des unités de gestion de paye de la fonction publique ;
+
+        * des unités provisoires (c'est à dire des entreprises ayant obtenu un numéro Siren provisoire au gichet du Centre de Formalités des Entreprises (CFE) au moment de leur déclaration ; numéro qui sera par la suite confirmé, à la réception de la déclaration de création, et fera entrer ces entreprises dans le Répertoire.
       question: ⚠️ Comment utiliser les données privées <br>des entreprises non
         diffusibles ?
 history: 01/12/2019 Ajout de l'option d'appel `non_diffusable`
