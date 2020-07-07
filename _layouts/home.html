@@ -20,7 +20,7 @@ layout: default
         {% include usecases.html %}
       </div>
       <div class="text-center">
-        <a class="tpl-button tpl-button--alternate" href %}="{% link pages/use_cases.html %}">
+        <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}{% link pages/use_cases.html %}">
           Tous les cas d'usages
         </a>
       </div>
@@ -30,7 +30,7 @@ layout: default
     <div class="tpl-container">
       <h2>Comment demander un accès à l’API Entreprise ?</h2>
       <p>Seules les administrations et les sociétés chargées d’une mission de service public sont éligibles.</p>
-      <a class="tpl-button tpl-button--primary" href="{% link pages/demander_un_acces.md %}">
+      <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}{% link pages/demander_un_acces.md %}">
         Demander un accès
       </a>
       <p>Vous n’êtes pas une administration ? Utilisez <a
@@ -43,9 +43,9 @@ layout: default
       <div class="tpl-flex-row">
         <div class="tpl-card">
           <div class="tpl-card__header">
-            <img class="card__icon bullhorn" src="{% link assets/images/join/bullhorn.svg %}"
+            <img class="card__icon bullhorn" src="{{ site.baseurl }}{% link assets/images/join/bullhorn.svg %}"
               alt="" />
-            <h3>Nous regroupons<br />les fournisseurs de données pour vous ! </h3>
+            <h3>Nous regroupons<br />les fournisseurs de données pour vous !</h3>
           </div>
           <div class="tpl-card__content">
             <dl class="tpl-description-list">
@@ -62,7 +62,7 @@ layout: default
         </div>
         <div class="tpl-card">
           <div class="tpl-card__header">
-            <img class="card__icon plug" src="{% link assets/images/join/plug.svg %}" alt="" />
+            <img class="card__icon plug" src="{{ site.baseurl }}{% link assets/images/join/plug.svg %}" alt="" />
             <h3>Nous réalisons l’interfaçage technique avec les différentes API</h3>
           </div>
           <div class="tpl-card__content">
@@ -81,7 +81,7 @@ layout: default
         </div>
         <div class="tpl-card">
           <div class="tpl-card__header">
-            <img class="card__icon grip" src="{% link assets/images/join/grip.svg %}" alt="" />
+            <img class="card__icon grip" src="{{ site.baseurl }}{% link assets/images/join/grip.svg %}" alt="" />
             <h3>Un seul compte,<br />un seul interlocuteur, plusieurs données</h3>
           </div>
           <div class="tpl-card__content">
@@ -104,47 +104,47 @@ layout: default
       <h2>Nos fournisseurs de données</h2>
       <ul class="providers__main text-center">
         <li>
-          <img class="" src="{% link assets/images/providers/insee.png %}" alt="INSEE">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/insee.png %}" alt="INSEE">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/infogreffe.png %}" alt="Infogreffe">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/infogreffe.png %}" alt="Infogreffe">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/dgfip.png %}"
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/dgfip.png %}"
             alt="Direction Générale des Finances Publiques">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/acoss.png %}" alt="ACOSS">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/acoss.png %}" alt="ACOSS">
         </li>
       </ul>
       <ul class="providers__others text-center">
         <li>
-          <img class="" src="{% link assets/images/providers/inpi.png %}" alt="INPI">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/inpi.png %}" alt="INPI">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/qualibat.png %}" alt="Qualibat">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/qualibat.png %}" alt="Qualibat">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/rna.png %}"
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/rna.png %}"
             alt="Répertoire National des Associations">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/cnetp.png %}" alt="CNETP">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/cnetp.png %}" alt="CNETP">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/probtp.png %}" alt="ProBTP">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/probtp.png %}" alt="ProBTP">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/msa.png %}" alt="MSA">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/msa.png %}" alt="MSA">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/opqibi.png %}" alt="OPQIBI">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/opqibi.png %}" alt="OPQIBI">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/fntp.png %}" alt="FNTP">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/fntp.png %}" alt="FNTP">
         </li>
         <li>
-          <img class="" src="{% link assets/images/providers/agefiph.png %}" alt="AGEFIPH">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/agefiph.png %}" alt="AGEFIPH">
         </li>
       </ul>
     </div>
