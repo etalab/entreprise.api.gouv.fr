@@ -16,25 +16,25 @@ providers:
   - dgfip
 perimeter:
   description: >-
-    L'attestation de régularité fiscale est **limitée aux entreprises soumises à
-    l'impôt sur les sociétés (IS)** à l'exclusion des :
+    L'attestation de régularité fiscale est **limitée aux ✅ entreprises soumises
+    à l'impôt sur les sociétés (IS)** à l'exclusion des :
 
 
-    * bénéfices industriels et commerciaux (BIC)
+    * ❌ bénéfices industriels et commerciaux (BIC) ;
 
-    * bénéfices non commerciaux (BNC)
+    * ❌ bénéfices non commerciaux (BNC) ;
 
-    * bénéfices agricoles (BA)
+    * ❌ bénéfices agricoles (BA) ;
 
 
     Sont aussi exclues, même si les obligations fiscales sont respectées :
 
 
-    * entreprises individuelles ;
+    * ❌ entreprises individuelles ;
 
-    * sociétés de personnes ;
+    * ❌ sociétés de personnes ;
 
-    * groupements passibles de l'impôt sur le revenu (entrepreneurs individuels).
+    * ❌ groupements passibles de l'impôt sur le revenu (entrepreneurs individuels).
 
 
     ⚠️ **L'attestation est délivrée si les obligations déclaratives et de paiement d'IS et de TVA de la société sont en règles.** Ainsi, les sociétés bénéficiant d’un plan de règlement, redressement, sauvegarde ou conciliation ainsi que les sociétés ayant formulé un recours contentieux assorti d’un sursis de paiement ne peuvent pas se voir délivrer une attestation fiscale.
