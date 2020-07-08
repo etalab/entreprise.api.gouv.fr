@@ -16,6 +16,18 @@ providers:
   - inpi
 perimeter:
   label: Tous les bilans non-confidentiels des entreprises depuis 2017
+  description: >-
+    Cette API permet d'accéder **à tous les bilans annuels depuis 2017 des
+    entreprises ayant décider de le déposer au greffe**, **y compris les bilans
+    confidentiels**.
+
+
+    Toutes les entreprises sont concernées sauf : 
+
+
+    * les sociétés en micro-BNC ou micro-BIC ;
+
+    * les entrepreneurs individuels (commerçants, artisans, profession libérale, micro-entrepreneurs notamment) ;
 request:
   id:
     label: SirenDeL’Entreprise
@@ -40,7 +52,7 @@ response:
     ###### Contenu de la réponse JSON
 
 
-    * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des bilans de l'entité appelée ;
+    * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des bilans au format PDF de l'entité appelée ;
 
     * **La liste des bilans, accompagnés de leurs informations génériques** (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et clôture, la nature de l'archive, son degré de confidentialité, et le numéro de gestion.)
 
@@ -91,6 +103,18 @@ response:
     qr2:
       question: Comment utiliser les données d'un bilan annuel partiellement ou
         entièrement confidentiel ?
+      answer: ""
     qr1:
-      question: Quelle différence entre un bilan consolidé, simplifé ou complet ?
+      question: Quel est le délai de mise à disposition des bilans dans l'API INPI ?
+      answer: >-
+        ###### Les bilans au format PDF 
+
+
+        Les bilans PDF disponibles dans l'archive ZIP sont transmis théoriquement à l'INPI par le greffe 24h après leur dépôt.
+
+
+        ###### Les bilans XML
+
+
+        Les données du bilans mises à disposition sous forme de XML nécessitent un délai plus long de deux semaines.
 ---
