@@ -10,8 +10,9 @@ description: Obtenir les comptes annuels d’une entreprise tels que transmis pa
 usecases:
   - Aides publiques
   - Marchés publics
-access: Restreint
-opening: Données confidentielles
+access: Restreint, [disponible sous d'autres conditions (uniquement les bilans
+  publics) sur le site de l'INPI](https://data.inpi.fr/)
+opening: Données publiques et confidentielles
 providers:
   - inpi
 perimeter:
@@ -45,6 +46,9 @@ request:
     param4:
       label: object
       description: RaisonDeL’AppelOuIdentifiant
+  questions:
+    qr1:
+      question: ""
 response:
   format: Archive ZIP contenant PDF et XML
   timeout: 12 secondes
@@ -101,9 +105,34 @@ response:
     qr3:
       question: Comment utiliser le fichier resonses.json ?
     qr2:
-      question: Comment utiliser les données d'un bilan annuel partiellement ou
-        entièrement confidentiel ?
-      answer: ""
+      question: Comment utiliser les bilans confidentiels et les bians partiellement
+        confidentiels ?
+      answer: >-
+        Certaines entreprises (PME) peuvent décider de ne pas publier leurs
+        comptes annuels. Elles ont toutefois l’obligation de les déposer. Leur
+        bilans sont donc présents à l'INPI et cet endpoint permet d'y accéder.
+
+
+        ###### Bilans confidentiel
+
+
+        Lorsque le champ `confidentiel` est égal à `1`, cela signifie que le bilan est totalement confidentiel.\
+
+        Cela signifie que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
+
+
+
+
+        ###### Bilans partiellement confidentiel
+
+
+        Lorsque le champ `confidentiel` est égal à `2`, cela signifie qu'une partie du document est confidentielle et que l'autre est publique. 
+
+
+        Depuis 2019, l'INPI a rendu les PDF séparable, ce qui permet aux personnes ayant un compte public de télécharger les informations disponibles.
+
+
+        Dans le cadre de l'utilisation d'API Entreprise, les bilans partiellement confidentiels sont à traiter comme les bilans confidentiels puisque la distinction n'est pas faite entre données publiques et protégées. Vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
     qr1:
       question: Quel est le délai de mise à disposition des bilans dans l'API INPI ?
       answer: >-
