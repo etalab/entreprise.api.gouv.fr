@@ -4,89 +4,6 @@ access: Restreint mais disponible sous d'autres conditions, chez
   et [entreprise.data.gouv](https://entreprise.data.gouv.fr/)
 providers:
   - insee
-response:
-  format: Donnée structurée JSON
-  timeout: 5 secondes
-  description: >-
-    ###### La réponse JSON se décompose en trois catégories d'informations : 
-
-
-    * **des données générales** sur l’établissement telles que la date de création, le nombre de salariés et la tranche effectif, l'activité principale et le statut de l'établissement par rapport à l'entreprise : s'agit-il du siège social ?
-
-    * **des données géographiques**, la commune, la région et le pays d'implatation ; ainsi que l'adresse précise reconstruite par API Entreprise.  
-
-    * **une donnée juridique** : l'état administratif de l'établissement et la date de fermeture le cas échéant.
-  questions:
-    qr1:
-      question: Qu'est-ce que l'état administratif d'un établissement ?
-      answer: >-
-        L'état administratif d'un établissement a deux modalités : actif (A) ou
-        fermé (F). Lors de son inscription au répertoire, un établissement
-        est, sauf exception, à l’état "ouvert" (A). Le passage à l’état
-        "fermé" découle de la prise en compte d’une déclaration de fermeture.
-
-
-        ℹ️ Un établissement fermé peut être rouvert.
-  sample:
-    code: >
-      {
-        "etablissement": {
-          "siren": "418166096",
-          "nic": "00051", 
-          // Numéro interne de classement, l'identifiant à 5 chiffres de l'établissement, qui se trouve à la fin du numéro de SIRET.
-          "siret": "41816609600051",
-          "statut_diffusion": true, 
-          // Indique si les données de l'établissement sont diffusables ("true") ou non ("false").
-          "date_creation": 1108594800, 
-          // Format timestamp UNIX.
-          "tranche_effectif_code": "11", 
-          // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE(http://www.sirene.fr/sirene/public/variable/tefen)
-          "activite_principale_rnm_code": "123456", 
-          // Cette série de 6 chiffres désigne le code de l'activité exercée par l'artisan inscrit au registe des métiers, et renvoie à la Nomenclature d'Activités Françaises de l'Artisanat (NAFA) (https://www.entreprises.gouv.fr/secteurs-professionnels/artisanat/la-nafa).
-          "date_dernier_traitement": 1538217704, 
-          // Informe du dernier traitement de l'unité légale dans le répertoire Sirene. Cette date peut concerner des mises à jour de données du répertoire Sirene, qui ne sont pas diffusées par l'API. Cette date est délivrée au format timestamp UNIX. Cette variable peut-être à "null", notamment pour les unités cessées qui ont été purgées.
-          "siege_social": true, 
-          // Ce champ vous permet de savoir si l'établissement appelé est le siège social d'une entreprise ("true") ou non ("false").
-          "enseigne_1": null, 
-          "enseigne_2": null,
-          "enseigne_3": null, 
-          // Ces trois derniers champs indique le nom de l'enseigne, c'est à dire l'appelation qui permet de facilement identifier l'établissement. Un établissement peut avoir plusieurs enseignes. Le nom de l'enseigne est parfois découpé sur les trois champs.
-          "denomination_usuelle": null, 
-          // C'est le nom sous lequel l'établissement est connu du grand public. Cet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008.
-          "activite_principale_code": "62.02A", 
-          // Il s'agit du code APE de l'établissement (code APET), toujours composé de 4 chiffres et une lettre et codifié selon la Nomenclature d'Activité Française (https://www.insee.fr/fr/information/2120875). Les établissements d'une même entreprise peuvent avoir des activités différentes et de fait des APET différents. Le code APET peut également être identique à l'APE de l'entreprise (APEN) lorsque celle-ci n'a qu'un établissement.
-          "activite_principale_nomenclature": "NAFRev2", 
-          // Ce champ indique la nomenclature en vigueur pour l'etablissement appelé. Depuis 2015, la version est la "NAF rév.2."
-          "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques", // indique le libellé du code APET de l'établissement selon la nomenclature concernée.
-          "caractere_employeur": "O", 
-          // Indique si l'établissement a ou non des employés. La variable est "O" si l'établissement est employeur ; la variable est "N" si l'établissement ne l'est pas. La variable est historisée pour les établissements ouverts depuis 2005.
-          "etat_administratif": {
-            "value": "A", 
-            // Indique si l'établissement est actif, par "A". Ou s'il est jurdiquement fermé, par "F".
-            "date_fermeture": null  
-            // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F" (fermé).
-          },
-          "adresse_1": {
-          // Une entité peut dans certains cas avoir plusieurs adresses, par exemple quand le batiment a deux entrées.
-            "complement": "LA PIOLINE",
-            "numero_voie": "10",
-            "indice_repetition": null,
-            "type_voie": "ALL",
-            "libelle_voie": "DES PLATANES LES MILLES",
-            "code_postal": "13290",
-            "commune_code": "13001", 
-            // Cette suite de 5 chiffres correspond au code des communes tel que défini dans le code officiel géographique (COG) géré par l'INSEE et disponible à cette adresse : https://www.insee.fr/fr/information/2028028
-            "commune_libelle": "AIX-EN-PROVENCE",
-            "commune_etranger_libelle": null,
-            "distribution_speciale": null,
-            "cedex_code": "13546",
-            "cedex_libelle": "AIX EN PROVENCE CEDEX 4",
-            "pays_etranger_code": "", 
-            // Cette suite de chiffres correspond au code des pays étrangers, tels que définis dans la Codification des pays et territoires étrangers, disponible à cette adresse : https://www.insee.fr/fr/information/2028273
-            "pays_etranger_libelle": ""
-          },
-        }
-      }
 questions:
   qr1:
     answer: >-
@@ -167,67 +84,152 @@ perimeter:
     **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
   label: Établissements d’entreprises, d'entreprenseurs individuels,
     d'institutions administratives et de certaines associations.
-request:
-  id:
-    param: SiretDeL’Entreprise
-    description: Le numéro de Siret de l’établissement
-  parameters:
-    param1:
-      label: token
-      description: JetonD’Habilitation
-    param2:
-      label: context
-      description: CadreDeLaRequête
-    param3:
-      label: recipient
-      description: BénéficiaireDeL'appel
-    param4:
-      label: object
-      description: RaisonDeL'AppelOuIdentifiant
-  options:
-    option1:
-      param: non_diffusable=true
-      description: Une option d'appel vous permet d'accéder aux données des
-        établissements dîts non-diffusibles, cette option nécessite une
-        autorisation spécifique, accordée ou non par API Entreprise selon votre
-        cas d'usage
-      comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
-  questions:
-    qr1:
-      answer: >-
-        ###### Qu'est-ce qu'un établissement non diffusible ?
+services:
+  service1:
+    request:
+      id:
+        param: SiretDeL’Entreprise
+        description: Le numéro de Siret de l’établissement
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          label: context
+          description: CadreDeLaRequête
+        param3:
+          label: recipient
+          description: BénéficiaireDeL'appel
+        param4:
+          label: object
+          description: RaisonDeL'AppelOuIdentifiant
+      options:
+        option1:
+          param: non_diffusable=true
+          description: Une option d'appel vous permet d'accéder aux données des
+            établissements dîts non-diffusibles, cette option nécessite une
+            autorisation spécifique, accordée ou non par API Entreprise selon votre
+            cas d'usage
+          comment: "Si vous souhaitez accéder aux entreprises non diffusibles :"
+      questions:
+        qr1:
+          answer: >-
+            ###### Qu'est-ce qu'un établissement non diffusible ?
 
 
-        Parmi les entités présentes dans le Répertoires Sirene, certaines, très majoritairement des personnes physiques, ont explicitement demandé de ne pas figurer en diffusion commerciale, en vertu de l'[article A123-96 du Code du Commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=C505A51DBC1A4EB1FFF3764C69ACDB1C.tpdjo11v_1?idArticle=LEGIARTI000020165030&cidTexte=LEGITEXT000005634379&dateTexte=20100702). Cela signifie qu'elles donnent accord de la diffusion de leur données et des données de leurs établissements uniquement à des organismes habilités et à des administrations. **De fait, ces données ne sont pas publiques.**
+            Parmi les entités présentes dans le Répertoires Sirene, certaines, très majoritairement des personnes physiques, ont explicitement demandé de ne pas figurer en diffusion commerciale, en vertu de l'[article A123-96 du Code du Commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=C505A51DBC1A4EB1FFF3764C69ACDB1C.tpdjo11v_1?idArticle=LEGIARTI000020165030&cidTexte=LEGITEXT000005634379&dateTexte=20100702). Cela signifie qu'elles donnent accord de la diffusion de leur données et des données de leurs établissements uniquement à des organismes habilités et à des administrations. **De fait, ces données ne sont pas publiques.**
 
 
-        ℹ️ Les établissements de la Défense Nationale font également partie des non-diffusibles mais ne sont accessibles que sur autorisation du Ministère de la Défense, conformément à l'[article A 123-95 du Code du commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A50D4E549BAC95B63FFE10B24F86D7A5.tplgfr21s_1?idArticle=LEGIARTI000020165032&cidTexte=LEGITEXT000005634379&dateTexte=20100702).
+            ℹ️ Les établissements de la Défense Nationale font également partie des non-diffusibles mais ne sont accessibles que sur autorisation du Ministère de la Défense, conformément à l'[article A 123-95 du Code du commerce](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=A50D4E549BAC95B63FFE10B24F86D7A5.tplgfr21s_1?idArticle=LEGIARTI000020165032&cidTexte=LEGITEXT000005634379&dateTexte=20100702).
 
 
-        ###### Comment utiliser les données des non diffusibles ?
+            ###### Comment utiliser les données des non diffusibles ?
 
 
-        En utilisant l'endpoint `etablissements_insee`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser les informations de leur établissement que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**. 
+            En utilisant l'endpoint `etablissements_insee`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser les informations de leur établissement que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**. 
 
 
-        ⚠️ **Vous ne pouvez pas donc pas faire usage de ces données pour du pré-remplissage.** Il vous est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr>.
+            ⚠️ **Vous ne pouvez pas donc pas faire usage de ces données pour du pré-remplissage.** Il vous est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr>.
 
 
-        ###### Comment accéder aux données des non-diffusibles avec l'API Entreprise ?
+            ###### Comment accéder aux données des non-diffusibles avec l'API Entreprise ?
 
 
-        Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramètre `non_diffusables=true`. Un champ supplémentaire apparaît alors `diffusable_commercialement` indiquant si l'entreprise est diffusée ou non.
+            Vous pouvez accéder aux entreprises non diffusées en ajoutant le paramètre `non_diffusables=true`. Un champ supplémentaire apparaît alors `diffusable_commercialement` indiquant si l'entreprise est diffusée ou non.
 
 
-        ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusible, l'API vous renverra un code HTTP 403, même si votre token comporte les droits d'accès.
+            ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusible, l'API vous renverra un code HTTP 403, même si votre token comporte les droits d'accès.
 
 
-        ###### Cas particulier d'unités présentes dans la base Sirene mais non disponibles
+            ###### Cas particulier d'unités présentes dans la base Sirene mais non disponibles
 
 
-        Les établissements de gestion de paye de la fonction publique ont été immatriculés pour les seuls besoins de certaines administrations (les impôts, les URSSAF, la DGCP ...). Leur diffusion à d'autres administrations n'est donc pas prévue.
-      question: ⚠️ Comment utiliser les données privées des établissements non
-        diffusibles ?
+            Les établissements de gestion de paye de la fonction publique ont été immatriculés pour les seuls besoins de certaines administrations (les impôts, les URSSAF, la DGCP ...). Leur diffusion à d'autres administrations n'est donc pas prévue.
+          question: ⚠️ Comment utiliser les données privées des établissements non
+            diffusibles ?
+    response:
+      format: Donnée structurée JSON
+      timeout: 5 secondes
+      description: >-
+        ###### La réponse JSON se décompose en trois catégories d'informations : 
+
+
+        * **des données générales** sur l’établissement telles que la date de création, le nombre de salariés et la tranche effectif, l'activité principale et le statut de l'établissement par rapport à l'entreprise : s'agit-il du siège social ?
+
+        * **des données géographiques**, la commune, la région et le pays d'implatation ; ainsi que l'adresse précise reconstruite par API Entreprise.  
+
+        * **une donnée juridique** : l'état administratif de l'établissement et la date de fermeture le cas échéant.
+      questions:
+        qr1:
+          question: Qu'est-ce que l'état administratif d'un établissement ?
+          answer: >-
+            L'état administratif d'un établissement a deux modalités : actif (A) ou
+            fermé (F). Lors de son inscription au répertoire, un établissement
+            est, sauf exception, à l’état "ouvert" (A). Le passage à l’état
+            "fermé" découle de la prise en compte d’une déclaration de fermeture.
+
+
+            ℹ️ Un établissement fermé peut être rouvert.
+      sample:
+        code: >
+          {
+            "etablissement": {
+              "siren": "418166096",
+              "nic": "00051", 
+              // Numéro interne de classement, l'identifiant à 5 chiffres de l'établissement, qui se trouve à la fin du numéro de SIRET.
+              "siret": "41816609600051",
+              "statut_diffusion": true, 
+              // Indique si les données de l'établissement sont diffusables ("true") ou non ("false").
+              "date_creation": 1108594800, 
+              // Format timestamp UNIX.
+              "tranche_effectif_code": "11", 
+              // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE(http://www.sirene.fr/sirene/public/variable/tefen)
+              "activite_principale_rnm_code": "123456", 
+              // Cette série de 6 chiffres désigne le code de l'activité exercée par l'artisan inscrit au registe des métiers, et renvoie à la Nomenclature d'Activités Françaises de l'Artisanat (NAFA) (https://www.entreprises.gouv.fr/secteurs-professionnels/artisanat/la-nafa).
+              "date_dernier_traitement": 1538217704, 
+              // Informe du dernier traitement de l'unité légale dans le répertoire Sirene. Cette date peut concerner des mises à jour de données du répertoire Sirene, qui ne sont pas diffusées par l'API. Cette date est délivrée au format timestamp UNIX. Cette variable peut-être à "null", notamment pour les unités cessées qui ont été purgées.
+              "siege_social": true, 
+              // Ce champ vous permet de savoir si l'établissement appelé est le siège social d'une entreprise ("true") ou non ("false").
+              "enseigne_1": null, 
+              "enseigne_2": null,
+              "enseigne_3": null, 
+              // Ces trois derniers champs indique le nom de l'enseigne, c'est à dire l'appelation qui permet de facilement identifier l'établissement. Un établissement peut avoir plusieurs enseignes. Le nom de l'enseigne est parfois découpé sur les trois champs.
+              "denomination_usuelle": null, 
+              // C'est le nom sous lequel l'établissement est connu du grand public. Cet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008.
+              "activite_principale_code": "62.02A", 
+              // Il s'agit du code APE de l'établissement (code APET), toujours composé de 4 chiffres et une lettre et codifié selon la Nomenclature d'Activité Française (https://www.insee.fr/fr/information/2120875). Les établissements d'une même entreprise peuvent avoir des activités différentes et de fait des APET différents. Le code APET peut également être identique à l'APE de l'entreprise (APEN) lorsque celle-ci n'a qu'un établissement.
+              "activite_principale_nomenclature": "NAFRev2", 
+              // Ce champ indique la nomenclature en vigueur pour l'etablissement appelé. Depuis 2015, la version est la "NAF rév.2."
+              "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques", // indique le libellé du code APET de l'établissement selon la nomenclature concernée.
+              "caractere_employeur": "O", 
+              // Indique si l'établissement a ou non des employés. La variable est "O" si l'établissement est employeur ; la variable est "N" si l'établissement ne l'est pas. La variable est historisée pour les établissements ouverts depuis 2005.
+              "etat_administratif": {
+                "value": "A", 
+                // Indique si l'établissement est actif, par "A". Ou s'il est jurdiquement fermé, par "F".
+                "date_fermeture": null  
+                // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F" (fermé).
+              },
+              "adresse_1": {
+              // Une entité peut dans certains cas avoir plusieurs adresses, par exemple quand le batiment a deux entrées.
+                "complement": "LA PIOLINE",
+                "numero_voie": "10",
+                "indice_repetition": null,
+                "type_voie": "ALL",
+                "libelle_voie": "DES PLATANES LES MILLES",
+                "code_postal": "13290",
+                "commune_code": "13001", 
+                // Cette suite de 5 chiffres correspond au code des communes tel que défini dans le code officiel géographique (COG) géré par l'INSEE et disponible à cette adresse : https://www.insee.fr/fr/information/2028028
+                "commune_libelle": "AIX-EN-PROVENCE",
+                "commune_etranger_libelle": null,
+                "distribution_speciale": null,
+                "cedex_code": "13546",
+                "cedex_libelle": "AIX EN PROVENCE CEDEX 4",
+                "pays_etranger_code": "", 
+                // Cette suite de chiffres correspond au code des pays étrangers, tels que définis dans la Codification des pays et territoires étrangers, disponible à cette adresse : https://www.insee.fr/fr/information/2028273
+                "pays_etranger_libelle": ""
+              },
+            }
+          }
 history: ""
 category: Informations générales
 ---

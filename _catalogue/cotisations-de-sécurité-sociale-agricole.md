@@ -24,52 +24,54 @@ perimeter:
     * la pèche
     * le forestier.
   label: Entreprises de l'agriculture, élevage, pèche et forestier.
-request:
-  id:
-    label: SiretDeL’Etablissement
-    description: Le numéro de siret de l'etablissement recherché
-  parameters:
-    param1:
-      label: token
-      description: JetonD’Habilitation
-    param2:
-      label: context
-      description: CadreDeLaRequête
-    param3:
-      label: recipient
-      description: BénéficiaireDel’Appel
-    param4:
-      label: object
-      description: RaisonDeL’AppelOuIdentifiant
-response:
-  description: La réponse indique si l'entreprise est à jour de ses cotisations
-    employeurs auprès de la MSA. Dans certains cas et sur un laps de temps
-    limité, l'entreprise peut faire l'objet d'une analyse par la MSA, ce qui
-    sera indiqué dans la réponse.
-  timeout: 5 secondes
-  format: Donnée structurée JSON
-  sample:
-    code: >
-      {
-        "a_jour": true / false / null 
-      // Si l'entreprise est à jour de ses cotisations patronales à la MSA, la réponse seral "true", à l'inverse, si l'entreprise n'est pas à jour, la réponse sera "false". Dans certains cas, le statut de l'entreprise est inconnu, une analyse est à effectuer, alors ce champ indiquera "null".
-        "analyse_en_cours": false / true
-      // Indique "false" quand le statut de l'entreprise est connu, autrement, indique "true" si justement, une analyse est en cours.
+services:
+  service1:
+    request:
+      id:
+        label: SiretDeL’Etablissement
+        description: Le numéro de siret de l'etablissement recherché
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          label: context
+          description: CadreDeLaRequête
+        param3:
+          label: recipient
+          description: BénéficiaireDel’Appel
+        param4:
+          label: object
+          description: RaisonDeL’AppelOuIdentifiant
+    response:
+      description: La réponse indique si l'entreprise est à jour de ses cotisations
+        employeurs auprès de la MSA. Dans certains cas et sur un laps de temps
+        limité, l'entreprise peut faire l'objet d'une analyse par la MSA, ce qui
+        sera indiqué dans la réponse.
+      timeout: 5 secondes
+      format: Donnée structurée JSON
+      sample:
+        code: >
+          {
+            "a_jour": true / false / null 
+          // Si l'entreprise est à jour de ses cotisations patronales à la MSA, la réponse seral "true", à l'inverse, si l'entreprise n'est pas à jour, la réponse sera "false". Dans certains cas, le statut de l'entreprise est inconnu, une analyse est à effectuer, alors ce champ indiquera "null".
+            "analyse_en_cours": false / true
+          // Indique "false" quand le statut de l'entreprise est connu, autrement, indique "true" si justement, une analyse est en cours.
 
-      }
-  questions:
-    qr1:
-      question: Quelles sont les trois situations possibles pour une entreprise ?
-      answer: >-
-        Il existe donc 3 situations possibles pour une entreprise :
-
-
-        * L'entreprise est à jour de ses cotisations sociales auprès de la MSA.
-
-        * L'entreprise n'est pas à jour de ses cotisations sociales.
-
-        * La régularité de l'entreprise est inconnue. Une analyse est à effectuer par un agent caisse de la MSA pour savoir si le débiteur est à jour ou pas.
+          }
+      questions:
+        qr1:
+          question: Quelles sont les trois situations possibles pour une entreprise ?
+          answer: >-
+            Il existe donc 3 situations possibles pour une entreprise :
 
 
-        ℹ️ Ces trois situations correspondent à un fonctionnement normal de l'endpoint, quand il n'y a pas d'erreur à signaler. S'il y a une erreur, les champs seront vides et un code erreur HTTP vous sera envoyé.
+            * L'entreprise est à jour de ses cotisations sociales auprès de la MSA.
+
+            * L'entreprise n'est pas à jour de ses cotisations sociales.
+
+            * La régularité de l'entreprise est inconnue. Une analyse est à effectuer par un agent caisse de la MSA pour savoir si le débiteur est à jour ou pas.
+
+
+            ℹ️ Ces trois situations correspondent à un fonctionnement normal de l'endpoint, quand il n'y a pas d'erreur à signaler. S'il y a une erreur, les champs seront vides et un code erreur HTTP vous sera envoyé.
 ---

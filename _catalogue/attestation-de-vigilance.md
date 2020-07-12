@@ -26,72 +26,74 @@ new: "À compter du 25 septembre 2019 : Pour un SIREN donné il ne sera possible
 perimeter:
   description: ""
   label: Toutes les entreprises
-request:
-  id:
-    label: SirenDeL’Entreprise
-    description: Le numéro de siren de la personne physique ou morale recherchée
-  parameters:
-    param1:
-      label: token
-      description: JetonD’Habilitation
-    param2:
-      label: context
-      description: CadreDeLaRequête
-    param3:
-      label: recipient
-      description: BénéficiaireDel’Appel
-    param4:
-      label: object
-      description: RaisonDeL’AppelOuIdentifiant
-  questions:
-    qr1:
-      question: À quelles conditions l'attestation de vigilance est délivrée à une
-        entreprise par l'ACOSS ?
-      answer: >-
-        L'entreprise, micro entreprise peut recevoir l'attestation quand :  
+services:
+  service1:
+    request:
+      id:
+        label: SirenDeL’Entreprise
+        description: Le numéro de siren de la personne physique ou morale recherchée
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          label: context
+          description: CadreDeLaRequête
+        param3:
+          label: recipient
+          description: BénéficiaireDel’Appel
+        param4:
+          label: object
+          description: RaisonDeL’AppelOuIdentifiant
+      questions:
+        qr1:
+          question: À quelles conditions l'attestation de vigilance est délivrée à une
+            entreprise par l'ACOSS ?
+          answer: >-
+            L'entreprise, micro entreprise peut recevoir l'attestation quand :  
 
 
-        * elle s'acquitte des cotisations et contributions dues à leur date normale d’exigibilité,
+            * elle s'acquitte des cotisations et contributions dues à leur date normale d’exigibilité,
 
-        * elle a souscrit un plan d’apurement des cotisations et contributions restant dues qu’elle respecte,
+            * elle a souscrit un plan d’apurement des cotisations et contributions restant dues qu’elle respecte,
 
-        * elle acquitte les cotisations et contributions dues, mais elle n’est pas à jour par ailleurs dans le paiement des majorations et pénalités,
+            * elle acquitte les cotisations et contributions dues, mais elle n’est pas à jour par ailleurs dans le paiement des majorations et pénalités,
 
-        * ou elle n’a pas acquitté les cotisations et contributions dues mais en conteste le montant par recours contentieux. 
+            * ou elle n’a pas acquitté les cotisations et contributions dues mais en conteste le montant par recours contentieux. 
 
 
-        ℹ️ Le cadre précis de la demande par le donneur d'ordre et de la délivrance de l'attestation à l'entreprise est expliqué sur le site de l'ACOSS :[ https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html](<Quand est-ce que l'attestation de vigilance est délivrée par l'ACOSS ?>)
-    qr2:
-      question: Pourquoi ne puis-je plus avoir l'Attestation de Marché Publique ?
-      answer: L'AMP a été supprimée les informations sont maintenant contenues dans
-        l'attestation de vigilance.
-response:
-  format: Document PDF
-  timeout: 12 secondes
-  questions:
-    qr1:
-      answer: L’attestation de vigilance est valide 6 mois à compter de la dernière
-        date de période analysée. Celle-ci dépend de la situation de chaque
-        entreprise et de la dernière déclaration enregistrée dans le système.
-      question: Combien de temps est valide l’attestation de vigilance ?
-    qr2:
-      question: L’api ne renvoie pas de pièce, peut-on considérer que l'entreprise
-        n'est pas à jour ?
-      answer: Non, dans certain cas, nous ne pouvons pas récupérer l’attestation. Ça
-        ne signifie pas que l’entreprise n’est pas à jour.
-    qr3:
-      question: L’api ne renvoie pas la pièce, est ce que ça veut dire qu’elle ne sera
-        jamais disponible ?
-      answer: Non, dans certain cas, la requête lance une demande dans le système de
-        l’ACOSS qui necessite un traitement par un gestionnaire avant que
-        l’attestation soit disponible.
-  sample:
-    code: >
-      {
-          "url":
-          "https://storage.entreprise.api.gouv.fr/siade/1569156881-f749d75e2bfd443316e2e02d59015f-attestation_vigilance_acoss.pdf"
-      }
-  description: La réponse se compose de l'URL permettant d'accéder à l’attestation
-    de vigilance de l'entreprise demandée en PDF. [Voici un
-    exemple](https://doc.entreprise.api.gouv.fr/files/attestation_sociale.pdf).
+            ℹ️ Le cadre précis de la demande par le donneur d'ordre et de la délivrance de l'attestation à l'entreprise est expliqué sur le site de l'ACOSS :[ https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html](<Quand est-ce que l'attestation de vigilance est délivrée par l'ACOSS ?>)
+        qr2:
+          question: Pourquoi ne puis-je plus avoir l'Attestation de Marché Publique ?
+          answer: L'AMP a été supprimée les informations sont maintenant contenues dans
+            l'attestation de vigilance.
+    response:
+      format: Document PDF
+      timeout: 12 secondes
+      questions:
+        qr1:
+          answer: L’attestation de vigilance est valide 6 mois à compter de la dernière
+            date de période analysée. Celle-ci dépend de la situation de chaque
+            entreprise et de la dernière déclaration enregistrée dans le système.
+          question: Combien de temps est valide l’attestation de vigilance ?
+        qr2:
+          question: L’api ne renvoie pas de pièce, peut-on considérer que l'entreprise
+            n'est pas à jour ?
+          answer: Non, dans certain cas, nous ne pouvons pas récupérer l’attestation. Ça
+            ne signifie pas que l’entreprise n’est pas à jour.
+        qr3:
+          question: L’api ne renvoie pas la pièce, est ce que ça veut dire qu’elle ne sera
+            jamais disponible ?
+          answer: Non, dans certain cas, la requête lance une demande dans le système de
+            l’ACOSS qui necessite un traitement par un gestionnaire avant que
+            l’attestation soit disponible.
+      sample:
+        code: >
+          {
+              "url":
+              "https://storage.entreprise.api.gouv.fr/siade/1569156881-f749d75e2bfd443316e2e02d59015f-attestation_vigilance_acoss.pdf"
+          }
+      description: La réponse se compose de l'URL permettant d'accéder à l’attestation
+        de vigilance de l'entreprise demandée en PDF. [Voici un
+        exemple](https://doc.entreprise.api.gouv.fr/files/attestation_sociale.pdf).
 ---
