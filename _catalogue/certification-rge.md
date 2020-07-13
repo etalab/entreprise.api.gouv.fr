@@ -16,7 +16,6 @@ access: Restreint, [disponible en recherche manuelle sur le site
   faire.gouv.fr](https://www.faire.gouv.fr/trouvez-un-professionnel)
 opening: Données publiques
 providers:
-  - insee
   - ademe
 services:
   service1:
