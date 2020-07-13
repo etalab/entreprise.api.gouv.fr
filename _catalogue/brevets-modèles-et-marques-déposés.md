@@ -1,7 +1,7 @@
 ---
 weight: 24
 type: Propriété intellectuelle
-title: Brevets, modèles  et marques déposés
+title: "Brevets, modèles et marques déposés"
 label: extraits_courts_inpi
 scope:
   - entreprises
