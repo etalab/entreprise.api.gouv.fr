@@ -191,7 +191,7 @@ services:
         * et les dernières marques déposées (numéro d'identification, nom de la marque, statut de la marque, dépositaire, clé).
 
 
-        ⚠️ Les données présentes ne peuvent être considérées comme exhaustives
+        ⚠️ Les données présentes ne peuvent être considérées comme exhaustives.
       questions:
         qr1:
           question: Que conclure d'une absence de données ?
@@ -199,12 +199,12 @@ services:
             Actuellement, un retour vide peut avoir deux significations. 
 
 
-            * soit le siren n'existe pas et est inconnu des services de l'INPI ; 
+            * soit le SIREN n'existe pas et est inconnu des services de l'INPI ; 
 
             * soit aucune donnée n'est enregistrée auprès du fournisseur pour cette société. 
 
 
-            Vous pouvez si vous le souhaiter coupler vos appels avec une vérification de l'existence dans la base SIRENE d'un siren en particulier qui permettra de trancher entre les deux options. À noter que certaines personnes peuvent demander à être retirées de la diffusion SIRENE dans de très rares cas
+            Vous pouvez si vous le souhaiter coupler vos appels avec une vérification de l'existence dans la base Sirene d'un SIREN en particulier qui permettra de trancher entre les deux options. À noter que certaines personnes peuvent demander à être retirées de la diffusion Sirene dans de très rares cas
         qr2:
           question: ""
 service2:
