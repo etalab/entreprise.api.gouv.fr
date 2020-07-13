@@ -37,35 +37,74 @@ perimeter:
 
     ℹ️ Les entreprises anciennement aux forfaits BIC/BNC/BA , désormais régimes micro-BIC, micro-BNC et micro-BA ne déposent pas de déclaration de résultat mais des éléments spécifiques dans la déclaration 2042C qui relève de d'impôt sur le revenu et ne sont donc pas dans le périmètre de cet endpoint.
   label: Entreprises BIC, BA, BNC, ou soumises à l'IS, IS groupe.
-request:
-  id:
-    label: AnneeDeLaLiasseDemandée/declarations/SirenDeL'Entreprise
-    description: "L'année de la liasse fiscale demandée + le paramètre
-      \"declarations\" + le numéro de SIREN de l'entreprise "
-  parameters:
-    param1:
-      label: token
-      description: JetonD’Habilitation
-    param2:
-      label: context
-      description: CadreDeLaRequête
-    param3:
-      label: recipient
-      description: BénéficiaireDel’Appel
-    param4:
-      label: object
-      description: RaisonDeL’AppelOuIdentifiant
-  questions:
-    qr1:
-      answer: Chaque liasse fiscale renvoyée est accompagnée d'un millésime, et chaque
-        valeur est indiquée par un `code_nref`. Ce dernier est une suite de 6
-        chiffres, le dictionnaire de liasses fiscales disponible avec l'option
-        d'appel `Annee/dictionnaire` vous permet de retrouver la signification
-        du code, et donc de la valeur, appelé "intitulé de la donnée". Il vous
-        faudra à chaque fois préciser le millésime, car les nomenclatures
-        évoluent chaque année.
-      question: Comment faire le lien avec le dictionnaire ?
-response:
-  format: Donnée structurée JSON
-  timeout: 5 secondes
+services:
+  service1:
+    label: "Déclaration d’une entreprise"
+    request:
+      id:
+        label: AnneeDeLaLiasseDemandée
+        description: "L'année de la liasse fiscale demandée + le paramètre
+          \"declarations\" + le numéro de SIREN de l'entreprise "
+        extra1: declarations
+        extra2: SirenDeL’entreprise
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          label: context
+          description: CadreDeLaRequête
+        param3:
+          label: recipient
+          description: BénéficiaireDel’Appel
+        param4:
+          label: object
+          description: RaisonDeL’AppelOuIdentifiant
+      questions:
+        qr1:
+          answer: Chaque liasse fiscale renvoyée est accompagnée d'un millésime, et chaque
+            valeur est indiquée par un `code_nref`. Ce dernier est une suite de 6
+            chiffres, le dictionnaire de liasses fiscales disponible avec l'option
+            d'appel `Annee/dictionnaire` vous permet de retrouver la signification
+            du code, et donc de la valeur, appelé "intitulé de la donnée". Il vous
+            faudra à chaque fois préciser le millésime, car les nomenclatures
+            évoluent chaque année.
+          question: Comment faire le lien avec le dictionnaire ?
+    response:
+      format: Donnée structurée JSON
+      timeout: 5 secondes
+  service2:
+    request:
+      id:
+        label: AnneeDeLaLiasseDemandée
+        description: "L'année de la liasse fiscale demandée + le paramètre
+          \"declarations\" + le numéro de SIREN de l'entreprise "
+        extra1: declarations
+        extra2: SirenDeL’entreprise
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          label: context
+          description: CadreDeLaRequête
+        param3:
+          label: recipient
+          description: BénéficiaireDel’Appel
+        param4:
+          label: object
+          description: RaisonDeL’AppelOuIdentifiant
+      questions:
+        qr1:
+          answer: Chaque liasse fiscale renvoyée est accompagnée d'un millésime, et chaque
+            valeur est indiquée par un `code_nref`. Ce dernier est une suite de 6
+            chiffres, le dictionnaire de liasses fiscales disponible avec l'option
+            d'appel `Annee/dictionnaire` vous permet de retrouver la signification
+            du code, et donc de la valeur, appelé "intitulé de la donnée". Il vous
+            faudra à chaque fois préciser le millésime, car les nomenclatures
+            évoluent chaque année.
+          question: Comment faire le lien avec le dictionnaire ?
+    response:
+      format: Donnée structurée JSON
+      timeout: 5 secondes
 ---

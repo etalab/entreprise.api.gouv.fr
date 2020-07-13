@@ -17,34 +17,36 @@ opening: Données confidentielles
 providers:
   - probtp
 new: ""
-request:
-  id:
-    label: SirenDeL’Entreprise
-    description: Le numéro de siren de la personne physique ou morale recherchée
-  parameters:
-    param1:
-      label: token
-      description: JetonD’Habilitation
-    param2:
-      label: context
-      description: CadreDeLaRequête
-    param3:
-      label: recipient
-      description: BénéficiaireDel’Appel
-    param4:
-      label: object
-      description: RaisonDeL’AppelOuIdentifiant
-response:
-  sample:
-    code: >
-      {
-        "eligible": true / false 
-        "message": "00 Compte éligible pour attestation de cotisation" /"01 Compte non éligible pour attestation de cotisation"
-      // Lorque l'entreprise est éligible la réponse est "true" et le message affiché est le "00", 
+services:
+  service1:
+    request:
+      id:
+        label: SirenDeL’Entreprise
+        description: Le numéro de siren de la personne physique ou morale recherchée
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          label: context
+          description: CadreDeLaRequête
+        param3:
+          label: recipient
+          description: BénéficiaireDel’Appel
+        param4:
+          label: object
+          description: RaisonDeL’AppelOuIdentifiant
+    response:
+      sample:
+        code: >
+          {
+            "eligible": true / false 
+            "message": "00 Compte éligible pour attestation de cotisation" /"01 Compte non éligible pour attestation de cotisation"
+          // Lorque l'entreprise est éligible la réponse est "true" et le message affiché est le "00", 
 
-      // Lorsque l'entreprise est inéligible, la réponse est "false" et le message affiché est le "01".
+          // Lorsque l'entreprise est inéligible, la réponse est "false" et le message affiché est le "01".
 
-      }
-  timeout: 5 secondes
-  format: Donnée structurée JSON
+          }
+      timeout: 5 secondes
+      format: Donnée structurée JSON
 ---

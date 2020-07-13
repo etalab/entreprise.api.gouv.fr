@@ -30,41 +30,43 @@ perimeter:
 
     ℹ️ Plus d'informations sur <https://www.cnetp.org/category/affiliation/>
   label: Entreprises de travaux publics et bâtiment
-request:
-  id:
-    label: SirenDeL’Entreprise
-    description: Le numéro de siren de la personne physique ou morale recherchée
-  parameters:
-    param1:
-      label: token
-      description: JetonD’Habilitation
-    param2:
-      label: context
-      description: CadreDeLaRequête
-    param3:
-      label: recipient
-      description: BénéficiaireDel’Appel
-    param4:
-      label: object
-      description: RaisonDeL’AppelOuIdentifiant
-response:
-  questions:
-    qr1:
-      question: Quelles sont les conditions de délivrance de l'attestation ?
-      answer: >-
-        L'attestation est dilivrée à l'entreprise sous réserve que celle-ci :
+services:
+  service1:
+    request:
+      id:
+        label: SirenDeL’Entreprise
+        description: Le numéro de siren de la personne physique ou morale recherchée
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          label: context
+          description: CadreDeLaRequête
+        param3:
+          label: recipient
+          description: BénéficiaireDel’Appel
+        param4:
+          label: object
+          description: RaisonDeL’AppelOuIdentifiant
+    response:
+      questions:
+        qr1:
+          question: Quelles sont les conditions de délivrance de l'attestation ?
+          answer: >-
+            L'attestation est dilivrée à l'entreprise sous réserve que celle-ci :
 
 
-        * soit à jour de ses déclarations exigibles servant à l'assiette des cotisations de congés payés et des cotisations de chômage-intempéries ;
+            * soit à jour de ses déclarations exigibles servant à l'assiette des cotisations de congés payés et des cotisations de chômage-intempéries ;
 
-        * soit à jour du paiement des cotisations citées.
-  format: Document PDF
-  timeout: 12 secondes
-  description: La réponse délivre une URL de téléchargement de l'attestation au
-    format PDF quand celle-ci est disponible.
-  sample:
-    code: >-
-      {
-        "url": "https://storage.entreprise.api.gouv.fr/siade/1569156960-dbd0926a14706614c69798309bd687-certificat_cnetp.pdf"
-      }
+            * soit à jour du paiement des cotisations citées.
+      format: Document PDF
+      timeout: 12 secondes
+      description: La réponse délivre une URL de téléchargement de l'attestation au
+        format PDF quand celle-ci est disponible.
+      sample:
+        code: >-
+          {
+            "url": "https://storage.entreprise.api.gouv.fr/siade/1569156960-dbd0926a14706614c69798309bd687-certificat_cnetp.pdf"
+          }
 ---
