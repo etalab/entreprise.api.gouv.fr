@@ -75,99 +75,171 @@ services:
 
         * Un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` du bilan indiqué dans la liste JSON des bilans.
       sample:
-        code: >-
-          {
-            "url_documents": "https://storage.entreprise.api.gouv.fr/siade_dev/1565607027-91ac7ac7e80b866055d23b9203e41fa0de487bc0-all_documents.zip",
-            "bilans": [
-              {
-                "id_fichier": 11439992, 
-                // Cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
-                "siren": "788242667",
-                "denomination_sociale": null,
-                "code_greffe": 7402,
-                // Ce code indique le greffe auquel est rattaché l'entreprise. 7402 correspond par exemple au greffe de Thonon-les-Bains.
-                "date_depot": "20180116",
-                "nature_archive": "B-S", 
-                // indique la nature du bilan, "B_C" pour bilan consolidé, "B-S" pour bilan simplifié, "B-CO" pour bilan complet et "B-BA" pour les bilans de banques et assurances.
-                "confidentiel": 0, 
-                // Ce champ peut contenir plusieurs valeurs, "0" signifie que le bilan est public, "1" indique que le bilan est confidentiel, "2", que le bilan est partiellement confidentiel.
-                "date_cloture": "2016-12-31T00:00:00.000Z",
-                "numero_gestion": "1973B00101"
-                // C'est le numéro de dossier attribué par le greffe, il permet d'identifier de manière unique les dossiers. Cette unicité est valable pour un seul greffe. L'unicité totale s'obtient donc en associant le code greffe au numéro de gestion.
-              },
-              {
-                "url_documents": "https://storage.entreprise.api.gouv.fr/siade_dev/1565607027-91ac7ac7e80b866055d23b9203e41fa0de487bc0-all_documents.zip",
-                "bilans": [
-                  {
-                    "id_fichier": 11439992, 
-                    // cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
-                    "siren": "788242667",
-                    "denomination_sociale": null,
-                    "code_greffe": 7402,
-                    "date_depot": "20180116",
-                    "nature_archive": "B-S", 
-                    // indique la nature du bilan, "B_C" pour bilan consolidé, "B-S" pour bilan simplifié, "B-CO" pour bilan complet et "B-BA" pour les bilans de banques et assurances.
-                    "confidentiel": 0, 
-                    // Ce champ peut contenir plusieurs valeurs, "0" signifie que le bilan est public, "1" indique que le bilan est confidentiel, "2", que le bilan est partiellement confidentiel.
-                    "date_cloture": "2016-12-31T00:00:00.000Z",
-                    "numero_gestion": "1973B00101"
-                  },
-                  {
-                    "id_fichier": 12553924,
-                    "siren": "788242667",
-                    "denomination_sociale": null,
-                    "code_greffe": 7402,
-                    "date_depot": "20180921",
-                    "nature_archive": "B-S",
-                    "confidentiel": 0,
-                    "date_cloture": "2017-12-31T00:00:00.000Z",
-                    "numero_gestion": "1973B00101"
-                  }
-                ]
-              }
+        code: "{
+
+          \  \"url_documents\":
+          \"https://storage.entreprise.api.gouv.fr/siade_dev/1565607027-91ac7ac\
+          7e80b866055d23b9203e41fa0de487bc0-all_documents.zip\",
+
+          \  \"bilans\": [
+
+          \    {
+
+          \      \"id_fichier\": 11439992,\ 
+
+          \      // Cet identifiant permet de retrouver le document
+          dans l'archive ZIP, à l'aide du fichier \"Response.json\" permettant
+          de faire lien entre cet ID et le nom du PDF.
+
+          \      \"siren\": \"788242667\",
+
+          \      \"denomination_sociale\": null,
+
+          \      \"code_greffe\": 7402,
+
+          \      // Ce code indique le greffe auquel est rattaché
+          l'entreprise. 7402 correspond par exemple au greffe de
+          Thonon-les-Bains.
+
+          \      \"date_depot\": \"20180116\",
+
+          \      \"nature_archive\": \"B-S\",\ 
+
+          \      // indique la nature du bilan, \"B_C\" pour bilan
+          consolidé, \"B-S\" pour bilan simplifié, \"B-CO\" pour bilan complet
+          et \"B-BA\" pour les bilans de banques et assurances.
+
+          \      \"confidentiel\": 0,\ 
+
+          \      // Ce champ peut contenir plusieurs valeurs, \"0\"
+          signifie que le bilan est public, \"1\" indique que le bilan est
+          confidentiel, \"2\", que le bilan est partiellement confidentiel.
+
+          \      \"date_cloture\": \"2016-12-31T00:00:00.000Z\",
+
+          \      \"numero_gestion\": \"1973B00101\"
+
+          \      // C'est le numéro de dossier attribué par le greffe,
+          il permet d'identifier de manière unique les dossiers. Cette unicité
+          est valable pour un seul greffe. L'unicité totale s'obtient donc en
+          associant le code greffe au numéro de gestion.
+
+          \    },
+
+          \    {
+
+          \      \"url_documents\":
+          \"https://storage.entreprise.api.gouv.fr/siade_dev/1565607027-91ac7ac\
+          7e80b866055d23b9203e41fa0de487bc0-all_documents.zip\",
+
+          \      \"bilans\": [
+
+          \        {
+
+          \          \"id_fichier\": 11439992,\ 
+
+          \          // cet identifiant permet de retrouver le
+          document dans l'archive ZIP, à l'aide du fichier \"Response.json\"
+          permettant de faire lien entre cet ID et le nom du PDF.
+
+          \          \"siren\": \"788242667\",
+
+          \          \"denomination_sociale\": null,
+
+          \          \"code_greffe\": 7402,
+
+          \          \"date_depot\": \"20180116\",
+
+          \          \"nature_archive\": \"B-S\",\ 
+
+          \          // indique la nature du bilan, \"B_C\" pour bilan
+          consolidé, \"B-S\" pour bilan simplifié, \"B-CO\" pour bilan complet
+          et \"B-BA\" pour les bilans de banques et assurances.
+
+          \          \"confidentiel\": 0,\ 
+
+          \          // Ce champ peut contenir plusieurs valeurs,
+          \"0\" signifie que le bilan est public, \"1\" indique que le bilan est
+          confidentiel, \"2\", que le bilan est partiellement confidentiel.
+
+          \          \"date_cloture\": \"2016-12-31T00:00:00.000Z\",
+
+          \          \"numero_gestion\": \"1973B00101\"
+
+          \        },
+
+          \        {
+
+          \          \"id_fichier\": 12553924,
+
+          \          \"siren\": \"788242667\",
+
+          \          \"denomination_sociale\": null,
+
+          \          \"code_greffe\": 7402,
+
+          \          \"date_depot\": \"20180921\",
+
+          \          \"nature_archive\": \"B-S\",
+
+          \          \"confidentiel\": 0,
+
+          \          \"date_cloture\": \"2017-12-31T00:00:00.000Z\",
+
+          \          \"numero_gestion\": \"1973B00101\"
+
+          \        }
+
+          \      ]
+
+          \    }
+
           questions:
-            qr3:
-              question: Comment utiliser le fichier resonses.json ?
-            qr2:
-              question: Comment utiliser les bilans confidentiels et les bians partiellement
-                confidentiels ?
-              answer: >-
-                Certaines entreprises (PME) peuvent décider de ne pas publier leurs
-                comptes annuels. Elles ont toutefois l’obligation de les déposer. Leur
-                bilans sont donc présents à l'INPI et cet endpoint permet d'y accéder.
+
+          \  qr3:
+
+          \    question: Comment utiliser le fichier resonses.json ?
+
+          \  qr2:
+
+          \    "
+      questions:
+        qr1:
+          answer: >-
+            Certaines entreprises (PME) peuvent décider de ne pas publier leurs
+            comptes annuels. Elles ont toutefois l’obligation de les déposer.
+            Leurs bilans sont donc présents à l'INPI et cet endpoint permet d'y
+            accéder. 
 
 
-                ###### Bilans confidentiel
+            ###### Bilans confidentiels
 
 
-                Lorsque le champ `confidentiel` est égal à `1`, cela signifie que le bilan est totalement confidentiel.\
-
-                Cela signifie que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
+            Lorsque le champ `confidentiel` est égal à `1`, cela signifie que le bilan est totalement confidentiel et implique que vous vous engagez à n'**utiliser ces informations que dans le cadre strict de vos missions de service public**, à **ne pas les rediffuser** ni les divulguer auprès de tiers non autorisés.
 
 
+            ###### Bilan partiellement confidentiels
 
 
-                ###### Bilans partiellement confidentiel
+            Lorsque le champ `confidentiel` est égal à `2`, cela signifie qu'une partie du document est confidentielle et que l'autre est publique. Depuis 2019, l'INPI a rendu les PDF séparables, ce qui permet aux personnes ayant un compte public de télécharger les informations disponibles.
 
 
-                Lorsque le champ `confidentiel` est égal à `2`, cela signifie qu'une partie du document est confidentielle et que l'autre est publique. 
+            Dans le cadre de l'utilisation de l'API Entreprise, les bilans partiellement confidentiels de l'INPI sont à traiter comme les bilans confidentiels puisque la distincition n'est pas faire entre données publiques et secrètes. Vous vous engagez  à n'utiliser ces informations que dans le strict cadre de vos missions de service publics, à ne pas les rediffuser ni les divulguer à des tiers non autorisés.
+          question: Comment utiliser les bilans confidentiels et les bilans partiellement
+            confidentiels ?
+        qr2:
+          question: Quel est le délai de mise à disposition des bilans dans l'API INPI ?
+          answer: >-
+            ###### Les bilans au format PDF
 
 
-            Depuis 2019, l'INPI a rendu les PDF séparables, ce qui permet aux personnes ayant un compte public de télécharger les informations disponibles.
+            Les bilans PDF disponibles dans l'archive ZIP sont transmis théoriquement par le greffe 24h après leur dépôt.
 
 
-                Dans le cadre de l'utilisation d'API Entreprise, les bilans partiellement confidentiels sont à traiter comme les bilans confidentiels puisque la distinction n'est pas faite entre données publiques et protégées. Vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
-            qr1:
-              question: Quel est le délai de mise à disposition des bilans dans l'API INPI ?
-              answer: >-
-                ###### Les bilans au format PDF 
 
 
-                Les bilans PDF disponibles dans l'archive ZIP sont transmis théoriquement à l'INPI par le greffe 24h après leur dépôt.
+            ###### Les bilans XML
 
 
-                ###### Les bilans XML
-
-
-                Les données du bilans mises à disposition sous forme de XML nécessitent un délai plus long de deux semaines.
+            Les données du bilan mises à disposition sous forme XML nécessitent un délai plus long de deux semaines.
 ---

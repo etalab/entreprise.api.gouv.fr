@@ -7,7 +7,7 @@ scope:
   - entreprises
 description: Obtenir les actes d’une entreprise tels que connus par les greffes
   et archivés à l’Institut National de Propriété Industrielle (INPI). Ces actes
-  comportent des informations générales,  des informations sur le capital social
+  comportent des informations générales, des informations sur le capital social
   et sa répartition, ou encore des informations sur les associés et tout ce qui
   est relatif à l'administration de la société.
 usecases:
@@ -25,7 +25,7 @@ perimeter:
     actes sont transmis à l'INPI par le greffe dans un délai de 24h.
 
 
-    ℹ️ Il se peut que certains actes soient manquants, dans ce cas, vous pouvez nous [envoyer un mail]([support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)) avec le numéro de SIRET concerné. L'INPI peut tenter de nuémriser le document manquant.
+    ℹ️ Il se peut que certains actes soient manquants, dans ce cas, vous pouvez nous [envoyer un mail]([support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)) avec le numéro de SIRET concerné. L'INPI peut tenter de numériser le document manquant.
   label: "Actes et statuts des personnes morales et physiques depuis 1993 "
 services:
   service1:
