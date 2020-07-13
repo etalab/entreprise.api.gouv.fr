@@ -594,6 +594,7 @@ collections:
               name: 'timeout'
               widget: 'select'
               multiple: false
+              required: false
               options: ['5 secondes', '12 secondes'] 
             - label: 'Description'
               name: 'description'
@@ -876,6 +877,7 @@ collections:
               name: 'timeout'
               widget: 'select'
               multiple: false
+              required: false
               options: ['5 secondes', '12 secondes'] 
             - label: 'Description'
               name: 'description'
