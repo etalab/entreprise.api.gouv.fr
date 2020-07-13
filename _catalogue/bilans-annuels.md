@@ -11,7 +11,7 @@ usecases:
   - Aides publiques
   - Marchés publics
 access: Restreint, [disponible sous d'autres conditions (uniquement les bilans
-  publics) sur le site de l'INPI](https://data.inpi.fr/)
+  publics) sur le site de l'INPI](https://data.inpi.fr/swagger)
 opening: Données publiques et confidentielles
 providers:
   - inpi
@@ -23,12 +23,15 @@ perimeter:
     confidentiels**.
 
 
-    Toutes les entreprises sont concernées sauf : 
+    ✅ **Toutes les entreprises** sont concernées sauf : 
 
 
-    * les sociétés en micro-BNC ou micro-BIC ;
+    * ❌ les sociétés en micro-BNC ou micro-BIC ;
 
-    * les entrepreneurs individuels (commerçants, artisans, profession libérale, micro-entrepreneurs notamment) ;
+    * ❌ les entrepreneurs individuels (commerçants, artisans, profession libérale, micro-entrepreneurs notamment) ;
+
+
+    ℹ️ Chaque année, il y a environ 1,2 million d'inscriptions par an, dont 45% avec déclaration de confidentialité.
 request:
   id:
     label: SirenDeL’Entreprise
@@ -76,10 +79,11 @@ response:
         "bilans": [
           {
             "id_fichier": 11439992, 
-            // cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
+            // Cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
             "siren": "788242667",
             "denomination_sociale": null,
             "code_greffe": 7402,
+            // Ce code indique le greffe auquel est rattaché l'entreprise. 7402 correspond par exemple au greffe de Thonon-les-Bains.
             "date_depot": "20180116",
             "nature_archive": "B-S", 
             // indique la nature du bilan, "B_C" pour bilan consolidé, "B-S" pour bilan simplifié, "B-CO" pour bilan complet et "B-BA" pour les bilans de banques et assurances.
@@ -87,6 +91,7 @@ response:
             // Ce champ peut contenir plusieurs valeurs, "0" signifie que le bilan est public, "1" indique que le bilan est confidentiel, "2", que le bilan est partiellement confidentiel.
             "date_cloture": "2016-12-31T00:00:00.000Z",
             "numero_gestion": "1973B00101"
+            // C'est le numéro de dossier attribué par le greffe, il permet d'identifier de manière unique les dossiers. Cette unicité est valable pour un seul greffe. L'unicité totale s'obtient donc en associant le code greffe au numéro de gestion.
           },
           {
             "id_fichier": 12553924,
@@ -129,7 +134,7 @@ response:
         Lorsque le champ `confidentiel` est égal à `2`, cela signifie qu'une partie du document est confidentielle et que l'autre est publique. 
 
 
-        Depuis 2019, l'INPI a rendu les PDF séparable, ce qui permet aux personnes ayant un compte public de télécharger les informations disponibles.
+        Depuis 2019, l'INPI a rendu les PDF séparables, ce qui permet aux personnes ayant un compte public de télécharger les informations disponibles.
 
 
         Dans le cadre de l'utilisation d'API Entreprise, les bilans partiellement confidentiels sont à traiter comme les bilans confidentiels puisque la distinction n'est pas faite entre données publiques et protégées. Vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.

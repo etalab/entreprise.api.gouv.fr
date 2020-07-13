@@ -13,19 +13,20 @@ description: Obtenir les actes d’une entreprise tels que connus par les greffe
 usecases:
   - Marchés publics
   - Aides publiques
-access: Restreint
+access: Restreint, [disponible sous d'autres conditions sur le site de
+  l'INPI](https://data.inpi.fr/swagger)
 opening: Données confidentielles
 providers:
   - inpi
 perimeter:
   description: >-
     Tous les actes établis par les greffes depuis 1993 sont transmis par cet
-    endpoint. Théoriquement, les actes sont transmis à l'INPI par le greffe dans
-    un délai de 24h.
+    endpoint. Ce qui représente envrion 25 millions d'actes. Théoriquement, les
+    actes sont transmis à l'INPI par le greffe dans un délai de 24h.
 
 
     ℹ️ Il se peut que certains actes soient manquants, dans ce cas, vous pouvez nous [envoyer un mail]([support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)) avec le numéro de SIRET concerné. L'INPI peut tenter de nuémriser le document manquant.
-  label: Tous les actes des entreprises depuis 1993
+  label: "Actes et statuts des personnes morales et physiques depuis 1993 "
 request:
   id:
     label: SirenDeL’Entreprise
