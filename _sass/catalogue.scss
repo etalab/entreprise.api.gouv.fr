@@ -171,12 +171,11 @@
 
   .technical-documentation .columns>div {
     display: flex;
-    flex-basis: 48%;
     flex-direction: column;
     flex-shrink: 1;
     flex-grow: 1;
-    justify-content: space-between;
     margin: var(--spacing-s) 0;
+    max-width: 48%;
     padding: 0;
   }
 
@@ -228,13 +227,13 @@
   }
 
   .json-example {
-    background-color: var(--grey);
     border-radius: var(--border-radius-default);
-    margin-top: var(--spacing-m);
+    overflow: hidden;
     position: relative;
   }
 
   .json-example h5 {
+    background-color: var(--grey);
     padding: var(--spacing-xs) var(--spacing-s);
     margin: 0;
     text-transform: initial;
@@ -262,6 +261,7 @@
     height: 100%;
     line-height: 1.5em;
     height: 25em;
+    resize: vertical;
   }
 
   .technical-documentation .highlight { 
@@ -290,6 +290,15 @@
 
   .history {
     margin-top: var(--spacing-m);
+
+    summary h4 {
+      display: inline-block;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 
   .current-status {
@@ -469,6 +478,10 @@
   @media (max-width: 1085px) {
     .technical-documentation .columns {
       flex-direction: column;
+    }
+
+    .technical-documentation .columns>div {
+      max-width: 100%;
     }
 
     .technical-documentation .columns .response {
