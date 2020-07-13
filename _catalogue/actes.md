@@ -77,25 +77,26 @@ services:
                   }
                 ]
               }
-          description: >-
-            ###### Contenu de la réponse JSON
+      questions:
+        qr1:
+          answer: ""
+        qr2:
+          answer: ""
+      description: >-
+        ###### Contenu de la réponse JSON
 
 
-            * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des actes de l'entité appelée ;
+        * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des actes de l'entité appelée ;
 
-            * **La liste des actes, accompagnés de leurs informations génériques** (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et la nature de l'archive.)
-
-
-            ###### Contenu de l'archive ZIP 🗂 :
+        * **La liste des actes, accompagnés de leurs informations génériques** (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et la nature de l'archive.)
 
 
-            * Tous les actes au format PDF ;
+        ###### Contenu de l'archive ZIP 🗂 :
 
-            * Toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
 
-            * Un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` de l'acte indiqué dans la liste JSON des bilans.
-          questions:
-            qr1:
-              question: "Nature de l'archive : quelle différence entre un acte, une ordonnance
-                ou une personne physique ?"
+        * Tous les actes au format PDF ;
+
+        * Toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
+
+        * Un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` de l'acte indiqué dans la liste JSON des bilans.
 ---
