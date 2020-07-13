@@ -57,35 +57,37 @@ request:
         * Céquami délivre des certifications à des professionnels à même de vous proposer des travaux de rénovation lourde dans le cadre d’une rénovation énergétique globale du logement.
 
         * Certibat délivre des certifications aux professionnels du bâtiment en mesure de proposer et réaliser des offres globales de rénovation énergétique.
-response:
-  sample:
-    code: >
-      {
-        "qualifications": [
+services:
+  service1:
+    response:
+      sample:
+        code: >
           {
-             "nom": "Installation de chauffe-eau solaire dans tout type de bâtiment supérieur à 1000 m²",
-             "url_certificat": "https://storage.entreprise.api.gouv.fr/siade/attestation%2D3a858b299ce9f370e6bdc666d0616617-certificat_rge_ademe.pdf",
-             "nom_certificat": "QUALIBAT-RGE"
+            "qualifications": [
+              {
+                "nom": "Installation de chauffe-eau solaire dans tout type de bâtiment supérieur à 1000 m²",
+                "url_certificat": "https://storage.entreprise.api.gouv.fr/siade/attestation%2D3a858b299ce9f370e6bdc666d0616617-certificat_rge_ademe.pdf",
+                "nom_certificat": "QUALIBAT-RGE"
+              }
+            ],
+            "domaines": ["Chauffage et\/ou eau chaude solaire"]
           }
-        ],
-        "domaines": ["Chauffage et\/ou eau chaude solaire"]
-      }
-  format: Document PDF
-  timeout: 12 secondes
-  description: La réponse se composer du nom de la qualification de l'entreprise,
-    de l'URL de téléchargement de l'attestation au format PDF quand celle-ci est
-    disponible, du nom du certificat et du domaine.
-  questions:
-    qr1:
-      question: Pourquoi certains certificats ne sont pas disponibles ?
-      answer: "L'ADEME demande aux organismes de certifications (Qualit'EnR,
-        Qualifelec, ...) de mettre à disposition les adresses URL vers les
-        certificats mais tous les développements n'ont pas encore été réalisés.
-        De fait certains documents ne sont pas accessibles. Cependant, les
-        fichiers sont disponibles pour 95% des entreprises en base chez l'ADEME.
-        L'endpoint API Entreprise vous renvoie alors le message suivant : le
-        champ `url_certificat` indique : `Une erreur est survenue lors de la
-        récupération du fichier PDF`."
-    qr2:
-      question: ""
+      format: Document PDF
+      timeout: 12 secondes
+      description: La réponse se composer du nom de la qualification de l'entreprise,
+        de l'URL de téléchargement de l'attestation au format PDF quand celle-ci est
+        disponible, du nom du certificat et du domaine.
+      questions:
+        qr1:
+          question: Pourquoi certains certificats ne sont pas disponibles ?
+          answer: "L'ADEME demande aux organismes de certifications (Qualit'EnR,
+            Qualifelec, ...) de mettre à disposition les adresses URL vers les
+            certificats mais tous les développements n'ont pas encore été réalisés.
+            De fait certains documents ne sont pas accessibles. Cependant, les
+            fichiers sont disponibles pour 95% des entreprises en base chez l'ADEME.
+            L'endpoint API Entreprise vous renvoie alors le message suivant : le
+            champ `url_certificat` indique : `Une erreur est survenue lors de la
+            récupération du fichier PDF`."
+        qr2:
+          question: ""
 ---
