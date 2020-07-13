@@ -359,13 +359,22 @@
   }
 
   .availability-legend {
+    ul {
+      padding: 0;
+    }
+
     .legend {
+      display: flex;
+      font-size: 0.75em;
+      line-height: 1em;
       list-style-type: none;
+      margin-bottom: 1em;
     }
 
     .legend::before {
       content: '';
       display: inline-block;
+      flex-shrink: 0;
       width: var(--spacing-l);
       height: var(--spacing-s);
       background-color: var(--success);
@@ -395,12 +404,15 @@
     }
 
     td:first-child {
+      line-height: 1em;
+      padding-right: 0.5em;
+      text-align: right;
       white-space: nowrap;
     }
 
     td:not(:first-child) {
       background-color: var(--success);
-      border-radius: var(--border-radius-default);
+      border-radius: 2px;
       width: 11%;
     }
   }
@@ -416,7 +428,8 @@
   .tpl-documentation__links h3 {
     padding: var(--spacing-s);
     padding-bottom: 0;
-    font-size: 1em;
+    font-size: 1.25em;
+    text-decoration: underline;
   }
 
   .tpl-documentation__links h4 {
@@ -425,15 +438,26 @@
 
   .tpl-documentation__link {
     display: flex;
+    margin-left: 1.5em;
+  }
+
+  .tpl-documentation__sidebar {
+    flex-basis: 20em;
   }
 
   .tpl-documentation__sidebar summary {
     cursor: pointer;
+    font-family: var(--font-family-title);
+    font-weight: 700;
     margin: var(--spacing-xs) var(--spacing-m);
   } 
   
   .general-doc {
     padding: 0 var(--spacing-s);
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .general-doc .tpl-icon {
