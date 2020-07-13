@@ -26,35 +26,7 @@ perimeter:
 
 
     ℹ️ Il se peut que certains actes soient manquants, dans ce cas, vous pouvez nous [envoyer un mail]([support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)) avec le numéro de SIRET concerné. L'INPI peut tenter de nuémriser le document manquant.
-<<<<<<< HEAD
   label: "Actes et statuts des personnes morales et physiques depuis 1993 "
-request:
-  id:
-    label: SirenDeL’Entreprise
-    description: Le numéro de siren de la personne physique ou morale recherchée
-  parameters:
-    param1:
-      label: token
-      description: JetonD’Habilitation
-    param2:
-      label: context
-      description: CadreDeLaRequête
-    param3:
-      label: recipient
-      description: BénéficiaireDel’Appel
-    param4:
-      label: object
-      description: RaisonDeL’AppelOuIdentifiant
-response:
-  timeout: 12 secondes
-  format: Archive ZIP contenant PDF et XML
-  sample:
-    code: >
-      {
-        "url_documents": "https://storage.entreprise.api.gouv.fr/siade_dev/1565606929-1a01ac932854e5632c7534ff4c18e18ec2845ec0-all_documents.zip",
-        "actes": [
-=======
-  label: Tous les actes des entreprises depuis 1993
 services:
   service1:
     request:
@@ -79,49 +51,51 @@ services:
       format: Archive ZIP contenant PDF et XML
       sample:
         code: >
->>>>>>> 4bbf6b3c180e54d7f23f92ff56d79cc45dd78e53
           {
             "url_documents": "https://storage.entreprise.api.gouv.fr/siade_dev/1565606929-1a01ac932854e5632c7534ff4c18e18ec2845ec0-all_documents.zip",
             "actes": [
               {
-                "id_fichier": 24924080, 
-                // cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
-                "siren": "788242667",
-                "denomination_sociale": null,
-                "code_greffe": 7402,
-                "date_depot": "20170925",
-                "nature_archive": "A" 
-                // indique la nature de l'archive, "A" pour un acte, "R" pour une ordonnance et "P" pour une personne physique.
-              },
-              {
-                "id_fichier": 213962416,
-                "siren": "788242667",
-                "denomination_sociale": null,
-                "code_greffe": 7454,
-                "date_depot": "19980414",
-                "nature_archive": "A"
+                "url_documents": "https://storage.entreprise.api.gouv.fr/siade_dev/1565606929-1a01ac932854e5632c7534ff4c18e18ec2845ec0-all_documents.zip",
+                "actes": [
+                  {
+                    "id_fichier": 24924080, 
+                    // cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
+                    "siren": "788242667",
+                    "denomination_sociale": null,
+                    "code_greffe": 7402,
+                    "date_depot": "20170925",
+                    "nature_archive": "A" 
+                    // indique la nature de l'archive, "A" pour un acte, "R" pour une ordonnance et "P" pour une personne physique.
+                  },
+                  {
+                    "id_fichier": 213962416,
+                    "siren": "788242667",
+                    "denomination_sociale": null,
+                    "code_greffe": 7454,
+                    "date_depot": "19980414",
+                    "nature_archive": "A"
+                  }
+                ]
               }
-            ]
-          }
-      description: >-
-        ###### Contenu de la réponse JSON
+          description: >-
+            ###### Contenu de la réponse JSON
 
 
-        * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des actes de l'entité appelée ;
+            * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des actes de l'entité appelée ;
 
-        * **La liste des actes, accompagnés de leurs informations génériques** (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et la nature de l'archive.)
-
-
-        ###### Contenu de l'archive ZIP 🗂 :
+            * **La liste des actes, accompagnés de leurs informations génériques** (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et la nature de l'archive.)
 
 
-        * Tous les actes au format PDF ;
+            ###### Contenu de l'archive ZIP 🗂 :
 
-        * Toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
 
-        * Un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` de l'acte indiqué dans la liste JSON des bilans.
-      questions:
-        qr1:
-          question: "Nature de l'archive : quelle différence entre un acte, une ordonnance
-            ou une personne physique ?"
+            * Tous les actes au format PDF ;
+
+            * Toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
+
+            * Un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` de l'acte indiqué dans la liste JSON des bilans.
+          questions:
+            qr1:
+              question: "Nature de l'archive : quelle différence entre un acte, une ordonnance
+                ou une personne physique ?"
 ---
