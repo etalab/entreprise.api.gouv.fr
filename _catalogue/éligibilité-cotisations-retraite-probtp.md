@@ -1,8 +1,8 @@
 ---
 weight: 17
 type: Attestations sociales et fiscales
-title: Éligibilité cotisations retraite ProBTP
-label: eligibilites_cotisation_retraite_probtp
+title: Cotisations retraite bâtiment
+label: cotisation_retraite_probtp
 scope:
   - entreprises
 description: Savoir si une entreprise est à jour de ses cotisations retraite à
@@ -52,20 +52,29 @@ services:
           description: RaisonDeL’AppelOuIdentifiant
     response:
       sample:
-        code: >
+        code: |+
+          // Lorque l'entreprise est à jour de ses cotisations retraite :
           {
-            "eligible": true / false 
-            "message": "00 Compte éligible pour attestation de cotisation" /"01 Compte non éligible pour attestation de cotisation"
-          // Lorque l'entreprise est éligible la réponse est "true" et le message affiché est le "00", 
-
-          // Lorsque l'entreprise est inéligible, la réponse est "false" et le message affiché est le "01".
-
+            "eligible": true
+            "message": "00 Compte éligible pour attestation de cotisation"
           }
+
+          // Lorque l'entreprise n'est pas à jour de ses cotisations retraite :
+
+          {
+            "eligible": false 
+            "message": "01 Compte non éligible pour attestation de cotisation"
+          }
+
       timeout: 5 secondes
       format: Donnée structurée JSON
-      description: La réponse se compose de l'information sur la régularité (oui/non)
-        de l'entreprise ou d'une notification si l'entreprise n'est pas connue
-        des services de PROBTP.
+      description: >-
+        La réponse se compose de l'information sur l'éligibilité de l'entreprise
+        à l'attestation de cotisation retraite, ce qui indique en creux si
+        l'entreprise est en règle de ses cotisations retraites.
+
+
+        Lorsque l'entreprise est inconnue de PROBTP, un code erreur (404) est renvoyé.
     label: Savoir si l'entreprise est à jour de ses cotisations
   service2:
     label: Obtenir l'attestation de l'entreprise
@@ -75,6 +84,10 @@ services:
           {
             "url":"https://storage.entreprise.api.gouv.fr/siade_dev/1569139162-b99824d9c764aae19a862a0af-attestation_cotisation_retraite_probtp.pdf"
           }
+      format: Document PDF
+      timeout: 12 secondes
+      description: La réponse se compose de l’URL d’accès à l'attestation de
+        l’entreprise au format PDF quand celle-ci est disponible.
     request:
       id:
         label: SirenDeL'Entreprise
