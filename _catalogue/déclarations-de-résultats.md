@@ -163,8 +163,8 @@ services:
       id:
         label: AnneeDeLaLiasseDemandée
         description: L'année de la liasse fiscale demandée
-        extra1: declarations
-        extra2: SirenDeL’entreprise
+        extra1: dictionnaire
+        extra2: ""
       parameters:
         param1:
           label: token
@@ -219,9 +219,10 @@ services:
     label: Liasses fiscales d'une entreprise et disctionnaire pour une année donnée
     request:
       id:
-        label: complete
-        extra1: Année
+        label: AnnéeDeLaLiasseDemandée
+        extra1: complete
         extra2: SirenDeL'Entreprise
+        description: L'année de la liasse fiscale demandée
     response:
       sample:
         code: |-
