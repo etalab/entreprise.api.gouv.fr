@@ -121,70 +121,62 @@ additional_js: catalogue.js
                         <summary><h4>Service {{ forloop.index }} : {{ service[1].label }}</h4>{%if service[1].request.id.extra1 %}<code>/{{ service[1].request.id.extra1 }}/</code>{% endif %}</summary>
                     {% endif %}
                     <div class="service-description">
-                      <div class="columns tpl-flex-row tpl-flex-jc-sb">
-                        <div class="request">
-                          <div class="description">
-                            <h4><img src="{{ site.baseurl }}/assets/images/icons/call.png" alt="" /> Votre appel</h4>
-                            <dl class="tpl-description-list">
-                              <dt>Paramètre d’appel :</dt>
-                              <dd>{{ service[1].request.id.description }}</dd>
-                            </dl>
-                            <dl class="tpl-description-list">
-                              {% if service[1].request.options %}
-                              <dt>Options d’appel à ajouter (voir requête HTTP ↓) :</dt>
-                              <dd>
-                                <ul>
-                                  {% for option in service[1].request.options %}
-                                    {% if option[1].description != "" %}
-                                    <li>{{ option[1].description }}</li>
-                                    {% endif %}
-                                  {% endfor %}
-                                </ul>
-                              </dd>
-                              {% endif %}
-                            </dl>
-                            {% for qr in service[1].request.questions %}
-                            {% unless qr[1].question == "" %}
-                            <details class="qa">
-                              <summary>{{ qr[1].question }}</summary>
-                              {{ qr[1].answer | markdownify }}
-                            </details>
-                            {% endunless %}
-                            {% endfor %}
-                          </div>
-                        </div>
-                        <div class="response">
-                          <div class="content">
-                            <h4><img src="{{ site.baseurl }}/assets/images/icons/response.png" alt="" /> La réponse de l’API</h4>
-                            <dl class="tpl-description-list">
-                              <dt>Format :</dt>
-                              <dd>{{ service[1].response.format }}</dd>
-                            </dl>
-                            <dl class="tpl-description-list">
-                              <dt>Timeout :</dt>
-                              <dd>{{ service[1].response.timeout }}</dd>
-                            </dl>
-                            <p>{{ service[1].response.description | markdownify }}</p>
-                            {% for qr in service[1].response.questions %}
-                            {% unless qr[1].question == "" %}
-                            <details class="qa">
-                              <summary>{{ qr[1].question }}</summary>
-                              {{ qr[1].answer | markdownify }}
-                            </details>
-                            {% endunless %}
-                            {% endfor %}
-                          </div>
-                        </div>
+                      <div class="request-description">
+                        <h4><img src="{{ site.baseurl }}/assets/images/icons/call.png" alt="" /> Votre appel</h4>
+                        <dl class="tpl-description-list">
+                          <dt>Paramètre d’appel :</dt>
+                          <dd>{{ service[1].request.id.description }}</dd>
+                        </dl>
+                        <dl class="tpl-description-list">
+                          {% if service[1].request.options %}
+                          <dt>Options d’appel à ajouter (voir requête HTTP ↓) :</dt>
+                          <dd>
+                            <ul>
+                              {% for option in service[1].request.options %}
+                                {% if option[1].description != "" %}
+                                <li>{{ option[1].description }}</li>
+                                {% endif %}
+                              {% endfor %}
+                            </ul>
+                          </dd>
+                          {% endif %}
+                        </dl>
+                        {% for qr in service[1].request.questions %}
+                        {% unless qr[1].question == "" %}
+                        <details class="qa">
+                          <summary>{{ qr[1].question }}</summary>
+                          {{ qr[1].answer | markdownify }}
+                        </details>
+                        {% endunless %}
+                        {% endfor %}
                       </div>
-                    </div>
-                    <div class="columns tpl-flex-row tpl-flex-jc-sb">
-                      <div class="json-example">
+                      <div class="request-json json-example">
                         <h5>Requête HTTP</h5>
                         <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}{{ service[1].label }}</b>{%if service[1].request.id %}{{ service[1].request.id.label }}{% endif %}{%if service[1].request.id.extra1 %}/<b>{{ service[1].request.id.extra1 }}</b>{% endif %}{%if service[1].request.id.extra2 %}/{{ service[1].request.id.extra2 }}{% endif %}{% for param in service[1].request.parameters %}{% if forloop.index == 1 %}<b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}<b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}{% endfor %}
       {% for option in service[1].request.options %}<br /><br />{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
       <b>{{ option[1].param }}</b>{% endfor %}</code></pre>
                       </div>
-                      <div class="json-example">
+                      <div class="response-content">
+                        <h4><img src="{{ site.baseurl }}/assets/images/icons/response.png" alt="" /> La réponse de l’API</h4>
+                        <dl class="tpl-description-list">
+                          <dt>Format :</dt>
+                          <dd>{{ service[1].response.format }}</dd>
+                        </dl>
+                        <dl class="tpl-description-list">
+                          <dt>Timeout :</dt>
+                          <dd>{{ service[1].response.timeout }}</dd>
+                        </dl>
+                        <p>{{ service[1].response.description | markdownify }}</p>
+                        {% for qr in service[1].response.questions %}
+                        {% unless qr[1].question == "" %}
+                        <details class="qa">
+                          <summary>{{ qr[1].question }}</summary>
+                          {{ qr[1].answer | markdownify }}
+                        </details>
+                        {% endunless %}
+                        {% endfor %}
+                      </div>
+                      <div class="response-json json-example">
                         <h5>Réponse JSON</h5>
                         <div class="toggle-comments tpl-input__group">Commentaires on <input type="checkbox" class="tpl-input tpl-switch tpl-switch--active" name="switch" id="toggle-comments" checked></div>
                         {% highlight json-doc %}{{ service[1].response.sample.code }}{% endhighlight %}

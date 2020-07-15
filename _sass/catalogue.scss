@@ -150,6 +150,24 @@
     display: inline;
   }
 
+  .service-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-m);
+
+    .request-json {
+      order: 3;
+    }
+
+    .response-description {
+      order: 2;
+    }
+
+    .response-json {
+      order: 4;
+    }
+  }
+
   .services {
     margin: 2em 0;
   }
@@ -258,9 +276,8 @@
   .json-example code {
     background-color: var(--dark-grey);
     border-radius: 0;
-    height: 100%;
+    word-break: break-all;
     line-height: 1.5em;
-    height: 25em;
     resize: vertical;
   }
 
@@ -269,6 +286,7 @@
   }
 
   .technical-documentation .highlight code {
+    height: 25em;
     white-space: pre-wrap;
     width: 100%;
   }
@@ -486,6 +504,18 @@
 
     .technical-documentation .columns .response {
       margin-left: 0;
+    }
+
+    .service-description {
+      grid-template-columns: 1fr;
+
+      .request-json {
+        order: 2;
+      }
+
+      .response-content {
+        order: 3;
+      }
     }
   }
 
