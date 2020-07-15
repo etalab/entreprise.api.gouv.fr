@@ -276,7 +276,6 @@
   .json-example code {
     background-color: var(--dark-grey);
     border-radius: 0;
-    word-break: break-all;
     line-height: 1.5em;
     resize: vertical;
   }
@@ -289,6 +288,7 @@
     height: 25em;
     white-space: pre-wrap;
     width: 100%;
+    word-break: break-all;
   }
 
   .technical-documentation .highlight .nl {

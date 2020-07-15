@@ -88,7 +88,7 @@ services:
   service1:
     request:
       id:
-        param: SiretDeL’Entreprise
+        label: SiretDeL’Entreprise
         description: Le numéro de Siret de l’établissement
       parameters:
         param1:
