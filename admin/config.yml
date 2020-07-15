@@ -171,6 +171,14 @@ collections:
                     required: false
                     default: Le numéro de siren de la personne physique ou morale recherchée
                     widget: 'string'
+                  - label: 'Extra paramètre 1'
+                    name: 'extra1'
+                    required: false
+                    widget: 'string'
+                  - label: 'Extra paramètre 2'
+                    name: 'extra2'
+                    required: false
+                    widget: 'string'
               - label: 'Paramètres'
                 name: 'parameters'
                 required: false
@@ -444,6 +452,14 @@ collections:
                     name: 'description'
                     required: false
                     default: Le numéro de siren de la personne physique ou morale recherchée
+                    widget: 'string'
+                  - label: 'Extra paramètre 1'
+                    name: 'extra1'
+                    required: false
+                    widget: 'string'
+                  - label: 'Extra paramètre 2'
+                    name: 'extra2'
+                    required: false
                     widget: 'string'
               - label: 'Paramètres'
                 name: 'parameters'
