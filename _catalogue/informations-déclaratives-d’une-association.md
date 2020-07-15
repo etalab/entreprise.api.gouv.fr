@@ -50,27 +50,27 @@ services:
           description: RaisonDeL'AppelOuIdentifiant
       options:
         option1:
-          param: Lorem Ipsum
-          description: Lorem Ipsum
-          comment: Lorem Ipsum
+          param: ""
+          description: ""
+          comment: ""
         option2:
-          param: Lorem Ipsum
-          description: Lorem Ipsum
-          comment: Lorem Ipsum
+          param: ""
+          description: ""
+          comment: ""
         option3:
-          param: Lorem Ipsum
-          description: Lorem Ipsum
-          comment: Lorem Ipsum
+          param: ""
+          description: ""
+          comment: ""
     response:
       format: Données structurées JSON
       timeout: 5 secondes
       description: >-
-        La réponse de l'endpoint `associations` se compose :
+        La réponse se compose :
 
 
-        * d'un groupe d'informations générales sur l'association, dont notamment les dates de création/dissolution et l'adresse du siège.
+        * d'un groupe d'informations générales sur l'association, dont notamment les dates de création/dissolution et l'adresse du siège ;
 
-        * des informations sur les dirigeants
+        * des informations sur les dirigeants.
       sample:
         code: >-
           {
