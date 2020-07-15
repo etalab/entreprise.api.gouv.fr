@@ -23,21 +23,21 @@ perimeter:
     La liasse fiscale est limitée aux entreprises  : 
 
 
-    * soumises à l'impôt sur les sociétés (IS)* ;
+    * ✅ soumises à l'impôt sur les sociétés (IS)* ;
 
-    * soumises à l'impôt sur les sociétés dû par le groupe (IS GROUPE)*;
+    * ✅ soumises à l'impôt sur les sociétés dû par le groupe (IS GROUPE)*;
 
-    * aux bénéfices industriels et commerciaux (BIC)* ;
+    * ✅ aux bénéfices industriels et commerciaux (BIC)* ;
 
-    * aux bénéfices non commerciaux (BNC)* ;
+    * ✅ aux bénéfices non commerciaux (BNC)* ;
 
-    * aux bénéfices agricoles (BA)*.
+    * ✅ aux bénéfices agricoles (BA)*.
 
 
     *\*selon les règles des régimes réels normal ou simplifié.*
 
 
-    ℹ️ Les entreprises anciennement aux forfaits BIC/BNC/BA , désormais régimes micro-BIC, micro-BNC et micro-BA ne déposent pas de déclaration de résultat mais des éléments spécifiques dans la déclaration 2042C qui relève de d'impôt sur le revenu et ne sont donc pas dans le périmètre de cet endpoint.
+    ℹ️ Les entreprises anciennement aux forfaits BIC/BNC/BA , désormais ❌ régimes micro-BIC, micro-BNC et micro-BA ne déposent pas de déclaration de résultat mais des éléments spécifiques dans la déclaration 2042C qui relève de d'impôt sur le revenu et ne sont donc pas dans le périmètre de cet endpoint.
   label: Entreprises BIC, BA, BNC, ou soumises à l'IS, IS groupe.
 services:
   service1:
