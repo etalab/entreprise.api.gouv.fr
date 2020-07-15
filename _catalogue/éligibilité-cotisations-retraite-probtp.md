@@ -5,10 +5,9 @@ title: Éligibilité cotisations retraite ProBTP
 label: eligibilites_cotisation_retraite_probtp
 scope:
   - entreprises
-description: Savoir si une entreprise est éligible aux cotisations retraite de
-  la Protection Sociale du Bâtiment et des Travaux publics (PROBTP). Pour
-  obtenir l'attestation de l'entreprise si celle-ci est éligible, veuillez vous
-  référer à l'endpoint "Attestation cotisations retraites"
+description: Savoir si une entreprise est à jour de ses cotisations retraite à
+  la Protection Sociale du Bâtiment et des Travaux publics (PROBTP) et obtenir
+  l'attestation de l'entreprise si celle-ci est éligible.
 usecases:
   - Aides publiques
   - Marchés publics
@@ -49,4 +48,23 @@ services:
           }
       timeout: 5 secondes
       format: Donnée structurée JSON
+      description: La réponse se compose de l'information sur la régularité (oui/non)
+        de l'entreprise ou d'une notification si l'entreprise n'est pas connue
+        des services de PROBTP.
+    label: Savoir si l'entreprise est à jour de ses cotisations
+service2:
+  label: Obtenir l'attestation de l'entreprise
+  request:
+    id:
+      label: SirenDeLEntreprise
+      description: Le numéro de siren de la personne physique ou morale recherchée
+    parameters:
+      param1:
+        label: token
+      param2:
+        label: context
+      param3:
+        label: recipient
+      param4:
+        label: object
 ---
