@@ -77,11 +77,6 @@ services:
                   }
                 ]
               }
-      questions:
-        qr1:
-          answer: ""
-        qr2:
-          answer: ""
       description: >-
         ###### Contenu de la réponse JSON
 
