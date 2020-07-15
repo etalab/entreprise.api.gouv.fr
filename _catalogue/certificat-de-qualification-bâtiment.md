@@ -16,6 +16,42 @@ access: Restreint, [disponible en recherche manuelle sur
 opening: Données publiques
 providers:
   - qualibat
+service2:
+  request:
+    id:
+      label: SirenDeL’Entreprise
+      description: Le numéro de siren de la personne physique ou morale recherchée
+    parameters:
+      param1:
+        label: token
+        description: JetonD’Habilitation
+      param2:
+        label: context
+        description: CadreDeLaRequête
+      param3:
+        label: recipient
+        description: BénéficiaireDel’Appel
+      param4:
+        label: object
+        description: RaisonDeL’AppelOuIdentifiant
+service3:
+  request:
+    id:
+      label: SirenDeL’Entreprise
+      description: Le numéro de siren de la personne physique ou morale recherchée
+    parameters:
+      param1:
+        label: token
+        description: JetonD’Habilitation
+      param2:
+        label: context
+        description: CadreDeLaRequête
+      param3:
+        label: recipient
+        description: BénéficiaireDel’Appel
+      param4:
+        label: object
+        description: RaisonDeL’AppelOuIdentifiant
 services:
   service1:
     request:
@@ -54,6 +90,7 @@ services:
 
 
             ℹ️ Toutes les informations concernant ces différentes certifications et qualifications sont disponibles sur le site Qualibat à cette page : <https://www.qualibat.com/documentation/documentation-technique>
+          question: Quelles sont les différentes certifications/qualifications ?
         qr2:
           answer: >-
             Les qualifications professionnelles QUALIBAT constituent la
@@ -135,40 +172,4 @@ services:
             ℹ️ Source : [Qualibat ](https://www.qualibat.com/)
       description: La réponse se compose de l'URL de téléchargement de l'attestation
         au format PDF quand celle-ci est disponible.
-service2:
-  request:
-    id:
-      label: SirenDeL’Entreprise
-      description: Le numéro de siren de la personne physique ou morale recherchée
-    parameters:
-      param1:
-        label: token
-        description: JetonD’Habilitation
-      param2:
-        label: context
-        description: CadreDeLaRequête
-      param3:
-        label: recipient
-        description: BénéficiaireDel’Appel
-      param4:
-        label: object
-        description: RaisonDeL’AppelOuIdentifiant
-service3:
-  request:
-    id:
-      label: SirenDeL’Entreprise
-      description: Le numéro de siren de la personne physique ou morale recherchée
-    parameters:
-      param1:
-        label: token
-        description: JetonD’Habilitation
-      param2:
-        label: context
-        description: CadreDeLaRequête
-      param3:
-        label: recipient
-        description: BénéficiaireDel’Appel
-      param4:
-        label: object
-        description: RaisonDeL’AppelOuIdentifiant
 ---
