@@ -16,6 +16,21 @@ opening: Données confidentielles
 providers:
   - probtp
 new: ""
+service2:
+  label: Obtenir l'attestation de l'entreprise
+  request:
+    id:
+      label: SirenDeLEntreprise
+      description: Le numéro de siren de la personne physique ou morale recherchée
+    parameters:
+      param1:
+        label: token
+      param2:
+        label: context
+      param3:
+        label: recipient
+      param4:
+        label: object
 services:
   service1:
     request:
@@ -52,19 +67,29 @@ services:
         de l'entreprise ou d'une notification si l'entreprise n'est pas connue
         des services de PROBTP.
     label: Savoir si l'entreprise est à jour de ses cotisations
-service2:
-  label: Obtenir l'attestation de l'entreprise
-  request:
-    id:
-      label: SirenDeLEntreprise
-      description: Le numéro de siren de la personne physique ou morale recherchée
-    parameters:
-      param1:
-        label: token
-      param2:
-        label: context
-      param3:
-        label: recipient
-      param4:
-        label: object
+  service2:
+    label: Obtenir l'attestation de l'entreprise
+    response:
+      sample:
+        code: >
+          {
+            "url":"https://storage.entreprise.api.gouv.fr/siade_dev/1569139162-b99824d9c764aae19a862a0af-attestation_cotisation_retraite_probtp.pdf"
+          }
+    request:
+      id:
+        label: SirenDeL'Entreprise
+        description: Le numéro de siren de la personne physique ou morale recherchée
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          description: CadreDeLaRequête
+          label: context
+        param3:
+          description: BénéficiaireDel’Appel
+          label: recipient
+        param4:
+          description: RaisonDeL’AppelOuIdentifiant
+          label: object
 ---
