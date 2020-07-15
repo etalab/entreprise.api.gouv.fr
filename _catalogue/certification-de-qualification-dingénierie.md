@@ -2,7 +2,7 @@
 weight: 23
 type: Certifications professionnelles
 title: Certification de qualification d'ingénierie
-label: certificats_qualibat
+label: certificats_opqibi
 scope:
   - entreprises
 description: Obtenir le certificat de l’organisme de qualification de
