@@ -65,29 +65,27 @@ services:
       questions:
         qr1:
           answer: >-
-            Les déclarations de résultat sont disponibles à compter du lendemain
-            de la date de dépôt (et trois jours plus tard (J+3) si le dépôt
-            intervient une veille de week-end). \
+            La date limite de dépôt des déclarations de résultat est fixée au
+            2ème jour ouvré qui suit le 1er mai pour les entreprises qui
+            clôturent à la fin de l'année civile. 
 
-            \
 
-            La date limite de dépôt (DLD) des déclarations de résultat est fixée au 2ème jour ouvré qui suit le 1er mai pour les entreprises qui clôturent à la fin de l'année civile. En cas d'exercice à cheval, la DLD est positionnée à + 3 mois après la date de clôture de l'exercice déclaré.
-          question: Quel est le délai de mise à disposition des données d'une déclaration
-            déposée par une entreprise ?
+            En cas d'exercice à cheval, la date limite de dépôt est positionnée à + 3 mois après la date de clôture de l'exercice déclaré.
+          question: Quelles sont les dates de dépôt des liasses fiscales par les
+            entreprises ?
         qr3:
           question: ""
           answer: ""
         qr2:
-          question: La DGFIP applique-t-elle un filtre pour ne pas renvoyer certaines
-            déclarations de résultats (entreprises s’étant opposées à la
-            rediffusion de leur données ou soumises au secret défense ?)
-          answer: Les données de la liasse fiscale sont des données publiables et ne sont
-            pas soumises au secret défense. Seul le secret professionnel
-            s'applique, cf. notamment contrat de service fonctionnel DGFiP/SGMAP
-            du14/12/2016 V2.4. Dans ce cadre, Il existe un filtre pour limiter
-            la transmission des liasses à certains tableaux (confidentialité des
-            données comptables et/ou fiscales comme les frais généraux de
-            l'entreprise).
+          question: Quel est le délai de mise à disposition des données d'une déclaration
+            déposée par une entreprise ?
+          answer: >-
+            Les déclarations de résultat sont disponibles :
+
+
+            * à compter du lendemain de la date de dépôt (J+1) ;
+
+            * trois jours plus tard (J+3) si le dépôt intervient une veille de week-end.
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
@@ -164,8 +162,7 @@ services:
     request:
       id:
         label: AnneeDeLaLiasseDemandée
-        description: "L'année de la liasse fiscale demandée + le paramètre
-          \"declarations\" + le numéro de SIREN de l'entreprise "
+        description: L'année de la liasse fiscale demandée
         extra1: declarations
         extra2: SirenDeL’entreprise
       parameters:
@@ -183,15 +180,122 @@ services:
           description: RaisonDeL’AppelOuIdentifiant
       questions:
         qr1:
-          answer: Chaque liasse fiscale renvoyée est accompagnée d'un millésime, et chaque
-            valeur est indiquée par un `code_nref`. Ce dernier est une suite de
-            6 chiffres, le dictionnaire de liasses fiscales disponible avec
-            l'option d'appel `Annee/dictionnaire` vous permet de retrouver la
-            signification du code, et donc de la valeur, appelé "intitulé de la
-            donnée". Il vous faudra à chaque fois préciser le millésime, car les
-            nomenclatures évoluent chaque année.
-          question: Comment faire le lien avec le dictionnaire ?
+          answer: ""
+          question: ""
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
+      sample:
+        code: |
+          {
+            "dictionnaire": [
+              {
+                "numero_imprime": "2053",
+                "millesimes": {
+                  "millesime": "201501",
+                  "statut_version": "V",
+                  "declaration": [
+                    {
+                      "code_absolu": "2006747",
+                      "code_EDI": "PG:C889:7111:1:TBX",
+                      "code": "PG",
+                      "intitule": "Mention déclaration néante",
+                      "code_nref": "3305687"
+                    },
+                    {
+                      "code_absolu": "2006744",
+                      "code_EDI": "AA:C516:5004:1",
+                      "code": "AA",
+                      "intitule": "Capital souscrit non appelé- total (i) brut",
+                      "code_nref": "300263"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+    label: Dictionnaire des liasses fiscales
+  service3:
+    label: Liasses fiscales d'une entreprise et disctionnaire pour une année donnée
+    request:
+      id:
+        label: complete
+        extra1: Année
+        extra2: SirenDeL'Entreprise
+    response:
+      sample:
+        code: |-
+          {
+            "entreprise": {
+              "denomination" : "Ma Societe",
+              "siren": "XXXXXXXXX"
+            },
+            "declarations": [
+              {
+                "code_regime": "NE",
+                "date_declaration": "2014-04-25",
+                "fin_exercice": "2013-12-31",
+                "duree_exercice": "365 jours",
+                "millesime": "201401",
+                "numero_imprime": "2050",
+                "imprime": {
+                  "donnees": [
+                    {
+                      "code_nref": "300282",
+                      "valeur": "157955912"
+                    },
+                    {
+                      "code_nref": "300283",
+                      "valeur": "352174931"
+                    }
+                  ]
+                }
+              },
+              {
+                "code_regime": "RS",
+                "date_declaration": "2014-04-25",
+                "fin_exercice": "2013-12-31",
+                "duree_exercice": "365 jours",
+                "millesime": "201401",
+                "numero_imprime": "2050",
+                "imprime": {
+                  "donnees": [
+                    {
+                      "code_nref": "300282",
+                      "valeur": "157955912"
+                    },
+                    {
+                      "code_nref": "300283",
+                      "valeur": "352174931"
+                    }
+                  ]
+                }
+              }
+            ],
+            "dictionnaire": [
+              {
+                "numero_imprime": "2053",
+                "millesimes": {
+                  "millesime": "201501",
+                  "statut_version": "V",
+                  "declaration": [
+                    {
+                      "code_absolu": "2006747",
+                      "code_EDI": "PG:C889:7111:1:TBX",
+                      "code": "PG",
+                      "intitule": "Mention déclaration néante",
+                      "code_nref": "3305687"
+                    },
+                    {
+                      "code_absolu": "2006744",
+                      "code_EDI": "AA:C516:5004:1",
+                      "code": "AA",
+                      "intitule": "Capital souscrit non appelé- total (i) brut",
+                      "code_nref": "300263"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
 ---
