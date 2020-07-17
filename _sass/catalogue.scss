@@ -1,3 +1,18 @@
+.catalogue__search {
+  .tpl-hero__search-button {
+    left: 0.5em;
+    z-index: 10;
+  }
+  
+  .tpl-form__group {
+    flex-direction: row;
+  }
+
+  #catalogue-search {
+    padding: 0 var(--spacing-s) 0 var(--spacing-xl);
+  }
+}
+
 .catalogue {
   .tpl-documentation {
     display: flex;
@@ -50,8 +65,6 @@
 
   .documentation-card__header h3 {
     margin-top: 0;
-    display: inline-flex;
-    flex-wrap: wrap;
   }
 
   .documentation-card__header .documentation__description {
@@ -63,6 +76,7 @@
   }
 
   .documentation-card__header code {
+    margin-bottom: 0.4em;
     margin-left: var(--spacing-xs);
   }
 

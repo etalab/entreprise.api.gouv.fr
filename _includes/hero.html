@@ -2,5 +2,8 @@
   <div class="tpl-container">
     <h1>{{ page.title }}</h1>
     {% if page.subtitle %}<p class="tpl-hero__subtitle">{{ page.subtitle }}</p>{% endif %}
+    {% if page.is_catalogue %}
+      {% include catalogue_search.html %}
+    {% endif %}
   </div>
 </section>

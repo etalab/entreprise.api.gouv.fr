@@ -2,7 +2,10 @@
 layout: page
 title: Catalogue de données
 permalink: /catalogue/
-additional_js: catalogue.js
+additional_js:
+  - mark.min.js
+  - catalogue.js
+is_catalogue: true
 ---
 
 {% assign providers = site.providers_aliases %}
@@ -18,7 +21,7 @@ additional_js: catalogue.js
             <h3 id="{{ category.name }}">{{ category.name }}</h3>
             {% assign items = category.items | sort: 'weight' %}
             {% for endpoint in items %}
-            <div class="tpl-panel documentation-card" id="{{ endpoint.label }}">
+            <div class="tpl-panel documentation-card" id="{{ endpoint.label }}" {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %} {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %}>
               <div class="documentation-card__header">
                 <div class="endpoint-scope">
                   {% for scope in endpoint.scope %}
