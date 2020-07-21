@@ -93,4 +93,10 @@ providers_aliases:
 
 empty_array: []
 
-data_types: ['Informations générales', 'Informations financières', 'Attestations sociales et fiscales', 'Certifications professionnelles', 'Propriété intellectuelle' ]
+data_types: 
+  - 
+    'Informations générales': 1
+    'Informations financières': 2
+    'Attestations sociales et fiscales': 3
+    'Certifications professionnelles': 4
+    'Propriété intellectuelle': 5

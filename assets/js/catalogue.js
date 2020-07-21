@@ -85,6 +85,7 @@ window.onload = function (e) {
   let instance = new Mark(document.querySelectorAll('.documentation-card'))
   let searchInput = document.querySelector('input[name="catalogue-search"]')
   let scopeFilter = document.querySelector('select[name="catalogue-scope"]')
+  let typeFilter = document.querySelector('select[name="catalogue-type"]')
 
   function performMark(event) {
     event.stopPropagation()
@@ -104,11 +105,12 @@ window.onload = function (e) {
     const scope = scopeFilter.value
 
     for (let i = 0; i < panels.length; i++) {
-      if (searchInput.value == '' && scope === '') {
+      if (!searchInput.value && !scope) {
         panels[i].style.display = 'block'
       } else {
         panels[i].style.display = 'none'
-        if (scope === '' || scope !== '' && panels[i].hasAttribute('data-'+scope)) {
+        
+        if (!scope || scope !== '' && panels[i].hasAttribute('data-'+scope)) {
           if (!searchInput.value || searchInput.value !== '' && panels[i].querySelector('mark') !== null) {
             panels[i].style.display = 'block'
           } 
@@ -117,7 +119,24 @@ window.onload = function (e) {
     }
   }
 
+  function toggleCategories() {
+    const categories = document.querySelectorAll('.catalogue__category')
+    const type = typeFilter.value
+
+    for (let i = 0; i < categories.length; i++) {
+      if (!type) {
+        categories[i].style.display = 'block'
+      } else {
+        categories[i].style.display = 'none'
+        if (categories[i].getAttribute('data-category') === type) {
+          categories[i].style.display = 'block'
+        }
+      }
+    }
+
+  }
+
   searchInput.addEventListener("input", performMark)
   scopeFilter.addEventListener("change", toggleNonMarkedPanels)
-
+  typeFilter.addEventListener("change", toggleCategories)
 }
