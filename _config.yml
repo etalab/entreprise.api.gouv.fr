@@ -76,27 +76,25 @@ sass:
   style: compressed
 
 providers_aliases:
-  -
-    infogreffe: 'Infogreffe'
-    insee: 'INSEE'
-    dgfip: 'DGFIP'
-    acoss: 'ACOSS'
-    inpi: 'INPI'
-    qualibat: 'Qualibat'
-    mi: 'Ministère de l’Intérieur'
-    cnetp: 'CNETP'
-    probtp: 'ProBTP'
-    msa: 'MSA'
-    opqibi: 'OPQIBI'
-    fntp: 'FNTP'
-    agefiph: 'agefiph'
+  infogreffe: 'Infogreffe'
+  insee: 'INSEE'
+  dgfip: 'DGFIP'
+  acoss: 'ACOSS'
+  inpi: 'INPI'
+  qualibat: 'Qualibat'
+  mi: 'Ministère de l’Intérieur'
+  cnetp: 'CNETP'
+  probtp: 'ProBTP'
+  msa: 'MSA'
+  opqibi: 'OPQIBI'
+  fntp: 'FNTP'
+  agefiph: 'agefiph'
 
 empty_array: []
 
 data_types: 
-  - 
-    'Informations générales': 1
-    'Informations financières': 2
-    'Attestations sociales et fiscales': 3
-    'Certifications professionnelles': 4
-    'Propriété intellectuelle': 5
+  'Informations générales': 1
+  'Informations financières': 2
+  'Attestations sociales et fiscales': 3
+  'Certifications professionnelles': 4
+  'Propriété intellectuelle': 5
