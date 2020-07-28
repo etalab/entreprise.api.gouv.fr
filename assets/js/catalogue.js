@@ -86,6 +86,11 @@ window.onload = function (e) {
   let searchInput = document.querySelector('input[name="catalogue-search"]')
   let scopeFilter = document.querySelector('select[name="catalogue-scope"]')
   let typeFilter = document.querySelector('select[name="catalogue-type"]')
+  let usecaseFilter = document.querySelector('select[name="catalogue-usecase"]')
+  let providerFilter = document.querySelector('select[name="catalogue-providers"]')
+
+  toggleNonMarkedPanels()
+  toggleCategories()
 
   function performMark(event) {
     event.stopPropagation()
@@ -103,17 +108,32 @@ window.onload = function (e) {
   function toggleNonMarkedPanels() {
     const panels = document.querySelectorAll('.documentation-card')
     const scope = scopeFilter.value
+    const usecase = usecaseFilter.value
+    const provider = providerFilter.value
+
+    let shouldHide
 
     for (let i = 0; i < panels.length; i++) {
-      if (!searchInput.value && !scope) {
-        panels[i].style.display = 'block'
-      } else {
+      panels[i].style.display = 'block'
+      shouldHide = false
+      
+      if (scope && !panels[i].hasAttribute('data-'+scope)) {
+        shouldHide = true
+      } 
+      if (usecase && !panels[i].hasAttribute('data-'+usecase)) {
+        shouldHide = true
+      }
+      if (provider && !panels[i].hasAttribute('data-'+provider)) {
+        shouldHide = true
+      }
+
+      if (shouldHide) {
         panels[i].style.display = 'none'
-        
-        if (!scope || scope !== '' && panels[i].hasAttribute('data-'+scope)) {
-          if (!searchInput.value || searchInput.value !== '' && panels[i].querySelector('mark') !== null) {
-            panels[i].style.display = 'block'
-          } 
+      } else {
+        if (!searchInput.value || searchInput.value !== '' && panels[i].querySelector('mark') !== null) {
+          panels[i].style.display = 'block'
+        } else {
+          panels[i].style.display = 'none'
         }
       }
     }
@@ -124,7 +144,7 @@ window.onload = function (e) {
     const type = typeFilter.value
 
     for (let i = 0; i < categories.length; i++) {
-      if (!type) {
+      if (type == "0") {
         categories[i].style.display = 'block'
       } else {
         categories[i].style.display = 'none'
@@ -139,4 +159,6 @@ window.onload = function (e) {
   searchInput.addEventListener("input", performMark)
   scopeFilter.addEventListener("change", toggleNonMarkedPanels)
   typeFilter.addEventListener("change", toggleCategories)
+  usecaseFilter.addEventListener("change", toggleNonMarkedPanels)
+  providerFilter.addEventListener("change", toggleNonMarkedPanels)
 }

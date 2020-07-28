@@ -9,20 +9,32 @@ is_catalogue: true
 ---
 
 {% assign providers = site.providers_aliases %}
-{% assign data_types = site.data_types %}
+{% assign catalogue_types = site.catalogue_types %}
+{% assign catalogue_usecases = site.catalogue_usecases %}
 <section class="catalogue">
   <p>Visibilité de 24 sur 24 données API Entreprise</p>
   <div class="tpl-documentation">
     <div class="tpl-documentation__content">
       {% assign categories = site.catalogue | group_by: 'type' | reverse %}
-      {% for type in data_types %}
+      {% for type in catalogue_types %}
+        {% assign index = forloop.index0 %}
         {% for category in categories %}
-          {% if category.name == type[0] %}
-            <div class="catalogue__category" data-category="{{ type[1] }}">
+          {% if category.name == type %}
+            <div class="catalogue__category" data-category="{{ index }}">
               <h3 id="{{ category.name }}">{{ category.name }}</h3>
               {% assign items = category.items | sort: 'weight' %}
               {% for endpoint in items %}
-              <div class="tpl-panel documentation-card" id="{{ endpoint.label }}" {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %} {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %}>
+              <div class="tpl-panel documentation-card" id="{{ endpoint.label }}" 
+                {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %} 
+                {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %} 
+                {% for usecase in endpoint.usecases %}
+                  {% for case in catalogue_usecases %}
+                    {% if usecase == case[1] %}
+                      data-{{ case[0] }}="1"
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+                {% for provider in endpoint.providers %}data-{{ provider }}="1"{% endfor %}>
                 <div class="documentation-card__header">
                   <div class="endpoint-scope">
                     {% for scope in endpoint.scope %}
@@ -552,9 +564,9 @@ is_catalogue: true
           <a href="">Vous êtes perdu·e ? Commencez par lire la documentation générale.</a>
         </div>
         <h3>Catalogue des données</h3>
-        {% for type in data_types %}
+        {% for type in catalogue_types %}
           {% for category in categories %}
-            {% if category.name == type[0] %}
+            {% if category.name == type %}
               <details>
                 <summary>{{ category.name }}</summary>
                 {% assign items = category.items | sort: 'weight' %}

@@ -1,3 +1,6 @@
+{% assign catalogue_types = site.catalogue_types %}
+{% assign catalogue_usecases = site.catalogue_usecases %}
+{% assign catalogue_providers = site.providers_aliases %}
 <form class="tpl-hero__form catalogue__search">
   <label for="tpl-hero__search">Chercher une information</label>
   <div class="tpl-form__group">
@@ -9,12 +12,23 @@
       <option value="associations">sur une association</option>
     </select>
     <select id="catalogue-type" class="tpl-hero__search" name="catalogue-type">
-      <option value="">de tout type</option>
-      <option value="1">informations générales</option>
-      <option value="2">informations financières</option>
-      <option value="3">attestations sociales et fiscales</option>
-      <option value="4">certifications professionnelles</option>
-      <option value="5">propriété intellectuelles</option>
+      {% for type in catalogue_types %}
+        <option value="{{ forloop.index0 }}">{{ type }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="tpl-form__group">
+    <select id="catalogue-usecase" class="tpl-hero__search" name="catalogue-usecase">
+      <option value="">Cas d’usage</option>
+      {% for usecase in catalogue_usecases %}
+        <option value="{{ usecase[0] }}">{{ usecase[1] }}</option>
+      {% endfor %}
+    </select>
+    <select id="catalogue-providers" class="tpl-hero__search" name="catalogue-providers">
+      <option value="">Fournisseurs</option>
+      {% for provider in catalogue_providers %}
+        <option value="{{ provider[0] }}">{{ provider[1] }}</option>
+      {% endfor %}
     </select>
   </div>
 </form>

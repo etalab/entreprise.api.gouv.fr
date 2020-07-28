@@ -92,9 +92,18 @@ providers_aliases:
 
 empty_array: []
 
-data_types: 
-  'Informations générales': 1
-  'Informations financières': 2
-  'Attestations sociales et fiscales': 3
-  'Certifications professionnelles': 4
-  'Propriété intellectuelle': 5
+catalogue_types: 
+  - 'De tout type'
+  - 'Informations générales'
+  - 'Informations financières'
+  - 'Attestations sociales et fiscales'
+  - 'Certifications professionnelles'
+  - 'Propriété intellectuelle'
+
+catalogue_usecases:
+  aidespubliques: 'Aides publiques'
+  marchespublics: 'Marchés publics'
+  repertoiredetiers: 'Répertoire de tiers'
+  loienergie: 'Application de la loi énergie - Art.64'
+  covid: 'Aide d’urgence Covid-19'
+
