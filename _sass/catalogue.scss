@@ -249,6 +249,10 @@
     top: var(--spacing-xs);
   }
 
+  .qa[open] summary {
+    font-weight: 700;
+  }
+
   .qa[open] summary:after {
     content: '▾';
   }

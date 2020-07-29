@@ -143,20 +143,20 @@ is_catalogue: true
                             <dt>Paramètre d’appel :</dt>
                             <dd>{{ service[1].request.id.description }}</dd>
                           </dl>
-                          <dl class="tpl-description-list">
-                            {% if service[1].request.options %}
-                            <dt>Options d’appel à ajouter (voir requête HTTP ↓) :</dt>
-                            <dd>
-                              <ul>
-                                {% for option in service[1].request.options %}
-                                  {% if option[1].description != "" %}
-                                  <li>{{ option[1].description }}</li>
-                                  {% endif %}
-                                {% endfor %}
-                              </ul>
-                            </dd>
-                            {% endif %}
-                          </dl>
+                          {% if service[1].request.options and service[1].request.options.option1.description != "" %}
+                            <dl class="tpl-description-list">
+                              <dt>Options d’appel à ajouter (voir requête HTTP ↓) :</dt>
+                              <dd>
+                                <ul>
+                                  {% for option in service[1].request.options %}
+                                    {% if option[1].description != "" %}
+                                    <li>{{ option[1].description }}</li>
+                                    {% endif %}
+                                  {% endfor %}
+                                </ul>
+                              </dd>
+                            </dl>
+                          {% endif %}
                           {% for qr in service[1].request.questions %}
                           {% unless qr[1].question == "" %}
                           <details class="qa">
