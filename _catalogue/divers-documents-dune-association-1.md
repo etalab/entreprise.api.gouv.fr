@@ -5,8 +5,8 @@ title: Chiffre d'affaires
 label: exercices
 scope:
   - entreprises
-description: Obtenir les déclarations de chiffre d'affaire faites auprès de la
-  DGFIP, et porté sur la liasse fiscale.
+description: Obtenir les déclarations de chiffre d'affaire faîtes auprès de la
+  DGFIP, et portées sur la liasse fiscale.
 usecases:
   - Aides publiques
   - Marchés publics
@@ -93,9 +93,10 @@ services:
             * de la production vendue des services, c'est à dire "*du montant des travaux, études et prestations de services exécutés, comprenant le cas échéant les produits des activités annexes (services exploités dans l'intérêt du personnel, commissions et courtages, locations diverses, mises à disposition de personnel facturées, ports et frais accessoires facturés, boni sur remises d'emballages consignés)."* [Source : impôts.gouv](https://www.impots.gouv.fr/portail/files/formulaires/2033-sd/2019/2033-sd_2570.pdf)
           question: Quelle est la définition du chiffre d'affaire transmis ?
       description: >-
-        Les exercices renvoyés par la DGFIP sont listés les uns après les autres, le
-        premier étant le plus récent. Le nombre d'exercices renvoyés varie de 1 à 3.
-        Pour chaque exercice, deux informations sont transmises : 
+        Les exercices renvoyés par la DGFIP sont listés les uns après les
+        autres, le premier étant le plus récent. Le nombre d'exercices renvoyés
+        varie de 1 à 3. Pour chaque exercice, deux informations sont transmises
+        : 
 
 
         * le chiffre d'affaire en euros ;
