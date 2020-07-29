@@ -47,6 +47,7 @@ services:
             "documents": [
               {
                 "type": "Statuts",
+                // Cet endpoint renvoit différents types de documents, et de fait, pour chaque URL, celui-ci est indiqué. Voici une liste non-exhaustive des options possibles : "Liste des dirigeants", "Statuts", "Procès verbal", "Récépissé de dissolution", ...
                 "url": "https://storage.entreprise.api.gouv.fr/siade/40ab0b07d434d0417e8997ce7c5afbef/attestation_document_association.pdf",
                 "timestamp": "1500660325"
               },
