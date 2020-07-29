@@ -60,7 +60,7 @@ collections:
         name: 'opening'
         widget: 'select'
         multiple: false
-        options: ['Données publiques', 'Données publiques sauf non diffusibles', 'Données confidentielles', 'Données publiques et confidentielles']
+        options: ['Données publiques.', 'Données publiques et confidentielles pour les non-diffusibles.', 'Données confidentielles.', 'Données publiques et confidentielles.']
       - label: 'Fournisseurs'
         name: 'providers'
         widget: 'select'
