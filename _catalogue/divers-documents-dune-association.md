@@ -12,8 +12,8 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-access: Restreint
-opening: Données confidentielles
+access: Sous habilitation.
+opening: Données publiques.
 providers:
   - mi
 perimeter:
@@ -23,7 +23,7 @@ services:
     request:
       id:
         label: SiretDel'Association ou NumeroRNA
-        description: Le numéro de Siret de l'association ou son numéro RNA
+        description: Le numéro de SIRET de l'association ou son numéro RNA
       parameters:
         param1:
           label: token
@@ -49,9 +49,10 @@ services:
                 "type": "Statuts",
                 "url": "https://storage.entreprise.api.gouv.fr/siade/40ab0b07d434d0417e8997ce7c5afbef/attestation_document_association.pdf",
                 "timestamp": "1500660325"
-              }, ...
+              },
             ]
           }
       description: La réponse JSON indique le nombre de documents à télécharger, l'URL
         d'accès, le type et la date du/des documents.
+history: "##### 01/07/2020 Création de l'endpoint."
 ---
