@@ -23,7 +23,7 @@ services:
     request:
       id:
         label: SiretDel'Association ou NumeroRNA
-        description: Le numéro de SIRET de l'association ou son numéro RNA
+        description: Le numéro de SIRET de l'association ou son numéro RNA.
       parameters:
         param1:
           label: token

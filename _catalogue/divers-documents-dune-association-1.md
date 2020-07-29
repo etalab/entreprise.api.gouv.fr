@@ -33,7 +33,7 @@ services:
     request:
       id:
         label: SiretDeL’Entreprise
-        description: Le numéro de SIRET de l'entreprise
+        description: Le numéro de SIRET de l'entreprise.
       parameters:
         param1:
           label: token

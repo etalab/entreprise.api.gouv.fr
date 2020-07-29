@@ -89,7 +89,7 @@ services:
     request:
       id:
         label: SiretDeL’Entreprise
-        description: Le numéro de SIRET de l’établissement
+        description: Le numéro de SIRET de l’établissement.
       parameters:
         param1:
           label: token

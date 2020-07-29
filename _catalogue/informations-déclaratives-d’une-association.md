@@ -34,7 +34,7 @@ services:
     request:
       id:
         param: SiretDeL’Entreprise
-        description: Le numéro de SIRET de l’association ou le numéro RNA
+        description: Le numéro de SIRET de l’association ou le numéro RNA.
       parameters:
         param1:
           label: token
