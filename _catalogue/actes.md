@@ -13,26 +13,26 @@ description: Obtenir les actes d’une entreprise tels que connus par les greffe
 usecases:
   - Marchés publics
   - Aides publiques
-access: Restreint, [disponible sous d'autres conditions sur le site de
-  l'INPI](https://data.inpi.fr/swagger)
-opening: Données confidentielles
+access: Sous habilitation, disponible par *swagger* sur le [site de
+  l'INPI](https://data.inpi.fr/swagger).
+opening: Données publiques.
 providers:
   - inpi
 perimeter:
   description: >-
     Tous les actes établis par les greffes depuis 1993 sont transmis par cet
-    endpoint. Ce qui représente envrion 25 millions d'actes. Théoriquement, les
+    endpoint. Ce qui représente environ 25 millions d'actes. Théoriquement, les
     actes sont transmis à l'INPI par le greffe dans un délai de 24h.
 
 
-    ℹ️ Il se peut que certains actes soient manquants, dans ce cas, vous pouvez nous [envoyer un mail]([support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)) avec le numéro de SIRET concerné. L'INPI peut tenter de numériser le document manquant.
-  label: "Actes et statuts des personnes morales et physiques depuis 1993 "
+    ℹ️ Il se peut que certains actes soient manquants, dans ce cas, vous pouvez nous [envoyer un mail]([support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)) avec le numéro de SIRET concerné. L'INPI peut essayer de numériser le document manquant.
+  label: Actes et statuts des personnes morales et physiques depuis 1993.
 services:
   service1:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de la personne physique ou morale recherchée
       parameters:
         param1:
           label: token
@@ -78,20 +78,20 @@ services:
                 ]
               }
       description: >-
-        ###### Contenu de la réponse JSON
+        La réponse se compose :
 
 
-        * **Une URL** permettant de télécharger une archive ZIP contenant l'ensemble des actes de l'entité appelée ;
+        * d'une **URL** permettant de télécharger une archive ZIP contenant l'ensemble des actes de l'entité appelée ;
 
-        * **La liste des actes, accompagnés de leurs informations génériques** (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et la nature de l'archive.)
-
-
-        ###### Contenu de l'archive ZIP 🗂 :
+        * de la **liste des actes, accompagnés de leurs informations génériques** (identifiant du fichier dans l'archive téléchargée, le code greffe, les dates de dépôt et la nature de l'archive.)
 
 
-        * Tous les actes au format PDF ;
+        L'archive ZIP fournie permet d'accéder à :
 
-        * Toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
 
-        * Un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` de l'acte indiqué dans la liste JSON des bilans.
+        * tous les actes au format PDF ;
+
+        * toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
+
+        * un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` de l'acte indiqué dans la liste JSON des bilans.
 ---
