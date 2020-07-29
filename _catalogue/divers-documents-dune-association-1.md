@@ -5,7 +5,7 @@ title: Chiffre d'affaires
 label: exercices
 scope:
   - entreprises
-description: Obtenir les déclarations de chiffre d'affaire faîtes auprès de la
+description: Obtenir les déclarations de chiffre d'affaire faites auprès de la
   DGFIP, et portées sur la liasse fiscale.
 usecases:
   - Aides publiques
