@@ -77,7 +77,6 @@ perimeter:
     * les entrepreneurs individuels exerçant de manière indépendante une profession non salariée(exemple : un commerçant, un médecin), ayant fait une déclaration d'activité. <br>ℹ️ *Les particuliers employeurs ne font pas partie de la base Sirene* ;
 
     * les associations ayant, en plus de leur numéro RNA, un numéro de SIREN/SIRET délivré lorsqu'elles :
-
       * emploient du personnel salarié ; 
       * sont soumises à la TVA ; 
       * ont demandé ou bénéficient de transferts financiers publics.
