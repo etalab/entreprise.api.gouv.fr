@@ -48,19 +48,6 @@ services:
         param4:
           label: object
           description: RaisonDeL'AppelOuIdentifiant
-      options:
-        option1:
-          param: ""
-          description: ""
-          comment: ""
-        option2:
-          param: ""
-          description: ""
-          comment: ""
-        option3:
-          param: ""
-          description: ""
-          comment: ""
     response:
       format: Données structurées JSON
       timeout: 5 secondes

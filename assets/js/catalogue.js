@@ -88,6 +88,7 @@ window.onload = function (e) {
   let typeFilter = document.querySelector('select[name="catalogue-type"]')
   let usecaseFilter = document.querySelector('select[name="catalogue-usecase"]')
   let providerFilter = document.querySelector('select[name="catalogue-providers"]')
+  let stateFilter = document.querySelector('select[name="catalogue-openstate"]')
 
   toggleNonMarkedPanels()
   toggleCategories()
@@ -110,6 +111,7 @@ window.onload = function (e) {
     const scope = scopeFilter.value
     const usecase = usecaseFilter.value
     const provider = providerFilter.value
+    const state = stateFilter.value
 
     let shouldHide
 
@@ -124,6 +126,9 @@ window.onload = function (e) {
         shouldHide = true
       }
       if (provider && !panels[i].hasAttribute('data-'+provider)) {
+        shouldHide = true
+      }
+      if (state && !(panels[i].getAttribute('data-openstate') == state)) {
         shouldHide = true
       }
 
@@ -161,4 +166,5 @@ window.onload = function (e) {
   typeFilter.addEventListener("change", toggleCategories)
   usecaseFilter.addEventListener("change", toggleNonMarkedPanels)
   providerFilter.addEventListener("change", toggleNonMarkedPanels)
+  stateFilter.addEventListener("change", toggleNonMarkedPanels)
 }

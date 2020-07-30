@@ -15,7 +15,7 @@ usecases:
   - Aides publiques
 access: Sous habilitation, disponible par *swagger* sur le [site de
   l'INPI](https://data.inpi.fr/swagger).
-opening: Données publiques.
+opening: Données publiques
 providers:
   - inpi
 perimeter:

@@ -1,6 +1,7 @@
 {% assign catalogue_types = site.catalogue_types %}
 {% assign catalogue_usecases = site.catalogue_usecases %}
 {% assign catalogue_providers = site.providers_aliases %}
+{% assign catalogue_openstate = site.catalogue_openstate %}
 <form class="tpl-hero__form catalogue__search">
   <label for="tpl-hero__search">Chercher une information</label>
   <div class="tpl-form__group">
@@ -28,6 +29,12 @@
       <option value="">Fournisseurs</option>
       {% for provider in catalogue_providers %}
         <option value="{{ provider[0] }}">{{ provider[1] }}</option>
+      {% endfor %}
+    </select>
+    <select id="catalogue-openstate" class="tpl-hero__search" name="catalogue-openstate">
+      <option value="">Ouverture de la donnée</option>
+      {% for state in catalogue_openstate %}
+        <option value="{{ state }}">{{ state }}</option>
       {% endfor %}
     </select>
   </div>

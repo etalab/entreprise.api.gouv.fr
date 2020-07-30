@@ -14,7 +14,7 @@ usecases:
   - Répertoire de tiers
 access: Sous habilitation,<br>disponible sous d'autres conditions sur
   [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/)
-opening: Données publiques.
+opening: Données publiques
 providers:
   - mi
 perimeter:

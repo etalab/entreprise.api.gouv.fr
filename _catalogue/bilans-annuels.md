@@ -12,7 +12,7 @@ usecases:
   - Marchés publics
 access: Sous habilitation, <br>disponible partiellement (uniquement les bilans
   publics) sur le [site de l'INPI](https://data.inpi.fr/swagger).
-opening: Données publiques et confidentielles pour les non-diffusibles.
+opening: Données publiques et confidentielles pour les non-diffusibles
 providers:
   - inpi
 perimeter:

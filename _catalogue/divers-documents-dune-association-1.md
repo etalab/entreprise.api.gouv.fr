@@ -12,7 +12,7 @@ usecases:
   - Marchés publics
   - Application de la loi énergie - Art.64
 access: Sous habilitation.
-opening: Données confidentielles.
+opening: Données confidentielles
 providers:
   - dgfip
 perimeter:

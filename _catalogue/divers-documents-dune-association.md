@@ -13,7 +13,7 @@ usecases:
   - Marchés publics
   - Répertoire de tiers
 access: Sous habilitation.
-opening: Données publiques.
+opening: Données publiques
 providers:
   - mi
 perimeter:
