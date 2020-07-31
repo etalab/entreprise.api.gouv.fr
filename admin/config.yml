@@ -168,7 +168,7 @@ collections:
                   - label: 'Description'
                     name: 'description'
                     required: false
-                    default: Le numéro de siren de la personne physique ou morale recherchée
+                    default: Le numéro de SIREN de la personne physique ou morale recherchée
                     widget: 'string'
                   - label: 'Extra paramètre 1'
                     name: 'extra1'
@@ -245,6 +245,19 @@ collections:
                       widget: 'string'
                 - label: 'Paramètre obligatoire 5'
                   name: 'param5'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+               - label: 'Paramètre obligatoire ou optionnel 6'
+                  name: 'param6'
                   required: false
                   widget: 'object'
                   fields:
@@ -450,7 +463,7 @@ collections:
                   - label: 'Description'
                     name: 'description'
                     required: false
-                    default: Le numéro de siren de la personne physique ou morale recherchée
+                    default: Le numéro de SIREN de la personne physique ou morale recherchée
                     widget: 'string'
                   - label: 'Extra paramètre 1'
                     name: 'extra1'
@@ -527,6 +540,19 @@ collections:
                       widget: 'string'
                 - label: 'Paramètre obligatoire 5'
                   name: 'param5'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire ou optionnel 6'
+                  name: 'param6'
                   required: false
                   widget: 'object'
                   fields:
@@ -733,7 +759,7 @@ collections:
                   - label: 'Description'
                     name: 'description'
                     required: false
-                    default: Le numéro de siren de la personne physique ou morale recherchée
+                    default: Le numéro de SIREN de la personne physique ou morale recherchée
                     widget: 'string'
                   - label: 'Extra paramètre 1'
                     name: 'extra1'
@@ -810,6 +836,19 @@ collections:
                       widget: 'string'
                 - label: 'Paramètre obligatoire 5'
                   name: 'param5'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire ou optionnel 6'
+                  name: 'param6'
                   required: false
                   widget: 'object'
                   fields:
