@@ -256,7 +256,7 @@ collections:
                       name: 'description'
                       required: false
                       widget: 'string'
-               - label: 'Paramètre obligatoire ou optionnel 6'
+                - label: 'Paramètre obligatoire ou optionnel 6'
                   name: 'param6'
                   required: false
                   widget: 'object'
