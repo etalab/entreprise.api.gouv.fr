@@ -1,4 +1,8 @@
 ---
+providers:
+  - mi
+access: Sous habilitation,<br>disponible sous d'autres conditions sur
+  [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/)
 weight: 4
 type: Informations générales
 title: Informations déclaratives d’une association
@@ -12,11 +16,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-access: Sous habilitation,<br>disponible sous d'autres conditions sur
-  [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/)
-opening: Données publiques
-providers:
-  - mi
+opening: Données publiques.
 perimeter:
   perimeter1:
     label: Lorem ipsum
