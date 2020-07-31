@@ -1,4 +1,7 @@
 ---
+providers:
+  - cnetp
+access: Restreint
 weight: 20
 type: Attestations sociales et fiscales
 title: Cotisations congés payés & chômage intempéries
@@ -12,30 +15,27 @@ usecases:
   - Aides publiques
   - Répertoire de tiers
   - Marchés publics
-access: Restreint
-opening: Données confidentielles
-providers:
-  - cnetp
+opening: Données confidentielles.
 perimeter:
   description: >-
-    L'ensemble des entreprises exerçant une ou plusieurs activités entrant dans
-    le champ d'application des conventions collectives nationales étendues des
-    Travaux Publics et du Bâtiment : 
+    **L'ensemble des entreprises** exerçant une ou plusieurs activités **entrant
+    dans le champ d'application des conventions collectives** nationales
+    étendues des Travaux Publics et du Bâtiment : 
 
 
-    * Convention Collective Nationale des Ouvriers des Travaux Publics du 15 décembre 1992 (étendue par arrêté du 27 mai 1993) ; 
+    * ✅ Convention Collective Nationale des **Ouvriers des Travaux Publics** du 15 décembre 1992 (étendue par arrêté du 27 mai 1993) ; 
 
-    * Convention Collective Nationale des Ouvriers employés par les entreprises de Bâtiment non visés par le décret du 1er mars 1962 (c'est-à-dire occupant plus de 10 salariés), du 8 octobre 1990 (étendue par arrêté du 8 février 1991). 
+    * ✅ Convention Collective Nationale des **Ouvriers employés par les entreprises de Bâtiment** non visés par le décret du 1er mars 1962 (c'est-à-dire **occupant plus de 10 salariés**), du 8 octobre 1990 (étendue par arrêté du 8 février 1991). 
 
 
     ℹ️ Plus d'informations sur <https://www.cnetp.org/category/affiliation/>
-  label: Entreprises de travaux publics et bâtiment
+  label: Entreprises de travaux publics et bâtiment.
 services:
   service1:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de l'entreprise.
       parameters:
         param1:
           label: token
@@ -54,7 +54,8 @@ services:
         qr1:
           question: Quelles sont les conditions de délivrance de l'attestation ?
           answer: >-
-            L'attestation est dilivrée à l'entreprise sous réserve que celle-ci :
+            L'attestation est délivrée à l'entreprise sous réserve que celle-ci
+            :
 
 
             * soit à jour de ses déclarations exigibles servant à l'assiette des cotisations de congés payés et des cotisations de chômage-intempéries ;
