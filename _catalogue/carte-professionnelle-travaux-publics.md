@@ -1,4 +1,8 @@
 ---
+providers:
+  - fntp
+access: restreint, disponible sans API [sur le site de la
+  FNTP](https://www.fntp.fr/outils/annuaire-carte-professionnelle)
 weight: 19
 type: Attestations sociales et fiscales
 title: Carte professionnelle travaux publics
@@ -10,20 +14,16 @@ description: Récupérer la carte professionnelle d’entrepreneur de travaux
   administratives et juridiques.
 usecases:
   - Marchés publics
-access: restreint, disponible sans API [sur le site de la
-  FNTP](https://www.fntp.fr/outils/annuaire-carte-professionnelle)
-opening: Données publiques
-providers:
-  - fntp
+opening: Données publiques.
 perimeter:
-  label: Entreprises de travaux publics, ayant fait la demande, et en règle
+  label: Entreprises de travaux publics en règle, ayant fait la demande.
   description: >-
     Toute entreprise de travaux publics peut demander une carte professionnelle
-    à la FNTP. Celle-ci lui est délivrée lorsqu'elles est en règle de ses
-    obligations sociales, administratives et juridiques.
+    à la FNTP. Celle-ci lui est délivrée lorsque l'entreprise est en règle de
+    ses obligations sociales, administratives et juridiques.
 
 
-    La FNTP a à ce jour délivré des cartes professionnelles à plus de 9000 entreprises.
+    À ce jour, la FNTP a délivré des cartes professionnelles à plus de **9000 entreprises**.
 
 
     ℹ️ Plus d'informations sur le site de la FNTP : <https://www.fntp.fr/outils/carte-professionnelle/tout-savoir-sur-la-carte-pro>
@@ -32,7 +32,7 @@ services:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de l'entreprise.
       parameters:
         param1:
           label: token
