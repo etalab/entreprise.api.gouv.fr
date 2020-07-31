@@ -1,4 +1,8 @@
 ---
+providers:
+  - probtp
+new: ""
+access: Restreint
 weight: 17
 type: Attestations sociales et fiscales
 title: Cotisations retraite bâtiment
@@ -11,11 +15,7 @@ description: Savoir si une entreprise est à jour de ses cotisations retraite à
 usecases:
   - Aides publiques
   - Marchés publics
-access: Restreint
-opening: Données confidentielles
-providers:
-  - probtp
-new: ""
+opening: Données confidentielles.
 service2:
   label: Obtenir l'attestation de l'entreprise
   request:
@@ -31,12 +31,14 @@ service2:
         label: recipient
       param4:
         label: object
+perimeter:
+  label: Entreprises.
 services:
   service1:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de l'entreprise.
       parameters:
         param1:
           label: token
@@ -69,12 +71,16 @@ services:
       timeout: 5 secondes
       format: Donnée structurée JSON
       description: >-
-        La réponse se compose de l'information sur l'éligibilité de l'entreprise
-        à l'attestation de cotisation retraite, ce qui indique en creux si
-        l'entreprise est en règle de ses cotisations retraites.
+        La réponse indique, par un champ `true`/`false`, si l'entreprise est
+        éligible à l'attestation de cotisation retraite, 
 
 
-        Lorsque l'entreprise est inconnue de PROBTP, un code erreur (404) est renvoyé.
+        ℹ️ Si l'entreprise est éligible, cela signifie en creux qu'elle est en règle de ses cotisations retraites.
+      questions:
+        qr1:
+          question: Que signifie le code erreur 404 ?
+          answer: Lorsque l'entreprise est inconnue de PROBTP, un code erreur (404) est
+            renvoyé.
     label: Savoir si l'entreprise est à jour de ses cotisations
   service2:
     label: Obtenir l'attestation de l'entreprise
