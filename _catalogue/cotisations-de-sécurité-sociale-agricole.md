@@ -1,4 +1,7 @@
 ---
+providers:
+  - msa
+access: Restreint
 weight: 16
 type: Attestations sociales et fiscales
 title: Cotisations de sécurité sociale agricole
@@ -11,10 +14,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-access: Restreint
-opening: Données confidentielles
-providers:
-  - msa
+opening: Données confidentielles.
 perimeter:
   description: |-
     Sont éligibles à la MSA les entreprises de : 
@@ -23,13 +23,13 @@ perimeter:
     * l'élevage
     * la pèche
     * le forestier.
-  label: Entreprises de l'agriculture, élevage, pèche et forestier.
+  label: Entreprises d'agriculture, élevage, pèche et forestier.
 services:
   service1:
     request:
       id:
         label: SiretDeL’Etablissement
-        description: Le numéro de siret de l'etablissement recherché
+        description: Le numéro de SIRET de l'etablissement recherché.
       parameters:
         param1:
           label: token
@@ -53,9 +53,9 @@ services:
       sample:
         code: >
           {
-            "a_jour": true / false / null 
+            "a_jour": true,
           // Si l'entreprise est à jour de ses cotisations patronales à la MSA, la réponse seral "true", à l'inverse, si l'entreprise n'est pas à jour, la réponse sera "false". Dans certains cas, le statut de l'entreprise est inconnu, une analyse est à effectuer, alors ce champ indiquera "null".
-            "analyse_en_cours": false / true
+            "analyse_en_cours": false
           // Indique "false" quand le statut de l'entreprise est connu, autrement, indique "true" si justement, une analyse est en cours.
 
           }
