@@ -1,4 +1,11 @@
 ---
+providers:
+  - acoss
+new: >-
+  À compter du 25 septembre 2019 : \
+
+  Pour un SIREN donné, il ne sera possible d'accéder à l'attestation que 10 fois par jour ; là où avant il n'y avait pas limite. Une fois cette limite atteinte il faudra attendre le lendemain (à partir de 00h00) pour obtenir de nouveau cette attestation. Cette limitation est mise en place directement par le fournisseur de données (ACOSS). **Il est donc recommandé d'avoir un système de cache pour les attestations sociales.**
+access: Restreint
 weight: 14
 type: Attestations sociales et fiscales
 title: Attestation de vigilance
@@ -13,25 +20,20 @@ description: Obtenir l’attestation validant que l’entreprise s’acquitte de
 usecases:
   - Aides publiques
   - Marchés publics
-access: Restreint
-opening: Données confidentielles
-providers:
-  - acoss
-new: "À compter du 25 septembre 2019 : Pour un SIREN donné il ne sera possible
-  d'accéder à l'attestation que 10 fois par jour ; là où avant il n'y avait pas
-  limite. Une fois cette limite atteinte il faudra attendre le lendemain (à
-  partir de 00h00) pour obtenir de nouveau cette attestation. Cette limitation
-  est mise en place directement par le fournisseur de données (ACOSS). Il est
-  donc recommandé d'avoir un système de cache pour les attestations sociales."
+opening: Données confidentielles.
 perimeter:
-  description: ""
-  label: Toutes les entreprises
+  description: >-
+    Toutes les entreprises sont concernées.
+
+
+    ⚠️ **L’attestation est délivrée si l'entreprise s'est acquitée de ses contributions et cotisations.**
+  label: Toutes les entreprises.
 services:
   service1:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de l'entreprise.
       parameters:
         param1:
           label: token
@@ -45,27 +47,31 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
+        param5:
+          label: type_attestation
+          description: (optionnel)AVG_UR
       questions:
         qr1:
           question: À quelles conditions l'attestation de vigilance est délivrée à une
             entreprise par l'ACOSS ?
           answer: >-
-            L'entreprise, micro entreprise peut recevoir l'attestation quand :  
+            L'entreprise ou micro entreprise reçoit l'attestation quand :  
 
 
-            * elle s'acquitte des cotisations et contributions dues à leur date normale d’exigibilité,
+            * elle s'acquitte des cotisations et contributions dues à leur date normale d’exigibilité ;
 
-            * elle a souscrit un plan d’apurement des cotisations et contributions restant dues qu’elle respecte,
+            * elle a souscrit un plan d’apurement des cotisations et contributions restant dues, qu’elle respecte ;
 
-            * elle acquitte les cotisations et contributions dues, mais elle n’est pas à jour par ailleurs dans le paiement des majorations et pénalités,
+            * elle s'acquitte des cotisations et contributions dues, mais elle n’est pas à jour par ailleurs dans le paiement des majorations et pénalités ;
 
-            * ou elle n’a pas acquitté les cotisations et contributions dues mais en conteste le montant par recours contentieux. 
+            * ou elle ne s'est pas acquittée des cotisations et contributions dues mais en conteste le montant par recours contentieux. 
 
 
             ℹ️ Le cadre précis de la demande par le donneur d'ordre et de la délivrance de l'attestation à l'entreprise est expliqué sur le site de l'ACOSS :[ https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html](<Quand est-ce que l'attestation de vigilance est délivrée par l'ACOSS ?>)
         qr2:
-          question: Pourquoi ne puis-je plus avoir l'Attestation de Marché Publique ?
-          answer: L'AMP a été supprimée les informations sont maintenant contenues dans
+          question: Pourquoi ne puis-je plus avoir l'Attestation de Marché Publique (AMP)
+            ?
+          answer: L'AMP a été supprimée. Les informations sont maintenant contenues dans
             l'attestation de vigilance.
     response:
       format: Document PDF
@@ -74,7 +80,8 @@ services:
         qr1:
           answer: L’attestation de vigilance est valide 6 mois à compter de la dernière
             date de période analysée. Celle-ci dépend de la situation de chaque
-            entreprise et de la dernière déclaration enregistrée dans le système.
+            entreprise et de la dernière déclaration enregistrée dans le
+            système.
           question: Combien de temps est valide l’attestation de vigilance ?
         qr2:
           question: L’api ne renvoie pas de pièce, peut-on considérer que l'entreprise
