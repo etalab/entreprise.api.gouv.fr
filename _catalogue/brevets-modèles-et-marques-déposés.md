@@ -1,7 +1,11 @@
 ---
+providers:
+  - inpi
+access: Restreint, [disponible en recherche manuelle sur le site de
+  l'INPI](https://bases-marques.inpi.fr/)
 weight: 24
 type: Propriété intellectuelle
-title: "Brevets, modèles et marques déposés"
+title: Brevets, modèles et marques déposés
 label: extraits_courts_inpi
 scope:
   - entreprises
@@ -11,16 +15,31 @@ description: >-
   d’une entreprise enregistrés à l’INPI ; ainsi que le nombre de dépôts pour
   chacune de ces catégories.
 
-   \
+
   ⚠️ Le périmètre de cet endpoint n'est pas exhaustif, les données doivent donc être utilisées de manière qualitative et indicative.
 usecases:
   - Marchés publics
   - Répertoire de tiers
-access: Restreint, [disponible en recherche manuelle sur le site de
-  l'INPI](https://bases-marques.inpi.fr/)
-opening: Données publiques
-providers:
-  - inpi
+opening: Données publiques.
+history: "###### 2017-06-01 : Ouverture de l'endpoint"
+service2:
+  request:
+    id:
+      label: SirenDeL’Entreprise
+      description: Le numéro de siren de la personne physique ou morale recherchée
+    parameters:
+      param1:
+        label: token
+        description: JetonD’Habilitation
+      param2:
+        label: context
+        description: CadreDeLaRequête
+      param3:
+        label: recipient
+        description: BénéficiaireDel’Appel
+      param4:
+        label: object
+        description: RaisonDeL’AppelOuIdentifiant
 perimeter:
   description: >-
     Cet endpoint appelle les informations à partir d'un SIREN. Le SIREN étant
@@ -45,13 +64,31 @@ perimeter:
 
 
     ℹ️ Pour information, seule la raison sociale compte lors du dépôt pour une personne morale.
-  label: Les brevets, marques et modèles enregistrés avec SIREN
+  label: Les brevets, marques et modèles enregistrés avec SIREN.
+service3:
+  request:
+    id:
+      label: SirenDeL’Entreprise
+      description: Le numéro de siren de la personne physique ou morale recherchée
+    parameters:
+      param1:
+        label: token
+        description: JetonD’Habilitation
+      param2:
+        label: context
+        description: CadreDeLaRequête
+      param3:
+        label: recipient
+        description: BénéficiaireDel’Appel
+      param4:
+        label: object
+        description: RaisonDeL’AppelOuIdentifiant
 services:
   service1:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de la personne physique ou morale.
       parameters:
         param1:
           label: token
@@ -69,9 +106,15 @@ services:
       sample:
         code: >
           {
+
+          // PARTIE BREVETS
+
             "brevets": {
               "count": 13161,
-              "latests_brevets": [{
+              // Nombre total des dépots de brevets effectués par l'entreprise.
+              "latests_brevets": [
+              // Liste des derniers brevets déposés par l'entreprise :
+                {
                   "titre": "DETERMINATION DE PARAMETRES D&apos;UN MODELE DYNAMIQUE POUR UNE CELLULE ELECTROCHIMIQUE DE BATTERIE",
                   "date_publication": "20170616",
                   "date_depot": "20151214",
@@ -103,9 +146,16 @@ services:
                 }
               ]
             },
+
+            
+          // PARTIE MODELES
+
             "modeles": {
               "count": 361,
-              "latests_modeles": [{
+              // Nombre total des dépots de modèles effectués par l'entreprise.
+              "latests_modeles": [
+              // Liste des derniers modèles déposés par l'entreprise :
+               {
                   "titre": "Véhicule automobile, vues de détails",
                   "date_publication": "20170602",
                   "date_depot": "20140527",
@@ -137,9 +187,16 @@ services:
                 }
               ]
             },
+
+            
+          // PARTIE MARQUES
+
             "marques": {
               "count": 16,
-              "latests_marques": [{
+              // Nombre total des dépots de marques effectués par l'entreprise.
+              "latests_marques": [
+              // Liste des dernières marques déposées par l'entreprise :
+                {
                   "numero_identification": "4313413",
                   "marque": null,
                   "marque_status": "Marque enregistrée",
@@ -180,15 +237,17 @@ services:
       format: Donnée structurée JSON
       timeout: 5 secondes
       description: >-
-        La réponse se compose du nombre total de dépôt de l'entreprise et de
-        trois listes décrivant :
+        La réponse se compose de trois parties : 
 
 
-        * les derniers brevets déposés (titre, date de publication, date de dépôt, numéro de publication) ; 
+        * les **derniers brevets déposés** (titre, date de publication, date de dépôt, numéro de publication) ; 
 
-        * les derniers modèles déposés (titre, date de publication, date de dépôt, numéro d'identification) 
+        * des **derniers modèles déposés** (titre, date de publication, date de dépôt, numéro d'identification) 
 
-        * et les dernières marques déposées (numéro d'identification, nom de la marque, statut de la marque, dépositaire, clé).
+        * des **dernières marques déposée**s (numéro d'identification, nom de la marque, statut de la marque, dépositaire, clé).
+
+
+        Chaque partie est introduite par le nombre total de dépôts effectués par l'entreprise.
 
 
         ⚠️ Les données présentes ne peuvent être considérées comme exhaustives.
@@ -196,7 +255,7 @@ services:
         qr1:
           question: Que conclure d'une absence de données ?
           answer: >-
-            Actuellement, un retour vide peut avoir deux significations. 
+            Actuellement, un retour vide peut avoir deux significations :  
 
 
             * soit le SIREN n'existe pas et est inconnu des services de l'INPI ; 
@@ -204,43 +263,7 @@ services:
             * soit aucune donnée n'est enregistrée auprès du fournisseur pour cette société. 
 
 
-            Vous pouvez si vous le souhaiter coupler vos appels avec une vérification de l'existence dans la base Sirene d'un SIREN en particulier qui permettra de trancher entre les deux options. À noter que certaines personnes peuvent demander à être retirées de la diffusion Sirene dans de très rares cas
+            Vous pouvez si vous le souhaiter coupler vos appels avec une vérification de l'existence dans la base Sirene d'un SIREN en particulier qui permettra de trancher entre les deux options. À noter que certaines personnes peuvent demander à être retirées de la diffusion Sirene dans de très rares cas.
         qr2:
           question: ""
-service2:
-  request:
-    id:
-      label: SirenDeL’Entreprise
-      description: Le numéro de siren de la personne physique ou morale recherchée
-    parameters:
-      param1:
-        label: token
-        description: JetonD’Habilitation
-      param2:
-        label: context
-        description: CadreDeLaRequête
-      param3:
-        label: recipient
-        description: BénéficiaireDel’Appel
-      param4:
-        label: object
-        description: RaisonDeL’AppelOuIdentifiant
-service3:
-  request:
-    id:
-      label: SirenDeL’Entreprise
-      description: Le numéro de siren de la personne physique ou morale recherchée
-    parameters:
-      param1:
-        label: token
-        description: JetonD’Habilitation
-      param2:
-        label: context
-        description: CadreDeLaRequête
-      param3:
-        label: recipient
-        description: BénéficiaireDel’Appel
-      param4:
-        label: object
-        description: RaisonDeL’AppelOuIdentifiant
 ---
