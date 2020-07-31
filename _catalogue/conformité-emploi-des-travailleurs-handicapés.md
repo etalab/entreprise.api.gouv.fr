@@ -1,4 +1,7 @@
 ---
+providers:
+  - agefiph
+access: Restreint
 weight: 15
 type: Attestations sociales et fiscales
 title: Conformité emploi des travailleurs handicapés
@@ -9,16 +12,13 @@ description: Obtenir la dernière année connue de conformité d’une entrepris
   regard de l'obligation d'emploi des travailleurs handicapés.
 usecases:
   - Marchés publics
-access: Restreint
-opening: Données confidentielles
-providers:
-  - agefiph
+opening: Données confidentielles.
 services:
   service1:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de l'entreprise.
       parameters:
         param1:
           label: token
@@ -42,11 +42,11 @@ services:
       format: Donnée structurée JSON
       timeout: 5 secondes
       description: >-
-        La réponse se compose de deux clés : 
+        La réponse se compose de : 
 
 
         * la dernière année de conformité de l'entreprise ;
 
-        * la dernière date de validité des informations renvoyées. \
-          *(Cette donnée étant issue d'un dump fourni par l'AGEFIPH, nous vous le transmettons)*
+        * la dernière date de validité des informations renvoyées.
+          ℹ️ Cette donnée étant issue d'un dump fourni par l'AGEFIPH, nous vous le transmettons.
 ---
