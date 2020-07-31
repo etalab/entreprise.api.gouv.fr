@@ -1,4 +1,7 @@
 ---
+providers:
+  - dgfip
+access: Restreint
 weight: 10
 type: Informations financières
 title: Déclarations de résultat
@@ -14,10 +17,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Application de la loi énergie - Art.64
-access: Restreint
-opening: Données confidentielles
-providers:
-  - dgfip
+opening: Données confidentielles.
 perimeter:
   description: >-
     La liasse fiscale est limitée aux entreprises  : 
@@ -46,7 +46,7 @@ services:
       id:
         label: AnneeDeLaLiasseDemandée
         description: "L'année de la liasse fiscale demandée + le paramètre
-          \"declarations\" + le numéro de SIREN de l'entreprise "
+          \"declarations\" + le numéro de SIREN de l'entreprise. "
         extra1: declarations
         extra2: SirenDeL’entreprise
       parameters:
@@ -54,14 +54,17 @@ services:
           label: token
           description: JetonD’Habilitation
         param2:
+          label: user_id
+          description: IdentifiantUtilisateurPhysique
+        param3:
           label: context
           description: CadreDeLaRequête
-        param3:
+        param4:
           label: recipient
           description: BénéficiaireDel’Appel
-        param4:
-          label: object
+        param5:
           description: RaisonDeL’AppelOuIdentifiant
+          label: object
       questions:
         qr1:
           answer: >-
@@ -70,7 +73,7 @@ services:
             clôturent à la fin de l'année civile. 
 
 
-            En cas d'exercice à cheval, la date limite de dépôt est positionnée à + 3 mois après la date de clôture de l'exercice déclaré.
+            En cas d'exercice à cheval, la date limite de dépôt est positionnée exactement 3 mois après la date de clôture de l'exercice déclaré.
           question: Quelles sont les dates de dépôt des liasses fiscales par les
             entreprises ?
         qr3:
@@ -86,19 +89,27 @@ services:
             * à compter du lendemain de la date de dépôt (J+1) ;
 
             * trois jours plus tard (J+3) si le dépôt intervient une veille de week-end.
+      options:
+        option1:
+          param: ""
+          description: ""
+          comment: ""
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
       questions:
         qr2:
           question: Comment faire le lien avec le dictionnaire ?
-          answer: Chaque liasse fiscale renvoyée est accompagnée d'un millésime, et chaque
-            valeur est indiquée par un `code_nref`. Ce dernier est une suite de
-            6 chiffres, le dictionnaire de liasses fiscales disponible avec
-            l'option d'appel `Annee/dictionnaire` vous permet de retrouver la
-            signification du code, et donc de la valeur, appelé "intitulé de la
-            donnée". Il vous faudra à chaque fois préciser le millésime, car les
-            nomenclatures évoluent chaque année.
+          answer: >-
+            Chaque liasse fiscale renvoyée est accompagnée d'un millésime, et
+            chaque valeur est indiquée par un `code_nref`. Ce dernier est une
+            suite de 6 chiffres. Le dictionnaire de liasses fiscales, disponible
+            avec l'option d'appel `Annee/dictionnaire`, vous permet de retrouver
+            la signification du code : "l'intitulé de la donnée". \
+
+            \
+
+            ℹ️ Il vous faudra à chaque fois préciser le millésime, car les nomenclatures évoluent chaque année.
       sample:
         code: >-
           {
@@ -129,6 +140,7 @@ services:
                 "imprime": {
                   "donnees": {
                     "code_nref": "300282",
+          // Ce code vous permet de chercher la signification de la valeur qui suit dans le dictionnaire.
                     "valeur": "157955912"
                   }
                 }
@@ -158,11 +170,12 @@ services:
               }
             ]
           }
+      description: ""
   service2:
     request:
       id:
         label: AnneeDeLaLiasseDemandée
-        description: L'année de la liasse fiscale demandée
+        description: L'année de la liasse fiscale demandée.
         extra1: dictionnaire
         extra2: ""
       parameters:
@@ -170,14 +183,17 @@ services:
           label: token
           description: JetonD’Habilitation
         param2:
+          label: user_id
+          description: IdentifiantUtilisateurPhysique
+        param3:
           label: context
           description: CadreDeLaRequête
-        param3:
+        param4:
           label: recipient
           description: BénéficiaireDel’Appel
-        param4:
-          label: object
+        param5:
           description: RaisonDeL’AppelOuIdentifiant
+          label: object
       questions:
         qr1:
           answer: ""
@@ -223,10 +239,37 @@ services:
         extra1: complete
         extra2: SirenDeL'Entreprise
         description: L'année de la liasse fiscale demandée
+      parameters:
+        param1:
+          label: token
+          description: JetonD’Habilitation
+        param2:
+          label: user_id
+          description: IdentifiantUtilisateurPhysique
+        param3:
+          label: context
+          description: CadreDeLaRequête
+        param4:
+          label: recipient
+          description: BénéficiaireDel’Appel
+        param5:
+          label: object
+          description: RaisonDeL’AppelOuIdentifiant
+      questions:
+        qr1:
+          question: ⚠️ "Complete" ne signifie pas que toutes les liasses fiscales sont
+            retournées
+          answer: Le paramètre d'appel `complete` de ce service permet de retourner les
+            déclarations disponibles d'une entreprise avec le dictionnaire de
+            l'année demandée. Ce paramètre ne veut pas dire que toutes les
+            liasses fiscales seront renvoyées. En effet, les déclarations
+            disponibles sont restreintes par décret.
     response:
       sample:
         code: |-
           {
+          // Les liasses fiscales de l'entreprise appelée.
+
             "entreprise": {
               "denomination" : "Ma Societe",
               "siren": "XXXXXXXXX"
@@ -273,7 +316,9 @@ services:
                 }
               }
             ],
+            
             "dictionnaire": [
+            // Le dictionnaire pour l'année donnée.
               {
                 "numero_imprime": "2053",
                 "millesimes": {
@@ -299,4 +344,7 @@ services:
               }
             ]
           }
+      format: Donnée structurée JSON
+      timeout: 5 secondes
+history: "##### 15/04/2019 Création des endpoints liasses fiscales"
 ---
