@@ -1,4 +1,7 @@
 ---
+providers:
+  - bdf
+access: Restreint
 weight: 9
 type: Informations financières
 title: 3 derniers bilans annuels
@@ -12,21 +15,20 @@ description: "Obtenir les trois derniers bilans d’une entreprise détenus par 
 usecases:
   - Aides publiques
   - Marchés publics
-access: Restreint
 opening: Données confidentielles
-providers:
-  - bdf
 perimeter:
-  label: Les entreprises ayant au moins 3 bilans et réalisant plus 750 000 euros
-    de CA.
+  label: Les entreprises ayant au moins 3 bilans et réalisant plus 750 000€ de CA.
   description: >-
-    Les données Banque de France ne couvrent pas de manière exhaustive tous les
-    SIREN. Notamment, seules les entreprises réalisant un chiffre d'affaire
-    supérieur à 750 000 euros et ayant *a minima* trois bilans sont
-    disponibles. 
+    ###### Entreprises concernées
 
 
-    Les bilans retenus sont ceux dont la date d’arrêté est comprise entre (MM+1/AAAA– 4) et MM/AAAA . MM/AAAA correspondant au mois en cours. Par exemple pour un appel le 17 janvier 2020, les bilans retenus ont une date d'arrêt comprise entre le 1er février 2016 et le 17 janvier 2020.
+    Les données Banque de France ne couvrent pas de manière exhaustive tous les SIREN. Notamment, seules les entreprises réalisant un chiffre d'affaire supérieur à 750 000 euros et ayant *a minima* trois bilans sont disponibles. 
+
+
+    ###### Bilans renvoyés
+
+
+    Les bilans retenus sont ceux dont la date d’arrêté est comprise entre le mois en cours d'aujourd'hui \[MM/AAAA], et 4 ans en arrière \[MM+1/AAAA-4]. <br> *Par exemple pour un appel le 17 janvier 2020, les bilans retenus ont une date d'arrêt comprise entre le 1er février 2016 et le 17 janvier 2020.*
 
 
     ⚠️ Même si la Banque de France connaît un à deux bilans de l'entité appelée mais pas les trois derniers, aucune données sera transmise et l'erreur 404 sera renvoyée.
@@ -35,7 +37,7 @@ services:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de l'entreprise.
       parameters:
         param1:
           label: token
@@ -53,9 +55,9 @@ services:
       timeout: 5 secondes
       format: Donnée structurée JSON
       description: >-
-        Les 3 bilans de la Banque de France sont listés les uns après les autres, le
-        premier étant le plus récent. Chacun d'eux est accompagné d'informations en
-        majeure partie tirées : 
+        Les trois bilans de la Banque de France sont listés les uns après les
+        autres, le premier étant le plus récent. Chacun d'eux est accompagné
+        d'informations en majeure partie tirées : 
 
 
         * des bilans (passif de l'entreprise - [liasse 2051](https://www.impots.gouv.fr/portail/files/formulaires/2051-sd/2018/2051-sd_2146.pdf)) ; 
@@ -73,14 +75,13 @@ services:
             "bilans": [
               {
 
-          // INFORMATION SUR L'EXERCICE : 
+          // INFORMATION SUR L'EXERCICE :
 
                 "duree_exercice": "12",
                 "date_arret_exercice": "201512",
 
 
           // BILAN, PASSIF (Liasse 2051)
-
 
                 "capitaux_propres_et_assimiles": "5928663",
                 // Correspond à la case 'DL' de la liasse fiscale 2051, soit le total des capitaux propres inscrits dans le passif.
@@ -93,7 +94,7 @@ services:
                 "dettes1_emprunts_obligataires_et_convertibles": "0",
                 // Correspond à la case 'DS' de la liasse fiscale 2051.
                 "dettes2_autres_emprunts_obligataires": "6552306",
-                // Correspond à la case 'DT' de la liasse fiscale 2051.`
+                // Correspond à la case 'DT' de la liasse fiscale 2051.
                 "dettes3_emprunts_et_dettes_aupres_des_etablissements_de_credit": "0",
                 // Correspond à la case 'DU' de la liasse fiscale 2051.
                 "emprunts_et_dettes_financieres_divers": "430634",
@@ -108,7 +109,6 @@ services:
 
                 "resultat_exercice": "347126",
                 // Correspond au "bénéfice ou perte" de l'entreprise, total des produits - total des charges (case 'HN' de la liasse fiscale 2053).
-
                 "chiffre_affaires_ht": "12030700",
                 // Correspond au chiffre d'affaire net total, France et exportations & livraisons intercommunautaires (case 'FL' de la liasse fiscale 2052).
 
@@ -117,14 +117,11 @@ services:
 
                 "dettes4_maturite_a_un_an_au_plus": "0",
                 // Correspond à la somme des cases 'VG2' et 'VH2', soit les emprunts et dettes auprès des établissements de crédit à un an au plus par rapport à l'exercice.
-
                 "groupes_et_associes": "0",
                 // Correspond à l'état des dettes du groupe et des associés, case 'VI' de la liasse fiscale 2057.
 
 
-
-                
-          // INCONNU
+          // AUTRES CHAMPS
 
                 "valeur_ajoutee_bdf": "7848792",
                 "besoin_en_fonds_de_roulement": "-721507",
@@ -140,9 +137,9 @@ services:
 
           // En plus, des informations précédentes de l'exercice concerné, la Banque de France renvoit également des données d'évolution par rapport à l'année précédente. 
 
-          Les calculs d'évolution sont calculés en comparant l'année N par rapport à l'année N-1. Ces montants ne sont fournis que si les liasses fiscales N et N-1 ont la même durée d'exercice.
+          // Les calculs d'évolution sont calculés en comparant l'année N par rapport à l'année N-1. Ces montants ne sont fournis que si les liasses fiscales N et N-1 ont la même durée d'exercice.
 
-          Les champs sont calculés par la Banque de France sur le mode suivant : (valeur à date N - valeur à date N-1) *100 / valeur absolue (valeur à date N-1).    
+          // Les champs sont calculés par la Banque de France sur le mode suivant : (valeur à date N - valeur à date N-1) * 100 / valeur absolue (valeur à date N-1).    
                 
                 "evolution_valeur_ajoutee_bdf": "",
                 "evolution_resultat_exercice": "",
@@ -169,6 +166,7 @@ services:
                 }, "bilan 2", "bilan 3"
             ]
           }
+history: "##### 01/06/2018 Ouverture de l'endpoint `bilans_entreprises_bdf`"
 availability:
   volumetry: 2000 requêtes / 10 minutes par IP
   normal_availability: 7 jours sur 7, de 5h à 22h.
