@@ -97,7 +97,7 @@ services:
     request:
       id:
         label: SirenDeL'Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de l'entreprise.
       parameters:
         param1:
           label: token
