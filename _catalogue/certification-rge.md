@@ -90,8 +90,8 @@ services:
       questions:
         qr1:
           question: Pourquoi certains certificats ne sont pas disponibles ?
-          answer: "L'ADEME demande aux organismes de certifications (Qualit'EnR,
-            Qualifelec, ...) de mettre à disposition les adresses URL vers les
+          answer: "L'ADEME demande aux organismes de certifications (*Qualit'EnR*,
+            *Qualifelec*, ...) de mettre à disposition les adresses URL vers les
             certificats mais tous les développements n'ont pas encore été
             réalisés. De fait certains documents ne sont pas accessibles.
             Cependant, les fichiers sont disponibles pour 95% des entreprises en
