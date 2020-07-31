@@ -1,4 +1,7 @@
 ---
+providers:
+  - dgfip
+access: Restreint
 type: Attestations sociales et fiscales
 title: Attestation fiscale
 label: attestations_fiscales_dgfip
@@ -10,10 +13,7 @@ description: Obtenir, auprès de la direction des finances publiques,
 usecases:
   - Aides publiques
   - Marchés publics
-access: Restreint
-opening: Données confidentielles
-providers:
-  - dgfip
+opening: Données confidentielles.
 perimeter:
   description: >-
     L'attestation de régularité fiscale est **limitée aux ✅ entreprises soumises
@@ -27,7 +27,7 @@ perimeter:
     * ❌ bénéfices agricoles (BA) ;
 
 
-    Sont aussi exclues, même si les obligations fiscales sont respectées :
+    Sont aussi exclues, même si les obligations fiscales sont respectées, les :
 
 
     * ❌ entreprises individuelles ;
@@ -37,27 +37,30 @@ perimeter:
     * ❌ groupements passibles de l'impôt sur le revenu (entrepreneurs individuels).
 
 
-    ⚠️ **L'attestation est délivrée si les obligations déclaratives et de paiement d'IS et de TVA de la société sont en règles.** Ainsi, les sociétés bénéficiant d’un plan de règlement, redressement, sauvegarde ou conciliation ainsi que les sociétés ayant formulé un recours contentieux assorti d’un sursis de paiement ne peuvent pas se voir délivrer une attestation fiscale.
-  label: Entreprises soumises à l'IS
+    ⚠️ **L'attestation est délivrée si les obligations déclaratives et de paiement d'IS et de TVA de la société sont en règle.** Ainsi, les sociétés bénéficiant d’un plan de règlement, redressement, sauvegarde ou conciliation ainsi que les sociétés ayant formulé un recours contentieux assorti d’un sursis de paiement ne peuvent pas se voir délivrer une attestation fiscale.
+  label: Entreprises soumises à l'IS.
 services:
   service1:
     request:
       id:
         label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        description: Le numéro de SIREN de l'entreprise.
       parameters:
         param1:
           label: token
           description: JetonD’Habilitation
         param2:
+          label: user_id
+          description: IdentifiantUtilisateurPhysique
+        param3:
           label: context
           description: CadreDeLaRequête
-        param3:
+        param4:
           label: recipient
           description: BénéficiaireDel’Appel
-        param4:
-          label: object
+        param5:
           description: RaisonDeL’AppelOuIdentifiant
+          label: object
     response:
       format: Document PDF
       timeout: 12 secondes
@@ -68,27 +71,27 @@ services:
         qr1:
           question: Qu'atteste ce document ? et quelle est sa durée de validité ?
           answer: >-
-            L’attestation fiscale atteste que l’entreprise est à jour des ses
-            obligations fiscales à la date du 31/12 de l’année précédente.
+            L’attestation fiscale atteste que l’entreprise est **à jour des ses
+            obligations fiscales** à la date du 31/12 de l’année précédente.
+            <br> *Par exemple si vous demandez une attestation en mars 2015,
+            l’attestation fiscale vous indiquera que l’entreprise est à jour de
+            ses obligations fiscale lui incombant au 31/12/2014.*
 
 
-            Par exemple si vous demandez une attestation en mars 2015, l’attestation fiscale vous indiquera que l’entreprise est à jour de ses obligations fiscale lui incombant au 31/12/2014.
-
-
-            L’attestation fiscale est valide un an sur une année civile (jusqu’au 31/12/AAAA).
+            L’attestation fiscale est **valide un an** sur une année civile (jusqu’au 31/12/AAAA).
         qr2:
           question: L’api ne renvoie pas de pièce, est ce que ça veut dire que
             l’entreprise n’est pas à jour ?
-          answer: Non, dans certain cas particulier, nous ne pouvons pas renvoyer
-            l’attestation. Ça ne veut pas dire que l’entreprise n’est pas à jour. Il
-            faut se rapprocher de l’entreprise pour lui demander la pièce
-            directement.
+          answer: Non, dans certains cas particuliers, nous ne pouvons pas renvoyer
+            l’attestation. Ça ne veut pas dire que l’entreprise n’est pas à
+            jour. Il faut se rapprocher de l’entreprise pour lui demander la
+            pièce directement.
         qr3:
           answer: Non, si une entreprise se voit refuser la délivrance de l’attestation
-            pour cause de carence de ses déclarations ou de ses paiements, cette non
-            délivrance n’est pas définitive pour toute l’année N. Si ensuite elle
-            régularise sa situation pour les années N-1 et antérieures, alors
-            l’attestation de régularité lui sera délivrée.
+            pour cause de carence de ses déclarations ou de ses paiements, cette
+            non délivrance n’est pas définitive pour toute l’année N. Si ensuite
+            elle régularise sa situation pour les années N-1 et antérieures,
+            alors l’attestation de régularité lui sera délivrée.
           question: L’api ne renvoie pas la pièce, est ce que ça veut dire qu’elle ne sera
             jamais disponible ?
       sample:
