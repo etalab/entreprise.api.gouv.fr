@@ -12,7 +12,7 @@ scope:
 description: Obtenir le certificat “Reconnu Garant de l’Environnement” d’une
   entreprise, attestant de compétences spécifiques en travaux de rénovation
   énergétique. Si vous avez besoin uniquement du certificat Qualibat, un
-  [endpoint dédié](#certificats-qualibat) existe.
+  [endpoint dédié](#certificats_qualibat) existe.
 usecases:
   - Marchés publics
   - Répertoire de tiers

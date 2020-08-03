@@ -61,7 +61,7 @@ is_catalogue: true
                     {% endfor %}
                   </div>
                   <h3>{{ endpoint.title }} <code class="tpl-code">{{ endpoint.label }}</code></h3>
-                  <p class="documentation__description">{{ endpoint.description }}</p>
+                  <p class="documentation__description">{{ endpoint.description | markdownify }}</p>
                   <div class="tpl-flex-row tpl-flex-jc-sb description">
                     <dl class="tpl-description-list">
                       <dt>Cas d’usage</dt>
