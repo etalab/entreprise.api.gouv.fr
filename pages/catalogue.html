@@ -21,7 +21,7 @@ is_catalogue: true
         {% for category in categories %}
           {% if category.name == type %}
             <div class="catalogue__category" data-category="{{ index }}">
-              <h3 id="{{ category.name }}">{{ category.name }}</h3>
+              <h3 class="catalogue__category-title" id="{{ category.name }}">{{ category.name }}</h3>
               {% assign items = category.items | sort: 'weight' %}
               {% for endpoint in items %}
               <div class="tpl-panel documentation-card" id="{{ endpoint.label }}" 

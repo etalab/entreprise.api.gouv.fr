@@ -18,6 +18,15 @@
     display: flex;
   }
 
+  .catalogue__category {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .catalogue__category-title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
   .documentation-card {
     background-color: var(--white);
     padding: 0;
