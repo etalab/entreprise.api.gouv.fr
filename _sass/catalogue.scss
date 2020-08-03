@@ -491,6 +491,13 @@
 
   .tpl-documentation__sidebar {
     flex-basis: 20em;
+
+    .tpl-button--alternate {
+      background-color: var(--white);
+      border-color: var(--primary);
+      color: var(--primary);
+      justify-content: center;
+    }
   }
 
   .tpl-documentation__sidebar summary {
@@ -499,6 +506,7 @@
     font-weight: 700;
     margin: var(--spacing-xs) var(--spacing-m);
   } 
+  
   
   .general-doc {
     padding: 0 var(--spacing-s);
