@@ -211,7 +211,7 @@ Pour comprendre en détail les éléments techniques nécessaires consulter la r
 
 ### 🖌Qu’est-ce qu’une API ?
 
-Une API permet d’agirsur des ressources contenues dans un autre système d’informations, sans soi-même avoir la main sur ce système d’information.
+Une API permet d’agir sur des ressources contenues dans un autre système d’informations, sans soi-même avoir la main sur ce système d’information.
 
 Dans le cas qui nous occupe, les ressources sont des informations sur les entreprises, et l’action est une consultation.
 
