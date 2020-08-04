@@ -18,17 +18,37 @@ usecases:
 opening: Données confidentielles.
 perimeter:
   description: >-
-    **L'ensemble des entreprises** exerçant une ou plusieurs activités **entrant
-    dans le champ d'application des conventions collectives** nationales
-    étendues des Travaux Publics et du Bâtiment : 
+    L'endpoint de la CNETP couvre **l'ensemble des entreprises** exerçant une ou
+    plusieurs activités entrant **dans le champ d'application des conventions
+    collectives nationales** étendues des Travaux Publics et du Bâtiment : 
 
 
     * ✅ Convention Collective Nationale des **Ouvriers des Travaux Publics** du 15 décembre 1992 (étendue par arrêté du 27 mai 1993) ; 
 
-    * ✅ Convention Collective Nationale des **Ouvriers employés par les entreprises de Bâtiment** non visés par le décret du 1er mars 1962 (c'est-à-dire **occupant plus de 10 salariés**), du 8 octobre 1990 (étendue par arrêté du 8 février 1991). 
+    * ✅ Convention Collective Nationale des **ETAM des Travaux Publics** du 12 juillet 2006 (étendue par arrêté du 28 juin 2007)
+
+    * ✅ Convention Collective Nationale des **Cadres des Travaux Publics** du 20 novembre 2015 (étendue par arrêté du 5 juin 2020).
+
+
+    Toutes les attestations sont disponibles pour les entreprises en situation régulière ❌ sauf pour celles qui règlent les cotisations dues à la CNETP à l’URSSAF dans le cadre du Titre Emploi Service Entreprise (TESE ).
 
 
     ℹ️ Plus d'informations sur <https://www.cnetp.org/category/affiliation/>
+
+
+    ###### La CNETP, une caisse à compétence nationale
+
+
+    L'[article D.3141-12 du code du travail ](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=F736E4E9BEAEEE069FB2FB9EFA0B5D20.tplgfr42s_1?idArticle=LEGIARTI000020572124&cidTexte=LEGITEXT000006072050&categorieLien=id)définit les entreprises qui sont tenues d'adhérer auprès d'une Caisse de Congés Payés du BTP :
+
+
+    > *"Dans les entreprises exerçant une ou plusieurs activités entrant dans le champ d'application des conventions collectives nationales étendues du bâtiment et des travaux publics, le service des congés est assuré, sur la base de celles-ci, par des caisses constituées à cet effet."*
+
+
+    L'[article D.3141-20 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000020572131&cidTexte=LEGITEXT000006072050) dispose quant à lui que :
+
+
+    > *"Dans les entreprises dont l'activité principale relève des travaux publics, ce service est assuré par une caisse à compétence nationale."*
   label: Entreprises de travaux publics et bâtiment.
 services:
   service1:
@@ -63,8 +83,8 @@ services:
             * soit à jour du paiement des cotisations citées.
       format: Document PDF
       timeout: 12 secondes
-      description: La réponse délivre une URL de téléchargement de l'attestation au
-        format PDF quand celle-ci est disponible.
+      description: "La réponse délivre une URL de téléchargement de l'attestation au
+        format PDF quand celle-ci est disponible, dont voici un exemple. "
       sample:
         code: >-
           {
