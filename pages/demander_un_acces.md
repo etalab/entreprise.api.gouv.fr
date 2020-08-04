@@ -44,13 +44,13 @@ La personne ou l’équipe en charge du développement de l’interface logiciel
 
 ## Les étapes de la demande
 
-#### Les demandes se font par [le formulaire d'habilitation dénommé SignUp](https://signup.api.gouv.fr/api-entreprise)
+#### Les demandes se font par [le formulaire d'habilitation dénommé DataPass](https://datapass.api.gouv.fr/api-entreprise)
 
 Les étapes d’obtention d’un accès aux données sont les suivantes :
 
 **1. Créer un compte**
   <br />
-  Si vous n’en disposez pas déjà, vous devez vous créer un compte sur l’interface SignUp prévue à cet effet.
+  Si vous n’en disposez pas déjà, vous devez vous créer un compte sur l’interface DataPass prévue à cet effet.
   Un seul compte par organisation suffit pour une demande, comme pour plusieurs demandes (exemple de la région Occitanie).
   Votre nom, prénom et adresse mail vous seront demandés… Ainsi que le numéro de SIRET de votre organisation :arrow_down:
 
@@ -84,7 +84,7 @@ Votre jeton d'accès est disponible dans votre espace client à l'adresse suivan
 
 Depuis le printemps 2020, vous pouvez accéder à votre espace client en utilisant les identifiants de votre
 compte API Gouv que vous avez utilisés pour soumettre le formulaire de demande d'accès
-via l'outil Signup. Pour cela, il vous suffit d'utiliser le bouton _Identifiez-vous avec votre compte API Gouv_.
+via l'outil DataPass. Pour cela, il vous suffit d'utiliser le bouton _Identifiez-vous avec votre compte API Gouv_.
 
 Par le passé, des comptes spécifiques d'accès au dashboard API Entreprise étaient
 créés. Ils sont toujours fonctionnels et vous pouvez les utiliser pour vous
