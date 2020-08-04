@@ -745,11 +745,11 @@ Vous devrez également accepter nos conditions générales d’utilisation,consu
 
 ▾ Faire ma demande d’habilitation
 
-Les demandes d’accès à API Entreprise sont instruites sur la plateforme[api.gouv.fr](https://signup.api.gouv.fr/api-entreprise). Si vous n’en disposez pas déjà, il vous sera demandé de vous créer un compte. Des demandes multiples ne nécessitent pas de création de compte supplémentaire.
+Les demandes d’accès à API Entreprise sont instruites sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise). Si vous n’en disposez pas déjà, il vous sera demandé de vous créer un compte. Des demandes multiples ne nécessitent pas de création de compte supplémentaire.
 
 1- Créer un compte
 
-Toute demande d'accès à l'API Entreprise nécessite la création d’un compte à l’adresse suivante :<https://auth.api.gouv.fr/users/?source=signup_api-entreprise>Avec un même compte vous pouvez réaliser plusieurs demandes, et également accéder à API Particulier.
+Toute demande d'accès à l'API Entreprise nécessite la création d’un compte à l’adresse suivante :<https://auth.api.gouv.fr/users/sign-up>Avec un même compte vous pouvez réaliser plusieurs demandes, et également accéder à API Particulier.
 
 ![](https://lh4.googleusercontent.com/zwRySXH-XJp1M6Tr0YWeN1RYfu-BLWgPyia6EV8S8VjLyueHfcMNZyyW7IbF1C0r-ffQM8aOAHtQM_ynyYK2dGmbAk91XKjjONVl62kxIuvInhQ_jty0TGC4bkTZteDb9g)
 
@@ -757,7 +757,7 @@ Toute demande d'accès à l'API Entreprise nécessite la création d’un compte
 
 ![](https://lh6.googleusercontent.com/I-rQQBGLDFlsu28sQWDrQ14j1mHwk5UdogA2heVJKjYpttEo3ZtI02ixG76zXag29hHDdI5Lyuro9YFdVnvq-6tvh9x_NVCrczC7-_EOZZjWpY6-F9yC0YFFkio_w2Ju8Q)
 
-Remplissez[le formulaire de demande d’accès](https://signup.api.gouv.fr/api-entreprise)puis validez le. Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface
+Remplissez[le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise)puis validez le. Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface
 
 En cas de besoin, vous pouvez inviter un personne à intervenir sur ce formulaire.
 

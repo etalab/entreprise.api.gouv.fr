@@ -40,7 +40,7 @@ L'adhésion du Partenaire au Service emporte l'acceptation des présentes CGU.
 
 ### Adhésion
 
-- Le Partenaire vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : https://signup.entreprise.api.gouv.fr
+- Le Partenaire vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : https://datapass.api.gouv.fr/api-entreprise
 
 - Le Partenaire demande l’accès aux seules données strictement nécessaires à la  réalisation d’une démarche administrative.
 
