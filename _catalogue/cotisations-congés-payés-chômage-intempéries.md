@@ -49,7 +49,8 @@ perimeter:
 
 
     > *"Dans les entreprises dont l'activité principale relève des travaux publics, ce service est assuré par une caisse à compétence nationale."*
-  label: Entreprises de travaux publics et bâtiment.
+  label: Entreprises de travaux publics et bâtiment, de certaines conventions
+    collectives.
 services:
   service1:
     request:
