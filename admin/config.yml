@@ -551,6 +551,19 @@ collections:
                       name: 'description'
                       required: false
                       widget: 'string'
+                - label: 'Paramètre obligatoire 6'
+                  name: 'param6'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
               - label: 'Paramètres optionnels'
                 name: 'options'
                 required: false
@@ -823,6 +836,19 @@ collections:
                       widget: 'string'
                 - label: 'Paramètre obligatoire 5'
                   name: 'param5'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 6'
+                  name: 'param6'
                   required: false
                   widget: 'object'
                   fields:
