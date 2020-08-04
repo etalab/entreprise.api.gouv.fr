@@ -107,61 +107,109 @@ window.onload = function (e) {
   }
 
   function toggleNonMarkedPanels() {
-    const panels = document.querySelectorAll('.documentation-card')
+    const categories = document.querySelectorAll('.catalogue__category')
+    // const panels = document.querySelectorAll('.documentation-card')
     const scope = scopeFilter.value
     const usecase = usecaseFilter.value
     const provider = providerFilter.value
     const state = stateFilter.value
+    const type = typeFilter.value
 
-    let shouldHide
+    let panels, shouldHide, shouldHideCategory, noResults = true
 
-    for (let i = 0; i < panels.length; i++) {
-      panels[i].style.display = 'block'
-      shouldHide = false
-      
-      if (scope && !panels[i].hasAttribute('data-'+scope)) {
-        shouldHide = true
-      } 
-      if (usecase && !panels[i].hasAttribute('data-'+usecase)) {
-        shouldHide = true
-      }
-      if (provider && !panels[i].hasAttribute('data-'+provider)) {
-        shouldHide = true
-      }
-      if (state && !(panels[i].getAttribute('data-openstate') == state)) {
-        shouldHide = true
-      }
+    for (let i = 0; i < categories.length; i++) {
+      panels = categories[i].querySelectorAll('.documentation-card')
+      shouldHideCategory = true
 
-      if (shouldHide) {
-        panels[i].style.display = 'none'
-      } else {
-        if (!searchInput.value || searchInput.value !== '' && panels[i].querySelector('mark') !== null) {
-          panels[i].style.display = 'block'
-        } else {
-          panels[i].style.display = 'none'
+      if (type === "0" || type === categories[i].getAttribute('data-category')) {
+        categories[i].classList.remove('hidden')
+
+        for (let j = 0; j < panels.length; j++) {
+          panels[j].classList.remove('hidden')
+          shouldHide = false
+          
+          if (scope && !panels[j].hasAttribute('data-'+scope)) {
+            shouldHide = true
+          } 
+          if (usecase && !panels[j].hasAttribute('data-'+usecase)) {
+            shouldHide = true
+          }
+          if (provider && !panels[j].hasAttribute('data-'+provider)) {
+            shouldHide = true
+          }
+          if (state && !(panels[j].getAttribute('data-openstate') == state)) {
+            shouldHide = true
+          }
+
+          if (shouldHide) {
+            panels[j].classList.add('hidden')
+          } else {
+            if (!searchInput.value || searchInput.value !== '' && panels[j].querySelector('mark') !== null) {
+              panels[j].classList.remove('hidden')
+              shouldHideCategory = false
+            } else {
+              panels[j].classList.add('hidden')
+            }
+          }
         }
+      } else {
+        categories[i].classList.add('hidden')
       }
+
+      if (shouldHideCategory) {
+        categories[i].classList.add('hidden')
+      } else {
+        categories[i].classList.remove('hidden')
+        noResults = false
+      }
+    }
+
+    const emptyPanel = document.getElementById('no-results')
+
+    if (noResults) {
+      emptyPanel.classList.remove('hidden')
+    } else {
+      emptyPanel.classList.add('hidden')
     }
   }
 
   function toggleCategories() {
     const categories = document.querySelectorAll('.catalogue__category')
     const type = typeFilter.value
+    let shouldHideCategory
 
     for (let i = 0; i < categories.length; i++) {
+      shouldHideCategory = true
       if (type == "0") {
-        categories[i].style.display = 'block'
+        categories[i].classList.remove('hidden')
+        shouldHideCategory = false
       } else {
-        categories[i].style.display = 'none'
+        categories[i].classList.add('hidden')
         if (categories[i].getAttribute('data-category') === type) {
-          categories[i].style.display = 'block'
+          categories[i].classList.remove('hidden')
+          shouldHideCategory = false
         }
+      }
+
+      if (shouldHideCategory) {
+        categories[i].classList.add('hidden')
+      } else {
+        categories[i].classList.remove('hidden')
+        noResults = false
       }
     }
 
   }
 
-  searchInput.addEventListener("input", performMark)
+  function delay(fn) {
+    let timer = 0
+    return function(...args) {
+      clearTimeout(timer)
+      timer = setTimeout(fn.bind(this, ...args), 200)
+    }
+  }
+
+  searchInput.addEventListener("input", delay(performMark))
   scopeFilter.addEventListener("change", toggleNonMarkedPanels)
   typeFilter.addEventListener("change", toggleCategories)
   usecaseFilter.addEventListener("change", toggleNonMarkedPanels)

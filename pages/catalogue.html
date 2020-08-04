@@ -12,7 +12,7 @@ is_catalogue: true
 {% assign catalogue_types = site.catalogue_types %}
 {% assign catalogue_usecases = site.catalogue_usecases %}
 <section class="catalogue">
-  <p>Visibilité de 24 sur 24 données API Entreprise</p>
+  <p>Visibilité de <span id="visible-endpoints">{{ site.catalogue.size }}</span> sur {{ site.catalogue.size }} données API Entreprise</p>
   <div class="tpl-documentation">
     <div class="tpl-documentation__content">
       {% assign categories = site.catalogue | group_by: 'type' | reverse %}
@@ -556,6 +556,9 @@ is_catalogue: true
           {% endif %}
         {% endfor %}
       {% endfor %}
+      <div id="no-results" class="hidden tpl-notification warning">
+        Aucun résultat disponible
+      </div>
     </div>
     <aside class="tpl-documentation__sidebar">
       <nav class="tpl-documentation__links">
