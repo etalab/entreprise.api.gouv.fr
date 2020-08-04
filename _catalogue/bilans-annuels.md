@@ -1,4 +1,8 @@
 ---
+providers:
+  - inpi
+access: Sous habilitation, <br>disponible partiellement (uniquement les bilans
+  publics) sur le [site de l'INPI](https://data.inpi.fr/swagger).
 weight: 8
 type: Informations financières
 title: Bilans annuels
@@ -10,11 +14,7 @@ description: Obtenir les comptes annuels d’une entreprise tels que transmis pa
 usecases:
   - Aides publiques
   - Marchés publics
-access: Sous habilitation, <br>disponible partiellement (uniquement les bilans
-  publics) sur le [site de l'INPI](https://data.inpi.fr/swagger).
-opening: Données publiques et confidentielles pour les non-diffusibles
-providers:
-  - inpi
+opening: Données publiques et confidentielles.
 perimeter:
   label: Certaines entreprises. <br>Tous les bilans depuis 2017.
   description: >-
