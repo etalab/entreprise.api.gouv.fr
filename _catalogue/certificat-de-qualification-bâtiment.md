@@ -12,7 +12,7 @@ scope:
 description: Obtenir le certificat Qualibat, apportant l’avis de l’association
   sur la qualification d’une entreprise dans le bâtiment. Si vous cherchez
   d'autres certificats de qualification, l'[endpoint certification
-  RGE](#certificats-rge-ademe) regroupe tous les certificats, dont les
+  RGE](#certificats_rge_ademe) regroupe tous les certificats, dont les
   Qualibats.
 usecases:
   - Marchés publics
