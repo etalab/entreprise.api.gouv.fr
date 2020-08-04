@@ -57,12 +57,15 @@ services:
           label: user_id
           description: IdentifiantUtilisateurPhysique
         param3:
+          label: email
+          description: (optionnel)EmailUtilisateurFaisantLaDemande
+        param4:
           label: context
           description: CadreDeLaRequête
-        param4:
-          label: recipient
-          description: BénéficiaireDel’Appel
         param5:
+          description: BénéficiaireDel’Appel
+          label: recipient
+        param6:
           description: RaisonDeL’AppelOuIdentifiant
           label: object
       questions:
