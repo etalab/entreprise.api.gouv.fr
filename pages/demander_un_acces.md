@@ -52,7 +52,7 @@ Les étapes d’obtention d’un accès aux données sont les suivantes :
   <br />
   Si vous n’en disposez pas déjà, vous devez vous créer un compte sur l’interface DataPass prévue à cet effet.
   Un seul compte par organisation suffit pour une demande, comme pour plusieurs demandes (exemple de la région Occitanie).
-  Votre nom, prénom et adresse mail vous seront demandés… Ainsi que le numéro de SIRET de votre organisation :arrow_down:
+  Votre nom, prénom et adresse mail vous seront demandés… Ainsi que le numéro de SIRET de votre organisation.
 
 **2. Rejoindre une organisation avec son numéro de SIRET**
   <br />
