@@ -81,6 +81,34 @@ services:
             * soit à jour de ses déclarations exigibles servant à l'assiette des cotisations de congés payés et des cotisations de chômage-intempéries ;
 
             * soit à jour du paiement des cotisations citées.
+        qr2:
+          question: L'api ne renvoie pas de pièce, peut-on considérer que l'entreprise
+            n'est pas à jour ?
+          answer: >-
+            Non, dans certains cas nous ne pouvons pas récupérer l'attestation.
+
+            Notamment, certaines entreprises règlent leurs cotisations dues à la CNETP à l'URSAFF (dans le cadre du TESE) ; leurs attestations ne sont pas accessibles depuis cette API.
+        qr3:
+          question: Comment utiliser ces données confidentielles ?
+          answer: >-
+            ###### Les attestations de la CNETP, confidentielles au titre du
+            secret des affaires
+
+
+            Dans le cadre d'un Marché public, les attestations de Marché ont pour objet de prouver à l'acheteur public que le candidat a satisfait à ses obligations fiscales et sociales. Il en est ainsi des attestations de Marchés délivrées par la CNETP aux entreprises de Travaux Publics.
+
+
+            Or, c**onformément au code de la commande publique, l'acheteur public ne peut communiquer les informations confidentielles** dont il a eu connaissance lors de la procédure de passation et notamment celles dont la divulgation violerait le secret des affaires.
+
+
+
+            C'est pourquoi, les attestations délivrées par la CNETP constituent des données confidentielles et non publiques. 
+
+
+            ###### Des informations à ne pas divulguer
+
+
+            En utilisant l’endpoint `certificats_cnetp`, **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
       format: Document PDF
       timeout: 12 secondes
       description: "La réponse délivre une URL de téléchargement de l'attestation au
