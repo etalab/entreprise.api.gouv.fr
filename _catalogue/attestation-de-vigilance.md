@@ -48,8 +48,8 @@ services:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
         param5:
-          label: type_attestation
-          description: (optionnel)AVG_UR
+          label: ""
+          description: ""
       questions:
         qr1:
           question: À quelles conditions l'attestation de vigilance est délivrée à une
