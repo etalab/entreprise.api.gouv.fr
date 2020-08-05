@@ -30,7 +30,7 @@ questions:
 weight: 2
 type: Informations générales
 title: Données de référence d'un établissement
-label: etablissements_insee
+label: etablissements
 scope:
   - entreprises
   - associations
@@ -54,7 +54,7 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
   description: >-
-    L'endpoint `etablissements_insee` vous donne accès aux données des
+    L'endpoint `etablissements` vous donne accès aux données des
     établissements tirées du *Répertoire National d'identification des
     entreprises et des établissements*, géré par l'INSEE au travers du système
     Sirene.
@@ -126,7 +126,7 @@ services:
             ###### Comment utiliser les données des non diffusibles ?
 
 
-            En utilisant l'endpoint `etablissements_insee`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser les informations de leur établissement que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
+            En utilisant l'endpoint `etablissements`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser les informations de leur établissement que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
 
 
             ⚠️ **Vous ne pouvez pas donc pas faire usage de ces données pour du pré-remplissage.** Il vous est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr>.

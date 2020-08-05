@@ -32,7 +32,7 @@ API Entreprise répond à deux grands types d’usages :
 
 #### Pré-remplir un fomulaire
 
-Avec les endpoints `entreprises`, `etablissements_insee` et `associations` , vous pouvez mettre en place une aide à la saisie pour vos usagers.
+Avec les endpoints `entreprises`, `etablissements` et `associations` , vous pouvez mettre en place une aide à la saisie pour vos usagers.
 
 L’usager renseigne son numéro de SIRET, ou tout autre valeur discriminante. Le formulaire est alors pré-rempli des champs disponibles par votre API.
 
@@ -83,7 +83,7 @@ Des informations complémentaires, dont le détail précis des champs délivrés
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques    |
-| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}                |          INSEE           |          `etablissements_insee`           |    données JSON     |    publiques    |
+| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}                |          INSEE           |          `etablissements`           |    données JSON     |    publiques    |
 | [Extrait  RCS](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs){:target="_blank"}                                           |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    publiques    |
 | [Informations déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 | [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
