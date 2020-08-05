@@ -22,10 +22,10 @@ questions:
       ###### Comment utiliser les données des non diffusibles?
 
 
-      En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique. 
+      En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique.
 
 
-      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés. 
+      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
 
 
       De fait, **les fonctionnalités de pré-remplissage de formulaires ne peuvent donc bénéficier de ces données au risque de les voir diffusées**. Il est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr.>
@@ -38,7 +38,7 @@ questions:
 weight: 1
 type: Informations générales
 title: Données de référence
-label: entreprises_insee
+label: entreprises
 scope:
   - entreprises
   - associations
@@ -56,7 +56,7 @@ perimeter:
   label: Entreprises, entrepreneurs individuels, institutions administratives et
     certaines associations.
   description: >-
-    L'endpoint `entreprises_insee` vous donne accès : 
+    L'endpoint `entreprises` vous donne accès :
 
 
     * aux données tirées du *Répertoire National d'identification des entreprises et des établissements*, géré par l'INSEE au travers du système Sirene ;
@@ -70,7 +70,7 @@ perimeter:
     **Cet endpoint permet donc d'accéder aux informations de référence concernant&nbsp;:**
 
 
-    * ✅ les personnes morales de droit privé : les entreprises. <br> ℹ️ *Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene* ; 
+    * ✅ les personnes morales de droit privé : les entreprises. <br> ℹ️ *Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene* ;
 
     * ✅ les personnes morales de droit public : les institutions et services de l’État et les collectivités territoriales ;
 
@@ -78,8 +78,8 @@ perimeter:
 
     * ✅ les associations ayant, en plus de leur numéro RNA, un numéro de SIREN/SIRET délivré lorsqu'elles :
 
-      * emploient du personnel salarié ; 
-      * sont soumises à la TVA ; 
+      * emploient du personnel salarié ;
+      * sont soumises à la TVA ;
       * ont demandé ou bénéficient de transferts financiers publics.
     * ✅ Les organismes publics ou privés et les entreprises étrangères qui ont une représentation ou une activité en France.
 
@@ -126,20 +126,20 @@ services:
             ###### L'état administratif d'une entreprise
 
 
-            L’état administratif indique si une entreprise est active (A) ou cessée (C). C'est son état juridique. 
+            L’état administratif indique si une entreprise est active (A) ou cessée (C). C'est son état juridique.
 
 
-            L’entreprise est considérée comme juridiquement cessée pour les personnes morales si&nbsp;: 
+            L’entreprise est considérée comme juridiquement cessée pour les personnes morales si&nbsp;:
 
 
             * il y a eu dépôt de la déclaration de disparition de la personne morale&nbsp;;
 
             * elle a été inscrite sans activité à sa demande. Dans le cas d'une création au répertoire Sirene mais sans avoir encore démarré une activité (activité principale provisoire “0000Z”)&nbsp;;
 
-            * elle n’a plus d’établissement en activité. 
+            * elle n’a plus d’établissement en activité.
 
 
-            L’entreprise est considérée comme juridiquement cessée pour les personnes physiques si&nbsp;: 
+            L’entreprise est considérée comme juridiquement cessée pour les personnes physiques si&nbsp;:
 
 
             * l'exploitant de l'entreprise décède ;
@@ -173,7 +173,7 @@ services:
             ###### Comment utiliser les données des non diffusibles ?
 
 
-            En utilisant l'endpoint `entreprises_insee`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**. 
+            En utilisant l'endpoint `entreprises`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
 
 
             ⚠️ **Vous ne pouvez pas en faire usage pour du pré-remplissage.** Il vous est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr>.
@@ -191,7 +191,7 @@ services:
             ###### Cas particulier d'unités présentes dans la base Sirene mais non disponibles
 
 
-            Certaines unités ont été immatriculées pour les seuls besoins d'administrations (les impôts, les URSSAF, la DGCP ...). Leur diffusion à d'autres administrations n'est pas prévue. Il s'agit : 
+            Certaines unités ont été immatriculées pour les seuls besoins d'administrations (les impôts, les URSSAF, la DGCP ...). Leur diffusion à d'autres administrations n'est pas prévue. Il s'agit :
 
 
             * des unités de gestion de paye de la fonction publique ;
@@ -223,47 +223,47 @@ services:
           "entreprise": {
             "siren": "418166096",
             "capital_social": 509525,
-            "numero_tva_intracommunautaire": "FR16418166096", 
+            "numero_tva_intracommunautaire": "FR16418166096",
             // Également appelé numéro d’identification fiscale NIF. Ce numéro est calculé par API Entreprise selon la règle officielle, cette donnée est donc théorique. Dans le cas où l’établissement siège est à l’étranger, la valeur renvoit "null". En effet, dans ce cas le numéro de TVA est problablement calculé par le pays où se situe l'établissement siège et non par la France. La seule source fiable est alors l'entreprise elle-même.
             "forme_juridique": "SA à directoire (s.a.i.)",
-            "forme_juridique_code": "5699", 
+            "forme_juridique_code": "5699",
             // Ces deux champs précédents sont issus de la nomenclature des catégories juridiques de l’INSEE. Pour les personnes physique, cette variable est à 1000.
             "nom_commercial": "OCTO-TECHNOLOGY",
             // Cette variable est "null" pour les personnes physiques.
-            "procedure_collective": false, 
-            // Toujours indiqué comme "false", et à ignorer. Ce champ sera bientôt supprimé. 
+            "procedure_collective": false,
+            // Toujours indiqué comme "false", et à ignorer. Ce champ sera bientôt supprimé.
             "enseigne": null,
             "naf_entreprise": "6202A",
-            "libelle_naf_entreprise": "Conseil en systèmes et logiciels informatiques", 
-            // Issu de la nomenclature d’activités française de l’INSEE. 
+            "libelle_naf_entreprise": "Conseil en systèmes et logiciels informatiques",
+            // Issu de la nomenclature d’activités française de l’INSEE.
             "raison_sociale": "OCTO-TECHNOLOGY",
             "siret_siege_social": "41816609600051",
-            "code_effectif_entreprise": "31", 
+            "code_effectif_entreprise": "31",
             // Le code effectif correspond à une fourchette de nombre de salariés, celle-ci est indiquée un peu plus loin au champ "tranche_effectif_salarie_entreprise". Ce code respecte la nomenclature de l'INSEE disponible à cette adresse : http://www.sirene.fr/sirene/public/variable/tefen
-            "date_creation": 891381600, 
+            "date_creation": 891381600,
             // Date au format timestamp UNIX.
-            "nom": null, 
-            "prenom": null, 
-            "date_radiation": null, 
+            "nom": null,
+            "prenom": null,
+            "date_radiation": null,
             // Indique null si l’entreprise n’est pas radiée du registre. Dans le cas contraire, la date est fournie au format timestamp UNIX 000000000.
-            "categorie_entreprise": "PME", 
+            "categorie_entreprise": "PME",
             // Trois modalités possibles : "PME", petite ou moyenne entreprise, dont les micros entreprises ; "ETI" entreprise de taille intermédiaire ; ou "GE", grande entreprise. Cette variable est calculée par l'INSEE, selon la méthode explicitée à l'adresse https://www.insee.fr/fr/information/1730869
-            "tranche_effectif_salarie_entreprise": { 
+            "tranche_effectif_salarie_entreprise": {
             // Les champs suivants indiquent en détail l'effectif de salariés de l'entreprise.
               "de": 200,
               "a": 249,
               "code": "31",
               "date_reference": "2014",
-              "intitule": "200 à 249 salariés" 
+              "intitule": "200 à 249 salariés"
             },
             "mandataires_sociaux": [
-            // Il y a deux types de mandataires sociaux, les personnes physiques et les personnes morales. 
+            // Il y a deux types de mandataires sociaux, les personnes physiques et les personnes morales.
             {
-            // Dans le cas d'une personne physique, voici les données fournies : 
+            // Dans le cas d'une personne physique, voici les données fournies :
               "nom": "Henri",
               "prenom": "Martin",
               "fonction": "Président du Directoire",
-              "dirigeant": true, 
+              "dirigeant": true,
               // Toujours "true"
               "date_naissance": "1965-01-27",
               "date_naissance_timestamp": -155523600,
@@ -271,33 +271,33 @@ services:
               // Ce champ est toujours vide car il concerne les personnes morales.
               "identifiant": "",
               // Ce champ est toujours vide car il concerne les personnes morales.
-              "type": "PP" 
+              "type": "PP"
               // Signifie qu'il s'agit d'une personne physique.
-            }, 
+            },
             {
-            // Dans le cas d'une personne morale, voici les données fournies : 
-              "nom": "", 
+            // Dans le cas d'une personne morale, voici les données fournies :
+              "nom": "",
               // Ce champ est vide car il concerne les personnes physiques.
-              "prenom": "", 
+              "prenom": "",
               // Ce champ est vide car il concerne les personnes physiques.
               "fonction": "COMMISSAIRE AUX COMPTES SUPPLEANT",
-              "dirigeant": true, 
+              "dirigeant": true,
               // Toujours "true".
-              "date_naissance": "", 
+              "date_naissance": "",
               // Ce champ est vide car il concerne les personnes physiques.
-              "date_naissance_timestamp": 0, 
+              "date_naissance_timestamp": 0,
               // Ce champ est vide car il concerne les personnes physiques.
               "raison_sociale": "BCRH & ASSOCIES - SOCIETE A RESPONSABILITE LIMITEE A ASSOCIE UNIQUE",
-              "identifiant": "490092574", 
+              "identifiant": "490092574",
               // Cet élément de 7 à 9 chiffres est facultatif et peut être vide.
-              "type": "PM" 
+              "type": "PM"
               // Signifie qu'il s'agit d'une personne morale.
             }],
             "etat_administratif": {
-              // L’état administratif est l’état juridique de l’entreprise (source INSEE). 
-              "value": "C", 
+              // L’état administratif est l’état juridique de l’entreprise (source INSEE).
+              "value": "C",
               // Indique si l'entreprise est juridiquement active, par "A". Ou si elle est jurdiquement cessée, par "C". Dans certains cas exceptionnels, l'état peut être "null". Par exemple, lorsqu'une entité vient de créer son SIREN, mais qu'elle n'a pas encore débuté son activité.
-              "date_cessation": 1315173600 
+              "date_cessation": 1315173600
               // Indique "null" quand l'entreprise est jurdiquement active. Quand "value = C", un timestamp (un entier) est renvoyé.
             },
             "diffusable_commercialement": true
@@ -318,7 +318,7 @@ services:
               "intitule": "200 à 249 salariés"
             },
             "date_creation_etablissement": 1108594800,
-            "enseigne": null, 
+            "enseigne": null,
             "region_implantation": {
               "code": "11",
               "value": "Île-de-France"
@@ -334,19 +334,19 @@ services:
             "diffusable_commercialement": true,
             "adresse": {
               // Depuis 2018, l'INSEE ne fournit plus d'adresse au format RNVP, nous opérons donc une reconstruction de l'adresse à partir des champs disponibles dans leur nouvelle API ; cette reconstruction n'est en aucun cas un traitement RNVP : Des différences minimes résultant de l'arrêt du RNVP peuvent être constatées.
-              "l1": "OCTO TECHNOLOGY", 
+              "l1": "OCTO TECHNOLOGY",
               // Raison sociale, ou civilité + prénom + nom.
-              "l2": null, 
+              "l2": null,
               // Raisons sociales usuelles
-              "l3": null, 
+              "l3": null,
               // Complément d'adresse
-              "l4": "50 AVENUE DES CHAMPS ELYSEES", 
+              "l4": "50 AVENUE DES CHAMPS ELYSEES",
               // Numéro de voie +  indice de répétition + type de voie + libellé voie.
-              "l5": null, 
+              "l5": null,
               // Distribution spéciale
-              "l6": "75008 PARIS", 
+              "l6": "75008 PARIS",
               // Code cedex + code cedex ou code postal + libellé commune ou libellé commune à l'étranger.
-              "l7": "FRANCE", 
+              "l7": "FRANCE",
               // Pays
               "numero_voie": "50",
               "type_voie": "AV",
@@ -359,13 +359,13 @@ services:
             },
             "etat_administratif": {
             // Lors de son inscription au répertoire, un établissement est, sauf exception, à l’état ouvert. Le passage à l’état fermé découle de la prise en compte d’une déclaration de fermeture.
-              "value": "F", 
+              "value": "F",
               // Lorsqu'un établissement est ouvert, la valeur indiquée est "A" (actif). S'il est fermé, l'endpoint renverra "F"(fermé).
-              "date_fermeture": 1315173600 
+              "date_fermeture": 1315173600
               // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F".
               }
             },
-            "gateway_error": false 
+            "gateway_error": false
             // Indique si un des deux fournisseurs de données n'a pas fonctionné : INSEE ou Infogreffe.
           }
         lang: jsonc
