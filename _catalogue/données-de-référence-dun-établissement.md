@@ -19,10 +19,10 @@ questions:
       ###### Comment utiliser les données des non diffusibles?
 
 
-      En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique. 
+      En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique.
 
 
-      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés. 
+      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
 
 
       De fait, **les fonctionnalités de pré-remplissage de formulaires ne peuvent donc bénéficier de ces données au risque de les voir diffusées**. Il est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr.>
@@ -30,7 +30,7 @@ questions:
 weight: 2
 type: Informations générales
 title: Données de référence d'un établissement
-label: etablissements_insee
+label: etablissements
 scope:
   - entreprises
   - associations
@@ -54,26 +54,26 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
   description: >-
-    L'endpoint `etablissements_insee` vous donne accès aux données des
+    L'endpoint `etablissements` vous donne accès aux données des
     établissements tirées du *Répertoire National d'identification des
     entreprises et des établissements*, géré par l'INSEE au travers du système
     Sirene.
 
 
-    ⚠️ Cet endpoint ne concerne pas les entreprises, celles-ci sont appelables avec l'endpoint `entreprises_insee`
+    ⚠️ Cet endpoint ne concerne pas les entreprises, celles-ci sont appelables avec l'endpoint `entreprises`
 
 
     **Cet endpoint permet donc d'accéder aux informations de référence concernant les établissements:**
 
 
-    * ✅ des personnes morales de droit privé. <br> ℹ️ *Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene* ; 
+    * ✅ des personnes morales de droit privé. <br> ℹ️ *Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene* ;
 
     * ✅ des personnes morales de droit public : les institutions et services de l’État et les collectivités territoriales ;
 
     * ✅ des associations ayant, en plus de leur numéro RNA, un numéro de SIREN/SIRET délivré lorsqu'elles :
 
-      * emploient du personnel salarié ; 
-      * sont soumises à la TVA ; 
+      * emploient du personnel salarié ;
+      * sont soumises à la TVA ;
       * ont demandé ou bénéficient de transferts financiers publics.
     * ✅ des organismes publics ou privés et les entreprises étrangères qui ont une représentation ou une activité en France.
 
@@ -126,7 +126,7 @@ services:
             ###### Comment utiliser les données des non diffusibles ?
 
 
-            En utilisant l'endpoint `etablissements_insee`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser les informations de leur établissement que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**. 
+            En utilisant l'endpoint `etablissements`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser les informations de leur établissement que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
 
 
             ⚠️ **Vous ne pouvez pas donc pas faire usage de ces données pour du pré-remplissage.** Il vous est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr>.
@@ -156,7 +156,7 @@ services:
 
         * les **données générales** sur l’établissement, telles que la date de création, le nombre de salariés et la tranche effectif, l'activité principale ou encore le statut siège social si l'établissement est concerné.
 
-        * les **données géographiques :** la commune, la région et le pays d’implantation ; ainsi que l'adresse précise reconstruite par API Entreprise.  
+        * les **données géographiques :** la commune, la région et le pays d’implantation ; ainsi que l'adresse précise reconstruite par API Entreprise.
 
         * une **donnée juridique** : l'état administratif de l'établissement et la date de fermeture le cas échéant.
       questions:
@@ -176,38 +176,38 @@ services:
           {
             "etablissement": {
               "siren": "418166096",
-              "nic": "00051", 
+              "nic": "00051",
               // Numéro interne de classement, l'identifiant à 5 chiffres de l'établissement, qui se trouve à la fin du numéro de SIRET.
               "siret": "41816609600051",
-              "statut_diffusion": true, 
+              "statut_diffusion": true,
               // Indique si les données de l'établissement sont diffusables ("true") ou non ("false").
-              "date_creation": 1108594800, 
+              "date_creation": 1108594800,
               // Format timestamp UNIX.
-              "tranche_effectif_code": "11", 
+              "tranche_effectif_code": "11",
               // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE (http://www.sirene.fr/sirene/public/variable/tefen)
-              "activite_principale_rnm_code": "123456", 
+              "activite_principale_rnm_code": "123456",
               // Cette série de 6 chiffres désigne le code de l'activité exercée par l'artisan inscrit au registe des métiers, et renvoie à la Nomenclature d'Activités Françaises de l'Artisanat (NAFA), disponible à cette adresse : https://www.entreprises.gouv.fr/secteurs-professionnels/artisanat/la-nafa).
-              "date_dernier_traitement": 1538217704, 
+              "date_dernier_traitement": 1538217704,
               // Informe du dernier traitement de l'unité légale dans le répertoire Sirene. Cette date peut concerner des mises à jour de données du répertoire Sirene, qui ne sont pas diffusées par l'API. Cette date est délivrée au format timestamp UNIX. Cette variable peut-être à "null", notamment pour les unités cessées qui ont été purgées.
-              "siege_social": true, 
+              "siege_social": true,
               // Ce champ vous permet de savoir si l'établissement appelé est le siège social d'une entreprise ("true") ou non ("false").
-              "enseigne_1": null, 
+              "enseigne_1": null,
               "enseigne_2": null,
-              "enseigne_3": null, 
+              "enseigne_3": null,
               // Ces trois derniers champs indique le nom de l'enseigne, c'est à dire l'appelation qui permet de facilement identifier l'établissement. Un établissement peut avoir plusieurs enseignes. Le nom de l'enseigne est parfois découpé sur les trois champs.
-              "denomination_usuelle": null, 
+              "denomination_usuelle": null,
               // C'est le nom sous lequel l'établissement est connu du grand public. Cet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008.
-              "activite_principale_code": "62.02A", 
+              "activite_principale_code": "62.02A",
               // Il s'agit du code APE de l'établissement (code APET), toujours composé de 4 chiffres et une lettre et codifié selon la Nomenclature d'Activité Française (https://www.insee.fr/fr/information/2120875). Les établissements d'une même entreprise peuvent avoir des activités différentes et de fait des APET différents. Le code APET peut également être identique à l'APE de l'entreprise (APEN) lorsque celle-ci n'a qu'un établissement.
-              "activite_principale_nomenclature": "NAFRev2", 
+              "activite_principale_nomenclature": "NAFRev2",
               // Ce champ indique la nomenclature en vigueur pour l'etablissement appelé. Depuis 2015, la version est la "NAF rév.2."
               "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques", // indique le libellé du code APET de l'établissement selon la nomenclature concernée.
-              "caractere_employeur": "O", 
+              "caractere_employeur": "O",
               // Indique si l'établissement a ou non des employés. La variable est "O" si l'établissement est employeur ; la variable est "N" si l'établissement ne l'est pas. La variable est historisée pour les établissements ouverts depuis 2005.
               "etat_administratif": {
-                "value": "A", 
+                "value": "A",
                 // Indique si l'établissement est actif, par "A". Ou s'il est jurdiquement fermé, par "F".
-                "date_fermeture": null  
+                "date_fermeture": null
                 // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F" (fermé).
               },
               "adresse_1": {
@@ -218,14 +218,14 @@ services:
                 "type_voie": "ALL",
                 "libelle_voie": "DES PLATANES LES MILLES",
                 "code_postal": "13290",
-                "commune_code": "13001", 
+                "commune_code": "13001",
                 // Cette suite de 5 chiffres correspond au code des communes tel que défini dans le code officiel géographique (COG) géré par l'INSEE et disponible à cette adresse : https://www.insee.fr/fr/information/2028028
                 "commune_libelle": "AIX-EN-PROVENCE",
                 "commune_etranger_libelle": null,
                 "distribution_speciale": null,
                 "cedex_code": "13546",
                 "cedex_libelle": "AIX EN PROVENCE CEDEX 4",
-                "pays_etranger_code": "", 
+                "pays_etranger_code": "",
                 // Cette suite de chiffres correspond au code des pays étrangers, tels que définis dans la Codification des pays et territoires étrangers, disponible à cette adresse : https://www.insee.fr/fr/information/2028273
                 "pays_etranger_libelle": ""
               },

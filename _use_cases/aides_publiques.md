@@ -60,8 +60,8 @@ Vous trouverez ci-dessous les données classées dans différentes catégories :
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises ){:target="_blank"}                 |    INSEE & Infogreffe    |            `entreprises_insee`            |    données JSON     |    publiques    |
-| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}               |          INSEE           |          `etablissements_insee`           |    données JSON     |    publiques    |
+| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises ){:target="_blank"}                 |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques    |
+| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}               |          INSEE           |          `etablissements`           |    données JSON     |    publiques    |
 | [Extrait  RCS](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs){:target="_blank"}                                          |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    publiques    |
 | [Données déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna){:target="_blank"}                | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 | [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                    | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |

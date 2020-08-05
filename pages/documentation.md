@@ -27,12 +27,12 @@ En revanche, elle ne s'adresse pas ❌ aux particuliers, ❌ aux entreprises et 
 
 API Entreprise répond à deux grands types d’usages :
 
-* Le pré-remplissage d'un formulaire à destination du public ; 
+* Le pré-remplissage d'un formulaire à destination du public ;
 * l’obtention d’une donnée en back office par un agent habilité.
 
 #### Pré-remplir un fomulaire
 
-Avec les endpoints `entreprises_insee`, `etablissements_insee` et `associations` , vous pouvez mettre en place une aide à la saisie pour vos usagers.
+Avec les endpoints `entreprises`, `etablissements` et `associations` , vous pouvez mettre en place une aide à la saisie pour vos usagers.
 
 L’usager renseigne son numéro de SIRET, ou tout autre valeur discriminante. Le formulaire est alors pré-rempli des champs disponibles par votre API.
 
@@ -82,8 +82,8 @@ Des informations complémentaires, dont le détail précis des champs délivrés
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises_insee`            |    données JSON     |    publiques    |
-| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}                |          INSEE           |          `etablissements_insee`           |    données JSON     |    publiques    |
+| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques    |
+| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}                |          INSEE           |          `etablissements`           |    données JSON     |    publiques    |
 | [Extrait  RCS](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs){:target="_blank"}                                           |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    publiques    |
 | [Informations déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 | [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
@@ -184,9 +184,9 @@ Les fournisseurs de services s’engagent à ne pas commercialiser les données 
 ### Quels sont les engagements d’API Entreprise ?
 
 * L’engagement de disponibilité est de 99,5 %
-  
+
   Néanmoins, API Entreprise agrège de nombreux fournisseurs de données et est dépendante de leurs disponibilités.
-  
+
   La disponibilité des données est consultable en temps réel pour chaque endpoint dans le catalogue des donnée. Une historisation est aussi publiée, ainsi que les rapports d’incidents et les perspectives de résolution. Par ailleurs, les informations sur votre consommation sont disponibles dans votre tableau de bord.
 
 ⚠️ API Entreprise ne porte aucune responsabilité s’agissant de la qualité ou du contenu intrinsèque des données.Nous ne modifions pas les données à l’exception d’une standardisation contextuelle limitée (minuscule vers majuscule, format de date, nombre d’espaces).

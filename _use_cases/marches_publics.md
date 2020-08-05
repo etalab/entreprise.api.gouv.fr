@@ -5,21 +5,21 @@ title: Marchés Publics
 
 ## Introduction
 
-Depuis le 1er octobre 2018, les acheteurs publics ont l'obligation légale de passer par une plateforme de dématérialisation des procédures de marchés publics (profil acheteur), pour tout marché dont le besoin estimé est supérieur à 25 000 € HT. 
-L'accès aux données de l'API Entreprise dans le cas des marchés publics se fait par l'intermédiaire des places de marchés publics. 
+Depuis le 1er octobre 2018, les acheteurs publics ont l'obligation légale de passer par une plateforme de dématérialisation des procédures de marchés publics (profil acheteur), pour tout marché dont le besoin estimé est supérieur à 25 000 € HT.
+L'accès aux données de l'API Entreprise dans le cas des marchés publics se fait par l'intermédiaire des places de marchés publics.
 
 ## Vous avez déjà accès aux données
 
 ##### Vous êtes un acheteur public ?
 
-Il est fort probable que vous ayez en réalité déjà accès aux données d'API Entreprise par l'intermédiaire : 
-- du Document Unique du Marché Européen&#42; (DUME) que peut remplir l'entreprise, 
-- de votre profil acheteur si celui-ci utilise le service DUME&#42;, 
+Il est fort probable que vous ayez en réalité déjà accès aux données d'API Entreprise par l'intermédiaire :
+- du Document Unique du Marché Européen&#42; (DUME) que peut remplir l'entreprise,
+- de votre profil acheteur si celui-ci utilise le service DUME&#42;,
 - de votre profil acheteur si l'éditeur nous a demandé un accès direct (cf tableau ci-dessous).
 
 &#42;*Le DUME et le service DUME sont branchés sur API Entreprise.*
 
-Si vous avez un doute, renseignez-vous auprès de votre profil acheteur pour savoir s'il implémente le service DUME ou s'il est connecté directement à API Entreprise. 
+Si vous avez un doute, renseignez-vous auprès de votre profil acheteur pour savoir s'il implémente le service DUME ou s'il est connecté directement à API Entreprise.
 
 ##### Vous êtes un éditeur de place de marchés publics ?
 
@@ -30,18 +30,18 @@ Si vous avez un doute, renseignez-vous auprès de votre profil acheteur pour sav
 ## Liste des éditeurs de places de marchés dotés d'un droit d'accès
 
 {:.tpl-table}
-| Éditeur                  |     Profil acheteur associé                 | 
+| Éditeur                  |     Profil acheteur associé                 |
 |:------------------------:|:-------------------------------------------:|
 |    achatpublic.com       |                                             |
 |    Atexo                 | Place, pour les administrations centrales   |
 |    AWS                   |                                             |
 |    provigis              |                                             |
 |    klekoon.com           |                                             |
- 
+
 
 ## Données utiles
 
-Vous trouverez ci-dessous les données utiles dans le cadre des marchés publics et classées dans différentes catégories : 
+Vous trouverez ci-dessous les données utiles dans le cadre des marchés publics et classées dans différentes catégories :
 - [Informations générales](#infos_generales),
 - [Informations financières](#infos_financieres),
 - [Attestations sociales et fiscales](#attestations_sociales_fiscales),
@@ -54,13 +54,13 @@ Vous trouverez ci-dessous les données utiles dans le cadre des marchés publics
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises_insee`            |    données JSON     |    publiques    |
-| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}                |          INSEE           |          `etablissements_insee`           |    données JSON     |    publiques    |
+| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques    |
+| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}                |          INSEE           |          `etablissements`           |    données JSON     |    publiques    |
 | [Extrait  RCS](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs){:target="_blank"}                                           |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    publiques    |
 | [Données déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 | [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
 
-#### Informations financières <a id="infos_financieres"></a>  
+#### Informations financières <a id="infos_financieres"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -69,7 +69,7 @@ Vous trouverez ci-dessous les données utiles dans le cadre des marchés publics
 | [Bilans entreprise](https://doc.entreprise.api.gouv.fr/?json#bilans-entreprises-bdf-banque-de-france){:target="_blank"}                                      |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
 | [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales){:target="_blank"}       |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
 
-#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>  
+#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -82,7 +82,7 @@ Vous trouverez ci-dessous les données utiles dans le cadre des marchés publics
 | [Carte professionnelle travaux publics](https://doc.entreprise.api.gouv.fr/?json#cartes-professionnelles-fntp){:target="_blank"}         |          CNETP           |            `cartes_professionnelles_fntp`            |         PDF         |    publiques    |
 | [Cotisations congés payés & chômage intempéries](https://doc.entreprise.api.gouv.fr/?json#certificats-cnetp){:target="_blank"}         |          CNETP           |            `certificats_cnetp`            |         PDF         |    publiques    |
 
-#### Certificats professionnels <a id="certificats_pro"></a>  
+#### Certificats professionnels <a id="certificats_pro"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -91,13 +91,13 @@ Vous trouverez ci-dessous les données utiles dans le cadre des marchés publics
 | [Certification de qualification OPQIBI](https://doc.entreprise.api.gouv.fr/?json#certificats-opqibi){:target="_blank"}                  |          OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
 | [Certification de qualification Qualibat](https://doc.entreprise.api.gouv.fr/?json#certificats-qualibat){:target="_blank"}                  |          OPQIBI          |           `certificats_qualibat`            |    données JSON     |    publiques    |
 
-#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>  
+#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Brevets, modèles et marques déposées](https://doc.entreprise.api.gouv.fr/?json#extraits-courts-inpi){:target="_blank"}                   |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
-            
+
 
 
 **Rappel** : Les places de marchés disposent d'un accès à l'API entreprise, ***il n'est donc pas nécessaire d'effectuer une demande d'accès à API Entreprise.***
