@@ -81,6 +81,7 @@ providers_aliases:
   dgfip: 'DGFIP'
   acoss: 'ACOSS'
   inpi: 'INPI'
+  bdf: 'Banque de France'
   qualibat: 'Qualibat'
   mi: 'Ministère de l’Intérieur'
   cnetp: 'CNETP'
