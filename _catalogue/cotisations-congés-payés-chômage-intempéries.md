@@ -30,7 +30,7 @@ perimeter:
     * ✅ Convention Collective Nationale des **Cadres des Travaux Publics** du 20 novembre 2015 (étendue par arrêté du 5 juin 2020).
 
 
-    Toutes les attestations sont disponibles pour les entreprises en situation régulière ❌ sauf pour celles qui règlent les cotisations dues à la CNETP à l’URSSAF dans le cadre du Titre Emploi Service Entreprise (TESE ).
+    Toutes les attestations sont disponibles pour les entreprises en situation régulière ❌ sauf pour celles qui règlent les cotisations dues à la CNETP à l’URSSAF dans le cadre du Titre Emploi Service Entreprise (TESE).
 
 
     ℹ️ Plus d'informations sur <https://www.cnetp.org/category/affiliation/>
@@ -106,8 +106,7 @@ services:
             En utilisant l’endpoint `certificats_cnetp`, **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
       format: Document PDF
       timeout: 12 secondes
-      description: "La réponse délivre une URL de téléchargement de l'attestation au
-        format PDF quand celle-ci est disponible, dont voici un exemple. "
+      description: La réponse délivre une URL de téléchargement de l’attestation au format PDF quand celle-ci est disponible, dont [voici un exemple](uploads/cnetp-attestation-marche.pdf).
       sample:
         code: >-
           {
