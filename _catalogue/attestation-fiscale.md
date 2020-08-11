@@ -64,16 +64,22 @@ services:
       options:
         option1:
           param: siren_is
-          description: Dans le cas où l'entreprise appartient à un groupe TVA, vous pouvez
-            ajouter le SIREN référent du groupe.
-          comment: "Si l'entreprise appartient au groupe IS, ajoutez le SIREN référent du
-            groupe avec le paramètre facultatif suivant :"
+          description: Dans le cas où l'entreprise recherchée appartient à un groupe de
+            sociétés imposé selon régime fiscal d’intégration visé à l’article
+            223 A du CGI, dit groupe IS, c'est cette société mère qui est en
+            charge des obligations fiscales. Il vous faudra donc indiquer
+            également le SIREN du groupe IS.
+          comment: "Si l'entreprise appartient à un groupe IS, ajoutez le SIREN référent
+            du groupe avec le paramètre suivant :"
         option2:
           param: siren_tva
-          description: Dans le cas où l'entreprise appartient à un groupe TVA, vous pouvez
-            ajouter le SIREN référent du groupe.
-          comment: "Si l'entreprise appartient au groupe TVA, ajoutez le SIREN référent du
-            groupe avec le paramètre facultatif suivant :"
+          description: Dans le cas où l'entreprise recherchée appartient à un groupe de
+            sociétés ayant opté pour la consolidation du paiement de la TVA
+            définie à l’article 1693 ter du CGI, dit groupe TVA, c'est cette
+            société mère qui est en charge des obligations fiscales. Il vous
+            faudra donc indiqué également le SIREN du groupe TVA.
+          comment: "Si l'entreprise appartient à un groupe TVA, ajoutez le SIREN référent
+            du groupe avec le paramètre suivant :"
     response:
       format: Document PDF
       timeout: 12 secondes
