@@ -20,7 +20,7 @@ columns:
         target: pages/use_cases.html
       -
         label: Demander un accès
-        url: https://signup.entreprise.api.gouv.fr
+        target: pages/demander_un_acces.md
   - 
     label: Légal
     children:
