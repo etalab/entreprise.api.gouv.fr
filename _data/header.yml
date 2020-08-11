@@ -1,8 +1,7 @@
 ---
 -
-  label: Documentation
-  url: https://doc.entreprise.api.gouv.fr
-  icon: external-link
+  label: Catalogue des données
+  url: pages/catalogue
 -
   label: Cas d’usage
   target: pages/use_cases.html
