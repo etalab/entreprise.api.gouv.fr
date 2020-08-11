@@ -90,6 +90,8 @@ providers_aliases:
   opqibi: 'OPQIBI'
   fntp: 'FNTP'
   agefiph: 'agefiph'
+  ademe: 'ADEME'
+
 
 empty_array: []
 
