@@ -47,9 +47,6 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
-        param5:
-          label: ""
-          description: ""
       questions:
         qr1:
           question: À quelles conditions l'attestation de vigilance est délivrée à une
