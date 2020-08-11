@@ -1,7 +1,7 @@
 ---
 -
   label: Catalogue des données
-  url: pages/catalogue
+  target: pages/catalogue.html
 -
   label: Cas d’usage
   target: pages/use_cases.html
