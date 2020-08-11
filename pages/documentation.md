@@ -22,7 +22,7 @@ Avec les endpoints `entreprises`, `etablissements` et `associations` , vous pouv
 
 <details>
 <summary markdown="span">Voir un exemple de pré-remplissage</summary>
-L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \\\\\\\\\\\\\\\[document Unique de Marché Européen](https://www2.economie.gouv.fr/daj/dume-espd). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
+L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \\\\\\\\\\\\\\\\[document Unique de Marché Européen](https://www2.economie.gouv.fr/daj/dume-espd). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
 
 ![](https://lh6.googleusercontent.com/UtQj08BUdtbKNTTwqEt6KBs28DMLJLjKP-kT9XruYA5gwZBTgwBQ08FCEyGvyGUKHCUSokQnshLpYMI5Gbo6Prj5wzG0Csh1zJYkwf-Ib-9Q68tNWRJVlyj7UTbJ16OaYw)
 
@@ -197,10 +197,10 @@ Voici les éléments qui constituent l’URL d’appel :
 |**La raison de l'appel** <br> ou l'indentifiant de la procédure <br>(numéro de marché publique, nom de la procédure, description courte (< 50 caractères))|`&object=RaisonDeL'AppelOuIdentifiant`|
 |*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira en cas d’utilisation anormal de l’API pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée. |`?user_id=IdentifiantDeL'UtilisateurPhysique`|
 
-**Tous ces éléments mis bout à bout constitue une requête HTTP qui appelle l'API :** 
+**Tous ces éléments mis bout à bout constituent une requête HTTP qui appelle l'API :** 
 
 ```
-`https://entreprise.api.gouv.fr/v2/attestation_fiscales_dgfip/SirenDeL’Entreprise?token=JetonD’Habilitation&user_id=IdentifiantDeL’UtilisateurPhysique&context=CadreDeLaRequête&recipient=BénéficaireDeL’Appel&object=RaisonDeL’AppelOuIdentifiant`
+https://entreprise.api.gouv.fr/v2/attestation_fiscales_dgfip/SirenDeL’Entreprise?token=JetonD’Habilitation&user_id=IdentifiantDeL’UtilisateurPhysique&context=CadreDeLaRequête&recipient=BénéficaireDeL’Appel&object=RaisonDeL’AppelOuIdentifiant
 ```
 
 En blanc, les éléments que je complète. Pour une explication détaillée par endpoints, je me reporte au catalogue des données.
