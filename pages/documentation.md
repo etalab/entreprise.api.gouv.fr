@@ -2,12 +2,16 @@
 layout: documentation
 title: Documentation générale
 permalink: /documentation/
+class: documentation
 ---
 # Étape 1 : L'API Entreprise correspond-elle à mon besoin ?
 
 \[Module du questionnaire : https://whimsical.com/TL89xgeqHhWEPPeZQrgGXG]
 
+<details class="fold">
+<summary>
 ## Les cas d’usage d’API Entreprise
+</summary>
 
 API Entreprise répond à deux grands types d’usages :
 
@@ -43,8 +47,11 @@ L'API entreprise sert aux agents habilités à récupérer automatiquement des i
 * soit à la donnée brute, décrite par un champ JSON, qui permet une automatisation plus performante encore.
 * soit les deux.
 
+</details>
+<details class="fold">
+<summary>
 ## Le service : une API, plusieurs données et plusieurs fournisseurs
-
+</summary>
 ### Les qualités du service
 
 Sans API Entreprise, vous êtes obligé d'aller demander toutes les données dont vous avez besoin auprès des différentes administrations. Cette recherche n'est pas forcément fructueuse car les organisations n'ont pas toujours un site ou un contact public pour leurs API ; par ailleurs, vous devez ensuite générer plusieurs mots de passe, plusieurs contacts techniques et métier.
@@ -130,8 +137,11 @@ Des informations complémentaires, dont le détail précis des champs délivrés
 * API Entreprise s’engage à respecter le cadre légal,
   notamment ce qui concerne la protection des données et le respect des règles de confidentialité.
 
+</details>
+<details class="fold">
+<summary>
 ## Un accès sous habilitation et conditions
-
+</summary>
 L'accès à l'API entreprise est réservé aux acteurs publics investis d’une mission de service public (les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.).
 
 Leurs prestataires privés peuvent être destinataires des informations techniques permettant l'usage de l'API mais en aucun cas des données elles-même.
@@ -161,7 +171,7 @@ Vous êtes techniquement en mesure de pouvoir démarrer avec API Entreprise si :
 * ou bien vous avez une direction des systèmes d’information (DSI) qui peut intégrer des APIs.
 
 Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique “Les questions à poser à mon équipe technique”.
-
+</details>
 # 2 - Les prérequis techniques avant d’aller plus loin
 
 ## 🖌Qu’est-ce qu’une API ?

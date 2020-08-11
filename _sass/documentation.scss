@@ -3,4 +3,20 @@
     background-color: transparent;
     box-shadow: none;
   }
+
+  .tpl-documentation__sidebar {
+    flex-basis: 25em;
+  }
+
+  .fold {
+    background-color: var(--white);
+    border: 1px solid var(--lighter-grey);
+    border-radius: var(--border-radius-default);
+    margin-bottom: var(--spacing-m);
+    padding: var(--spacing-m);
+
+    h2 {
+      display: inline;
+    }
+  }
 }
