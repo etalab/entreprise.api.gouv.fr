@@ -61,6 +61,19 @@ services:
         param5:
           description: RaisonDeL’AppelOuIdentifiant
           label: object
+      options:
+        option1:
+          param: siren_is
+          description: Dans le cas où l'entreprise appartient à un groupe TVA, vous pouvez
+            ajouter le SIREN référent du groupe.
+          comment: "Si l'entreprise appartient au groupe IS, ajoutez le SIREN référent du
+            groupe avec le paramètre facultatif suivant :"
+        option2:
+          param: siren_tva
+          description: Dans le cas où l'entreprise appartient à un groupe TVA, vous pouvez
+            ajouter le SIREN référent du groupe.
+          comment: "Si l'entreprise appartient au groupe TVA, ajoutez le SIREN référent du
+            groupe avec le paramètre facultatif suivant :"
     response:
       format: Document PDF
       timeout: 12 secondes
