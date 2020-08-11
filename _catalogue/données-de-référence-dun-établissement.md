@@ -56,11 +56,11 @@ perimeter:
   description: >-
     L'endpoint `etablissements` vous donne accès aux données des
     établissements tirées du *Répertoire National d'identification des
-    entreprises et des établissements*, géré par l'INSEE au travers du système
+    entreprises et des établissements (SIRENE)*, géré par l'INSEE au travers du système
     Sirene.
 
 
-    ⚠️ Cet endpoint ne concerne pas les entreprises, celles-ci sont appelables avec l'endpoint `entreprises`
+    ⚠️ Cet endpoit concerne uniquement les établissements, voir l'endpoint `entreprises` pour les données relatives aux sociétés.
 
 
     **Cet endpoint permet donc d'accéder aux informations de référence concernant les établissements:**
@@ -82,7 +82,7 @@ perimeter:
 
 
     **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
-  label: Établissements d’entreprises, d'entreprenseurs individuels,
+  label: Établissements d’entreprises, d'entrepreneurs individuels,
     d'institutions administratives et de certaines associations.
 services:
   service1:

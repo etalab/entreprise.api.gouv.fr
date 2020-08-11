@@ -42,11 +42,11 @@ services:
       format: Donnée structurée JSON
       timeout: 5 secondes
       description: >-
-        La réponse se compose de : 
+        La réponse se compose de :
 
 
-        * la dernière année de conformité de l'entreprise ;
+        * la dernière année de conformité connue de l'entreprise ;
 
         * la dernière date de validité des informations renvoyées.
-          ℹ️ Cette donnée étant issue d'un dump fourni par l'AGEFIPH, nous vous le transmettons.
+          ℹ️ Cette donnée étant issue d'un dump fourni par l'AGEFIPH,API Entreprise vous la transmet.
 ---

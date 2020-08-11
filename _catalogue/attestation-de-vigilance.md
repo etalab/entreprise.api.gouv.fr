@@ -2,9 +2,9 @@
 providers:
   - acoss
 new: >-
-  À compter du 25 septembre 2019 : \
+  À compter du 25 septembre 2019 :
 
-  Pour un SIREN donné, il ne sera possible d'accéder à l'attestation que 10 fois par jour ; là où avant il n'y avait pas limite. Une fois cette limite atteinte il faudra attendre le lendemain (à partir de 00h00) pour obtenir de nouveau cette attestation. Cette limitation est mise en place directement par le fournisseur de données (ACOSS). **Il est donc recommandé d'avoir un système de cache pour les attestations sociales.**
+  Pour un SIREN donné, il ne sera possible d'accéder à l'attestation que 10 fois par jour ; là où avant il n'y avait pas limite. Une fois cette limite atteinte il faudra attendre le lendemain (à partir de 00h00) pour obtenir de nouveau cette attestation. Cette limitation est mise en place directement par le fournisseur de données (ACOSS). **Il est donc recommandé de ré-utiliser la pièce fournie et hosté par API Entreprise plutôt que de renouveler vos appels pour une même attestation à quelques jours voire semaines d'interval**
 access: Restreint
 weight: 14
 type: Attestations sociales et fiscales
@@ -52,7 +52,7 @@ services:
           question: À quelles conditions l'attestation de vigilance est délivrée à une
             entreprise par l'ACOSS ?
           answer: >-
-            L'entreprise ou micro entreprise reçoit l'attestation quand :  
+            L'entreprise ou micro entreprise reçoit l'attestation quand :
 
 
             * elle s'acquitte des cotisations et contributions dues à leur date normale d’exigibilité ;
@@ -61,7 +61,7 @@ services:
 
             * elle s'acquitte des cotisations et contributions dues, mais elle n’est pas à jour par ailleurs dans le paiement des majorations et pénalités ;
 
-            * ou elle ne s'est pas acquittée des cotisations et contributions dues mais en conteste le montant par recours contentieux. 
+            * ou elle ne s'est pas acquittée des cotisations et contributions dues mais en conteste le montant par recours contentieux.
 
 
             ℹ️ Le cadre précis de la demande par le donneur d'ordre et de la délivrance de l'attestation à l'entreprise est expliqué sur le site de l'ACOSS :[ https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html](<Quand est-ce que l'attestation de vigilance est délivrée par l'ACOSS ?>)

@@ -20,7 +20,7 @@ usecases:
 opening: Données confidentielles.
 perimeter:
   description: >-
-    La liasse fiscale est limitée aux entreprises  : 
+    La liasse fiscale est limitée aux entreprises  :
 
 
     * ✅ soumises à l'impôt sur les sociétés (IS)* ;
@@ -73,7 +73,7 @@ services:
           answer: >-
             La date limite de dépôt des déclarations de résultat est fixée au
             2ème jour ouvré qui suit le 1er mai pour les entreprises qui
-            clôturent à la fin de l'année civile. 
+            clôturent à la fin de l'année civile.
 
 
             En cas d'exercice à cheval, la date limite de dépôt est positionnée exactement 3 mois après la date de clôture de l'exercice déclaré.
@@ -238,7 +238,7 @@ services:
           }
     label: Dictionnaire des liasses fiscales
   service3:
-    label: Liasses fiscales d'une entreprise et disctionnaire pour une année donnée
+    label: Liasses fiscales d'une entreprise et dictionnaire pour une année donnée
     request:
       id:
         label: AnnéeDeLaLiasseDemandée
@@ -334,7 +334,7 @@ services:
                 }
               }
             ],
-            
+
             "dictionnaire": [
             // Le dictionnaire pour l'année donnée.
               {
