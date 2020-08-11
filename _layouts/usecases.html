@@ -12,12 +12,13 @@ layout: default
   <div class="tpl-container">
     <aside class="tpl-documentation__sidebar">
       <nav class="tpl-documentation__links">
-        {% include toc.html html=content %}
-        <a class="tpl-button tpl-button--gradient" href={{ site.baseurl }}{% link pages/demander_un_acces.md %}>Demander un accès</a>
+        {% include toc.html html=content h_min=2 h_max=2 %}
       </nav>
     </aside>
     <div class="tpl-documentation__content">
       {{ content }}
+      <a class="tpl-button tpl-button--gradient" href="{{ site.baseurl }}{% link pages/demander_un_acces.md %}">Demander
+        un accès</a>
     </div>
   </div>
 </section>

@@ -1,3 +1,7 @@
+.tpl-container {
+  max-width: 1400px;
+}
+
 .tpl-main-header .tpl-container {
   padding: 0 var(--spacing-s);
 }
@@ -26,6 +30,17 @@ a.tpl-main-header__link:hover {
   content: none;
 }
 
+@media (max-width: 800px) {
+  .tpl-main-header .tpl-container {
+    flex-direction: column;
+    padding-top: 1em;
+  }
+
+  .tpl-site-nav {
+    justify-content: start;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -41,6 +56,7 @@ a.tpl-main-header__link:hover {
 
 .tpl-footer img {
   height: 2em;
+  margin-top: var(--spacing-m);
 }
 
 .notification {
@@ -134,7 +150,7 @@ a.tpl-main-header__link:hover {
 
 .tpl-documentation a.tpl-button {
   color: var(--white);
-  margin-top: 1em;
+  margin: var(--spacing-m) 0;
 }
 
 .tpl-documentation__content {

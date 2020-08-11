@@ -1,0 +1,250 @@
+---
+layout: catalogue
+title: Catalogue de données
+permalink: /catalogue/
+additional_js:
+  - mark.min.js
+  - catalogue.js
+is_catalogue: true
+---
+
+{% assign providers = site.providers_aliases %}
+{% assign catalogue_types = site.catalogue_types %}
+{% assign catalogue_usecases = site.catalogue_usecases %}
+<section class="catalogue">
+  <p>Visibilité de <span id="visible-endpoints">{{ site.catalogue.size }}</span> sur {{ site.catalogue.size }} données API Entreprise</p>
+  <div class="tpl-documentation">
+    <div class="tpl-documentation__content">
+      {% assign categories = site.catalogue | group_by: 'type' | reverse %}
+      {% for type in catalogue_types %}
+        {% assign index = forloop.index0 %}
+        {% for category in categories %}
+          {% if category.name == type %}
+            <div class="catalogue__category" data-category="{{ index }}">
+              <h3 class="catalogue__category-title" id="{{ category.name }}">{{ category.name }}</h3>
+              {% assign items = category.items | sort: 'weight' %}
+              {% for endpoint in items %}
+              <div class="tpl-panel documentation-card" id="{{ endpoint.label }}" 
+                {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %} 
+                {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %} 
+                {% for usecase in endpoint.usecases %}
+                  {% for case in catalogue_usecases %}
+                    {% if usecase == case[1] %}
+                      data-{{ case[0] }}="1"
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+                {% for provider in endpoint.providers %}data-{{ provider }}="1"{% endfor %} 
+                data-openstate="{{ endpoint.opening }}">
+                <div class="documentation-card__header">
+                  <div class="endpoint-scope">
+                    {% for scope in endpoint.scope %}
+                    {% if scope == "entreprises" %}
+                    <div class="endpoint-scope__item tpl-bg--info" title="entreprises">
+                      <svg class="tpl-icon" viewBox="0 0 24 24">
+                        <use xlink:href="#entreprises"></use>
+                      </svg>
+                    </div>
+                    {% elsif scope == "associations" %}
+                    <div class="endpoint-scope__item tpl-bg--warning" title="associations">
+                      <svg class="tpl-icon" viewBox="0 0 24 24">
+                        <use xlink:href="#associations"></use>
+                      </svg>
+                    </div>
+                    {% else %}
+                    <div class="endpoint-scope__item tpl-bg--success" title="{{ scope }}">
+                      <svg class="tpl-icon" viewBox="0 0 24 24">
+                        <use xlink:href="#note"></use>
+                      </svg>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                  </div>
+                  <h3>{{ endpoint.title }} <code class="tpl-code">{{ endpoint.label }}</code></h3>
+                  <p class="documentation__description">{{ endpoint.description | markdownify }}</p>
+                  <div class="tpl-flex-row tpl-flex-jc-sb description">
+                    <dl class="tpl-description-list">
+                      <dt>Cas d’usage</dt>
+                      <dd>
+                        <ul>
+                          {% for usecase in endpoint.usecases %}
+                          <li>{{ usecase }}</li>
+                          {% endfor %}
+                        </ul>
+                      </dd>
+                    </dl>
+                    <dl class="tpl-description-list">
+                      <dt>Périmètre</dt>
+                      <dd>{{ endpoint.perimeter.label }}</dd>
+                      <dt>Ouverture</dt>
+                      <dd>{{ endpoint.opening }}</dd>
+                    </dl>
+                    <div class="providers">
+                      {% for provider in endpoint.providers %}
+                      <img src="{{ site.baseurl }}/assets/images/providers/{{ provider }}.png" alt="{{ provider }}" />
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                <div class="documentation__tabs">
+                  <ul class="tab-list">
+                    <li>
+                      <a href="#technical-documentation--{{ endpoint.label }}" class="tab">
+                        <svg class="tpl-icon" viewBox="0 0 24 24">
+                          <use xlink:href="#list"></use>
+                        </svg>
+                        Documentation
+                      </a>
+                    </li>
+                  </ul>
+                  <div id="technical-documentation--{{ endpoint.label }}"
+                    class="technical-documentation tab-content tpl-bg--gradient-light">
+                    {% if endpoint.new %}
+                    <div class="new">
+                      <h4>
+                        <svg class="tpl-icon" viewBox="0 0 24 24">
+                          <use xlink:href="#gift"></use>
+                        </svg>
+                        Nouvelle option disponible
+                      </h4>
+                      <p>{{ endpoint.new | markdownify }}</p>
+                    </div>
+                    <hr />
+                    {% endif %}
+                    {% if endpoint.perimeter %}
+                    <details class="perimeter">
+                      <summary>
+                        <h4>Périmètre</h4>
+                      </summary>
+                      <dl class="tpl-description-list">
+                        <dd>{{ endpoint.perimeter.description | markdownify }}</dd>
+                      </dl>
+                    </details>
+                    <hr />
+                    {% endif %}
+                    {% for service in endpoint.services %}
+                      {% if endpoint.services.size > 1 %}
+                        <details class="services" {% if forloop.index == 1%}open{% endif %}>
+                          <summary><h4>Service {{ forloop.index }} : {{ service[1].label }}</h4>{%if service[1].request.id.extra1 %}<code>/{{ service[1].request.id.extra1 }}/</code>{% endif %}</summary>
+                      {% endif %}
+                      <div class="service-description">
+                        <div class="request-description">
+                          <h4><img src="{{ site.baseurl }}/assets/images/icons/call.png" alt="" /> Votre appel</h4>
+                          <dl class="tpl-description-list">
+                            <dt>Paramètre d’appel :</dt>
+                            <dd>{{ service[1].request.id.description }}</dd>
+                          </dl>
+                          {% if service[1].request.options and service[1].request.options.option1.description != "" %}
+                            <dl class="tpl-description-list">
+                              <dt>Options d’appel à ajouter (voir requête HTTP ↓) :</dt>
+                              <dd>
+                                <ul>
+                                  {% for option in service[1].request.options %}
+                                    {% if option[1].description != "" %}
+                                    <li>{{ option[1].description }}</li>
+                                    {% endif %}
+                                  {% endfor %}
+                                </ul>
+                              </dd>
+                            </dl>
+                          {% endif %}
+                          {% for qr in service[1].request.questions %}
+                          {% unless qr[1].question == "" %}
+                          <details class="qa">
+                            <summary>{{ qr[1].question }}</summary>
+                            {{ qr[1].answer | markdownify }}
+                          </details>
+                          {% endunless %}
+                          {% endfor %}
+                        </div>
+                        <div class="request-json json-example">
+                          <h5>Requête HTTP</h5>
+                          <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}
+{{ endpoint.label }}/</b>{%if service[1].request.id %}{{ service[1].request.id.label }}{% endif %}{%if service[1].request.id.extra1 %}
+/<b>{{ service[1].request.id.extra1 }}</b>{% endif %}{%if service[1].request.id.extra2 %}/{{ service[1].request.id.extra2 }}{% endif %}{% for param in service[1].request.parameters %}{% if forloop.index == 1 %}
+<b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}
+<b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}{% endfor %}
+{% for option in service[1].request.options %}<br /><br />{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
+<b>{{ option[1].param }}</b>{% endfor %}</code></pre>
+                        </div>
+                        <div class="response-content">
+                          <h4><img src="{{ site.baseurl }}/assets/images/icons/response.png" alt="" /> La réponse de l’API</h4>
+                          <dl class="tpl-description-list">
+                            <dt>Format :</dt>
+                            <dd>{{ service[1].response.format }}</dd>
+                          </dl>
+                          <dl class="tpl-description-list">
+                            <dt>Timeout :</dt>
+                            <dd>{{ service[1].response.timeout }}</dd>
+                          </dl>
+                          <p>{{ service[1].response.description | markdownify }}</p>
+                          {% for qr in service[1].response.questions %}
+                          {% unless qr[1].question == "" %}
+                          <details class="qa">
+                            <summary>{{ qr[1].question }}</summary>
+                            {{ qr[1].answer | markdownify }}
+                          </details>
+                          {% endunless %}
+                          {% endfor %}
+                        </div>
+                        <div class="response-json json-example">
+                          <h5>Réponse JSON</h5>
+                          <div class="toggle-comments tpl-input__group">Commentaires on <input type="checkbox" class="tpl-input tpl-switch tpl-switch--active" name="switch" id="toggle-comments" checked></div>
+                          {% highlight json-doc %}{{ service[1].response.sample.code }}{% endhighlight %}
+                        </div>
+                      </div>
+                      {% if endpoint.services.size > 1 %}
+                        </details>
+                      {% endif %}
+                    {% endfor %}
+                    <div class="documentation__content-footer">
+                      <dl class="tpl-description-list">
+                        <dt>Dernière mise à jour de la doc :</dt>
+                        <dd>{{ page.last_modified_at | date: '%d-%m-%y' }}</dd>
+                      </dl>
+                      {% if endpoint.history %}
+                      <hr />
+                      <details class="history">
+                        <summary>
+                          <h4>Historique</h4>
+                        </summary>
+                        {{ endpoint.history | markdownify }}
+                      </details>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      <div id="no-results" class="hidden tpl-notification warning">
+        Aucun résultat disponible
+      </div>
+    </div>
+    <aside class="tpl-documentation__sidebar">
+      <nav class="tpl-documentation__links">
+        <h3>Catalogue des données</h3>
+        {% for type in catalogue_types %}
+          {% for category in categories %}
+            {% if category.name == type %}
+              <details>
+                <summary>{{ category.name }}</summary>
+                {% assign items = category.items | sort: 'weight' %}
+                {% for endpoint in items %}
+                  {% capture anchor %}{{ '#' | append: endpoint.label }}{% endcapture %}
+                  {% assign plist = site.empty_array %}
+                  {% for provider in endpoint.providers %}{% assign plist = plist | push: providers[provider] %}{% endfor %}
+                  <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }} – {{ plist | join: ', ' }}</a>
+                {% endfor %}
+              </details>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}{% link pages/demander_un_acces.md %}">Demander un accès</a>
+      </nav>
+    </aside>
+  </div>
+</section>

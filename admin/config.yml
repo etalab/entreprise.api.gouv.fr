@@ -1,25 +1,1007 @@
 # config.yml
 
 backend:
-  name: git-gateway
+  name: github
+  branch: gh-pages # Branch to update (optional; defaults to master)
   repo: etalab/entreprise.api.gouv.fr
-  branch: gh-pages
-  site_domain: ecstatic-noether-69093c.netlify.com/
+  site_domain: nostalgic-panini-814b9c.netlify.com
+local_backend: true
 media_folder: 'assets/uploads'
 collections:
   - name: 'pages'
     label: 'Pages'
     folder: 'pages/'
-    fields:
-      - { name: Title }
-  - name: 'endpoint'
-    label: 'Endpoint'
-    folder: '_collections/catalogue'
     create: true
     slug: '{{slug}}'
     editor:
       preview: true
     fields:
-      - { label: 'Categorie', name: 'category', widget: 'string' }
+      - label: 'Titre'
+        name: 'title'
+        required: true
+        widget: 'string'
+      - label: 'Contenu'
+        name: 'body'
+        required: true
+        widget: 'markdown'
+  - name: 'catalogue'
+    label: 'Catalogue de données'
+    label_singular: 'Endpoint'
+    folder: '_catalogue'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - label: 'Poids'
+        name: 'weight'
+        required: false
+        widget: 'number'
+        description: 'Pour définir l’ordre des endpoints'
+      - label: 'Type de données'
+        name: 'type'
+        widget: 'select'
+        options: ['Informations générales', 'Informations financières', 'Attestations sociales et fiscales', 'Certifications professionnelles', 'Propriété intellectuelle' ]
       - { label: 'Nom', name: 'title', widget: 'string' }
-      - { label: 'Référence', name: 'reference', widget: 'string' }
+      - { label: 'Endpoint', name: 'label', widget: 'string' }
+      - label: 'Type de personne morale'
+        name: 'scope'
+        widget: 'select'
+        multiple: true
+        options: ['entreprises', 'associations']
+      - { label: 'Description courte', name: 'description', widget: 'markdown' }
+      - label: 'Cas d’usage'
+        name: 'usecases'
+        widget: 'select'
+        multiple: true
+        options: ['Aides publiques', 'Marchés publics', 'Application de la loi énergie - Art.64', 'Répertoire de tiers', "Aide d’urgence Covid-19"]
+      - label: 'Ouverture'
+        name: 'opening'
+        widget: 'select'
+        multiple: false
+        options: ['Données publiques.', 'Données publiques et confidentielles pour les non-diffusibles.', 'Données confidentielles.', 'Données publiques et confidentielles.']
+      - label: 'Fournisseurs'
+        name: 'providers'
+        widget: 'select'
+        multiple: true
+        options:
+          - { label: 'Infogreffe', value: 'infogreffe' }
+          - { label: 'Insee', value: 'insee' }
+          - { label: 'DGFIP', value: 'dgfip' }
+          - { label: 'Acoss', value: 'acoss' }
+          - { label: 'INPI', value: 'inpi' }
+          - { label: 'Qualibat', value: 'qualibat' }
+          - { label: 'Ministère de l’Intérieur', value: 'mi' }
+          - { label: 'CNETP', value: 'cnetp' }
+          - { label: 'PRO BTP', value: 'probtp' }
+          - { label: 'MSA', value: 'msa' }
+          - { label: 'OPQIBI', value: 'opqibi' }
+          - { label: 'FNTP', value: 'fntp' }
+          - { label: 'Agefiph', value: 'agefiph' }
+          - { label: 'Banque de France', value: 'bdf' }
+          - { label: 'ADEME', value: 'ademe' }
+      - { label: 'Message nouvelle actualité', name: 'new', required: false , widget: 'markdown' }
+      - label: "Périmètre de l'endpoint"
+        name: 'perimeter'
+        widget: 'object'
+        required: false
+        fields:
+          - label: 'Description très courte (2-3 mots)'
+            name: 'label'
+            required: false
+            widget: 'string'
+          - label: 'Description longue'
+            name: 'description'
+            required: false
+            widget: 'markdown'
+      - label: 'Services'
+        name: 'services'
+        widget: 'object'
+        fields:
+        - label: 'Service 1'
+          name: 'service1'
+          widget: 'object'
+          fields:
+          - label: 'Label du service'
+            name: 'label'
+            widget: 'string'
+            required: false
+          - label: 'Requête'
+            name: 'request'
+            widget: 'object'
+            fields:
+              - label: 'Questions/réponses'
+                name: 'questions'
+                widget: 'object'
+                required: false
+                fields:
+                  - label: 'Question/réponse 1'
+                    name: 'qr1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 2'
+                    name: 'qr2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 3'
+                    name: 'qr3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+              - label: 'Paramètre d’appel'
+                name: 'id'
+                description: 'A remplir avec le paramètre permettant d’identifier une entité'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre'
+                    name: 'label'
+                    required: false
+                    default: SirenDeL’Entreprise
+                    widget: 'string'
+                  - label: 'Description'
+                    name: 'description'
+                    required: false
+                    default: Le numéro de siren de la personne physique ou morale recherchée
+                    widget: 'string'
+                  - label: 'Extra paramètre 1'
+                    name: 'extra1'
+                    required: false
+                    widget: 'string'
+                  - label: 'Extra paramètre 2'
+                    name: 'extra2'
+                    required: false
+                    widget: 'string'
+              - label: 'Paramètres'
+                name: 'parameters'
+                required: false
+                widget: 'object'
+                fields:
+                - label: 'Paramètre obligatoire 1'
+                  name: 'param1'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      default: 'token' 
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'JetonD’Habilitation'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 2'
+                  name: 'param2'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'context' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'CadreDeLaRequête' 
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 3'
+                  name: 'param3'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'recipient' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'BénéficiaireDel’Appel'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 4'
+                  name: 'param4'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'object' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'RaisonDeL’AppelOuIdentifiant'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 5'
+                  name: 'param5'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 6'
+                  name: 'param6'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+              - label: 'Paramètres optionnels'
+                name: 'options'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre optionnel 1'
+                    name: 'option1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+                  - label: 'Paramètre optionnel 2'
+                    name: 'option2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+                  - label: 'Paramètre optionnel 3'
+                    name: 'option3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+          - label: 'Réponse'
+            name: 'response'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Format'
+                name: 'format'
+                required: false
+                widget: 'select'
+                multiple: false
+                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']          
+              - label: 'Timeout'
+                name: 'timeout'
+                widget: 'select'
+                multiple: false
+                options: ['5 secondes', '12 secondes'] 
+              - label: 'Description'
+                name: 'description'
+                required: false
+                widget: 'markdown'  
+              - label: 'Questions/réponses'
+                name: 'questions'
+                widget: 'object'
+                required: false
+                fields:
+                  - label: 'Question/réponse 1'
+                    name: 'qr1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 2'
+                    name: 'qr2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 3'
+                    name: 'qr3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'  
+              - label: 'Réponse type'
+                name: 'sample'
+                required: false
+                widget: 'code'
+        - label: 'Service 2'
+          name: 'service2'
+          widget: 'object'
+          fields:
+          - label: 'Label du service'
+            name: 'label'
+            widget: 'string'
+            required: false
+          - label: 'Requête'
+            name: 'request'
+            widget: 'object'
+            fields:
+              - label: 'Questions/réponses'
+                name: 'questions'
+                widget: 'object'
+                required: false
+                fields:
+                  - label: 'Question/réponse 1'
+                    name: 'qr1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 2'
+                    name: 'qr2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 3'
+                    name: 'qr3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+              - label: 'Paramètre d’appel'
+                name: 'id'
+                description: 'A remplir avec le paramètre permettant d’identifier une entité'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre'
+                    name: 'label'
+                    required: false
+                    default: SirenDeL’Entreprise
+                    widget: 'string'
+                  - label: 'Description'
+                    name: 'description'
+                    required: false
+                    default: Le numéro de siren de la personne physique ou morale recherchée
+                    widget: 'string'
+                  - label: 'Extra paramètre 1'
+                    name: 'extra1'
+                    required: false
+                    widget: 'string'
+                  - label: 'Extra paramètre 2'
+                    name: 'extra2'
+                    required: false
+                    widget: 'string'
+              - label: 'Paramètres'
+                name: 'parameters'
+                required: false
+                widget: 'object'
+                fields:
+                - label: 'Paramètre obligatoire 1'
+                  name: 'param1'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      default: 'token' 
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'JetonD’Habilitation'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 2'
+                  name: 'param2'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'context' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'CadreDeLaRequête' 
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 3'
+                  name: 'param3'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'recipient' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'BénéficiaireDel’Appel'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 4'
+                  name: 'param4'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'object' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'RaisonDeL’AppelOuIdentifiant'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 5'
+                  name: 'param5'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 6'
+                  name: 'param6'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+              - label: 'Paramètres optionnels'
+                name: 'options'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre optionnel 1'
+                    name: 'option1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+                  - label: 'Paramètre optionnel 2'
+                    name: 'option2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+                  - label: 'Paramètre optionnel 3'
+                    name: 'option3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+          - label: 'Réponse'
+            name: 'response'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Format'
+                name: 'format'
+                required: false
+                widget: 'select'
+                multiple: false
+                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']          
+              - label: 'Timeout'
+                name: 'timeout'
+                widget: 'select'
+                multiple: false
+                required: false
+                options: ['5 secondes', '12 secondes'] 
+              - label: 'Description'
+                name: 'description'
+                required: false
+                widget: 'markdown'  
+              - label: 'Questions/réponses'
+                name: 'questions'
+                widget: 'object'
+                required: false
+                fields:
+                  - label: 'Question/réponse 1'
+                    name: 'qr1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 2'
+                    name: 'qr2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 3'
+                    name: 'qr3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'  
+              - label: 'Réponse type'
+                name: 'sample'
+                required: false
+                widget: 'code'
+        - label: 'Service 3'
+          name: 'service3'
+          widget: 'object'
+          fields:
+          - label: 'Label du service'
+            name: 'label'
+            widget: 'string'
+            required: false
+          - label: 'Requête'
+            name: 'request'
+            widget: 'object'
+            fields:
+              - label: 'Questions/réponses'
+                name: 'questions'
+                widget: 'object'
+                required: false
+                fields:
+                  - label: 'Question/réponse 1'
+                    name: 'qr1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 2'
+                    name: 'qr2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 3'
+                    name: 'qr3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+              - label: 'Paramètre d’appel'
+                name: 'id'
+                description: 'A remplir avec le paramètre permettant d’identifier une entité'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre'
+                    name: 'label'
+                    required: false
+                    default: SirenDeL’Entreprise
+                    widget: 'string'
+                  - label: 'Description'
+                    name: 'description'
+                    required: false
+                    default: Le numéro de siren de la personne physique ou morale recherchée
+                    widget: 'string'
+                  - label: 'Extra paramètre 1'
+                    name: 'extra1'
+                    required: false
+                    widget: 'string'
+                  - label: 'Extra paramètre 2'
+                    name: 'extra2'
+                    required: false
+                    widget: 'string'
+              - label: 'Paramètres'
+                name: 'parameters'
+                required: false
+                widget: 'object'
+                fields:
+                - label: 'Paramètre obligatoire 1'
+                  name: 'param1'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      default: 'token' 
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'JetonD’Habilitation'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 2'
+                  name: 'param2'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'context' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'CadreDeLaRequête' 
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 3'
+                  name: 'param3'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'recipient' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'BénéficiaireDel’Appel'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 4'
+                  name: 'param4'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      default: 'object' 
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      default: 'RaisonDeL’AppelOuIdentifiant'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 5'
+                  name: 'param5'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+                - label: 'Paramètre obligatoire 6'
+                  name: 'param6'
+                  required: false
+                  widget: 'object'
+                  fields:
+                    - label: 'Paramètre'
+                      name: 'label'
+                      required: false
+                      widget: 'string'
+                    - label: 'Description'
+                      name: 'description'
+                      required: false
+                      widget: 'string'
+              - label: 'Paramètres optionnels'
+                name: 'options'
+                required: false
+                widget: 'object'
+                fields:
+                  - label: 'Paramètre optionnel 1'
+                    name: 'option1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+                  - label: 'Paramètre optionnel 2'
+                    name: 'option2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+                  - label: 'Paramètre optionnel 3'
+                    name: 'option3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Paramètre'
+                        name: 'param'
+                        required: false
+                        widget: 'string'
+                      - label: 'Description'
+                        name: 'description'
+                        required: false
+                        width: 'markdown'
+                      - label: 'Commentaire dans le code'
+                        name: 'comment'
+                        required: false
+                        widget: 'string'
+          - label: 'Réponse'
+            name: 'response'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Format'
+                name: 'format'
+                required: false
+                widget: 'select'
+                multiple: false
+                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']          
+              - label: 'Timeout'
+                name: 'timeout'
+                widget: 'select'
+                multiple: false
+                required: false
+                options: ['5 secondes', '12 secondes'] 
+              - label: 'Description'
+                name: 'description'
+                required: false
+                widget: 'markdown'  
+              - label: 'Questions/réponses'
+                name: 'questions'
+                widget: 'object'
+                required: false
+                fields:
+                  - label: 'Question/réponse 1'
+                    name: 'qr1'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 2'
+                    name: 'qr2'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'
+                  - label: 'Question/réponse 3'
+                    name: 'qr3'
+                    required: false
+                    widget: 'object'
+                    fields:
+                      - label: 'Question'
+                        name: 'question'
+                        required: false
+                        widget: 'string'
+                      - label: 'Réponse'
+                        name: 'answer'
+                        required: false
+                        widget: 'markdown'  
+              - label: 'Réponse type'
+                name: 'sample'
+                required: false
+                widget: 'code'
+      - label: 'Historique'
+        name: 'history'
+        required: false
+        widget: 'markdown'
+      - label: 'Disponibilité'
+        name: 'availability'
+        required: false
+        widget: 'object'
+        fields:
+          - label: 'Disponibilité normale'
+            name: 'normal_availability'
+            required: false
+            widget: string
+          - label: 'Indisponibiltés types'
+            name: 'unavailability_types'
+            required: false
+            widget: 'string'
+          - label: 'Volumétrie'
+            name: 'volumetry'
+            required: false

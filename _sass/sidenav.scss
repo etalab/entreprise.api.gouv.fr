@@ -42,6 +42,10 @@
   text-decoration: none;
 }
 
+.tpl-documentation__links a.tpl-button {
+  margin: 1em;
+}
+
 .tpl-documentation__links li ul {
   display: none;
 }
@@ -59,8 +63,4 @@
 .tpl-documentation__sidebar + .tpl-documentation__content,
 .tpl-documentation__content + .tpl-documentation__sidebar {
   margin-left: var(--spacing-l);
-}
-
-.tpl-documentation .tpl-button {
-  margin: var(--spacing-m);
 }

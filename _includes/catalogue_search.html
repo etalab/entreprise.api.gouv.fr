@@ -1,0 +1,40 @@
+{% assign catalogue_types = site.catalogue_types %}
+{% assign catalogue_usecases = site.catalogue_usecases %}
+{% assign catalogue_providers = site.providers_aliases %}
+{% assign catalogue_openstate = site.catalogue_openstate %}
+<div class="tpl-hero__form catalogue__search">
+  <div class="tpl-form__group">
+    <input type="button" class="tpl-hero__search-button" value="" role="button" aria-label="Chercher une information" />
+    <input id="catalogue-search" type="text" class="tpl-hero__search" name="catalogue-search" placeholder="Chercher une information" />
+    <select id="catalogue-scope" class="tpl-hero__search" name="catalogue-scope">
+      <option value="">sur une entreprise ou une association</option>
+      <option value="entreprises">sur une entreprise</option>
+      <option value="associations">sur une association</option>
+    </select>
+    <select id="catalogue-type" class="tpl-hero__search" name="catalogue-type">
+      {% for type in catalogue_types %}
+        <option value="{{ forloop.index0 }}">{{ type }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="tpl-form__group">
+    <select id="catalogue-usecase" class="tpl-hero__search" name="catalogue-usecase">
+      <option value="">Cas d’usage</option>
+      {% for usecase in catalogue_usecases %}
+        <option value="{{ usecase[0] }}">{{ usecase[1] }}</option>
+      {% endfor %}
+    </select>
+    <select id="catalogue-providers" class="tpl-hero__search" name="catalogue-providers">
+      <option value="">Fournisseurs</option>
+      {% for provider in catalogue_providers %}
+        <option value="{{ provider[0] }}">{{ provider[1] }}</option>
+      {% endfor %}
+    </select>
+    <select id="catalogue-openstate" class="tpl-hero__search" name="catalogue-openstate">
+      <option value="">Ouverture de la donnée</option>
+      {% for state in catalogue_openstate %}
+        <option value="{{ state }}">{{ state }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>

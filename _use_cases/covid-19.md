@@ -1,21 +1,21 @@
 ---
 layout: usecases
-title: Instruction régionale de l'aide d’urgence aux TPE 
+title: Instruction régionale de l'aide d’urgence aux TPE
 ---
 
 ## Introduction
 
 Dans le cadre inédit de la propagation de l'épidémie du Covid-19, un fonds de solidarité à destination des entreprises et associations, de taille petite à moyenne, particulièrement touchées par les conséquences économiques, financières et sociales liées à cette épidémie a été mis en place.
-Ce fonds propose sous certaines conditions deux aides : 
-- un première aide forfaitaire de 1500 euros,  
+Ce fonds propose sous certaines conditions deux aides :
+- un première aide forfaitaire de 1500 euros,
 - une aide complémentaire forfaitaire de 2000 euros.
 
 **C'est dans le cadre de l'instruction des demandes de cette seconde aide complémentaire qu'API Entreprise intervient.**
 Cette fiche pratique s'adresse aux parties prenantes de cette phase de vérification, à savoir les régions et leurs éditeurs prestataires.
 
-## Rôle d'API Entreprise 
+## Rôle d'API Entreprise
 
-API Entreprise vous permet de : 
+API Entreprise vous permet de :
 - faciliter le traitement de la demande de subvention, en vous donnant accès à des données déterminantes de l'éligibilité de l'entreprise ou association demandeuse ;
 - mettre en oeuvre le "dîtes le nous une fois".
 
@@ -36,42 +36,37 @@ Voici les deux décrets qui organisent les échanges :
 ## Données utiles
 
 Dans le cadre de cette demande d'aide d'urgence, l'entreprise ou l'association déclare sur l'honneur qu'elle remplit les conditions demandées.
-L'API Entreprise regroupe des données administratives utiles à l'instruction de cette déclaration sur l'honneur, et les met à disposition au travers d'une API unique. 
+L'API Entreprise regroupe des données administratives utiles à l'instruction de cette déclaration sur l'honneur, et les met à disposition au travers d'une API unique.
 
-Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage et à indiquer dans votre demande d'accès : 
+Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage et à indiquer dans votre demande d'accès :
 
 {:.tpl-table}
 | Point d'accès API Entreprise | Fournisseur        | Commentaire                                          | Documentation |
 | -------------    | ------------------ |------------------------------------------------------|--------------- |
 | Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss) Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril                                                                                             |
-| Entreprise    | INSEE & INFOGREFFE | Données d'identité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |                                                      
- 
+| Entreprise    | INSEE & INFOGREFFE | Données d'identité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |
+
 Les données sur les associations sont disponibles en open data (sans demande d'accès préalable):
 
 {:.tpl-table}
 | API en open data | Fournisseur        | Commentaire                                          | Documentation |
-| -------------    | ------------------ |------------------------------------------------------|--------------- | 
-| API du Répertoire National des Associations (RNA)      | Étalab             | Données d'identité des associations (RNA)            | [`API RNA` disponible sur entreprise.data.gouv.fr](https://entreprise.data.gouv.fr/api_doc_rna)                                                                                |     
-
-{:.tpl-notification}
-Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance des endpoints pourrait être affectée. N'hésitez pas à **faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée.** L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
-Nous vous remercions également de **veiller à consommer l'API open data le plus modérément possible**, afin de limiter les incidents de charge pour tous.
-
+| -------------    | ------------------ |------------------------------------------------------|--------------- |
+| API du Répertoire National des Associations (RNA)      | Étalab             | Données d'identité des associations (RNA)            | [`API RNA` disponible sur entreprise.data.gouv.fr](https://entreprise.data.gouv.fr/api_doc_rna)                                                                                |
 
 ## Conditions d'accès
 
 L'accès à l'API Entreprise dans le cadre de ce cas d'usage sera strictement réservé aux administrations concernées par l'instruction des dossiers de cette aide d'urgence :
-- aux régions, 
+- aux régions,
 - ainsi qu'à leurs éditeurs prestataires.
 
-Chaque région doit effectuer une demande d'accès avec les données indiquées plus haut. Chaque région aura la charge de transmettre à ces prestataires la clé d'accès obtenue. 
+Chaque région doit effectuer une demande d'accès avec les données indiquées plus haut. Chaque région aura la charge de transmettre à ces prestataires la clé d'accès obtenue.
 
 Pour votre demande d'accès, veuillez consulter la page ["Demander un accès"]({{ site.baseurl }}{% link pages/demander_un_acces.md %}), un déroulé des étapes vous sera décrit.
 
 ## Gestion des clés d'accès
 
 Vous réalisez les développements ?
-Nous avons besoin que vous remplissiez [les paramètres obligatoires](https://doc.entreprise.api.gouv.fr/?json#param-tres-obligatoires) de la façon suivante : 
+Nous avons besoin que vous remplissiez [les paramètres obligatoires](https://doc.entreprise.api.gouv.fr/?json#param-tres-obligatoires) de la façon suivante :
 
 {:.tpl-table}
 | Paramètre   | Présence      | Description                                           |
