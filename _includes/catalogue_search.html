@@ -2,11 +2,10 @@
 {% assign catalogue_usecases = site.catalogue_usecases %}
 {% assign catalogue_providers = site.providers_aliases %}
 {% assign catalogue_openstate = site.catalogue_openstate %}
-<form class="tpl-hero__form catalogue__search">
-  <label for="tpl-hero__search">Chercher une information</label>
+<div class="tpl-hero__form catalogue__search">
   <div class="tpl-form__group">
-    <input type="submit" class="tpl-hero__search-button" value="" role="button" aria-label="Rechercher" />
-    <input id="catalogue-search" type="text" class="tpl-hero__search" name="catalogue-search" />
+    <input type="button" class="tpl-hero__search-button" value="" role="button" aria-label="Chercher une information" />
+    <input id="catalogue-search" type="text" class="tpl-hero__search" name="catalogue-search" placeholder="Chercher une information" />
     <select id="catalogue-scope" class="tpl-hero__search" name="catalogue-scope">
       <option value="">sur une entreprise ou une association</option>
       <option value="entreprises">sur une entreprise</option>
@@ -38,4 +37,4 @@
       {% endfor %}
     </select>
   </div>
-</form>
+</div>
