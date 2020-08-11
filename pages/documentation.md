@@ -22,7 +22,7 @@ Avec les endpoints `entreprises`, `etablissements` et `associations` , vous pouv
 
 <details>
 <summary markdown="span">Voir un exemple de pré-remplissage</summary>
-L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \\\\\\\\\\\\\\\\[document Unique de Marché Européen](https://www2.economie.gouv.fr/daj/dume-espd). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
+L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \\\\\\\\\\\\\\\\\\\[document Unique de Marché Européen](https://www2.economie.gouv.fr/daj/dume-espd). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
 
 ![](https://lh6.googleusercontent.com/UtQj08BUdtbKNTTwqEt6KBs28DMLJLjKP-kT9XruYA5gwZBTgwBQ08FCEyGvyGUKHCUSokQnshLpYMI5Gbo6Prj5wzG0Csh1zJYkwf-Ib-9Q68tNWRJVlyj7UTbJ16OaYw)
 
@@ -411,19 +411,16 @@ Pour chaque endpoint, nous précisons dans le catalogue des données les paramè
 
 #### Comment faire mes appels de traitement de masse ?
 
-Sur API Entreprise, vous avez le droit à 2000 requêtes par tranche de 10 minutes par IP interrogeant nos services.
+Il est de plus souhaitable que vous fassiez vos batch automatiques la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.\
+Vous devez vous assurer de respecter la volumétrie, et donc de temporiser vos appels sous la limite décrite ci-après :
 
-Si vous souhaitez effectuer des batchs il faudra temporiser vos appels pour rester sous cette limite.
-
-Cette restriction est nécessaire pour garantir l’accès aux données à l’intégralité des usagers d’API Entreprise à des services web non dimensionnés pour faire face de à de fortes charges.
-
-Il est de plus souhaitable que vous fassiez vos batch automatique la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.
+<a id="RespecterLaVolumetrie"></a>
 
 #### Respecter la volumétrie (quotas, nombre d’appels autorisés)
 
 Sur API Entreprise, vous avez le droit à 2000 requêtes par tranche de 10 minutes par IP interrogeant nos services.
 
-Au delà de ce taux votre IP sera bannie temporairement de nos serveurs. Les appels depuis une IP bannie ne renvoient pas de codes http, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil . Si par mégarde vous vous retrouviez dans cette situation, adressez-nous un email[support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)
+Au delà de ce taux votre IP sera bannie temporairement de nos serveurs. Les appels depuis une IP bannie ne renvoient pas de codes http, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil . Si par mégarde vous vous retrouviez dans cette situation, adressez-nous un email [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)
 
 Si vous avez besoin de plus de volumétrie, veuillez également nous contacter, nous étudierons votre demande et si la situation s'y prête, nous whitelisterons votre / vos IPs pour éviter qu'elles ne se fassent bannir.
 
@@ -439,6 +436,12 @@ De façon générale, nous vous recommandons un timeout:
 * de 12 secondes pour les appels retournant un PDF ou un ZIP.
 
 De même, pour ne pas immobiliser nos serveurs, nous attendons les réponses de nos fournisseurs un maximum de 10 secondes avant de vous les retransmettre. Si ce délai d’attente est dépassé un code erreur HTTP 504 vous sera renvoyé.
+
+#### Les requêtes multi-origines (CORS -Cross Origin Ressource Sharing) ne sont pas autorisées
+
+API Entreprise est un service disponible sous habilitation, car il permet aux utilisateurs d'obtenir des données souvent protégées par des secrets. Nous ne pouvons donc pas autoriser le CORS qui vous permettrait d'interroger directement API Entreprise depuis un site ou une application web. Cela impliquerait que votre token d'accès soit présent dans le code source du site web en question, et donc soit disponible au public. \
+\
+Pour mettre à disposition les données API Entreprise depuis un navigateur, il vous faut mettre en place un système de proxy pour ne pas appeler directement nos APIs.
 
 #### Construire en compatibilité ascendante
 
@@ -507,6 +510,10 @@ En cas d’erreur, le JSON vous détaille la raison de l’erreur, le champ conc
 ### Réagir en cas d’incidents fournisseurs de données
 
 ### Réagir en cas d’indisponibilité globale
+
+#### Vérifier ne pas avoir dépasser la volumétrie autorisée
+
+Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](#RespecterLaVolumetrie).
 
 - - -
 
