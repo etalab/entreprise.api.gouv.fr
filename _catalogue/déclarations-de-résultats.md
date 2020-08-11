@@ -189,12 +189,15 @@ services:
           label: user_id
           description: IdentifiantUtilisateurPhysique
         param3:
+          label: email
+          description: (optionnel)EmailUtilisateurFaisantLaDemande
+        param4:
           label: context
           description: CadreDeLaRequête
-        param4:
-          label: recipient
-          description: BénéficiaireDel’Appel
         param5:
+          description: BénéficiaireDel’Appel
+          label: recipient
+        param6:
           description: RaisonDeL’AppelOuIdentifiant
           label: object
       questions:
@@ -250,14 +253,17 @@ services:
           label: user_id
           description: IdentifiantUtilisateurPhysique
         param3:
+          label: email
+          description: (optionnel)EmailUtilisateurFaisantLaDemande
+        param4:
           label: context
           description: CadreDeLaRequête
-        param4:
+        param5:
           label: recipient
           description: BénéficiaireDel’Appel
-        param5:
-          label: object
+        param6:
           description: RaisonDeL’AppelOuIdentifiant
+          label: object
       questions:
         qr1:
           question: ⚠️ "Complete" ne signifie pas que toutes les liasses fiscales sont
@@ -267,6 +273,15 @@ services:
             l'année demandée. Ce paramètre ne veut pas dire que toutes les
             liasses fiscales seront renvoyées. En effet, les déclarations
             disponibles sont restreintes par décret.
+      options:
+        option1:
+          param: ""
+          description: ""
+          comment: ""
+        option2:
+          description: ""
+          param: ""
+          comment: ""
     response:
       sample:
         code: |-
