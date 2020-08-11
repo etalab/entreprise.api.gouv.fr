@@ -14,6 +14,18 @@
   }
 }
 
+.catalogue-information {
+  .tpl-button {
+    background-color: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-s);
+  }
+}
+
 .catalogue {
   .hidden {
     display: none;

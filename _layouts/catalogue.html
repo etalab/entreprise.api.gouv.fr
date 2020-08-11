@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% include hero.html page=page %}
+<section class="tpl-bg--lighter-grey catalogue-information">
+  <div class="tpl-container">
+    <p>Bienvenue sur la nouvelle documentation !<br/>
+      Voici le catalogue de toutes les données API Entreprise, accompagnées de leur documentation spécifique.<br/>
+      Toutes les informations concernant les sujets transverses aux différents endpoints n'ont pas encore été rapatriées ! Référez-vous à l'ancienne documentation.</p>
+      <a class="tpl-button tpl-button--alternate" href="https://doc.entreprise.api.gouv.fr">Ancienne documentation</a>
+  </div>
+</section>
+<section class="tpl-section tpl-bg--lightest-grey">
+  <div class="tpl-container">
+    <article>
+      {{ content }}
+    </article>
+  </div>
+</section>
