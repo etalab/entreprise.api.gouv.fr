@@ -60,7 +60,7 @@ perimeter:
     Sirene.
 
 
-    ⚠️ Cet endpoin concerne uniquement les établissements, voir l'endpoint `entreprises` pour les données relatives aux sociétés.
+    ⚠️ Cet endpoit concerne uniquement les établissements, voir l'endpoint `entreprises` pour les données relatives aux sociétés.
 
 
     **Cet endpoint permet donc d'accéder aux informations de référence concernant les établissements:**
