@@ -1,9 +1,9 @@
 ---
+providers:
+  - insee
 access: Sous habilitation&nbsp;;<br>ou disponible partiellement sur
   [api.insee](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
   et [entreprise.data.gouv](https://entreprise.data.gouv.fr/)
-providers:
-  - insee
 questions:
   qr1:
     answer: >-
@@ -54,13 +54,12 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
   description: >-
-    L'endpoint `etablissements` vous donne accès aux données des
-    établissements tirées du *Répertoire National d'identification des
-    entreprises et des établissements (SIRENE)*, géré par l'INSEE au travers du système
-    Sirene.
+    L'endpoint `etablissements` vous donne accès aux données des établissements
+    tirées du *Répertoire National d'identification des entreprises et des
+    établissements (SIRENE)*, géré par l'INSEE au travers du système Sirene.
 
 
-    ⚠️ Cet endpoit concerne uniquement les établissements, voir l'endpoint `entreprises` pour les données relatives aux sociétés.
+    ⚠️ Cet endpoint concerne uniquement les établissements, voir l'endpoint `entreprises` pour les données relatives aux sociétés.
 
 
     **Cet endpoint permet donc d'accéder aux informations de référence concernant les établissements:**
@@ -82,8 +81,8 @@ perimeter:
 
 
     **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904)
-  label: Établissements d’entreprises, d'entrepreneurs individuels,
-    d'institutions administratives et de certaines associations.
+  label: Établissements d’entreprises, d'entrepreneurs individuels, d'institutions
+    administratives et de certaines associations.
 services:
   service1:
     request:
