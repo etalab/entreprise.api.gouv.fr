@@ -171,6 +171,19 @@ window.onload = function (e) {
     } else {
       emptyPanel.classList.add('hidden')
     }
+
+    let panelCount = 0
+    const allPanels = document.querySelectorAll('.documentation-card')
+    const visibleEndpoints = document.getElementById('visible-endpoints')
+
+    for (let k = 0; k < allPanels.length; k++) {
+      if (allPanels[k].offsetParent) {
+        console.log('visible')
+        panelCount++
+      }
+    }
+
+    visibleEndpoints.innerHTML = panelCount
   }
 
   function toggleCategories() {
