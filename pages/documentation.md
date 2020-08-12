@@ -15,31 +15,35 @@ class: documentation
 
 API Entreprise répond à deux grands types d’usages :
 
-* Le pré-remplissage d'un formulaire à destination du public ;
-* l’obtention d’une donnée en back office par un agent habilité.
+<details class="fold">
+<summary>
+###### Le pré-remplissage d'un formulaire à destination du public
+</summary>
 
-  #### \[ BOUTON Découvrir les différents cas d'usage ]
+Vous pouvez mettre en place une aide à la saisie pour vos usagers, avec les endpoints `entreprises`, `etablissements` et `associations`. L’usager renseigne son numéro de SIRET, ou toute autre valeur discriminante ; le formulaire est alors pré-rempli des champs disponibles par votre API.
 
-#### Pré-remplir un fomulaire
+{:.tpl-notification}
+La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
 
-Avec les endpoints `entreprises`, `etablissements` et `associations` , vous pouvez mettre en place une aide à la saisie pour vos usagers. L’usager renseigne son numéro de SIRET, ou tout autre valeur discriminante. Le formulaire est alors pré-rempli des champs disponibles par votre API.
+> L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \[document Unique de Marché Européen](<> https://dume.chorus-pro.gouv.fr/#/>). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs :
+>
+> <video controls width="250">\
+> <source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"\
+> type="video/mp4">\
+> Nous sommes désolés, votre navigateur ne supporte pas les vidéos.\
+> </video>
 
-<details>
-<summary markdown="span">Voir un exemple de pré-remplissage</summary>
-L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \\\\\\\\\\\\\\\\\\\\[document Unique de Marché Européen](https://www2.economie.gouv.fr/daj/dume-espd). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
-
-![](https://lh6.googleusercontent.com/UtQj08BUdtbKNTTwqEt6KBs28DMLJLjKP-kT9XruYA5gwZBTgwBQ08FCEyGvyGUKHCUSokQnshLpYMI5Gbo6Prj5wzG0Csh1zJYkwf-Ib-9Q68tNWRJVlyj7UTbJ16OaYw)
-
-</details>
-
-⚠️Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.
+⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
 Par exemple, l’endpoint `entreprise` qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
-
-💡 La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
 
 ℹ️ **Quel avantage à passer par API Entreprise si les données sont libres ?** API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.
 
-#### Obtenir une donnée en backoffice par un agent habilité
+</details>
+
+<details class="fold">
+<summary>
+###### L’obtention d’une donnée en back office par un agent habilité
+</summary>
 
 L'API entreprise sert aux agents habilités à récupérer automatiquement des informations, elle donne accès : 
 
@@ -48,15 +52,21 @@ L'API entreprise sert aux agents habilités à récupérer automatiquement des i
 * soit les deux.
 
 </details>
+
+\[BOUTON VERS CAS USAGE]
+
+</details>
+
 <details class="fold">
 <summary>
 ### Le service : une API, plusieurs données et plusieurs fournisseurs
 </summary>
 #### Les qualités du service
 
-Sans API Entreprise, vous êtes obligé d'aller demander toutes les données dont vous avez besoin auprès des différentes administrations. Cette recherche n'est pas forcément fructueuse car les organisations n'ont pas toujours un site ou un contact public pour leurs API ; par ailleurs, vous devez ensuite générer plusieurs mots de passe, plusieurs contacts techniques et métier.
+**API Entreprise démarche les administrations et fait les différentes demandes d’accès.** Si votre demande d'habilitation est validée, vous avez une seule clé d’accès sécurisée. De plus, API Entreprise agrège et vous restitue les connaissances techniques et métiers.
 
-API Entreprise s’occupe de démarcher les administrations et de faire les différentes demandes d’accès. Si votre demande d'accès est validée, vous avez une seule clé d’accès sécurisée, nous nous occupons d’agréger et de vous restituer les connaissances techniques et métiers.
+{:.tpl-notification}
+Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires à votre service, auprès des différentes administrations. Cette recherche n'est pas forcément fructueuse car les organisations n'ont pas toujours un site ou un contact public pour leurs APIs ; par ailleurs, vous devez ensuite comprendre plusieurs système techniques, générer plusieurs mots de passe, collaborer avec plusieurs contacts techniques et métier.
 
 #### La liste exhaustive des données
 
@@ -111,17 +121,15 @@ API Entreprise s’occupe de démarcher les administrations et de faire les diff
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Brevets, modèles et marques déposés](https://doc.entreprise.api.gouv.fr/?json#extraits-courts-inpi){:target="_blank"}                   |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
 
-##### Une documentation technique et métier par endpoint
+#### Une documentation technique et métier par endpoint
 
-Toutes ces données sont détaillées dans le catalogue de données.
-
-Une barre de recherche est à votre disposition pour filtrer les données :
+Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](https://entreprise.api.gouv.fr/catalogue/). Une barre de recherche est à votre disposition pour filtrer les données :
 
 Chaque endpoint est présenté de façon synthétique :
 
 Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :
 
-### Nos engagements
+#### Nos engagements
 
 * L’engagement de disponibilité est de 99,5 %
 
