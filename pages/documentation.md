@@ -4,13 +4,13 @@ title: Documentation générale
 permalink: /documentation/
 class: documentation
 ---
-# Étape 1 : L'API Entreprise correspond-elle à mon besoin ?
+## Étape 1 : L'API Entreprise correspond-elle à mon besoin ?
 
 \[Module du questionnaire : https://whimsical.com/TL89xgeqHhWEPPeZQrgGXG]
 
 <details class="fold">
 <summary>
-## Les cas d’usage d’API Entreprise
+### Les cas d’usage d’API Entreprise
 </summary>
 
 API Entreprise répond à deux grands types d’usages :
@@ -18,15 +18,15 @@ API Entreprise répond à deux grands types d’usages :
 * Le pré-remplissage d'un formulaire à destination du public ;
 * l’obtention d’une donnée en back office par un agent habilité.
 
-  \[ BOUTON Découvrir les différents cas d'usage ]
+  #### \[ BOUTON Découvrir les différents cas d'usage ]
 
-### Pré-remplir un fomulaire
+#### Pré-remplir un fomulaire
 
 Avec les endpoints `entreprises`, `etablissements` et `associations` , vous pouvez mettre en place une aide à la saisie pour vos usagers. L’usager renseigne son numéro de SIRET, ou tout autre valeur discriminante. Le formulaire est alors pré-rempli des champs disponibles par votre API.
 
 <details>
 <summary markdown="span">Voir un exemple de pré-remplissage</summary>
-L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \\\\\\\\\\\\\\\\\\\[document Unique de Marché Européen](https://www2.economie.gouv.fr/daj/dume-espd). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
+L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \\\\\\\\\\\\\\\\\\\\[document Unique de Marché Européen](https://www2.economie.gouv.fr/daj/dume-espd). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
 
 ![](https://lh6.googleusercontent.com/UtQj08BUdtbKNTTwqEt6KBs28DMLJLjKP-kT9XruYA5gwZBTgwBQ08FCEyGvyGUKHCUSokQnshLpYMI5Gbo6Prj5wzG0Csh1zJYkwf-Ib-9Q68tNWRJVlyj7UTbJ16OaYw)
 
@@ -39,7 +39,7 @@ Par exemple, l’endpoint `entreprise` qui regroupe des données ouvertes et fer
 
 ℹ️ **Quel avantage à passer par API Entreprise si les données sont libres ?** API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.
 
-### Obtenir une donnée en backoffice par un agent habilité
+#### Obtenir une donnée en backoffice par un agent habilité
 
 L'API entreprise sert aux agents habilités à récupérer automatiquement des informations, elle donne accès : 
 
@@ -50,17 +50,17 @@ L'API entreprise sert aux agents habilités à récupérer automatiquement des i
 </details>
 <details class="fold">
 <summary>
-## Le service : une API, plusieurs données et plusieurs fournisseurs
+### Le service : une API, plusieurs données et plusieurs fournisseurs
 </summary>
-### Les qualités du service
+#### Les qualités du service
 
 Sans API Entreprise, vous êtes obligé d'aller demander toutes les données dont vous avez besoin auprès des différentes administrations. Cette recherche n'est pas forcément fructueuse car les organisations n'ont pas toujours un site ou un contact public pour leurs API ; par ailleurs, vous devez ensuite générer plusieurs mots de passe, plusieurs contacts techniques et métier.
 
 API Entreprise s’occupe de démarcher les administrations et de faire les différentes demandes d’accès. Si votre demande d'accès est validée, vous avez une seule clé d’accès sécurisée, nous nous occupons d’agréger et de vous restituer les connaissances techniques et métiers.
 
-### La liste exhaustive des données
+#### La liste exhaustive des données
 
-#### Informations générales <a id="infos_generales"></a>
+##### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -72,7 +72,7 @@ API Entreprise s’occupe de démarcher les administrations et de faire les diff
 | [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
 | [Actes](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                     | INPI |         `actes_inpi`          |       Archive ZIP (PDF et XML)   |    publiques    |
 
-#### Informations financières <a id="infos_financieres"></a>
+##### Informations financières <a id="infos_financieres"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -82,7 +82,7 @@ API Entreprise s’occupe de démarcher les administrations et de faire les diff
 | [3 derniers bilans annuels](https://doc.entreprise.api.gouv.fr/?json#bilans-entreprises-bdf-banque-de-france){:target="_blank"}                                      |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
 | [Déclarations de résultats](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales){:target="_blank"}       |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
 
-#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
+##### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -95,7 +95,7 @@ API Entreprise s’occupe de démarcher les administrations et de faire les diff
 | [Carte professionnelle travaux publics](https://doc.entreprise.api.gouv.fr/?json#certificats-cnetp){:target="_blank"}         |          FNTP           |            `cartes_professionnelles_ftp`            |         PDF         |    publiques    |
 | [Cotisations congés payés & chômage intempéries](https://doc.entreprise.api.gouv.fr/?json#certificats-cnetp){:target="_blank"}         |          CNETP           |            `certificats_cnetp`            |         PDF         |    publiques    |
 
-#### Certifications professionnelles <a id="certificats_pro"></a>
+##### Certifications professionnelles <a id="certificats_pro"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
@@ -104,14 +104,14 @@ API Entreprise s’occupe de démarcher les administrations et de faire les diff
 | [Certification de qualification bâtiment](https://doc.entreprise.api.gouv.fr/?json#certificats-qualibat){:target="_blank"}                  |          OPQIBI          |           `certificats_qualibat`            |    données JSON     |    publiques    |
 | [Certification de qualification d'ingénierie](https://doc.entreprise.api.gouv.fr/?json#certificats-opqibi){:target="_blank"}                  |          OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
 
-#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
+##### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
 
 {:.tpl-table}
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Brevets, modèles et marques déposés](https://doc.entreprise.api.gouv.fr/?json#extraits-courts-inpi){:target="_blank"}                   |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
 
-### Une documentation technique et métier par endpoint
+##### Une documentation technique et métier par endpoint
 
 Toutes ces données sont détaillées dans le catalogue de données.
 
@@ -171,6 +171,7 @@ Vous êtes techniquement en mesure de pouvoir démarrer avec API Entreprise si :
 * ou bien vous avez une direction des systèmes d’information (DSI) qui peut intégrer des APIs.
 
 Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique “Les questions à poser à mon équipe technique”.
+
 </details>
 # 2 - Les prérequis techniques avant d’aller plus loin
 
