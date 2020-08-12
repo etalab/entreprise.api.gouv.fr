@@ -26,11 +26,8 @@ Vous pouvez mettre en place une aide à la saisie pour vos usagers, avec les end
 La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
 
 > L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \[document Unique de Marché Européen](<> https://dume.chorus-pro.gouv.fr/#/>). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs :
-
-<video controls>
-<source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4" type="video/mp4" />
-Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
-</video>
+>
+> <video controls width="250">\
 
 ⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
 Par exemple, l’endpoint `entreprise` qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
@@ -153,9 +150,10 @@ Utiliser le service API Entreprise, c'est aussi bénéficier des engagements de 
   Le service s'engage à respecter en totalité les conditions de protection des données et les règles de confidentialité.
 
 </details>
+
 <details class="fold">
 <summary>
-## Un accès sous habilitation et conditions
+### Un accès sous habilitation et conditions
 </summary>
 L'accès à l'API entreprise est réservé aux acteurs publics investis d’une mission de service public (les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.).
 
@@ -163,21 +161,21 @@ Leurs prestataires privés peuvent être destinataires des informations techniqu
 
 Enfin, tout accès à l'API Entreprise se fait suite à une habilitation.
 
-### S'engager à ne pas diffuser les données reçues
+#### S'engager à ne pas diffuser les données reçues
 
 Premièrement, avant toute transmission de données, l’usager doit être informé, et en cas d’exposition des données, son consentement doit être explicite.
 
-##### Dans le cas d’un pré-remplissage à destination du public
+###### Dans le cas d’un pré-remplissage à destination du public
 
 Une partie des données des endpoints `entreprise`, `etablissement` et `associations`, les données publiques, peuvent servir au pré-remplissage de formulaires publics. Même si ces données ne sont pas confidentielles, le fournisseur de service s’engage à ne pas commercialiser les données reçues au travers d'API Entreprise et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
 
-##### Dans le cas d’une utilisation par un agent habilité en back office
+###### Dans le cas d’une utilisation par un agent habilité en back office
 
 La plupart des données disponibles sur API Entreprise sont protégées par des secrets. Vous assurez donc la protection de ces données et le respect des règles de confidentialité.
 
 Entre autres, le service ne doit pas permettre à quiconque n’ayant pas un niveau d’authentification suffisant, d’accéder à des données. Leur accès est restreint aux seuls les agents dûment habilités, dont les requêtes sont tracées pour une durée de 36 mois.
 
-### Un équipement technique minimal nécessaire
+#### Un équipement technique minimal nécessaire
 
 Vous êtes techniquement en mesure de pouvoir démarrer avec API Entreprise si :
 
@@ -188,9 +186,12 @@ Vous êtes techniquement en mesure de pouvoir démarrer avec API Entreprise si :
 Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique “Les questions à poser à mon équipe technique”.
 
 </details>
-# 2 - Les prérequis techniques avant d’aller plus loin
+## Étape 2 : Les prérequis techniques avant d’aller plus loin
 
-## 🖌 Qu’est-ce qu’une API ?
+<details class="fold">
+<summary>
+### Qu’est-ce qu’une API ?
+</summary>
 
 Une API permet d’agir sur des ressources contenues dans un autre système d’informations, sans soi-même avoir la main sur ce système d’information.
 
@@ -198,7 +199,7 @@ Dans le cas qui nous occupe, les ressources sont des informations sur les entrep
 
 ![](../assets/images/documentation/fonctionnement.png)
 
-### Comment se déroule un appel à l’API ?
+#### Comment se déroule un appel à l’API ?
 
 Voici, décrit en quelques étapes, la façon dont vous ou votre équipe technique allez faire votre demande à l’API pour accéder aux données :
 
@@ -247,9 +248,9 @@ Pour veiller à la protection des données, l’ensemble des appels que vous all
 
 **Étape 5** : Je reçois une réponse comportant les données. La réponse est au format JSON, nous détaillons sa structure dans la prochaine partie.
 
-### Comment s'interprète la réponse de l’API ?
+#### Comment s'interprète la réponse de l’API ?
 
-#### Structure d’une réponse JSON
+##### Structure d’une réponse JSON
 
 Pour chaque appel effectué vous allez recevoir une réponse au format JSON. Ce langage informatique présente l’avantage d’être lisible par un non expert ; tout en étant compréhensible par une machine.
 
@@ -288,10 +289,15 @@ Dans ce cas précis, les données étant toutes renvoyées au format JSON, les c
 ```
 
 Pour une information détaillée par endpoint, reportez-vous au catalogue de données.
+</details>
 
-## Qu'est qu'un token ?
+<details class="fold">
+<summary>
+### Qu'est qu'un token ?
+</summary>
 
-### Le token, une clé unique et privée
+
+#### Le token, une clé unique et privée
 
 Le token est votre code secret vous permettant d’accéder à API Entreprise.
 
@@ -299,21 +305,25 @@ Si votre demande d’habilitation est validée, il vous est délivré dans votre
 
 Cette clé est unique et privée ; nous nous appuyons sur un standard ouvert et normalisé de l’industrie : le Json Web Token (aka JWT) ([RFC 7519](https://tools.ietf.org/html/rfc7519)). Ce jeton est autonome et permet de transmettre de façon sécurisée les informations d'authentifications nécessaires pour utiliser l'API. Ces jetons sont vérifiés et fiables car signés numériquement avec une date d'expiration.
 
-### Ne jamais divulguer mon token
+#### Ne jamais divulguer mon token
 
 ⚠️ Votre token vous est propre, il ne faut pas le diffuser: c’est comme votre clé d’appartement, vous ne l’envoyez pas par la poste car il y a un risque que celle-ci soit interceptée par une personne mal intentionnée.
 
 C’est pourquoi, vous ne devez jamais copier-coller un token dans un moteur de recherche ou dans un e-mail.L’usage de votre token se fait uniquement dans votre logiciel métier sécurisé utilisé pour réaliser vos appels.
 
-### Un token a une fin de vie
+#### Un token a une fin de vie
 
 La durée de vie d’un token est limitée, sa date d’expiration est indiqué dans votre espace personnel.
 
 Le token peut également être supprimé s’il a été diffusé par mégarde.
 
 Le renouvellement d’un token est très facile et rapide. C’est pourquoi, si vous avez divulguer votre token par erreur, n’hésitez pas à écrire rapidement au support. Pour en savoir plus le renouvellement d’un token, consultez la rubrique“renouveler un token en fin de vie”.
+</details>
 
-## Les fondamentaux à mettre en place avec l'équipe technique
+<details class="fold">
+<summary>
+### Les fondamentaux à mettre en place avec l'équipe technique
+</summary>
 
 Vous travaillez avec la DSI de votre administration ou avec un éditeur de logiciel, voici la liste des fondamentaux que votre équipe technique doit être en mesure de mettre en place pour un bon fonctionnement de l'API Entreprise : 
 
@@ -329,7 +339,12 @@ Vous travaillez avec la DSI de votre administration ou avec un éditeur de logic
 
 ☑️ Anticiper les coûts de maintenance qui s'ajouteront aux coûts de mise en place.
 
-## Prévoir les incidents et la résilience de mon service
+</details>
+
+<details class="fold">
+<summary>
+### Prévoir les incidents et la résilience de mon service
+</summary>
 
 Il se peut qu’un incident survienne chez un fournisseur de données. Votre logiciel doit vous permettre de fonctionner de manière dégradée :
 
@@ -338,11 +353,16 @@ Il se peut qu’un incident survienne chez un fournisseur de données. Votre log
 
 💡 Le Dîtes-le-nous-une-fois ne doit pas bloquer les usagers en cas d’incident techniques : vos usagers préfèreront toujours vous redonner leurs informations plutôt que de ne pas pouvoir utiliser votre service.
 
-# 3- Mes débuts avec API Entreprise
+</details>
 
-## Effectuer ma demande d’habilitation
+## Étape 3 : Mes débuts avec API Entreprise
 
-### Anticiper votre demande
+<details class="fold">
+<summary>
+### Effectuer ma demande d’habilitation
+</summary>
+
+#### Anticiper votre demande
 
 Vous êtes désormais convaincus et prêts à utiliser le service API Entreprise, il vous faut désormais faire une demande d'accès. Vous trouverez ici la liste des informations qui vont vous être demandé : 
 
@@ -354,7 +374,7 @@ Vous êtes désormais convaincus et prêts à utiliser le service API Entreprise
 
   Une demande d’accès ne peut pas couvrir plusieurs contextes métiers différents et doit être adaptée au public utilisateur final. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
-  ###### Exemple de la Région Occitanie :
+  ####### Exemple de la Région Occitanie :
 
   Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
 
@@ -369,7 +389,7 @@ Vous êtes désormais convaincus et prêts à utiliser le service API Entreprise
 * l**es coordonnées de votre délégué·e à la protection des données** (DPD) ;
   Le DPD est la personne qui s'assure que l'organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C'est généralement une personne appartenant à l'organisme demandeur.
 
-  ###### Je n’ai pas de DPD, que faire ?
+  ####### Je n’ai pas de DPD, que faire ?
 
   Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles « sensibles ». Ce qui est au cour de l’usage d’API Entreprise.
 * **les coordonnées du contact métier** ;
@@ -379,7 +399,7 @@ L'ensemble des coordonnées renseignées seront strictement utilisées pour comm
 
 Vous devrez également **accepter nos conditions générales d’utilisation**, consultables ici.
 
-### Faire ma demande d’habilitation
+#### Faire ma demande d’habilitation
 
 Les demandes d’accès à API Entreprise sont instruites sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise). Si vous n’en disposez pas déjà, il vous sera demandé de vous créer un compte. Des demandes multiples ne nécessitent pas de création de compte supplémentaire.
 
@@ -411,11 +431,16 @@ Une fois votre dossier validé, nous créons votre compte d’accès à un espac
 
 Une fois votre mot de passe choisi,[connectez-vous](https://dashboard.entreprise.api.gouv.fr/login) à votre espace client. Votre ou vos tokens vous y attendent. Vous pouvez commencer à les utiliser pour appeler l’API Entreprise. Le tableau de bord vous permet aussi d’avoir accès à des statistiques d’utilisation des données.
 
-## Faire ma première requête (⚠️ dans le navigateur en session privée)
+</details>
 
-### Récupérer mon token dans l’espace client
+<details class="fold">
+<summary>
+### Faire ma première requête (⚠️ dans le navigateur en session privée)
+</summary>
 
-### Instruire les paramètres de traçabilité
+#### Récupérer mon token dans l’espace client
+
+#### Instruire les paramètres de traçabilité
 
 API Entreprise vous permet de faire circuler, et d’accéder à des données protégées. C’est pourquoi nous vous demandons de renseigner dans chacune de vos requêtes, non seulement un jeton d’accès, mais aussi certaines informations qualifiant votre requête ; dans un objectif de traçabilité.
 
@@ -431,18 +456,23 @@ Pour chaque endpoint, nous précisons dans le catalogue des données les paramè
 |`&object=RaisonDeL'AppelOuIdentifiant`|**La raison de l'appel** <br> ou l'identifiant de la procédure <br>(numéro de marché publique, nom de la procédure, description courte (< 50 caractères))
 |`?user_id=IdentifiantDeL'UtilisateurPhysique`|*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira en cas d’utilisation anormal de l’API pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée. 
 
-### Voir ma première trace d’appel dans le tableau de bord
+#### Voir ma première trace d’appel dans le tableau de bord
 
-## Intégrer dans les logiciels métiers
+</details>
 
-#### Comment faire mes appels de traitement de masse ?
+<details class="fold">
+<summary>
+### Intégrer dans les logiciels métiers
+</summary>
+
+##### Comment faire mes appels de traitement de masse ?
 
 Il est de plus souhaitable que vous fassiez vos batch automatiques la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.\
 Vous devez vous assurer de respecter la volumétrie, et donc de temporiser vos appels sous la limite décrite ci-après :
 
 <a id="RespecterLaVolumetrie"></a>
 
-#### Respecter la volumétrie (quotas, nombre d’appels autorisés)
+##### Respecter la volumétrie (quotas, nombre d’appels autorisés)
 
 Sur API Entreprise, vous avez le droit à 2000 requêtes par tranche de 10 minutes par IP interrogeant nos services.
 
@@ -450,7 +480,7 @@ Au delà de ce taux votre IP sera bannie temporairement de nos serveurs. Les app
 
 Si vous avez besoin de plus de volumétrie, veuillez également nous contacter, nous étudierons votre demande et si la situation s'y prête, nous whitelisterons votre / vos IPs pour éviter qu'elles ne se fassent bannir.
 
-#### Configurer le temps maximal d’attente de la réponse ou timeout
+##### Configurer le temps maximal d’attente de la réponse ou timeout
 
 Letimeout est le temps d'attente maximal de réponse à une requête. Pour chaque endpoint, nous vous indiquons le timeout idéal dans le catalogue de donnée.
 
@@ -463,19 +493,28 @@ De façon générale, nous vous recommandons un timeout:
 
 De même, pour ne pas immobiliser nos serveurs, nous attendons les réponses de nos fournisseurs un maximum de 10 secondes avant de vous les retransmettre. Si ce délai d’attente est dépassé un code erreur HTTP 504 vous sera renvoyé.
 
-#### Les requêtes multi-origines (CORS -Cross Origin Ressource Sharing) ne sont pas autorisées
+##### Les requêtes multi-origines (CORS -Cross Origin Ressource Sharing) ne sont pas autorisées
 
-API Entreprise est un service disponible sous habilitation, car il permet aux utilisateurs d'obtenir des données souvent protégées par des secrets. Nous ne pouvons donc pas autoriser le CORS qui vous permettrait d'interroger directement API Entreprise depuis un site ou une application web. Cela impliquerait que votre token d'accès soit présent dans le code source du site web en question, et donc soit disponible au public. \
-\
+API Entreprise est un service disponible sous habilitation, car il permet aux utilisateurs d'obtenir des données souvent protégées par des secrets. Nous ne pouvons donc pas autoriser le CORS qui vous permettrait d'interroger directement API Entreprise depuis un site ou une application web. Cela impliquerait que votre token d'accès soit présent dans le code source du site web en question, et donc soit disponible au public. 
+
 Pour mettre à disposition les données API Entreprise depuis un navigateur, il vous faut mettre en place un système de proxy pour ne pas appeler directement nos APIs.
 
-#### Construire en compatibilité ascendante
+##### Construire en compatibilité ascendante
+</details>
 
-## Faire mon premier test de bout en bout
+<details class="fold">
+<summary>
+### Faire mon premier test de bout en bout
+</summary>
 
-# 4 - API Entreprise au quotidien
+</details>
 
-## Interpréter les codes HTTP
+## Étape 4 : API Entreprise au quotidien
+
+<details class="fold">
+<summary>
+### Interpréter les codes HTTP
+</summary>
 
 Toute réponse de l’API comprend la réponse JSON (expliquée ci-dessus) ainsi qu’un code HTTP. Celui-ci n’est pas immédiatement lisible par un humain, il est destiné aux traitements automatiques. (source :<https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP>)
 
@@ -483,7 +522,7 @@ Ces codes permettent de se renseigner sur le statut de l’appel, toutes les exp
 
 API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de données afin de vous en simplifier la compréhension. Pour cela, nous nous sommes appuyés sur le protocole HTTP.
 
-##### En cas de succès, le code HTTP commencera par 2 :
+###### En cas de succès, le code HTTP commencera par 2 :
 
 {:.tpl-table}
 | Code HTTP                                       |      Signification                                           |
@@ -491,7 +530,7 @@ API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de
 |`200` | **Tout va bien.**
 |`206` | **Réponse incomplète** - La requête a fonctionné mais un des fournisseurs de données a renvoyé une erreur ou une réponse incomplète. Les valeurs concernées dans le JSON contiennent le message : “Donnée indisponible”.|
 
-##### En cas d’échec, le code HTTP commence par 4 si l’erreur vient de votre côté :
+###### En cas d’échec, le code HTTP commence par 4 si l’erreur vient de votre côté :
 
 {:.tpl-table}
 | Code HTTP                                       |      Signification                                           |
@@ -503,7 +542,7 @@ API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de
 |`422` | **Entité non traitable** – Le format de la donnée passée en paramètre n'est pas accepté. Par exemple, si vous entrez 20 chiffres dans le paramètre SIREN, votre requête est automatiquement rejetée, car un SIREN fait obligatoirement 9 chiffres.\
 |`451` | **Indisponible pour raisons légales** - ce code est spécifiquement renvoyé lorsque vous demandez les informations d’une entreprise ou d’un établissement non diffusible au travers des endpoints `entreprises` et `etablissements` de l’INSEE, sans avoir utilisé l’option d’appel spécifique. Pour en savoir plus, consultez la documentation de cet endpoint dans le catalogue de données.|
 
-##### En cas d’échec, le code HTTP commence par 5 si l’erreur provient d’API Entreprise ou bien des fournisseurs de données :
+###### En cas d’échec, le code HTTP commence par 5 si l’erreur provient d’API Entreprise ou bien des fournisseurs de données :
 
 {:.tpl-table}
 | Code HTTP                                       |      Signification                                           |
@@ -515,13 +554,30 @@ API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de
 
 En cas d’erreur, le JSON vous détaille la raison de l’erreur, le champ concerné se nomme `“errors”`. Lorsqu’un endpoint retourne des données agrégées de plusieurs fournisseurs, le JSON renvoyé contient un champ `“gateway error”`. Sa valeur vaut `“true”` lorsqu'une erreur survient auprès d'au moins un fournisseur.
 
+</details>
+
+<details class="fold">
+<summary>
 ### Être tenu au courant des évolutions
+</summary>
+</details>
 
+<details class="fold">
+<summary>
 ### Renouveler un token en fin de vie
+</summary>
+</details>
 
+<details class="fold">
+<summary>
 ### Élargir le périmètre des données demandées
+</summary>
+</details>
 
+<details class="fold">
+<summary>
 ### S'adapter aux évolutions et montées de versions
+</summary>
 
 #### Endpoints en particulier
 
@@ -533,13 +589,24 @@ En cas d’erreur, le JSON vous détaille la raison de l’erreur, le champ conc
 
 #### Sécurité et volumétrie
 
-### Réagir en cas d’incidents fournisseurs de données
+</details>
 
+<details class="fold">
+<summary>
+### Réagir en cas d’incidents fournisseurs de données
+</summary>
+</details>
+
+<details class="fold">
+<summary>
 ### Réagir en cas d’indisponibilité globale
+</summary>
 
 #### Vérifier ne pas avoir dépasser la volumétrie autorisée
 
 Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](#RespecterLaVolumetrie).
+
+</details>
 
 - - -
 
@@ -568,14 +635,34 @@ Pour améliorer le temps de traitement de votre demande, il est important de nou
 
 ⚠️ Attention de ne pas partager votre jeton d'authentification dans votre demande de support !L'échange d'emails n'est pas un support de communication sécurisé et certaines APIs donnent accès à des données sensibles. Le cas échéant, nous serons obligé de supprimer votre jeton, et vous devrez faire une nouvelle demande.
 
-## Co-construire API-Entreprise
+## Co-construire le service
 
+<details class="fold">
+<summary>
 ### Signaler un bug
+</summary>
+</details>
 
+<details class="fold">
+<summary>
 ### Participer à un atelier utilisateur
+</summary>
+</details>
 
+<details class="fold">
+<summary>
 ### Devenir fournisseur de données
+</summary>
+</details>
 
+<details class="fold">
+<summary>
 ### Les prochains évènements
+</summary>
+</details>
 
+<details class="fold">
+<summary>
 ### Nous rejoindre
+</summary>
+</details>
