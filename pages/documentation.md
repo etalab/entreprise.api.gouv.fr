@@ -8,6 +8,9 @@ class: documentation
 
 \[Module du questionnaire : https://whimsical.com/TL89xgeqHhWEPPeZQrgGXG]
 
+<a class="tpl-button tpl-button--alternate" href="lien">Lien</a>
+<a class="tpl-button tpl-button--primary" href="lien">Lien</a>
+
 <details class="fold">
 <summary>
 ### Les cas d’usage d’API Entreprise

@@ -1,4 +1,14 @@
 .documentation {
+  a.tpl-button--alternate {
+    background-color: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-s);
+  }
+
   .tpl-documentation__links {
     background-color: transparent;
     box-shadow: none;
