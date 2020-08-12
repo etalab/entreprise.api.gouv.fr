@@ -159,7 +159,7 @@ Utiliser le service API Entreprise, c'est aussi bénéficier des engagements de 
 
 <details class="fold">
 <summary>
-### 🔐 Un accès sous habilitation et sous conditions
+### Un accès sous habilitation et sous conditions 🔐 
 </summary>
 
 #### Une habilitation instruite par la DINUM
@@ -198,14 +198,14 @@ Pour comprendre en détail les éléments techniques nécessaires consulter la r
 
 <details class="fold">
 <summary>
-### Qu’est-ce qu’une API ?
+### Qu’est-ce qu’une API ? 🤖
 </summary>
 
 Une API permet d’agir sur des ressources contenues dans un autre système d’informations, sans soi-même avoir la main sur ce système d’information.
 
-Dans le cas qui nous occupe, les ressources sont des informations sur les entreprises, et l’action est une consultation.
+Dans le cas d'API Entreprise, les ressources sont des informations sur les entreprises et les associations, et l’action est une consultation.
 
-![](../assets/images/documentation/fonctionnement.png)
+![](../assets/images/documentation/schema-fonctionnement-api-entreprise.png)
 
 #### Comment se déroule un appel à l’API ?
 
@@ -302,7 +302,7 @@ Pour une information détaillée par endpoint, reportez-vous au catalogue de don
 
 <details class="fold">
 <summary>
-### Qu'est qu'un token ?
+### Qu'est qu'un token ? 🔑
 </summary>
 
 #### Le token, une clé unique et privée
@@ -331,7 +331,7 @@ Le renouvellement d’un token est très facile et rapide. C’est pourquoi, si 
 
 <details class="fold">
 <summary>
-### Les fondamentaux à mettre en place avec l'équipe technique
+### Les fondamentaux à mettre en place avec l'équipe technique 🧰
 </summary>
 
 Vous travaillez avec la DSI de votre administration ou avec un éditeur de logiciel, voici la liste des fondamentaux que votre équipe technique doit être en mesure de mettre en place pour un bon fonctionnement de l'API Entreprise : 
@@ -352,7 +352,7 @@ Vous travaillez avec la DSI de votre administration ou avec un éditeur de logic
 
 <details class="fold">
 <summary>
-### Prévoir les incidents et la résilience de mon service
+### Prévoir les incidents et la résilience de mon service 🧑‍🚒
 </summary>
 
 Il se peut qu’un incident survienne chez un fournisseur de données. Votre logiciel doit vous permettre de fonctionner de manière dégradée :
@@ -368,7 +368,7 @@ Il se peut qu’un incident survienne chez un fournisseur de données. Votre log
 
 <details class="fold">
 <summary>
-### Effectuer ma demande d’habilitation
+### Effectuer ma demande d’habilitation 
 </summary>
 
 <a id="DemandeDhabilitation"></a>
