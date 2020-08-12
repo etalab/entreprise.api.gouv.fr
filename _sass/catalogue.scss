@@ -7,11 +7,16 @@
   
   .tpl-form__group {
     flex-direction: row;
-    flex-wrap: wrap;
   }
 
   #catalogue-search {
     padding: 0 var(--spacing-s) 0 var(--spacing-xl);
+  }
+  
+  @media (max-width: 800px) {
+    .tpl-form__group {
+      flex-wrap: wrap;
+    }
   }
 }
 
