@@ -28,9 +28,7 @@ Vous pouvez mettre en place une aide à la saisie pour vos usagers, avec les end
 {:.tpl-notification}
 La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
 
-> L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \[document Unique de Marché Européen](<> https://dume.chorus-pro.gouv.fr/#/>). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs :
->
-> <video controls width="250">\
+> L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs 
 
 ⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
 Par exemple, l’endpoint `entreprise` qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
@@ -52,7 +50,9 @@ L'API entreprise sert aux agents habilités à récupérer automatiquement des i
 
 </details>
 
-\[BOUTON VERS CAS USAGE]
+<center>
+<a class="tpl-button tpl-button--primary" href="../cas_usage/">Découvrir tous les cas d'usage</a>
+</center>
 
 </details>
 
@@ -60,6 +60,7 @@ L'API entreprise sert aux agents habilités à récupérer automatiquement des i
 <summary>
 ### Le service : une API, plusieurs données et plusieurs fournisseurs
 </summary>
+<br>
 #### Les qualités du service
 
 **API Entreprise démarche les administrations et fait les différentes demandes d’accès.** Si votre demande d'habilitation est validée, vous avez une seule clé d’accès sécurisée. De plus, API Entreprise agrège et vous restitue les connaissances techniques et métiers.
@@ -125,7 +126,7 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 
 #### Une documentation technique et métier par endpoint
 
-Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](https://entreprise.api.gouv.fr/catalogue/). Une barre de recherche est à votre disposition pour filtrer les données :
+Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/). Une barre de recherche est à votre disposition pour filtrer les données :
 
 ![](../assets/images/documentation/interface-barre de recherche.png)
 
@@ -136,6 +137,10 @@ Chaque endpoint est présenté de façon synthétique :
 Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :
 
 ![](../assets/images/documentation/interface-onglet-documentation.png)
+
+<center>
+<a class="tpl-button tpl-button--primary" href="../catalogue/">Parcourir le catalogue des données</a>
+</center>
 
 #### Nos engagements
 
@@ -156,13 +161,15 @@ Utiliser le service API Entreprise, c'est aussi bénéficier des engagements de 
 
 <details class="fold">
 <summary>
-### Un accès sous habilitation et conditions
+### 🔐 Un accès sous habilitation et sous conditions
 </summary>
-L'accès à l'API entreprise est réservé aux acteurs publics investis d’une mission de service public (les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.).
 
+#### Une habilitation instruite par la DINUM
+
+Tout accès à l'API Entreprise se fait sous réserve d'en [avoir obtenu l’habilitation](#effectuer-ma-demande-dhabilitation/anticiper-votre-demande).
+
+L'API entreprise est **réservée aux acteurs publics investis d’une mission de service public** : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.
 Leurs prestataires privés peuvent être destinataires des informations techniques permettant l'usage de l'API mais en aucun cas des données elles-même.
-
-Enfin, tout accès à l'API Entreprise se fait suite à une habilitation.
 
 #### S'engager à ne pas diffuser les données reçues
 
@@ -178,7 +185,7 @@ La plupart des données disponibles sur API Entreprise sont protégées par des 
 
 Entre autres, le service ne doit pas permettre à quiconque n’ayant pas un niveau d’authentification suffisant, d’accéder à des données. Leur accès est restreint aux seuls les agents dûment habilités, dont les requêtes sont tracées pour une durée de 36 mois.
 
-#### Un équipement technique minimal nécessaire
+#### Avoir un équipement technique minimal
 
 Vous êtes techniquement en mesure de pouvoir démarrer avec API Entreprise si :
 
@@ -292,13 +299,13 @@ Dans ce cas précis, les données étant toutes renvoyées au format JSON, les c
 ```
 
 Pour une information détaillée par endpoint, reportez-vous au catalogue de données.
+
 </details>
 
 <details class="fold">
 <summary>
 ### Qu'est qu'un token ?
 </summary>
-
 
 #### Le token, une clé unique et privée
 
@@ -321,6 +328,7 @@ La durée de vie d’un token est limitée, sa date d’expiration est indiqué 
 Le token peut également être supprimé s’il a été diffusé par mégarde.
 
 Le renouvellement d’un token est très facile et rapide. C’est pourquoi, si vous avez divulguer votre token par erreur, n’hésitez pas à écrire rapidement au support. Pour en savoir plus le renouvellement d’un token, consultez la rubrique“renouveler un token en fin de vie”.
+
 </details>
 
 <details class="fold">
@@ -365,6 +373,8 @@ Il se peut qu’un incident survienne chez un fournisseur de données. Votre log
 ### Effectuer ma demande d’habilitation
 </summary>
 
+<a id="DemandeDhabilitation"></a>
+
 #### Anticiper votre demande
 
 Vous êtes désormais convaincus et prêts à utiliser le service API Entreprise, il vous faut désormais faire une demande d'accès. Vous trouverez ici la liste des informations qui vont vous être demandé : 
@@ -377,7 +387,7 @@ Vous êtes désormais convaincus et prêts à utiliser le service API Entreprise
 
   Une demande d’accès ne peut pas couvrir plusieurs contextes métiers différents et doit être adaptée au public utilisateur final. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
-  ####### Exemple de la Région Occitanie :
+  \####### Exemple de la Région Occitanie :
 
   Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
 
@@ -392,7 +402,7 @@ Vous êtes désormais convaincus et prêts à utiliser le service API Entreprise
 * l**es coordonnées de votre délégué·e à la protection des données** (DPD) ;
   Le DPD est la personne qui s'assure que l'organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C'est généralement une personne appartenant à l'organisme demandeur.
 
-  ####### Je n’ai pas de DPD, que faire ?
+  \####### Je n’ai pas de DPD, que faire ?
 
   Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles « sensibles ». Ce qui est au cour de l’usage d’API Entreprise.
 * **les coordonnées du contact métier** ;
@@ -503,6 +513,7 @@ API Entreprise est un service disponible sous habilitation, car il permet aux ut
 Pour mettre à disposition les données API Entreprise depuis un navigateur, il vous faut mettre en place un système de proxy pour ne pas appeler directement nos APIs.
 
 ##### Construire en compatibilité ascendante
+
 </details>
 
 <details class="fold">
@@ -636,7 +647,7 @@ Pour améliorer le temps de traitement de votre demande, il est important de nou
 * l'adresse email sous laquelle est enregistré votre jeton d'authentification ;
 * Toute autre information, screenshot, etc détaillant l'erreur rencontrée est évidemment bienvenue.
 
-⚠️ Attention de ne pas partager votre jeton d'authentification dans votre demande de support !L'échange d'emails n'est pas un support de communication sécurisé et certaines APIs donnent accès à des données sensibles. Le cas échéant, nous serons obligé de supprimer votre jeton, et vous devrez faire une nouvelle demande.
+⚠️ Attention de ne pas partager votre jeton d'authentification dans votre demande de support ! L'échange d'emails n'est pas un support de communication sécurisé et certaines APIs donnent accès à des données sensibles. Le cas échéant, nous serons obligé de supprimer votre jeton, et vous devrez faire une nouvelle demande.
 
 ## Co-construire le service
 
