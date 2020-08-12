@@ -117,15 +117,22 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Brevets, modèles et marques déposés](https://doc.entreprise.api.gouv.fr/?json#extraits-courts-inpi){:target="_blank"}                   |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
 
+<br>
+<br>
+
 #### Une documentation technique et métier par endpoint
 
 Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](https://entreprise.api.gouv.fr/catalogue/). Une barre de recherche est à votre disposition pour filtrer les données :
 
-![Barre de recherche](/assets/images/documentation/interface-barre de recherche.png)
+![](../assets/images/documentation/interface-barre de recherche.png)
 
 Chaque endpoint est présenté de façon synthétique :
 
+![](../assets/images/documentation/interface-endpoint-presentation.png)
+
 Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :
+
+![](../assets/images/documentation/interface-onglet-documentation.png)
 
 #### Nos engagements
 
