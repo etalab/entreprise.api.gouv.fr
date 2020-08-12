@@ -22,12 +22,25 @@
     background-color: var(--white);
     border: 1px solid var(--lighter-grey);
     border-radius: var(--border-radius-default);
-    margin-bottom: var(--spacing-m);
-    padding: var(--spacing-m);
+    margin-bottom: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-s);
 
     summary {
       h2, h3, h4, h5, h6 {
         display: inline;
+        font-weight: 400;
+      }
+
+      h3 {
+        font-size: 1.25em;
+      }
+    }
+
+    &[open] {
+      summary {
+        h2, h3, h4, h5, h6 {
+          font-weight: 700;
+        }
       }
     }
   }
