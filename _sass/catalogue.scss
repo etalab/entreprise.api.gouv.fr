@@ -7,6 +7,7 @@
   
   .tpl-form__group {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   #catalogue-search {
@@ -104,6 +105,7 @@
   .documentation-card__header code {
     margin-bottom: 0.4em;
     margin-left: var(--spacing-xs);
+    word-wrap: anywhere;
   }
 
   .endpoint-scope {
@@ -124,6 +126,10 @@
     stroke: var(--white);
     height: var(--spacing-m);
     width: var(--spacing-m);
+  }
+
+  .description {
+    flex-wrap: wrap;
   }
 
   .description ul {
@@ -568,6 +574,11 @@
   @media (max-width: 800px) {
     .tpl-documentation__sidebar {
       display: none;
+    }
+
+    .description .tpl-description-list {
+      flex-basis: auto;
+      flex-shrink: 1;
     }
   }
 }
