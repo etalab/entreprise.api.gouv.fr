@@ -364,7 +364,7 @@ Il se peut qu’un incident survienne chez un fournisseur de données. Votre log
 
 </details>
 
-## Étape 3 : Mes débuts avec API Entreprise
+## Étape 3 : Démarrer avec API Entreprise
 
 <details class="fold">
 <summary>
