@@ -209,7 +209,7 @@ Dans le cas qui nous occupe, les ressources sont des informations sur les entrep
 
 #### Comment se déroule un appel à l’API ?
 
-Voici, décrit en quelques étapes, la façon dont vous ou votre équipe technique allez faire votre demande à l’API pour accéder aux données :
+Voici, décrit en quelques étapes, la façon dont vous ou votre équipe technique allez faire votre requête à l’API pour accéder aux données :
 
 **Étape 1** : Je suis préalablement habilité, et j’ai donc accès à différentes données, regroupées par endpoint.
 
@@ -217,7 +217,11 @@ Voici, décrit en quelques étapes, la façon dont vous ou votre équipe techniq
 
 **Étape 3** : Je construis mon URL d’appel avec cet endpoint :
 
+<details class="fold">
+<summary>
 Voici les éléments qui constituent l’URL d’appel :
+</summary>
+
 
 {:.tpl-table}
 | Éléments composant la requête                                            |        Exemples                                             |
@@ -227,18 +231,14 @@ Voici les éléments qui constituent l’URL d’appel :
 |**Nom de la donnée recherchée** <br>(ou *endpoint*)|`/attestation_fiscale_dgfip`|
 |**Identité de l'établissement concerné** <br>(souvent SIREN ou SIRET)|`/SIRENouSIRETdeL'Etablissement`|
 |**Votre jeton d'accès**|`?token=JetonD'Habilitation`|
-|**Cadre de la requête** <br>*Par exemple : aides publiques, marchés publics ou gestion d'un référentiel tiers utilisé pour tel type d'application.*|`&context=CadreDeLaRequête`|
-|**Bénéficiaire de l'appel** <br>(siret de l'administration destinatrice des données)|`&recipient=BénéficaireDeL'Appel`|
-|**La raison de l'appel** <br> ou l'indentifiant de la procédure <br>(numéro de marché publique, nom de la procédure, description courte (< 50 caractères))|`&object=RaisonDeL'AppelOuIdentifiant`|
-|*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira en cas d’utilisation anormal de l’API pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée. |`?user_id=IdentifiantDeL'UtilisateurPhysique`|
+|**Des paramètres de traçabilité**|`&context=CadreDeLaRequête`<br> `&recipientBénéficiareDeL'Appel=`<br> `&object=RaisonDeL'AppelOuIdentifiant`<br> `?user_id=IdentifiantDeL'UtilisateurPhysique`<br> et autres selon les endpoints ...|
 
 **Tous ces éléments mis bout à bout constituent une requête HTTP qui appelle l'API :** 
 
 ```
 https://entreprise.api.gouv.fr/v2/attestation_fiscales_dgfip/SirenDeL’Entreprise?token=JetonD’Habilitation&user_id=IdentifiantDeL’UtilisateurPhysique&context=CadreDeLaRequête&recipient=BénéficaireDeL’Appel&object=RaisonDeL’AppelOuIdentifiant
 ```
-
-En blanc, les éléments que je complète. Pour une explication détaillée par endpoints, je me reporte au catalogue des données.
+</details>
 
 **Étape 4** : Je passe mon appel :
 
