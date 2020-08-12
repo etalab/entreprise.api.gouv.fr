@@ -96,7 +96,7 @@ providers_aliases:
 empty_array: []
 
 catalogue_types: 
-  - 'De tout type'
+  - 'Toutes les catégories'
   - 'Informations générales'
   - 'Informations financières'
   - 'Attestations sociales et fiscales'
