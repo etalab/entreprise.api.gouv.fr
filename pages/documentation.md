@@ -28,10 +28,6 @@ La création d’un formulaire pré-rempli est faite pour assister l’usager, c
 > L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur \[document Unique de Marché Européen](<> https://dume.chorus-pro.gouv.fr/#/>). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs :
 >
 > <video controls width="250">\
-> <source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"\
-> type="video/mp4">\
-> Nous sommes désolés, votre navigateur ne supporte pas les vidéos.\
-> </video>
 
 ⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
 Par exemple, l’endpoint `entreprise` qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
@@ -125,25 +121,26 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 
 Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](https://entreprise.api.gouv.fr/catalogue/). Une barre de recherche est à votre disposition pour filtrer les données :
 
+![Barre de recherche](/assets/images/documentation/interface-barre de recherche.png)
+
 Chaque endpoint est présenté de façon synthétique :
 
 Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :
 
 #### Nos engagements
 
-* L’engagement de disponibilité est de 99,5 %
+Utiliser le service API Entreprise, c'est aussi bénéficier des engagements de la Direction du Numérique : 
 
-  Néanmoins, API Entreprise agrège de nombreux fournisseurs de données et est dépendante de leurs disponibilités.
-
+* **L’engagement de disponibilité est de 99,5 %.**
   La disponibilité des données est consultable en temps réel pour chaque endpoint dans le catalogue des donnée. Une historisation est aussi publiée, ainsi que les rapports d’incidents et les perspectives de résolution. Par ailleurs, les informations sur votre consommation sont disponibles dans votre tableau de bord.
 
-⚠️ API Entreprise ne porte aucune responsabilité s’agissant de la qualité ou du contenu intrinsèque des données.Nous ne modifions pas les données à l’exception d’une standardisation contextuelle limitée (minuscule vers majuscule, format de date, nombre d’espaces).
-
-* API Entreprise s’engage à proposer une assistance technique et fonctionnelle permettant aux utilisateurs de définir et de mettre en œuvre au mieux l’usage qu’ils réalisent du Service.
-* L’utilisation d’API Entreprise est gratuite.
-  Les coûts d’investissements et de fonctionnement sont pris en charge par la DINUM. Les coûts de raccordement à API Entreprise vous incombent.
-* API Entreprise s’engage à respecter le cadre légal,
-  notamment ce qui concerne la protection des données et le respect des règles de confidentialité.
+  {:.tpl-notification}
+  Toutefois, ce service agrégeant de nombreux fournisseurs de données et étant donc dépendant de leurs disponibilités, API Entreprise ne porte donc aucune responsabilité s’agissant de la qualité ou du contenu intrinsèque des données. Par ailleurs, le service ne modifie pas les données à l’exception d’une standardisation contextuelle limitée (minuscule vers majuscule, format de date, nombre d’espaces).
+* **L’utilisation d’API Entreprise est gratuite.**
+  Les coûts d’investissements et de fonctionnement sont pris en charge par la DINUM. En revanche, les coûts de raccordement à API Entreprise vous incombent.
+* **API Entreprise propose une assistance technique et fonctionnelle** permettant aux utilisateurs de définir et de mettre en œuvre au mieux leur projet.
+* **API Entreprise respecte le cadre légal.**
+  Le service s'engage à respecter en totalité les conditions de protection des données et les règles de confidentialité.
 
 </details>
 <details class="fold">
