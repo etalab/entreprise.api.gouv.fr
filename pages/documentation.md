@@ -183,13 +183,13 @@ Pour comprendre en détail les éléments techniques nécessaires consulter la r
 </details>
 # 2 - Les prérequis techniques avant d’aller plus loin
 
-## 🖌Qu’est-ce qu’une API ?
+## 🖌 Qu’est-ce qu’une API ?
 
 Une API permet d’agir sur des ressources contenues dans un autre système d’informations, sans soi-même avoir la main sur ce système d’information.
 
 Dans le cas qui nous occupe, les ressources sont des informations sur les entreprises, et l’action est une consultation.
 
-![](https://lh4.googleusercontent.com/MHpjOyS3h4dpsdFGtSn5WZpdRrthANJAq5n_aSYLPvWLDFvUnidsIZxzLAA2-5C1NNf2jahJvEBu1rwoWL66bVLKxpBReR-RPWEWzs9G6ZDUWBgx9SskXiZXKb1QlFaNMQ)
+![](../assets/images/documentation/fonctionnement.png)
 
 ### Comment se déroule un appel à l’API ?
 
