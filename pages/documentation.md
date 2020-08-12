@@ -60,7 +60,6 @@ L'API entreprise sert aux agents habilités à récupérer automatiquement des i
 <summary>
 ### Le service : une API, plusieurs données et plusieurs fournisseurs
 </summary>
-<br>
 #### Les qualités du service
 
 **API Entreprise démarche les administrations et fait les différentes demandes d’accès.** Si votre demande d'habilitation est validée, vous avez une seule clé d’accès sécurisée. De plus, API Entreprise agrège et vous restitue les connaissances techniques et métiers.
@@ -121,7 +120,6 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Brevets, modèles et marques déposés](https://doc.entreprise.api.gouv.fr/?json#extraits-courts-inpi){:target="_blank"}                   |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
 
-<br>
 <br>
 
 #### Une documentation technique et métier par endpoint
