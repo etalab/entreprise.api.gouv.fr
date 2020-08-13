@@ -121,8 +121,8 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 
 Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
-|-------------------|:---------------:|
-| Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/interface-barre de recherche.png)       |
+\|-------------------|:---------------:|
+| Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        !\[](../assets/images/documentation/interface-barre de recherche.png)       |
 |    |        |
 | Chaque endpoint est présenté de façon synthétique :         |       ![](../assets/images/documentation/interface-endpoint-presentation.png)      |
 |    |        |
@@ -293,25 +293,24 @@ Pour une information détaillée par endpoint, reportez-vous au [catalogue de do
 
 #### Le token, une clé unique et privée
 
-Le token est votre code secret vous permettant d’accéder à API Entreprise.
+Le token est **votre code secret** vous permettant d’accéder à API Entreprise.
 
-Si votre demande d’habilitation est validée, il vous est délivré dans votre espace personnel.
+Si votre demande d’habilitation est validée, il vous est délivré dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login).
 
-Cette clé est unique et privée ; nous nous appuyons sur un standard ouvert et normalisé de l’industrie : le Json Web Token (aka JWT) ([RFC 7519](https://tools.ietf.org/html/rfc7519)). Ce jeton est autonome et permet de transmettre de façon sécurisée les informations d'authentifications nécessaires pour utiliser l'API. Ces jetons sont vérifiés et fiables car signés numériquement avec une date d'expiration.
+**Cette clé est unique et privée** ; nous nous appuyons sur un standard ouvert et normalisé de l’industrie : le Json Web Token (aka JWT) ([RFC 7519](https://tools.ietf.org/html/rfc7519)). Ce jeton est autonome et permet de transmettre de façon sécurisée les informations d'authentifications nécessaires pour utiliser l'API. Ces jetons sont vérifiés et fiables car **signés numériquement avec une date d'expiration**.
 
 #### Ne jamais divulguer mon token
 
-⚠️ Votre token vous est propre, il ne faut pas le diffuser: c’est comme votre clé d’appartement, vous ne l’envoyez pas par la poste car il y a un risque que celle-ci soit interceptée par une personne mal intentionnée.
+⚠️ Votre token vous est propre, il ne faut pas le diffuser : c’est comme votre clé d’appartement, vous ne l’envoyez pas par la poste car il y a un risque que celle-ci soit interceptée par une personne mal intentionnée.
 
-C’est pourquoi, vous ne devez jamais copier-coller un token dans un moteur de recherche ou dans un e-mail.L’usage de votre token se fait uniquement dans votre logiciel métier sécurisé utilisé pour réaliser vos appels.
+C’est pourquoi, vous ne devez **jamais copier-coller un token dans un moteur de recherche** ou dans un e-mail.L’usage de votre token se fait uniquement dans votre logiciel métier sécurisé utilisé pour réaliser vos appels.
 
 #### Un token a une fin de vie
 
-La durée de vie d’un token est limitée, sa date d’expiration est indiqué dans votre espace personnel.
+La durée de vie d’un token est limitée, sa date d’expiration est indiqué dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login).
 
 Le token peut également être supprimé s’il a été diffusé par mégarde.
-
-Le renouvellement d’un token est très facile et rapide. C’est pourquoi, si vous avez divulguer votre token par erreur, n’hésitez pas à écrire rapidement au support. Pour en savoir plus le renouvellement d’un token, consultez la rubrique“renouveler un token en fin de vie”.
+Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](https://dashboard.entreprise.api.gouv.fr/login). Pour en savoir plus le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](../documentation/#renouveler-un-token-en-fin-de-vie).
 
 </details>
 
@@ -322,17 +321,17 @@ Le renouvellement d’un token est très facile et rapide. C’est pourquoi, si 
 
 Vous travaillez avec la DSI de votre administration ou avec un éditeur de logiciel, voici la liste des fondamentaux que votre équipe technique doit être en mesure de mettre en place pour un bon fonctionnement de l'API Entreprise : 
 
-☑️ Vérifier qu’ils peuvent prendre en charge la mise à jour des protocoles de sécurité HTTPS ;
+✅ Pouvoir prendre en charge la mise à jour des protocoles de sécurité HTTPS ;
 
-☑️ Anticiper la mise à jour du logiciel métier ;
+✅ Anticiper la mise à jour du logiciel métier ;
 
-☑️ Vérifier la version des langages. API Entreprise ne fonctionne qu’avec Java 1.7 minimum (pour la gestion des certificats de +1024 bit) ;
+✅ Avoir une version de langage suffisamment récente. API Entreprise ne fonctionne qu’avec Java 1.7 minimum (pour la gestion des certificats de +1024 bit) ;
 
-☑️ Vérifier les dispositifs d’alerte mis en place : certificat SSL ;
+✅ Avoir un dispositif d’alerte de type certificat SSL ;
 
-☑️ Firewall / White list IP
+✅ Avoir un firewall / White list IP ;
 
-☑️ Anticiper les coûts de maintenance qui s'ajouteront aux coûts de mise en place.
+✅ Anticiper les coûts de maintenance qui s'ajouteront aux coûts de mise en place.
 
 </details>
 
@@ -343,10 +342,11 @@ Vous travaillez avec la DSI de votre administration ou avec un éditeur de logic
 
 Il se peut qu’un incident survienne chez un fournisseur de données. Votre logiciel doit vous permettre de fonctionner de manière dégradée :
 
-* si vous effectuez une fonction de pré-remplissage et que le service est à l’arrêt, prévoyez un fonctionnement sans pré-remplissage.
-* en cas d’utilisation de justificatifs, prévoyez de permettre à vos usagers de pouvoir transmettre un document par eux-même.
+* si vous effectuez une fonction de pré-remplissage et que le service est à l’arrêt, **prévoyez un fonctionnement sans pré-remplissage**.
+* en cas d’utilisation de justificatifs, **prévoyez de permettre à vos usagers de pouvoir transmettre un document par eux-même**.
 
-💡 Le Dîtes-le-nous-une-fois ne doit pas bloquer les usagers en cas d’incident techniques : vos usagers préfèreront toujours vous redonner leurs informations plutôt que de ne pas pouvoir utiliser votre service.
+{:.tpl-notification}
+Le Dîtes-le-nous-une-fois ne doit pas bloquer les usagers en cas d’incident techniques : vos usagers préfèreront toujours vous redonner leurs informations plutôt que de ne pas pouvoir utiliser votre service.
 
 </details>
 
