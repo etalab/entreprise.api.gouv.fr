@@ -119,17 +119,18 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 
 #### Une documentation technique et métier par endpoint
 
-Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/). Une barre de recherche est à votre disposition pour filtrer les données :
+Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
-![](../assets/images/documentation/interface-barre de recherche.png)
 
-Chaque endpoint est présenté de façon synthétique :
 
-![](../assets/images/documentation/interface-endpoint-presentation.png)
+|-------------------|:---------------:|
+| Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/interface-barre de recherche.png)       |
+|    |        |
+| Chaque endpoint est présenté de façon synthétique :         |       ![](../assets/images/documentation/interface-endpoint-presentation.png)      |
+|    |        |
+| Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :         |       ![](../assets/images/documentation/interface-onglet-documentation.png)     |
 
-Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :
 
-![](../assets/images/documentation/interface-onglet-documentation.png)
 
 <center>
 <a class="tpl-button tpl-button--primary" href="../catalogue/">Parcourir le catalogue des données</a>
