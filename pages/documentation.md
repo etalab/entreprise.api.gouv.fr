@@ -121,16 +121,12 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 
 Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
-
-
 |-------------------|:---------------:|
 | Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/interface-barre de recherche.png)       |
 |    |        |
 | Chaque endpoint est présenté de façon synthétique :         |       ![](../assets/images/documentation/interface-endpoint-presentation.png)      |
 |    |        |
 | Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :         |       ![](../assets/images/documentation/interface-onglet-documentation.png)     |
-
-
 
 <center>
 <a class="tpl-button tpl-button--primary" href="../catalogue/">Parcourir le catalogue des données</a>
@@ -177,7 +173,7 @@ Une partie des données des endpoints `entreprise`, `etablissement` et `associat
 
 La plupart des données disponibles sur API Entreprise sont protégées par des secrets. Vous assurez donc la protection de ces données et le respect des règles de confidentialité.
 
-Entre autres, le service ne doit pas permettre à quiconque n’ayant pas un niveau d’authentification suffisant, d’accéder à des données. Leur accès est restreint aux seuls les agents dûment habilités, dont les requêtes sont tracées pour une durée de 36 mois.
+Entre autres, le service ne doit pas permettre à quiconque n’ayant pas un niveau d’authentification suffisant, d’accéder à des données. Leur accès est restreint aux seuls agents dûment habilités, dont les requêtes sont tracées pour une durée de 36 mois.
 
 #### Avoir un équipement technique minimal
 
@@ -187,7 +183,7 @@ Vous êtes techniquement en mesure de pouvoir démarrer avec API Entreprise si :
   Celui-ci doit être en mesure d’intégrer API Entreprise.
 * ou bien vous avez une direction des systèmes d’information (DSI) qui peut intégrer des APIs.
 
-Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique “Les questions à poser à mon équipe technique”.
+Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#les-fondamentaux--mettre-en-place-avec-lquipe-technique-).
 
 </details>
 ## Étape 2 : Les prérequis techniques avant d’aller plus loin
@@ -205,17 +201,14 @@ Dans le cas d'API Entreprise, les ressources sont des informations sur les entre
 
 #### Comment se déroule un appel à l’API ?
 
-Voici, décrit en quelques étapes, la façon dont vous ou votre équipe technique allez faire votre requête à l’API pour accéder aux données :
+Voici, décrit en quelques étapes, la façon dont vous ou votre équipe technique, allez faire votre requête à l’API Entreprise pour accéder aux données :
 
 **Étape 1** : Je suis préalablement habilité, et j’ai donc accès à différentes données, regroupées par endpoint.
 
-**Étape 2** : Je choisis l’endpoint qui m’intéresse ;
-
-**Étape 3** : Je construis mon URL d’appel avec cet endpoint :
+**Étape 2** : Je construis mon URL d’appel avec l'endpoint qui m'intéresse.
 
 <details class="fold">
-<summary>
-Voici les éléments qui constituent l’URL d’appel :
+<summary>###### Les éléments de l'appel, expliqués pas à pas.
 </summary>
 
 {:.tpl-table}
@@ -236,21 +229,18 @@ https://entreprise.api.gouv.fr/v2/attestation_fiscales_dgfip/SirenDeL’Entrepri
 
 </details>
 
-**Étape 4** : Je passe mon appel :
+**Étape 3** : Je passe mon appel.
 
-* À des fins de tests, au travers de mon navigateur
+* À des fins de tests, au travers de mon navigateur :
 
-Pour passer votre appel, vous pourriez écrire l’URL dans votre navigateur. La page chargée vous renverrait les données demandées.
+  Pour passer votre appel, vous pourriez écrire l’URL dans votre navigateur. La page chargée vous renverrait les données demandées.
+  C’est ce que nous vous proposons de faire ici **par le biais d’un test uniquement**.
+  ⚠️ En effet, il y a des précautions à prendre : Par défaut, l’historique de votre navigateur enregistre des informations confidentielles dont votre jeton d’accès. Or comme vous avez pu le lire dans la rubrique précédente [Un accès sous habilitation et sous conditions](../documentation/#un-accs-sous-habilitation-et-sous-conditions-), la grande majorité des données accessibles par API Entreprise sont protégées par des secrets, vous êtes donc tenus de vous assurer qu’elles ne soient pas diffusées.
+* En production, par le biais d’un logiciel métier :
 
-C’est ce que nous vous proposons de faire ici par le biais d’un test uniquement.
+  Pour veiller à la protection des données, l’ensemble des appels que vous allez réaliser en production seront passés par l’intermédiaire d’un logiciel métier.
 
-⚠️ En effet, il y a des précautions à prendre : Par défaut l’historique de votre navigateur enregistre des informations confidentielles dont votre jeton d’accès. Or comme vous avez pu le lire dans la rubrique“conditions de (non)diffusion des données”, la grande majorité des données accessibles par API Entreprise sont protégées par des secrets, vous êtes tenus de vous assurer qu’elles ne soient pas diffusées.
-
-* En production, par le biais d’un logiciel métier
-
-Pour veiller à la protection des données, l’ensemble des appels que vous allez réaliser en production seront passés par l’intermédiaire d’un logiciel métier.
-
-**Étape 5** : Je reçois une réponse comportant les données. La réponse est au format JSON, nous détaillons sa structure dans la prochaine partie.
+**Étape 4** : Je reçois une réponse comportant les données. La réponse est au format JSON, nous détaillons sa structure dans la prochaine partie.
 
 #### Comment s'interprète la réponse de l’API ?
 
@@ -260,12 +250,12 @@ Pour chaque appel effectué vous allez recevoir une réponse au format JSON. Ce 
 
 Une réponse JSON est composée de paires `“champ”` / `“valeur”` :
 
-* Le `“champ”`, ou “nom”, ou “clé”, décrit le type d’information, c’est un invariable.
-* La “valeur” est une variable, c’est justement la donnée que vous recherchez.
+* Le `“champ”`, ou `“nom”,` ou `“clé”`, décrit le type d’information, c’est un invariable.
+* La `“valeur”` est une variable, c’est justement la donnée que vous recherchez.
 
-**API Entreprise retourne trois grands types de réponses :**
+##### Trois types de réponses
 
-Le JSON vous renvoie un lien URL, permettant d’accéder à un document PDF :
+Cas n°1 : Le JSON vous renvoie un lien URL, permettant d’**accéder à un document PDF** :
 
 ```
 {
@@ -273,7 +263,7 @@ Le JSON vous renvoie un lien URL, permettant d’accéder à un document PDF :
 }
 ```
 
-Le JSON vous renvoie un lien URL, permettant d’accéder à une archive de plusieurs documents, au format ZIP:
+Cas n°2 : Le JSON vous renvoie un lien URL, permettant d’**accéder à une archive de plusieurs documents**, au format ZIP:
 
 ```
 {
@@ -281,7 +271,7 @@ Le JSON vous renvoie un lien URL, permettant d’accéder à une archive de plus
 }
 ```
 
-Le JSON vous renvoie les données, structurées :
+Cas n°3 : Le JSON vous renvoie les **données structurées** :
 
 Dans ce cas précis, les données étant toutes renvoyées au format JSON, les couples “champ” / “valeur” peuvent être regroupé dans différentes catégories.
 
@@ -292,7 +282,7 @@ Dans ce cas précis, les données étant toutes renvoyées au format JSON, les c
 }
 ```
 
-Pour une information détaillée par endpoint, reportez-vous au catalogue de données.
+Pour une information détaillée par endpoint, reportez-vous au [catalogue de données](../catalogue/).
 
 </details>
 
