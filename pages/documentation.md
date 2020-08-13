@@ -418,6 +418,9 @@ Vous devrez également **accepter nos conditions générales d’utilisation**, 
 |Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le. Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface.             |        ![](../assets/images/documentation/interface-barre de recherche.png)       |
 |En cas de besoin, vous pouvez inviter une personne à intervenir sur ce formulaire.|        ![](../assets/images/documentation/interface-barre de recherche.png)       |
 
+
+<a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise">Se rendre sur Data Pass</a>
+
 </details>
 
 <details class="fold">
@@ -650,32 +653,35 @@ Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez 
 
 </details>
 
+<br>
+
+
 - - -
+
+<br>
+
+
 
 ## Demander de l'aide
 
-API Entreprise est une petite équipe, nous nous efforçons de répondre le plus rapidement possible à vos demandes mais notre effectif s’élève à 4 ETP.\
-C’est pourquoi, nous avons mis en place depuis avril 2020 une documentation plus précise et conçue pour vous accompagner dans chaque étape de votre utilisation d’API Entreprise.
+<details class="fold">
+<summary>
+### Ouvrir un ticket
+</summary>
 
-Vous ne trouvez pas l’information adéquate ?
-
-Votre demande concerne :
-
-Ici, intégrer une suite de question qui peut les renvoyer vers la documentation, avant, en dernier recours de leurs donner le mail de support.
-
-- - -
-
-Vous n’avez pas trouvé la réponse à votre question dans notre documentation et dans lecatalogue des données ?\
-Vous pouvez nous contacter sur[support@entreprise.api.gouv.fr.](mailto:support@entreprise.api.gouv.fr)
+Vous n’avez pas trouvé la réponse à votre question dans notre documentation et dans le catalogue des données ?
+Vous pouvez nous contacter sur[ support@entreprise.api.gouv.fr.](mailto:support@entreprise.api.gouv.fr)
 
 Pour améliorer le temps de traitement de votre demande, il est important de nous fournir, au minimum, les informations suivantes :
 
 * le ou les endpoints sur lesquels le problème est rencontré ;
 * le siret, siren ou tout autre paramètre passé à la requête ;
 * l'adresse email sous laquelle est enregistré votre jeton d'authentification ;
-* Toute autre information, screenshot, etc détaillant l'erreur rencontrée est évidemment bienvenue.
+* Toute autre information, capture d'écran, etc détaillant l'erreur rencontrée est évidemment bienvenue.
 
 ⚠️ Attention de ne pas partager votre jeton d'authentification dans votre demande de support ! L'échange d'emails n'est pas un support de communication sécurisé et certaines APIs donnent accès à des données sensibles. Le cas échéant, nous serons obligé de supprimer votre jeton, et vous devrez faire une nouvelle demande.
+
+</details>
 
 ## Co-construire le service
 
