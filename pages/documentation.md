@@ -121,8 +121,8 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 
 Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
-\|-------------------|:---------------:|
-| Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        !\[](../assets/images/documentation/interface-barre de recherche.png)       |
+|-------------------|:---------------:|
+| Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/interface-barre de recherche.png)       |
 |    |        |
 | Chaque endpoint est présenté de façon synthétique :         |       ![](../assets/images/documentation/interface-endpoint-presentation.png)      |
 |    |        |
@@ -345,8 +345,8 @@ Il se peut qu’un incident survienne chez un fournisseur de données. Votre log
 * si vous effectuez une fonction de pré-remplissage et que le service est à l’arrêt, **prévoyez un fonctionnement sans pré-remplissage**.
 * en cas d’utilisation de justificatifs, **prévoyez de permettre à vos usagers de pouvoir transmettre un document par eux-même**.
 
-{:.tpl-notification}
-Le Dîtes-le-nous-une-fois ne doit pas bloquer les usagers en cas d’incident techniques : vos usagers préfèreront toujours vous redonner leurs informations plutôt que de ne pas pouvoir utiliser votre service.
+{: .tpl-notification}
+Le Dîtes-le-nous-une-fois ne doit pas bloquer les usagers en cas d’incidents techniques : vos usagers préfèreront toujours vous redonner leurs informations plutôt que de ne pas pouvoir utiliser votre service.
 
 </details>
 
@@ -354,104 +354,119 @@ Le Dîtes-le-nous-une-fois ne doit pas bloquer les usagers en cas d’incident t
 
 <details class="fold">
 <summary>
-### Effectuer ma demande d’habilitation 
+### Effectuer sa demande d’habilitation 
 </summary>
 
-<a id="DemandeDhabilitation"></a>
+La demande d'habilitation pour API Entreprise est relativement simple, et se compose de 3 étapes expliquées en détail ci-dessous : 
 
-#### Anticiper votre demande
+<details class="fold">
+<summary>
+###### Étape 0 : Anticiper sa demande 🔎
+</summary>
 
-Vous êtes désormais convaincus et prêts à utiliser le service API Entreprise, il vous faut désormais faire une demande d'accès. Vous trouverez ici la liste des informations qui vont vous être demandé : 
+Après avoir lu les étapes 1 et 2,[ L'API Entreprise correspond-elle à mon besoin ?](../documentation/#étape-1--lapi-entreprise-correspond-elle-à-mon-besoin-) et [Les prérequis techniques avant d'aller plus loin](../documentation/#étape-2--les-prérequis-techniques-avant-daller-plus-loin), vous êtes désormais prêts à faire une demande d'accès. 
+Pour vous permettre d'anticiper, ci-dessous la liste des informations nécessaires : 
 
-* **le numéro siret de votre administration**. Vous pouvez vous aider de (<https://entreprise.data.gouv.fr>) pour le retrouver.
+* **le numéro siret de votre administration**. Vous pouvez vous aider du site [entreprise.data.gouv.fr](https://entreprise.data.gouv.fr)  pour le retrouver.
 * **les données que vous souhaitez obtenir**. Une sélection vous sera proposée parmi une liste de données décrites dans la section "données délivrées".
 
-  Aidez-vous des [cas d'usage](https://entreprise.api.gouv.fr/cas_usage/) décrits pour vous assurer de votre légitimité.
-  L’ensemble des données disponibles sur API Entreprise est détaillé dans le catalogue des données. Vous pouvez filtrer les données par cas d’usage.
+  Aidez-vous des [cas d'usage](../cas_usage/) décrits pour vous assurer de votre légitimité.
+  L’ensemble des données disponibles sur API Entreprise est détaillé dans le [catalogue des données](../catalogue/). Vous pouvez filtrer les données par cas d’usage.
 
   Une demande d’accès ne peut pas couvrir plusieurs contextes métiers différents et doit être adaptée au public utilisateur final. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
-  \####### Exemple de la Région Occitanie :
-
-  Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
-
-  * Une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ;
-  * Une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ;
-  * Une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
-
-  La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.
+  > Exemple de la Région Occitanie :
+  >
+  > Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
+  >
+  > * Une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ;
+  > * Une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ;
+  > * Une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
+  >
+  > La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.
 * **le cadre administratif et légal** (texte ou délibération/décision) qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte ;
 * **les coordonnées du responsable du traitement** ;
   Le responsable du traitement des données est la personne physique ou morale qui, seul ou conjointement avec d’autres, détermine les finalités et les moyens du traitement des données à caractère personnel. Seule une personne appartenant à l'organisme demandeur peut être renseignée.
 * l**es coordonnées de votre délégué·e à la protection des données** (DPD) ;
   Le DPD est la personne qui s'assure que l'organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C'est généralement une personne appartenant à l'organisme demandeur.
 
-  \####### Je n’ai pas de DPD, que faire ?
+  Je n’ai pas de DPD, que faire ?
 
   Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles « sensibles ». Ce qui est au cour de l’usage d’API Entreprise.
 * **les coordonnées du contact métier** ;
-* l**es coordonnées du contact technique**. La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’inter-connection effective avec API Entreprise.
+* l**es coordonnées du contact technique**. La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise.
 
 L'ensemble des coordonnées renseignées seront strictement utilisées pour communiquer avec vous.
 
 Vous devrez également **accepter nos conditions générales d’utilisation**, consultables ici.
 
-#### Faire ma demande d’habilitation
+</details>
 
-Les demandes d’accès à API Entreprise sont instruites sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise). Si vous n’en disposez pas déjà, il vous sera demandé de vous créer un compte. Des demandes multiples ne nécessitent pas de création de compte supplémentaire.
+<details class="fold">
+<summary>
+###### Étape 1 : Faire sa demande d'habilitation sur Data Pass 📝
+</summary>
 
-**Étape 1** : Créer un compte
+**Création du compte Data Pass**
 
-Toute demande d'accès à l'API Entreprise nécessite la création d’un compte à l’adresse suivante :<https://auth.api.gouv.fr/users/sign-up>Avec un même compte vous pouvez réaliser plusieurs demandes, et également accéder à API Particulier.
+\|-------------------|:---------------:|
+| Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [datapass.api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme Data Pass vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe d'api.gouv.fr gérant la plateforme Data Pass, sur l'adresse que vous avez indiqué.<br>Ensuite, il vous est demandé le numéro de SIRET de votre organisation, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/creation-compte-data-pass.png)       |
 
-![](https://lh4.googleusercontent.com/zwRySXH-XJp1M6Tr0YWeN1RYfu-BLWgPyia6EV8S8VjLyueHfcMNZyyW7IbF1C0r-ffQM8aOAHtQM_ynyYK2dGmbAk91XKjjONVl62kxIuvInhQ_jty0TGC4bkTZteDb9g)
+**Remplir le formulaire d’accès**
 
-**Étape 2** : Remplir le formulaire d’accès
-
-![](https://lh6.googleusercontent.com/I-rQQBGLDFlsu28sQWDrQ14j1mHwk5UdogA2heVJKjYpttEo3ZtI02ixG76zXag29hHDdI5Lyuro9YFdVnvq-6tvh9x_NVCrczC7-_EOZZjWpY6-F9yC0YFFkio_w2Ju8Q)
-
-Remplissez[ le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez le. Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface
-
-En cas de besoin, vous pouvez inviter un personne à intervenir sur ce formulaire.
-
-**Étape 3** : Attendre la réponse d’API Entreprise
-
-Une fois votre demande validée, nous instruisons alors votre dossier puis prenons une décision d’acceptation ou de refus de la demande d’accès. Le cas échéant nous vous demanderons des précisions supplémentaires.
-
-Cette instruction peut prendre entre entre X à X jours selon l’affluence des demandes.
-
-**Étape 4** : Votre demande est acceptée, votre compte est créé.
-
-Une fois votre dossier validé, nous créons votre compte d’accès à un espace client, votre tableau de bord et vous envoyons un email de confirmation. Cet email vous indiquons conditions générales d’utilisation, et vous fournit un lien pour le choix de votre mot de passe.
-
-**Étape 5** : Se connecter et commencer à utiliser API Entreprise
-
-Une fois votre mot de passe choisi,[connectez-vous](https://dashboard.entreprise.api.gouv.fr/login) à votre espace client. Votre ou vos tokens vous y attendent. Vous pouvez commencer à les utiliser pour appeler l’API Entreprise. Le tableau de bord vous permet aussi d’avoir accès à des statistiques d’utilisation des données.
+|-------------------|:---------------:|
+|Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le. Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface.             |        ![](../assets/images/documentation/interface-barre de recherche.png)       |
+|En cas de besoin, vous pouvez inviter une personne à intervenir sur ce formulaire.|        ![](../assets/images/documentation/interface-barre de recherche.png)       |
 
 </details>
 
 <details class="fold">
 <summary>
-### Faire ma première requête (⚠️ dans le navigateur en session privée)
+###### Étape 2 : Suivre l'instruction du dossier par la DINUM ⚙️
 </summary>
 
-#### Récupérer mon token dans l’espace client
+Une fois votre demande validée, nous instruisons alors votre dossier puis prenons une décision d’acceptation ou de refus de la demande d’accès. Le cas échéant nous vous demanderons des précisions supplémentaires.
+
+Cette instruction peut prendre entre entre X à X jours selon l’affluence des demandes.
+
+Une fois votre dossier validé, API Entreprise vous crée votre compte d’accès à votre espace client, le "tableau de bord". Un mail de confirmation vous est envoyé et vous fournit un lien pour le choix de votre mot de passe. Une fois votre mot de passe choisi, [connectez-vous](https://dashboard.entreprise.api.gouv.fr/login) à votre espace client.
+
+</details>
+</details>
+
+<details class="fold">
+<summary>
+### Habilitation validée ✅, récupérer son token 🔐
+</summary>
+
+Pour récupérer vos tokens ou jetons d'accès, il faut vous rendre dans [votre espace client](https://dashboard.entreprise.api.gouv.fr/login) à l'onglet "Jetons" :
+
+![](../assets/images/documentation/recuperer-son-token.png)
+
+Tous vos jetons sont valables pour une durée de 18 mois.
+
+</details>
+
+<details class="fold">
+<summary>
+### Faire ma première requête
+</summary>
 
 #### Instruire les paramètres de traçabilité
 
-API Entreprise vous permet de faire circuler, et d’accéder à des données protégées. C’est pourquoi nous vous demandons de renseigner dans chacune de vos requêtes, non seulement un jeton d’accès, mais aussi certaines informations qualifiant votre requête ; dans un objectif de traçabilité.
+API Entreprise vous permet d’accéder à des données protégées. C’est pourquoi, dans un **objectif de traçabilité**, nous vous demandons de renseigner dans chacune de vos requêtes, non seulement un jeton d’accès, mais aussi certaines informations qualifiant votre requête.
 
-Ces paramètres sont obligatoires. Les appels ne comportant pas ces paramètres sont rejetés, et un code erreur vous est renvoyé. Aucun contrôle qualitatif de la donnée n'est effectué sur ces paramètres.
+**Ces paramètres sont obligatoires**. Les appels ne comportant pas ces paramètres sont rejetés, et un code erreur vous est renvoyé. Aucun contrôle qualitatif de la donnée n'est effectué sur ces paramètres.
 
-Pour chaque endpoint, nous précisons dans le catalogue des données les paramètres obligatoires.
+Pour chaque endpoint, nous précisons dans le [catalogue des données](../catalogue/) les paramètres obligatoires.
 
 {:.tpl-table}
 | Paramètres obligatoires                                            |      Informations à renseigner                                           |
 |:----------------------------------------------------------:|-----------------------------------------|
-|`&context=CadreDeLaRequête`|**Cadre de la requête** <br>*Par exemple : aides publiques, marchés publics ou gestion d'un référentiel tiers utilisé pour tel type d'application.*
+|`&context=CadreDeLaRequête`|**Cadre de la requête** <br>Par exemple : aides publiques, marchés publics ou gestion d'un référentiel tiers utilisé pour tel type d'application*.*
 |`&recipient=BénéficaireDeL'Appel`|**Bénéficiaire de l'appel** <br>(siret de l'administration destinatrice des données)
-|`&object=RaisonDeL'AppelOuIdentifiant`|**La raison de l'appel** <br> ou l'identifiant de la procédure <br>(numéro de marché publique, nom de la procédure, description courte (< 50 caractères))
-|`?user_id=IdentifiantDeL'UtilisateurPhysique`|*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira en cas d’utilisation anormal de l’API pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée. 
+|`&object= RaisonDeL'AppelOuIdentifiant`|**La raison de l'appel** <br> ou l'identifiant de la procédure <br>(numéro de marché publique, nom de la procédure, description courte (< 50 caractères))
+|`?user_id= IdentifiantDeL'UtilisateurPhysique`|*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira en cas d’utilisation anormal de l’API pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée. 
 
 #### Voir ma première trace d’appel dans le tableau de bord
 
@@ -462,41 +477,36 @@ Pour chaque endpoint, nous précisons dans le catalogue des données les paramè
 ### Intégrer dans les logiciels métiers
 </summary>
 
-##### Comment faire mes appels de traitement de masse ?
+#### Respecter la volumétrie
 
-Il est de plus souhaitable que vous fassiez vos batch automatiques la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.\
-Vous devez vous assurer de respecter la volumétrie, et donc de temporiser vos appels sous la limite décrite ci-après :
+Sur API Entreprise, vous avez le droit à **2000 requêtes par tranche de 10 minutes par IP** interrogeant nos services.
 
-<a id="RespecterLaVolumetrie"></a>
-
-##### Respecter la volumétrie (quotas, nombre d’appels autorisés)
-
-Sur API Entreprise, vous avez le droit à 2000 requêtes par tranche de 10 minutes par IP interrogeant nos services.
-
-Au delà de ce taux votre IP sera bannie temporairement de nos serveurs. Les appels depuis une IP bannie ne renvoient pas de codes http, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil . Si par mégarde vous vous retrouviez dans cette situation, adressez-nous un email [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)
+**Au delà de ce taux votre IP sera bannie** temporairement de nos serveurs. Les appels depuis une IP bannie ne renvoient pas de codes http, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil. Si par mégarde vous vous retrouviez dans cette situation, adressez-nous un email [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)
 
 Si vous avez besoin de plus de volumétrie, veuillez également nous contacter, nous étudierons votre demande et si la situation s'y prête, nous whitelisterons votre / vos IPs pour éviter qu'elles ne se fassent bannir.
 
-##### Configurer le temps maximal d’attente de la réponse ou timeout
+Pour les appels de traitement de masse, il est souhaitable que vous fassiez vos batchs automatiques la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.
 
-Letimeout est le temps d'attente maximal de réponse à une requête. Pour chaque endpoint, nous vous indiquons le timeout idéal dans le catalogue de donnée.
+#### Configurer le timeout
 
-Le timout est un outil important qui permet de ne pas immobiliser votre logiciel en le laissant bloqué sur une appel sans réponse.
+Le timeout est le temps d'attente maximal de réponse à une requête. Pour chaque endpoint, nous vous indiquons le timeout idéal dans le [catalogue de donnée](../catalogue/).
 
-De façon générale, nous vous recommandons un timeout:
+Le timout est un outil important qui permet de ne pas immobiliser votre logiciel en le laissant bloqué sur un appel sans réponse.
 
-* de 5 secondes pour les appels de données structurées JSON
-* de 12 secondes pour les appels retournant un PDF ou un ZIP.
+De façon générale, nous vous recommandons un timeout :
+
+* de **5 secondes** pour les appels de données structurées JSON ;
+* de **12 secondes** pour les appels retournant un PDF ou un ZIP.
 
 De même, pour ne pas immobiliser nos serveurs, nous attendons les réponses de nos fournisseurs un maximum de 10 secondes avant de vous les retransmettre. Si ce délai d’attente est dépassé un code erreur HTTP 504 vous sera renvoyé.
 
-##### Les requêtes multi-origines (CORS -Cross Origin Ressource Sharing) ne sont pas autorisées
+#### Les requêtes multi-origines non-autorisées
 
-API Entreprise est un service disponible sous habilitation, car il permet aux utilisateurs d'obtenir des données souvent protégées par des secrets. Nous ne pouvons donc pas autoriser le CORS qui vous permettrait d'interroger directement API Entreprise depuis un site ou une application web. Cela impliquerait que votre token d'accès soit présent dans le code source du site web en question, et donc soit disponible au public. 
+API Entreprise étant un service mettant à disposition des données souvent protégées par des secrets, le CORS (CORS -Cross Origin Ressource Sharing) n'est pas autorisé car il permet d'interroger directement API Entreprise depuis un site ou une application web. Cela implique que le token d'accès soit présent dans le code source du site web en question, et donc soit disponible au public. 
 
-Pour mettre à disposition les données API Entreprise depuis un navigateur, il vous faut mettre en place un système de proxy pour ne pas appeler directement nos APIs.
+Pour mettre à disposition les données API Entreprise depuis un navigateur, **il vous faut mettre en place un système de proxy** pour ne pas appeler directement nos APIs.
 
-##### Construire en compatibilité ascendante
+#### Construire en compatibilité ascendante
 
 </details>
 
@@ -514,11 +524,11 @@ Pour mettre à disposition les données API Entreprise depuis un navigateur, il 
 ### Interpréter les codes HTTP
 </summary>
 
-Toute réponse de l’API comprend la réponse JSON (expliquée ci-dessus) ainsi qu’un code HTTP. Celui-ci n’est pas immédiatement lisible par un humain, il est destiné aux traitements automatiques. (source :<https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP>)
+Toute réponse de l’API Entreprise comprend une réponse JSON ainsi qu’un code HTTP. Celui-ci n’est pas immédiatement lisible par un humain, il est destiné aux traitements automatiques. **Ces codes permettent de se renseigner sur le statut de l’appel**, toutes les explications complémentaires sont indiquées dans le JSON.
 
-Ces codes permettent de se renseigner sur le statut de l’appel, toutes les explications complémentaires sont indiquées dans le JSON.
+Pour en savoir plus sur les codes HTTP, l'article de Wikipedia constitue une très bonne base explicative :  <https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP>.
 
-API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de données afin de vous en simplifier la compréhension. Pour cela, nous nous sommes appuyés sur le protocole HTTP.
+API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de données, en s'appuyant sur le protocole HTTP, afin de vous en simplifier la compréhension :
 
 ###### En cas de succès, le code HTTP commencera par 2 :
 
@@ -534,10 +544,10 @@ API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de
 | Code HTTP                                       |      Signification                                           |
 |:----------------------------------------------------------:|----------------------------------------|
 |`400` | **Mauvaise requête** – La syntaxe de votre requête est erronée.
-|`401` | **Non autorisé** – Votre token est invalide ou manquant.\
-|`403` | **Interdit** – Le serveur a compris votre requête mais refuse de l’exécuter car votre jeton ne vous donne pas accès à cette ressource.\
-|`404` | **Non trouvé** – La ressource (l'entreprise, le certificat, …) demandée n'a pas été trouvée. Cette erreur intervient par exemple lors de l’entrée d’un numéro de SIREN qui n’existe pas, ou bien lorsque l’entreprise qu’il designe est en dehors du périmètre de l’endpoint.\
-|`422` | **Entité non traitable** – Le format de la donnée passée en paramètre n'est pas accepté. Par exemple, si vous entrez 20 chiffres dans le paramètre SIREN, votre requête est automatiquement rejetée, car un SIREN fait obligatoirement 9 chiffres.\
+|`401` | **Non autorisé** – Votre token est invalide ou manquant.
+|`403` | **Interdit** – Le serveur a compris votre requête mais refuse de l’exécuter car votre jeton ne vous donne pas accès à cette ressource.
+|`404` | **Non trouvé** – La ressource (l'entreprise, le certificat, …) demandée n'a pas été trouvée. Cette erreur intervient par exemple lors de l’entrée d’un numéro de SIREN qui n’existe pas, ou bien lorsque l’entreprise qu’il designe est en dehors du périmètre de l’endpoint.
+|`422` | **Entité non traitable** – Le format de la donnée passée en paramètre n'est pas accepté. Par exemple, si vous entrez 20 chiffres dans le paramètre SIREN, votre requête est automatiquement rejetée, car un SIREN fait obligatoirement 9 chiffres.
 |`451` | **Indisponible pour raisons légales** - ce code est spécifiquement renvoyé lorsque vous demandez les informations d’une entreprise ou d’un établissement non diffusible au travers des endpoints `entreprises` et `etablissements` de l’INSEE, sans avoir utilisé l’option d’appel spécifique. Pour en savoir plus, consultez la documentation de cet endpoint dans le catalogue de données.|
 
 ###### En cas d’échec, le code HTTP commence par 5 si l’erreur provient d’API Entreprise ou bien des fournisseurs de données :
@@ -546,8 +556,8 @@ API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de
 | Code HTTP                                       |      Signification                                           |
 |:----------------------------------------------------------:|----------------------------------------|
 |`500` | **Erreur interne à API Entreprise** – Une erreur interne du serveur d’API Entreprise est survenue. Consultez votre tableau de bord, l’historique de l’incident devrait y être affiché ; ainsi que les actions à venir.
-|`502` | **Erreur interne fournisseur** – Une erreur interne du serveur du ou des fournisseurs est survenue. Consultez votre tableau de bord, l’historique de l’incident devrait y être affiché ; ainsi que les actions à venir.\
-|`503` | **Service non disponible** – Le service est temporairement indisponible ou en maintenance. Pour connaître l’historique de disponibilité et les incidents type de l’endpoint, vous pouvez consulter le catalogue de données.\
+|`502` | **Erreur interne fournisseur** – Une erreur interne du serveur du ou des fournisseurs est survenue. Consultez votre tableau de bord, l’historique de l’incident devrait y être affiché ; ainsi que les actions à venir.
+|`503` | **Service non disponible** – Le service est temporairement indisponible ou en maintenance. Pour connaître l’historique de disponibilité et les incidents type de l’endpoint, vous pouvez consulter le catalogue de données.
 |`504` | **Intermédiaire hors délai** – Le(s) producteur(s) de données ont mis trop de temps à répondre. Notre temps d’attente, nous permettant de ne pas immobiliser le serveur sur un appel sans réponse, est fixé à 10 secondes et a été dépassé.|
 
 En cas d’erreur, le JSON vous détaille la raison de l’erreur, le champ concerné se nomme `“errors”`. Lorsqu’un endpoint retourne des données agrégées de plusieurs fournisseurs, le JSON renvoyé contient un champ `“gateway error”`. Sa valeur vaut `“true”` lorsqu'une erreur survient auprès d'au moins un fournisseur.
@@ -564,6 +574,39 @@ En cas d’erreur, le JSON vous détaille la raison de l’erreur, le champ conc
 <summary>
 ### Renouveler un token en fin de vie
 </summary>
+
+Pour des raisons de sécurité, tous les jetons émis sont valables pour **une durée de 18 mois**. Au delà de ce délai, ils ne fonctionnent plus, et votre accès à l'API Entreprise est donc totalement arrêté. 
+
+En réalité, cette situation n'est pas censée arriver car API Entreprise a mis en place une procédure simple de renouvellement de token. En voici les étapes : 
+
+<details class="fold">
+<summary>
+###### Étape 1 : Ouvrir les notifications de renouvellement 📬
+</summary>
+
+Trois mois avant l'arrivée à terme d'un jeton, vous reçevez **des notifications automatiques vous informant de l'expiration à venir de votre jeton ainsi qu'une invitation à le renouveler**. Les notifications sont envoyées régulièrement jusqu'au renouvellement (90 jours avant la date d'expiration, puis 60 jours avant, puis 30, 15, ...).
+</details>
+
+<details class="fold">
+<summary>
+###### Étape 2 : Remplir le formulaire de renouvellement 📝
+</summary>
+
+La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement Data Pass**. Si le contexte de votre utilisation d'API Entreprise n'a pas changé, **inscrivez simplement les mêmes informations** que lors de votre demande initiale. Pensez à mettre à jour les informations de contacts s'ils ont changé.
+
+{: .tpl-notification}
+Pour les utilisateurs ayant fait leur demande d'habilitation via la plateforme Data Pass, le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de la demande initiale. 
+
+</details>
+
+<details class="fold">
+<summary>
+###### Étape 3: Attendre la validation et récupérer son nouveau jeton 🔐
+</summary>
+
+Une fois la demande de renouvellement envoyé, un instructeur API Entreprise va valider le renouvellement du jeton. L'utilisateur pourra alors le récupérer dans son espace client.
+
+</details>
 </details>
 
 <details class="fold">
