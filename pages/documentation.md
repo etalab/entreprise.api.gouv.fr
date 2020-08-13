@@ -474,7 +474,7 @@ Pour chaque endpoint, nous précisons dans le [catalogue des données](../catalo
 
 <details class="fold">
 <summary>
-### Intégrer dans les logiciels métiers
+### Configurer le logiciel métier
 </summary>
 
 #### Respecter la volumétrie
@@ -487,7 +487,7 @@ Si vous avez besoin de plus de volumétrie, veuillez également nous contacter, 
 
 Pour les appels de traitement de masse, il est souhaitable que vous fassiez vos batchs automatiques la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.
 
-#### Configurer le timeout
+#### Installer un timeout
 
 Le timeout est le temps d'attente maximal de réponse à une requête. Pour chaque endpoint, nous vous indiquons le timeout idéal dans le [catalogue de donnée](../catalogue/).
 
@@ -585,6 +585,7 @@ En réalité, cette situation n'est pas censée arriver car API Entreprise a mis
 </summary>
 
 Trois mois avant l'arrivée à terme d'un jeton, vous reçevez **des notifications automatiques vous informant de l'expiration à venir de votre jeton ainsi qu'une invitation à le renouveler**. Les notifications sont envoyées régulièrement jusqu'au renouvellement (90 jours avant la date d'expiration, puis 60 jours avant, puis 30, 15, ...).
+
 </details>
 
 <details class="fold">
@@ -643,9 +644,9 @@ Une fois la demande de renouvellement envoyé, un instructeur API Entreprise va 
 ### Réagir en cas d’indisponibilité globale
 </summary>
 
-#### Vérifier ne pas avoir dépasser la volumétrie autorisée
+#### Vérifier ne pas avoir dépassé la volumétrie autorisée
 
-Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](#RespecterLaVolumetrie).
+Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](../documentation/#configurer-le-logiciel-mtier/#respecter-la-volumtrie).
 
 </details>
 
