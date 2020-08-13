@@ -6,11 +6,6 @@ class: documentation
 ---
 ## Étape 1 : L'API Entreprise correspond-elle à mon besoin ?
 
-\[Module du questionnaire : https://whimsical.com/TL89xgeqHhWEPPeZQrgGXG]
-
-<a class="tpl-button tpl-button--alternate" href="lien">Lien</a>
-<a class="tpl-button tpl-button--primary" href="lien">Lien</a>
-
 <details class="fold">
 <summary>
 ### Les cas d’usage d’API Entreprise
@@ -31,7 +26,7 @@ La création d’un formulaire pré-rempli est faite pour assister l’usager, c
 > L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs 
 
 ⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
-Par exemple, l’endpoint `entreprise` qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
+Par exemple, [l’endpoint `entreprise`](../catalogue/#entreprises) qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
 
 ℹ️ **Quel avantage à passer par API Entreprise si les données sont libres ?** API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.
 
@@ -44,8 +39,8 @@ Par exemple, l’endpoint `entreprise` qui regroupe des données ouvertes et fer
 
 L'API entreprise sert aux agents habilités à récupérer automatiquement des informations, elle donne accès : 
 
-* soit à des justificatifs, certificats, bilans, ... papier numérisés ou document PDF ;
-* soit à la donnée brute, décrite par un champ JSON, qui permet une automatisation plus performante encore.
+* soit à des justificatifs, certificats, bilans, ... papiers numérisés ou document PDF ;
+* soit à la donnée brute, décrite par un champ JSON, qui permet une automatisation plus performante encore ;
 * soit les deux.
 
 </details>
@@ -62,10 +57,10 @@ L'API entreprise sert aux agents habilités à récupérer automatiquement des i
 </summary>
 #### Les qualités du service
 
-**API Entreprise démarche les administrations et fait les différentes demandes d’accès.** Si votre demande d'habilitation est validée, vous avez une seule clé d’accès sécurisée. De plus, API Entreprise agrège et vous restitue les connaissances techniques et métiers.
+**API Entreprise démarche les administrations et fait les différentes demandes d’accès auprès des multiples fournisseurs.** Si votre demande d'habilitation est validée, vous avez une seule clé d’accès sécurisée. De plus, API Entreprise agrège et vous restitue les connaissances techniques et métiers de chaque API.
 
 {:.tpl-notification}
-Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires à votre service, auprès des différentes administrations. Cette recherche n'est pas forcément fructueuse car les organisations n'ont pas toujours un site ou un contact public pour leurs APIs ; par ailleurs, vous devez ensuite comprendre plusieurs système techniques, générer plusieurs mots de passe, collaborer avec plusieurs contacts techniques et métier.
+Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires à votre service, auprès des différentes administrations. Cette recherche n'est pas toujours fructueuse car les organisations n'ont pas toutes un site ou un contact public pour leurs APIs. Par ailleurs, vous devez ensuite comprendre plusieurs systèmes techniques, générer plusieurs mots de passe, collaborer avec plusieurs contacts techniques et métiers.
 
 #### La liste exhaustive des données
 
@@ -222,7 +217,6 @@ Voici, décrit en quelques étapes, la façon dont vous ou votre équipe techniq
 Voici les éléments qui constituent l’URL d’appel :
 </summary>
 
-
 {:.tpl-table}
 | Éléments composant la requête                                            |        Exemples                                             |
 |:----------------------------------------------------------:|:-----------------------------------------:|
@@ -238,6 +232,7 @@ Voici les éléments qui constituent l’URL d’appel :
 ```
 https://entreprise.api.gouv.fr/v2/attestation_fiscales_dgfip/SirenDeL’Entreprise?token=JetonD’Habilitation&user_id=IdentifiantDeL’UtilisateurPhysique&context=CadreDeLaRequête&recipient=BénéficaireDeL’Appel&object=RaisonDeL’AppelOuIdentifiant
 ```
+
 </details>
 
 **Étape 4** : Je passe mon appel :
@@ -678,3 +673,6 @@ Pour améliorer le temps de traitement de votre demande, il est important de nou
 ### Nous rejoindre
 </summary>
 </details>
+
+<a class="tpl-button tpl-button--alternate" href="lien">Lien</a>
+<a class="tpl-button tpl-button--primary" href="lien">Lien</a>
