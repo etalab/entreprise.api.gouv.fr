@@ -415,15 +415,15 @@ Vous devrez également **accepter nos conditions générales d’utilisation**, 
 **Création du compte Data Pass**
 
 |-------------------|:---------------:|
-| Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [datapass.api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme Data Pass vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe d'api.gouv.fr gérant la plateforme Data Pass, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png)       |
+| Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [datapass.api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme Data Pass vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe d'api.gouv.fr gérant la plateforme Data Pass, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png){:width="1000"}       |
 
-| Ensuite, il vous est demandé **le numéro de SIRET de votre organisation**, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/data-pass-creation-compte-siret.png)       |
+| Ensuite, il vous est demandé **le numéro de SIRET de votre organisation**, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/data-pass-creation-compte-siret.png){:width="1000"}        |
 
 **Remplir le formulaire d’accès**
 
 |-------------------|:---------------:|
-|Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png)       |
-|Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface.            |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png)       |
+|Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
+|Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface.            |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png){:width="1000"}        |
 
 <a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise">Se rendre sur Data Pass</a>
 
