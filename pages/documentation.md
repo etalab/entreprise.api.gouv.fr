@@ -24,6 +24,11 @@ Vous pouvez mettre en place une aide à la saisie pour vos usagers, avec les end
 La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
 
 > L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
+<video controls width="400">
+    <source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
+            type="video/mp4">
+    Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
+</video>
 
 ⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
 Par exemple, [l’endpoint `entreprise`](../catalogue/#entreprises) qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
