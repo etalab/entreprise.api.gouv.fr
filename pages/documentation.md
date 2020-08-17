@@ -24,14 +24,18 @@ Vous pouvez mettre en place une aide à la saisie pour vos usagers, avec les end
 La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
 
 > L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
-<video controls width="400">
-    <source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
-            type="video/mp4">
-    Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
+> <video controls width="400">
+
+```
+<source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
+        type="video/mp4">
+Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
+```
+
 </video>
 
 ⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
-Par exemple, [l’endpoint `entreprise`](../catalogue/#entreprises) qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
+Par exemple, [l’endpoint `entreprise`](../catalogue/#entreprises){:target="_blank"} qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
 
 ℹ️ **Quel avantage à passer par API Entreprise si les données sont libres ?** API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.
 
@@ -188,7 +192,7 @@ Vous êtes techniquement en mesure de pouvoir démarrer avec API Entreprise si :
   Celui-ci doit être en mesure d’intégrer API Entreprise.
 * ou bien vous avez une direction des systèmes d’information (DSI) qui peut intégrer des APIs.
 
-Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#les-fondamentaux--mettre-en-place-avec-lquipe-technique-).
+Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#les-fondamentaux--mettre-en-place-avec-lquipe-technique-){:target="_blank"}.
 
 </details>
 ## Étape 2 : Les prérequis techniques avant d’aller plus loin
@@ -198,7 +202,7 @@ Pour comprendre en détail les éléments techniques nécessaires consulter la r
 ### Qu’est-ce qu’une API ? 🤖
 </summary>
 
-Une API permet d’agir sur des ressources contenues dans un autre système d’informations, sans soi-même avoir la main sur ce système d’information.
+Une API permet d’**agir sur des ressources** contenues dans un autre système d’information, **sans soi-même avoir la main sur ce système d’information**.
 
 Dans le cas d'API Entreprise, les ressources sont des informations sur les entreprises et les associations, et l’action est une consultation.
 
@@ -213,7 +217,7 @@ Voici, décrit en quelques étapes, la façon dont vous ou votre équipe techniq
 **Étape 2** : Je construis mon URL d’appel avec l'endpoint qui m'intéresse.
 
 <details class="fold">
-<summary>###### Les éléments de l'appel, expliqués pas à pas.
+<summary>###### Les différents éléments de l'URL d'appel.
 </summary>
 
 {:.tpl-table}
@@ -234,7 +238,7 @@ https://entreprise.api.gouv.fr/v2/attestation_fiscales_dgfip/SirenDeL’Entrepri
 
 </details>
 
-**Étape 3** : Je passe mon appel.
+**Étape 3** : Je passe mon appel :
 
 * À des fins de tests, au travers de mon navigateur :
 
@@ -304,7 +308,7 @@ Si votre demande d’habilitation est validée, il vous est délivré dans [votr
 
 **Cette clé est unique et privée** ; nous nous appuyons sur un standard ouvert et normalisé de l’industrie : le Json Web Token (aka JWT) ([RFC 7519](https://tools.ietf.org/html/rfc7519)). Ce jeton est autonome et permet de transmettre de façon sécurisée les informations d'authentifications nécessaires pour utiliser l'API. Ces jetons sont vérifiés et fiables car **signés numériquement avec une date d'expiration**.
 
-#### Ne jamais divulguer mon token
+#### Ne jamais divulguer son token
 
 ⚠️ Votre token vous est propre, il ne faut pas le diffuser : c’est comme votre clé d’appartement, vous ne l’envoyez pas par la poste car il y a un risque que celle-ci soit interceptée par une personne mal intentionnée.
 
@@ -315,7 +319,7 @@ C’est pourquoi, vous ne devez **jamais copier-coller un token dans un moteur d
 La durée de vie d’un token est limitée, sa date d’expiration est indiqué dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login).
 
 Le token peut également être supprimé s’il a été diffusé par mégarde.
-Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](https://dashboard.entreprise.api.gouv.fr/login). Pour en savoir plus le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](../documentation/#renouveler-un-token-en-fin-de-vie).
+Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](https://dashboard.entreprise.api.gouv.fr/login). Pour en savoir plus sur le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](../documentation/#renouveler-un-token-en-fin-de-vie).
 
 </details>
 
@@ -434,13 +438,15 @@ Vous devrez également **accepter nos conditions générales d’utilisation**, 
 ###### Étape 2 : Suivre l'instruction du dossier par la DINUM ⚙️
 </summary>
 
-Une fois votre demande validée, nous instruisons alors votre dossier puis prenons une décision d’acceptation ou de refus de la demande d’accès. Le cas échéant nous vous demanderons des précisions supplémentaires.
+Une fois votre demande validée, nous instruisons alors votre dossier puis prenons une décision d’acceptation ou de refus de la demande d’accès. Cette instruction peut prendre entre entre X à X jours selon l’affluence des demandes.
 
-Cette instruction peut prendre entre entre X à X jours selon l’affluence des demandes.
-
-Une fois votre dossier validé, API Entreprise vous crée votre compte d’accès à votre espace client, le "tableau de bord". Un mail de confirmation vous est envoyé et vous fournit un lien pour le choix de votre mot de passe. Une fois votre mot de passe choisi, [connectez-vous](https://dashboard.entreprise.api.gouv.fr/login) à votre espace client.
+* ❌ Si votre dossier est refusé, des précisions supplémentaires vous seront demandée avant tout refus définitif ;
+* ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé et vous fournit un lien pour le choisir le mot de passe de votre futur espace. Une fois votre mot de passe configuré, [connectez-vous](https://dashboard.entreprise.api.gouv.fr/login) à votre tableau de bord.
 
 </details>
+
+![](../assets/images/documentation/schema-habilitation-2.png)
+
 </details>
 
 <details class="fold">
