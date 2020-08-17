@@ -23,7 +23,7 @@ Vous pouvez mettre en place une aide à la saisie pour vos usagers, avec les end
 {:.tpl-notification}
 La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
 
-> L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs 
+> L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
 
 ⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
 Par exemple, [l’endpoint `entreprise`](../catalogue/#entreprises) qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
@@ -122,11 +122,11 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
 |-------------------|:---------------:|
-| Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/interface-barre de recherche.png)       |
+| Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/catalogue-barre-de-recherche.png)       |
 |    |        |
-| Chaque endpoint est présenté de façon synthétique :         |       ![](../assets/images/documentation/interface-endpoint-presentation.png)      |
+| Chaque endpoint est présenté de façon synthétique :         |       ![](../assets/images/documentation/catalogue-endpoint-presentation.png)      |
 |    |        |
-| Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :         |       ![](../assets/images/documentation/interface-onglet-documentation.png)     |
+| Des informations complémentaires, dont le détail précis des champs délivrés par l’API sont disponibles en cliquant sur le bouton “documentation” :         |       ![](../assets/images/documentation/catalogue-documentation-presentation.png)     |
 
 <center>
 <a class="tpl-button tpl-button--primary" href="../catalogue/">Parcourir le catalogue des données</a>
@@ -409,15 +409,16 @@ Vous devrez également **accepter nos conditions générales d’utilisation**, 
 
 **Création du compte Data Pass**
 
-\|-------------------|:---------------:|
-| Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [datapass.api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme Data Pass vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe d'api.gouv.fr gérant la plateforme Data Pass, sur l'adresse que vous avez indiqué.<br>Ensuite, il vous est demandé le numéro de SIRET de votre organisation, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/creation-compte-data-pass.png)       |
+|-------------------|:---------------:|
+| Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [datapass.api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme Data Pass vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe d'api.gouv.fr gérant la plateforme Data Pass, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png)       |
+
+| Ensuite, il vous est demandé **le numéro de SIRET de votre organisation**, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/data-pass-creation-compte-siret.png)       |
 
 **Remplir le formulaire d’accès**
 
 |-------------------|:---------------:|
-|Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le. Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface.             |        ![](../assets/images/documentation/interface-barre de recherche.png)       |
-|En cas de besoin, vous pouvez inviter une personne à intervenir sur ce formulaire.|        ![](../assets/images/documentation/interface-barre de recherche.png)       |
-
+|Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png)       |
+|Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface.            |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png)       |
 
 <a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise">Se rendre sur Data Pass</a>
 
@@ -444,7 +445,7 @@ Une fois votre dossier validé, API Entreprise vous crée votre compte d’accè
 
 Pour récupérer vos tokens ou jetons d'accès, il faut vous rendre dans [votre espace client](https://dashboard.entreprise.api.gouv.fr/login) à l'onglet "Jetons" :
 
-![](../assets/images/documentation/recuperer-son-token.png)
+![](../assets/images/documentation/tableaudebord-recuperer-son-token.png)
 
 Tous vos jetons sont valables pour une durée de 18 mois.
 
@@ -610,6 +611,8 @@ Pour les utilisateurs ayant fait leur demande d'habilitation via la plateforme D
 
 Une fois la demande de renouvellement envoyé, un instructeur API Entreprise va valider le renouvellement du jeton. L'utilisateur pourra alors le récupérer dans son espace client.
 
+![](../assets/images/documentation/tableaudebord-recuperer-son-token.png)
+
 </details>
 </details>
 
@@ -655,12 +658,9 @@ Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez 
 
 <br>
 
-
 - - -
 
 <br>
-
-
 
 ## Demander de l'aide
 
