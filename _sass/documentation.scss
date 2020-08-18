@@ -44,4 +44,10 @@
       }
     }
   }
+
+  .example {
+    border-left: 3px solid var(--light-grey);
+    color: var(--dark-grey);
+    padding: var(--spacing-xs) var(--spacing-m);
+  }
 }

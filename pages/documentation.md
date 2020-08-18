@@ -6,6 +6,11 @@ class: documentation
 ---
 ## Étape 1 : L'API Entreprise correspond-elle à mon besoin ?
 
+{:.example}
+Voici un exemple
+
+### test
+
 <details class="fold">
 <summary>
 ### Les cas d’usage d’API Entreprise
