@@ -130,7 +130,7 @@ Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires
 
 Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
-|-------------------|:---------------:|
+\|-------------------|:---------------:|
 | Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/catalogue-barre-de-recherche.png)       |
 |    |        |
 | Chaque endpoint est présenté de façon synthétique :         |       ![](../assets/images/documentation/catalogue-endpoint-presentation.png)      |
@@ -688,20 +688,42 @@ Pour améliorer le temps de traitement de votre demande, il est important de nou
 
 </details>
 
-
 <details class="fold">
 <summary>
 ### Infolettre API Entreprise 📬
 </summary>
-</details>
 
+API Entreprise rédige régulièrement une infolettre faisant état des dernières évolutions. Si vous souhaitez **être au courant** des **nouveaux endpoints** en place, des **changement techniques** ou des **ajouts de fonctionnalités**, n'hésitez pas à vous inscrire à l'infolettre : 
+
+<center>
+<a class="tpl-button tpl-button--primary" href="recevoir-infolettre">Recevoir l'infolettre API Entreprise</a>
+</center>
+
+</details>
 
 ## Co-construire le service
 
 <details class="fold">
 <summary>
-### Signaler un bug 
+### Signaler une anomalie
 </summary>
+
+Vous avez repéré un bug ? une erreur ?
+
+N'hésitez pas à **nous transmettre cette information**, en précisant s'il s'agit d'une anomalie :
+
+* spécifique à **un seul endpoint**, repéré suite à un appel,
+  dans ce cas, indiquez-nous le paramètre utilisé (SIRET, SIREN ...) ;
+* **générale** à API Entreprise ;
+* concernant la **documentation,**
+  nous agrégeons beaucoup de contenus métiers et techniques, il peut arriver qu'une erreur se soit glissée, ou bien que la documentation n'ait pas été mise à jour suffisamment rapidement. Précisez-nous autant que possible l'emplacement du bug avec une capture d'écran par exemple. Indiquez-nous si possible la version de votre navigateur ;
+* concernant le **site internet**.
+
+<center>
+<a class="tpl-button tpl-button--primary" href="lien">Signaler un bug ou une erreur</a>
+
+</center>
+
 </details>
 
 <details class="fold">
