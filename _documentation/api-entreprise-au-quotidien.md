@@ -1,6 +1,7 @@
 ---
-title: API Entreprise au quotidien
+title: "Étape 4 : API Entreprise au quotidien"
 id: quotidien
+weight: 4
 panels:
   panel1:
     title: Interpréter les codes HTTP 🚦

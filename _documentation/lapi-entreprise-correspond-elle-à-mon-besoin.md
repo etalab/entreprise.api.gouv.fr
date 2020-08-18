@@ -1,6 +1,7 @@
 ---
-title: L'API Entreprise correspond-elle à mon besoin ?
+title: "Étape 1 : L'API Entreprise correspond-elle à mon besoin ?"
 id: besoins
+weight: 1
 panels:
   panel1:
     title: Les cas d’usage d’API Entreprise

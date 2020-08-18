@@ -1,6 +1,7 @@
 ---
 title: Demander une information
 id: demande-information
+weight: 5
 panels:
   panel1:
     title: Ouvrir un ticket 💬

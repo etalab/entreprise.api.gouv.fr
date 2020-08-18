@@ -1,6 +1,7 @@
 ---
 title: Co-construire le service
 id: coconstruire-service
+weight: 6
 panels:
   panel1:
     title: "Signaler un bug"
