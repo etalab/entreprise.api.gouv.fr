@@ -1,0 +1,33 @@
+---
+layout: documentation
+title: Documentation générale
+permalink: /documentation/
+class: documentation
+---
+
+{% assign panels = site.documentation | order_by: 'weight' %}
+
+<div class="tpl-documentation__content">
+  {% assign categories = site.documentation | order_by: 'weight' %}
+  {% for category in categories %}
+    <h2>Étape {{ forloop.index }} : {{ category.title }}</h2>
+    {% for panel in category.panels %}
+      <details class="fold" id="{{ panel[1].id }}">
+        <summary><h3>{{ panel[1].title }}</h3></summary>
+        {{ panel[1].content | markdownify }}
+      </details>
+    {% endfor %}
+  {% endfor %}
+</div>
+<aside class="tpl-documentation__sidebar">
+  <nav class="tpl-documentation__links">
+    {% for category in categories %}
+      <details>
+        <summary>Étape {{ forloop.index }} : {{ category.title }}</summary>
+        {% for panel in category.panels %}
+          <a class="tpl-documentation__link" href="#{{ panel[1].id }}">{{ panel[1].title }}</a>
+        {% endfor %}
+      </details>
+    {% endfor %}
+  </nav>
+</aside>

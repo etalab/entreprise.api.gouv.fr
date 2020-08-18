@@ -43,6 +43,7 @@ collections:
   use_cases:
       output: true
   catalogue:
+  documentation:
 
 # API Entreprise specific variables
 api_url: https://entreprise.api.gouv.fr/v2/

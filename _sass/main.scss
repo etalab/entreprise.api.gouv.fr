@@ -166,7 +166,8 @@ a.tpl-main-header__link:hover {
   text-decoration: none;
 }
 
-.catalogue {
+.catalogue,
+.documentation {
   .tpl-documentation__links {
     background: 0;
     box-shadow: none;
@@ -201,13 +202,13 @@ a.tpl-main-header__link:hover {
       justify-content: center;
     }
   }
-}
+  .tpl-documentation__sidebar summary,
+  .documentation .tpl-documentation__sidebar a {
+    color: var(--primary);
+    cursor: pointer;
+    font-family: var(--font-family-title);
+    font-weight: 700;
+    margin: var(--spacing-xs) var(--spacing-m);
+  } 
 
-.catalogue .tpl-documentation__sidebar summary,
-.documentation .tpl-documentation__sidebar a {
-  color: var(--primary);
-  cursor: pointer;
-  font-family: var(--font-family-title);
-  font-weight: 700;
-  margin: var(--spacing-xs) var(--spacing-m);
-} 
+}
