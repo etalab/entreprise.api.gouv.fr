@@ -3,7 +3,7 @@ title: Co-construire le service
 id: coconstruire-service
 panels:
   panel1:
-    title: "Signaler un bug "
+    title: "Signaler un bug"
     id: bug
   panel2:
     title: Devenir fournisseur de données 📂
