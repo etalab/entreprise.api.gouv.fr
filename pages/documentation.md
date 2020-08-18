@@ -363,7 +363,7 @@ Le Dîtes-le-nous-une-fois ne doit pas bloquer les usagers en cas d’incidents 
 
 <details class="fold">
 <summary>
-### Effectuer sa demande d’habilitation 
+### Effectuer sa demande d’habilitation 📝
 </summary>
 
 La demande d'habilitation pour API Entreprise est relativement simple, et se compose de 3 étapes expliquées en détail ci-dessous : 
@@ -464,7 +464,7 @@ Tous vos jetons sont valables pour une durée de 18 mois.
 
 <details class="fold">
 <summary>
-### Faire ma première requête
+### Faire ma première requête ☎️
 </summary>
 
 #### Instruire les paramètres de traçabilité
@@ -489,7 +489,7 @@ Pour chaque endpoint, nous précisons dans le [catalogue des données](../catalo
 
 <details class="fold">
 <summary>
-### Configurer le logiciel métier
+### Configurer le logiciel métier ⚙️
 </summary>
 
 #### Respecter la volumétrie
@@ -527,7 +527,7 @@ Pour mettre à disposition les données API Entreprise depuis un navigateur, **i
 
 <details class="fold">
 <summary>
-### Faire mon premier test de bout en bout
+### Faire mon premier test de bout en bout 🛫
 </summary>
 
 </details>
@@ -536,16 +536,16 @@ Pour mettre à disposition les données API Entreprise depuis un navigateur, **i
 
 <details class="fold">
 <summary>
-### Interpréter les codes HTTP
+### Interpréter les codes HTTP 🚦
 </summary>
 
 Toute réponse de l’API Entreprise comprend une réponse JSON ainsi qu’un code HTTP. Celui-ci n’est pas immédiatement lisible par un humain, il est destiné aux traitements automatiques. **Ces codes permettent de se renseigner sur le statut de l’appel**, toutes les explications complémentaires sont indiquées dans le JSON.
 
-Pour en savoir plus sur les codes HTTP, l'article de Wikipedia constitue une très bonne base explicative :  <https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP>.
+Pour en savoir plus sur les codes HTTP, l'article de Wikipedia constitue une bonne base explicative :  <https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP>.
 
 API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de données, en s'appuyant sur le protocole HTTP, afin de vous en simplifier la compréhension :
 
-###### En cas de succès, le code HTTP commencera par 2 :
+###### En cas de succès, le code HTTP commence par 2 :
 
 {:.tpl-table}
 | Code HTTP                                       |      Signification                                           |
@@ -553,7 +553,7 @@ API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de
 |`200` | **Tout va bien.**
 |`206` | **Réponse incomplète** - La requête a fonctionné mais un des fournisseurs de données a renvoyé une erreur ou une réponse incomplète. Les valeurs concernées dans le JSON contiennent le message : “Donnée indisponible”.|
 
-###### En cas d’échec, le code HTTP commence par 4 si l’erreur vient de votre côté :
+###### En cas d’échec, si l’erreur vient de votre côté, le code HTTP commence par 4 :
 
 {:.tpl-table}
 | Code HTTP                                       |      Signification                                           |
@@ -565,7 +565,7 @@ API Entreprise a harmonisé les codes erreur de l’ensemble des fournisseurs de
 |`422` | **Entité non traitable** – Le format de la donnée passée en paramètre n'est pas accepté. Par exemple, si vous entrez 20 chiffres dans le paramètre SIREN, votre requête est automatiquement rejetée, car un SIREN fait obligatoirement 9 chiffres.
 |`451` | **Indisponible pour raisons légales** - ce code est spécifiquement renvoyé lorsque vous demandez les informations d’une entreprise ou d’un établissement non diffusible au travers des endpoints `entreprises` et `etablissements` de l’INSEE, sans avoir utilisé l’option d’appel spécifique. Pour en savoir plus, consultez la documentation de cet endpoint dans le catalogue de données.|
 
-###### En cas d’échec, le code HTTP commence par 5 si l’erreur provient d’API Entreprise ou bien des fournisseurs de données :
+###### En cas d’échec, si l’erreur provient d’API Entreprise ou bien des fournisseurs de données, le code HTTP commence par 5 :
 
 {:.tpl-table}
 | Code HTTP                                       |      Signification                                           |
@@ -581,13 +581,7 @@ En cas d’erreur, le JSON vous détaille la raison de l’erreur, le champ conc
 
 <details class="fold">
 <summary>
-### Être tenu au courant des évolutions
-</summary>
-</details>
-
-<details class="fold">
-<summary>
-### Renouveler un token en fin de vie
+### Renouveler un token en fin de vie 💫
 </summary>
 
 Pour des raisons de sécurité, tous les jetons émis sont valables pour **une durée de 18 mois**. Au delà de ce délai, ils ne fonctionnent plus, et votre accès à l'API Entreprise est donc totalement arrêté. 
@@ -608,7 +602,7 @@ Trois mois avant l'arrivée à terme d'un jeton, vous reçevez **des notificatio
 ###### Étape 2 : Remplir le formulaire de renouvellement 📝
 </summary>
 
-La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement Data Pass**. Si le contexte de votre utilisation d'API Entreprise n'a pas changé, **inscrivez simplement les mêmes informations** que lors de votre demande initiale. Pensez à mettre à jour les informations de contacts s'ils ont changé.
+La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement Data Pass**. Si le contexte de votre utilisation d'API Entreprise n'a pas changé, **inscrivez simplement les mêmes informations** que lors de votre demande initiale. Pensez à mettre à jour les informations de contacts.
 
 {: .tpl-notification}
 Pour les utilisateurs ayant fait leur demande d'habilitation via la plateforme Data Pass, le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de la demande initiale. 
@@ -620,7 +614,7 @@ Pour les utilisateurs ayant fait leur demande d'habilitation via la plateforme D
 ###### Étape 3: Attendre la validation et récupérer son nouveau jeton 🔐
 </summary>
 
-Une fois la demande de renouvellement envoyé, un instructeur API Entreprise va valider le renouvellement du jeton. L'utilisateur pourra alors le récupérer dans son espace client.
+Une fois la demande de renouvellement envoyé, un instructeur API Entreprise valide le renouvellement du jeton. L'utilisateur pourra alors le récupérer dans son espace client.
 
 ![](../assets/images/documentation/tableaudebord-recuperer-son-token.png)
 
@@ -629,13 +623,30 @@ Une fois la demande de renouvellement envoyé, un instructeur API Entreprise va 
 
 <details class="fold">
 <summary>
-### Élargir le périmètre des données demandées
+### Réagir en cas d’incidents fournisseurs de données 🚧
 </summary>
 </details>
 
 <details class="fold">
 <summary>
-### S'adapter aux évolutions et montées de versions
+### Réagir en cas d’indisponibilité globale 🚧
+</summary>
+
+#### Vérifier ne pas avoir dépassé la volumétrie autorisée
+
+Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](../documentation/#configurer-le-logiciel-mtier/#respecter-la-volumtrie).
+
+</details>
+
+<details class="fold">
+<summary>
+### Élargir le périmètre des données demandées 🧩
+</summary>
+</details>
+
+<details class="fold">
+<summary>
+### S'adapter aux évolutions et montées de versions 🏗
 </summary>
 
 #### Endpoints en particulier
@@ -650,34 +661,17 @@ Une fois la demande de renouvellement envoyé, un instructeur API Entreprise va 
 
 </details>
 
-<details class="fold">
-<summary>
-### Réagir en cas d’incidents fournisseurs de données
-</summary>
-</details>
-
-<details class="fold">
-<summary>
-### Réagir en cas d’indisponibilité globale
-</summary>
-
-#### Vérifier ne pas avoir dépassé la volumétrie autorisée
-
-Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](../documentation/#configurer-le-logiciel-mtier/#respecter-la-volumtrie).
-
-</details>
-
 <br>
 
 - - -
 
 <br>
 
-## Demander de l'aide
+## Demander une information
 
 <details class="fold">
 <summary>
-### Ouvrir un ticket
+### Ouvrir un ticket 💬
 </summary>
 
 Vous n’avez pas trouvé la réponse à votre question dans notre documentation et dans le catalogue des données ?
@@ -694,35 +688,37 @@ Pour améliorer le temps de traitement de votre demande, il est important de nou
 
 </details>
 
+
+<details class="fold">
+<summary>
+### Infolettre API Entreprise 📬
+</summary>
+</details>
+
+
 ## Co-construire le service
 
 <details class="fold">
 <summary>
-### Signaler un bug
+### Signaler un bug 
 </summary>
 </details>
 
 <details class="fold">
 <summary>
-### Participer à un atelier utilisateur
+### Devenir fournisseur de données 📂
 </summary>
 </details>
 
 <details class="fold">
 <summary>
-### Devenir fournisseur de données
+### Les prochains évènements 📆
 </summary>
 </details>
 
 <details class="fold">
 <summary>
-### Les prochains évènements
-</summary>
-</details>
-
-<details class="fold">
-<summary>
-### Nous rejoindre
+### Nous rejoindre 💼
 </summary>
 </details>
 
