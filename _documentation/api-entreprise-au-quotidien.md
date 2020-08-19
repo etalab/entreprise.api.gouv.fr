@@ -1,15 +1,20 @@
 ---
+weight: 4
 title: "Étape 4 : API Entreprise au quotidien"
 id: quotidien
-weight: 4
 panels:
   panel1:
     title: Interpréter les codes HTTP 🚦
     id: http-codes
-    content: >
-      
-      Toute réponse de l’API Entreprise comprend une réponse JSON ainsi qu’un code HTTP. Celui-ci n’est pas immédiatement lisible par un humain, il est destiné aux traitements automatiques. **Ces codes permettent de se renseigner sur le statut de l’appel**, toutes les explications complémentaires sont indiquées dans le JSON.
+    content: >-
+      Toute réponse de l’API Entreprise comprend une réponse JSON ainsi qu’un
+      code HTTP. Celui-ci n’est pas immédiatement lisible par un humain, il est
+      destiné aux traitements automatiques. **Ces codes permettent de se
+      renseigner sur le statut de l’appel**, toutes les explications
+      complémentaires sont indiquées dans le JSON.
 
+
+      {:.example}
 
       Pour en savoir plus sur les codes HTTP, l'article de Wikipedia constitue une bonne base explicative :  <https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP>.
 
@@ -50,7 +55,7 @@ panels:
 
       |`422` | **Entité non traitable** – Le format de la donnée passée en paramètre n'est pas accepté. Par exemple, si vous entrez 20 chiffres dans le paramètre SIREN, votre requête est automatiquement rejetée, car un SIREN fait obligatoirement 9 chiffres.
 
-      |`451` | **Indisponible pour raisons légales** - ce code est spécifiquement renvoyé lorsque vous demandez les informations d’une entreprise ou d’un établissement non diffusible au travers des endpoints `entreprises` et `etablissements` de l’INSEE, sans avoir utilisé l’option d’appel spécifique. Pour en savoir plus, consultez la documentation de cet endpoint dans le catalogue de données.|
+      |`451` | **Indisponible pour raisons légales** - ce code est spécifiquement renvoyé lorsque vous demandez les informations d’une entreprise ou d’un établissement non diffusible au travers des endpoints `entreprises` et `etablissements` de l’INSEE, sans avoir utilisé l’option d’appel spécifique. Pour en savoir plus, [consultez la documentation de cet endpoint dans le catalogue de données](../catalogue/).|
 
 
       ###### En cas d’échec, si l’erreur provient d’API Entreprise ou bien des fournisseurs de données, le code HTTP commence par 5 :
@@ -62,11 +67,11 @@ panels:
 
       |:----------------------------------------------------------:|----------------------------------------|
 
-      |`500` | **Erreur interne à API Entreprise** – Une erreur interne du serveur d’API Entreprise est survenue. Consultez votre tableau de bord, l’historique de l’incident devrait y être affiché ; ainsi que les actions à venir.
+      |`500` | **Erreur interne à API Entreprise** – Une erreur interne du serveur d’API Entreprise est survenue. [Consultez votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login), l’historique de l’incident devrait y être affiché ; ainsi que les actions à venir.
 
-      |`502` | **Erreur interne fournisseur** – Une erreur interne du serveur du ou des fournisseurs est survenue. Consultez votre tableau de bord, l’historique de l’incident devrait y être affiché ; ainsi que les actions à venir.
+      |`502` | **Erreur interne fournisseur** – Une erreur interne du serveur du ou des fournisseurs est survenue. [Consultez votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login), l’historique de l’incident devrait y être affiché ; ainsi que les actions à venir.
 
-      |`503` | **Service non disponible** – Le service est temporairement indisponible ou en maintenance. Pour connaître l’historique de disponibilité et les incidents type de l’endpoint, vous pouvez consulter le catalogue de données.
+      |`503` | **Service non disponible** – Le service est temporairement indisponible ou en maintenance. Pour connaître l’historique de disponibilité et les incidents type de l’endpoint, vous pouvez [consulter le catalogue de données](../catalogue/).
 
       |`504` | **Intermédiaire hors délai** – Le(s) producteur(s) de données ont mis trop de temps à répondre. Notre temps d’attente, nous permettant de ne pas immobiliser le serveur sur un appel sans réponse, est fixé à 10 secondes et a été dépassé.|
 
@@ -87,7 +92,7 @@ panels:
 
       <summary>
 
-      ###### Étape 1 : Ouvrir les notifications de renouvellement 📬
+      ###### Étape 1 : Lire les notifications de renouvellement 📬
 
       </summary>
 
@@ -110,7 +115,7 @@ panels:
       La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement Data Pass**. Si le contexte de votre utilisation d'API Entreprise n'a pas changé, **inscrivez simplement les mêmes informations** que lors de votre demande initiale. Pensez à mettre à jour les informations de contacts.
 
 
-      {: .tpl-notification}
+      {:.tpl-notification.tpl--success}
 
       Pour les utilisateurs ayant fait leur demande d'habilitation via la plateforme Data Pass, le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de la demande initiale. 
 
@@ -127,7 +132,7 @@ panels:
       </summary>
 
 
-      Une fois la demande de renouvellement envoyé, un instructeur API Entreprise valide le renouvellement du jeton. L'utilisateur pourra alors le récupérer dans son espace client.
+      Une fois la demande de renouvellement envoyé, un instructeur API Entreprise valide le renouvellement du jeton. L'utilisateur pourra alors [le récupérer dans son tableau de bord](https://dashboard.entreprise.api.gouv.fr/login).
 
 
       ![](../assets/images/documentation/tableaudebord-recuperer-son-token.png)

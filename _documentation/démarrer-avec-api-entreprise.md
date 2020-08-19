@@ -17,7 +17,7 @@ panels:
       </summary>
 
 
-      Après avoir lu les étapes 1 et 2,[ L'API Entreprise correspond-elle à mon besoin ?](../documentation/#étape-1--lapi-entreprise-correspond-elle-à-mon-besoin-) et [Les prérequis techniques avant d'aller plus loin](../documentation/#étape-2--les-prérequis-techniques-avant-daller-plus-loin), vous êtes désormais prêts à faire une demande d'accès. 
+      Après avoir lu les étapes 1 et 2,[ L'API Entreprise correspond-elle à mon besoin ?](../documentation/#étape-1--lapi-entreprise-correspond-elle-à-mon-besoin-) et [Les prérequis techniques avant d'aller plus loin](../documentation/#étape-2--les-prérequis-techniques-avant-daller-plus-loin), vous êtes désormais prêt à faire une demande d'accès. 
 
       Pour vous permettre d'anticiper, ci-dessous la liste des informations nécessaires : 
 
@@ -53,20 +53,21 @@ panels:
 
       ###### Je n’ai pas de DPD, que faire ?
 
-      > </summary>
-        Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
+      ></summary>
+        Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au cœur de l’usage d’API Entreprise.
       > </details>
 
 
-      * **les coordonnées du contact métier** ;
+      * **les coordonnées du contact métier**.
 
-      * l**es coordonnées du contact technique**. La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise.
+      * **les coordonnées du contact technique**. La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise.
+
 
 
       L'ensemble des coordonnées renseignées seront strictement utilisées pour communiquer avec vous.
 
 
-      Vous devrez également **accepter nos conditions générales d’utilisation**, consultables ici.
+      Vous devrez également **[accepter nos conditions générales d’utilisation](../cgu/){:target="_blank"}**.
 
 
       </details>
@@ -122,7 +123,7 @@ panels:
 
       * ❌ Si votre dossier est refusé, des précisions supplémentaires vous seront demandée avant tout refus définitif ;
 
-      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé et vous fournit un lien pour le choisir le mot de passe de votre futur espace. Une fois votre mot de passe configuré, [connectez-vous](https://dashboard.entreprise.api.gouv.fr/login) à votre tableau de bord.
+      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé et vous fournit un lien pour choisir le mot de passe de votre futur espace personnel. Une fois votre mot de passe configuré, [connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login).
 
 
       </details>
@@ -135,11 +136,13 @@ panels:
     id: habilitation-validee
     content: >
       
-      Pour récupérer vos tokens ou jetons d'accès, il faut vous rendre dans [votre espace client](https://dashboard.entreprise.api.gouv.fr/login) à l'onglet "Jetons" :
+      Pour récupérer vos tokens ou jetons d'accès, il faut vous rendre dans [votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login) à l'onglet "Jetons" :
 
 
       ![](../assets/images/documentation/tableaudebord-recuperer-son-token.png)
 
+
+      {:.tpl-notification.tpl--danger}
 
       Tous vos jetons sont valables pour une durée de 18 mois.
   panel3:
@@ -153,10 +156,12 @@ panels:
       API Entreprise vous permet d’accéder à des données protégées. C’est pourquoi, dans un **objectif de traçabilité**, nous vous demandons de renseigner dans chacune de vos requêtes, non seulement un jeton d’accès, mais aussi certaines informations qualifiant votre requête.
 
 
-      **Ces paramètres sont obligatoires**. Les appels ne comportant pas ces paramètres sont rejetés, et un code erreur vous est renvoyé. Aucun contrôle qualitatif de la donnée n'est effectué sur ces paramètres.
+      {:.tpl-notification.tpl--danger}
+
+      **Ces paramètres sont obligatoires**. Les appels ne comportant pas ces paramètres sont rejetés, et un code erreur vous est renvoyé.
 
 
-      Pour chaque endpoint, nous précisons dans le [catalogue des données](../catalogue/) les paramètres obligatoires.
+      Pour chaque endpoint, nous précisons dans le [catalogue des données](../catalogue/) les paramètres obligatoires spécifiques, ci-dessous la liste de tous ces paramètres : 
 
 
       {:.tpl-table}
@@ -186,13 +191,15 @@ panels:
       Sur API Entreprise, vous avez le droit à **2000 requêtes par tranche de 10 minutes par IP** interrogeant nos services.
 
 
-      **Au delà de ce taux votre IP sera bannie** temporairement de nos serveurs. Les appels depuis une IP bannie ne renvoient pas de codes http, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil. Si par mégarde vous vous retrouviez dans cette situation, adressez-nous un email [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)
+      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs. Les appels depuis une IP bannie ne renvoient pas de codes http, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil. Si par mégarde vous vous retrouviez dans cette situation, adressez-nous un email à [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr)
 
 
       Si vous avez besoin de plus de volumétrie, veuillez également nous contacter, nous étudierons votre demande et si la situation s'y prête, nous whitelisterons votre / vos IPs pour éviter qu'elles ne se fassent bannir.
 
 
-      Pour les appels de traitement de masse, il est souhaitable que vous fassiez vos batchs automatiques la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.
+      {:.tpl-notification.tpl--danger}
+
+      Pour les appels de traitement de masse, il est souhaitable que vous fassiez vos **batchs automatiques la nuit ou durant les heures creuses** afin de ne pas affecter la qualité du service pour le reste des usagers.
 
 
       #### Installer un timeout

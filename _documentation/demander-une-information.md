@@ -25,7 +25,9 @@ panels:
       * Toute autre information, capture d'écran, etc détaillant l'erreur rencontrée est évidemment bienvenue.
 
 
-      ⚠️ Attention de ne pas partager votre jeton d'authentification dans votre demande de support ! L'échange d'emails n'est pas un support de communication sécurisé et certaines APIs donnent accès à des données sensibles. Le cas échéant, nous serons obligé de supprimer votre jeton, et vous devrez faire une nouvelle demande.
+      {:.tpl-notification.tpl--danger}
+
+      Attention de **ne pas partager votre jeton d'authentification dans votre demande de support** ! L'échange d'emails n'est pas un support de communication sécurisé et certaines APIs donnent accès à des données sensibles. Le cas échéant, nous serons obligés de supprimer votre jeton, et vous devrez faire une nouvelle demande.
   panel2:
     title: Infolettre API Entreprise 📬
     id: infolettre
