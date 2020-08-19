@@ -31,41 +31,13 @@ panels:
   panel2:
     title: Infolettre API Entreprise 📬
     id: infolettre
-    content: >
-      API Entreprise rédige régulièrement une infolettre faisant état des
-      dernières évolutions. Si vous souhaitez **être au courant** des **nouveaux
-      endpoints** en place, des **changements techniques** ou des **ajouts de
-      fonctionnalités**, n'hésitez pas à vous inscrire à l'infolettre : 
-
-
-      <center>
-
-      <a class="tpl-button tpl-button--primary" href="recevoir-infolettre">Recevoir l'infolettre API Entreprise</a>
-
-      </center>
-  panel3:
-    title: Signaler une anomalie
-    id: signalement-anomalie
     content: >-
-      Vous avez repéré un bug ? une erreur ?
+      API Entreprise rédige régulièrement une infolettre faisant état des
+      dernières évolutions. Lors de votre inscription à API Entreprise, vous
+      êtes automatiquement abonnés à notre infolettre. 
 
 
-      N'hésitez pas à **nous transmettre cette information**, en précisant s'il s'agit d'une anomalie :
+      {:.tpl-notification}
 
-
-      * spécifique à **un seul endpoint**, repéré suite à un appel,
-        dans ce cas, indiquez-nous le paramètre utilisé (SIRET, SIREN ...) ;
-      * **générale** à API Entreprise ;
-
-      * concernant la **documentation,**
-        nous agrégeons beaucoup de contenus métiers et techniques, il peut arriver qu'une erreur se soit glissée, ou bien que la documentation n'ait pas été mise à jour suffisamment rapidement. Précisez-nous autant que possible l'emplacement du bug avec une capture d'écran par exemple. Indiquez-nous si possible la version de votre navigateur ;
-      * concernant le **site internet**.
-
-
-      <center>
-
-      <a class="tpl-button tpl-button--primary" href="lien">Signaler un bug ou une erreur</a>
-
-
-      </center>
+      Si vous n'avez pas demandé expressement de vous désabonner, et que vous ne recevez pas nos infolettres, il se peut qu'elle soit dans vos spams. Autrement, écrivez-nous à [support@entreprise.api.gouv.fr](<mailto:support@entreprise.api.gouv.fr?subject=Non reception de l'infolettre API Entreprise>)
 ---
