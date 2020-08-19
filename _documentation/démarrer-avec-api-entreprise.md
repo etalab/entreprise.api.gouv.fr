@@ -40,16 +40,24 @@ panels:
       > {:.example}
 
 
-      * **le cadre administratif et légal** (texte ou délibération/décision) qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte ;
+      * **le cadre administratif et légal** (texte ou délibération/décision) qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte.
 
-      * **les coordonnées du responsable du traitement** ;
+      * **les coordonnées du responsable du traitement**.
         Le responsable du traitement des données est la personne physique ou morale qui, seul ou conjointement avec d’autres, détermine les finalités et les moyens du traitement des données à caractère personnel. Seule une personne appartenant à l'organisme demandeur peut être renseignée.
-      * l**es coordonnées de votre délégué·e à la protection des données** (DPD) ;
+      * **les coordonnées de votre délégué·e à la protection des données (DPD)**.
         Le DPD est la personne qui s'assure que l'organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C'est généralement une personne appartenant à l'organisme demandeur.
 
-        Je n’ai pas de DPD, que faire ?
+      > <details class="fold">
 
-        Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles « sensibles ». Ce qui est au cour de l’usage d’API Entreprise.
+      > <summary> 
+
+      ###### Je n’ai pas de DPD, que faire ?
+
+      > </summary>
+        Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
+      > </details>
+
+
       * **les coordonnées du contact métier** ;
 
       * l**es coordonnées du contact technique**. La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise.
@@ -76,18 +84,18 @@ panels:
       **Création du compte Data Pass**
 
 
-      \|-------------------|:---------------:|
+      |-------------------|:---------------:|
 
       | Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [datapass.api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme Data Pass vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe d'api.gouv.fr gérant la plateforme Data Pass, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png){:width="1000"}       |
 
 
-      \| Ensuite, il vous est demandé **le numéro de SIRET de votre organisation**, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/data-pass-creation-compte-siret.png){:width="1000"}        |
+      | Ensuite, il vous est demandé **le numéro de SIRET de votre organisation**, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/data-pass-creation-compte-siret.png){:width="1000"}        |
 
 
       **Remplir le formulaire d’accès**
 
 
-      \|-------------------|:---------------:|
+      |-------------------|:---------------:|
 
       |Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
 
