@@ -1,14 +1,13 @@
 ---
+weight: 1
 title: "Étape 1 : L'API Entreprise correspond-elle à mon besoin ?"
 id: besoins
-weight: 1
 panels:
   panel1:
     title: Les cas d’usage d’API Entreprise
     id: cas-usage
-    content: >
-      
-      API Entreprise répond à deux grands types d’usages :
+    content: >-
+      <br>API Entreprise répond à deux grands types d’usages :
 
 
       <details class="fold">
@@ -23,34 +22,36 @@ panels:
       Vous pouvez mettre en place une aide à la saisie pour vos usagers, avec les endpoints `entreprises`, `etablissements` et `associations`. L’usager renseigne son numéro de SIRET, ou toute autre valeur discriminante ; le formulaire est alors pré-rempli des champs disponibles par votre API.
 
 
-      {:.tpl-notification}
+      {:.example}
 
-      La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
+      **L'exemple du formulaire DUME**<br>
 
-
-      > L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.
-
-      > <video controls width="400">
-
-
-      ```
-
-      <source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
+      L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.<br><br><video controls width="400"><source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
               type="video/mp4">
-      Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
-
-      ```
-
-
+       Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
       </video>
 
+      {:.example}
 
-      ⚠️ **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
+
+      **Quel avantage à passer par API Entreprise si les données sont libres ?** API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.
+
+      <br>
+
+      <br>
+
+
+      {:.tpl-notification.tpl--danger}
+
+      **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
 
       Par exemple, [l’endpoint `entreprise`](../catalogue/#entreprises){:target="_blank"} qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
 
 
-      ℹ️ **Quel avantage à passer par API Entreprise si les données sont libres ?** API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.
+      {:.tpl-notification.tpl--success}
+
+      La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, rectifier ces mêmes informations sans difficultés.
+
 
 
       </details>
@@ -93,7 +94,7 @@ panels:
       **API Entreprise démarche les administrations et fait les différentes demandes d’accès auprès des multiples fournisseurs.** Si votre demande d'habilitation est validée, vous avez une seule clé d’accès sécurisée. De plus, API Entreprise agrège et vous restitue les connaissances techniques et métiers de chaque API.
 
 
-      {:.tpl-notification}
+      {:.tpl-notification.tpl--success}
 
       Sans API Entreprise, vous êtes obligé de demander toutes les APIs nécessaires à votre service, auprès des différentes administrations. Cette recherche n'est pas toujours fructueuse car les organisations n'ont pas toutes un site ou un contact public pour leurs APIs. Par ailleurs, vous devez ensuite comprendre plusieurs systèmes techniques, générer plusieurs mots de passe, collaborer avec plusieurs contacts techniques et métiers.
 

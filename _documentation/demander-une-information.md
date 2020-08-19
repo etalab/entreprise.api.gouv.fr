@@ -1,7 +1,7 @@
 ---
+weight: 5
 title: Demander une information
 id: demande-information
-weight: 5
 panels:
   panel1:
     title: Ouvrir un ticket 💬
@@ -29,10 +29,10 @@ panels:
   panel2:
     title: Infolettre API Entreprise 📬
     id: infolettre
-    content: >-
+    content: >
       API Entreprise rédige régulièrement une infolettre faisant état des
       dernières évolutions. Si vous souhaitez **être au courant** des **nouveaux
-      endpoints** en place, des **changement techniques** ou des **ajouts de
+      endpoints** en place, des **changements techniques** ou des **ajouts de
       fonctionnalités**, n'hésitez pas à vous inscrire à l'infolettre : 
 
 
@@ -41,9 +41,6 @@ panels:
       <a class="tpl-button tpl-button--primary" href="recevoir-infolettre">Recevoir l'infolettre API Entreprise</a>
 
       </center>
-
-
-      </details>
   panel3:
     title: Signaler une anomalie
     id: signalement-anomalie
