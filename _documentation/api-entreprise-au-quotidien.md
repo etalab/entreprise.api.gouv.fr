@@ -142,6 +142,14 @@ panels:
   panel3:
     title: Réagir en cas d’incidents fournisseurs de données 🚧
     id: incident-fournisseurs
+    content: >-
+      Le service API Entreprise est indisponible pour l'un des endpoints ? Il se
+      peut que ce soit dû à un incident côté fournisseurs de données.
+
+
+      1. Dans une telle situation, **la première chose à faire est de consulter la [page incident](https://dashboard.entreprise.api.gouv.fr/incidents)** et de vérifier si l'indisponibilité n'y est pas répertoriée. Toutes les indisponibilités y sont inscrites dans le délai le plus court possible et parfois même anticipées lorsque le fournisseur de donnée nous prévient à l'avance d'une indisponibilité pour maintenance.\
+         Vous pouvez **également consulter la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time)** et ainsi vérifier si l'endpoint ne fonctionnant pas est indiqué comme DOWN dans l'interface. API Entreprise a effectivement mis en place un système de test permettant de vérifier l'état de disponibilité de tous les endpoints.
+      2. Si l'incident n'est pas répertorié, deux options se présentent : l'erreur provient de votre côté, ou bien elle n'a pas encore été identifiée par API Entreprise. Après avoir pris soin de regarder qu'il ne s'agit pas de la première option, vous pouvez nous contacter sur [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
   panel4:
     title: Réagir en cas d’indisponibilité globale 🚧
     id: indisponibilite-globale
@@ -154,6 +162,17 @@ panels:
   panel5:
     title: Élargir le périmètre des données demandées 🧩
     id: elargissement-perimetre
+    content: >-
+      Vous souhaitez élargir le périmètre des endpoints auxquels vous avez accès
+      ? \
+
+      **[Il vous faut refaire une demande d'habilitation](../documentation/#demande-habilitation).**
+
+
+      Pour toute nouvelle demande, il vous faudra **justifier le cadre légal**. 
+
+
+      Si l'habilitation vous est donnée, API Entreprise vous fournira un nouveau jeton contenant le nouveau périmètre des endpoints accessibles.
   panel6:
     title: S'adapter aux évolutions et montées de versions 🏗
     id: evolutions
