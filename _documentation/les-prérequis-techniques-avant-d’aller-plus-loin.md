@@ -1,14 +1,15 @@
 ---
+weight: 2
 title: "Étape 2 : Les prérequis techniques avant d’aller plus loin"
 id: prerequis
-weight: 2
 panels:
   panel1:
     title: Qu’est-ce qu’une API ? 🤖
     id: apis
-    content: >
-      
-      Une API permet d’**agir sur des ressources** contenues dans un autre système d’information, **sans soi-même avoir la main sur ce système d’information**.
+    content: >-
+      Une API permet d’**agir sur des ressources** contenues dans un autre
+      système d’information, **sans soi-même avoir la main sur ce système
+      d’information**.
 
 
       Dans le cas d'API Entreprise, les ressources sont des informations sur les entreprises et les associations, et l’action est une consultation.
@@ -103,7 +104,7 @@ panels:
       ##### Trois types de réponses
 
 
-      Cas n°1 : Le JSON vous renvoie un lien URL, permettant d’**accéder à un document PDF** :
+      **Cas n°1** : Le JSON vous renvoie un lien URL, permettant d’**accéder à un document PDF** :
 
 
       ```
@@ -115,7 +116,7 @@ panels:
       ```
 
 
-      Cas n°2 : Le JSON vous renvoie un lien URL, permettant d’**accéder à une archive de plusieurs documents**, au format ZIP:
+      **Cas n°2** : Le JSON vous renvoie un lien URL, permettant d’**accéder à une archive de plusieurs documents**, au format ZIP:
 
 
       ```
@@ -127,7 +128,7 @@ panels:
       ```
 
 
-      Cas n°3 : Le JSON vous renvoie les **données structurées** :
+      **Cas n°3** : Le JSON vous renvoie les **données structurées** :
 
 
       Dans ce cas précis, les données étant toutes renvoyées au format JSON, les couples “champ” / “valeur” peuvent être regroupé dans différentes catégories.
@@ -147,8 +148,7 @@ panels:
   panel2:
     title: Qu'est qu'un token ? 🔑
     id: tokens
-    content: >
-      
+    content: >-
       #### Le token, une clé unique et privée
 
 
@@ -164,7 +164,9 @@ panels:
       #### Ne jamais divulguer son token
 
 
-      ⚠️ Votre token vous est propre, il ne faut pas le diffuser : c’est comme votre clé d’appartement, vous ne l’envoyez pas par la poste car il y a un risque que celle-ci soit interceptée par une personne mal intentionnée.
+      {:.tpl-notification.tpl--danger}
+
+      Votre token vous est propre, **il ne faut pas le diffuser** : c’est comme votre clé d’appartement, vous ne l’envoyez pas par la poste car il y a un risque que celle-ci soit interceptée par une personne mal intentionnée.
 
 
       C’est pourquoi, vous ne devez **jamais copier-coller un token dans un moteur de recherche** ou dans un e-mail.L’usage de votre token se fait uniquement dans votre logiciel métier sécurisé utilisé pour réaliser vos appels.
@@ -206,9 +208,9 @@ panels:
   panel4:
     title: Prévoir les incidents et la résilience de mon service 🧑‍🚒
     id: incidents
-    content: >
-      
-      Il se peut qu’un incident survienne chez un fournisseur de données. Votre logiciel doit vous permettre de fonctionner de manière dégradée :
+    content: >-
+      Il se peut qu’un incident survienne chez un fournisseur de données. Votre
+      logiciel doit vous permettre de fonctionner de manière dégradée :
 
 
       * si vous effectuez une fonction de pré-remplissage et que le service est à l’arrêt, **prévoyez un fonctionnement sans pré-remplissage**.
@@ -216,7 +218,7 @@ panels:
       * en cas d’utilisation de justificatifs, **prévoyez de permettre à vos usagers de pouvoir transmettre un document par eux-même**.
 
 
-      {: .tpl-notification}
+      {:.tpl-notification.tpl--success}
 
       Le Dîtes-le-nous-une-fois ne doit pas bloquer les usagers en cas d’incidents techniques : vos usagers préfèreront toujours vous redonner leurs informations plutôt que de ne pas pouvoir utiliser votre service.
 ---
