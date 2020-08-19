@@ -1,14 +1,12 @@
 ---
+weight: 3
 title: "Étape 3 : Démarrer avec API Entreprise"
 id: demarrer
-weight: 3
 panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
-    content: >
-      
-      La demande d'habilitation pour API Entreprise est relativement simple, et se compose de 3 étapes expliquées en détail ci-dessous : 
-
+    content: >-2
+       La demande d'habilitation pour API Entreprise est relativement simple, et se compose de 3 étapes expliquées en détail ci-dessous : 
 
       <details class="fold">
 
@@ -33,15 +31,15 @@ panels:
 
         Une demande d’accès ne peut pas couvrir plusieurs contextes métiers différents et doit être adaptée au public utilisateur final. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
-        > Exemple de la Région Occitanie :
-        >
-        > Dans le cadre de son hub entreprises, 3 demandes différentes ont été faites :
-        >
-        > * Une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ;
-        > * Une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ;
-        > * Une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
-        >
-        > La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.
+      > {:.example}
+
+      > **Exemple de la Région Occitanie :**<br><br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
+
+      > <br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
+
+      > {:.example}
+
+
       * **le cadre administratif et légal** (texte ou délibération/décision) qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte ;
 
       * **les coordonnées du responsable du traitement** ;

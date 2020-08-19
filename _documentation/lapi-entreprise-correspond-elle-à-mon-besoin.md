@@ -87,7 +87,7 @@ panels:
   panel2:
     title: "Le service : une API, plusieurs données et plusieurs fournisseurs"
     id: service
-    content: >
+    content: >-
       #### Les qualités du service
 
 
@@ -233,7 +233,7 @@ panels:
         La disponibilité des données est consultable en temps réel pour chaque endpoint dans le catalogue des donnée. Une historisation est aussi publiée, ainsi que les rapports d’incidents et les perspectives de résolution. Par ailleurs, les informations sur votre consommation sont disponibles dans votre tableau de bord.
 
         {:.tpl-notification}
-        Toutefois, ce service agrégeant de nombreux fournisseurs de données et étant donc dépendant de leurs disponibilités, API Entreprise ne porte donc aucune responsabilité s’agissant de la qualité ou du contenu intrinsèque des données. Par ailleurs, le service ne modifie pas les données à l’exception d’une standardisation contextuelle limitée (minuscule vers majuscule, format de date, nombre d’espaces).
+        Toutefois, ce service agrégeant de nombreux fournisseurs de données et étant donc dépendant de leurs disponibilités, **API Entreprise ne porte donc aucune responsabilité s’agissant de la qualité ou du contenu intrinsèque des données.** Par ailleurs, le service ne modifie pas les données à l’exception d’une standardisation contextuelle limitée (minuscule vers majuscule, format de date, nombre d’espaces).
       * **L’utilisation d’API Entreprise est gratuite.**
         Les coûts d’investissements et de fonctionnement sont pris en charge par la DINUM. En revanche, les coûts de raccordement à API Entreprise vous incombent.
       * **API Entreprise propose une assistance technique et fonctionnelle** permettant aux utilisateurs de définir et de mettre en œuvre au mieux leur projet.
