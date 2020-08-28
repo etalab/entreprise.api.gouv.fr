@@ -26,6 +26,21 @@ class: documentation
           <a class="tpl-documentation__link" href="#{{ panel[1].id }}">{{ panel[1].title }}</a>
         {% endfor %}
       </details>
+      {% if forloop.index == 3 %}
+        <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}{% link pages/demander_un_acces.md %}">
+          Effectuer sa demande d'habilitation&nbsp;
+          <svg class="tpl-icon" viewBox="0 0 24 24">
+            <use xlink:href="#pencil-create"></use>
+          </svg>
+        </a>
+      {% endif %}
     {% endfor %}
+    <h3>Catalogue des données</h3>
+      <a href="{{ site.baseurl }}{% link pages/catalogue.html %}" class="tpl-flex-row tpl-jc-sb link-to-catalogue">
+        <svg class="tpl-icon" viewBox="0 0 24 24">
+          <use xlink:href="#zoom-in"></use>
+        </svg>
+        Besoin d'une information techniquespécifique à une API ? Consultez le catalogue des données
+      </a>
   </nav>
 </aside>
