@@ -25,6 +25,15 @@
     margin-bottom: var(--spacing-xs);
     padding: var(--spacing-xs) var(--spacing-s);
 
+    & > :not(summary) {
+      margin-left: var(--spacing-s);
+      margin-right: var(--spacing-s);
+    }
+
+    h4 ~ *:not(h4) {
+      margin-left: var(--spacing-l);
+    }
+
     summary {
       h2, h3, h4, h5, h6 {
         display: inline;
