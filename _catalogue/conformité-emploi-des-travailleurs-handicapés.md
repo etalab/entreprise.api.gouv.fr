@@ -17,8 +17,8 @@ services:
   service1:
     request:
       id:
-        label: SirenDeL’Entreprise
-        description: Le numéro de SIREN de l'entreprise.
+        label: SiretDeL’Etablissement
+        description: Le numéro de SIRET de l'établissement.
       parameters:
         param1:
           label: token
