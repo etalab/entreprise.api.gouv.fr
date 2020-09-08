@@ -22,8 +22,13 @@ window.onload = function (e) {
   function openDetails(hash) {
     const target = document.getElementById(hash.substring(1))
     if (target) {
-      if (target.tagName.toLowerCase() === 'details') {
-        target.open = true;
+      let el = target
+
+      while (el.closest('details')) {
+        el = el.parentNode
+        if (el.tagName.toLowerCase() === 'details') {
+          el.open = true
+        }
       }
 
       target.scrollIntoView()
