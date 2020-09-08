@@ -172,7 +172,10 @@ panels:
       #### Voir ma première trace d’appel dans le tableau de bord
 
 
-      🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
+      Une fois que vous avez fait un premier appel, celui-ci est répertorié dans votre tableau de bord, en passant par [la liste de tous vos tokens](https://dashboard.entreprise.api.gouv.fr/me/tokens), et en cliquant sur "Voir les statistiques".
+
+
+      ![](../assets/images/documentation/voir-son-premier-appel.png)
   panel4:
     title: Configurer le logiciel métier ⚙️
     id: configuration
