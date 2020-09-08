@@ -15,7 +15,7 @@ window.onload = function (e) {
     const href = evt.target.attributes.href.value
     const index = href.indexOf('#')
     if (index >= 0) {
-      openDetails(href.substring(index))
+      openDetails(decodeURI(href.substring(index)))
     }
   }
 

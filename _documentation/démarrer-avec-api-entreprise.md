@@ -17,7 +17,7 @@ panels:
       </summary>
 
 
-      Après avoir lu les étapes 1 et 2,[ L'API Entreprise correspond-elle à mon besoin ?](../documentation/#étape-1--lapi-entreprise-correspond-elle-à-mon-besoin-) et [Les prérequis techniques avant d'aller plus loin](../documentation/#étape-2--les-prérequis-techniques-avant-daller-plus-loin), vous êtes désormais prêt à faire une demande d'accès. 
+      Après avoir lu les étapes 1 et 2, [ L'API Entreprise correspond-elle à mon besoin ?](../documentation/#étape1lapientreprisecorrespondelleàmonbesoin) et [Les prérequis techniques avant d'aller plus loin](../documentation/#étape2lesprérequistechniquesavantdallerplusloin), vous êtes désormais prêt à faire une demande d'accès. 
 
       Pour vous permettre d'anticiper, ci-dessous la liste des informations nécessaires : 
 
@@ -180,7 +180,7 @@ panels:
     title: Configurer le logiciel métier ⚙️
     id: configuration
     content: >-
-      #### Respecter la volumétrie
+      #### Respecter la volumétrie 
 
 
       Sur API Entreprise, vous avez le droit à **2000 requêtes par tranche de 10 minutes par IP** interrogeant nos services.

@@ -157,7 +157,7 @@ panels:
       #### Vérifier ne pas avoir dépassé la volumétrie autorisée
 
 
-      Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](../documentation/#configurer-le-logiciel-mtier/#respecter-la-volumtrie).
+      Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](../documentation/#respecter-la-volumétrie).
 
 
       #### Agir en cas d'indisponibilité globale avérée

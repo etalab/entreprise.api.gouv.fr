@@ -9,7 +9,7 @@ additional_js: documentation.js
 <div class="tpl-documentation__content">
   {% assign categories = site.documentation | sort: 'weight' %}
   {% for category in categories %}
-    <h2>{{ category.title }}</h2>
+    <h2 id="{{ category.title | remove: ' ' | remove: ':' | remove: '’' | remove: '-' | remove: '?' | downcase }}">{{ category.title }}</h2>
     {% for panel in category.panels %}
       <details class="fold" id="{{ panel[1].id }}">
         <summary><h3>{{ panel[1].title }}</h3></summary>

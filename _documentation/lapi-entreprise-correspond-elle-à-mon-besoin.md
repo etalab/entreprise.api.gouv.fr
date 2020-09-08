@@ -1,6 +1,6 @@
 ---
 weight: 1
-title: "Étape 1 : L'API Entreprise correspond-elle à mon besoin ?"
+title: "Étape 1 : L’API Entreprise correspond-elle à mon besoin ?"
 id: besoins
 panels:
   panel1:
@@ -247,7 +247,7 @@ panels:
       #### Une habilitation instruite par la DINUM
 
 
-      Tout accès à l'API Entreprise se fait sous réserve d'en [avoir obtenu l’habilitation](#effectuer-ma-demande-dhabilitation/anticiper-votre-demande).
+      Tout accès à l'API Entreprise se fait sous réserve d'en [avoir obtenu l’habilitation](#tape-0--anticiper-sa-demande-).
 
 
       L'API entreprise est **réservée aux acteurs publics investis d’une mission de service public** : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.
@@ -287,5 +287,5 @@ panels:
       * ou bien vous avez une direction des systèmes d’information (DSI) qui peut intégrer des APIs.
 
 
-      Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#les-fondamentaux--mettre-en-place-avec-lquipe-technique-){:target="_blank"}.
+      Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#fondamentaux){:target="_blank"}.
 ---
