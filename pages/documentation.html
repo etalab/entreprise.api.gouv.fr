@@ -19,20 +19,24 @@ class: documentation
 </div>
 <aside class="tpl-documentation__sidebar">
   <nav class="tpl-documentation__links">
+    <h3>Documentation</h3>
     {% for category in categories %}
       <details>
         <summary>{{ category.title }}</summary>
         {% for panel in category.panels %}
-          <a class="tpl-documentation__link" href="#{{ panel[1].id }}">{{ panel[1].title }}</a>
+          {% if forloop.first %}
+            <a class="tpl-button tpl-button--alternate link-to-habilitation" href="#{{ panel[1].id }}">
+              {{ panel[1].title }}
+            </a>
+          {% else %}
+            <a class="tpl-documentation__link" href="#{{ panel[1].id }}">{{ panel[1].title }}</a>
+          {% endif %}
         {% endfor %}
       </details>
       {% if forloop.index == 3 %}
-        <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}{% link pages/demander_un_acces.md %}">
-          Effectuer sa demande d'habilitation&nbsp;
-          <svg class="tpl-icon" viewBox="0 0 24 24">
-            <use xlink:href="#pencil-create"></use>
-          </svg>
-        </a>
+      <a class="tpl-button tpl-button--alternate link-to-habilitation" href="#demande-habilitation">
+        Effectuer sa demande d’habilitation 📝
+      </a>
       {% endif %}
     {% endfor %}
     <h3>Catalogue des données</h3>

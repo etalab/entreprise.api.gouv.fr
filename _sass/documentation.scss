@@ -12,6 +12,15 @@
   .tpl-documentation__links {
     background-color: transparent;
     box-shadow: none;
+
+    .link-to-habilitation {
+      margin: var(--spacing-xs) var(--spacing-xl);
+      width: max-content;
+    }
+
+    details[open] + .link-to-habilitation {
+      display: none;
+    }
   }
 
   .tpl-documentation__sidebar {
