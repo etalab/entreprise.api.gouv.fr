@@ -31,13 +31,13 @@ panels:
 
         Une demande d’accès ne peut pas couvrir plusieurs contextes métiers différents et doit être adaptée au public utilisateur final. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
-      > {:.example}
+      {:.example}
 
-      > **Exemple de la Région Occitanie :**<br><br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
+      **Exemple de la Région Occitanie :**<br><br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
 
-      > <br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
+      <br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
 
-      > {:.example}
+      {:.example}
 
 
       * **le cadre administratif et légal** (texte ou délibération/décision) qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte.
