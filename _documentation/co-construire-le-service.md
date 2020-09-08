@@ -63,4 +63,5 @@ panels:
   panel4:
     title: Nous rejoindre 💼
     id: nous-rejoindre
+    content: 🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
 ---

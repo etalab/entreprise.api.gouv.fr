@@ -153,12 +153,17 @@ panels:
   panel4:
     title: Réagir en cas d’indisponibilité globale 🚧
     id: indisponibilite-globale
-    content: >
-      
+    content: >-
       #### Vérifier ne pas avoir dépassé la volumétrie autorisée
 
 
       Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](../documentation/#configurer-le-logiciel-mtier/#respecter-la-volumtrie).
+
+
+      #### Agir en cas d'indisponibilité globale avérée
+
+
+      🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
   panel5:
     title: Élargir le périmètre des données demandées 🧩
     id: elargissement-perimetre
@@ -176,8 +181,9 @@ panels:
   panel6:
     title: S'adapter aux évolutions et montées de versions 🏗
     id: evolutions
-    content: |
-      
+    content: |-
+      🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
+
       #### Endpoints en particulier
 
       #### Paramètres d’appel
