@@ -13,8 +13,9 @@ window.onload = function (e) {
 
   function onTitleClick(evt) {
     const href = evt.target.attributes.href.value
-    if (href.startsWith('#')) {
-      openDetails(href)
+    const index = href.indexOf('#')
+    if (index >= 0) {
+      openDetails(href.substring(index))
     }
   }
 
