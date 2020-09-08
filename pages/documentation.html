@@ -21,10 +21,11 @@ class: documentation
   <nav class="tpl-documentation__links">
     <h3>Documentation</h3>
     {% for category in categories %}
+    {% assign category_index = forloop.index %}
       <details>
         <summary>{{ category.title }}</summary>
         {% for panel in category.panels %}
-          {% if forloop.first %}
+          {% if category_index == 3 and forloop.first %}
             <a class="tpl-button tpl-button--alternate link-to-habilitation" href="#{{ panel[1].id }}">
               {{ panel[1].title }}
             </a>
