@@ -76,6 +76,20 @@
       margin-right: var(--spacing-m);
     }
   }
+  
+  table {
+    border-collapse: none;
+    width: auto;
+  }
+
+  td {
+    vertical-align: top;
+
+    img {
+      margin-left: var(--spacing-s);
+      max-width: 400px;
+    }
+  }
 
   .example {
     border-left: 3px solid var(--light-grey);
