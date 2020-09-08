@@ -5,16 +5,17 @@ window.onload = function (e) {
     openDetails(hash)
   }
 
-  const links = document.querySelectorAll('.tpl-documentation__links a')
+  const links = document.querySelectorAll('.documentation a')
 
   for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', onTitleClick, false)
   }
 
   function onTitleClick(evt) {
-    evt.stopPropagation()
-    evt.preventDefault()
-    openDetails(evt.target.attributes.href.value)
+    const href = evt.target.attributes.href.value
+    if (href.startsWith('#')) {
+      openDetails(href)
+    }
   }
 
   function openDetails(hash) {
