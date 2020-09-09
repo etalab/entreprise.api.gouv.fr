@@ -165,3 +165,51 @@ a.tpl-main-header__link:hover {
 .use-cases a.tpl-card {
   text-decoration: none;
 }
+
+.catalogue,
+.documentation {
+  .tpl-documentation__links {
+    background: 0;
+    box-shadow: none;
+    color: var(--primary);
+    position: sticky;
+    top: 2em;
+  }
+
+  .tpl-documentation__links h3 {
+    padding: var(--spacing-s);
+    padding-bottom: 0;
+    font-size: 1.25em;
+    text-decoration: underline;
+  }
+
+  .tpl-documentation__links h4 {
+    font-size: 0.75em;
+  }
+
+  .tpl-documentation__link {
+    display: flex;
+    margin-left: 1.5em;
+  }
+
+  .tpl-documentation__sidebar {
+    flex-basis: 20em;
+
+    .tpl-button--alternate {
+      background-color: var(--white);
+      border-color: var(--primary);
+      color: var(--primary);
+      justify-content: center;
+      margin-left: var(--spacing-xl);
+    }
+  }
+  
+  .tpl-documentation__sidebar summary,
+  .documentation .tpl-documentation__sidebar a {
+    color: var(--primary);
+    cursor: pointer;
+    font-family: var(--font-family-title);
+    font-weight: 700;
+    margin: var(--spacing-xs) var(--spacing-m);
+  } 
+}

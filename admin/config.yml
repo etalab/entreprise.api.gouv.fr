@@ -24,6 +24,142 @@ collections:
         name: 'body'
         required: true
         widget: 'markdown'
+  - name: 'documentation'
+    title: 'documentation'
+    label: 'Documentation générale'
+    folder: '_documentation'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - label: 'Poids'
+        name: 'weight'
+        required: false
+        widget: 'number'
+        description: 'Pour définir l’ordre des endpoints'
+      - label: 'Titre'
+        name: 'title'
+        required: true
+        widget: 'text'
+      - label: 'ID'
+        name: 'id'
+        required: true
+        widget: 'text'
+        description: 'Une chaine simple sans espace pour pouvoir faire fonctionner les ancres'
+      - label: 'Panels'
+        name: 'panels'
+        required: false
+        widget: object
+        fields:
+          - label: 'Panel 1'
+            name: 'panel1'
+            required: true
+            widget: 'object'
+            fields:
+              - label: 'Titre'
+                name: 'title'
+                required: false
+                widget: 'text'
+              - label: 'ID'
+                name: 'id'
+                required: false
+                widget: 'text'
+                description: 'Une chaine simple sans espace pour pouvoir faire fonctionner les ancres'
+              - label: 'Contenu'
+                name: 'content'
+                required: false
+                widget: 'markdown'
+          - label: 'Panel 2'
+            name: 'panel2'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Titre'
+                name: 'title'
+                required: false
+                widget: 'text'
+              - label: 'ID'
+                name: 'id'
+                required: false
+                widget: 'text'
+                description: 'Une chaine simple sans espace pour pouvoir faire fonctionner les ancres'
+              - label: 'Contenu'
+                name: 'content'
+                required: false
+                widget: 'markdown'
+          - label: 'Panel 3'
+            name: 'panel3'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Titre'
+                name: 'title'
+                required: false
+                widget: 'text'
+              - label: 'ID'
+                name: 'id'
+                required: false
+                widget: 'text'
+                description: 'Une chaine simple sans espace pour pouvoir faire fonctionner les ancres'
+              - label: 'Contenu'
+                name: 'content'
+                required: false
+                widget: 'markdown'
+          - label: 'Panel 4'
+            name: 'panel4'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Titre'
+                name: 'title'
+                required: false
+                widget: 'text'
+              - label: 'ID'
+                name: 'id'
+                required: false
+                widget: 'text'
+                description: 'Une chaine simple sans espace pour pouvoir faire fonctionner les ancres'
+              - label: 'Contenu'
+                name: 'content'
+                required: false
+                widget: 'markdown'
+          - label: 'Panel 5'
+            name: 'panel5'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Titre'
+                name: 'title'
+                required: false
+                widget: 'text'
+              - label: 'ID'
+                name: 'id'
+                required: false
+                widget: 'text'
+                description: 'Une chaine simple sans espace pour pouvoir faire fonctionner les ancres'
+              - label: 'Contenu'
+                name: 'content'
+                required: false
+                widget: 'markdown'
+          - label: 'Panel 6'
+            name: 'panel6'
+            required: false
+            widget: 'object'
+            fields:
+              - label: 'Titre'
+                name: 'title'
+                required: false
+                widget: 'text'
+              - label: 'ID'
+                name: 'id'
+                required: false
+                widget: 'text'
+                description: 'Une chaine simple sans espace pour pouvoir faire fonctionner les ancres'
+              - label: 'Contenu'
+                name: 'content'
+                required: false
+                widget: 'markdown'
   - name: 'catalogue'
     label: 'Catalogue de données'
     label_singular: 'Endpoint'

@@ -1,5 +1,8 @@
 ---
 -
+  label: Documentation
+  target: pages/documentation.html
+-
   label: Catalogue des données
   target: pages/catalogue.html
 -

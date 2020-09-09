@@ -1,0 +1,52 @@
+---
+layout: documentation
+title: Documentation générale
+permalink: /documentation/
+class: documentation
+additional_js: documentation.js
+---
+
+<div class="tpl-documentation__content">
+  {% assign categories = site.documentation | sort: 'weight' %}
+  {% for category in categories %}
+    <h2 id="{{ category.title | remove: ' ' | remove: ':' | remove: '’' | remove: '-' | remove: '?' | downcase }}">{{ category.title }}</h2>
+    {% for panel in category.panels %}
+      <details class="fold" id="{{ panel[1].id }}">
+        <summary><h3>{{ panel[1].title }}</h3></summary>
+        {{ panel[1].content | markdownify }}
+      </details>
+    {% endfor %}
+  {% endfor %}
+</div>
+<aside class="tpl-documentation__sidebar">
+  <nav class="tpl-documentation__links">
+    <h3>Documentation</h3>
+    {% for category in categories %}
+    {% assign category_index = forloop.index %}
+      <details>
+        <summary>{{ category.title }}</summary>
+        {% for panel in category.panels %}
+          {% if category_index == 3 and forloop.first %}
+            <a class="tpl-button tpl-button--alternate link-to-habilitation" href="#{{ panel[1].id }}">
+              {{ panel[1].title }}
+            </a>
+          {% else %}
+            <a class="tpl-documentation__link" href="#{{ panel[1].id }}">{{ panel[1].title }}</a>
+          {% endif %}
+        {% endfor %}
+      </details>
+      {% if forloop.index == 3 %}
+      <a class="tpl-button tpl-button--alternate link-to-habilitation" href="#demande-habilitation">
+        Effectuer sa demande d’habilitation 📝
+      </a>
+      {% endif %}
+    {% endfor %}
+    <h3>Catalogue des données</h3>
+      <a href="{{ site.baseurl }}{% link pages/catalogue.html %}" class="tpl-flex-row tpl-jc-sb link-to-catalogue">
+        <svg class="tpl-icon" viewBox="0 0 24 24">
+          <use xlink:href="#zoom-in"></use>
+        </svg>
+        Besoin d'une information technique spécifique à une API ? Consultez le catalogue des données
+      </a>
+  </nav>
+</aside>

@@ -43,6 +43,7 @@ collections:
   use_cases:
       output: true
   catalogue:
+  documentation:
 
 # API Entreprise specific variables
 api_url: https://entreprise.api.gouv.fr/v2/
@@ -96,7 +97,7 @@ providers_aliases:
 empty_array: []
 
 catalogue_types: 
-  - 'De tout type'
+  - 'Toutes les catégories'
   - 'Informations générales'
   - 'Informations financières'
   - 'Attestations sociales et fiscales'

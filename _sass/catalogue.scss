@@ -12,6 +12,12 @@
   #catalogue-search {
     padding: 0 var(--spacing-s) 0 var(--spacing-xl);
   }
+  
+  @media (max-width: 800px) {
+    .tpl-form__group {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .catalogue-information {
@@ -104,6 +110,7 @@
   .documentation-card__header code {
     margin-bottom: 0.4em;
     margin-left: var(--spacing-xs);
+    word-wrap: anywhere;
   }
 
   .endpoint-scope {
@@ -124,6 +131,10 @@
     stroke: var(--white);
     height: var(--spacing-m);
     width: var(--spacing-m);
+  }
+
+  .description {
+    flex-wrap: wrap;
   }
 
   .description ul {
@@ -482,49 +493,6 @@
     }
   }
 
-  .tpl-documentation__links {
-    background: 0;
-    box-shadow: none;
-    color: var(--primary);
-    position: sticky;
-    top: 2em;
-  }
-
-  .tpl-documentation__links h3 {
-    padding: var(--spacing-s);
-    padding-bottom: 0;
-    font-size: 1.25em;
-    text-decoration: underline;
-  }
-
-  .tpl-documentation__links h4 {
-    font-size: 0.75em;
-  }
-
-  .tpl-documentation__link {
-    display: flex;
-    margin-left: 1.5em;
-  }
-
-  .tpl-documentation__sidebar {
-    flex-basis: 20em;
-
-    .tpl-button--alternate {
-      background-color: var(--white);
-      border-color: var(--primary);
-      color: var(--primary);
-      justify-content: center;
-    }
-  }
-
-  .tpl-documentation__sidebar summary {
-    cursor: pointer;
-    font-family: var(--font-family-title);
-    font-weight: 700;
-    margin: var(--spacing-xs) var(--spacing-m);
-  } 
-  
-  
   .general-doc {
     padding: 0 var(--spacing-s);
 
@@ -568,6 +536,11 @@
   @media (max-width: 800px) {
     .tpl-documentation__sidebar {
       display: none;
+    }
+
+    .description .tpl-description-list {
+      flex-basis: auto;
+      flex-shrink: 1;
     }
   }
 }
