@@ -47,8 +47,12 @@ panels:
       * **les coordonnées de votre délégué·e à la protection des données (DPD)**.
         Le DPD est la personne qui s'assure que l'organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C'est généralement une personne appartenant à l'organisme demandeur.
 
-      ###### Je n’ai pas de DPD, que faire ?
-
+       <details class="fold">
+       <summary>
+       Je n’ai pas de DPD, que faire ?
+       </summary>
+       Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
+       </details>
 
       * **les coordonnées du contact métier**.
 
