@@ -25,10 +25,10 @@ window.onload = function (e) {
       let el = target
 
       while (el.closest('details')) {
-        el = el.parentNode
         if (el.tagName.toLowerCase() === 'details') {
           el.open = true
         }
+        el = el.parentNode
       }
 
       target.scrollIntoView()
