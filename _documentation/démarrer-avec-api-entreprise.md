@@ -49,8 +49,9 @@ panels:
 
        <details class="fold">
        <summary>
-       Je n’ai pas de DPD, que faire ?
+        Je n’ai pas de DPD, que faire ?
        </summary>
+
        Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
        </details>
 

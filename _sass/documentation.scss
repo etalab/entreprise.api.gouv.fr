@@ -52,6 +52,11 @@
       h3 {
         font-size: 1.25em;
       }
+
+      p {
+        display: inline-block;
+        margin: 0;
+      }
     }
 
     &[open] {
