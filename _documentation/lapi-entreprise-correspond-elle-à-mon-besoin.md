@@ -247,7 +247,7 @@ panels:
       #### Une habilitation instruite par la DINUM
 
 
-      Tout accès à l'API Entreprise se fait sous réserve d'en [avoir obtenu l’habilitation](#tape-0--anticiper-sa-demande-).
+      Tout accès à l'API Entreprise se fait sous réserve d'en [avoir obtenu l’habilitation](#demande-habilitation).
 
 
       L'API entreprise est **réservée aux acteurs publics investis d’une mission de service public** : les administrations, leurs opérateurs et les collectivités, les acteurs de santé, etc.
@@ -287,5 +287,5 @@ panels:
       * ou bien vous avez une direction des systèmes d’information (DSI) qui peut intégrer des APIs.
 
 
-      Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#fondamentaux){:target="_blank"}.
+      Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#fondamentaux).
 ---
