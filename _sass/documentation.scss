@@ -44,6 +44,8 @@
     }
 
     summary {
+      position: relative;
+
       h2, h3, h4, h5, h6 {
         display: inline;
         font-weight: 400;
@@ -126,5 +128,27 @@
   blockquote::after {
     content: "”";
     right: var(--spacing-s);
+  }
+
+  .category-title {
+    position: relative;
+  }
+
+  .link-ref {
+    padding-right: 1em;
+  }
+
+  button.button-link {
+    box-shadow: none;
+    font-size: 0.75em;
+    margin: 0;
+    padding: 0.25em 0.5em;
+    position: absolute;
+    bottom: 0.2em;
+    right: 0;
+
+    svg {
+      pointer-events: none;
+    }
   }
 }

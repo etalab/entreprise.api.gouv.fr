@@ -211,5 +211,18 @@ a.tpl-main-header__link:hover {
     font-family: var(--font-family-title);
     font-weight: 700;
     margin: var(--spacing-xs) var(--spacing-m);
-  } 
+  }
+
+  #flash {
+    border-radius: var(--border-radius-default);
+    display: none;
+    padding: 0.75em 1.25em;
+    position: fixed;
+    top: 2em;
+    background-color: var(--darker-grey);
+    color: var(--white);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
 }

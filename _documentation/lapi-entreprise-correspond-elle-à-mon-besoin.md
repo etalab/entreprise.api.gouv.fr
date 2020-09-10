@@ -1,7 +1,7 @@
 ---
 weight: 1
 title: "Étape 1 : L’API Entreprise correspond-elle à mon besoin ?"
-id: besoins
+identifier: besoins
 panels:
   panel1:
     title: Les cas d’usage d’API Entreprise

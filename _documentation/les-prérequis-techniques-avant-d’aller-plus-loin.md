@@ -1,7 +1,7 @@
 ---
 weight: 2
 title: "Étape 2 : Les prérequis techniques avant d’aller plus loin"
-id: prerequis
+identifier: prerequis
 panels:
   panel1:
     title: Qu’est-ce qu’une API ? 🤖

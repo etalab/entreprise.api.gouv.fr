@@ -1,18 +1,35 @@
 ---
 layout: documentation
 title: Documentation générale
-permalink: /documentation/
+permalink: /doc/
 class: documentation
 additional_js: documentation.js
 ---
 
 <div class="tpl-documentation__content">
+  <div id="flash"></div>
   {% assign categories = site.documentation | sort: 'weight' %}
   {% for category in categories %}
-    <h2 id="{{ category.title | remove: ' ' | remove: ':' | remove: '’' | remove: '-' | remove: '?' | downcase }}">{{ category.title }}</h2>
+    <h2 class="category-title" id="{{ category.identifier }}">
+      {{ category.title }}
+      <button class="tpl-button tpl-button--alternate button-link" data-link="{{ site.baseurl }}/documentation/#{{ category.identifier }}" title="Copier le lien vers cette section">
+        <svg class="tpl-icon" viewBox="0 0 24 24">
+          <use xlink:href="#link"></use>
+        </svg>
+      </button>
+    </h2>
     {% for panel in category.panels %}
       <details class="fold" id="{{ panel[1].id }}">
-        <summary><h3>{{ panel[1].title }}</h3></summary>
+        <summary>
+          <h3 class="link-ref">
+            {{ panel[1].title }}
+            <button class="tpl-button tpl-button--alternate button-link" data-link="{{ site.api_documentation_url }}/#{{ panel[1].id }}" title="Copier le lien vers cette section">
+              <svg class="tpl-icon" viewBox="0 0 24 24">
+                <use xlink:href="#link"></use>
+              </svg>
+            </button>
+          </h3>
+        </summary>
         {{ panel[1].content | markdownify }}
       </details>
     {% endfor %}

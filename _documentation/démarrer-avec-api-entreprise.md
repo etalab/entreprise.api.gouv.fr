@@ -1,7 +1,7 @@
 ---
 weight: 3
 title: "Étape 3 : Démarrer avec API Entreprise"
-id: demarrer
+identifier: demarrer
 panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
