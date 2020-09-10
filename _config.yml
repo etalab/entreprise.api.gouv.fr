@@ -47,7 +47,7 @@ collections:
 
 # API Entreprise specific variables
 api_url: https://entreprise.api.gouv.fr/v2/
-api_documentation_url: https://doc.entreprise.api.gouv.fr
+api_documentation_url: https://entreprise.api.gouv.fr/doc
 dashboard_url: https://dashboard.entreprise.api.gouv.fr
 gitbook_url: https://etalab-entreprise.gitbook.io/api-entreprise-documentation-infra
 signup_url: https://signup.entreprise.api.gouv.fr

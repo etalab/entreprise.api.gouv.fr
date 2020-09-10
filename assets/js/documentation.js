@@ -1,6 +1,5 @@
 window.onload = function (e) {
   if (window.location.hash) {
-    console.log('pouet')
     const hash = window.location.hash
     openDetails(hash)
   }

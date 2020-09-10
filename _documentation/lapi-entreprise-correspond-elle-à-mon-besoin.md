@@ -287,5 +287,5 @@ panels:
       * ou bien vous avez une direction des systèmes d’information (DSI) qui peut intégrer des APIs.
 
 
-      Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#fondamentaux).
+      Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](#fondamentaux).
 ---

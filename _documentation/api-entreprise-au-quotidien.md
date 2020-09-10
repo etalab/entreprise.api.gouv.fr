@@ -157,7 +157,7 @@ panels:
       #### Vérifier ne pas avoir dépassé la volumétrie autorisée
 
 
-      Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](../documentation/#respecter-la-volumétrie).
+      Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](#respecter-la-volumétrie).
 
 
       #### Agir en cas d'indisponibilité globale avérée
@@ -171,7 +171,7 @@ panels:
       Vous souhaitez élargir le périmètre des endpoints auxquels vous avez accès
       ? \
 
-      **[Il vous faut refaire une demande d'habilitation](../documentation/#demande-habilitation).**
+      **[Il vous faut refaire une demande d'habilitation](#demande-habilitation).**
 
 
       Pour toute nouvelle demande, il vous faudra **justifier le cadre légal**. 
