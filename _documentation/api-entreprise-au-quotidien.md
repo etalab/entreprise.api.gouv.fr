@@ -125,7 +125,7 @@ panels:
       La notification d'expiration vous a conduit directement sur cette documentation. Effectivement, la plateforme demarches-simplifiees.fr n'étant plus la plateforme utilisée par API Entreprise, nous allons devoir vous demander de créer un compte sur Data Pass. Nous vous prions d'accepter nos excuses pour la gêne occasionnée, ce transfert étant dans l'objectif de vous fournir un meilleur service.
 
 
-      Pour renouveler votre token, vous allez donc **suivre la démarche d'une demande d'accès**. [Tout est expliqué en détail ici](https://entreprise.api.gouv.fr/doc/#demande-habilitation).
+      Pour renouveler votre token, vous allez donc **suivre la démarche d'une demande d'accès**. [Tout est expliqué en détail ici](../doc/#demande-habilitation).
 
 
       {:.tpl-notification}
