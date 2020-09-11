@@ -80,8 +80,19 @@ services:
           question: Quelles sont les dates de dépôt des liasses fiscales par les
             entreprises ?
         qr3:
-          question: ""
-          answer: ""
+          question: Qu'est-ce que le paramètre obligatoire user_id ?
+          answer: >-
+            Le paramètre `user_id` demandé et spécifique aux endpoints de la
+            Direction Générale des Finances Publiques, est l'identifiant de
+            l'utilisateur physique qui réalise l'appel à l'API. Ce paramètre
+            permet de tracer précisément la source de l'appel et de vérifier que
+            l'utilisateur a bien les droits d'accès à la donnée.
+
+
+            Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
+
+
+            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
         qr2:
           question: Quel est le délai de mise à disposition des données d'une déclaration
             déposée par une entreprise ?
@@ -202,8 +213,19 @@ services:
           label: object
       questions:
         qr1:
-          answer: ""
-          question: ""
+          answer: >-
+            Le paramètre `user_id` demandé et spécifique aux endpoints de la
+            Direction Générale des Finances Publiques, est l'identifiant de
+            l'utilisateur physique qui réalise l'appel à l'API. Ce paramètre
+            permet de tracer précisément la source de l'appel et de vérifier que
+            l'utilisateur a bien les droits d'accès à la donnée.
+
+
+            Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
+
+
+            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
+          question: Qu'est-ce que le paramètre obligatoire user_id ?
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
@@ -273,6 +295,20 @@ services:
             l'année demandée. Ce paramètre ne veut pas dire que toutes les
             liasses fiscales seront renvoyées. En effet, les déclarations
             disponibles sont restreintes par décret.
+        qr2:
+          answer: >-
+            Le paramètre `user_id` demandé et spécifique aux endpoints de la
+            Direction Générale des Finances Publiques, est l'identifiant de
+            l'utilisateur physique qui réalise l'appel à l'API. Ce paramètre
+            permet de tracer précisément la source de l'appel et de vérifier que
+            l'utilisateur a bien les droits d'accès à la donnée.
+
+
+            Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
+
+
+            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
+          question: Qu'est-ce que le paramètre obligatoire user_id ?
       options:
         option1:
           param: ""
