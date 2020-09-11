@@ -2,6 +2,7 @@
 weight: 3
 title: "Étape 3 : Démarrer avec API Entreprise"
 identifier: demarrer
+id: demarrer
 panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
@@ -53,6 +54,7 @@ panels:
        </summary>
 
        Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
+
        </details>
 
       * **les coordonnées du contact métier**.
@@ -96,7 +98,7 @@ panels:
 
       |Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
 
-      |Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface.            |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png){:width="1000"}        |
+      |Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire. Pour cela, n'oubliez pas de cliquer sur le bouton "Sauvegarder le brouillon" se trouvant en bas du formulaire.        |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png){:width="1000"}        |
 
 
       <a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise">Se rendre sur Data Pass</a>
@@ -119,7 +121,7 @@ panels:
 
       * ❌ Si votre dossier est refusé, des précisions supplémentaires vous seront demandée avant tout refus définitif ;
 
-      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé et vous fournit un lien pour choisir le mot de passe de votre futur espace personnel. Une fois votre mot de passe configuré, [connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login).
+      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé. [Connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login) avec vos identifiants Data Pass.
 
 
       </details>
