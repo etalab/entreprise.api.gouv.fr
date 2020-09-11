@@ -1,8 +1,11 @@
 ---
+providers:
+  - infogreffe
+access: Restreint
 weight: 3
 type: Informations générales
 title: Extrait RCS
-label: extrait_rcs_infogreffe
+label: extraits_rcs_infogreffe
 scope:
   - entreprises
 description: Obtenir un extrait des données présentes dans le registre du
@@ -12,10 +15,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-access: Restreint
 opening: Données confidentielles
-providers:
-  - infogreffe
 perimeter:
   perimeter1:
     label: Lorem ipsum
