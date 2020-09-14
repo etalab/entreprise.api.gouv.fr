@@ -37,27 +37,6 @@ additional_js: documentation.js
 </div>
 <aside class="tpl-documentation__sidebar">
   <nav class="tpl-documentation__links">
-    <h3>Documentation</h3>
-    {% for category in categories %}
-    {% assign category_index = forloop.index %}
-      <details>
-        <summary>{{ category.title }}</summary>
-        {% for panel in category.panels %}
-          {% if category_index == 3 and forloop.first %}
-            <a class="tpl-button tpl-button--alternate link-to-habilitation" href="#{{ panel[1].id }}">
-              {{ panel[1].title }}
-            </a>
-          {% else %}
-            <a class="tpl-documentation__link" href="#{{ panel[1].id }}">{{ panel[1].title }}</a>
-          {% endif %}
-        {% endfor %}
-      </details>
-      {% if forloop.index == 3 %}
-      <a class="tpl-button tpl-button--alternate link-to-habilitation" href="#demande-habilitation">
-        Effectuer sa demande d’habilitation 📝
-      </a>
-      {% endif %}
-    {% endfor %}
     <h3>Catalogue des données</h3>
       <a href="{{ site.baseurl }}{% link pages/catalogue.html %}" class="tpl-flex-row tpl-jc-sb link-to-catalogue">
         <svg class="tpl-icon" viewBox="0 0 24 24">
