@@ -79,6 +79,16 @@ services:
             En cas d'exercice à cheval, la date limite de dépôt est positionnée exactement 3 mois après la date de clôture de l'exercice déclaré.
           question: Quelles sont les dates de dépôt des liasses fiscales par les
             entreprises ?
+        qr2:
+          question: Quel est le délai de mise à disposition des données d'une déclaration
+            déposée par une entreprise ?
+          answer: >-
+            Les déclarations de résultat sont disponibles :
+
+
+            * à compter du lendemain de la date de dépôt (J+1) ;
+
+            * trois jours plus tard (J+3) si le dépôt intervient une veille de week-end.
         qr3:
           question: Qu'est-ce que le paramètre obligatoire user_id ?
           answer: >-
@@ -93,16 +103,6 @@ services:
 
 
             ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
-        qr2:
-          question: Quel est le délai de mise à disposition des données d'une déclaration
-            déposée par une entreprise ?
-          answer: >-
-            Les déclarations de résultat sont disponibles :
-
-
-            * à compter du lendemain de la date de dépôt (J+1) ;
-
-            * trois jours plus tard (J+3) si le dépôt intervient une veille de week-end.
       options:
         option1:
           param: ""
