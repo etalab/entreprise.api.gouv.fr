@@ -1,4 +1,56 @@
 window.onload = function (e) {
+  let instance = new Mark(document.querySelectorAll('.documentation-card'))
+  let searchInput = document.querySelector('input[name="catalogue-search"]')
+  let scopeFilter = document.querySelector('select[name="catalogue-scope"]')
+  let typeFilter = document.querySelector('select[name="catalogue-type"]')
+  let usecaseFilter = document.querySelector('select[name="catalogue-usecase"]')
+  let providerFilter = document.querySelector('select[name="catalogue-providers"]')
+  let stateFilter = document.querySelector('select[name="catalogue-openstate"]')
+
+  const charts = document.getElementsByClassName('availability-pie')
+  const values = [[84, '#17bd3d'], [8, '#ffc107'], [6, '#d19d00'], [2, '#dc3545']]
+  let startingPoint = 0
+
+  for (let i = 0; i < charts.length; i++) {
+    values.forEach(value => {
+      charts[i].prepend(pieChart(value[0], 250, value[1], startingPoint))
+      startingPoint += 360 * value[0] / 100
+    })
+  }
+  
+  const linkButtons = document.querySelectorAll('.button-link')
+
+  for (let j = 0; j < linkButtons.length; j++) {
+    linkButtons[j].addEventListener('click', onButtonClick, false)
+  }
+  
+  const el = document.getElementsByClassName('documentation-card')
+  const commentSwitches = document.getElementsByClassName('toggle-comments')
+
+  for (let i = 0; i < el.length; i++) {
+    el[i].querySelectorAll('.tab-list a')[0].addEventListener('click', onTabClick, false)
+    commentSwitches[i].addEventListener('click', toggleComments, false)
+  }
+
+  searchInput.addEventListener("input", delay(performMark))
+  scopeFilter.addEventListener("change", toggleNonMarkedPanels)
+  typeFilter.addEventListener("change", toggleCategories)
+  usecaseFilter.addEventListener("change", toggleNonMarkedPanels)
+  providerFilter.addEventListener("change", toggleNonMarkedPanels)
+  stateFilter.addEventListener("change", toggleNonMarkedPanels)
+
+  if (window.location.hash) {
+    const hash = window.location.hash
+    openCatalogue(hash)
+  }
+
+  function openCatalogue(hash) {
+    const target = document.getElementById(hash.substring(1))
+    if (target) {
+      target.querySelectorAll('.tab-list a')[0].click()
+    }
+  }
+
   function onTabClick(event) {
     event.stopPropagation()
     event.preventDefault()
@@ -62,33 +114,7 @@ window.onload = function (e) {
     return path
   }
   
-  const charts = document.getElementsByClassName('availability-pie')
-  const values = [[84, '#17bd3d'], [8, '#ffc107'], [6, '#d19d00'], [2, '#dc3545']]
-  let startingPoint = 0
-
-  for (let i = 0; i < charts.length; i++) {
-    values.forEach(value => {
-      charts[i].prepend(pieChart(value[0], 250, value[1], startingPoint))
-      startingPoint += 360 * value[0] / 100
-    })
-  }
-  
-  const el = document.getElementsByClassName('documentation-card')
-  const commentSwitches = document.getElementsByClassName('toggle-comments')
-
-  for (let i = 0; i < el.length; i++) {
-    el[i].querySelectorAll('.tab-list')[0].addEventListener('click', onTabClick, false)
-    commentSwitches[i].addEventListener('click', toggleComments, false)
-  }
-
   //search and filtering
-  let instance = new Mark(document.querySelectorAll('.documentation-card'))
-  let searchInput = document.querySelector('input[name="catalogue-search"]')
-  let scopeFilter = document.querySelector('select[name="catalogue-scope"]')
-  let typeFilter = document.querySelector('select[name="catalogue-type"]')
-  let usecaseFilter = document.querySelector('select[name="catalogue-usecase"]')
-  let providerFilter = document.querySelector('select[name="catalogue-providers"]')
-  let stateFilter = document.querySelector('select[name="catalogue-openstate"]')
 
   toggleNonMarkedPanels()
   toggleCategories()
@@ -108,7 +134,6 @@ window.onload = function (e) {
 
   function toggleNonMarkedPanels() {
     const categories = document.querySelectorAll('.catalogue__category')
-    // const panels = document.querySelectorAll('.documentation-card')
     const scope = scopeFilter.value
     const usecase = usecaseFilter.value
     const provider = providerFilter.value
@@ -178,7 +203,6 @@ window.onload = function (e) {
 
     for (let k = 0; k < allPanels.length; k++) {
       if (allPanels[k].offsetParent) {
-        console.log('visible')
         panelCount++
       }
     }
@@ -211,7 +235,6 @@ window.onload = function (e) {
         noResults = false
       }
     }
-
   }
 
   function delay(fn) {
@@ -221,11 +244,4 @@ window.onload = function (e) {
       timer = setTimeout(fn.bind(this, ...args), 200)
     }
   }
-
-  searchInput.addEventListener("input", delay(performMark))
-  scopeFilter.addEventListener("change", toggleNonMarkedPanels)
-  typeFilter.addEventListener("change", toggleCategories)
-  usecaseFilter.addEventListener("change", toggleNonMarkedPanels)
-  providerFilter.addEventListener("change", toggleNonMarkedPanels)
-  stateFilter.addEventListener("change", toggleNonMarkedPanels)
 }

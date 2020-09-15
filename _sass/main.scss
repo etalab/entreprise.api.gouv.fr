@@ -225,4 +225,27 @@ a.tpl-main-header__link:hover {
     transform: translateX(-50%);
     z-index: 100;
   }
+  
+  button.button-link {
+    border: 0;
+    box-shadow: none;
+    color: #80A2D7;
+    cursor: pointer;
+    display: none;;
+    font-size: 0.75em;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover:not([disabled]) {
+      color: var(--dark-grey);
+    }
+
+    svg {
+      pointer-events: none;
+    }
+  }
 }
