@@ -1,4 +1,4 @@
-window.onload = function (e) {
+window.addEventListener('load', function (e) {
   let instance = new Mark(document.querySelectorAll('.documentation-card'))
   let searchInput = document.querySelector('input[name="catalogue-search"]')
   let scopeFilter = document.querySelector('select[name="catalogue-scope"]')
@@ -16,12 +16,6 @@ window.onload = function (e) {
       charts[i].prepend(pieChart(value[0], 250, value[1], startingPoint))
       startingPoint += 360 * value[0] / 100
     })
-  }
-  
-  const linkButtons = document.querySelectorAll('.button-link')
-
-  for (let j = 0; j < linkButtons.length; j++) {
-    linkButtons[j].addEventListener('click', onButtonClick, false)
   }
   
   const el = document.getElementsByClassName('documentation-card')
@@ -244,4 +238,4 @@ window.onload = function (e) {
       timer = setTimeout(fn.bind(this, ...args), 200)
     }
   }
-}
+})

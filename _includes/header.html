@@ -5,6 +5,12 @@
         alt="{{ .Site.Title }}" />
     </a>
     <nav class="tpl-site-nav" role="navigation">
+      <button id="toggle-nav" class="tpl-button tpl-button-alternate">
+        Menu
+        <svg class="tpl-icon" viewBox="0 0 24 24">
+          <use xlink:href="#menu"></use>
+        </svg>
+      </button>
       <ul class="tpl-site-nav__links">
         {% for link in site.data.header %}
         {% if link.target %}

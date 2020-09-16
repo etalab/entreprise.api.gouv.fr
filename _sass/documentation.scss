@@ -143,4 +143,10 @@
   .fold:hover .button-link {
     display: block;
   }
+
+  @media (max-width: 1000px) {
+    .tpl-documentation__sidebar {
+      display: none;
+    }
+  }
 }
