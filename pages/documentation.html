@@ -14,7 +14,7 @@ additional_js:
   {% for category in categories %}
     <h2 class="category-title" id="{{ category.identifier }}">
       {{ category.title }}
-      <button class="tpl-button tpl-button--alternate button-link" data-link="{{ site.baseurl }}/documentation/#{{ category.identifier }}" title="Copier le lien vers cette section">
+      <button class="tpl-button tpl-button--alternate button-link" data-link="{{ site.baseurl }}/doc/#{{ category.identifier }}" title="Copier le lien vers cette section">
         <svg class="tpl-icon" viewBox="0 0 24 24">
           <use xlink:href="#link"></use>
         </svg>
