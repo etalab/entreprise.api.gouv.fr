@@ -1,11 +1,11 @@
 ---
-access: Sous habilitation&nbsp;;<br>ou disponible partiellement sur
-  [api.insee](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
-  et [entreprise.data.gouv](https://entreprise.data.gouv.fr/).
 providers:
   - insee
   - infogreffe
 new: ""
+access: Sous habilitation&nbsp;;<br>ou disponible partiellement sur
+  [api.insee](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
+  et [entreprise.data.gouv](https://entreprise.data.gouv.fr/).
 questions:
   qr1:
     question: Comment utiliser les données (privées) des entreprises non diffusibles ?
@@ -37,7 +37,7 @@ questions:
     answer: ""
 weight: 1
 type: Informations générales
-title: Données de référence
+title: Données de référence d'une entreprise
 label: entreprises
 scope:
   - entreprises
@@ -185,7 +185,7 @@ services:
             Vous pouvez accéder aux entreprises non-diffusibles en ajoutant le paramètre `non_diffusables=true`. Un champ supplémentaire apparaît alors `diffusable_commercialement` indiquant si l'entreprise est diffusée ou non.
 
 
-            ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusibles, l'API vous renverra un code `HTTP 403`, même si votre token comporte les droits d'accès.
+            ⚠️ Sans l'utilisation de cette option d'appel, si l'entreprise fait partie des non-diffusibles, l'API vous renverra un code `HTTP 451`, même si votre token comporte les droits d'accès.
 
 
             ###### Cas particulier d'unités présentes dans la base Sirene mais non disponibles

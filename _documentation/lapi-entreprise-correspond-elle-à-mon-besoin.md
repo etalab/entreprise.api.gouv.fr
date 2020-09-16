@@ -1,7 +1,7 @@
 ---
 weight: 1
 title: "Étape 1 : L’API Entreprise correspond-elle à mon besoin ?"
-id: besoins
+identifier: besoins
 panels:
   panel1:
     title: Les cas d’usage d’API Entreprise
@@ -287,5 +287,5 @@ panels:
       * ou bien vous avez une direction des systèmes d’information (DSI) qui peut intégrer des APIs.
 
 
-      Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](../documentation/#fondamentaux).
+      Pour comprendre en détail les éléments techniques nécessaires consulter la rubrique [Les fondamentaux à mettre en place avec l'équipe technique](#fondamentaux).
 ---

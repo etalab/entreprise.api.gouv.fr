@@ -1,6 +1,7 @@
 ---
 weight: 3
 title: "Étape 3 : Démarrer avec API Entreprise"
+identifier: demarrer
 id: demarrer
 panels:
   panel1:
@@ -17,7 +18,7 @@ panels:
       </summary>
 
 
-      Après avoir lu les étapes 1 et 2, [ L'API Entreprise correspond-elle à mon besoin ?](../documentation/#étape1lapientreprisecorrespondelleàmonbesoin) et [Les prérequis techniques avant d'aller plus loin](../documentation/#étape2lesprérequistechniquesavantdallerplusloin), vous êtes désormais prêt à faire une demande d'accès. 
+      Après avoir lu les étapes 1 et 2, [ L'API Entreprise correspond-elle à mon besoin ?](#besoins) et [Les prérequis techniques avant d'aller plus loin](#prerequis), vous êtes désormais prêt à faire une demande d'accès. 
 
       Pour vous permettre d'anticiper, ci-dessous la liste des informations nécessaires : 
 
@@ -53,6 +54,7 @@ panels:
        </summary>
 
        Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
+
        </details>
 
       * **les coordonnées du contact métier**.
@@ -73,17 +75,17 @@ panels:
 
       <summary>
 
-      ###### Étape 1 : Faire sa demande d'habilitation sur Data Pass 📝
+      ###### Étape 1 : Faire sa demande d'habilitation sur api.gouv.fr 📝
 
       </summary>
 
 
-      **Création du compte Data Pass**
+      **Création du compte api.gouv.fr**
 
 
       |-------------------|:---------------:|
 
-      | Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [datapass.api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme Data Pass vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe d'api.gouv.fr gérant la plateforme Data Pass, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png){:width="1000"}       |
+      | Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe api.gouv.fr, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png){:width="1000"}       |
 
 
       | Ensuite, il vous est demandé **le numéro de SIRET de votre organisation**, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/data-pass-creation-compte-siret.png){:width="1000"}        |
@@ -94,12 +96,12 @@ panels:
 
       |-------------------|:---------------:|
 
-      |Remplissez [le formulaire de demande d’accès Data Pass](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
+      |Remplissez [le formulaire de demande d’accès api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
 
-      |Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire qui reste à l’état de brouillon dans votre interface.            |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png){:width="1000"}        |
+      |Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire. Pour cela, n'oubliez pas de cliquer sur le bouton "Sauvegarder le brouillon" se trouvant en bas du formulaire.        |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png){:width="1000"}        |
 
 
-      <a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise">Se rendre sur Data Pass</a>
+      <a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise">Se rendre sur api.gouv.fr</a>
 
 
       </details>
@@ -119,13 +121,13 @@ panels:
 
       * ❌ Si votre dossier est refusé, des précisions supplémentaires vous seront demandée avant tout refus définitif ;
 
-      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé et vous fournit un lien pour choisir le mot de passe de votre futur espace personnel. Une fois votre mot de passe configuré, [connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login).
+      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé. [Connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login) avec vos identifiants api.gouv.fr.
 
 
       </details>
 
 
-      ![](../assets/images/documentation/schema-habilitation-2.png)
+      ![](../assets/images/documentation/schema-procede-habilitation-api-entreprise.png)
     id: demande-habilitation
   panel2:
     title: Habilitation validée ✅, récupérer son token 🔐
@@ -171,7 +173,7 @@ panels:
 
       |`&object= RaisonDeL'AppelOuIdentifiant`|**La raison de l'appel** <br> ou l'identifiant de la procédure <br>(numéro de marché publique, nom de la procédure, description courte (< 50 caractères))
 
-      |`?user_id= IdentifiantDeL'UtilisateurPhysique`|*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira en cas d’utilisation anormal de l’API pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée. 
+      |`?user_id= IdentifiantDeL'UtilisateurPhysique`|*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira, en cas d’utilisation anormale de l’API, pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée. 
 
 
       #### Voir ma première trace d’appel dans le tableau de bord

@@ -1,10 +1,15 @@
 window.onload = function (e) {
   if (window.location.hash) {
-    console.log('pouet')
     const hash = window.location.hash
     openDetails(hash)
   }
 
+  const linkButtons = document.querySelectorAll('.button-link')
+
+  for (let j = 0; j < linkButtons.length; j++) {
+    linkButtons[j].addEventListener('click', onButtonClick, false)
+  }
+  
   const links = document.querySelectorAll('.documentation a')
 
   for (let i = 0; i < links.length; i++) {

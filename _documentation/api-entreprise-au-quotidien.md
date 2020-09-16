@@ -1,6 +1,7 @@
 ---
 weight: 4
 title: "Étape 4 : API Entreprise au quotidien"
+identifier: quotidien
 id: quotidien
 panels:
   panel1:
@@ -81,8 +82,9 @@ panels:
     title: Renouveler un token en fin de vie 💫
     id: renouvellement-token
     content: >-
-      
-      Pour des raisons de sécurité, tous les jetons émis sont valables pour **une durée de 18 mois**. Au delà de ce délai, ils ne fonctionnent plus, et votre accès à l'API Entreprise est donc totalement arrêté. 
+      Pour des raisons de sécurité, tous les jetons émis sont valables pour
+      **une durée de 18 mois**. Au delà de ce délai, ils ne fonctionnent plus,
+      et votre accès à l'API Entreprise est donc totalement arrêté. 
 
 
       En réalité, cette situation n'est pas censée arriver car API Entreprise a mis en place une procédure simple de renouvellement de token. En voici les étapes : 
@@ -97,7 +99,7 @@ panels:
       </summary>
 
 
-      Trois mois avant l'arrivée à terme d'un jeton, vous reçevez **des notifications automatiques vous informant de l'expiration à venir de votre jeton ainsi qu'une invitation à le renouveler**. Les notifications sont envoyées régulièrement jusqu'au renouvellement (90 jours avant la date d'expiration, puis 60 jours avant, puis 30, 15, ...).
+      Trois mois avant l'arrivée à terme d'un jeton, vous recevez **des notifications automatiques vous informant de l'expiration à venir de votre jeton ainsi qu'une invitation à le renouveler**. Les notifications sont envoyées régulièrement jusqu'au renouvellement (90 jours avant la date d'expiration, puis 60 jours avant, puis 30, 15, ...).
 
 
       </details>
@@ -112,12 +114,29 @@ panels:
       </summary>
 
 
-      La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement Data Pass**. Si le contexte de votre utilisation d'API Entreprise n'a pas changé, **inscrivez simplement les mêmes informations** que lors de votre demande initiale. Pensez à mettre à jour les informations de contacts.
+      Un renouvellement de jeton est en pratique une nouvelle demande d'accès.
+
+      Il existe deux possibilités de renouvellement de votre token selon que vous ayez fait votre dernière demande avant septembre 2019 ou après. Nous avons en effet transformé l'outil pour effectuer une demande d'accès à l'API Entreprise. Hier, il s'agissait de demarches-simplifiees.fr ; aujourd'hui, il s'agit d'api.gouv.fr. 
 
 
-      {:.tpl-notification.tpl--success}
+      **Cas n°1 : Votre dernière demande remonte avant septembre 2019** et a été réalisée au travers de demarches-simplifiees.fr
 
-      Pour les utilisateurs ayant fait leur demande d'habilitation via la plateforme Data Pass, le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de la demande initiale. 
+
+      La notification d'expiration vous a conduit directement sur cette documentation. Effectivement, la plateforme demarches-simplifiees.fr n'étant plus la plateforme utilisée par API Entreprise, nous allons devoir vous demander de créer un compte sur api.gouv.fr. Nous vous prions d'accepter nos excuses pour la gêne occasionnée, ce transfert étant dans l'objectif de vous fournir un meilleur service.
+
+
+      Pour renouveler votre token, vous allez donc **suivre la démarche d'une demande d'accès**. [Tout est expliqué en détail ici](../doc/#demande-habilitation).
+
+
+      {:.tpl-notification}
+
+      Si votre situation d'usage de l'API Entreprise n'a pas changé, inscrivez les mêmes informations utilisées dans votre demande sur demarches-simplifiees.fr. Pensez surtout à mettre à jour les informations de contact.
+
+
+      **Cas n°2 : Votre dernière demande est intervenue après septembre 2019**, et a été réalisée au travers d'api.gouv.fr.
+
+
+      La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement api.gouv.fr**. Le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de la demande initiale. Pensez à mettre à jour les informations de contacts.
 
 
       </details>
@@ -157,7 +176,7 @@ panels:
       #### Vérifier ne pas avoir dépassé la volumétrie autorisée
 
 
-      Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](../documentation/#respecter-la-volumétrie).
+      Le service API Entreprise semble soudainement rejeter vos requêtes ? Vérifiez que vous avez bien [respecté les limites de volumétrie](#respecter-la-volumétrie).
 
 
       #### Agir en cas d'indisponibilité globale avérée
@@ -171,7 +190,7 @@ panels:
       Vous souhaitez élargir le périmètre des endpoints auxquels vous avez accès
       ? \
 
-      **[Il vous faut refaire une demande d'habilitation](../documentation/#demande-habilitation).**
+      **[Il vous faut refaire une demande d'habilitation](#demande-habilitation).**
 
 
       Pour toute nouvelle demande, il vous faudra **justifier le cadre légal**. 

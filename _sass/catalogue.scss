@@ -97,6 +97,8 @@
 
   .documentation-card__header h3 {
     margin-top: 0;
+    padding-right: var(--spacing-m);
+    position: relative;
   }
 
   .documentation-card__header .documentation__description {
@@ -505,6 +507,14 @@
     width: 4em;
     height: 4em;
     margin-right: var(--spacing-xs);
+  }
+
+  button.button-link {
+    top: var(--spacing-s);
+  }
+
+  .documentation-card__header:hover .button-link {
+    display: block;
   }
 
   @media (max-width: 1085px) {

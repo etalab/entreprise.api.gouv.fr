@@ -1,7 +1,7 @@
 ---
 weight: 6
 title: Co-construire le service
-id: coconstruire-service
+identifier: coconstruire-service
 panels:
   panel1:
     title: Signaler une anomalie

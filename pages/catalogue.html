@@ -4,6 +4,7 @@ title: Catalogue de données
 permalink: /catalogue/
 additional_js:
   - mark.min.js
+  - links.js
   - catalogue.js
 is_catalogue: true
 ---
@@ -12,6 +13,7 @@ is_catalogue: true
 {% assign catalogue_types = site.catalogue_types %}
 {% assign catalogue_usecases = site.catalogue_usecases %}
 <section class="catalogue">
+  <div id="flash"></div>
   <p>Visibilité de <span id="visible-endpoints">{{ site.catalogue.size }}</span> sur {{ site.catalogue.size }} données API Entreprise</p>
   <div class="tpl-documentation">
     <div class="tpl-documentation__content">
@@ -60,7 +62,15 @@ is_catalogue: true
                     {% endif %}
                     {% endfor %}
                   </div>
-                  <h3>{{ endpoint.title }} <code class="tpl-code">{{ endpoint.label }}</code></h3>
+                  <h3>
+                    {{ endpoint.title }}
+                    <code class="tpl-code">{{ endpoint.label }}</code>
+                    <button class="tpl-button tpl-button--alternate button-link" data-link="{{ site.baseurl }}/catalogue/#{{ endpoint.label }}" title="Copier le lien vers cette section">
+                      <svg class="tpl-icon" viewBox="0 0 24 24">
+                        <use xlink:href="#link"></use>
+                      </svg>
+                    </button>
+                  </h3>
                   <p class="documentation__description">{{ endpoint.description | markdownify }}</p>
                   <div class="tpl-flex-row tpl-flex-jc-sb description">
                     <dl class="tpl-description-list">

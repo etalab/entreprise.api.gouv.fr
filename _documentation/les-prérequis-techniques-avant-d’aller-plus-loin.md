@@ -1,7 +1,7 @@
 ---
 weight: 2
 title: "Étape 2 : Les prérequis techniques avant d’aller plus loin"
-id: prerequis
+identifier: prerequis
 panels:
   panel1:
     title: Qu’est-ce qu’une API ? 🤖
@@ -76,7 +76,7 @@ panels:
 
         Pour passer votre appel, vous pourriez écrire l’URL dans votre navigateur. La page chargée vous renverrait les données demandées.
         C’est ce que nous vous proposons de faire ici **par le biais d’un test uniquement**.
-        ⚠️ En effet, il y a des précautions à prendre : Par défaut, l’historique de votre navigateur enregistre des informations confidentielles dont votre jeton d’accès. Or comme vous avez pu le lire dans la rubrique précédente [Un accès sous habilitation et sous conditions](../documentation/#acces), la grande majorité des données accessibles par API Entreprise sont protégées par des secrets, vous êtes donc tenus de vous assurer qu’elles ne soient pas diffusées.
+        ⚠️ En effet, il y a des précautions à prendre : Par défaut, l’historique de votre navigateur enregistre des informations confidentielles dont votre jeton d’accès. Or comme vous avez pu le lire dans la rubrique précédente [Un accès sous habilitation et sous conditions](#acces), la grande majorité des données accessibles par API Entreprise sont protégées par des secrets, vous êtes donc tenus de vous assurer qu’elles ne soient pas diffusées.
       * En production, par le biais d’un logiciel métier :
 
         Pour veiller à la protection des données, l’ensemble des appels que vous allez réaliser en production seront passés par l’intermédiaire d’un logiciel métier.
@@ -180,7 +180,7 @@ panels:
 
       Le token peut également être supprimé s’il a été diffusé par mégarde.
 
-      Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](https://dashboard.entreprise.api.gouv.fr/login). Pour en savoir plus sur le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](../documentation/#tape-2--remplir-le-formulaire-de-renouvellement-).
+      Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](https://dashboard.entreprise.api.gouv.fr/login). Pour en savoir plus sur le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](#tape-2--remplir-le-formulaire-de-renouvellement-).
   panel3:
     title: Les fondamentaux à mettre en place avec l'équipe technique 🧰
     id: fondamentaux

@@ -11,7 +11,7 @@ columns:
     children:
       -
         label: API - Documentation
-        url: https://doc.entreprise.api.gouv.fr
+        url: https://entreprise.api.gouv.fr/documentation
       -
         label: Tableau de bord
         url: https://dashboard.entreprise.api.gouv.fr
@@ -20,7 +20,7 @@ columns:
         target: pages/use_cases.html
       -
         label: Demander un accès
-        target: pages/demander_un_acces.md
+        url: https://entreprise.api.gouv.fr/doc/#demande-habilitation
   - 
     label: Légal
     children:

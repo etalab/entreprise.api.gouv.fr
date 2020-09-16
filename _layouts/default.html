@@ -25,7 +25,7 @@
     }
   </script>
   {% for file in page.additional_js %}
-  <script type=" text/javascript"
+  <script type="text/javascript"
     src="{% if file contains '://' %}{{ file }}{% else %}{{ site.baseurl }}/assets/js/{{ file }}{% endif %}"></script>
   {% endfor %}
 </body>
