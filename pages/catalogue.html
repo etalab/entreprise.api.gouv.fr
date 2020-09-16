@@ -26,9 +26,9 @@ is_catalogue: true
               <h3 class="catalogue__category-title" id="{{ category.name }}">{{ category.name }}</h3>
               {% assign items = category.items | sort: 'weight' %}
               {% for endpoint in items %}
-              <div class="tpl-panel documentation-card" id="{{ endpoint.label }}" 
-                {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %} 
-                {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %} 
+              <div class="tpl-panel documentation-card" id="{{ endpoint.label }}"
+                {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %}
+                {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %}
                 {% for usecase in endpoint.usecases %}
                   {% for case in catalogue_usecases %}
                     {% if usecase == case[1] %}
@@ -36,7 +36,7 @@ is_catalogue: true
                     {% endif %}
                   {% endfor %}
                 {% endfor %}
-                {% for provider in endpoint.providers %}data-{{ provider }}="1"{% endfor %} 
+                {% for provider in endpoint.providers %}data-{{ provider }}="1"{% endfor %}
                 data-openstate="{{ endpoint.opening }}">
                 <div class="documentation-card__header">
                   <div class="endpoint-scope">
@@ -253,7 +253,7 @@ is_catalogue: true
             {% endif %}
           {% endfor %}
         {% endfor %}
-        <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}/documentation/#demande-habilitation">Demander un accès</a>
+        <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}/doc/#demande-habilitation">Demander un accès</a>
       </nav>
     </aside>
   </div>
