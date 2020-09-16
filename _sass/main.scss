@@ -1,3 +1,7 @@
+.tpl-container {
+  max-width: 1400px;
+}
+
 .tpl-main-header .tpl-container {
   padding: 0 var(--spacing-s);
 }
@@ -26,6 +30,17 @@ a.tpl-main-header__link:hover {
   content: none;
 }
 
+@media (max-width: 800px) {
+  .tpl-main-header .tpl-container {
+    flex-direction: column;
+    padding-top: 1em;
+  }
+
+  .tpl-site-nav {
+    justify-content: start;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -41,6 +56,7 @@ a.tpl-main-header__link:hover {
 
 .tpl-footer img {
   height: 2em;
+  margin-top: var(--spacing-m);
 }
 
 .notification {
@@ -134,7 +150,7 @@ a.tpl-main-header__link:hover {
 
 .tpl-documentation a.tpl-button {
   color: var(--white);
-  margin-top: 1em;
+  margin: var(--spacing-m) 0;
 }
 
 .tpl-documentation__content {
@@ -148,4 +164,88 @@ a.tpl-main-header__link:hover {
 
 .use-cases a.tpl-card {
   text-decoration: none;
+}
+
+.catalogue,
+.documentation {
+  .tpl-documentation__links {
+    background: 0;
+    box-shadow: none;
+    color: var(--primary);
+    position: sticky;
+    top: 2em;
+  }
+
+  .tpl-documentation__links h3 {
+    padding: var(--spacing-s);
+    padding-bottom: 0;
+    font-size: 1.25em;
+    text-decoration: underline;
+  }
+
+  .tpl-documentation__links h4 {
+    font-size: 0.75em;
+  }
+
+  .tpl-documentation__link {
+    display: flex;
+    margin-left: 1.5em;
+  }
+
+  .tpl-documentation__sidebar {
+    flex-basis: 20em;
+
+    .tpl-button--alternate {
+      background-color: var(--white);
+      border-color: var(--primary);
+      color: var(--primary);
+      justify-content: center;
+      margin-left: var(--spacing-xl);
+    }
+  }
+  
+  .tpl-documentation__sidebar summary,
+  .documentation .tpl-documentation__sidebar a {
+    color: var(--primary);
+    cursor: pointer;
+    font-family: var(--font-family-title);
+    font-weight: 700;
+    margin: var(--spacing-xs) var(--spacing-m);
+  }
+
+  #flash {
+    border-radius: var(--border-radius-default);
+    display: none;
+    padding: 0.75em 1.25em;
+    position: fixed;
+    top: 2em;
+    background-color: var(--darker-grey);
+    color: var(--white);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  
+  button.button-link {
+    border: 0;
+    box-shadow: none;
+    color: #80A2D7;
+    cursor: pointer;
+    display: none;;
+    font-size: 0.75em;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover:not([disabled]) {
+      color: var(--dark-grey);
+    }
+
+    svg {
+      pointer-events: none;
+    }
+  }
 }

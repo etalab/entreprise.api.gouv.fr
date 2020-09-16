@@ -18,13 +18,13 @@ email: support@entreprise.api.gouv.fr
 description: > # this means to ignore newlines until "baseurl:"
   Simplifier les démarches des entreprises en récupérant pour elles
   leurs données et documents administratifs.
+baseurl: "/entreprise.api.gouv.fr" # the subpath of your site, e.g. /blog
+url: "https://etalab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # The baseurl option is set for links (especialy assets links) to work
 # with Github pages. For the production environment the website is built
 # with the `--baseurl ''` option so the site can be served from the root
 # domain. This way links will work in both environment.
-baseurl: "/entreprise.api.gouv.fr" # the subpath of your site, e.g. /blog
-url: "https://entreprise.api.gouv.fr" # the base hostname & protocol for your site, e.g. http://example.com
 
 cgu_file_link: 'https://entreprise.api.gouv.fr/assets/cgu.pdf'
 signup_url: 'https://signup.entreprise.api.gouv.fr'
@@ -42,9 +42,12 @@ collections:
     output: true
   use_cases:
       output: true
+  catalogue:
+  documentation:
 
 # API Entreprise specific variables
-api_documentation_url: https://doc.entreprise.api.gouv.fr
+api_url: https://entreprise.api.gouv.fr/v2/
+api_documentation_url: https://entreprise.api.gouv.fr/doc
 dashboard_url: https://dashboard.entreprise.api.gouv.fr
 gitbook_url: https://etalab-entreprise.gitbook.io/api-entreprise-documentation-infra
 signup_url: https://signup.entreprise.api.gouv.fr
@@ -56,6 +59,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-target-blank
+  - jekyll-last-modified-at
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -71,3 +75,44 @@ plugins:
 
 sass:
   style: compressed
+
+providers_aliases:
+  infogreffe: 'Infogreffe'
+  insee: 'INSEE'
+  dgfip: 'DGFIP'
+  acoss: 'ACOSS'
+  inpi: 'INPI'
+  bdf: 'Banque de France'
+  qualibat: 'Qualibat'
+  mi: 'Ministère de l’Intérieur'
+  cnetp: 'CNETP'
+  probtp: 'ProBTP'
+  msa: 'MSA'
+  opqibi: 'OPQIBI'
+  fntp: 'FNTP'
+  agefiph: 'agefiph'
+  ademe: 'ADEME'
+
+
+empty_array: []
+
+catalogue_types: 
+  - 'Toutes les catégories'
+  - 'Informations générales'
+  - 'Informations financières'
+  - 'Attestations sociales et fiscales'
+  - 'Certifications professionnelles'
+  - 'Propriété intellectuelle'
+
+catalogue_usecases:
+  aidespubliques: 'Aides publiques'
+  marchespublics: 'Marchés publics'
+  repertoiredetiers: 'Répertoire de tiers'
+  loienergie: 'Application de la loi énergie - Art.64'
+  covid: 'Aide d’urgence Covid-19'
+
+catalogue_openstate:
+  - 'Données publiques'
+  - 'Données publiques et confidentielles pour les non-diffusibles'
+  - 'Données confidentielles'
+  - 'Données publiques et confidentielles'

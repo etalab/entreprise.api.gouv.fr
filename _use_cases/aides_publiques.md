@@ -26,49 +26,82 @@ L’utilisation de ces données répond à un certain nombre de principes :
 
 Certaines données sont publiques et d’autres réservées à l’administration. Dans la mesure où il n’existe pas encore de système d’identification pour les personnes morales, il convient de ne pas communiquer les informations confidentielles dans les services en ligne qui leur sont proposés ouverts au public, sans authentification à l'entrée.
 
-### Le pré-remplissage avec des données publiques
+#### Le pré-remplissage avec des données publiques
 
-Les données publiques sont peuvent être utilisées pour pré-remplir les formulaires d’inscription dans les dispositifs d’aide et de subvention. 
+Les données publiques peuvent être utilisées pour pré-remplir les formulaires d’inscription dans les dispositifs d’aide et de subvention.
 
-> Quel avantage à passer par API Entreprise si les données sont libres ? API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.
 
-Attention, certaines personnes morales n’ont pas souhaité apparaître dans les données diffusées publiquement (voir non diffusés de l’INSEE). De ce fait, vous ne pouvez pas utiliser ces données pour le pré-remplissage. 
+***Quel avantage à passer par API Entreprise si les données sont libres ?***
+*API Entreprise vous simplifie l'implémentation de cette aide à la saisie, en vous donnant accès à une information structurée, facilement intégrable dans votre produit.*
 
-Deux options se présentent dans ce cas :
+{:.tpl-notification}
+Attention, **certaines personnes morales n’ont pas souhaité apparaître dans les données diffusées publiquement** (voir non diffusés de l’INSEE). De ce fait, **vous ne pouvez pas utiliser ces données pour le pré-remplissage**.
+Deux options se présentent dans ce cas : <br> 1. Signifier à ces personnes morales qu’elles peuvent changer ce statut et bénéficier du pré-remplissage sinon il faut saisir les données. <br> 2. Ne pas afficher les données en front, mais récupérer les données pour que vos agents en bénéficient. <br> Les données confidentielles sont donc visibles en back-office pour les agents sous forme de données structurées ou de pdf.
 
-1. Signifier à ces personnes morales qu’elles peuvent changer ce statut et bénéficier du pré-remplissage sinon il faut saisir les données.
-2. Ne pas afficher les données en front, mais récupérer les données pour que vos agents en bénéficient.
-Les données confidentielles sont donc visibles en back-office pour les agents sous forme de données structurées ou de pdf.
+#### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
 
-### L'obtention d'une donnée ou d'un document privés, en back office, par un agent habilité
-    
 En utilisant API Entreprise, les entreprises et associations en demande d’aide publiques n’ont plus besoin de vous fournir certains justificatifs. Les documents et données sont récupérés automatiquement, ce qui facilite grandement l’instruction de leurs dossiers.
 
 40% des utilisateurs  d’API Entreprise (régionaux, départements, communes, Banque Publique d’Investissement  notamment) utilisent notre service dans ce cadre.
 
 ## Données utiles
 
+Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.**
+
+Vous trouverez ci-dessous les données classées dans différentes catégories :
+- [Informations générales](#infos_generales),
+- [Informations financières](#infos_financieres),
+- [Attestations sociales et fiscales](#attestations_sociales_fiscales),
+- [Certificats professionnels](#certificats_pro),
+- [Propriété intellectuelle](#propriete_intellectuelle).
+
+#### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
-| Données              | Type         | Ouverture       | Producteur               | Commentaires             |
-| -------------------  | ------------ | --------------- | ------------------------ | ----------------------   |
-| Entreprise           | données JSON | publiques       | INSEE & Infogreffe       | Les mandataires sont issus d'infogreffe      |                                       |
-| Etablissement        | données JSON | publiques       | INSEE                    | /                                                      |
-| Extrait  RCS         | données JSON | publiques       | Infogreffe.              | Observation existantes sur le kbis : changements de capital, les transferts de siège, les fusions, les redressements et liquidations judiciaires (si publiques).         |
-| Association          | données JSON | publiques       | Ministère de l'Intérieur | /                                             |
-| Document association | PDF (image)  | publiques       | Ministère de l'Intérieur | /                                               |
-| Exercices            | données JSON | confidentielles | DGFIP                    | Données issues de la liasse fiscale            |
-| Bilan entreprise    | données JSON | confidentielles | Banque de France         | Indisponibilités récurentes et prévisibles |
-| Liasse fiscale       | données JSON | confidentielles | DGFIP                    | Données complexes dont la structure varie chaque année.                                                                                                                        |
-| Attestation fiscale  | PDF (texte)  | confidentielles | DGFIP                    | Parfois instables. Pour une même entreprise l'API peut retourner une réponse ou non à quelques minutes de différence.                                                |
-| Attestation sociale  | PDF (texte)  | confidentielles | ACOSS                    | Asynchrone pour certaines entreprises     |
-| Attestation AGEFIPH  | données JSON | confidentielles | AGEFIPH                  | /                                            |
-| Cotisation MSA       | données JSON | confidentielles | MSA                      | /                                            |
-| Certificat PROBTP    | données JSON | publiques       | PROBTP                   | /                                               |
-| Certificat CNETP     | PDF          | publiques       | CNETP                    | /                                            |
-| Certificat RGE       | données JSON et PDF | publiques| ADEME                    | /                                              |
-| Certificat OPQIBI    | données JSON | publiques       | OPQIBI                   | /                                              |
-| Extrait INPI         | données JSON | publiques       | INPI                     | marques et brevets déposés                     |
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises ){:target="_blank"}                 |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques    |
+| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements){:target="_blank"}               |          INSEE           |          `etablissements`           |    données JSON     |    publiques    |
+| [Extrait  RCS](https://doc.entreprise.api.gouv.fr/?json#infogreffe-extrait-rcs){:target="_blank"}                                          |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    publiques    |
+| [Données déclaratives d'une association](https://doc.entreprise.api.gouv.fr/?json#associations-rna){:target="_blank"}                | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
+| [Divers documents d'une association](https://doc.entreprise.api.gouv.fr/?json#documents-association){:target="_blank"}                    | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
+
+#### Informations financières <a id="infos_financieres"></a>
+
+{:.tpl-table}
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| [Chiffre d'affaires](https://doc.entreprise.api.gouv.fr/?json#exercices){:target="_blank"}                                    |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
+| [Bilans entreprise](https://doc.entreprise.api.gouv.fr/?json#bilans-entreprises-bdf-banque-de-france){:target="_blank"}                                     |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
+| [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales){:target="_blank"}      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
+
+#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
+
+{:.tpl-table}
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| [Attestation fiscale](https://doc.entreprise.api.gouv.fr/?json#attestation-fiscale-dgfip){:target="_blank"}                                   |          DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | confidentielles |
+| [Attestation de vigilance](https://doc.entreprise.api.gouv.fr/?json#attestation-sociale-acoss){:target="_blank"}                              |          ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | confidentielles |
+| [Conformité emploi des travailleurs handicapés AGEFIPH](https://doc.entreprise.api.gouv.fr/?json#attestation-agefiph){:target="_blank"} |         AGEFIPH          |          `attestations_agefiph`           |    données JSON     | confidentielles |
+| [Cotisation de sécurité sociale agricole](https://doc.entreprise.api.gouv.fr/?json#cotisations-msa){:target="_blank"}               |           MSA            |             `cotisations_msa`             |    données JSON     | confidentielles |
+| [Attestations cotisation retraite](https://doc.entreprise.api.gouv.fr/?json#cotisations-retraite-probtp){:target="_blank"}                      |          PROBTP          | `attestations_cotisation_retraite_probtp` |    données JSON     |    publiques    |
+| [Cotisations congés payés & chômage intempéries](https://doc.entreprise.api.gouv.fr/?json#certificats-cnetp){:target="_blank"}        |          CNETP           |            `certificats_cnetp`            |         PDF         |    publiques    |
+
+#### Certificats professionnels <a id="certificats_pro"></a>
+
+{:.tpl-table}
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| [Certification RGE](https://doc.entreprise.api.gouv.fr/?json#certificats-rge-ademe){:target="_blank"}                                     |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
+| [Certification de qualification OPQIBI](https://doc.entreprise.api.gouv.fr/?json#certificats-opqibi){:target="_blank"}                 |          OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
+
+#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
+
+{:.tpl-table}
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| [Brevets, modèles et marques déposées](https://doc.entreprise.api.gouv.fr/?json#extraits-courts-inpi){:target="_blank"}                  |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
+
 
 
 Les informations précises sur les données de l’API Entreprise sont disponibles dans [notre documentation](https://doc.entreprise.api.gouv.fr/#introduction).
@@ -80,15 +113,14 @@ Pour toute question, envoyez un mail à [support@entreprise.api.gouv.fr](support
 | Editeurs   | Nom de la solution | Date de mise en oeuvre |
 | ---------- | ------------------ | ---------------------- |
 | MGDIS      | Portail des Aides  | Mi-avril 2020          |
-| Entrouvert | Publik             | A préciser             |
+| Entrouvert | Publik             | À préciser             |
+| mon-territoire.fr | Atelier économique             | Juin 2020            |
+
 
 Vous souhaitez apparaître dans cette liste ? Demandez-nous en écrivant à [support@entreprise.gouv.fr](support@entreprise.gouv.fr)
 
 ## Demander un accès aux données
 
-{:.tpl-notification}
-Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance de nos endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
+Pour demander un accès, veuillez consulter [la page "Demander un accès"]({{ site.baseurl }}/doc/#demande-habilitation), un déroulé des étapes vous sera décrit.
 
-Pour demander un accès, [veuillez consulter la page "Demander un accès]({{ site.baseurl }}{% link pages/demander_un_acces.md %}), un déroulé des étapes vous sera décrit.
 
-       

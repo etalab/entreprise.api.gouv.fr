@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section class="tpl-hero left">
+  <div class="tpl-container">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="tpl-hero__subtitle">{{ page.subtitle }}</p>{% endif %}
+  </div>
+</section>
+<section class="tpl-section tpl-documentation tpl-bg--lightest-grey documentation">
+  <div class="tpl-container">
+    {{ content }}
+  </div>
+</section>

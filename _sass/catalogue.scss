@@ -1,0 +1,556 @@
+.catalogue__search {
+
+  .tpl-hero__search-button {
+    left: 0.5em;
+    z-index: 10;
+  }
+  
+  .tpl-form__group {
+    flex-direction: row;
+  }
+
+  #catalogue-search {
+    padding: 0 var(--spacing-s) 0 var(--spacing-xl);
+  }
+  
+  @media (max-width: 800px) {
+    .tpl-form__group {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.catalogue-information {
+  .tpl-button {
+    background-color: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-s);
+  }
+}
+
+.catalogue {
+  .hidden {
+    display: none;
+  }
+
+  .tpl-documentation {
+    display: flex;
+  }
+
+  .catalogue__category {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .catalogue__category-title {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  .documentation-card {
+    background-color: var(--white);
+    padding: 0;
+    position: relative;
+  }
+
+  .documentation-card+.documentation-card {
+    margin-top: var(--spacing-l);
+  }
+
+  .documentation-card h4 {
+    display: flex;
+    align-items: center;
+    text-transform: initial;
+  }
+
+  .documentation-card h4 .tpl-icon {
+    margin-right: var(--spacing-xs);
+  }
+
+  .documentation-card h4 img {
+    height: 4em;
+    margin-right: var(--spacing-xs);
+  }
+
+  .documentation-card ul {
+    padding-left: var(--spacing-s);
+  }
+
+  .documentation-card hr {
+    border-color: var(--grey);
+  }
+
+  .documentation-card summary {
+    cursor: pointer;
+  }
+
+  .documentation-card dt {
+    font-family: var(--font-family-default);
+  }
+
+  .documentation-card__header {
+    padding: var(--spacing-l) var(--spacing-xxl);
+  }
+
+  .documentation-card__header h3 {
+    margin-top: 0;
+    padding-right: var(--spacing-m);
+    position: relative;
+  }
+
+  .documentation-card__header .documentation__description {
+    width: 80%;
+  }
+
+  .documentation-card__header dd p {
+    margin-top: 0;
+  }
+
+  .documentation-card__header code {
+    margin-bottom: 0.4em;
+    margin-left: var(--spacing-xs);
+    word-wrap: anywhere;
+  }
+
+  .endpoint-scope {
+    position: absolute;
+    left: 0;
+    top: var(--spacing-l);
+  }
+
+  .endpoint-scope__item {
+    padding: var(--spacing-xxs);
+    display: flex;
+    align-items: center;
+  }
+
+  .endpoint-scope__item .tpl-icon {
+    color: var(--white);
+    fill: var(--white);
+    stroke: var(--white);
+    height: var(--spacing-m);
+    width: var(--spacing-m);
+  }
+
+  .description {
+    flex-wrap: wrap;
+  }
+
+  .description ul {
+    padding-left: var(--spacing-s);
+  }
+
+  .description .tpl-description-list {
+    flex-basis: 35%;
+    flex-shrink: 0;
+  }
+
+  .providers {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .providers img {
+    margin-top: var(--spacing-s);
+    max-height: 5em;
+    max-width: 7em;
+  }
+
+  ul.tab-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a.tab {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-s) var(--spacing-m);
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+  }
+
+  a.tab.tab--active {
+    border-color: var(--primary);
+  }
+
+  a.tab .tpl-icon {
+    margin-right: var(--spacing-xs);
+  }
+
+  .tab-content {
+    padding: var(--spacing-l);
+    display: none;
+  }
+
+  .tab-content--active {
+    display: block;
+  }
+
+  .tab-content dt,
+  .tab-content dd {
+    display: inline;
+  }
+
+  .perimeter summary h4 {
+    display: inline;
+  }
+
+  .service-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-m);
+
+    .request-json {
+      order: 3;
+    }
+
+    .response-description {
+      order: 2;
+    }
+
+    .response-json {
+      order: 4;
+    }
+  }
+
+  .services {
+    margin: 2em 0;
+  }
+
+  .services summary h4 {
+    display: inline;
+    margin: 0 0.5em 0.5em 0;
+    text-decoration: underline;
+  }
+
+  .technical-documentation .columns {
+    display: flex;
+  }
+
+  .technical-documentation .columns>div {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 1;
+    margin: var(--spacing-s) 0;
+    max-width: 48%;
+    padding: 0;
+  }
+
+  .technical-documentation .columns .response {
+    margin-left: var(--spacing-l);
+  }
+
+  .technical-documentation dl {
+    display: block;
+  }
+
+  .technical-documentation .perimeter {
+    padding: var(--spacing-s) 0;
+  }
+
+  .technical-documentation code {
+    background-color: var(--lighter-grey);
+  }
+
+  .qa {
+    background-color: var(--lighter-grey);
+    border-radius: var(--border-radius-default);
+    padding: var(--spacing-xs) var(--spacing-s);
+    position: relative;
+  }
+
+  .qa + .qa {
+    margin-top: var(--spacing-s);
+  }
+
+  .qa summary {
+    padding-right: var(--spacing-s);
+  }
+
+  .qa summary::marker {
+    content: '';
+    display: none;
+  }
+
+  .qa summary::after {
+    content: '▸';
+    position: absolute;
+    right: var(--spacing-s);
+    top: var(--spacing-xs);
+  }
+
+  .qa[open] summary {
+    font-weight: 700;
+  }
+
+  .qa[open] summary:after {
+    content: '▾';
+  }
+
+  .json-example {
+    border-radius: var(--border-radius-default);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .json-example h5 {
+    background-color: var(--grey);
+    padding: var(--spacing-xs) var(--spacing-s);
+    margin: 0;
+    text-transform: initial;
+  }
+
+  .json-example .tpl-input__group {
+    position: absolute;
+    right: var(--spacing-xs);
+    top: var(--spacing-xs);
+
+    .tpl-switch {
+      margin-left: var(--spacing-xs);
+    }
+  }
+
+  .json-example pre {
+    border: 0;
+    height: 100%;
+    margin: 0;
+  }
+
+  .json-example code {
+    background-color: var(--dark-grey);
+    border-radius: 0;
+    line-height: 1.5em;
+    resize: vertical;
+  }
+
+  .technical-documentation .highlight { 
+    margin: 0;
+  }
+
+  .technical-documentation .highlight code {
+    height: 25em;
+    white-space: pre-wrap;
+    width: 100%;
+  }
+
+  .technical-documentation .highlight .nl {
+    font-weight: 700
+  }
+
+  .technical-documentation code em,
+  .technical-documentation code .c1,
+  .technical-documentation code .err {
+    color: var(--white);
+    font-family: var(--font-family-default);
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1em;
+  }
+
+  .history {
+    margin-top: var(--spacing-m);
+
+    summary h4 {
+      display: inline-block;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .current-status {
+    padding: var(--spacing-xxs) var(--spacing-s);
+    color: var(--white);
+    display: inline-block;
+    font-weight: 700;
+    margin-left: var(--spacing-xxs);
+  }
+
+  .current-status.success {
+    background-color: var(--success);
+  }
+
+  .current-status.warning {
+    background-color: var(--warning);
+  }
+
+  .current-status.error {
+    background-color: var(--danger);
+  }
+
+  .availability-pie {
+    margin: var(--spacing-l) 0;
+    width: auto;
+  }
+
+  .availability-pie {
+    display: block;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.8);
+
+    .slice {
+      border-radius: 50%;
+      clip: rect(0px, 200px, 200px, 100px);
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    .slice:nth-child(1) {
+      z-index: 40;
+      background-color: #2ECC40;
+      transform: rotate(100deg);
+  }
+  
+    .slice:nth-child(2) {
+      z-index: 10;
+      background-color: var(--warning);
+      transform: rotate(80deg);
+    }
+    
+    .slice:nth-child(3) {
+      z-index: 20;
+      background-color: var(--warning-text);
+      transform: rotate(160deg);
+    }
+    
+    .slice:nth-child(4) {
+      z-index: 30;
+      background-color: var(--danger);
+      transform: rotate(20deg);
+    }
+  }
+
+  .availability-legend {
+    ul {
+      padding: 0;
+    }
+
+    .legend {
+      display: flex;
+      font-size: 0.75em;
+      line-height: 1em;
+      list-style-type: none;
+      margin-bottom: 1em;
+    }
+
+    .legend::before {
+      content: '';
+      display: inline-block;
+      flex-shrink: 0;
+      width: var(--spacing-l);
+      height: var(--spacing-s);
+      background-color: var(--success);
+      margin-right: var(--spacing-xxs);
+    }
+
+    .legend--intermittent::before {
+      background-color: var(--warning);
+    }
+
+    .legend--degraded::before {
+      background-color: var(--warning-text);
+    }
+
+    .legend--ko::before {
+      background-color: var(--danger);
+    }
+  }
+
+  .availability-table {
+    border-spacing: var(--spacing-xxs);
+    font-size: 0.75em;
+
+    th {
+      font-weight: 400;
+      line-height: 1em;
+    }
+
+    td:first-child {
+      line-height: 1em;
+      padding-right: 0.5em;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    td:not(:first-child) {
+      background-color: var(--success);
+      border-radius: 2px;
+      width: 11%;
+    }
+  }
+
+  .general-doc {
+    padding: 0 var(--spacing-s);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .general-doc .tpl-icon {
+    width: 4em;
+    height: 4em;
+    margin-right: var(--spacing-xs);
+  }
+
+  button.button-link {
+    top: var(--spacing-s);
+  }
+
+  .documentation-card__header:hover .button-link {
+    display: block;
+  }
+
+  @media (max-width: 1085px) {
+    .technical-documentation .columns {
+      flex-direction: column;
+    }
+
+    .technical-documentation .columns>div {
+      max-width: 100%;
+    }
+
+    .technical-documentation .columns .response {
+      margin-left: 0;
+    }
+
+    .service-description {
+      grid-template-columns: 1fr;
+
+      .request-json {
+        order: 2;
+      }
+
+      .response-content {
+        order: 3;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .tpl-documentation__sidebar {
+      display: none;
+    }
+
+    .description .tpl-description-list {
+      flex-basis: auto;
+      flex-shrink: 1;
+    }
+  }
+}

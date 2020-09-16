@@ -15,12 +15,15 @@ Les fournisseurs mettent en œuvre un traitement automatisé des données issues
 ## Données utiles
 
 {:.tpl-table}
-| Données              | Type         | Ouverture       | Producteur               | Commentaires             |
-| -------------------  | ------------ | --------------- | ------------------------ | ----------------------   |
-| Entreprise           | données JSON | publiques       | INSEE & Infogreffe       | /                                             |                                       
-| Etablissement        | données JSON | publiques       | INSEE                    | /                                                      |
-| Exercices            | données JSON | confidentielles | DGFIP                    | Chiffres d'affaire des trois dernières années de l'entreprise                                                                                                         |
-| Liasse fiscale       | données JSON | confidentielles | DGFIP                    | Données complexes dont la structure varie chaque année.                                                                                                                        |
+| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| **Informations sur les effectifs**                            |                          |                                           |                     |                 |
+| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises)                 |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques    |
+| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements)               |          INSEE           |          `etablissements`           |    données JSON     |    publiques    |
+| **Informations financières**                          |                          |                                           |                     |                 |
+| [Chiffre d'affaires](https://doc.entreprise.api.gouv.fr/?json#exercices)                                    |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
+| [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales)      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
+
 
 #### Les données d'effectifs
 
@@ -35,7 +38,7 @@ Deux point d'attention sont à prendre en compte :
 #### Les chiffres d’affaires
 
 Les données de chiffres d'affaires (chiffre d'affaire comptable) sont accessibles en utilisant le endpoint `Exercices`
-Ces données sont issues de la liasse fiscale pour les entreprises soumises à l'impôt sur les sociétés qui ont déposés leurs comptes annuels aux greffes. 
+Ces données sont issues de la liasse fiscale pour les entreprises soumises à l'impôt sur les sociétés qui ont déposés leurs comptes annuels aux greffes.
 L'API fourni les 3 derniers exercices.
 
 [documentation technique exercices](https://doc.entreprise.api.gouv.fr/#exercices)
@@ -53,8 +56,8 @@ Pour cette donnée, il est demandé de limiter les appels à une requête par se
 ## Demander un accès aux données
 
 {:.tpl-notification}
-Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance de nos endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord. 
+Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance de nos endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord.
 
-Pour demander un accès, [veuillez consulter la page "Demander un accès"]({{ site.baseurl }}{% link pages/demander_un_acces.md %}), un déroulé des étapes à suivre vous sera décrit.
+Pour demander un accès, veuillez consulter [la page "Demander un accès"]({{ site.baseurl }}/doc/#demande-habilitation), un déroulé des étapes à suivre vous sera décrit.
 
-Comme expliqué dans l'introduction, les droits d'accès seront accordés jusqu'au 8 juillet 2020.  
+Comme expliqué dans l'introduction, les droits d'accès seront accordés jusqu'au 8 juillet 2020.

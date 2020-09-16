@@ -49,7 +49,7 @@ Le Partenaire demande l’accès aux seules données strictement nécessaires à
 La demande d’accès effectuée par le Partenaire visant à obtenir un « jeton » d’accès est spécifique à ce Partenaire et à un type de démarche administrative qu’il réalise. Le Partenaire doit effectuer une demande d’accès par démarche et obtient autant de jetons que de demande.
 Le fait pour un Partenaire d’utiliser un jeton unique pour plusieurs démarches différentes, y compris en internalisant la gestion des droits d’accès, entraîne la révocation immédiate du jeton.
 
-Le Partenaire peut transmettre le jeton à un sous-traitant qui met en œuvre la démarche administrative pour son compte. Tout Partenaire recourant ainsi à la sous-traitance est responsable des actions de son sous-traitant dans le cadre du Service. En conséquence, il le tient informé de toute évolution et accomplit toute diligence à son endroit pour assurer le respect des présentes CGU.
+- Le Partenaire vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : https://datapass.api.gouv.fr/api-entreprise
 
 Le jeton est émis pour une durée maximum de deux ans, sauf révocation. Deux mois avant l’échéance, le Partenaire est invité à reformuler une demande d’adhésion au service s’il le souhaite. L’API Entreprise envoie des notifications de renouvellement par emails 3 mois avant l'expiration d'un jeton. Ces derniers sont valables pour une durée de 18 mois.
 
