@@ -148,5 +148,27 @@
     .tpl-documentation__sidebar {
       display: none;
     }
+
+    .tpl-table {
+      width: calc(100% - 4em);
+      border: 0;
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        display: block;
+        margin-bottom: var(--spacing-m);
+        border: 0;
+        box-shadow: var(--box-shadow-default);
+      }
+
+      td {
+        display: block;
+        border: 1px solid var(--lighter-grey);
+        text-align: center;
+      }
+    }
   }
 }
