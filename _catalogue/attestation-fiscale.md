@@ -77,7 +77,7 @@ services:
             sociétés ayant opté pour la consolidation du paiement de la TVA
             définie à l’article 1693 ter du CGI, dit groupe TVA, c'est cette
             société mère qui est en charge des obligations fiscales. Il vous
-            faudra donc indiqué également le SIREN du groupe TVA.
+            faudra donc indiquer également le SIREN du groupe TVA.
           comment: "Si l'entreprise appartient à un groupe TVA, ajoutez le SIREN référent
             du groupe avec le paramètre suivant :"
       questions:
