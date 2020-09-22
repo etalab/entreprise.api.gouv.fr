@@ -65,9 +65,19 @@ services:
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
-      description: Un établissement pouvant être rattaché à plusieurs conventions
-        collectives, les données de conventions sont renvoyées sous forme de
-        liste JSON.
+      description: >-
+        La réponse se compose des différentes conventions de l'établissement,
+        listées les unes après les autres, dans le cas où l'établissement en a
+        plusieurs. Les caractéristiques suivantes sont données : 
+
+
+        * le **titre** et le **titre court** de la convention ;
+
+        * l'état en **vigueur étendu ou non** de la convention ;
+
+        * son **identifiant IDCC**, numéro à 4 chiffres ;
+
+        * l'**URL Légifrance** du texte en vigueur.
       sample:
         code: >
           {
@@ -77,13 +87,15 @@ services:
                 "active": true,
                 "date_publication": "1988-01-01T00:00:00.000Z",
                 "etat": "VIGUEUR_ETEN",
+                // Indique l'état de la convention, à savoir s'il est en vigueur étendu ("VIGUEUR_ETEN"), c'est à dire applicable obligatoirement par tous les employeurs de la branche ; ou bien en vigeur non étendu ("VIGUEUR"), obligatoire uniquement pour les employeurs signataires.
                 "numero": 1486,
-                // Ce numéro correspond à l'indentifiant de la convention collective (IDCC).
+                // Ce numéro correspond à l'identifiant de la convention collective (IDCC).
                 "titre_court": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
                 "titre": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
                 "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
-                // Ce lien vous permet d'accéder au texte en vigueur de la convention collective sur Legifrance Beta.
+                // Ce lien vous permet d'accéder au texte en vigueur de la convention collective sur Legifrance.
               }
             ]
           }
+history: "##### 22/09/2020 Création de l'endpoint `conventions_collectives`"
 ---
