@@ -93,7 +93,7 @@ services:
                 "titre_court": "Bureaux d'études techniques, cabinets d'ingénieurs-conseils et sociétés de conseils",
                 "titre": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. ",
                 "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635173"
-                // Ce lien vous permet d'accéder au texte en vigueur de la convention collective sur Legifrance.
+                // Ce lien vous permet d'accéder au texte en vigueur de la convention collective sur Légifrance.
               }
             ]
           }
