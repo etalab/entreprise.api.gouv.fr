@@ -5,9 +5,9 @@ title: Conventions collectives
 label: conventions_collectives
 scope:
   - entreprises
-description: Connaître toutes les informations des conventions collectives
-  rattachées à un établissement comme le numéro identifiant et le lien vers le
-  texte en vigueur.
+description: Connaître les conventions collectives auxquelles est rattaché un
+  établissement et obtenir des informations telles que l'identifiant de la
+  convention et le lien vers le texte en vigueur.
 usecases:
   - Marchés publics
   - Aides publiques
