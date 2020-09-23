@@ -86,7 +86,7 @@
   
   table {
     border-collapse: none;
-    width: auto;
+    width: calc(100% - 4em);
   }
 
   td {
@@ -149,14 +149,27 @@
       display: none;
     }
 
-    .tpl-table {
-      width: calc(100% - 4em);
+    table {
       border: 0;
+      box-shadow: none;
 
       thead {
         display: none;
       }
 
+      td {
+        border: 0;
+        display: block;
+        text-align: center;
+
+        img {
+          margin: auto;
+          max-width: 100%;
+        }
+      }
+    }
+
+    table.tpl-table {
       tr {
         display: block;
         margin-bottom: var(--spacing-m);
@@ -165,9 +178,7 @@
       }
 
       td {
-        display: block;
         border: 1px solid var(--lighter-grey);
-        text-align: center;
       }
     }
   }
