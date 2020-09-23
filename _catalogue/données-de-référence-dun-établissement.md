@@ -34,15 +34,15 @@ label: etablissements
 scope:
   - entreprises
   - associations
-description: Obtenir des informations générales, géographiques et juridiques
-  concernant un établissement du répertoire Sirene telles que les dates de
+description: Obtenir des **informations générales, géographiques et juridiques
+  concernant un établissement** du répertoire Sirene telles que les dates de
   création et de fin, l’adresse ou l’état administratif.
 usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
   - Application de la loi énergie
-opening: Données publiques et confidentielles pour les non-diffusibles
+opening: Données publiques et confidentielles pour les non-diffusibles.
 perimeter:
   perimeter1:
     label: Lorem ipsum

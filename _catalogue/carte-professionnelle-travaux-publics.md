@@ -9,9 +9,9 @@ title: Carte professionnelle travaux publics
 label: cartes_professionnelles_fntp
 scope:
   - entreprises
-description: Récupérer la carte professionnelle d’entrepreneur de travaux
-  publics, délivrée à une entreprise en règle de ses obligations sociales,
-  administratives et juridiques.
+description: Récupérer la **carte professionnelle** d’entrepreneur de travaux
+  publics, délivrée à une entreprise de travaux publics en règle de ses
+  **obligations sociales, administratives et juridiques**.
 usecases:
   - Marchés publics
 opening: Données publiques.

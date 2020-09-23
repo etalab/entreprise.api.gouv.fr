@@ -9,8 +9,8 @@ title: Certification de qualification d'ingénierie
 label: certificats_opqibi
 scope:
   - entreprises
-description: Obtenir le certificat de l’organisme de qualification de
-  l’ingénierie indiquant la capacité d’une entreprise à réaliser une prestation.
+description: Obtenir le certificat délivré par l'OPQIBI attestant de la
+  **capacité d’une entreprise à réaliser une prestation d'ingénierie**.
 usecases:
   - Aides publiques
   - Marchés publics
@@ -115,6 +115,7 @@ services:
             "duree_de_validite_du_certificat": "valable un an",
             "assurance": "GROUPAMA",
             "url": "http://opqibi.com/fiche.php?id=2975",
+
 
             
           // LISTE DES QUALIFICATIONS 

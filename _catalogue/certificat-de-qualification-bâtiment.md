@@ -10,7 +10,7 @@ label: certificats_qualibat
 scope:
   - entreprises
 description: Obtenir le certificat Qualibat, apportant l’avis de l’association
-  sur la qualification d’une entreprise dans le bâtiment. Si vous cherchez
+  sur la **qualification d’une entreprise dans le bâtiment**. Si vous cherchez
   d'autres certificats de qualification, l'[endpoint certification
   RGE](#certificats_rge_ademe) regroupe tous les certificats, dont les
   Qualibats.

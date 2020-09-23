@@ -8,8 +8,8 @@ title: Cotisations congés payés & chômage intempéries
 label: certificats_cnetp
 scope:
   - entreprises
-description: Obtenir l’attestation de cotisation des congés payés et chomage
-  intempéries d'une entreprise, délivrée par la Caisse Nationale des
+description: Obtenir l’**attestation de cotisation des congés payés et chômage
+  intempéries** d'une entreprise, délivrée par la Caisse Nationale des
   Entrepreneurs de Travaux Publics (CNETP).
 usecases:
   - Aides publiques
@@ -106,7 +106,9 @@ services:
             En utilisant l’endpoint `certificats_cnetp`, **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
       format: Document PDF
       timeout: 12 secondes
-      description: La réponse délivre une URL de téléchargement de l’attestation au format PDF quand celle-ci est disponible, dont [voici un exemple](uploads/cnetp-attestation-marche.pdf).
+      description: La réponse délivre une URL de téléchargement de l’attestation au
+        format PDF quand celle-ci est disponible, dont [voici un
+        exemple](uploads/cnetp-attestation-marche.pdf).
       sample:
         code: >-
           {

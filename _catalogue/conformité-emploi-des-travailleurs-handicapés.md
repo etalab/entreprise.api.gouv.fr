@@ -8,8 +8,8 @@ title: Conformité emploi des travailleurs handicapés
 label: attestations_agefiph
 scope:
   - entreprises
-description: Obtenir la dernière année connue de conformité d’une entreprise au
-  regard de l'obligation d'emploi des travailleurs handicapés.
+description: Obtenir la **dernière année connue de conformité** d’une entreprise
+  au regard de l'obligation d'emploi des travailleurs handicapés.
 usecases:
   - Marchés publics
 opening: Données confidentielles.

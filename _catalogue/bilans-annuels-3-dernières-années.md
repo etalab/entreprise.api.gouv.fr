@@ -9,13 +9,13 @@ label: bilans_entreprises_bdf
 scope:
   - entreprises
 description: "Obtenir les trois derniers bilans d’une entreprise détenus par la
-  Banque de France. Ces bilans permettent d'accéder à certaines informations
-  contenues dans la liasse fiscale : bilans, compte de résultat et annexes
+  Banque de France. Ces bilans permettent d'accéder à **certaines informations
+  contenues dans la liasse fiscale** : bilans, compte de résultat et annexes
   confondus."
 usecases:
   - Aides publiques
   - Marchés publics
-opening: Données confidentielles
+opening: Données confidentielles.
 perimeter:
   label: Les entreprises ayant au moins 3 bilans et réalisant plus 750 000€ de CA.
   description: >-

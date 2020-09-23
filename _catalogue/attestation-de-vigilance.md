@@ -12,9 +12,9 @@ title: Attestation de vigilance
 label: attestations_sociales_acoss
 scope:
   - entreprises
-description: Obtenir l’attestation validant que l’entreprise s’acquitte de ses
-  obligations déclaratives et du paiement des cotisations et contributions
-  sociales auprès de l'ACOSS. L’attestation de vigilance permet également de
+description: Obtenir l’attestation validant que l’**entreprise s’acquitte de ses
+  obligations déclaratives** et du **paiement des cotisations et contributions
+  sociales** auprès de l'ACOSS. L’attestation de vigilance permet également de
   prouver que l’entreprise respecte les règles applicables en matière de lutte
   contre le travail dissimulé.
 usecases:

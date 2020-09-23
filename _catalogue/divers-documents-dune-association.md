@@ -1,21 +1,22 @@
 ---
+providers:
+  - mi
+access: Sous habilitation.
 weight: 5
 type: Informations générales
 title: Divers documents d'une association
 label: documents_associations
 scope:
   - associations
-description: Obtenir divers documents, différents selon l’association ; tels que
-  les statuts, la liste des personnes habilitées à représenter l’association ou
-  encore les délibérations pour modification ou dissolution de l’association.
+description: Obtenir **divers documents**, différents selon l’association ; tels
+  que les **statuts**, la liste des **personnes habilitées à représenter
+  l’association** ou encore les **délibérations** pour modification ou
+  dissolution de l’association.
 usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-access: Sous habilitation.
-opening: Données publiques
-providers:
-  - mi
+opening: Données publiques.
 perimeter:
   label: Toutes les associations ayant des documents.
 services:

@@ -9,7 +9,7 @@ title: Informations déclaratives d’une association
 label: associations
 scope:
   - associations
-description: Obtenir les informations déclarées par une association à la
+description: Obtenir les **informations déclarées par une association** à la
   préfecture et issues du Répertoire National des Associations (RNA), telles que
   la date de création, l’adresse du siège et les dirigeants.
 usecases:

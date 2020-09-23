@@ -7,9 +7,9 @@ title: Attestation fiscale
 label: attestations_fiscales_dgfip
 scope:
   - entreprises
-description: Obtenir, auprès de la direction des finances publiques,
-  l’attestation fiscale d’une entreprise indiquant que celle-ci est à jour de
-  ses obligations fiscales.
+description: Obtenir l’**attestation fiscale**, délivrée par la Direction
+  générale des finances publiques, indiquant que l'**entreprise est à jour de
+  ses obligations fiscales.**
 usecases:
   - Aides publiques
   - Marchés publics
