@@ -216,6 +216,7 @@ collections:
           - { label: 'Agefiph', value: 'agefiph' }
           - { label: 'Banque de France', value: 'bdf' }
           - { label: 'ADEME', value: 'ademe' }
+          - { label: 'Fabrique numérique des Ministères Sociaux', value: 'fabsocial' }
       - { label: 'Message nouvelle actualité', name: 'new', required: false , widget: 'markdown' }
       - label: "Périmètre de l'endpoint"
         name: 'perimeter'
