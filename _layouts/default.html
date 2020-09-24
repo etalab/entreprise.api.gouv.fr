@@ -24,6 +24,8 @@
       });
     }
   </script>
+  <script type="text/javascript"
+  src="{{ site.baseurl }}/assets/js/menu.js"></script>
   {% for file in page.additional_js %}
   <script type="text/javascript"
     src="{% if file contains '://' %}{{ file }}{% else %}{{ site.baseurl }}/assets/js/{{ file }}{% endif %}"></script>

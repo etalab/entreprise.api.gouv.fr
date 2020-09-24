@@ -8,7 +8,7 @@ title: Cotisations de sécurité sociale agricole
 label: cotisations_msa
 scope:
   - entreprises
-description: Savoir si une entreprise est à jour de ses cotisations sociales
+description: Savoir si une **entreprise est à jour de ses cotisations sociales**
   auprès de la sécurité sociale agricole (MSA).
 usecases:
   - Aides publiques

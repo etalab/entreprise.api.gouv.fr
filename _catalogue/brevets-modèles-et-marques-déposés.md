@@ -11,9 +11,9 @@ scope:
   - entreprises
   - associations
 description: >-
-  Récupérer certaines informations sur les derniers brevets, modèles et marques
-  d’une entreprise enregistrés à l’INPI ; ainsi que le nombre de dépôts pour
-  chacune de ces catégories.
+  Récupérer certaines **informations sur les derniers brevets, modèles et
+  marques** d’une entreprise enregistrés à l’INPI ; ainsi que le nombre de
+  dépôts pour chacune de ces catégories.
 
 
   ⚠️ Le périmètre de cet endpoint n'est pas exhaustif, les données doivent donc être utilisées de manière qualitative et indicative.
@@ -147,6 +147,7 @@ services:
               ]
             },
 
+
             
           // PARTIE MODELES
 
@@ -187,6 +188,7 @@ services:
                 }
               ]
             },
+
 
             
           // PARTIE MARQUES

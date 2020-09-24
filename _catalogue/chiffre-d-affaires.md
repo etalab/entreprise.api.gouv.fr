@@ -1,20 +1,20 @@
 ---
+providers:
+  - dgfip
+access: Sous habilitation.
 weight: 7
 type: Informations financières
 title: Chiffre d'affaires
 label: exercices
 scope:
   - entreprises
-description: Obtenir les déclarations de chiffre d'affaire faites auprès de la
-  DGFIP, et portées sur la liasse fiscale.
+description: Obtenir les **déclarations de chiffre d'affaire** faites auprès de
+  la DGFIP, et portées sur la liasse fiscale.
 usecases:
   - Aides publiques
   - Marchés publics
   - Application de la loi énergie - Art.64
-access: Sous habilitation.
-opening: Données confidentielles
-providers:
-  - dgfip
+opening: Données confidentielles.
 perimeter:
   description: >-
     Sont disponibles uniquement les chiffres d'affaire des **entreprises qui

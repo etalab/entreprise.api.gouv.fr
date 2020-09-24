@@ -7,9 +7,9 @@ title: Attestation fiscale
 label: attestations_fiscales_dgfip
 scope:
   - entreprises
-description: Obtenir, auprès de la direction des finances publiques,
-  l’attestation fiscale d’une entreprise indiquant que celle-ci est à jour de
-  ses obligations fiscales.
+description: Obtenir l’**attestation fiscale**, délivrée par la Direction
+  générale des finances publiques, indiquant que l'**entreprise est à jour de
+  ses obligations fiscales.**
 usecases:
   - Aides publiques
   - Marchés publics
@@ -77,7 +77,7 @@ services:
             sociétés ayant opté pour la consolidation du paiement de la TVA
             définie à l’article 1693 ter du CGI, dit groupe TVA, c'est cette
             société mère qui est en charge des obligations fiscales. Il vous
-            faudra donc indiqué également le SIREN du groupe TVA.
+            faudra donc indiquer également le SIREN du groupe TVA.
           comment: "Si l'entreprise appartient à un groupe TVA, ajoutez le SIREN référent
             du groupe avec le paramètre suivant :"
       questions:

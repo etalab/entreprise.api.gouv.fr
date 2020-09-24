@@ -37,21 +37,21 @@ questions:
     answer: ""
 weight: 1
 type: Informations générales
-title: Données de référence d'une entreprise
+title: Données de référence d'une entité
 label: entreprises
 scope:
   - entreprises
   - associations
-description: Obtenir des informations concernant une entité du répertoire Sirene
-  telles que les dates de création et de fin&nbsp;; le code effectif, le numéro
-  de TVA intracommunautaire&nbsp;; la forme juridique... ou encore les
+description: Obtenir des **informations concernant une entité du répertoire
+  Sirene** telles que les dates de création et de fin&nbsp;; le code effectif,
+  le numéro de TVA intracommunautaire&nbsp;; la forme juridique... ou encore les
   mandataires sociaux et l’état administratif de l’entreprise.
 usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
   - Application de la loi énergie - Art.64
-opening: Données publiques et confidentielles pour les non-diffusibles
+opening: Données publiques et confidentielles pour les non-diffusibles.
 perimeter:
   label: Entreprises, entrepreneurs individuels, institutions administratives et
     certaines associations.

@@ -10,8 +10,8 @@ label: certificats_rge_ademe
 scope:
   - entreprises
 description: Obtenir le certificat “Reconnu Garant de l’Environnement” d’une
-  entreprise, attestant de compétences spécifiques en travaux de rénovation
-  énergétique. Si vous avez besoin uniquement du certificat Qualibat, un
+  entreprise, attestant de **compétences spécifiques en travaux de rénovation
+  énergétique**. Si vous avez besoin uniquement du certificat Qualibat, un
   [endpoint dédié](#certificats_qualibat) existe.
 usecases:
   - Marchés publics

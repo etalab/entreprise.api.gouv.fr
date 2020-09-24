@@ -1,15 +1,9 @@
-window.onload = function (e) {
+window.addEventListener('load', function (e) {
   if (window.location.hash) {
     const hash = window.location.hash
     openDetails(hash)
   }
 
-  const linkButtons = document.querySelectorAll('.button-link')
-
-  for (let j = 0; j < linkButtons.length; j++) {
-    linkButtons[j].addEventListener('click', onButtonClick, false)
-  }
-  
   const links = document.querySelectorAll('.documentation a')
 
   for (let i = 0; i < links.length; i++) {
@@ -39,4 +33,4 @@ window.onload = function (e) {
       target.scrollIntoView()
     } 
   }
-}
+})

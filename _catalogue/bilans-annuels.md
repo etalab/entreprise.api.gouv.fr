@@ -9,8 +9,8 @@ title: Bilans annuels
 label: bilans_inpi
 scope:
   - entreprises
-description: Obtenir les comptes annuels d’une entreprise tels que transmis par
-  les greffes à l’Institut National de Propriété Industrielle (INPI).
+description: Obtenir les **comptes annuels d’une entreprise** tels que transmis
+  par les greffes à l’Institut National de Propriété Industrielle (INPI).
 usecases:
   - Aides publiques
   - Marchés publics

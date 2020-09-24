@@ -1,23 +1,23 @@
 ---
+providers:
+  - inpi
+access: Sous habilitation, disponible par *swagger* sur le [site de
+  l'INPI](https://data.inpi.fr/swagger).
 weight: 6
 type: Informations générales
 title: "Actes "
 label: actes_inpi
 scope:
   - entreprises
-description: Obtenir les actes d’une entreprise tels que connus par les greffes
-  et archivés à l’Institut National de Propriété Industrielle (INPI). Ces actes
-  comportent des informations générales, des informations sur le capital social
-  et sa répartition, ou encore des informations sur les associés et tout ce qui
-  est relatif à l'administration de la société.
+description: Obtenir les **actes d’une entreprise** tels que connus par les
+  greffes et archivés à l’Institut National de Propriété Industrielle (INPI).
+  Ces actes comportent des informations générales, desinformations sur le
+  **capital social et sa répartition,** ou encore des informations sur les
+  **associés** et tout ce qui est relatif à l'**administration de la société**.
 usecases:
   - Marchés publics
   - Aides publiques
-access: Sous habilitation, disponible par *swagger* sur le [site de
-  l'INPI](https://data.inpi.fr/swagger).
-opening: Données publiques
-providers:
-  - inpi
+opening: Données publiques.
 perimeter:
   description: >-
     Tous les actes établis par les greffes depuis 1993 sont transmis par cet

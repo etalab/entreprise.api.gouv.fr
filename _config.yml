@@ -92,11 +92,12 @@ providers_aliases:
   fntp: 'FNTP'
   agefiph: 'agefiph'
   ademe: 'ADEME'
+  fabsocial: 'Fabrique numérique des ministères sociaux'
 
 
 empty_array: []
 
-catalogue_types: 
+catalogue_types:
   - 'Toutes les catégories'
   - 'Informations générales'
   - 'Informations financières'

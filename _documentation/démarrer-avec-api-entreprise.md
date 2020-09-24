@@ -116,7 +116,7 @@ panels:
       </summary>
 
 
-      Une fois votre demande validée, nous instruisons alors votre dossier puis prenons une décision d’acceptation ou de refus de la demande d’accès. Cette instruction peut prendre entre entre X à X jours selon l’affluence des demandes.
+      Une fois votre demande validée, nous instruisons alors votre dossier puis prenons une décision d’acceptation ou de refus de la demande d’accès. Cette instruction prend **en moyenne 11 jours** selon l’affluence des demandes. La durée de traitement est aussi **dépendante de la précision et de l'exhaustivité des informations que vous nous transmettez**, qui influeront sur le nombre d'aller-retour que nous aurons à faire pour le finaliser.
 
 
       * ❌ Si votre dossier est refusé, des précisions supplémentaires vous seront demandée avant tout refus définitif ;

@@ -9,9 +9,9 @@ title: Cotisations retraite bâtiment
 label: cotisation_retraite_probtp
 scope:
   - entreprises
-description: Savoir si une entreprise est à jour de ses cotisations retraite à
-  la Protection Sociale du Bâtiment et des Travaux publics (PROBTP) et obtenir
-  l'attestation de l'entreprise si celle-ci est éligible.
+description: Savoir si une **entreprise est à jour de ses cotisations retraite**
+  à la Protection Sociale du Bâtiment et des Travaux publics (PROBTP) et obtenir
+  l'**attestation** de l'entreprise si celle-ci est éligible.
 usecases:
   - Aides publiques
   - Marchés publics

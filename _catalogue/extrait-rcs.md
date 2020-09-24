@@ -8,14 +8,14 @@ title: Extrait RCS
 label: extraits_rcs_infogreffe
 scope:
   - entreprises
-description: Obtenir un extrait des données présentes dans le registre du
-  commerce et des sociétés (RCS) ; dont les observations qui permettent de
-  savoir si une entreprise est en redressement judiciaire.
+description: Obtenir un **extrait des données présentes dans le RCS**, registre
+  du commerce et des sociétés ; dont les observations qui permettent de **savoir
+  si une entreprise est en redressement judiciaire**.
 usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-opening: Données confidentielles
+opening: Données confidentielles.
 perimeter:
   perimeter1:
     label: Lorem ipsum
@@ -27,7 +27,7 @@ perimeter:
     label: Lorem ipsum
     description: Lorem ipsum
   description: Toutes les entreprises présentes au registre du commerce et des sociétés.
-  label: Toutes les entreprises présentes dans le RCS
+  label: Toutes les entreprises présentes dans le RCS.
 services:
   service1:
     request:

@@ -8,11 +8,11 @@ title: Déclarations de résultat
 label: liasses_fiscales_dgfip
 scope:
   - entreprises
-description: Obtenir les données contenues dans les liasses fiscales, issues des
-  déclarations de résultat d’une entreprise auprès de la direction des finances
-  publiques (DGFIP). Cet endpoints renvoyant beaucoup de données, plusieurs
-  services sont disponibles, les déclarations seules, le dictionnaire seul, ou
-  les deux réunis pour une entreprise donnée.
+description: Obtenir les **données contenues dans les liasses fiscales,** issues
+  des déclarations de résultat d’une entreprise auprès de la Direction génénrale
+  des finances publiques (DGFIP). Cet endpoint renvoyant beaucoup de données,
+  plusieurs services sont disponibles, les déclarations seules, le dictionnaire
+  seul, ou les deux réunis pour une entreprise donnée.
 usecases:
   - Aides publiques
   - Marchés publics
