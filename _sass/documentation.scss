@@ -181,5 +181,9 @@
         border: 1px solid var(--lighter-grey);
       }
     }
+    
+    .fold code {
+      word-wrap: anywhere;
+    }
   }
 }
