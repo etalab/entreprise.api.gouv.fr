@@ -16,6 +16,10 @@
   @media (max-width: 800px) {
     .tpl-form__group {
       flex-wrap: wrap;
+
+      select {
+        display: none;
+      }
     }
   }
 }
