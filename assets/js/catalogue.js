@@ -6,24 +6,17 @@ window.addEventListener('load', function (e) {
   let usecaseFilter = document.querySelector('select[name="catalogue-usecase"]')
   let providerFilter = document.querySelector('select[name="catalogue-providers"]')
   let stateFilter = document.querySelector('select[name="catalogue-openstate"]')
-
-  const charts = document.getElementsByClassName('availability-pie')
-  const values = [[84, '#17bd3d'], [8, '#ffc107'], [6, '#d19d00'], [2, '#dc3545']]
-  let startingPoint = 0
-
-  for (let i = 0; i < charts.length; i++) {
-    values.forEach(value => {
-      charts[i].prepend(pieChart(value[0], 250, value[1], startingPoint))
-      startingPoint += 360 * value[0] / 100
-    })
-  }
   
   const el = document.getElementsByClassName('documentation-card')
+  const tabs = document.querySelectorAll('.tab-list a')
   const commentSwitches = document.getElementsByClassName('toggle-comments')
 
   for (let i = 0; i < el.length; i++) {
-    el[i].querySelectorAll('.tab-list a')[0].addEventListener('click', onTabClick, false)
     commentSwitches[i].addEventListener('click', toggleComments, false)
+  }
+
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', onTabClick, false)
   }
 
   searchInput.addEventListener("input", delay(performMark))
@@ -44,6 +37,62 @@ window.addEventListener('load', function (e) {
       target.querySelectorAll('.tab-list a')[0].click()
     }
   }
+
+  fetch('../assets/js/exemple_payload_taux_dispo.json')
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      const endpoint = data.endpoint.split('/').pop()
+      const panel = document.getElementById(endpoint)
+
+      const rate = panel.getElementsByClassName('rate')[0]
+      const spot = panel.getElementsByClassName('spot')[0]
+      const currentStatus = panel.getElementsByClassName('availability-status')[0]
+      const totalCalls = panel.getElementsByClassName('call-count')[0]
+      const fdErrors = panel.getElementsByClassName('fd-errors')[0]
+      const callCount = getTotal(data.days_availability)
+
+      let rateClass = ''
+
+      rate.innerHTML = data.total_availability + '%'
+      if (typeof data.total_availability === 'number') {
+        if (data.total_availability >= 99.5) {
+          rateClass = 'spot--sup99'
+        } else if (data.total_availability >= 90) {
+          rateClass = 'spot--sup90'
+        } else if (data.total_availability >= 80) {
+          rateClass = 'spot--sup80'
+        } else {
+          rateClass = 'spot--sub80'
+        }
+      }
+      spot.classList.add(rateClass)
+
+      totalCalls.innerHTML = callCount
+      fdErrors.innerHTML = getErrors(data.days_availability, callCount) + '%'
+    })
+
+  function getTotal(days) {
+    let callCount = 0
+    for (const key in days) {
+      callCount =+ days[key].total
+    }
+    return callCount
+  }
+
+  function getErrors(days, callCount) {
+    let errorCount = 0
+    for (const key in days) {
+      errorCount =+ days[key]['502']
+    }
+    return ((callCount - errorCount)/callCount).toFixed(2)
+  }
+
+  function buildTable(data) {
+
+  }
+  
 
   function onTabClick(event) {
     event.stopPropagation()
@@ -82,32 +131,6 @@ window.addEventListener('load', function (e) {
     }
   }
 
-  function pieChart(percentage, size, color, rotate) {
-    const svgns = "http://www.w3.org/2000/svg"
-    const path = document.createElementNS(svgns, "path")
-    const unit = (Math.PI * 2) / 100    
-    const startangle = 0
-    const endangle = percentage * unit - 0.001
-    const halfSize = size / 2
-    const x1 = halfSize + halfSize * Math.sin(startangle)
-    const y1 = halfSize - halfSize * Math.cos(startangle)
-    const x2 = halfSize + halfSize * Math.sin(endangle)
-    const y2 = halfSize - halfSize * Math.cos(endangle)
-    const big = (endangle - startangle > Math.PI) ? 1 : 0
-    const d = "M " + halfSize + "," + halfSize +  // Start at circle center
-        " L " + x1 + "," + y1 +     // Draw line to (x1,y1)
-        " A " + halfSize + "," + halfSize +       // Draw an arc of radius r
-        " 0 " + big + " 1 " +       // Arc details...
-        x2 + "," + y2 +             // Arc goes to to (x2,y2)
-        " Z"                       // Close path back to (cx,cy)
-      
-    path.setAttribute("d", d)
-    path.setAttribute("fill", color)
-    path.setAttribute("transform", "rotate(" + rotate + ", " + halfSize + ", "+ halfSize +")")
-      
-    return path
-  }
-  
   //search and filtering
 
   toggleNonMarkedPanels()

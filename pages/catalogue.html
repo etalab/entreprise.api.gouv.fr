@@ -233,329 +233,49 @@ is_catalogue: true
                   </div>
                   <div id="availability--{{ endpoint.label }}" class="availability tab-content tpl-bg--gradient-light">
                     <div class="tpl-flex-row tpl-flex-jc-sb">
-                      <dl class="tpl-description-list">
-                        <dt>Disponibilité actuelle</dt>
-                        <dd class="availability-status {{ endpoint.status }}"></dd>
-                      </dl>
-                      <dl class="tpl-description-list">
-                        <dt>Volumétrie :</dt>
-                        <dd>{{ endpoint.availability.volumetry }}</dd>
+                      <dl class="tpl-description-list current-status">
+                        <dt>Disponibilité actuelle :</dt>
+                        <dd class="availability-status {{ endpoint.status }}">
+                          <div class="status-marker">OK</div> il y a 2 minutes
+                        </dd>
                       </dl>
                     </div>
-                    <dl class="tpl-description-list">
-                      <dt>Disponibilité normale :</dt>
-                      <dd>{{ endpoint.availability.normal_availability }}</dd>
-                    </dl>
-                    <dl class="tpl-description-list">
-                      <dt>Indisponibilités types :</dt>
-                      <dd>{{ endpoint.availability.unavailability_types }}</dd>
-                    </dl>
-                    <dl class="tpl-description-list">
-                      <dt>Indisponibilités moyennes du dernier mois :</dt>
-                      <dd></dd>
-                    </dl>
                     <hr />
                     <div class="metrics">
-                      <select>
-                        <option value="7">Les 7 derniers jours</option>
-                      </select>
+                      <h4>Historique des 6 derniers mois :</h4>
                       <div class="tpl-flex-row">
-                        <div>
-                          <div class="availability-rate">
-                            <svg viewBox='0 0 250 250' class='availability-pie'>
-                              <circle cx="125" cy="125" r="60" fill="#fff"></circle>
-                            </svg>
+                        <div class="numbers">
+                          <div class="success-rate tpl-flex-row">
+                            <div class="spot"></div>
+                            <div>
+                              <div class="rate"></div>
+                              de succès
+                            </div>
                           </div>
-                          <div class="availability-legend">
-                            <ul>
-                              <li class="legend">Fonctionne (OK)</li>
-                              <li class="legend legend--intermittent">Fonctionnement intermittent</li>
-                              <li class="legend legend--degraded">Fonctionnement dégradé : données manquantes</li>
-                              <li class="legend legend--ko">Ne répond pas (KO)</li>
-                            </ul>
-                          </div>
+                          <dl class="tpl-description-list">
+                            <dt>Nombre d'appel :</dt>
+                            <dd class="call-count"></dd>
+                          </dl>
+                          <dl class="tpl-description-list">
+                            <dt>Erreur fournisseur :</dt>
+                            <dd class="fd-errors"></dd>
+                          </dl>
                         </div>
-                        <table class="availability-table">
-                          <thead>
-                            <tr>
-                              <th></th>
-                              <th>jeudi 6 fev</th>
-                              <th>vendredi 7 fev</th>
-                              <th>samedi 8 fev</th>
-                              <th>dimanche 9 fev</th>
-                              <th>lundi 10 fev</th>
-                              <th>mardi 11 fev</th>
-                              <th>mercredi 12 fev</th>
-                              <th><strong>aujourd’hui 13 fev</strong></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>00 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>01 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>02 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>03 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>04 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>05 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>06 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>07 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>08 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>09 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>10 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>11 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>12 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>13 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>14 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>15 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>16 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>17 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>18 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>19 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>20 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>21 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>22 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>23 : 00</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <div class="chart"></div>
+                      </div>
+                      <div class="tpl-flex-row">
+                        <div class="availability-legend">
+                          <p>Dans une journée, l'endpoint fonctionne :</p>
+                          <ul>
+                            <li class="legend legend--sup99">au delà de 99,5%</li>
+                            <li class="legend legend--sup90">au delà de 90%</li>
+                            <li class="legend legend--sup80">au delà de 80%</li>
+                            <li class="legend legend--sub80">en dessous de 80%</li>
+                            <li class="legend">statistiques insuffisantes</li>
+                          </ul>
+                        </div>
+                        <div class="availability-table">
+                        </div>
                       </div>
                     </div>
                   </div>
