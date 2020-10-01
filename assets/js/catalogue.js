@@ -76,7 +76,7 @@ window.addEventListener('load', function (e) {
   function getTotal(days) {
     let callCount = 0
     for (const key in days) {
-      callCount =+ days[key].total
+      callCount += days[key].total
     }
     return callCount
   }
@@ -84,7 +84,7 @@ window.addEventListener('load', function (e) {
   function getErrors(days, callCount) {
     let errorCount = 0
     for (const key in days) {
-      errorCount =+ days[key]['502']
+      errorCount += days[key]['502']
     }
     return ((callCount - errorCount)/callCount).toFixed(2)
   }
