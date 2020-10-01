@@ -414,7 +414,7 @@
     }
 
     .numbers {
-      width: 100%;
+      flex-shrink: 1;
     }
 
     .success-rate {
@@ -452,6 +452,25 @@
 
     .tpl-description-list {
       margin: 0;
+    }
+
+    .chart-container {
+      flex-grow: 1;
+      margin-top: 0;
+      height: 100%;
+      width: 100%;
+      max-height: 400px;
+    }
+
+    .chart {
+      height: 100%;
+      width: 100%;
+    }
+
+    .line {
+      fill: none;
+      stroke: url('#availability-gradient');
+      stroke-width: 2px;
     }
   }
 

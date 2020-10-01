@@ -71,6 +71,14 @@ window.addEventListener('load', function (e) {
 
       totalCalls.innerHTML = callCount
       fdErrors.innerHTML = getErrors(data.days_availability, callCount) + '%'
+
+      const dataset = []
+      for (let key in data.days_availability) {
+        const daily = (((data.days_availability[key].total -  data.days_availability[key]['502']) / data.days_availability[key].total)* 100).toFixed(2)
+        dataset.push({x: key, y: daily})
+      }
+      
+      buildChart(dataset)
     })
 
   function getTotal(days) {
@@ -87,6 +95,75 @@ window.addEventListener('load', function (e) {
       errorCount += days[key]['502']
     }
     return ((callCount - errorCount)/callCount).toFixed(2)
+  }
+
+  function buildChart(dataset) {
+    var margin = {top: 10, right: 50, bottom: 50, left: 50}
+    , width = 800 - margin.left - margin.right // Use the window's width 
+    , height = 300 - margin.top - margin.bottom; // Use the window's height
+  
+    var n = dataset.length;
+
+    // 5. X scale will use the index of our data
+    var xScale = d3.scaleLinear()
+        .domain([0, n-1]) // input
+        .range([0, width]); // output
+    
+    // 6. Y scale will use the randomly generate number 
+    var yScale = d3.scaleLinear()
+        .domain([0, 100]) // input 
+        .range([height, 0]); // output 
+    
+    // 7. d3's line generator
+    var line = d3.line()
+        .x((d, i) => xScale(i))
+        .y(d => yScale(d.y))
+        .curve(d3.curveMonotoneX)
+    
+    
+    // 1. Add the SVG to the page and employ #2
+    var svg = d3.select("#entreprises-chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+    // 3. Call the x axis in a group tag
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xScale)); // Create an axis component with d3.axisBottom
+    
+    // 4. Call the y axis in a group tag
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(d3.axisLeft(yScale)); // Create an axis component with d3.axisLeft
+
+    svg.append('linearGradient')
+        .attr('id', "availability-gradient")
+        .attr('gradientUnits', 'userSpaceOnUse')
+        .attr('x1', 0)
+        .attr('y1', height - margin.bottom)
+        .attr('x2', 0)
+        .attr('y2', margin.top)
+      .selectAll('stop')
+        .data([{
+          offset: '0%', color: '#D32121'
+        }, {
+          offset: '90%', color: '#FFAD33'
+        }, {
+          offset: '99%', color: '#7ED321'
+        }])
+      .enter().append('stop')
+        .attr('offset', d => d.offset)
+        .attr('stop-color', d => d.color)
+
+    // 9. Append the path, bind the data, and call the line generator 
+    svg.append("path")
+        .datum(dataset) // 10. Binds data to the line 
+        .attr("class", "line") // Assign a class for styling 
+        .attr("d", line) // 11. Calls the line generator
+
   }
 
   function buildTable(data) {
