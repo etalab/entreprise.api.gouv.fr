@@ -67,8 +67,6 @@ Vous trouverez ci-dessous les données utiles dans le cadre des marchés publics
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Chiffre d'affaires](https://doc.entreprise.api.gouv.fr/?json#exercices){:target="_blank"}                                     |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
-| [Bilans entreprise](https://doc.entreprise.api.gouv.fr/?json#bilans-entreprises-bdf-banque-de-france){:target="_blank"}                                      |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
-| [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales){:target="_blank"}       |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
 
 #### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
 
