@@ -24,7 +24,7 @@ Si vous avez un doute, renseignez-vous auprès de votre profil acheteur pour sav
 ##### Vous êtes un éditeur de place de marchés publics ?
 
 - Renseignez-vous pour mettre en place le DUME : l'État met gratuitement à disposition le service.
-- Si vous souhaitez utiliser l’API dans le cadre d’une application spécifique, il convient de nous préciser le cas d’utilisation, et faire une demande d'accès.
+- Si vous souhaitez utiliser l’API dans le cadre d’une application spécifique, il convient de nous préciser le cas d’utilisation, et [faire une demande d'accès](https://entreprise.api.gouv.fr/doc/#demande-habilitation){:target="_blank"}.
 
 
 ## Liste des éditeurs de places de marchés dotés d'un droit d'accès
