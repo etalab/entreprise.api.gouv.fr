@@ -122,6 +122,8 @@ panels:
       | [Divers documents d'une association](../catalogue/#documents_associations){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
 
       | [Actes](../catalogue/#actes_inpi){:target="_blank"}                     | INPI |         `actes_inpi`          |       Archive ZIP (PDF et XML)   |    publiques    |
+      
+      | [Conventions collectives](../catalogue/#conventions_collectives){:target="_blank"}                     | Fabrique numérique des Ministères Sociaux |         `conventions_collectives`          |     données JSON     |    publiques    |
 
 
       ##### Informations financières <a id="infos_financieres"></a>
