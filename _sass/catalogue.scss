@@ -464,6 +464,7 @@
 
     .chart {
       height: 100%;
+      min-height: 300px;
       width: 100%;
     }
 
@@ -471,6 +472,14 @@
       fill: none;
       stroke: url('#availability-gradient');
       stroke-width: 2px;
+    }
+
+    .domain, .tick line {
+      stroke: var(--dark-grey);
+    }
+
+    .tick text {
+      color: var(--darker-grey);
     }
   }
 
