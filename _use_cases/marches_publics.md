@@ -28,15 +28,15 @@ Depuis le 12 décembre 2019, les acheteurs publics ont l'obligation légale de p
 ###### Voici la liste des services et éditeurs connectés à l'API Entreprise : 
 
 {:.tpl-table}
-| Éditeurs et services connecté à l'API Entreprise               |    Profil acheteur ou service        |
-|:------------------------:|:-------------------------------------------:|
-|    AIFE <br>(Agence pour l'Informatique Financière de l'État)       |   [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |
-|      Achatpublic.com     | [achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
-|    Atexo                 | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     |
-|    AWS                   |        [AWS-achat](https://www.marches-publics.info){:target="_blank"}                                      |
-|    Dematis               |            [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}                                |
-|    Klekoon          |      [klekoon.com](https://www.klekoon.com/){:target="_blank"}                                        |
-|    Provigis              |         [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"}                                     |
+| Éditeurs et services connecté à l'API Entreprise        |     type d'entité  |    Profil acheteur ou service        |
+|------------------------|:-------------------------------------------:|:-------------------------------------------:|
+|    AIFE <br>(Agence pour l'Informatique Financière de l'État)       |  agence publique | [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |
+|      Achatpublic.com     | entreprise privée |[achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
+|    Atexo                 | entreprise privée | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     |
+|    AWS                   |    entreprise privée |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}                                      |
+|    Dematis               |     entreprise privée |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}                                |
+|    Klekoon          | entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"}                                        |
+|    Provigis              |    entreprise privée |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"}                                     |
 
 ## Données utiles et aurorisées dans le cadre des marchés publics
 
