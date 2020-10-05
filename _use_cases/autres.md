@@ -11,4 +11,4 @@ A titre d'exemple on peut citer :
 - Délivrance aux professionnels de badges ou de macarons pour l'accès en zone piétonne ou en zone de trafic (métropole de Grenoble)
 - Gestion des accès professionnels à la déchetterie (Communauté de communes Vaison Ventoux)
 
-Par ailleurs, l'API entreprise est utilisée dans [démarches-simplifiées](demarches-simplifiees.fr), outil de dématérialisation des démarches administratives.
+Par ailleurs, l'API entreprise est utilisée dans [démarches-simplifiées](https://www.demarches-simplifiees.fr/){:target="_blank"}, outil de dématérialisation des démarches administratives.
