@@ -181,7 +181,7 @@ window.addEventListener('load', function (e) {
     const n = dataset.length;
 
     // X scale uses success rate by day
-    const x = d3.scaconstime()
+    const x = d3.scaleTime()
                 .domain(d3.extent(dataset, d => d.x)) // input
                 .rangeRound([0, width]) // output
     
