@@ -169,20 +169,38 @@
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 var(--spacing-xl);
   }
 
   a.tab {
+    border: 2px solid var(--button-border-alternate);
+    border-bottom: 0;
+    border-radius: var(--border-radius-default) var(--border-radius-default) 0 0;
+    color: var(--darker-grey);
     display: flex;
     align-items: center;
-    padding: var(--spacing-s) var(--spacing-m);
+    margin-left: -2px;
+    padding: var(--spacing-xxs) var(--spacing-s);
+    position: relative;
     cursor: pointer;
+    font-size: 0.925em;
+    font-weight: 700;
     text-decoration: none;
-    border-bottom: 5px solid transparent;
+    text-transform: uppercase;
+    z-index: 10;
+  }
+
+  a.tab:hover {
+    background: 0;
+    border-color: var(--primary);
+    color: var(--primary);
+    z-index: 15;
   }
 
   a.tab.tab--active {
-    border-color: var(--primary);
+    border-color: var(--text-color-default);
+    color: var(--text-color-default);
+    z-index: 20;
   }
 
   a.tab .tpl-icon {
