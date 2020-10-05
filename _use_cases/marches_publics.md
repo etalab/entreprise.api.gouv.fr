@@ -51,7 +51,7 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 #### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
-| Données   | Autorisation marchés publics                                          |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| Données   | Autorisation marchés publics   |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:----:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Données de référence d'une entreprise](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}                  | ✅ |  INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques et confidentielles pour les non-diffusibles    |
 | [Données de référence d'un établissement](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}                | ✅ |         INSEE           |          `etablissements`           |    données JSON     |    publiques et confidentielles pour les non-diffusibles    |
@@ -63,8 +63,8 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 #### Informations financières <a id="infos_financieres"></a>
 
 {:.tpl-table}
-| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| Données                                              | Autorisation marchés publics   |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Chiffre d'affaires](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"}                                     |     ✅ |     DGFIP           |                `exercices`                |    données JSON     | confidentielles |
 | [Bilans entreprise](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"}                                     |     ❌ |  Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
 | [Déclarations et dictionnaire de liasses fiscales](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip)      |        ❌ |    DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
@@ -72,8 +72,8 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 #### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
 
 {:.tpl-table}
-| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| Données              |  Autorisation marchés publics   |       Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Attestation fiscale](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"}                                    |      ✅ |    DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | confidentielles |
 | [Attestation de vigilance](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"}                               |  ✅ |        ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | confidentielles |
 | [Conformité emploi des travailleurs handicapés AGEFIPH](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"}  |   ✅ |      AGEFIPH          |          `attestations_agefiph`           |    données JSON     | confidentielles |
@@ -85,8 +85,8 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 #### Certificats professionnels <a id="certificats_pro"></a>
 
 {:.tpl-table}
-| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| Données      |  Autorisation marchés publics   |       Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Certification RGE](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"}                                      |    ✅ |      ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
 | [Certification de qualification Qualibat](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"}                  |    ✅ |      Qualibat          |           `certificats_qualibat`            |    données JSON     |    publiques    |
 | [Certification de qualification OPQIBI](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi){:target="_blank"}                  |   ✅ |       OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
@@ -95,8 +95,8 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 #### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
 
 {:.tpl-table}
-| Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+| Données          |    Autorisation marchés publics   |     Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
+| ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Brevets, modèles et marques déposées](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"}                   | ✅ |          INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
 
 
