@@ -39,28 +39,94 @@ window.addEventListener('load', function (e) {
   const formatYear = locale.format("%Y")
 
   const endpointMatching = {
-    'entreprises': 'v3/entreprises_restored',
-    'etablissements': 'v3/etablissements_restored',
-    'extraits_rcs_infogreffe': 'v2/extraits_rcs_infogreffe',
-    'associations': 'v2/associations',
-    'documents_associations': 'v2/documents_associations',
-    'actes_inpi': 'v2/documents_inpi#actes',
-    'conventions_collectives': 'v2/conventions_collectives',
-    'exercices': 'v2/exercices',
-    'bilans_inpi': 'v2/documents_inpi#bilans',
-    'bilans_entreprises_bdf': 'v2/bilans_entreprises_bdf',
-    'liasses_fiscales_dgfip': 'v2/liasses_fiscales_dgfip',
-    'attestations_fiscales_dgfip': 'v2/attestations_fiscales_dgfip',
-    'attestations_sociales_acoss': 'v2/attestations_sociales_acoss',
-    'attestations_agefiph': 'v2/attestations_agefiph',
-    'cotisations_msa': 'v2/cotisations_msa',
-    'cotisation_retraite_probtp': 'v2/eligibilites_cotisation_retraite_probtp',
-    'cartes_professionnelles_fntp': 'v2/cartes_professionnelles_fntp',
-    'certificats_cnetp': 'v2/certificats_cnetp',
-    'certificats_rge_ademe': 'v2/certificats_rge_ademe',
-    'certificats_qualibat': 'v2/certificats_qualibat',
-    'certificats_opqibi': 'v2/certificats_opqibi',
-    'extraits_courts_inpi': 'v2/extraits_courts_inpi'
+    'entreprises': {
+      'availability': 'v3/entreprises_restored',
+      'current_status': 'apie_2_etablissements'
+    },
+    'etablissements': {
+      'availability': 'v3/etablissements_restored',
+      'current_status': 'apie_2_etablissements'
+    },
+    'extraits_rcs_infogreffe': {
+      'availability': 'v2/extraits_rcs_infogreffe',
+      'current_status': 'apie_2_extraits_rcs_infogreffe'
+    },
+    'associations': {
+      'availability': 'v2/associations',
+      'current_status': 'apie_2_associations_rna'
+    },
+    'documents_associations': {
+      'availability': 'v2/documents_associations',
+      'current_status': 'apie_2_documents_associations_rna'
+    },
+    'actes_inpi': {
+      'availability': 'v2/documents_inpi#actes',
+      'current_status': 'apie_2_actes_inpi'
+    },
+    'conventions_collectives': {
+      'availability': 'v2/conventions_collectives',
+      'current_status': 'apie_2_conventions_collectives'
+    },
+    'exercices': {
+      'availability': 'v2/exercices',
+      'current_status': 'apie_2_exercices_dgfip'
+    },
+    'bilans_inpi': {
+      'availability': 'v2/documents_inpi#bilans',
+      'current_status': 'apie_2_bilans_inpi'
+    },
+    'bilans_entreprises_bdf': {
+      'availability': 'v2/bilans_entreprises_bdf',
+      'current_status': 'apie_2_bilans_entreprises_bdf'
+    },
+    'liasses_fiscales_dgfip': {
+      'availability': 'v2/liasses_fiscales_dgfip',
+      'current_status': 'apie_2_liasses_fiscales_dgfip_declaration'
+    },
+    'attestations_fiscales_dgfip': {
+      'availability': 'v2/attestations_fiscales_dgfip',
+      'current_status': 'apie_2_attestations_fiscales_dgfip'
+    },
+    'attestations_sociales_acoss': {
+      'availability': 'v2/attestations_sociales_acoss',
+      'current_status': ''
+    },
+    'attestations_agefiph': {
+      'availability': 'v2/attestations_agefiph',
+      'current_status': 'apie_2_attestations_agefiph'
+    },
+    'cotisations_msa': {
+      'availability': 'v2/cotisations_msa',
+      'current_status': 'apie_2_cotisations_msa'
+    },
+    'cotisation_retraite_probtp': {
+      'availability': 'v2/eligibilites_cotisation_retraite_probtp',
+      'current_status': 'apie_2_eligibilites_cotisation_retraite_probtp'
+    },
+    'cartes_professionnelles_fntp': {
+      'availability': 'v2/cartes_professionnelles_fntp',
+      'current_status': 'apie_2_cartes_professionnelles_fntp'
+    },
+    'certificats_cnetp': {
+      'availability': 'v2/certificats_cnetp',
+      'current_status': 'apie_2_certificats_cnetp'
+    },
+    'certificats_rge_ademe': {
+      'availability': 'v2/certificats_rge_ademe',
+      'current_status': 'apie_2_certificats_rge_ademe'
+    },
+    'certificats_qualibat': {
+      'availability': 'v2/certificats_qualibat',
+      'current_status': 'apie_2_certificats_qualibat'
+    },
+    'certificats_opqibi': {
+      'availability': 'v2/certificats_opqibi',
+      'current_status': 'apie_2_certificats_opqibi'
+    },
+    'extraits_courts_inpi': {
+      'availability': 'v2/extraits_courts_inpi',
+      'current_status': 'apie_2_extraits_courts_inpi'
+    }    
   }
 
   let instance = new Mark(document.querySelectorAll('.documentation-card'))
@@ -95,6 +161,38 @@ window.addEventListener('load', function (e) {
     openCatalogue(hash)
   }
 
+  fetch('https://dashboard.entreprise.api.gouv.fr/api/watchdoge/dashboard/current_status')
+    .then(response => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        console.log('Erreur lors de la récupération des statuts')
+      }
+    })
+    .then(data => {
+      if (!data.error) {
+        for (let i = 0; i < el.length; i++) {
+          const id = el[i].getAttribute('id')
+          const status = el[i].querySelector('.status-marker')
+          const uname = endpointMatching[id].current_status
+
+          console.log(data)
+          for (key in data.results) {
+            if (data.results[key].uname == uname) {
+              switch (data.results[key].code) {
+                case 200:
+                  status.innerHTML = 'OK'
+                  status.classList.add('success')
+                  break
+                default:
+                  status.innerHTML = 'Non disponible'
+              }
+            }
+          }
+        }
+      }
+    })
+
   function openCatalogue(hash) {
     const target = document.getElementById(hash.substring(1))
     if (target) {
@@ -111,7 +209,7 @@ window.addEventListener('load', function (e) {
   }
 
   function fetchAvailability(endpoint) {
-    fetch('https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=6M&endpoint=api/'+endpointMatching[endpoint])
+    fetch('https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=6M&endpoint=api/'+endpointMatching[endpoint].availability)
       .then(response => {
         if (response.ok) {
           return response.json()

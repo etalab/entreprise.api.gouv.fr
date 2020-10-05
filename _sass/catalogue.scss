@@ -397,7 +397,7 @@
   }
   
   .status-marker {
-    background-color: #7ED321;
+    background-color: #BFBFBF;
     border-radius: var(--border-radius-default);
     padding: var(--spacing-xxs) var(--spacing-s);
     color: var(--white);
@@ -409,16 +409,16 @@
     vertical-align: middle;
   }
 
-  .current-status.success {
-    background-color: var(--success);
+  .status-marker.success {
+    background-color: #7ED321;
   }
 
-  .current-status.warning {
-    background-color: var(--warning);
+  .status-marker.warning {
+    background-color: #FFAD33;
   }
 
-  .current-status.error {
-    background-color: var(--danger);
+  .status-marker.error {
+    background-color: #D32121;
   }
 
   .metrics {
