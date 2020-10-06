@@ -352,7 +352,8 @@ window.addEventListener('load', function (e) {
                     status.classList.add('success')
                     break
                   default:
-                    status.innerHTML = 'Non disponible'
+                    status.innerHTML = 'OK'
+                    status.classList.add('success')
                 }
               }
             }
