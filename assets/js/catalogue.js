@@ -346,14 +346,15 @@ window.addEventListener('load', function (e) {
   
             for (key in data.results) {
               if (data.results[key].uname == uname) {
-                switch (data.results[key].code) {
-                  case 200:
+                if (data.results[key].code) {
+                  if (data.results[key].code == 200) {
                     status.innerHTML = 'OK'
                     status.classList.add('success')
-                    break
-                  default:
-                    status.innerHTML = 'OK'
-                    status.classList.add('success')
+                  } else {
+                    status.innerHTML = 'KO'
+                    status.classList.remove('success')
+                    status.classList.add('error')
+                  }
                 }
               }
             }
