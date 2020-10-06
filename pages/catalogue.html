@@ -37,7 +37,7 @@ is_catalogue: true
                   {% endfor %}
                 {% endfor %}
                 {% for provider in endpoint.providers %}data-{{ provider }}="1"{% endfor %}
-                data-openstate="{{ endpoint.opening }}">
+                data-openstate="{{ endpoint.opening | remove: '.' }}">
                 <div class="documentation-card__header">
                   <div class="endpoint-scope">
                     {% for scope in endpoint.scope %}
