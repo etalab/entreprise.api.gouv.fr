@@ -440,7 +440,7 @@ window.addEventListener('load', function (e) {
     }
 
     // activate new tab and panel
-    if (clickedTab != activeTab[0]) {
+    if (clickedTab.href && clickedTab != activeTab[0]) {
       clickedTab.className += ' tab--active';
       const activeTabContent = document.getElementById(clickedTab.href.split('#')[1])
       activeTabContent.className += ' tab-content--active'
