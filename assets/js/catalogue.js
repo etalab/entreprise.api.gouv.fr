@@ -408,7 +408,7 @@ window.addEventListener('load', function (e) {
     for (const key in days) {
       errorCount += days[key]['502']
     }
-    return ((callCount - errorCount)/callCount).toFixed(2)
+    return ((errorCount / callCount) * 100).toFixed(3)
   }
 
   function buildDataset(data) {
@@ -418,7 +418,7 @@ window.addEventListener('load', function (e) {
       if (!data.days_availability[key].total) {
         daily = 100
       } else {
-        daily = (((data.days_availability[key].total - data.days_availability[key]['502']) / data.days_availability[key].total)* 100).toFixed(2)
+        daily = (((data.days_availability[key].total - data.days_availability[key]['502']) / data.days_availability[key].total)* 100).toFixed(3)
       }
       dataset.push({x: new Date(key), y: daily, 'month': key.split('-')[1]})
     }
