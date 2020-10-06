@@ -1,17 +1,17 @@
 window.addEventListener('load', function (e) {
   const months = {
-    01: 'janvier',
-    02: 'février',
-    03: 'mars',
-    04: 'avril',
-    05: 'mai',
-    06: 'juin',
-    07: 'juillet',
-    08: 'août',
-    09: 'septembre',
-    10: 'octobre',
-    11: 'novembre',
-    12: 'décembre'
+    0: 'janvier',
+    1: 'février',
+    2: 'mars',
+    3: 'avril',
+    4: 'mai',
+    5: 'juin',
+    6: 'juillet',
+    7: 'août',
+    8: 'septembre',
+    9: 'octobre',
+    10: 'novembre',
+    11: 'décembre'
   }
 
   let locale = d3.timeFormatLocale({
@@ -176,7 +176,6 @@ window.addEventListener('load', function (e) {
           const status = el[i].querySelector('.status-marker')
           const uname = endpointMatching[id].current_status
 
-          console.log(data)
           for (key in data.results) {
             if (data.results[key].uname == uname) {
               switch (data.results[key].code) {
@@ -259,6 +258,7 @@ window.addEventListener('load', function (e) {
             dataset.push({x: new Date(key), y: daily, 'month': month})
           }
           buildChart(endpoint, dataset)
+          buildTable(panel.querySelector('.availability-table'), dataset)
         }
       })
   }
@@ -272,7 +272,7 @@ window.addEventListener('load', function (e) {
   }
 
   function buildChart(endpoint, dataset) {
-    const margin = {top: 10, right: 50, bottom: 50, left: 150}
+    const margin = {top: 10, right: 50, bottom: 50, left: 100}
     const width = document.getElementById(endpoint+'-chart').offsetWidth - margin.left - margin.right // Use the window's width 
     const height = document.getElementById(endpoint+'-chart').offsetHeight - margin.top - margin.bottom; // Use the window's height
   
@@ -388,8 +388,39 @@ window.addEventListener('load', function (e) {
         : formatYear)(date)
   }
 
-  function buildTable(data) {
+  function buildTable(container, dataset) {
+    let currentMonth = ''
+    let currentColumn
+    dataset.forEach(d => {
+      let rateClass = ''
+      const month = d.x.getMonth()
+      let monthLegend
+      if (currentMonth !== month) {
+        currentMonth = month
+        currentColumn = document.createElement('div')
+        currentColumn.classList.add('month')
+        currentColumn.dataset.month = months[month]
+        container.append(currentColumn)
+      }
 
+      const day = document.createElement('div')
+      day.classList.add('day')
+      currentColumn.prepend(day)
+      if (d.y >= 99.5) {
+        rateClass = 'legend--sup99'
+      } else {
+        if (d.y >= 90) {
+          rateClass = 'legend--sup90'
+        } else if (d.y >= 80) {
+          rateClass = 'legend--sup80'
+        } else {
+          rateClass = 'legend--sub80'
+        }
+        day.innerHTML = d.y + '%'
+      }
+      day.classList.add(rateClass)
+      day.dataset.day = `${d.x.toLocaleDateString('fr-FR')} ${d.y}%`
+    })
   }
   
 

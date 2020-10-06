@@ -529,7 +529,7 @@
       background-color: #BFBFBF;
       margin-right: var(--spacing-s);
     }
-    
+
     .legend--sup99::before {
       background-color: #7ED321;
     }
@@ -548,6 +548,77 @@
 
     .legend--insufficient {
       margin-top: var(--spacing-l);
+    }
+  }
+
+  .availability-table {
+    flex-grow: 1;
+
+    .month {
+      display: flex;
+      flex: 1 1;
+      flex-direction: column;
+      justify-content: end;
+
+      &::after {
+        content: attr(data-month);
+        margin-top: var(--spacing-xs);
+        font-size: 0.75em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+    .day {
+      border: 2px solid transparent;
+      border-radius: var(--border-radius-default);
+      color: var(--white);
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2px 10%;
+      font-size: 0.875em;
+      font-weight: 700;
+      cursor: default;
+      position: relative;
+        
+      &.legend--sup99 {
+        background-color: #7ED321;
+      }
+
+      &.legend--sup90 {
+        background-color: #FFAD33;
+      }
+
+      &.legend--sup80 {
+        background-color: #D32121;
+      }
+
+      &.legend--sub80 {
+        background-color: #600462;
+      }
+
+      &.legend--insufficient {
+        margin-top: var(--spacing-l);
+      }
+
+      &:hover {
+        border-color: rgb(72, 156, 255);
+
+        &::before {
+          position: absolute;
+          top: -4em;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(0,0,0, 0.8);
+          border-radius: var(--border-radius-default);
+          content: attr(data-day);
+          padding: var(--spacing-xxs) var(--spacing-xs);
+          text-align: center;
+          z-index: 10;
+        }
+      }
     }
   }
 
@@ -607,6 +678,18 @@
     .description .tpl-description-list {
       flex-basis: auto;
       flex-shrink: 1;
+    }
+
+    ul.tab-list {
+      margin: 0;
+    }
+
+    .metrics > .tpl-flex-row {
+      flex-direction: column;
+
+      > :first-child {
+        margin-bottom: var(--spacing-m);
+      }
     }
   }
 }
