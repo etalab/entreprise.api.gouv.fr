@@ -101,6 +101,17 @@ a.tpl-main-header__link:hover {
   margin-top: var(--spacing-m);
 }
 
+@media (max-width: 1000px) {
+  .tpl-footer .tpl-flex-row {
+    flex-flow: wrap;
+  }
+
+  .tpl-footer__links {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+
 .notification {
   color: var(--white);
   padding: var(--spacing-s);
@@ -169,6 +180,13 @@ a.tpl-main-header__link:hover {
 .use-cases .tpl-button {
   margin: auto;
   background: var(--white);
+}
+
+@media (max-width: 1000px) {
+  .use-cases__list .tpl-card {
+    flex: 0 1 100%;
+    margin: 10px auto;
+  }
 }
 
 /* faq */
@@ -245,7 +263,7 @@ a.tpl-main-header__link:hover {
       margin-left: var(--spacing-xl);
     }
   }
-  
+
   .tpl-documentation__sidebar summary,
   .documentation .tpl-documentation__sidebar a {
     color: var(--primary);
@@ -267,7 +285,7 @@ a.tpl-main-header__link:hover {
     transform: translateX(-50%);
     z-index: 100;
   }
-  
+
   button.button-link {
     border: 0;
     box-shadow: none;

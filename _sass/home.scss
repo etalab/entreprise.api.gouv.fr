@@ -23,6 +23,12 @@
   margin-top: 1em;
 }
 
+@media (max-width: 1000px) {
+  .home .tpl-hero .subtext {
+    margin-top: 0;
+  }
+}
+
 .home .tpl-hero__title .alternate {
   overflow: hidden;
   white-space: nowrap;
@@ -70,7 +76,7 @@
   0%, 50%, 100% {
     width: 0;
   }
-  
+
   60%, 90% {
     width: 20.25em;
   }
@@ -140,6 +146,16 @@
 
 .join .tpl-card .tpl-description-list dt:last-of-type::after {
   background-color: rgba(150, 255, 154, 0.49);
+}
+
+@media (max-width: 1000px) {
+  .join .tpl-flex-row {
+    flex-flow: wrap;
+  }
+
+  .join .tpl-card {
+    flex: 1 0 100%;
+  }
 }
 
 .providers {
