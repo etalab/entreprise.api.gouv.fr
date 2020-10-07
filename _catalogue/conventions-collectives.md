@@ -2,7 +2,7 @@
 weight: 7
 type: Informations générales
 title: Conventions collectives
-label: /conventions_collectives
+label: conventions_collectives
 scope:
   - entreprises
 description: Connaître les **conventions collectives d'un établissement** et

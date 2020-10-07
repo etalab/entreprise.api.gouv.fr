@@ -5,7 +5,7 @@ access: Restreint
 weight: 16
 type: Attestations sociales et fiscales
 title: Cotisations de sécurité sociale agricole
-label: /cotisations_msa
+label: cotisations_msa
 scope:
   - entreprises
 description: Savoir si une **entreprise est à jour de ses cotisations sociales**

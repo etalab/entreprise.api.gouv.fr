@@ -5,7 +5,7 @@ access: Restreint
 weight: 9
 type: Informations financières
 title: 3 derniers bilans annuels
-label: /bilans_entreprises_bdf
+label: bilans_entreprises_bdf
 scope:
   - entreprises
 description: "Obtenir les trois derniers bilans d’une entreprise détenus par la

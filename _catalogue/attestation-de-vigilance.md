@@ -9,7 +9,7 @@ access: Restreint
 weight: 14
 type: Attestations sociales et fiscales
 title: Attestation de vigilance
-label: /attestations_sociales_acoss
+label: attestations_sociales_acoss
 scope:
   - entreprises
 description: Obtenir l’attestation validant que l’**entreprise s’acquitte de ses

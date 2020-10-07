@@ -6,7 +6,7 @@ access: Sous habilitation,<br>disponible sous d'autres conditions sur
 weight: 4
 type: Informations générales
 title: Informations déclaratives d’une association
-label: /associations
+label: associations
 scope:
   - associations
 description: Obtenir les **informations déclarées par une association** à la

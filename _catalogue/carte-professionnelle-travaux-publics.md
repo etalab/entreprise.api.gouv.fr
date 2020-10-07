@@ -6,7 +6,7 @@ access: restreint, disponible sans API [sur le site de la
 weight: 19
 type: Attestations sociales et fiscales
 title: Carte professionnelle travaux publics
-label: /cartes_professionnelles_fntp
+label: cartes_professionnelles_fntp
 scope:
   - entreprises
 description: Récupérer la **carte professionnelle** d’entrepreneur de travaux

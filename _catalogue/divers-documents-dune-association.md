@@ -5,7 +5,7 @@ access: Sous habilitation.
 weight: 5
 type: Informations générales
 title: Divers documents d'une association
-label: /documents_associations
+label: documents_associations
 scope:
   - associations
 description: Obtenir **divers documents**, différents selon l’association ; tels

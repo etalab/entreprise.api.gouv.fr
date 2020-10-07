@@ -5,7 +5,7 @@ access: Sous habilitation.
 weight: 7
 type: Informations financières
 title: Chiffre d'affaires
-label: /exercices
+label: exercices
 scope:
   - entreprises
 description: Obtenir les **déclarations de chiffre d'affaire** faites auprès de

@@ -5,7 +5,7 @@ access: Restreint
 weight: 15
 type: Attestations sociales et fiscales
 title: Conformité emploi des travailleurs handicapés
-label: /attestations_agefiph
+label: attestations_agefiph
 scope:
   - entreprises
 description: Obtenir la **dernière année connue de conformité** d’une entreprise

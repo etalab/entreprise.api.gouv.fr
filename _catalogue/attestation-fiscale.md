@@ -4,7 +4,7 @@ providers:
 access: Restreint
 type: Attestations sociales et fiscales
 title: Attestation fiscale
-label: /attestations_fiscales_dgfip
+label: attestations_fiscales_dgfip
 scope:
   - entreprises
 description: Obtenir l’**attestation fiscale**, délivrée par la Direction
