@@ -198,10 +198,7 @@ panels:
       ✅ Avoir une version de langage suffisamment récente. API Entreprise ne fonctionne qu’avec Java 1.7 minimum (pour la gestion des certificats de +1024 bit) ;
 
 
-      ✅ Avoir un dispositif d’alerte de type certificat SSL ;
-
-
-      ✅ Avoir un firewall / White list IP ;
+      ✅ Prévoir de whitelister l'adresse IP du service API Entreprise si votre réseau est derrière un pare-feu. En effet, l'API Entreprise est accessible depuis internet.
 
 
       ✅ Anticiper les coûts de maintenance qui s'ajouteront aux coûts de mise en place.

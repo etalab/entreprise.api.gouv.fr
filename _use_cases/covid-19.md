@@ -25,13 +25,13 @@ Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au 
 ## Cadre réglementaire
 
 ### Aide d'urgence
-Cette aide d'urgence aux TPE/PME est encadrée par le [décret relatif au fonds de solidarité à destination des entreprises particulièrement touchées par les conséquences économiques, financières et sociales de la propagation de l’épidémie de covid-19 et des mesures prises pour limiter cette propagation](https://www.legifrance.gouv.fr/eli/decret/2020/3/30/2020-371/jo/texte). Ce décret spécifie les conditions d'éligibilité des entreprises et associations, les justificatifs demandés, ainsi que les éléments de mise en oeuvre et d'instruction de la demande de subvention.
+Cette aide d'urgence aux TPE/PME est encadrée par le [décret relatif au fonds de solidarité à destination des entreprises particulièrement touchées par les conséquences économiques, financières et sociales de la propagation de l’épidémie de covid-19 et des mesures prises pour limiter cette propagation](https://www.legifrance.gouv.fr/eli/decret/2020/3/30/2020-371/jo/texte){:target="_blank"}. Ce décret spécifie les conditions d'éligibilité des entreprises et associations, les justificatifs demandés, ainsi que les éléments de mise en oeuvre et d'instruction de la demande de subvention.
 
 ### Application du "dîtes le nous une fois"
 Le code des relations entre le public et l’administration permet et contraint les administrations à ne plus demander certaines pièces justificatives aux personnes morales.
 Voici les deux décrets qui organisent les échanges :
-- [Décret n° 2019-31 du 18 janvier 2019 relatif aux échanges d’informations et de données entre administrations dans le cadre des démarches administratives et à l’expérimentation prévue par l’article 40 de la loi n° 2018-727 du 10 août 2018 pour un Etat au service d’une société de confiance](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029589&categorieLien=id)
-- [Décret n° 2019-33 du 18 janvier 2019 fixant la liste des pièces justificatives que le public n’est plus tenu de produire à l’appui des procédures administratives en application de l’article L. 113-13 du code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029642&categorieLien=id)
+- [Décret n° 2019-31 du 18 janvier 2019 relatif aux échanges d’informations et de données entre administrations dans le cadre des démarches administratives et à l’expérimentation prévue par l’article 40 de la loi n° 2018-727 du 10 août 2018 pour un Etat au service d’une société de confiance](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029589&categorieLien=id){:target="_blank"}
+- [Décret n° 2019-33 du 18 janvier 2019 fixant la liste des pièces justificatives que le public n’est plus tenu de produire à l’appui des procédures administratives en application de l’article L. 113-13 du code des relations entre le public et l’administration](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038029642&categorieLien=id){:target="_blank"}
 
 ## Données utiles
 
@@ -43,15 +43,15 @@ Voici la liste des endpoints API Entreprise adaptés à ce cas d'usage et à ind
 {:.tpl-table}
 | Point d'accès API Entreprise | Fournisseur        | Commentaire                                          | Documentation |
 | -------------    | ------------------ |------------------------------------------------------|--------------- |
-| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss) Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril                                                                                             |
-| Entreprise    | INSEE & INFOGREFFE | Données d'identité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://doc.entreprise.api.gouv.fr/?json#entreprises)                                                                                   |
+| Effectifs     | ACOSS              | Données collectés par l'ACOSS auprès de la DSN.      | [Endpoint `effectifs acoss`](https://doc.entreprise.api.gouv.fr/#effectifs-acoss){:target="_blank"} Ce point d'accès sera disponible dès la livraison des données entre le 8 et le 12 avril                                                                                             |
+| Entreprise    | INSEE & INFOGREFFE | Données d'identité du répertoire sirene et mendataires issus d'infogreffe  | [Endpoint `entreprise_insee`](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}{:target="_blank"}                                                                                   |
 
 Les données sur les associations sont disponibles en open data (sans demande d'accès préalable):
 
 {:.tpl-table}
 | API en open data | Fournisseur        | Commentaire                                          | Documentation |
 | -------------    | ------------------ |------------------------------------------------------|--------------- |
-| API du Répertoire National des Associations (RNA)      | Étalab             | Données d'identité des associations (RNA)            | [`API RNA` disponible sur entreprise.data.gouv.fr](https://entreprise.data.gouv.fr/api_doc_rna)                                                                                |
+| API du Répertoire National des Associations (RNA)      | Étalab             | Données d'identité des associations (RNA)            | [`API RNA` disponible sur entreprise.data.gouv.fr](https://entreprise.data.gouv.fr/api_doc_rna){:target="_blank"}                                                                                |
 
 ## Conditions d'accès
 
@@ -66,7 +66,7 @@ Pour votre demande d'accès, veuillez consulter la page ["Demander un accès"]({
 ## Gestion des clés d'accès
 
 Vous réalisez les développements ?
-Nous avons besoin que vous remplissiez [les paramètres obligatoires](https://doc.entreprise.api.gouv.fr/?json#param-tres-obligatoires) de la façon suivante :
+Nous avons besoin que vous remplissiez [les paramètres obligatoires](https://doc.entreprise.api.gouv.fr/?json#param-tres-obligatoires){:target="_blank"} de la façon suivante :
 
 {:.tpl-table}
 | Paramètre   | Présence      | Description                                           |

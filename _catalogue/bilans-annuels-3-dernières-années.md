@@ -14,7 +14,6 @@ description: "Obtenir les trois derniers bilans d’une entreprise détenus par 
   confondus."
 usecases:
   - Aides publiques
-  - Marchés publics
 opening: Données confidentielles.
 perimeter:
   label: Les entreprises ayant au moins 3 bilans et réalisant plus 750 000€ de CA.
@@ -28,7 +27,7 @@ perimeter:
     ###### Bilans renvoyés
 
 
-    Les bilans retenus sont ceux dont la date d’arrêté est comprise entre le mois en cours d'aujourd'hui \[MM/AAAA], et 4 ans en arrière \[MM+1/AAAA-4]. <br> *Par exemple pour un appel le 17 janvier 2020, les bilans retenus ont une date d'arrêt comprise entre le 1er février 2016 et le 17 janvier 2020.*
+    Les bilans retenus sont ceux dont la date d’arrêté est comprise entre le mois en cours \[MM/AAAA], et 4 ans en arrière \[MM+1/AAAA-4]. <br> *Par exemple pour un appel le 17 janvier 2020, les bilans retenus ont une date d'arrêt comprise entre le 1er février 2016 et le 17 janvier 2020.*
 
 
     ⚠️ Même si la Banque de France connaît un à deux bilans de l'entité appelée mais pas les trois derniers, aucune données sera transmise et l'erreur 404 sera renvoyée.

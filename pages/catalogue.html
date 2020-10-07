@@ -37,7 +37,7 @@ is_catalogue: true
                   {% endfor %}
                 {% endfor %}
                 {% for provider in endpoint.providers %}data-{{ provider }}="1"{% endfor %}
-                data-openstate="{{ endpoint.opening }}">
+                data-openstate="{{ endpoint.opening | remove: '.' }}">
                 <div class="documentation-card__header">
                   <div class="endpoint-scope">
                     {% for scope in endpoint.scope %}
@@ -104,6 +104,14 @@ is_catalogue: true
                           <use xlink:href="#list"></use>
                         </svg>
                         Documentation
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#availability--{{ endpoint.label }}" class="tab">
+                        <svg class="tpl-icon" viewBox="0 0 24 24">
+                          <use xlink:href="#bar-chart"></use>
+                        </svg>
+                        Disponibilité
                       </a>
                     </li>
                   </ul>
@@ -221,6 +229,56 @@ is_catalogue: true
                         {{ endpoint.history | markdownify }}
                       </details>
                       {% endif %}
+                    </div>
+                  </div>
+                  <div id="availability--{{ endpoint.label }}" class="availability tab-content tpl-bg--gradient-light">
+                    <div class="tpl-flex-row tpl-flex-jc-sb">
+                      <dl class="tpl-description-list current-status">
+                        <dt>Disponibilité actuelle :</dt>
+                        <dd class="availability-status">
+                          <div class="status-marker success">OK</div>
+                        </dd>
+                      </dl>
+                    </div>
+                    <hr />
+                    <div class="metrics">
+                      <h4>Historique des 6 derniers mois :</h4>
+                      <div class="tpl-flex-row">
+                        <div class="numbers">
+                          <div class="success-rate tpl-flex-row">
+                            <div class="spot"></div>
+                            <div>
+                              <div class="rate"></div>
+                              de succès
+                            </div>
+                          </div>
+                          <dl class="tpl-description-list">
+                            <dt>Nombre d'appel :</dt>
+                            <dd class="call-count"></dd>
+                          </dl>
+                          <dl class="tpl-description-list">
+                            <dt>Erreur fournisseur :</dt>
+                            <dd class="fd-errors"></dd>
+                          </dl>
+                        </div>
+                        <div class="chart-container">
+                          <div class="chart" id="{{ endpoint.label }}-chart"></div>
+                        </div>
+                      </div>
+                      <div class="tpl-flex-row">
+                        <div class="availability-legend">
+                          <p>Dans une journée, l'endpoint fonctionne :</p>
+                          <ul>
+                            <li class="legend legend--sup99">au delà de 99,5%</li>
+                            <li class="legend legend--sup90">au delà de 90%</li>
+                            <li class="legend legend--sup80">au delà de 80%</li>
+                            <li class="legend legend--sub80">en dessous de 80%</li>
+                            <li class="legend">statistiques insuffisantes</li>
+                          </ul>
+                        </div>
+                        <div class="availability-table tpl-flex-row">
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -18,11 +18,11 @@ Les fournisseurs mettent en œuvre un traitement automatisé des données issues
 | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | **Informations sur les effectifs**                            |                          |                                           |                     |                 |
-| [Données de référence d'une entreprise](https://doc.entreprise.api.gouv.fr/?json#entreprises)                 |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques    |
-| [Données de référence d'un établissement](https://doc.entreprise.api.gouv.fr/?json#etablissements)               |          INSEE           |          `etablissements`           |    données JSON     |    publiques    |
+| [Données de référence d'une entreprise](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques et confidentielles pour les non-diffusibles    |
+| [Données de référence d'un établissement](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}                |          INSEE           |          `etablissements`           |    données JSON     |    publiques et confidentielles pour les non-diffusibles    |
 | **Informations financières**                          |                          |                                           |                     |                 |
-| [Chiffre d'affaires](https://doc.entreprise.api.gouv.fr/?json#exercices)                                    |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
-| [Déclarations et dictionnaire de liasses fiscales](https://doc.entreprise.api.gouv.fr/?json#les-d-clarations-des-liasses-fiscales)      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
+| [Chiffre d'affaires](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"}                                     |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
+| [Déclarations et dictionnaire de liasses fiscales](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip)      |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
 
 
 #### Les données d'effectifs
@@ -33,7 +33,7 @@ Deux point d'attention sont à prendre en compte :
 - il s'agit de tranches d'effectif "code_effectif_entreprise"  de la nomenclature  l'INSEE.
 - Les données des entreprises qui lors de leur enregistrement ont déclaré ne pas souhaiter faire l'objet d'un démarchage commercial ne sont exposées que si l'on précise un paramètre dans la requête.
 
-[documentation technique entreprise](https://doc.entreprise.api.gouv.fr/#entreprises)
+[documentation technique entreprise](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}
 
 #### Les chiffres d’affaires
 
@@ -41,7 +41,7 @@ Les données de chiffres d'affaires (chiffre d'affaire comptable) sont accessibl
 Ces données sont issues de la liasse fiscale pour les entreprises soumises à l'impôt sur les sociétés qui ont déposés leurs comptes annuels aux greffes.
 L'API fourni les 3 derniers exercices.
 
-[documentation technique exercices](https://doc.entreprise.api.gouv.fr/#exercices)
+[documentation technique exercices](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"}
 
 #### Les données relatives aux recettes et au total de bilan annuels
 Ces données sont accessibles en utilisant le endpoint `liasses_fiscales_dgfip`
@@ -51,13 +51,13 @@ Pour le chiffre d’affaire, il s’agit dans le numéro d’imprimé 2033B (mil
 
 Pour cette donnée, il est demandé de limiter les appels à une requête par seconde.
 
-[documentation technique liasse fiscale](https://doc.entreprise.api.gouv.fr/#liasses-fiscales-dgfip)
+[documentation technique liasse fiscale](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip){:target="_blank"}
 
 ## Demander un accès aux données
 
 {:.tpl-notification}
 Dans le contexte actuel de la crise sanitaire et de la montée en charge des requêtes adressées à API Entreprise, la bonne délivrance de nos endpoints pourrait être affectée. N'hésitez pas à faire vos demandes d'accès en précisant si possible la volumétrie d'appel envisagée. L'état de disponibilité de vos endpoints sera consultable en temps réel dans votre futur tableau de bord.
 
-Pour demander un accès, veuillez consulter [la page "Demander un accès"]({{ site.baseurl }}/doc/#demande-habilitation), un déroulé des étapes à suivre vous sera décrit.
+Pour demander un accès, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale, un déroulé des étapes à suivre vous sera décrit.
 
 Comme expliqué dans l'introduction, les droits d'accès seront accordés jusqu'au 8 juillet 2020.

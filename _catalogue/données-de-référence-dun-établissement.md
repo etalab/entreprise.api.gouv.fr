@@ -104,7 +104,7 @@ services:
           description: RaisonDeL'AppelOuIdentifiant
       options:
         option1:
-          param: non_diffusable=true
+          param: "&non_diffusable=true"
           description: Une option d'appel vous permet d'accéder aux données des
             établissements dîts non-diffusibles, cette option nécessite une
             autorisation spécifique, accordée ou non par API Entreprise selon
