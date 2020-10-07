@@ -67,7 +67,7 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 | Données                                              | Autorisation marchés publics   |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Chiffre d'affaires](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"}                                     |     ✅ |     DGFIP           |                `exercices`                |    données JSON     | confidentielles |
-| [Bilans annuels](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"}                                     |     ❌ |  INPI     |         `bilans_inpi`          |    Archive ZIP (PDF et XML)     | publiques et confidentielles |
+| [Bilans annuels](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"}                                     |     ✅ |  INPI     |         `bilans_inpi`          |    Archive ZIP (PDF et XML)     | publiques et confidentielles |
 | [3 derniers bilans entreprise](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"}                                     |     ❌ |  Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
 | [Déclarations et dictionnaire de liasses fiscales](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip)      |        ❌ |    DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
 
