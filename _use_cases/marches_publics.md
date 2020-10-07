@@ -76,8 +76,8 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 {:.tpl-table}
 | Données              |  Autorisation marchés publics   |       Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Attestation fiscale](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"}                                    |      ✅ |    DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | confidentielles |
-| [Attestation de vigilance](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"}                               |  ✅ |        ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | confidentielles |
+| [Attestation fiscale](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"}                                    |      ✅ |    DGFIP           |       `attestations_fiscales_dgfip`       |     PDF     | confidentielles |
+| [Attestation de vigilance](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"}                               |  ✅ |        ACOSS           |       `attestations_sociales_acoss`       |     PDF    | confidentielles |
 | [Conformité emploi des travailleurs handicapés AGEFIPH](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"}  |   ✅ |      AGEFIPH          |          `attestations_agefiph`           |    données JSON     | confidentielles |
 | [Cotisations de sécurité sociale agricole](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"}                | ✅ |          MSA            |             `cotisations_msa`             |    données JSON     | confidentielles |
 | [Cotisations retraite bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"}                       |  ✅ |        PROBTP          | `cotisation_retraite_probtp` |    données JSON     |   confidentielles    |
@@ -90,7 +90,7 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 | Données      |  Autorisation marchés publics   |       Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Certification RGE](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"}                                      |    ✅ |      ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
-| [Certification de qualification bâtiment](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"}                  |    ✅ |      Qualibat          |           `certificats_qualibat`            |    document PDF     |    publiques    |
+| [Certification de qualification bâtiment](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"}                  |    ✅ |      Qualibat          |           `certificats_qualibat`            |    PDF     |    publiques    |
 | [Certification de qualification d'ingénierie](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi){:target="_blank"}                  |   ✅ |       OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
 
 
