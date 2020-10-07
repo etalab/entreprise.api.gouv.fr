@@ -6,7 +6,7 @@ access: Restreint, [disponible en recherche manuelle sur
 weight: 22
 type: Certifications professionnelles
 title: Certificat de qualification bâtiment
-label: certificats_qualibat
+label: /certificats_qualibat
 scope:
   - entreprises
 description: Obtenir le certificat Qualibat, apportant l’avis de l’association

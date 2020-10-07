@@ -6,7 +6,7 @@ access: Sous habilitation, <br>disponible partiellement (uniquement les bilans
 weight: 8
 type: Informations financières
 title: Bilans annuels
-label: bilans_inpi
+label: /bilans_inpi
 scope:
   - entreprises
 description: Obtenir les **comptes annuels d’une entreprise** tels que transmis

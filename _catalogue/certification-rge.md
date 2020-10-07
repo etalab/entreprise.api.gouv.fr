@@ -6,7 +6,7 @@ access: Restreint, [disponible en recherche manuelle sur le site
 weight: 21
 type: Certifications professionnelles
 title: Certification RGE
-label: certificats_rge_ademe
+label: /certificats_rge_ademe
 scope:
   - entreprises
 description: Obtenir le certificat “Reconnu Garant de l’Environnement” d’une

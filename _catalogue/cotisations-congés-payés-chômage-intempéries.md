@@ -5,7 +5,7 @@ access: Restreint
 weight: 20
 type: Attestations sociales et fiscales
 title: Cotisations congés payés & chômage intempéries
-label: certificats_cnetp
+label: /certificats_cnetp
 scope:
   - entreprises
 description: Obtenir l’**attestation de cotisation des congés payés et chômage

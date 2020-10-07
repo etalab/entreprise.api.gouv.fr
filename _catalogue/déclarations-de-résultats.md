@@ -5,7 +5,7 @@ access: Restreint
 weight: 10
 type: Informations financières
 title: Déclarations de résultat
-label: liasses_fiscales_dgfip
+label: /liasses_fiscales_dgfip
 scope:
   - entreprises
 description: Obtenir les **données contenues dans les liasses fiscales,** issues

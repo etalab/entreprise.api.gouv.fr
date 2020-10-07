@@ -5,7 +5,7 @@ access: Restreint
 weight: 3
 type: Informations générales
 title: Extrait RCS
-label: extraits_rcs_infogreffe
+label: /extraits_rcs_infogreffe
 scope:
   - entreprises
 description: Obtenir un **extrait des données présentes dans le RCS**, registre

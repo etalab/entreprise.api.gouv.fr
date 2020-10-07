@@ -30,7 +30,7 @@ questions:
 weight: 2
 type: Informations générales
 title: Données de référence d'un établissement
-label: etablissements
+label: /etablissements
 scope:
   - entreprises
   - associations

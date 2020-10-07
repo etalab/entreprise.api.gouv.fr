@@ -6,7 +6,7 @@ access: Sous habilitation, disponible par *swagger* sur le [site de
 weight: 6
 type: Informations générales
 title: "Actes "
-label: actes_inpi
+label: /actes_inpi
 scope:
   - entreprises
 description: Obtenir les **actes d’une entreprise** tels que connus par les

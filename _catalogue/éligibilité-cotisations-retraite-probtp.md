@@ -6,7 +6,7 @@ access: Restreint
 weight: 17
 type: Attestations sociales et fiscales
 title: Cotisations retraite bâtiment
-label: cotisation_retraite_probtp
+label: /cotisation_retraite_probtp
 scope:
   - entreprises
 description: Savoir si une **entreprise est à jour de ses cotisations retraite**

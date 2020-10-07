@@ -6,7 +6,7 @@ access: Restreint, [disponible en recherche manuelle sur le site de
 weight: 24
 type: Propriété intellectuelle
 title: Brevets, modèles et marques déposés
-label: extraits_courts_inpi
+label: /extraits_courts_inpi
 scope:
   - entreprises
   - associations
@@ -148,6 +148,7 @@ services:
             },
 
 
+
             
           // PARTIE MODELES
 
@@ -188,6 +189,7 @@ services:
                 }
               ]
             },
+
 
 
             

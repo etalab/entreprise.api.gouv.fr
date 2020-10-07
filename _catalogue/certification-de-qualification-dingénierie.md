@@ -5,7 +5,7 @@ access: Restreint, [disponible en recherche manuelle sur le
   opqibi.com](https://www.opqibi.com/recherche-plus.php)
 weight: 23
 type: Certifications professionnelles
-title: Certification de qualification d'ingénierie
+title: /Certification de qualification d'ingénierie
 label: certificats_opqibi
 scope:
   - entreprises
@@ -115,6 +115,7 @@ services:
             "duree_de_validite_du_certificat": "valable un an",
             "assurance": "GROUPAMA",
             "url": "http://opqibi.com/fiche.php?id=2975",
+
 
 
             
