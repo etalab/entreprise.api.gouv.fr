@@ -134,7 +134,9 @@ window.addEventListener('load', function (e) {
   init()
 
   function init() {
-    for (let i = 0; i < el.length; i++) { commentSwitches[i].addEventListener('click', toggleComments, false) }
+    for (let i = 0; i < el.length; i++) {
+      commentSwitches[i].addEventListener('click', toggleComments, false)
+    }
     for (let i = 0; i < tabs.length; i++) { tabs[i].addEventListener('click', onTabClick, false) }
     searchInput.addEventListener("input", delay(performMark))
     scopeFilter.addEventListener("change", toggleNonMarkedPanels)
@@ -376,6 +378,7 @@ window.addEventListener('load', function (e) {
         if (!data.error) {
           const panel = document.getElementById(endpoint)
           const callCount = getTotal(data.days_availability)
+          const errorCount = getErrors(data.days_availability, callCount)
           let rateClass = ''
     
           if (typeof data.total_availability === 'number') {
@@ -386,9 +389,9 @@ window.addEventListener('load', function (e) {
           }
 
           panel.querySelector('.spot').classList.add(rateClass)
-          panel.querySelector('.rate').innerHTML = data.total_availability + '%'
           panel.querySelector('.call-count').innerHTML = callCount
-          panel.querySelector('.fd-errors').innerHTML = getErrors(data.days_availability, callCount) + '%'
+          panel.querySelector('.fd-errors').innerHTML = parseFloat(errorCount).toString() + '%'
+          panel.querySelector('.rate').innerHTML = (100 - parseFloat(errorCount)).toString() + '%'
     
           const dataset = buildDataset(data)
           buildChart(endpoint, dataset)
@@ -557,7 +560,7 @@ window.addEventListener('load', function (e) {
         if (d.y >= 90) { rateClass = 'legend--sup90' }
         else if (d.y >= 80) { rateClass = 'legend--sup80' }
         else { rateClass = 'legend--sub80' }
-        day.innerHTML = d.y + '%'
+        day.innerHTML = parseFloat(parseFloat(d.y).toFixed(1)).toString() + '%' // rounds number if trailing zeroes
       }
       day.classList.add(rateClass)
       day.dataset.day = `${d.x.toLocaleDateString('fr-FR')} ${d.y}%`
