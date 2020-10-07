@@ -58,6 +58,7 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 | [Extrait  RCS](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe){:target="_blank"}                                           |     ✅ |   Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    confidentielles    |
 | [Données déclaratives d'une association](https://entreprise.api.gouv.fr/catalogue/#associations){:target="_blank"}                 | ✅ |Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 | [Divers documents d'une association](https://entreprise.api.gouv.fr/catalogue/#documents_associations){:target="_blank"}                     | ✅ |Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
+| [Actes](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"}                     |✅ | INPI |         `actes_inpi`          |     Archive ZIP (PDF et XML)     |    publiques    |
 | [Conventions collectives](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"}                     |✅ | Fabrique numérique des Ministères Sociaux |         `conventions_collectives`          |     données JSON     |    publiques    |
 
 #### Informations financières <a id="infos_financieres"></a>
@@ -79,9 +80,9 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 | [Attestation de vigilance](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"}                               |  ✅ |        ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | confidentielles |
 | [Conformité emploi des travailleurs handicapés AGEFIPH](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"}  |   ✅ |      AGEFIPH          |          `attestations_agefiph`           |    données JSON     | confidentielles |
 | [Cotisations de sécurité sociale agricole](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"}                | ✅ |          MSA            |             `cotisations_msa`             |    données JSON     | confidentielles |
-| [Cotisations retraite bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"}                       |  ✅ |        PROBTP          | `attestations_cotisation_retraite_probtp` |    données JSON     |    publiques    |
-| [Carte professionnelle travaux publics](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp){:target="_blank"}         |       ✅ |   CNETP           |            `cartes_professionnelles_fntp`            |         PDF         |    publiques    |
-| [Cotisations congés payés & chômage intempéries](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp){:target="_blank"}         |   ✅ |       CNETP           |            `certificats_cnetp`            |         PDF         |    publiques    |
+| [Cotisations retraite bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"}                       |  ✅ |        PROBTP          | `cotisation_retraite_probtp` |    données JSON     |   confidentielles    |
+| [Carte professionnelle travaux publics](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp){:target="_blank"}         |       ✅ |   FNTP           |            `cartes_professionnelles_fntp`            |         PDF         |    publiques    |
+| [Cotisations congés payés & chômage intempéries](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp){:target="_blank"}         |   ✅ |       CNETP           |            `certificats_cnetp`            |         PDF         |    confidentielles    |
 
 #### Certificats professionnels <a id="certificats_pro"></a>
 
@@ -89,7 +90,7 @@ Vous trouverez ci-dessous les données autorisées et non autorisées dans le ca
 | Données      |  Autorisation marchés publics   |       Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 | ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
 | [Certification RGE](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"}                                      |    ✅ |      ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
-| [Certification de qualification bâtiment](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"}                  |    ✅ |      Qualibat          |           `certificats_qualibat`            |    données JSON     |    publiques    |
+| [Certification de qualification bâtiment](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"}                  |    ✅ |      Qualibat          |           `certificats_qualibat`            |    document PDF     |    publiques    |
 | [Certification de qualification d'ingénierie](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi){:target="_blank"}                  |   ✅ |       OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
 
 
