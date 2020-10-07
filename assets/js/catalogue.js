@@ -117,7 +117,7 @@ window.addEventListener('load', function (e) {
     'extraits_courts_inpi': {
       'availability': 'v2/extraits_courts_inpi',
       'current_status': 'apie_2_extraits_courts_inpi'
-    }    
+    }
   }
 
   const instance = new Mark(document.querySelectorAll('.documentation-card'))
@@ -144,7 +144,7 @@ window.addEventListener('load', function (e) {
     usecaseFilter.addEventListener("change", toggleNonMarkedPanels)
     providerFilter.addEventListener("change", toggleNonMarkedPanels)
     stateFilter.addEventListener("change", toggleNonMarkedPanels)
-  
+
     checkAnchor()
 
     //search and filtering
@@ -183,7 +183,7 @@ window.addEventListener('load', function (e) {
       }
     })
   }
-  
+
   // wait for user to stop typing
   function delay(fn) {
     let timer = 0
@@ -214,8 +214,8 @@ window.addEventListener('load', function (e) {
         for (let j = 0; j < panels.length; j++) {
           panels[j].classList.remove('hidden')
           shouldHide = false
-          
-          if (scope && !panels[j].hasAttribute('data-'+scope)) { shouldHide = true } 
+
+          if (scope && !panels[j].hasAttribute('data-'+scope)) { shouldHide = true }
           if (usecase && !panels[j].hasAttribute('data-'+usecase)) { shouldHide = true }
           if (provider && !panels[j].hasAttribute('data-'+provider)) { shouldHide = true }
           if (state && !(panels[j].getAttribute('data-openstate') == state)) { shouldHide = true }
@@ -316,7 +316,7 @@ window.addEventListener('load', function (e) {
   function toggleComments(event) {
     const toggle = event.target
     const container = toggle.closest('.json-example').querySelector('code')
-    
+
     const comments = container.querySelectorAll('.c1, .err')
 
     for (i = 0; i < comments.length; i++) {
@@ -345,7 +345,7 @@ window.addEventListener('load', function (e) {
             const id = el[i].getAttribute('id')
             const status = el[i].querySelector('.status-marker')
             const uname = endpointMatching[id].current_status
-  
+
             for (key in data.results) {
               if (data.results[key].uname == uname) {
                 if (data.results[key].code) {
@@ -378,9 +378,9 @@ window.addEventListener('load', function (e) {
         if (!data.error) {
           const panel = document.getElementById(endpoint)
           const callCount = getTotal(data.days_availability)
-          const errorCount = getErrors(data.days_availability, callCount)
+          const errorCount = getErrors(data.days_availability, callCount, endpoint)
           let rateClass = ''
-    
+
           if (typeof data.total_availability === 'number') {
             if (data.total_availability >= 99.5) { rateClass = 'spot--sup99' }
             else if (data.total_availability >= 90) { rateClass = 'spot--sup90' }
@@ -392,8 +392,8 @@ window.addEventListener('load', function (e) {
           panel.querySelector('.call-count').innerHTML = callCount
           panel.querySelector('.fd-errors').innerHTML = parseFloat(errorCount).toString() + '%'
           panel.querySelector('.rate').innerHTML = (100 - parseFloat(errorCount)).toString() + '%'
-    
-          const dataset = buildDataset(data)
+
+          const dataset = buildDataset(data, endpoint)
           buildChart(endpoint, dataset)
           buildTable(panel.querySelector('.availability-table'), dataset)
         }
@@ -408,22 +408,44 @@ window.addEventListener('load', function (e) {
     return callCount
   }
 
-  function getErrors(days, callCount) {
+  function getErrors(days, callCount, endpoint) {
     let errorCount = 0
     for (const key in days) {
-      errorCount += days[key]['502']
+      errorCount += extractErrorsCountForDay(days[key], endpoint)
     }
     return ((errorCount / callCount) * 100).toFixed(3)
   }
 
-  function buildDataset(data) {
+  function extractErrorsCountForDay(payload, endpoint) {
+    let errorCount = 0
+
+    errorCount += payload['502']
+    errorCount += payload['503']
+    errorCount += payload['504']
+
+    if ( isDgfipProvider(endpoint) ) {
+      errorCount += payload['404']
+    }
+
+    return errorCount
+  }
+
+  function isDgfipProvider(endpoint) {
+    return [
+      'exercices',
+      'liasses_fiscales_dgfip',
+      'attestations_fiscales_dgfip'
+    ].includes(endpoint)
+  }
+
+  function buildDataset(data, endpoint) {
     let dataset = []
     for (let key in data.days_availability) {
       let daily
       if (!data.days_availability[key].total) {
         daily = 100
       } else {
-        daily = (((data.days_availability[key].total - data.days_availability[key]['502']) / data.days_availability[key].total)* 100).toFixed(3)
+        daily = (((data.days_availability[key].total - extractErrorsCountForDay(data.days_availability[key], endpoint)) / data.days_availability[key].total)* 100).toFixed(3)
       }
       dataset.push({x: new Date(key), y: daily, 'month': key.split('-')[1]})
     }
@@ -432,7 +454,7 @@ window.addEventListener('load', function (e) {
 
   function buildChart(endpoint, dataset) {
     const margin = {top: 10, right: 50, bottom: 50, left: 100}
-    const width = document.getElementById(endpoint+'-chart').offsetWidth - margin.left - margin.right // container width 
+    const width = document.getElementById(endpoint+'-chart').offsetWidth - margin.left - margin.right // container width
     const height = document.getElementById(endpoint+'-chart').offsetHeight - margin.top - margin.bottom; // container height
     const n = dataset.length;
 
@@ -440,37 +462,37 @@ window.addEventListener('load', function (e) {
     const x = d3.scaleTime()
                 .domain(d3.extent(dataset, d => d.x)) // input
                 .rangeRound([0, width]) // output
-    
+
     // Y scale uses percentages
     const y = d3.scaleLinear()
-                .domain([0, 100]) // input 
-                .range([height, 0]) // output 
-    
+                .domain([0, 100]) // input
+                .range([height, 0]) // output
+
     // Generate line
     const line = d3.line()
                     .x(d => x(d.x))
                     .y(d => y(d.y))
                     .curve(d3.curveMonotoneX)
-    
+
     // Add the SVG to the page
     const svg = d3.select('#'+endpoint+'-chart').append("svg")
                   .attr("width", width + margin.left + margin.right)
                   .attr("height", height + margin.top + margin.bottom)
                   .append("g")
                   .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-    
+
     // Create the X axis
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x).tickFormat(locale.format("%b"))) // Create an axis component with d3.axisBottom
-        
+
     // Create the Y axis
     svg.append("g")
         .attr("class", "y axis")
         .call(d3.axisLeft(y))
-        
-    // Create the gradient 
+
+    // Create the gradient
     svg.append('linearGradient')
         .attr('id', "availability-gradient")
         .attr('gradientUnits', 'userSpaceOnUse')
@@ -490,10 +512,10 @@ window.addEventListener('load', function (e) {
         .attr('offset', d => d.offset)
         .attr('stop-color', d => d.color)
 
-    // Append the path, bind the data, and call the line generator 
+    // Append the path, bind the data, and call the line generator
     svg.append("path")
-        .datum(dataset) // 10. Binds data to the line 
-        .attr("class", "line") // Assign a class for styling 
+        .datum(dataset) // 10. Binds data to the line
+        .attr("class", "line") // Assign a class for styling
         .attr("d", line) // 11. Calls the line generator
 
     // Append industrial standard marker, lowered to 99 so it doesn't mix with 100%
@@ -516,7 +538,7 @@ window.addEventListener('load', function (e) {
         .attr('x', -40)
         .attr('y', height - (height * 99) / 100)
         .attr('text-anchor', 'end')
-      
+
     svg.append('text')
         .attr('class', 'standard-text')
         .style('fill', '#489CFF')
