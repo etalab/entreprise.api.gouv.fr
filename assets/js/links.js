@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
   function onButtonClick(evt) {
     const target = evt.target
     if (target) {
-      const link = target.getAttribute('data-link')
+      const link = `${window.location.host}/${target.getAttribute('data-link')}`
       if (link) {
         copyTextToClipboard(link)
       }

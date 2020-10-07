@@ -389,7 +389,7 @@ window.addEventListener('load', function (e) {
           }
 
           panel.querySelector('.spot').classList.add(rateClass)
-          panel.querySelector('.call-count').innerHTML = callCount
+          panel.querySelector('.call-count').innerHTML = (Math.round(callCount / 100) * 100).toLocaleString('fr-FR');
           panel.querySelector('.fd-errors').innerHTML = parseFloat(errorCount).toString() + '%'
           panel.querySelector('.rate').innerHTML = (100 - parseFloat(errorCount)).toString() + '%'
 
