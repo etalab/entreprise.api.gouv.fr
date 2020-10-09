@@ -400,4 +400,6 @@ services:
       format: Donnée structurée JSON
       timeout: 5 secondes
 history: "##### 15/04/2019 Création des endpoints liasses fiscales"
+availability:
+  unavailability_types: Opérations de maintenance toutes les nuits entre 1h et 2h.
 ---
