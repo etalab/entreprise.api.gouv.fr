@@ -56,7 +56,7 @@ services:
             "a_jour": true,
           // Si l'entreprise est à jour de ses cotisations patronales à la MSA, la réponse seral "true", à l'inverse, si l'entreprise n'est pas à jour, la réponse sera "false". Dans certains cas, le statut de l'entreprise est inconnu, une analyse est à effectuer, alors ce champ indiquera "null".
             "analyse_en_cours": false
-          // Indique "false" quand le statut de l'entreprise est connu, autrement, indique "true" si justement, une analyse manuelle page un agent est en cours.
+          // Indique "false" quand le statut de l'entreprise est connu, autrement, indique "true" si justement, une analyse manuelle par un agent est en cours.
 
           }
       questions:
