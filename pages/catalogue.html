@@ -239,7 +239,21 @@ is_catalogue: true
                           <div class="status-marker success">OK</div>
                         </dd>
                       </dl>
+                      <dl class="tpl-description-list">
+                        <dt>Volumétrie :</dt>
+                        <dd>{{ endpoint.availability.volumetry }}</dd>
+                      </dl>
                     </div>
+                    <dl class="tpl-description-list">
+                      <div class="tpl-description-group">
+                        <dt>Disponibilité normale :</dt>
+                        <dd>{{ endpoint.availability.normal_availability }}</dd>
+                      </div>
+                      <div class="tpl-description-group">
+                        <dt>Indisponibilités types :</dt>
+                        <dd>{{ endpoint.availability.unavailability_types }}</dd>
+                      </div>
+                    </dl>
                     <hr />
                     <div class="metrics">
                       <h4>Historique des 6 derniers mois :</h4>
