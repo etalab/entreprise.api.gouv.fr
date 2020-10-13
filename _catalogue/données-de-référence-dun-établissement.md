@@ -44,15 +44,6 @@ usecases:
   - Application de la loi énergie
 opening: Données publiques et confidentielles pour les non-diffusibles.
 perimeter:
-  perimeter1:
-    label: Lorem ipsum
-    description: Lorem ipsum
-  perimeter2:
-    label: Lorem ipsum
-    description: Lorem ipsum
-  perimeter3:
-    label: Lorem ipsum
-    description: Lorem ipsum
   description: >-
     L'endpoint `etablissements` vous donne accès aux données des établissements
     tirées du *Répertoire National d'identification des entreprises et des
