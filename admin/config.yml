@@ -41,7 +41,7 @@ collections:
       - label: 'Titre'
         name: 'title'
         required: true
-        widget: 'text'
+        widget: 'string'
       - label: 'ID'
         name: 'id'
         required: true
@@ -328,7 +328,7 @@ collections:
                     - label: 'Paramètre'
                       name: 'label'
                       required: false
-                      default: 'token' 
+                      default: 'token'
                       widget: 'string'
                     - label: 'Description'
                       name: 'description'
@@ -342,12 +342,12 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'context' 
+                      default: 'context'
                       required: false
                       widget: 'string'
                     - label: 'Description'
                       name: 'description'
-                      default: 'CadreDeLaRequête' 
+                      default: 'CadreDeLaRequête'
                       required: false
                       widget: 'string'
                 - label: 'Paramètre obligatoire 3'
@@ -357,7 +357,7 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'recipient' 
+                      default: 'recipient'
                       required: false
                       widget: 'string'
                     - label: 'Description'
@@ -372,7 +372,7 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'object' 
+                      default: 'object'
                       required: false
                       widget: 'string'
                     - label: 'Description'
@@ -472,16 +472,16 @@ collections:
                 required: false
                 widget: 'select'
                 multiple: false
-                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']          
+                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']
               - label: 'Timeout'
                 name: 'timeout'
                 widget: 'select'
                 multiple: false
-                options: ['5 secondes', '12 secondes'] 
+                options: ['5 secondes', '12 secondes']
               - label: 'Description'
                 name: 'description'
                 required: false
-                widget: 'markdown'  
+                widget: 'markdown'
               - label: 'Questions/réponses'
                 name: 'questions'
                 widget: 'object'
@@ -525,7 +525,7 @@ collections:
                       - label: 'Réponse'
                         name: 'answer'
                         required: false
-                        widget: 'markdown'  
+                        widget: 'markdown'
               - label: 'Réponse type'
                 name: 'sample'
                 required: false
@@ -623,7 +623,7 @@ collections:
                     - label: 'Paramètre'
                       name: 'label'
                       required: false
-                      default: 'token' 
+                      default: 'token'
                       widget: 'string'
                     - label: 'Description'
                       name: 'description'
@@ -637,12 +637,12 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'context' 
+                      default: 'context'
                       required: false
                       widget: 'string'
                     - label: 'Description'
                       name: 'description'
-                      default: 'CadreDeLaRequête' 
+                      default: 'CadreDeLaRequête'
                       required: false
                       widget: 'string'
                 - label: 'Paramètre obligatoire 3'
@@ -652,7 +652,7 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'recipient' 
+                      default: 'recipient'
                       required: false
                       widget: 'string'
                     - label: 'Description'
@@ -667,7 +667,7 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'object' 
+                      default: 'object'
                       required: false
                       widget: 'string'
                     - label: 'Description'
@@ -767,17 +767,17 @@ collections:
                 required: false
                 widget: 'select'
                 multiple: false
-                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']          
+                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']
               - label: 'Timeout'
                 name: 'timeout'
                 widget: 'select'
                 multiple: false
                 required: false
-                options: ['5 secondes', '12 secondes'] 
+                options: ['5 secondes', '12 secondes']
               - label: 'Description'
                 name: 'description'
                 required: false
-                widget: 'markdown'  
+                widget: 'markdown'
               - label: 'Questions/réponses'
                 name: 'questions'
                 widget: 'object'
@@ -821,7 +821,7 @@ collections:
                       - label: 'Réponse'
                         name: 'answer'
                         required: false
-                        widget: 'markdown'  
+                        widget: 'markdown'
               - label: 'Réponse type'
                 name: 'sample'
                 required: false
@@ -919,7 +919,7 @@ collections:
                     - label: 'Paramètre'
                       name: 'label'
                       required: false
-                      default: 'token' 
+                      default: 'token'
                       widget: 'string'
                     - label: 'Description'
                       name: 'description'
@@ -933,12 +933,12 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'context' 
+                      default: 'context'
                       required: false
                       widget: 'string'
                     - label: 'Description'
                       name: 'description'
-                      default: 'CadreDeLaRequête' 
+                      default: 'CadreDeLaRequête'
                       required: false
                       widget: 'string'
                 - label: 'Paramètre obligatoire 3'
@@ -948,7 +948,7 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'recipient' 
+                      default: 'recipient'
                       required: false
                       widget: 'string'
                     - label: 'Description'
@@ -963,7 +963,7 @@ collections:
                   fields:
                     - label: 'Paramètre'
                       name: 'label'
-                      default: 'object' 
+                      default: 'object'
                       required: false
                       widget: 'string'
                     - label: 'Description'
@@ -1063,17 +1063,17 @@ collections:
                 required: false
                 widget: 'select'
                 multiple: false
-                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']          
+                options: ['Donnée structurée JSON', 'Document PDF', 'Archive ZIP contenant PDF ou JPEG', 'Archive ZIP contenant PDF et XML']
               - label: 'Timeout'
                 name: 'timeout'
                 widget: 'select'
                 multiple: false
                 required: false
-                options: ['5 secondes', '12 secondes'] 
+                options: ['5 secondes', '12 secondes']
               - label: 'Description'
                 name: 'description'
                 required: false
-                widget: 'markdown'  
+                widget: 'markdown'
               - label: 'Questions/réponses'
                 name: 'questions'
                 widget: 'object'
@@ -1117,7 +1117,7 @@ collections:
                       - label: 'Réponse'
                         name: 'answer'
                         required: false
-                        widget: 'markdown'  
+                        widget: 'markdown'
               - label: 'Réponse type'
                 name: 'sample'
                 required: false
