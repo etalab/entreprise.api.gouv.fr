@@ -147,6 +147,23 @@ panels:
     title: Faire ma première requête ☎️
     id: premiere-requete
     content: >-
+      #### Faire un premier appel de test
+
+      [Votre habilitation est validée, vous avez récupéré vos jetons](../doc/#habilitation-validee), vous pouvez donc désormais faire un premier appel de test.
+      
+
+      Si vous êtes à l'aise avec les interfaces techniques, nous avons mis en place un [**environnement de production documenté**](https://api.gouv.fr/documentation/api-entreprise), propulsé par Open API (Swagger) et disponible sur api.gouv.fr. 
+      Il permet, à l'aide d'un token d'authentification valide 🔑, d'effectuer directement depuis le navigateur des tests de l'API. Les données confidentielles restent bien protégées. Vous y trouverez aussi la spécification technique téléchargeable sous format YAML afin de pouvoir accélérer le développement de vos outils d'interfaçage avec API Entreprise.
+
+
+      Autrement, vous pouvez **effectuer votre appel de test directement dans la barre URL de votre navigateur**. Pour comprendre comment se compose une URL d'appel, veuillez consulter la partie [Comment se déroule un appel à l'API ?](../doc/#apis). 
+
+
+      {:.tpl-notification.tpl--danger}
+
+      Attention, vous ne devez **jamais copier-coller un token dans un moteur de recherche** ou dans un e-mail.
+
+
       #### Instruire les paramètres de traçabilité
 
 
