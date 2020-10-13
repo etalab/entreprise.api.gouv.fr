@@ -376,22 +376,22 @@ window.addEventListener('load', function (e) {
       })
       .then(data => {
         if (!data.error) {
+          let rateClass = ''
           const panel = document.getElementById(endpoint)
           const callCount = getTotal(data.days_availability)
           const errorCount = getErrors(data.days_availability, callCount, endpoint)
-          let rateClass = ''
-
-          if (typeof data.total_availability === 'number') {
-            if (data.total_availability >= 99.5) { rateClass = 'spot--sup99' }
-            else if (data.total_availability >= 90) { rateClass = 'spot--sup90' }
-            else if (data.total_availability >= 80) { rateClass = 'spot--sup80' }
-            else { rateClass = 'spot--sub80' }
-          }
+          const errorRate = parseFloat(errorCount).toString()
+          const availabilityRate = (100 - parseFloat(errorCount)).toString()
+          
+          if (availabilityRate >= 99.5) { rateClass = 'spot--sup99' }
+          else if (availabilityRate >= 90) { rateClass = 'spot--sup90' }
+          else if (availabilityRate >= 80) { rateClass = 'spot--sup80' }
+          else { rateClass = 'spot--sub80' }
 
           panel.querySelector('.spot').classList.add(rateClass)
           panel.querySelector('.call-count').innerHTML = (Math.round(callCount / 100) * 100).toLocaleString('fr-FR');
-          panel.querySelector('.fd-errors').innerHTML = parseFloat(errorCount).toString() + '%'
-          panel.querySelector('.rate').innerHTML = (100 - parseFloat(errorCount)).toString() + '%'
+          panel.querySelector('.fd-errors').innerHTML = errorRate + '%'
+          panel.querySelector('.rate').innerHTML = availabilityRate + '%'
 
           const dataset = buildDataset(data, endpoint)
           buildChart(endpoint, dataset)
