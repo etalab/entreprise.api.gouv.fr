@@ -36,7 +36,7 @@ panels:
       ```
 
 
-      [Un Swagger est disponible](https://api.gouv.fr/documentation/api-entreprise)
+      Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
   panel2:
     title: Connaître la disponibilité des API en temps réel 📊
     id: api-disponibilites
@@ -175,7 +175,7 @@ panels:
       |api/v2/effectifs_annuels_entreprise_acoss_covid|Effectifs annuels par entreprise (aides COVID-19) - documentation à venir|
 
 
-      [Un Swagger est disponible](https://api.gouv.fr/documentation/api-entreprise)
+      Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
   panel3:
     title: Interpréter les codes HTTP 🚦
     id: http-codes
