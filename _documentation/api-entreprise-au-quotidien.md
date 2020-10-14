@@ -12,7 +12,7 @@ panels:
       droit** avec votre token vous pouvez le vérifier avec cette API.
 
 
-      Si vous gérer les tokens pour vos clients vous pouvez aussi utiliser cette API pour vérfier les droits associés à leurs tokens.
+      Si vous gérer les tokens pour vos clients vous pouvez aussi utiliser cette API pour vérifier les droits associés à leurs tokens.
 
 
       **Exemple**
@@ -41,8 +41,8 @@ panels:
     title: Connaître la disponibilité des API en temps réel 📊
     id: api-disponibilites
     content: >-
-      Si vous souhaitez connaître la disponibilité de nos APIs en temps réel
-      nous mettons à votre disposition les données.
+      Pour connaître la disponibilité de API Entreprise en temps réel les
+      données, ainsi que le taux d'erreurs constatées.
 
 
       **Cette API est ouverte et ne nécessite pas de token**, attention à tout de même respecter les [limites de volumétrie](./#configuration) habituelle.
