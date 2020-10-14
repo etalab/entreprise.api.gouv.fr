@@ -705,4 +705,11 @@
       margin: 0;
     }
   }
+    
+  @media (max-width: 500px) {
+    .documentation-card {
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
+  }
 }
