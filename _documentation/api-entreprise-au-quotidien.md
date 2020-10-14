@@ -38,12 +38,58 @@ panels:
 
       Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
   panel2:
+    title: Connaître la disponibilité des API en temps réel ✅
+    id: api-current-status
+    content: >-
+      Pour connaître la disponibilité des données de API Entreprise en temps
+      réel.
+
+
+      **Cette API est ouverte et ne nécessite pas de token**, attention à tout de même respecter les [limites de volumétrie](./#configuration) habituelle.
+
+
+      Exemple
+
+
+      {:.example}
+
+      GET https://dashboard.entreprise.api.gouv.fr/api/watchdoge/dashboard/current_status
+
+
+      ```json
+
+      {
+        "results": [
+          {
+            "uname": "apie_2_etablissements",
+            "name": "Etablissements",
+            "provider": "insee",
+            "api_version": 2,
+            "code": 200,
+            "timestamp": "2020-10-14T14:36:33.640Z"
+          },
+          {
+            "uname": "apie_2_certificats_qualibat",
+            "name": "Certificats Qualibat",
+            "provider": "qualibat",
+            "api_version": 2,
+            "code": 503,
+            "timestamp": "2020-10-14T14:38:02.736Z"
+          },
+          [...]
+        ]
+      }
+
+      ```
+
+
+      Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
   panel3:
-    title: Connaître la disponibilité des API en temps réel 📊
+    title: Connaître l'historique de disponibilité des API 📊
     id: api-disponibilites
     content: >-
-      Pour connaître la disponibilité de API Entreprise en temps réel les
-      données, ainsi que le taux d'erreurs constatées.
+      Pour connaître l'historique de disponibilité des données de API Entreprise
+      ainsi que le taux d'erreurs constatées.
 
 
       **Cette API est ouverte et ne nécessite pas de token**, attention à tout de même respecter les [limites de volumétrie](./#configuration) habituelle.
