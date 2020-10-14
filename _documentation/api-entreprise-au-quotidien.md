@@ -45,6 +45,9 @@ panels:
       nous mettons à votre disposition les données.
 
 
+      **Cette API est ouverte et ne nécessite pas de token**, attention à tout de même respecter les [limites de volumétrie](./#configuration) habituelle.
+
+
       Exemple
 
 
