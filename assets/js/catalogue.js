@@ -136,6 +136,7 @@ window.addEventListener('load', function (e) {
   function init() {
     for (let i = 0; i < el.length; i++) {
       commentSwitches[i].addEventListener('click', toggleComments, false)
+      fetchAvailability(el[i].getAttribute('id'))
     }
     for (let i = 0; i < tabs.length; i++) { tabs[i].addEventListener('click', onTabClick, false) }
     searchInput.addEventListener("input", delay(performMark))
@@ -306,10 +307,6 @@ window.addEventListener('load', function (e) {
       clickedTab.className += ' tab--active';
       const activeTabContent = document.getElementById(clickedTab.href.split('#')[1])
       activeTabContent.className += ' tab-content--active'
-
-      if (activeTabContent.classList.contains('availability') && !activeTabContent.querySelector('.chart svg')) {
-        fetchAvailability(clickedParent.parentElement.getAttribute('id'))
-      }
     }
   }
 
@@ -382,20 +379,26 @@ window.addEventListener('load', function (e) {
           const errorCount = getErrors(data.days_availability, callCount, endpoint)
           const errorRate = parseFloat(errorCount)
           const availabilityRate = (100 - parseFloat(errorCount)).toFixed(3)
+          const spots = panel.querySelectorAll('.spot')
+          const rates = panel.querySelectorAll('.rate')
           
           if (availabilityRate >= 99.5) { rateClass = 'spot--sup99' }
           else if (availabilityRate >= 90) { rateClass = 'spot--sup90' }
           else if (availabilityRate >= 80) { rateClass = 'spot--sup80' }
           else { rateClass = 'spot--sub80' }
 
-          panel.querySelector('.spot').classList.add(rateClass)
+          for (let i = 0; i < spots.length; i++) { spots[i].classList.add(rateClass) }
+          for (let i = 0; i < spots.length; i++) { rates[i].innerHTML = availabilityRate.toString() + '%' }
           panel.querySelector('.call-count').innerHTML = (Math.round(callCount / 100) * 100).toLocaleString('fr-FR');
           panel.querySelector('.fd-errors').innerHTML = errorRate.toString() + '%'
-          panel.querySelector('.rate').innerHTML = availabilityRate.toString() + '%'
-
+          
           const dataset = buildDataset(data, endpoint)
           buildChart(endpoint, dataset)
           buildTable(panel.querySelector('.availability-table'), dataset)
+
+          panel.querySelector('.tab--availability').addEventListener('click', function() {
+            buildChart(endpoint, dataset)
+          }, false)
         }
       })
   }
@@ -454,8 +457,10 @@ window.addEventListener('load', function (e) {
 
   function buildChart(endpoint, dataset) {
     const margin = {top: 10, right: 50, bottom: 50, left: 100}
-    const width = document.getElementById(endpoint+'-chart').offsetWidth - margin.left - margin.right // container width
-    const height = document.getElementById(endpoint+'-chart').offsetHeight - margin.top - margin.bottom; // container height
+    const chart = document.getElementById(endpoint+'-chart')
+    chart.innerHTML = ''
+    const width = chart.offsetWidth - margin.left - margin.right // container width
+    const height = chart.offsetHeight - margin.top - margin.bottom; // container height
     const n = dataset.length;
 
     // X scale uses success rate by day
@@ -491,26 +496,6 @@ window.addEventListener('load', function (e) {
     svg.append("g")
         .attr("class", "y axis")
         .call(d3.axisLeft(y))
-
-    // Create the gradient
-    svg.append('linearGradient')
-        .attr('id', "availability-gradient")
-        .attr('gradientUnits', 'userSpaceOnUse')
-        .attr('x1', 0)
-        .attr('y1', height - margin.bottom)
-        .attr('x2', 0)
-        .attr('y2', 0)
-      .selectAll('stop')
-        .data([{ offset: '0%', color: '#600462' },
-               { offset: '70%', color: '#600462' },
-               { offset: '78%', color: '#D32121' },
-               { offset: '83%', color: '#D32121' },
-               { offset: '90%', color: '#FFAD33' },
-               { offset: '98%', color: '#FFAD33' },
-               { offset: '100%', color: '#7ED321' }])
-      .enter().append('stop')
-        .attr('offset', d => d.offset)
-        .attr('stop-color', d => d.color)
 
     // Append the path, bind the data, and call the line generator
     svg.append("path")
@@ -556,6 +541,27 @@ window.addEventListener('load', function (e) {
         .attr('x', -40)
         .attr('y', height - (height * 99) / 100 + 30)
         .attr('text-anchor', 'end')
+        
+    // Create the gradient
+    svg.append('linearGradient')
+      .attr('id', "availability-gradient")
+      .attr('gradientUnits', 'userSpaceOnUse')
+      .attr('x1', 0)
+      .attr('y1', height - margin.bottom)
+      .attr('x2', 0)
+      .attr('y2', 0)
+    .selectAll('stop')
+      .data([{ offset: '0%', color: '#600462' },
+            { offset: '70%', color: '#600462' },
+            { offset: '78%', color: '#D32121' },
+            { offset: '83%', color: '#D32121' },
+            { offset: '90%', color: '#FFAD33' },
+            { offset: '98%', color: '#FFAD33' },
+            { offset: '100%', color: '#7ED321' }])
+    .enter().append('stop')
+      .attr('offset', d => d.offset)
+      .attr('stop-color', d => d.color)
+
   }
 
   function buildTable(container, dataset) {

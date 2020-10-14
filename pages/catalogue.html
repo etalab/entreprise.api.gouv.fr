@@ -99,7 +99,7 @@ is_catalogue: true
                 <div class="documentation__tabs">
                   <ul class="tab-list">
                     <li>
-                      <a href="#technical-documentation--{{ endpoint.label }}" class="tab">
+                      <a href="#technical-documentation--{{ endpoint.label }}" class="tab tab--documentation">
                         <svg class="tpl-icon" viewBox="0 0 24 24">
                           <use xlink:href="#list"></use>
                         </svg>
@@ -107,11 +107,13 @@ is_catalogue: true
                       </a>
                     </li>
                     <li>
-                      <a href="#availability--{{ endpoint.label }}" class="tab">
+                      <a href="#availability--{{ endpoint.label }}" class="tab tab--availability">
                         <svg class="tpl-icon" viewBox="0 0 24 24">
                           <use xlink:href="#bar-chart"></use>
                         </svg>
                         Disponibilité
+                        <div class="spot hidden"></div>
+                        <div class="rate"></div>
                       </a>
                     </li>
                   </ul>
