@@ -38,6 +38,7 @@ panels:
 
       Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
   panel2:
+  panel3:
     title: Connaître la disponibilité des API en temps réel 📊
     id: api-disponibilites
     content: >-
@@ -176,7 +177,7 @@ panels:
 
 
       Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
-  panel3:
+  panel4:
     title: Interpréter les codes HTTP 🚦
     id: http-codes
     content: >-
@@ -250,7 +251,7 @@ panels:
 
 
       En cas d’erreur, le JSON vous détaille la raison de l’erreur, le champ concerné se nomme `“errors”`. Lorsqu’un endpoint retourne des données agrégées de plusieurs fournisseurs, le JSON renvoyé contient un champ `“gateway error”`. Sa valeur vaut `“true”` lorsqu'une erreur survient auprès d'au moins un fournisseur.
-  panel4:
+  panel5:
     title: Renouveler un token en fin de vie 💫
     id: renouvellement-token
     content: >-
@@ -330,7 +331,7 @@ panels:
 
 
       </details>
-  panel5:
+  panel6:
     title: Réagir en cas d’incidents fournisseurs de données 🚧
     id: incident-fournisseurs
     content: >-
@@ -341,7 +342,7 @@ panels:
       1. Dans une telle situation, **la première chose à faire est de consulter la [page incident](https://dashboard.entreprise.api.gouv.fr/incidents)** et de vérifier si l'indisponibilité n'y est pas répertoriée. Toutes les indisponibilités y sont inscrites dans le délai le plus court possible et parfois même anticipées lorsque le fournisseur de donnée nous prévient à l'avance d'une indisponibilité pour maintenance.\
          Vous pouvez **également consulter la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time)** et ainsi vérifier si l'endpoint ne fonctionnant pas est indiqué comme DOWN dans l'interface. API Entreprise a effectivement mis en place un système de test permettant de vérifier l'état de disponibilité de tous les endpoints.
       2. Si l'incident n'est pas répertorié, deux options se présentent : l'erreur provient de votre côté, ou bien elle n'a pas encore été identifiée par API Entreprise. Après avoir pris soin de regarder qu'il ne s'agit pas de la première option, vous pouvez nous contacter sur [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
-  panel6:
+  panel7:
     title: Réagir en cas d’indisponibilité globale 🚧
     id: indisponibilite-globale
     content: >-
@@ -355,7 +356,7 @@ panels:
 
 
       🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
-  panel7:
+  panel8:
     title: Élargir le périmètre des données demandées 🧩
     id: elargissement-perimetre
     content: >-
@@ -369,7 +370,7 @@ panels:
 
 
       Si l'habilitation vous est donnée, API Entreprise vous fournira un nouveau jeton contenant le nouveau périmètre des endpoints accessibles.
-  panel8:
+  panel9:
     title: S'adapter aux évolutions et montées de versions 🏗
     id: evolutions
     content: |-
