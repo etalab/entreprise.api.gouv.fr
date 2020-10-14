@@ -369,6 +369,9 @@ window.addEventListener('load', function (e) {
           return response.json()
         } else {
           console.log('Erreur lors de la récupération des données')
+          const panel = document.getElementById(endpoint)
+          endpoint.querySelector('.metrics').classList.add('hidden')
+          endpoint.querySelector('.no-data').classList.remove('hidden')
         }
       })
       .then(data => {
