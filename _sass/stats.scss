@@ -105,11 +105,6 @@ $big-number-card-padding: 2 * $segmented-control-item-border-radius;
   margin: 0 auto;
   margin-bottom: 20px;
   color: $light-grey;
-
-  &.long-title {
-    margin-left: -30px;
-    margin-right: -30px;
-  }
 }
 
 .big-number-card-number {
@@ -125,4 +120,26 @@ $big-number-card-padding: 2 * $segmented-control-item-border-radius;
   display: block;
   text-align: center;
   color: $blue;
+}
+
+@media (max-width: 1000px) {
+  .stat-cards {
+    flex-wrap: wrap;
+  }
+
+  .stat-card {
+    flex-shrink: 0;
+    width: 100%;
+    padding: var(--spacing-m);
+  }
+
+  .stat-card-half {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .big-number-card-number {
+    font-size: 2.5em;
+  }
 }
