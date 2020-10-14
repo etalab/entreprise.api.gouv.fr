@@ -30,7 +30,7 @@ panels:
 
       | Code HTTP                                       |      Signification                                           |
 
-      |:----------------------------------------------------------:|----------------------------------------|
+      |------------------------------------------------------------|----------------------------------------|
 
       |`200` | **Tout va bien.**
 
@@ -44,7 +44,7 @@ panels:
 
       | Code HTTP                                       |      Signification                                           |
 
-      |:----------------------------------------------------------:|----------------------------------------|
+      |------------------------------------------------------------|----------------------------------------|
 
       |`400` | **Mauvaise requête** – La syntaxe de votre requête est erronée.
 
@@ -66,7 +66,7 @@ panels:
 
       | Code HTTP                                       |      Signification                                           |
 
-      |:----------------------------------------------------------:|----------------------------------------|
+      |------------------------------------------------------------|----------------------------------------|
 
       |`500` | **Erreur interne à API Entreprise** – Une erreur interne du serveur d’API Entreprise est survenue. [Consultez votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login), l’historique de l’incident devrait y être affiché ; ainsi que les actions à venir.
 

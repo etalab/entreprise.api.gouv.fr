@@ -83,7 +83,7 @@ panels:
       **Création du compte api.gouv.fr**
 
 
-      |-------------------|:---------------:|
+      |-------------------|-----------------|
 
       | Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe api.gouv.fr, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png){:width="1000"}       |
 
@@ -94,7 +94,7 @@ panels:
       **Remplir le formulaire d’accès**
 
 
-      |-------------------|:---------------:|
+      |-------------------|-----------------|
 
       |Remplissez [le formulaire de demande d’accès api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
 
@@ -165,7 +165,7 @@ panels:
 
       | Paramètres obligatoires                                            |      Informations à renseigner                                           |
 
-      |:----------------------------------------------------------:|-----------------------------------------|
+      |------------------------------------------------------------|-----------------------------------------|
 
       |`&context=CadreDeLaRequête`|**Cadre de la requête** <br>Par exemple : aides publiques, marchés publics ou gestion d'un référentiel tiers utilisé pour tel type d'application*.*
 

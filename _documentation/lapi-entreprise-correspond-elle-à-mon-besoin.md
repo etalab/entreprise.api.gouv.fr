@@ -109,7 +109,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Données de référence d'une entreprise](../catalogue/#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques et confidentielles   |
 
@@ -133,7 +133,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Chiffre d'affaires](../catalogue/#exercices){:target="_blank"}                                     |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
 
@@ -151,7 +151,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Attestation fiscale](../catalogue/#liasses_fiscales_dgfip){:target="_blank"}                                    |          DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | confidentielles |
 
@@ -175,7 +175,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Certification RGE](../catalogue/#certificats_rge_ademe){:target="_blank"}                                      |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
 
@@ -191,7 +191,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Brevets, modèles et marques déposés](../catalogue/#extraits_courts_inpi){:target="_blank"}                   |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
 
@@ -205,7 +205,7 @@ panels:
       Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
 
-      |-------------------|:---------------:|
+      |-------------------|-----------------|
 
       | Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/catalogue-barre-de-recherche.png)       |
 
