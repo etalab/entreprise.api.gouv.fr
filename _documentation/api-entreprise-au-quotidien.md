@@ -11,13 +11,19 @@ panels:
       Pour connaître **la liste des APIs auxquelles vous avez le droit** avec
       votre jeton d'accès, vous pouvez le vérifier avec l'API `/privileges`.
 
+
+
       Si vous gérez les tokens pour vos clients, vous pouvez aussi utiliser cette API pour vérifier les droits associés à leurs tokens.
 
 
       ###### La requête HTTP :
 
 
-      `https://entreprise.api.gouv.fr/v2/privileges?token=LeTokenATester`
+      ```
+
+      https://entreprise.api.gouv.fr/v2/privileges?token=LeTokenATester
+
+      ```
 
 
       Le paramètre d'appel à renseigner est le token dont vous souhaitez connaître les droits.
@@ -26,13 +32,17 @@ panels:
       ###### Exemple de réponse :
 
 
-      `{
+      ```json
+
+      {
         "privileges": [
           "attestations_agefiph",
           [...]
           "actes_bilans_inpi"
         ]
-      }`
+      }
+
+      ```
 
 
       La réponse JSON renvoie la liste des endpoints autorisés. Retrouvez-les dans le [catalogue des données](../catalogue/).
@@ -52,13 +62,19 @@ panels:
       ###### La requête HTTP :
 
 
-      `https://dashboard.entreprise.api.gouv.fr/api/watchdoge/dashboard/current_status`
+      ```
+
+      https://dashboard.entreprise.api.gouv.fr/api/watchdoge/dashboard/current_status
+
+      ```
 
 
       ###### Exemple de réponse :
 
 
-      `{
+      ```json
+
+      {
         "results": [
           {
             "uname": "apie_2_etablissements",
@@ -78,7 +94,9 @@ panels:
           },
           [...]
         ]
-      }`
+      }
+
+      ```
 
 
       ℹ️ Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
@@ -96,7 +114,12 @@ panels:
       ###### La requête HTTP :
 
 
-      `https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=ParamètreDeLaPeriode&endpoint=ParamètreDeL'Endpoint`
+      ````
+
+      https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=ParamètreDeLaPeriode&endpoint=ParamètreDuEndpoint
+
+      ```
+
 
       Pour appeler l'API concernant l'endpoint et la période voulue, référez-vous à la suite de cet article ⤵️
 
@@ -104,7 +127,9 @@ panels:
       ###### Exemple de réponse :
 
 
-      `{
+      ```json
+
+      {
         "endpoint": "api/v3/entreprises_restored",
         "days_availability": {
           "2020-04-13": {
@@ -124,13 +149,15 @@ panels:
         },
         "total_availability": 99.96,
         "last_week_availability": 100.0
-      }`
+      }
+
+      ```
 
 
       ###### **Nomenclature des paramètres de la requête HTTP :**
 
 
-      Cette API possède deux paramètres, `period` et `endpoint`, voici leur nomenclature : 
+      Cette API possède deux paramètres, `period` et `endpoint`, voici leur nomenclature :
 
 
       {:.tpl-table}
