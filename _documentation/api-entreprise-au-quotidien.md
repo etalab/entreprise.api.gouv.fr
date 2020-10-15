@@ -8,57 +8,57 @@ panels:
     title: Connaître les droits liés à un token 🛂
     id: api-privileges
     content: >-
-      Si vous souhaitez connaître la liste des APIs auxquelles **vous avez le
-      droit** avec votre token vous pouvez le vérifier avec cette API.
+      Pour connaître **la liste des APIs auxquelles vous avez le droit** avec
+      votre jeton d'accès, vous pouvez le vérifier avec l'API `/privileges`.
+
+      Si vous gérez les tokens pour vos clients, vous pouvez aussi utiliser cette API pour vérifier les droits associés à leurs tokens.
 
 
-      Si vous gérer les tokens pour vos clients vous pouvez aussi utiliser cette API pour vérifier les droits associés à leurs tokens.
+      ###### La requête HTTP :
 
 
-      **Exemple**
+      `https://entreprise.api.gouv.fr/v2/privileges?token=LeTokenATester`
 
 
-      {:.example}
-
-      GET https://entreprise.api.gouv.fr/v2/privileges?token=TOKEN
+      Le paramètre d'appel à renseigner est le token dont vous souhaitez connaître les droits.
 
 
-      ```json
+      ###### Exemple de réponse :
 
-      {
+
+      `{
         "privileges": [
           "attestations_agefiph",
           [...]
           "actes_bilans_inpi"
         ]
-      }
-
-      ```
+      }`
 
 
-      Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
+      La réponse JSON renvoie la liste des endpoints autorisés. Retrouvez-les dans le [catalogue des données](../catalogue/).
+
+
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
   panel2:
     title: Connaître la disponibilité des API en temps réel ✅
     id: api-current-status
     content: >-
-      Pour connaître la disponibilité des données de API Entreprise en temps
-      réel.
+      Pour connaître la disponibilité de tous les endpoints en temps réel, vous
+      pouvez utiliser l'API `/current_status`. Cette **API est ouverte et ne
+      nécessite pas de token**, attention à tout de même respecter les [limites
+      de volumétrie](./#configuration) habituelle.
 
 
-      **Cette API est ouverte et ne nécessite pas de token**, attention à tout de même respecter les [limites de volumétrie](./#configuration) habituelle.
+      ###### La requête HTTP :
 
 
-      Exemple
+      `https://dashboard.entreprise.api.gouv.fr/api/watchdoge/dashboard/current_status`
 
 
-      {:.example}
-
-      GET https://dashboard.entreprise.api.gouv.fr/api/watchdoge/dashboard/current_status
+      ###### Exemple de réponse :
 
 
-      ```json
-
-      {
+      `{
         "results": [
           {
             "uname": "apie_2_etablissements",
@@ -78,34 +78,33 @@ panels:
           },
           [...]
         ]
-      }
-
-      ```
+      }`
 
 
-      Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
   panel3:
     title: Connaître l'historique de disponibilité des API 📊
     id: api-disponibilites
     content: >-
       Pour connaître l'historique de disponibilité des données de API Entreprise
-      ainsi que le taux d'erreurs constatées.
+      ainsi que le taux d'erreurs constatées, vous pouvez utiliser l'API
+      `/provider_availabilities`. **Cette API est ouverte et ne nécessite pas de
+      token**, attention à tout de même respecter les [limites de
+      volumétrie](./#configuration) habituelle.
 
 
-      **Cette API est ouverte et ne nécessite pas de token**, attention à tout de même respecter les [limites de volumétrie](./#configuration) habituelle.
+      ###### La requête HTTP :
 
 
-      Exemple
+      `https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=ParamètreDeLaPeriode&endpoint=ParamètreDeL'Endpoint`
+
+      Pour appeler l'API concernant l'endpoint et la période voulue, référez-vous à la suite de cet article ⤵️
 
 
-      {:.example}
-
-      GET https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=6M&endpoint=api/v3/entreprises_restored
+      ###### Exemple de réponse :
 
 
-      ```json
-
-      {
+      `{
         "endpoint": "api/v3/entreprises_restored",
         "days_availability": {
           "2020-04-13": {
@@ -125,104 +124,103 @@ panels:
         },
         "total_availability": 99.96,
         "last_week_availability": 100.0
-      }
-
-      ```
+      }`
 
 
-      **PARAMÈTRES**
+      ###### **Nomenclature des paramètres de la requête HTTP :**
 
 
-      Cette API possède deux paramètres, _period_ et _endpoint_ voici comment les utiliser.
-
-
-      **Pour le paramètre "period"**
+      Cette API possède deux paramètres, `period` et `endpoint`, voici leur nomenclature : 
 
 
       {:.tpl-table}
 
-      |Exemples de _period_|signification|
+      |Liste indicative de *period*|Période correspondante|
 
       |---|---|
 
-      |1y | depuis un an |
+      |`1y` | depuis un an |
 
-      |2M | depuis 2 mois |
+      |`2M` | depuis 2 mois |
 
-      |3w | depuis 3 semaines |
+      |`3w` | depuis 3 semaines |
 
-      |4d | depuis 4 jours |
+      |`4d` | depuis 4 jours |
 
-      |5h | depuis 5 heures |
+      |`5h` | depuis 5 heures |
 
-      |6m | depuis 6 minutes |
+      |`6m` | depuis 6 minutes |
 
-      |7s | depuis 7 secondes |
+      |`7s` | depuis 7 secondes |
+
+      {:.tpl-table}
 
 
-      **Pour le paramètre "endpoint"**
+      À partir de la nomenclature, `Y`(année), `M`(mois), `W`(semaine), `D`(jour), `m`(minute), `s`(seconde), vous pouvez obtenir l'historique de disponibilité de la période que vous souhaitez. Nous conservons cet historique pendant XX années.
+
+
 
 
       {:.tpl-table}
 
-      |Liste exhaustive des valeurs de _endpoint_|API correspondante|
+      |Liste exhaustive des *endpoint*|API correspondante|
 
       |---|---|
 
-      |api/v3/entreprises_restored|[Entreprises](https://entreprise.api.gouv.fr/catalogue/#entreprises)|
+      |`api/v3/entreprises_restored`|[Entreprises](https://entreprise.api.gouv.fr/catalogue/#entreprises)|
 
-      |api/v3/etablissements_restored|[Établissements](https://entreprise.api.gouv.fr/catalogue/#etablissements)|
+      |`api/v3/etablissements_restored`|[Établissements](https://entreprise.api.gouv.fr/catalogue/#etablissements)|
 
-      |api/v2/extraits_rcs_infogreffe|[Extrait RCS](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe)|
+      |`api/v2/extraits_rcs_infogreffe`|[Extrait RCS](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe)|
 
-      |api/v2/associations|[Informations déclaratives d’une association](https://entreprise.api.gouv.fr/catalogue/#associations)|
+      |`api/v2/associations`|[Informations déclaratives d’une association](https://entreprise.api.gouv.fr/catalogue/#associations)|
 
-      |api/v2/documents_associations|[Divers documents d'une association](https://entreprise.api.gouv.fr/catalogue/#documents_associations)|
+      |`api/v2/documents_associations`|[Divers documents d'une association](https://entreprise.api.gouv.fr/catalogue/#documents_associations)|
 
-      |api/v2/documents_inpi|[Actes INPI](https://entreprise.api.gouv.fr/catalogue/#actes_inpi)|
+      |`api/v2/documents_inpi`|[Actes INPI](https://entreprise.api.gouv.fr/catalogue/#actes_inpi)|
 
-      |api/v2/conventions_collectives|[Conventions collectives ](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives)|
+      |`api/v2/conventions_collectives`|[Conventions collectives ](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives)|
 
-      |api/v2/exercices|[Chiffre d'affaires](https://entreprise.api.gouv.fr/catalogue/#exercices)|
+      |`api/v2/exercices`|[Chiffre d'affaires](https://entreprise.api.gouv.fr/catalogue/#exercices)|
 
-      |api/v2/documents_inpi|[Bilans annuels INPI](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi)|
+      |`api/v2/documents_inpi`|[Bilans annuels INPI](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi)|
 
-      |api/v2/bilans_entreprises_bdf|[3 derniers bilans annuels](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf)|
+      |`api/v2/bilans_entreprises_bdf`|[3 derniers bilans annuels](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf)|
 
-      |api/v2/liasses_fiscales_dgfip|[Déclarations de résultat](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip)|
+      |`api/v2/liasses_fiscales_dgfip`|[Déclarations de résultat](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip)|
 
-      |api/v2/attestations_fiscales_dgfip|[Attestation fiscale](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip)|
+      |`api/v2/attestations_fiscales_dgfip`|[Attestation fiscale](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip)|
 
-      |api/v2/attestations_sociales_acoss|[Attestation de vigilance](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss)|
+      |`api/v2/attestations_sociales_acoss`|[Attestation de vigilance](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss)|
 
-      |api/v2/attestations_agefiph|[Conformité emploi des travailleurs handicapés](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph)|
+      |`api/v2/attestations_agefiph`|[Conformité emploi des travailleurs handicapés](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph)|
 
-      |api/v2/cotisations_msa|[Cotisations de sécurité sociale agricole](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa)|
+      |`api/v2/cotisations_msa`|[Cotisations de sécurité sociale agricole](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa)|
 
-      |api/v2/attestations_cotisation_retraite_probtp|[Attestation de cotisations retraite du bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp)|
+      |`api/v2/attestations_cotisation_retraite_probtp`|[Attestation de cotisations retraite du bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp)|
 
-      |api/v2/eligibilites_cotisation_retraite_probtp|[Éligibilité au cotisations retraite du bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp)|
+      |`api/v2/eligibilites_cotisation_retraite_probtp`|[Éligibilité au cotisations retraite du bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp)|
 
-      |api/v2/cartes_professionnelles_fntp|[Carte professionnelle travaux publics](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp)|
+      |`api/v2/cartes_professionnelles_fntp`|[Carte professionnelle travaux publics](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp)|
 
-      |api/v2/certificats_cnetp|[Cotisations congés payés & chômage intempéries](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp)|
+      |`api/v2/certificats_cnetp`|[Cotisations congés payés & chômage intempéries](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp)|
 
-      |api/v2/certificats_rge_ademe|[Certification RGE](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe)|
+      |`api/v2/certificats_rge_ademe`|[Certification RGE](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe)|
 
-      |api/v2/certificats_qualibat|[Certificat de qualification bâtiment](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat)|
+      |`api/v2/certificats_qualibat`|[Certificat de qualification bâtiment](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat)|
 
-      |api/v2/certificats_opqibi|[Certification de qualification d'ingénierie](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi)|
+      |`api/v2/certificats_opqibi`|[Certification de qualification d'ingénierie](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi)|
 
-      |api/v2/extraits_courts_inpi|[Brevets modèles et marques déposés](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi)|
+      |`api/v2/extraits_courts_inpi`|[Brevets modèles et marques déposés](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi)|
 
-      |api/v2/effectifs_mensuels_etablissement_acoss_covid|Effectifs mensuels par établissement (aides COVID-19) - documentation à venir|
+      |`api/v2/effectifs_mensuels_etablissement_acoss_covid`|Effectifs mensuels par établissement (aides COVID-19) - documentation à venir|
 
-      |api/v2/effectifs_mensuels_entreprise_acoss_covid|Effectifs mensuels par entreprise (aides COVID-19) - documentation à venir|
+      |`api/v2/effectifs_mensuels_entreprise_acoss_covid`|Effectifs mensuels par entreprise (aides COVID-19) - documentation à venir|
 
-      |api/v2/effectifs_annuels_entreprise_acoss_covid|Effectifs annuels par entreprise (aides COVID-19) - documentation à venir|
+      |`api/v2/effectifs_annuels_entreprise_acoss_covid`|Effectifs annuels par entreprise (aides COVID-19) - documentation à venir|
 
 
-      Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
   panel4:
     title: Interpréter les codes HTTP 🚦
     id: http-codes
