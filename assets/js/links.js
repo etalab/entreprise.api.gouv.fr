@@ -4,11 +4,27 @@ window.addEventListener('load', function() {
   for (let j = 0; j < linkButtons.length; j++) {
     linkButtons[j].addEventListener('click', onButtonClick, false)
   }
-  
+
+  function getFullHostUrl() {
+    const host = window.location.host;
+    const hostname = window.location.hostname;
+
+    if (hostname === 'entreprise.api.gouv.fr') {
+      return `https://${host}`;
+    }
+    else if (hostname === 'localhost') {
+      return `${host}/entreprise.api.gouv.fr`;
+    }
+    else {
+      return `http://${host}/entreprise.api.gouv.fr`;
+    }
+  }
+
   function onButtonClick(evt) {
     const target = evt.target
     if (target) {
-      const link = `${window.location.host}/${target.getAttribute('data-link')}`
+      const link = `${getFullHostUrl()}/${target.getAttribute('data-link')}`
+
       if (link) {
         copyTextToClipboard(link)
       }
