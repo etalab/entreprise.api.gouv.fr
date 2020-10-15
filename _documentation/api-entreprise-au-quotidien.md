@@ -156,7 +156,7 @@ panels:
       {:.tpl-table}
 
 
-      À partir de la nomenclature, `Y`(année), `M`(mois), `W`(semaine), `D`(jour), `m`(minute), `s`(seconde), vous pouvez obtenir l'historique de disponibilité de la période que vous souhaitez. Nous conservons cet historique pendant XX années.
+      À partir de la nomenclature, `Y`(année), `M`(mois), `W`(semaine), `D`(jour), `m`(minute), `s`(seconde), vous pouvez obtenir l'historique de disponibilité de la période que vous souhaitez.
 
 
 
