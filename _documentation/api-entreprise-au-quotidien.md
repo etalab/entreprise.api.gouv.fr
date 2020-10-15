@@ -64,7 +64,7 @@ panels:
 
       ```
 
-      https://dashboard.entreprise.api.gouv.fr/api/watchdoge/dashboard/current_status
+      https://entreprise.api.gouv.fr/watchdoge/dashboard/current_status
 
       ```
 
@@ -116,7 +116,7 @@ panels:
 
       ````
 
-      https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=ParamètreDeLaPeriode&endpoint=ParamètreDuEndpoint
+      https://entreprise.api.gouv.fr/watchdoge/stats/provider_availabilities?period=ParamètreDeLaPeriode&endpoint=ParamètreDuEndpoint
 
       ```
 
