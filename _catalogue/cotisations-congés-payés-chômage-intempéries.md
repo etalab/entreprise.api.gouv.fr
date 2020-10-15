@@ -114,4 +114,8 @@ services:
           {
             "url": "https://storage.entreprise.api.gouv.fr/siade/1569156960-dbd0926a14706614c69798309bd687-certificat_cnetp.pdf"
           }
+availability:
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
+  volumetry: 2000 requêtes/10 minutes par IP
 ---

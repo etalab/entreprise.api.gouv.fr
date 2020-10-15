@@ -16,6 +16,10 @@ usecases:
   - Marchés publics
   - Répertoire de tiers
 opening: Données publiques.
+availability:
+  volumetry: 2000 requêtes/10 minutes par IP
+  unavailability_types: /
+  normal_availability: 7jours/7 et 24h/24
 service2:
   request:
     id:
@@ -115,6 +119,7 @@ services:
             "duree_de_validite_du_certificat": "valable un an",
             "assurance": "GROUPAMA",
             "url": "http://opqibi.com/fiche.php?id=2975",
+
 
 
             

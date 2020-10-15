@@ -75,5 +75,9 @@ services:
             ]
           }
 history:
+availability:
+  volumetry: 2000 requêtes/10 minutes par IP
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
 category: Informations générales
 ---

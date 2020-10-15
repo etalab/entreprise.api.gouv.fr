@@ -100,4 +100,9 @@ services:
       description: La réponse se compose de l'URL permettant d'accéder à l’attestation
         de vigilance de l'entreprise demandée en PDF. [Voici un
         exemple](https://doc.entreprise.api.gouv.fr/files/attestation_sociale.pdf).
+availability:
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
+  volumetry: 2000 requêtes/10 minutes par IP <br>et max.10 requêtes/jour par SIREN
+    et par token
 ---

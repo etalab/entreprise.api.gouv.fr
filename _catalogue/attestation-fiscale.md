@@ -136,4 +136,6 @@ services:
           }
 availability:
   unavailability_types: Opérations de maintenance toutes les nuits entre 1h et 2h.
+  normal_availability: 7jours/7 et 23h/24
+  volumetry: 2000 requêtes/10 minutes par IP
 ---

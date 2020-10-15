@@ -270,5 +270,9 @@ history: >-
 
 
   Dans la nouvelle mouture, un champ a été ajouté à l'API actuelle ; le champ `etat_administratif` (cf JSON renvoyé).
+availability:
+  unavailability_types: /
+  normal_availability: 7jours/7 et 24h/24
+  volumetry: 2000 requêtes/10 minutes par IP
 category: Informations générales
 ---

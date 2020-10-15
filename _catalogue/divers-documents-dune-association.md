@@ -57,4 +57,8 @@ services:
       description: La réponse JSON indique le nombre de documents à télécharger, l'URL
         d'accès, le type et la date du/des documents.
 history: "##### 01/07/2020 Création de l'endpoint."
+availability:
+  volumetry: 2000 requêtes/10 minutes par IP
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
 ---

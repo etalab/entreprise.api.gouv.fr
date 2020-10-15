@@ -49,4 +49,8 @@ services:
 
         * la dernière date de validité des informations renvoyées.
           ℹ️ Cette donnée étant issue d'un dump fourni par l'AGEFIPH,API Entreprise vous la transmet.
+availability:
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
+  volumetry: 2000 requêtes/10 minutes par IP
 ---

@@ -94,4 +94,8 @@ services:
         * toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
 
         * un fichier `Response.json` permettant de retrouver le PDF dans l'archive à partir de l' `id_fichier` de l'acte indiqué dans la liste JSON des bilans.
+availability:
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
+  volumetry: 2000 requêtes/10 minutes par IP
 ---

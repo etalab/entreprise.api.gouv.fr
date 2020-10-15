@@ -98,4 +98,8 @@ services:
             ]
           }
 history: "##### 22/09/2020 Création de l'endpoint `conventions_collectives`"
+availability:
+  volumetry: 2000 requêtes/10 minutes par IP
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
 ---
