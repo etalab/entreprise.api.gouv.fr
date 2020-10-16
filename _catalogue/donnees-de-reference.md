@@ -2,18 +2,7 @@
 providers:
   - insee
   - infogreffe
-new: >-
-  ###### Bonnes pratiques pour le pré-remplissage d'un formulaire à destination
-  du public
-
-
-  Vous pouvez utiliser cet endpoint pour mettre en place une aide à la saisie pour vos usagers. Celui-ci n'a alors qu'à renseigner son numéro de SIREN et le formulaire est pré-rempli des champs disponibles.
-
-
-  La création d’un formulaire pré-rempli est faite pour assister l’usager, celui-ci doit toujours pouvoir amender, et rectifier ces mêmes informations sans difficultés. L'INSEE met à disposition un **formulaire de contact permettant aux utilisateurs de leur adresser une demande de modification d'information**. Si vous utilisez cet endpoint pour du pré-remplissage, il peut être utile d'indiquer ce lien : <https://www.sirene.fr/sirene/public/nous-contacter>{:target="_blank"}
-
-
-  ⚠️ Vous ne pouvez pas faire usage des données des non-diffusibles pour du pré-remplissage.
+new: ""
 access: Sous habilitation&nbsp;;<br>ou disponible partiellement sur
   [api.insee](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
   et [entreprise.data.gouv](https://entreprise.data.gouv.fr/).
