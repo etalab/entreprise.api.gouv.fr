@@ -2,7 +2,7 @@
 providers:
   - insee
   - infogreffe
-new: ""
+new:
 access: Sous habilitation&nbsp;;<br>ou disponible partiellement sur
   [api.insee](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee)
   et [entreprise.data.gouv](https://entreprise.data.gouv.fr/).
