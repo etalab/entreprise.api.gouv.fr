@@ -48,7 +48,7 @@ panels:
       La réponse JSON renvoie la liste des endpoints autorisés. Retrouvez-les dans le [catalogue des données](../catalogue/).
 
 
-      ℹ️ Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à l'[environnement de production documenté (*swagger*) disponible sur api.gouv.fr](https://api.gouv.fr/documentation/api-entreprise){:target="_blank"}.
   panel2:
     title: Connaître la disponibilité des API en temps réel ✅
     id: api-current-status
@@ -99,7 +99,7 @@ panels:
       ```
 
 
-      ℹ️ Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à l'[environnement de production documenté (*swagger*) disponible sur api.gouv.fr](https://api.gouv.fr/documentation/api-entreprise){:target="_blank"}.
   panel3:
     title: Connaître l'historique de disponibilité des API 📊
     id: api-disponibilites
@@ -247,7 +247,7 @@ panels:
       |`api/v2/effectifs_annuels_entreprise_acoss_covid`|Effectifs annuels par entreprise (aides COVID-19) - documentation à venir|
 
 
-      ℹ️ Pour plus d'informations, vous pouvez vous référer à la [documentation technique](https://api.gouv.fr/documentation/api-entreprise).
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à l'[environnement de production documenté (*swagger*) disponible sur api.gouv.fr](https://api.gouv.fr/documentation/api-entreprise){:target="_blank"}.
   panel4:
     title: Interpréter les codes HTTP 🚦
     id: http-codes
