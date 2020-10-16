@@ -147,27 +147,84 @@ panels:
     title: Faire ma première requête ☎️
     id: premiere-requete
     content: >-
-      #### Faire un premier appel de test
+      #### Depuis son navigateur ou le *swagger* API Entreprise
 
       [Votre habilitation est validée, vous avez récupéré vos jetons](../doc/#habilitation-validee), vous pouvez donc désormais faire un premier appel de test.
       
 
-      Si vous êtes à l'aise avec les interfaces techniques, nous avons mis en place un [**environnement de production documenté**](https://api.gouv.fr/documentation/api-entreprise), propulsé par Open API (Swagger) et disponible sur api.gouv.fr. 
+      - Si vous êtes à l'aise avec les interfaces techniques, nous avons mis en place un [**environnement de production documenté (*Swagger*)**](https://api.gouv.fr/documentation/api-entreprise), disponible sur api.gouv.fr. 
       Il permet, à l'aide d'un token d'authentification valide 🔑, d'effectuer directement depuis le navigateur des tests de l'API. Les données confidentielles restent bien protégées. Vous y trouverez aussi la spécification technique téléchargeable sous format YAML afin de pouvoir accélérer le développement de vos outils d'interfaçage avec API Entreprise.
 
 
-      Autrement, vous pouvez **effectuer votre appel de test directement dans la barre URL de votre navigateur**. Pour comprendre comment se compose une URL d'appel, veuillez consulter la partie [Comment se déroule un appel à l'API ?](../doc/#apis). 
+      - Autrement, vous pouvez **effectuer votre appel de test directement dans la barre URL de votre navigateur**, en collant votre requête HTTP renseignée de [votre token](https://entreprise.api.gouv.fr/doc/#tokens){:target="_blank"} 🔑.
+
 
 
       {:.tpl-notification.tpl--danger}
 
-      Attention, vous ne devez **jamais copier-coller un token dans un moteur de recherche** ou dans un e-mail.
+      Attention, vous ne devez jamais copier-coller un token dans la barre de recherche classique d'un moteur de recherche ou dans un e-mail.
 
 
-      #### Instruire les paramètres de traçabilité
+      #### Construire la requête HTTP
+
+      Que ce soit en environnement de production ou dans la barre URL de votre navigateur, **vous avez besoin de construire une URL d'appel**. Cette requête de l'endpoint que vous souhaitez tester est explicitée dans le [catalogue des données](../doc/){:trarget="_blank"}, partie "Documentation" de l'endpoint. Nous vous y indiquons la structure de la requête et les paramètres à remplir.
+
+      ###### Exemple de requête : 
+      
+      ```
+
+      https://entreprise.api.gouv.fr/v2/attestation_fiscales_dgfip/SirenDeL’Entreprise?token=📝&user_id=📝&context=📝&recipient=📝&object=📝
+
+      ```
+
+      
+      <details class="fold">
+
+      <summary> En savoir plus sur chaque élément composant la requête HTTP
+
+      </summary>
 
 
-      API Entreprise vous permet d’accéder à des données protégées. C’est pourquoi, dans un **objectif de traçabilité**, nous vous demandons de renseigner dans chacune de vos requêtes, non seulement un jeton d’accès, mais aussi certaines informations qualifiant votre requête.
+      {:.tpl-table}
+
+      | Éléments composant la requête                                            |   État    | Exemples                                             |
+
+      |:----------------------------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
+
+      |**Domaine** <br>(ou préfixe) <br>qui conduit à l'API de façon sécurisée| prédéfini par endpoint|`http://entreprise.api.fouv.fr`|
+
+      |**Numéro de la version** <br>(par défaut désormais en V2)| prédéfini par endpoint| `/v2`|
+
+      |**Nom de la donnée recherchée** <br>(ou *endpoint*)| prédéfini par endpoint| `/attestation_fiscale_dgfip`|
+
+      |**Identité de l'établissement concerné** <br>(souvent SIREN ou SIRET)| à choisir 📝|`/SIRENouSIRETdeL'Etablissement`|
+
+      |**Votre jeton d'accès**| à renseigner 📝|`?token=JetonD'Habilitation`|
+
+      |**Des paramètres de traçabilité**| à renseigner 📝| `&context=CadreDeLaRequête`<br> ℹ️ Plus d'informations disponibles dans la partie [Instruire les paramètres de traçabilité](../doc/#parametres-tracabilite){:target="_blank"}|
+
+      
+      </details>
+
+
+      <center>
+      <a class="tpl-button tpl-button--alternate" href="https://entreprise.api.gouv.fr/catalogue/">Retrouver la structure de l'URL de l'endpoint <br> dans le catalogue</a>
+      </center>
+
+
+      #### Voir ma première trace d’appel dans le tableau de bord
+
+
+      Une fois que vous avez fait un premier appel, celui-ci est **répertorié** dans votre tableau de bord, en passant par [la liste de tous vos tokens](https://dashboard.entreprise.api.gouv.fr/me/tokens), et en cliquant sur "Voir les statistiques".
+
+
+      ![](../assets/images/documentation/voir-son-premier-appel.png)
+
+  panel4:
+    title: Instruire les paramètres de traçabilité 🏷
+    id: parametres-tracabilite
+    content: >-
+      API Entreprise vous permet d’accéder à des données protégées. C’est pourquoi, dans un **objectif de traçabilité**, nous vous demandons de renseigner dans chacune de vos requêtes, **non seulement un jeton d’accès**, mais aussi certaines informations qualifiant votre requête.
 
 
       {:.tpl-notification.tpl--danger}
@@ -175,12 +232,12 @@ panels:
       **Ces paramètres sont obligatoires**. Les appels ne comportant pas ces paramètres sont rejetés, et un code erreur vous est renvoyé.
 
 
-      Pour chaque endpoint, nous précisons dans le [catalogue des données](../catalogue/) les paramètres obligatoires spécifiques, ci-dessous la liste de tous ces paramètres : 
+      Pour chaque endpoint, nous précisons dans le [catalogue des données](../catalogue/) les paramètres obligatoires spécifiques, ci-dessous une explication détaillée des éléments à fournir pour chaque paramètre de traçabilité : 
 
 
       {:.tpl-table}
 
-      | Paramètres obligatoires                                            |      Informations à renseigner                                           |
+      | Paramètre                                             |      Information à renseigner                                           |
 
       |:----------------------------------------------------------:|-----------------------------------------|
 
@@ -193,14 +250,8 @@ panels:
       |`?user_id= IdentifiantDeL'UtilisateurPhysique`|*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira, en cas d’utilisation anormale de l’API, pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée. 
 
 
-      #### Voir ma première trace d’appel dans le tableau de bord
 
-
-      Une fois que vous avez fait un premier appel, celui-ci est répertorié dans votre tableau de bord, en passant par [la liste de tous vos tokens](https://dashboard.entreprise.api.gouv.fr/me/tokens), et en cliquant sur "Voir les statistiques".
-
-
-      ![](../assets/images/documentation/voir-son-premier-appel.png)
-  panel4:
+  panel5:
     title: Configurer le logiciel métier ⚙️
     id: configuration
     content: >-
@@ -254,8 +305,5 @@ panels:
 
 
       🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
-  panel5:
-    title: Faire mon premier test de bout en bout 🛫
-    id: premier-test
-    content: 🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
+
 ---
