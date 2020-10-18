@@ -5,6 +5,250 @@ identifier: quotidien
 id: quotidien
 panels:
   panel1:
+    title: Connaître les droits liés à un token 🛂
+    id: api-privileges
+    content: >-
+      Pour connaître **la liste des APIs auxquelles vous avez le droit** avec
+      votre jeton d'accès, vous pouvez le vérifier avec l'API `/privileges`.
+
+
+
+      Si vous gérez les tokens pour vos clients, vous pouvez aussi utiliser cette API pour vérifier les droits associés à leurs tokens.
+
+
+      ###### La requête HTTP :
+
+
+      ```
+
+      https://entreprise.api.gouv.fr/v2/privileges?token=LeTokenATester
+
+      ```
+
+
+      Le paramètre d'appel à renseigner est le token dont vous souhaitez connaître les droits.
+
+
+      ###### Exemple de réponse :
+
+
+      ```json
+
+      {
+        "privileges": [
+          "attestations_agefiph",
+          [...]
+          "actes_bilans_inpi"
+        ]
+      }
+
+      ```
+
+
+      La réponse JSON renvoie la liste des endpoints autorisés. Retrouvez-les dans le [catalogue des données](../catalogue/).
+
+
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à l'[environnement de production documenté (*swagger*) disponible sur api.gouv.fr](https://api.gouv.fr/documentation/api-entreprise){:target="_blank"}.
+  panel2:
+    title: Connaître la disponibilité des API en temps réel ✅
+    id: api-current-status
+    content: >-
+      Pour connaître la disponibilité de tous les endpoints en temps réel, vous
+      pouvez utiliser l'API `/current_status`. Cette **API est ouverte et ne
+      nécessite pas de token**, attention à tout de même respecter les [limites
+      de volumétrie](./#configuration) habituelle.
+
+
+      ###### La requête HTTP :
+
+
+      ```
+
+      https://entreprise.api.gouv.fr/watchdoge/dashboard/current_status
+
+      ```
+
+
+      ###### Exemple de réponse :
+
+
+      ```json
+
+      {
+        "results": [
+          {
+            "uname": "apie_2_etablissements",
+            "name": "Etablissements",
+            "provider": "insee",
+            "api_version": 2,
+            "code": 200,
+            "timestamp": "2020-10-14T14:36:33.640Z"
+          },
+          {
+            "uname": "apie_2_certificats_qualibat",
+            "name": "Certificats Qualibat",
+            "provider": "qualibat",
+            "api_version": 2,
+            "code": 503,
+            "timestamp": "2020-10-14T14:38:02.736Z"
+          },
+          [...]
+        ]
+      }
+
+      ```
+
+
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à l'[environnement de production documenté (*swagger*) disponible sur api.gouv.fr](https://api.gouv.fr/documentation/api-entreprise){:target="_blank"}.
+  panel3:
+    title: Connaître l'historique de disponibilité des API 📊
+    id: api-disponibilites
+    content: >-
+      Pour connaître l'historique de disponibilité des données de API Entreprise
+      ainsi que le taux d'erreurs constatées, vous pouvez utiliser l'API
+      `/provider_availabilities`. **Cette API est ouverte et ne nécessite pas de
+      token**, attention à tout de même respecter les [limites de
+      volumétrie](./#configuration) habituelle.
+
+
+      ###### La requête HTTP :
+
+
+      ````
+
+      https://entreprise.api.gouv.fr/watchdoge/stats/provider_availabilities?period=ParamètreDeLaPeriode&endpoint=ParamètreDuEndpoint
+
+      ```
+
+
+      Pour appeler l'API concernant l'endpoint et la période voulue, référez-vous à la suite de cet article ⤵️
+
+
+      ###### Exemple de réponse :
+
+
+      ```json
+
+      {
+        "endpoint": "api/v3/entreprises_restored",
+        "days_availability": {
+          "2020-04-13": {
+            "total": 12615,
+            "404": 9,
+            "502": 0,
+            "503": 0,
+            "504": 0
+          },
+          "2020-04-14": {
+            "total": 44677,
+            "404": 25,
+            "502": 0,
+            "503": 16,
+            "504": 0
+          }
+        },
+        "total_availability": 99.96,
+        "last_week_availability": 100.0
+      }
+
+      ```
+
+
+      ###### **Nomenclature des paramètres de la requête HTTP :**
+
+
+      Cette API possède deux paramètres, `period` et `endpoint`, voici leur nomenclature :
+
+
+      {:.tpl-table}
+
+      |Liste indicative de *period*|Période correspondante|
+
+      |---|---|
+
+      |`1y` | depuis un an |
+
+      |`2M` | depuis 2 mois |
+
+      |`3w` | depuis 3 semaines |
+
+      |`4d` | depuis 4 jours |
+
+      |`5h` | depuis 5 heures |
+
+      |`6m` | depuis 6 minutes |
+
+      |`7s` | depuis 7 secondes |
+
+      {:.tpl-table}
+
+
+      À partir de la nomenclature, `Y`(année), `M`(mois), `W`(semaine), `D`(jour), `m`(minute), `s`(seconde), vous pouvez obtenir l'historique de disponibilité de la période que vous souhaitez.
+
+
+
+
+      {:.tpl-table}
+
+      |Liste exhaustive des *endpoint*|API correspondante|
+
+      |---|---|
+
+      |`api/v3/entreprises_restored`|[Entreprises](https://entreprise.api.gouv.fr/catalogue/#entreprises)|
+
+      |`api/v3/etablissements_restored`|[Établissements](https://entreprise.api.gouv.fr/catalogue/#etablissements)|
+
+      |`api/v2/extraits_rcs_infogreffe`|[Extrait RCS](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe)|
+
+      |`api/v2/associations`|[Informations déclaratives d’une association](https://entreprise.api.gouv.fr/catalogue/#associations)|
+
+      |`api/v2/documents_associations`|[Divers documents d'une association](https://entreprise.api.gouv.fr/catalogue/#documents_associations)|
+
+      |`api/v2/documents_inpi`|[Actes INPI](https://entreprise.api.gouv.fr/catalogue/#actes_inpi)|
+
+      |`api/v2/conventions_collectives`|[Conventions collectives ](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives)|
+
+      |`api/v2/exercices`|[Chiffre d'affaires](https://entreprise.api.gouv.fr/catalogue/#exercices)|
+
+      |`api/v2/documents_inpi`|[Bilans annuels INPI](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi)|
+
+      |`api/v2/bilans_entreprises_bdf`|[3 derniers bilans annuels](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf)|
+
+      |`api/v2/liasses_fiscales_dgfip`|[Déclarations de résultat](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip)|
+
+      |`api/v2/attestations_fiscales_dgfip`|[Attestation fiscale](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip)|
+
+      |`api/v2/attestations_sociales_acoss`|[Attestation de vigilance](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss)|
+
+      |`api/v2/attestations_agefiph`|[Conformité emploi des travailleurs handicapés](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph)|
+
+      |`api/v2/cotisations_msa`|[Cotisations de sécurité sociale agricole](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa)|
+
+      |`api/v2/attestations_cotisation_retraite_probtp`|[Attestation de cotisations retraite du bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp)|
+
+      |`api/v2/eligibilites_cotisation_retraite_probtp`|[Éligibilité au cotisations retraite du bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp)|
+
+      |`api/v2/cartes_professionnelles_fntp`|[Carte professionnelle travaux publics](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp)|
+
+      |`api/v2/certificats_cnetp`|[Cotisations congés payés & chômage intempéries](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp)|
+
+      |`api/v2/certificats_rge_ademe`|[Certification RGE](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe)|
+
+      |`api/v2/certificats_qualibat`|[Certificat de qualification bâtiment](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat)|
+
+      |`api/v2/certificats_opqibi`|[Certification de qualification d'ingénierie](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi)|
+
+      |`api/v2/extraits_courts_inpi`|[Brevets modèles et marques déposés](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi)|
+
+      |`api/v2/effectifs_mensuels_etablissement_acoss_covid`|Effectifs mensuels par établissement (aides COVID-19) - documentation à venir|
+
+      |`api/v2/effectifs_mensuels_entreprise_acoss_covid`|Effectifs mensuels par entreprise (aides COVID-19) - documentation à venir|
+
+      |`api/v2/effectifs_annuels_entreprise_acoss_covid`|Effectifs annuels par entreprise (aides COVID-19) - documentation à venir|
+
+
+      ℹ️ Pour plus d'informations, vous pouvez vous référer à l'[environnement de production documenté (*swagger*) disponible sur api.gouv.fr](https://api.gouv.fr/documentation/api-entreprise){:target="_blank"}.
+  panel4:
     title: Interpréter les codes HTTP 🚦
     id: http-codes
     content: >-
@@ -78,16 +322,16 @@ panels:
 
 
       En cas d’erreur, le JSON vous détaille la raison de l’erreur, le champ concerné se nomme `“errors”`. Lorsqu’un endpoint retourne des données agrégées de plusieurs fournisseurs, le JSON renvoyé contient un champ `“gateway error”`. Sa valeur vaut `“true”` lorsqu'une erreur survient auprès d'au moins un fournisseur.
-  panel2:
+  panel5:
     title: Renouveler un token en fin de vie 💫
     id: renouvellement-token
     content: >-
       Pour des raisons de sécurité, tous les jetons émis sont valables pour
       **une durée de 18 mois**. Au delà de ce délai, ils ne fonctionnent plus,
-      et votre accès à l'API Entreprise est donc totalement arrêté. 
+      et votre accès à l'API Entreprise est donc totalement arrêté.
 
 
-      En réalité, cette situation n'est pas censée arriver car API Entreprise a mis en place une procédure simple de renouvellement de token. En voici les étapes : 
+      En réalité, cette situation n'est pas censée arriver car API Entreprise a mis en place une procédure simple de renouvellement de token. En voici les étapes :
 
 
       <details class="fold">
@@ -116,7 +360,7 @@ panels:
 
       Un renouvellement de jeton est en pratique une nouvelle demande d'accès.
 
-      Il existe deux possibilités de renouvellement de votre token selon que vous ayez fait votre dernière demande avant septembre 2019 ou après. Nous avons en effet transformé l'outil pour effectuer une demande d'accès à l'API Entreprise. Hier, il s'agissait de demarches-simplifiees.fr ; aujourd'hui, il s'agit d'api.gouv.fr. 
+      Il existe deux possibilités de renouvellement de votre token selon que vous ayez fait votre dernière demande avant septembre 2019 ou après. Nous avons en effet transformé l'outil pour effectuer une demande d'accès à l'API Entreprise. Hier, il s'agissait de demarches-simplifiees.fr ; aujourd'hui, il s'agit d'api.gouv.fr.
 
 
       **Cas n°1 : Votre dernière demande remonte avant septembre 2019** et a été réalisée au travers de demarches-simplifiees.fr
@@ -158,7 +402,7 @@ panels:
 
 
       </details>
-  panel3:
+  panel6:
     title: Réagir en cas d’incidents fournisseurs de données 🚧
     id: incident-fournisseurs
     content: >-
@@ -169,7 +413,7 @@ panels:
       1. Dans une telle situation, **la première chose à faire est de consulter la [page incident](https://dashboard.entreprise.api.gouv.fr/incidents)** et de vérifier si l'indisponibilité n'y est pas répertoriée. Toutes les indisponibilités y sont inscrites dans le délai le plus court possible et parfois même anticipées lorsque le fournisseur de donnée nous prévient à l'avance d'une indisponibilité pour maintenance.\
          Vous pouvez **également consulter la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time)** et ainsi vérifier si l'endpoint ne fonctionnant pas est indiqué comme DOWN dans l'interface. API Entreprise a effectivement mis en place un système de test permettant de vérifier l'état de disponibilité de tous les endpoints.
       2. Si l'incident n'est pas répertorié, deux options se présentent : l'erreur provient de votre côté, ou bien elle n'a pas encore été identifiée par API Entreprise. Après avoir pris soin de regarder qu'il ne s'agit pas de la première option, vous pouvez nous contacter sur [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
-  panel4:
+  panel7:
     title: Réagir en cas d’indisponibilité globale 🚧
     id: indisponibilite-globale
     content: >-
@@ -183,7 +427,7 @@ panels:
 
 
       🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
-  panel5:
+  panel8:
     title: Élargir le périmètre des données demandées 🧩
     id: elargissement-perimetre
     content: >-
@@ -193,11 +437,11 @@ panels:
       **[Il vous faut refaire une demande d'habilitation](#demande-habilitation).**
 
 
-      Pour toute nouvelle demande, il vous faudra **justifier le cadre légal**. 
+      Pour toute nouvelle demande, il vous faudra **justifier le cadre légal**.
 
 
       Si l'habilitation vous est donnée, API Entreprise vous fournira un nouveau jeton contenant le nouveau périmètre des endpoints accessibles.
-  panel6:
+  panel9:
     title: S'adapter aux évolutions et montées de versions 🏗
     id: evolutions
     content: |-
