@@ -28,6 +28,10 @@ meta:
     et des associations directement sur entreprise.api.gouv.fr.
     Ensemble mettons en place le “ Dîtes-le nous une fois ! ”
 
+algolia:
+  index_name: 'prod_api_entreprise_site'
+  application_id: '4NUM23WKJI'
+
 # The baseurl option is set for links (especialy assets links) to work
 # with Github pages. For the production environment the website is built
 # with the `--baseurl ''` option so the site can be served from the root
