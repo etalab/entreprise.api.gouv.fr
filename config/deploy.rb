@@ -42,7 +42,7 @@ task :deploy do
     invoke :'deploy:link_shared_paths'
     set :bundle_options, fetch(:bundle_options) + ' --clean'
     invoke :'bundle:install'
-    command %( bundle exec jekyll build --baseurl '')
+    command %( JEKYLL_ENV=production bundle exec jekyll build --baseurl '')
     invoke :cgu_to_pdf
     invoke :'deploy:cleanup'
   end
