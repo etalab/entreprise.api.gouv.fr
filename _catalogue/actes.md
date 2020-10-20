@@ -2,7 +2,7 @@
 providers:
   - inpi
 access: Sous habilitation, disponible par *swagger* sur le [site de
-  l'INPI](https://data.inpi.fr/swagger).
+  l'INPI](https://data.inpi.fr/swagger){:target="_blank"}.
 weight: 6
 type: Informations générales
 title: "Actes "

@@ -51,9 +51,9 @@ services:
             sociaux** qui s'appuie sur plusieurs sources de données : 
 
 
-            * les données d'affiliation des établissements d'entreprise aux conventions sont **issues de la [DARES](https://dares.travail-emploi.gouv.fr/dares-etudes-et-statistiques/)**, direction d'études et statistiques du Ministère du Travail, publiées sur sur [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/liste-des-conventions-collectives-par-entreprise-siret/) ;
+            * les données d'affiliation des établissements d'entreprise aux conventions sont **issues de la [DARES](https://dares.travail-emploi.gouv.fr/dares-etudes-et-statistiques/){:target="_blank"}**, direction d'études et statistiques du Ministère du Travail, publiées sur sur [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/liste-des-conventions-collectives-par-entreprise-siret/){:target="_blank"} ;
 
-            * Les informations relatives aux conventions collectives (numéro identifiant, titre, lien vers le texte légal, ...) sont issues de la base [KALI](https://www.data.gouv.fr/fr/datasets/kali-conventions-collectives-nationales/) **diffusée par la DILA**, Direction de l'information légale et administrative.
+            * Les informations relatives aux conventions collectives (numéro identifiant, titre, lien vers le texte légal, ...) sont issues de la base [KALI](https://www.data.gouv.fr/fr/datasets/kali-conventions-collectives-nationales/){:target="_blank"} **diffusée par la DILA**, Direction de l'information légale et administrative.
 
 
             ⚠️ La fréquence de mise à jour du fichier fournie par la DARES n'est pas précisée.

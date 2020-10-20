@@ -2,7 +2,7 @@
 providers:
   - inpi
 access: Restreint, [disponible en recherche manuelle sur le site de
-  l'INPI](https://bases-marques.inpi.fr/)
+  l'INPI](https://bases-marques.inpi.fr/){:target="_blank"}
 weight: 24
 type: Propriété intellectuelle
 title: Brevets, modèles et marques déposés

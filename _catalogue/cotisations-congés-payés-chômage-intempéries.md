@@ -33,16 +33,16 @@ perimeter:
     Toutes les attestations sont disponibles pour les entreprises en situation régulière ❌ sauf pour celles qui règlent les cotisations dues à la CNETP à l’URSSAF dans le cadre du Titre Emploi Service Entreprise (TESE).
 
 
-    ℹ️ Plus d'informations sur <https://www.cnetp.org/category/affiliation/>
+    ℹ️ Plus d'informations sur <https://www.cnetp.org/category/affiliation/>{:target="_blank"}
 
 
     ###### La CNETP, une caisse à compétence nationale
 
 
-    L'[article D.3141-12 du code du travail ](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=F736E4E9BEAEEE069FB2FB9EFA0B5D20.tplgfr42s_1?idArticle=LEGIARTI000020572124&cidTexte=LEGITEXT000006072050&categorieLien=id)définit les entreprises qui sont tenues d'adhérer auprès d'une Caisse de Congés Payés du BTP : *"Dans les entreprises exerçant une ou plusieurs activités entrant dans le champ d'application des conventions collectives nationales étendues du bâtiment et des travaux publics, le service des congés est assuré, sur la base de celles-ci, par des caisses constituées à cet effet."*
+    L'[article D.3141-12 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=F736E4E9BEAEEE069FB2FB9EFA0B5D20.tplgfr42s_1?idArticle=LEGIARTI000020572124&cidTexte=LEGITEXT000006072050&categorieLien=id){:target="_blank"} définit les entreprises qui sont tenues d'adhérer auprès d'une Caisse de Congés Payés du BTP : *"Dans les entreprises exerçant une ou plusieurs activités entrant dans le champ d'application des conventions collectives nationales étendues du bâtiment et des travaux publics, le service des congés est assuré, sur la base de celles-ci, par des caisses constituées à cet effet."*
 
 
-    L'[article D.3141-20 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000020572131&cidTexte=LEGITEXT000006072050) dispose quant à lui que *"dans les entreprises dont l'activité principale relève des travaux publics, ce service est assuré par une caisse à compétence nationale."*
+    L'[article D.3141-20 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000020572131&cidTexte=LEGITEXT000006072050){:target="_blank"} dispose quant à lui que *"dans les entreprises dont l'activité principale relève des travaux publics, ce service est assuré par une caisse à compétence nationale."*
   label: Entreprises de travaux publics et bâtiment,<br>de certaines conventions
     collectives.
 services:

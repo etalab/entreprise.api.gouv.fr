@@ -2,7 +2,7 @@
 providers:
   - ademe
 access: Restreint, [disponible en recherche manuelle sur le site
-  faire.gouv.fr](https://www.faire.gouv.fr/trouvez-un-professionnel)
+  faire.gouv.fr](https://www.faire.gouv.fr/trouvez-un-professionnel){:target="_blank"}
 weight: 21
 type: Certifications professionnelles
 title: Certification RGE
@@ -12,7 +12,7 @@ scope:
 description: Obtenir le certificat “Reconnu Garant de l’Environnement” d’une
   entreprise, attestant de **compétences spécifiques en travaux de rénovation
   énergétique**. Si vous avez besoin uniquement du certificat Qualibat, un
-  [endpoint dédié](#certificats_qualibat) existe.
+  [endpoint dédié](#certificats_qualibat){:target="_blank"} existe.
 usecases:
   - Marchés publics
   - Répertoire de tiers

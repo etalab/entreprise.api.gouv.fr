@@ -1,8 +1,8 @@
 ---
 providers:
   - opqibi
-access: Restreint, [disponible en recherche manuelle sur le
-  opqibi.com](https://www.opqibi.com/recherche-plus.php)
+access: Restreint, [disponible en recherche manuelle sur le site
+  opqibi.com](https://www.opqibi.com/recherche-plus.php){:target="_blank"}
 weight: 23
 type: Certifications professionnelles
 title: Certification de qualification d'ingénierie

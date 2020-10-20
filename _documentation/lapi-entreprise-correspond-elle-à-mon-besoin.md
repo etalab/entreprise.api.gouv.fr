@@ -26,7 +26,7 @@ panels:
 
       **L'exemple du formulaire DUME**<br>
 
-      L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.<br><br><video controls width="400"><source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
+      L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/){:target="_blank"}. Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.<br><br><video controls width="400"><source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
               type="video/mp4">
        Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
       </video>

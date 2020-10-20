@@ -306,7 +306,7 @@ services:
             Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
 
 
-            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
+            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete).
           question: Qu'est-ce que le paramètre obligatoire user_id ?
       options:
         option1:

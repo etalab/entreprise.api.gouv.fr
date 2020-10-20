@@ -155,10 +155,10 @@ panels:
       Le token est **votre code secret** vous permettant d’accéder à API Entreprise.
 
 
-      Si votre demande d’habilitation est validée, il vous est délivré dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login).
+      Si votre demande d’habilitation est validée, il vous est délivré dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"}.
 
 
-      **Cette clé est unique et privée** ; nous nous appuyons sur un standard ouvert et normalisé de l’industrie : le Json Web Token (aka JWT) ([RFC 7519](https://tools.ietf.org/html/rfc7519)). Ce jeton est autonome et permet de transmettre de façon sécurisée les informations d'authentifications nécessaires pour utiliser l'API. Ces jetons sont vérifiés et fiables car **signés numériquement avec une date d'expiration**.
+      **Cette clé est unique et privée** ; nous nous appuyons sur un standard ouvert et normalisé de l’industrie : le Json Web Token (aka JWT) ([RFC 7519](https://tools.ietf.org/html/rfc7519){:target="_blank"}). Ce jeton est autonome et permet de transmettre de façon sécurisée les informations d'authentifications nécessaires pour utiliser l'API. Ces jetons sont vérifiés et fiables car **signés numériquement avec une date d'expiration**.
 
 
       #### Ne jamais divulguer son token
@@ -175,12 +175,12 @@ panels:
       #### Un token a une fin de vie
 
 
-      La durée de vie d’un token est limitée, sa date d’expiration est indiqué dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login).
+      La durée de vie d’un token est limitée, sa date d’expiration est indiqué dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"}.
 
 
       Le token peut également être supprimé s’il a été diffusé par mégarde.
 
-      Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](https://dashboard.entreprise.api.gouv.fr/login). Pour en savoir plus sur le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](#tape-2--remplir-le-formulaire-de-renouvellement-).
+      Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"}. Pour en savoir plus sur le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](#tape-2--remplir-le-formulaire-de-renouvellement-).
   panel3:
     title: Les fondamentaux à mettre en place avec l'équipe technique 🧰
     id: fondamentaux

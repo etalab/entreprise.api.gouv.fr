@@ -64,7 +64,7 @@ services:
             * ou elle ne s'est pas acquittée des cotisations et contributions dues mais en conteste le montant par recours contentieux.
 
 
-            ℹ️ Le cadre précis de la demande par le donneur d'ordre et de la délivrance de l'attestation à l'entreprise est expliqué sur le site de l'ACOSS :[ https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html](<Quand est-ce que l'attestation de vigilance est délivrée par l'ACOSS ?>)
+            ℹ️ Le cadre précis de la demande par le donneur d'ordre et de la délivrance de l'attestation à l'entreprise est expliqué sur le site de l'ACOSS :[ https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html](<Quand est-ce que l'attestation de vigilance est délivrée par l'ACOSS ?>){:target="_blank"}
         qr2:
           question: Pourquoi ne puis-je plus avoir l'Attestation de Marché Publique (AMP)
             ?

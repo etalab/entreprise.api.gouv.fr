@@ -2,7 +2,7 @@
 providers:
   - mi
 access: Sous habilitation,<br>disponible sous d'autres conditions sur
-  [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/)
+  [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/){:target="_blank"}
 weight: 4
 type: Informations générales
 title: Informations déclaratives d’une association
