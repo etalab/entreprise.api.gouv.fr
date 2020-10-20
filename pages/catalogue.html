@@ -179,6 +179,7 @@ is_catalogue: true
                         </div>
                         <div class="request-json json-example">
                           <h5>Requête HTTP</h5>
+                          <a class="link-to-swagger" href="https://api.gouv.fr/documentation/api-entreprise" target="_blank">Swagger</a>
                           <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}
 {{ endpoint.label }}/</b>{%if service[1].request.id %}{{ service[1].request.id.label }}{% endif %}{%if service[1].request.id.extra1 %}
 /<b>{{ service[1].request.id.extra1 }}</b>{% endif %}{%if service[1].request.id.extra2 %}/{{ service[1].request.id.extra2 }}{% endif %}{% for param in service[1].request.parameters %}{% if forloop.index == 1 %}

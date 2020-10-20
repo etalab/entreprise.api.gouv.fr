@@ -342,6 +342,13 @@
     }
   }
 
+  .link-to-swagger {
+    color: var(--primary);
+    position: absolute;
+    right: var(--spacing-xs);
+    top: var(--spacing-xs);
+  }
+
   .json-example pre {
     border: 0;
     height: 100%;
