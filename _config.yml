@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: API Entreprise
+title: &title API Entreprise
 email: support@entreprise.api.gouv.fr
 description: > # this means to ignore newlines until "baseurl:"
   Simplifier les démarches des entreprises en récupérant pour elles
@@ -21,6 +21,12 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/entreprise.api.gouv.fr" # the subpath of your site, e.g. /blog
 url: "https://etalab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 matomo_site_id: '45'
+
+meta:
+  title: *title
+  description: Administrations, retrouvez les données des entreprises
+    et des associations directement sur entreprise.api.gouv.fr.
+    Ensemble mettons en place le “ Dîtes-le nous une fois ! ”
 
 # The baseurl option is set for links (especialy assets links) to work
 # with Github pages. For the production environment the website is built

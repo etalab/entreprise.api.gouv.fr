@@ -134,4 +134,8 @@ services:
             "url":
             "https://storage.entreprise.api.gouv.fr/siade/1569156756-f6b7779f99fa95cd60dc03c04fcb-attestation_fiscale_dgfip.pdf"
           }
+availability:
+  unavailability_types: Opérations de maintenance toutes les nuits entre 1h et 2h.
+  normal_availability: 7jours/7 et 23h/24
+  volumetry: 2000 requêtes/10 minutes par IP
 ---

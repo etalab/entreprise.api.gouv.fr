@@ -306,7 +306,7 @@ services:
             Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
 
 
-            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
+            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete).
           question: Qu'est-ce que le paramètre obligatoire user_id ?
       options:
         option1:
@@ -400,4 +400,8 @@ services:
       format: Donnée structurée JSON
       timeout: 5 secondes
 history: "##### 15/04/2019 Création des endpoints liasses fiscales"
+availability:
+  unavailability_types: Opérations de maintenance toutes les nuits entre 1h et 2h.
+  normal_availability: 7jours/7 et 23h/24
+  volumetry: 2000 requêtes/10 minutes par IP
 ---

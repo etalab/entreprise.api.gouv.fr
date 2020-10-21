@@ -26,7 +26,7 @@ panels:
 
       **L'exemple du formulaire DUME**<br>
 
-      L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/). Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.<br><br><video controls width="400"><source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
+      L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/){:target="_blank"}. Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs.<br><br><video controls width="400"><source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4"
               type="video/mp4">
        Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
       </video>
@@ -109,7 +109,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Données de référence d'une entreprise](../catalogue/#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques et confidentielles   |
 
@@ -133,7 +133,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Chiffre d'affaires](../catalogue/#exercices){:target="_blank"}                                     |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
 
@@ -151,7 +151,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Attestation fiscale](../catalogue/#liasses_fiscales_dgfip){:target="_blank"}                                    |          DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | confidentielles |
 
@@ -175,7 +175,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Certification RGE](../catalogue/#certificats_rge_ademe){:target="_blank"}                                      |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
 
@@ -191,7 +191,7 @@ panels:
 
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
-      | ----------------------------------------------------- |:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
+      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
       | [Brevets, modèles et marques déposés](../catalogue/#extraits_courts_inpi){:target="_blank"}                   |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
 
@@ -205,7 +205,7 @@ panels:
       Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
 
-      |-------------------|:---------------:|
+      |-------------------|-----------------|
 
       | Dans ce catalogue, une barre de recherche est à votre disposition pour filtrer les données :              |        ![](../assets/images/documentation/catalogue-barre-de-recherche.png)       |
 

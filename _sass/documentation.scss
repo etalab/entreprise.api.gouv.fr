@@ -186,4 +186,24 @@
       word-wrap: anywhere;
     }
   }
+
+  @media (max-width: 500px) {
+    .fold {
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
+
+    .fold > :not(summary) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .fold h4 ~ :not(h4) {
+      margin-left: 0;
+    }
+    
+    table {
+      width: calc(100% - 2em);
+    }
+  }
 }

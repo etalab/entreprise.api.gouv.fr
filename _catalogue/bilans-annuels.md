@@ -2,7 +2,7 @@
 providers:
   - inpi
 access: Sous habilitation, <br>disponible partiellement (uniquement les bilans
-  publics) sur le [site de l'INPI](https://data.inpi.fr/swagger).
+  publics) sur le [site de l'INPI](https://data.inpi.fr/swagger){:target="_blank"}.
 weight: 8
 type: Informations financières
 title: Bilans annuels

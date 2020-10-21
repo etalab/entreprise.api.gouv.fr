@@ -2,7 +2,7 @@
 providers:
   - mi
 access: Sous habilitation,<br>disponible sous d'autres conditions sur
-  [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/)
+  [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/){:target="_blank"}
 weight: 4
 type: Informations générales
 title: Informations déclaratives d’une association
@@ -18,15 +18,6 @@ usecases:
   - Répertoire de tiers
 opening: Données publiques.
 perimeter:
-  perimeter1:
-    label: Lorem ipsum
-    description: Lorem ipsum
-  perimeter2:
-    label: Lorem ipsum
-    description: Lorem ipsum
-  perimeter3:
-    label: Lorem ipsum
-    description: Lorem ipsum
   label: Toutes les associations.
   description: Toutes les associations inscrites au Répertoire National des Associations.
 services:
@@ -80,7 +71,7 @@ services:
               // Débutant par W et composé de 9 chiffres, il s'agit du numéro RNA, identifiant national de l'association. Ce numéro est attribué automatiquement lors de la déclaration de création d’une association. Une association ne disposant pas d’un numéro RNA s’en voit attribuer un à chaque modification effectuée auprès des services de l’État (modification de statuts ou des dirigeants de l’associations). Le numéro figure alors sur le récépissé délivré par la préfecture.
               "titre": "ALLIANCE DU COEUR: UNION NATIONALE DES FEDERATIONS ET ASSOCIATIONS DE MALADES CARDIOVASCULAIRES",
               "objet": "information, soutien, solidarité et accompagnement psycho médico social des personnes malades cardiovasculaires et de leurs proches..."
-              // Il s'agit d'une description courte mais exhaustive des activités de l'organisme. 
+              // Il s'agit d'une description courte mais exhaustive des activités de l'organisme.
               "siret": "42135938100025",
               "siret_siege_social": "42135938100033",
               "date_creation": "1993-02-11",
@@ -111,6 +102,10 @@ services:
               "mise_a_jour": "2013-06-28"
             }
           }
-history: Lorem Ipsum
+history:
+availability:
+  normal_availability: 7jours/7 et 24h/24
+  volumetry: 2000 requêtes/10 minutes par IP
+  unavailability_types: /
 category: Informations générales
 ---

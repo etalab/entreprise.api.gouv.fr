@@ -2,7 +2,7 @@
 providers:
   - qualibat
 access: Restreint, [disponible en recherche manuelle sur
-  qualibat.com](https://www.qualibat.com/entreprise-correspondant-au-sirenraison-sociale/?siren_or_r_soc=)
+  qualibat.com](https://www.qualibat.com/entreprise-correspondant-au-sirenraison-sociale/?siren_or_r_soc=){:target="_blank"}
 weight: 22
 type: Certifications professionnelles
 title: Certificat de qualification bâtiment
@@ -17,6 +17,10 @@ description: Obtenir le certificat Qualibat, apportant l’avis de l’associati
 usecases:
   - Marchés publics
 opening: Données publiques.
+availability:
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
+  volumetry: 2000 requêtes/10 minutes par IP
 service2:
   request:
     id:
@@ -92,7 +96,7 @@ services:
             * Certifications environnementales.
 
 
-            ℹ️ Toutes les informations concernant ces différentes certifications et qualifications sont disponibles sur le site Qualibat à cette page : <https://www.qualibat.com/documentation/documentation-technique>
+            ℹ️ Toutes les informations concernant ces différentes certifications et qualifications sont disponibles sur le [site Qualibat]( https://www.qualibat.com/documentation/documentation-technique){:target="_blank"}
           question: Quelles sont les différentes certifications/qualifications ?
         qr2:
           answer: >-
@@ -108,7 +112,7 @@ services:
             Elles caractérisent les entreprises aptes à répondre à certaines activités nécessitant le respect de réglementations particulières en matière d’environnement, de sécurité ou de protection de la santé. Elles sont attribuées à partir de référentiels techniques spécifiques. En plus de la reconnaissance du savoir-faire, elles supposent la mise en place d’un système d’organisation et de procédures au sein de l’entreprise. 
 
 
-            ℹ️ Source : <https://www.qualibat.com/maitre-douvrage/nomenclature/consulter-la-nomenclature/>
+            ℹ️ Source : [Qualibat](https://www.qualibat.com/maitre-douvrage/nomenclature/consulter-la-nomenclature){:target="_blank"}
           question: Quelle est la différence entre une certification et une qualification
             ?
     response:

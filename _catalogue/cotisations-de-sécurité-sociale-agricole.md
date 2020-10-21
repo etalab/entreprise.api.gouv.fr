@@ -46,8 +46,8 @@ services:
     response:
       description: La réponse indique si l'entreprise est à jour de ses cotisations
         employeurs auprès de la MSA. Dans certains cas et sur un laps de temps
-        limité, l'entreprise peut faire l'objet d'une analyse par la MSA, ce qui
-        sera indiqué dans la réponse.
+        limité, l'entreprise peut faire l'objet d'une analyse manuelle par un
+        agent de la MSA, ce qui sera indiqué dans la réponse.
       timeout: 5 secondes
       format: Donnée structurée JSON
       sample:
@@ -56,7 +56,7 @@ services:
             "a_jour": true,
           // Si l'entreprise est à jour de ses cotisations patronales à la MSA, la réponse seral "true", à l'inverse, si l'entreprise n'est pas à jour, la réponse sera "false". Dans certains cas, le statut de l'entreprise est inconnu, une analyse est à effectuer, alors ce champ indiquera "null".
             "analyse_en_cours": false
-          // Indique "false" quand le statut de l'entreprise est connu, autrement, indique "true" si justement, une analyse est en cours.
+          // Indique "false" quand le statut de l'entreprise est connu, autrement, indique "true" si justement, une analyse manuelle par un agent est en cours.
 
           }
       questions:
@@ -74,4 +74,8 @@ services:
 
 
             ℹ️ Ces trois situations correspondent à un fonctionnement normal de l'endpoint, quand il n'y a pas d'erreur à signaler. S'il y a une erreur, les champs seront vides et un code erreur HTTP vous sera envoyé.
+availability:
+  volumetry: 2000 requêtes/10 minutes par IP
+  unavailability_types: /
+  normal_availability: 7jours/7 et 24h/24
 ---

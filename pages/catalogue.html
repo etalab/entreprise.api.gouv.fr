@@ -64,7 +64,7 @@ is_catalogue: true
                   </div>
                   <h3>
                     {{ endpoint.title }}
-                    <code class="tpl-code">{{ endpoint.label }}</code>
+                    <code class="tpl-code">/{{ endpoint.label }}</code>
                     <button class="tpl-button tpl-button--alternate button-link" data-link="catalogue/#{{ endpoint.label }}" title="Copier le lien vers cette section">
                       <svg class="tpl-icon" viewBox="0 0 24 24">
                         <use xlink:href="#link"></use>
@@ -99,7 +99,7 @@ is_catalogue: true
                 <div class="documentation__tabs">
                   <ul class="tab-list">
                     <li>
-                      <a href="#technical-documentation--{{ endpoint.label }}" class="tab">
+                      <a href="#technical-documentation--{{ endpoint.label }}" class="tab tab--documentation">
                         <svg class="tpl-icon" viewBox="0 0 24 24">
                           <use xlink:href="#list"></use>
                         </svg>
@@ -107,11 +107,13 @@ is_catalogue: true
                       </a>
                     </li>
                     <li>
-                      <a href="#availability--{{ endpoint.label }}" class="tab">
+                      <a href="#availability--{{ endpoint.label }}" class="tab tab--availability">
                         <svg class="tpl-icon" viewBox="0 0 24 24">
                           <use xlink:href="#bar-chart"></use>
                         </svg>
                         Disponibilité
+                        <div class="spot hidden"></div>
+                        <div class="rate"></div>
                       </a>
                     </li>
                   </ul>
@@ -130,7 +132,7 @@ is_catalogue: true
                     <hr />
                     {% endif %}
                     {% if endpoint.perimeter %}
-                    <details class="perimeter">
+                    <details class="perimeter" open>
                       <summary>
                         <h4>Périmètre</h4>
                       </summary>
@@ -177,6 +179,7 @@ is_catalogue: true
                         </div>
                         <div class="request-json json-example">
                           <h5>Requête HTTP</h5>
+                          <a class="link-to-swagger" href="https://api.gouv.fr/documentation/api-entreprise" target="_blank">Swagger</a>
                           <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}
 {{ endpoint.label }}/</b>{%if service[1].request.id %}{{ service[1].request.id.label }}{% endif %}{%if service[1].request.id.extra1 %}
 /<b>{{ service[1].request.id.extra1 }}</b>{% endif %}{%if service[1].request.id.extra2 %}/{{ service[1].request.id.extra2 }}{% endif %}{% for param in service[1].request.parameters %}{% if forloop.index == 1 %}
@@ -239,8 +242,25 @@ is_catalogue: true
                           <div class="status-marker success">OK</div>
                         </dd>
                       </dl>
+                      <dl class="tpl-description-list">
+                        <dt>Volumétrie :</dt>
+                        <dd>{{ endpoint.availability.volumetry }}</dd>
+                      </dl>
                     </div>
+                    <dl class="tpl-description-list">
+                      <div class="tpl-description-group">
+                        <dt>Disponibilité normale :</dt>
+                        <dd>{{ endpoint.availability.normal_availability }}</dd>
+                      </div>
+                      <div class="tpl-description-group">
+                        <dt>Indisponibilités types :</dt>
+                        <dd>{{ endpoint.availability.unavailability_types }}</dd>
+                      </div>
+                    </dl>
                     <hr />
+                    <div class="no-data hidden">
+                      <p>Les données de disponibilité n'ont pas pu être récupérées.</p>
+                    </div>
                     <div class="metrics">
                       <h4>Historique des 6 derniers mois :</h4>
                       <div class="tpl-flex-row">

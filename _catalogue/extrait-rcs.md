@@ -17,15 +17,6 @@ usecases:
   - Répertoire de tiers
 opening: Données confidentielles.
 perimeter:
-  perimeter1:
-    label: Lorem ipsum
-    description: Lorem ipsum
-  perimeter2:
-    label: Lorem ipsum
-    description: Lorem ipsum
-  perimeter3:
-    label: Lorem ipsum
-    description: Lorem ipsum
   description: Toutes les entreprises présentes au registre du commerce et des sociétés.
   label: Toutes les entreprises présentes dans le RCS.
 services:
@@ -52,7 +43,7 @@ services:
       format: Données structurées JSON
       timeout: 5 secondes
       description: >-
-        La réponse se compose : 
+        La réponse se compose :
 
 
         * d'un **extrait des données** présentes dans le registre du commerce et des sociétés pour un numéro de siren donné. ⚠️ *Il ne s’agit donc pas de la totalité des données présentes sur le Kbis mais d’une partie succincte.*
@@ -63,10 +54,10 @@ services:
           {
             "siren": "418166096",
             "date_immatriculation": "1998-03-27",
-            "date_immatriculation_timestamp": 890953200, 
-            // Il s'agit du jour d'immatriculation de l'entreprise au RCS. À compter de cette date, les sociétés jouissent de la personnalité morale. Cette date d'immatriculation n'est pas la même que celle délivrée par l'INSEE. Elle ne correspond pas non plus à la date du début d'activité. 
+            "date_immatriculation_timestamp": 890953200,
+            // Il s'agit du jour d'immatriculation de l'entreprise au RCS. À compter de cette date, les sociétés jouissent de la personnalité morale. Cette date d'immatriculation n'est pas la même que celle délivrée par l'INSEE. Elle ne correspond pas non plus à la date du début d'activité.
             "date_extrait": "21 AVRIL 2017",
-            "observations": 
+            "observations":
             // Ce champ délivre tous les messages laissés par le greffier inscrits dans les observations.
             [
               {
@@ -83,6 +74,10 @@ services:
               }
             ]
           }
-history: Lorem Ipsum
+history:
+availability:
+  volumetry: 2000 requêtes/10 minutes par IP
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
 category: Informations générales
 ---

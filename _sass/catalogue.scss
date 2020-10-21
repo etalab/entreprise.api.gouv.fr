@@ -167,6 +167,7 @@
 
   ul.tab-list {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
     margin: 0 var(--spacing-xl);
@@ -341,6 +342,13 @@
     }
   }
 
+  .link-to-swagger {
+    color: var(--primary);
+    position: absolute;
+    right: var(--spacing-xs);
+    top: var(--spacing-xs);
+  }
+
   .json-example pre {
     border: 0;
     height: 100%;
@@ -392,7 +400,7 @@
     }
   }
 
-  .current-status {
+  .availability .tpl-description-list {
     margin-top: 0;
   }
   
@@ -421,6 +429,35 @@
     background-color: #D32121;
   }
 
+  .spot {
+    display: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-color: #BFBFBF;
+    margin: 0 var(--spacing-xxs) 0 var(--spacing-xs);
+
+    &.spot--sup99 {
+      background-color: #7ED321;
+      display: block;
+    }
+
+    &.spot--sup90 {
+      background-color: #FFAD33;
+      display: block;
+    }
+
+    &.spot--sup80 {
+      background-color: #D32121;
+      display: block;
+    }
+    
+    &.spot--sub80 {
+      background-color: #600462;
+      display: block;
+    }
+  }
+
   .metrics {
     line-height: 1.25em;
 
@@ -440,27 +477,10 @@
     }
 
     .spot {
+      display: block;
       height: 1.75em;
       width: 1.75em;
-      border-radius: 50%;
-      background-color: #BFBFBF;
-      margin-right: var(--spacing-xs);
-
-      &.spot--sup99 {
-        background-color: #7ED321;
-      }
-
-      &.spot--sup90 {
-        background-color: #FFAD33;
-      }
-
-      &.spot--sup80 {
-        background-color: #D32121;
-      }
-      
-      &.spot--sub80 {
-        background-color: #600462;
-      }
+      margin: 0 var(--spacing-xs) 0 0;
     }
 
     .rate {
@@ -690,6 +710,13 @@
 
     ul.tab-list {
       margin: 0;
+    }
+  }
+    
+  @media (max-width: 500px) {
+    .documentation-card {
+      margin-left: -1.5em;
+      margin-right: -1.5em;
     }
   }
 }

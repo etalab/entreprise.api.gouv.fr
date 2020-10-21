@@ -23,7 +23,7 @@ panels:
       Pour vous permettre d'anticiper, ci-dessous la liste des informations nécessaires : 
 
 
-      * **le numéro siret de votre administration**. Vous pouvez vous aider du site [entreprise.data.gouv.fr](https://entreprise.data.gouv.fr)  pour le retrouver.
+      * **le numéro siret de votre administration**. Vous pouvez vous aider du site [entreprise.data.gouv.fr](https://entreprise.data.gouv.fr){:target="_blank"} pour le retrouver.
 
       * **les données que vous souhaitez obtenir**. Une sélection vous sera proposée parmi une liste de données décrites dans la section "données délivrées".
 
@@ -83,9 +83,9 @@ panels:
       **Création du compte api.gouv.fr**
 
 
-      |-------------------|:---------------:|
+      |-------------------|-----------------|
 
-      | Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise).<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe api.gouv.fr, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png){:width="1000"}       |
+      | Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise){:target="_blank"}.<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe api.gouv.fr, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png){:width="1000"}       |
 
 
       | Ensuite, il vous est demandé **le numéro de SIRET de votre organisation**, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/data-pass-creation-compte-siret.png){:width="1000"}        |
@@ -94,14 +94,14 @@ panels:
       **Remplir le formulaire d’accès**
 
 
-      |-------------------|:---------------:|
+      |-------------------|-----------------|
 
-      |Remplissez [le formulaire de demande d’accès api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise) puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
+      |Remplissez [le formulaire de demande d’accès api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise){:target="_blank"} puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
 
       |Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire. Pour cela, n'oubliez pas de cliquer sur le bouton "Sauvegarder le brouillon" se trouvant en bas du formulaire.        |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png){:width="1000"}        |
 
 
-      <a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise">Se rendre sur api.gouv.fr</a>
+      <a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise" target="_blank">Se rendre sur api.gouv.fr</a>
 
 
       </details>
@@ -121,7 +121,7 @@ panels:
 
       * ❌ Si votre dossier est refusé, des précisions supplémentaires vous seront demandée avant tout refus définitif ;
 
-      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé. [Connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login) avec vos identifiants api.gouv.fr.
+      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé. [Connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"} avec vos identifiants api.gouv.fr.
 
 
       </details>
@@ -134,7 +134,7 @@ panels:
     id: habilitation-validee
     content: >
       
-      Pour récupérer vos tokens ou jetons d'accès, il faut vous rendre dans [votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login) à l'onglet "Jetons" :
+      Pour récupérer vos tokens ou jetons d'accès, il faut vous rendre dans [votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"} à l'onglet "Jetons" :
 
 
       ![](../assets/images/documentation/tableaudebord-recuperer-son-token.png)
@@ -165,7 +165,7 @@ panels:
 
       | Paramètres obligatoires                                            |      Informations à renseigner                                           |
 
-      |:----------------------------------------------------------:|-----------------------------------------|
+      |------------------------------------------------------------|-----------------------------------------|
 
       |`&context=CadreDeLaRequête`|**Cadre de la requête** <br>Par exemple : aides publiques, marchés publics ou gestion d'un référentiel tiers utilisé pour tel type d'application*.*
 
@@ -179,7 +179,7 @@ panels:
       #### Voir ma première trace d’appel dans le tableau de bord
 
 
-      Une fois que vous avez fait un premier appel, celui-ci est répertorié dans votre tableau de bord, en passant par [la liste de tous vos tokens](https://dashboard.entreprise.api.gouv.fr/me/tokens), et en cliquant sur "Voir les statistiques".
+      Une fois que vous avez fait un premier appel, celui-ci est répertorié dans votre tableau de bord, en passant par [la liste de tous vos tokens](https://dashboard.entreprise.api.gouv.fr/me/tokens){:target="_blank"}, et en cliquant sur "Voir les statistiques".
 
 
       ![](../assets/images/documentation/voir-son-premier-appel.png)

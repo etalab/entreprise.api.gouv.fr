@@ -2,7 +2,7 @@
 providers:
   - fntp
 access: restreint, disponible sans API [sur le site de la
-  FNTP](https://www.fntp.fr/outils/annuaire-carte-professionnelle)
+  FNTP](https://www.fntp.fr/outils/annuaire-carte-professionnelle){:target="_blank"}
 weight: 19
 type: Attestations sociales et fiscales
 title: Carte professionnelle travaux publics
@@ -26,7 +26,7 @@ perimeter:
     À ce jour, la FNTP a délivré des cartes professionnelles à plus de **9000 entreprises**.
 
 
-    ℹ️ Plus d'informations sur le site de la FNTP : <https://www.fntp.fr/outils/carte-professionnelle/tout-savoir-sur-la-carte-pro>
+    ℹ️ Plus d'informations sur le [site de la FNTP](https://www.fntp.fr/outils/carte-professionnelle/tout-savoir-sur-la-carte-pro){:target="_blank"}
 services:
   service1:
     request:
@@ -57,4 +57,8 @@ services:
       timeout: 12 secondes
       description: La réponse se compose de l'URL d'accès à la carte professionnelle
         de l'entreprise au format PDF.
+availability:
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
+  volumetry: 2000 requêtes/10 minutes par IP
 ---
