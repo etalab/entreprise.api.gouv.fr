@@ -368,6 +368,14 @@ services:
             résultant de l'arrêt du RNVP peuvent être constatées.
 
             Le détail de chaque champ est indiqué en commentaire dans la réponse JSON ci-dessous ⬇️.
+        qr3:
+          question: Une entreprise peut être "active" même si son établissement siège est fermé, en savoir plus ...
+          answer: >-
+            Même si tous les établissements d'une entreprise sont fermés, une entreprise reste active tant que la cessation juridique n'a pas été prononcée. En effet, une réactivation est encore possible. Le SIREN continue donc d'avoir un statut actif au répertoire.
+            
+
+            Concrêtement, dans la réponse JSON, le champ `etat_administratif` de l'`entreprise` peut être égal à `A` ; même si le champ `etat_administratif` de la partie `etablissement_siege` est égal à `C`.
+
 history: >-
   ##### 01/12/2019 Ajout de l'option d'appel `non_diffusable.`
 
