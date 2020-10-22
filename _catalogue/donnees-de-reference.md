@@ -371,7 +371,7 @@ services:
         qr3:
           question: Une entreprise est active mais tous ses établissements sont fermés, est-ce un bug ?
           answer: >-  
-            Même si tous les établissements d'une entreprise sont fermés, une entreprise reste active tant que la cessation juridique n'a pas été prononcée. Une réactivation est même encore possible. Le SIREN continue donc d'avoir un statut actif au répertoire.
+            Même si tous les établissements d'une entreprise sont fermés (y compris son établissement siège), une entreprise reste active tant que la cessation juridique n'a pas été prononcée. Une réactivation est même encore possible. Le SIREN continue donc d'avoir un statut actif au répertoire.
             
 
             Par conséquent, dans la réponse JSON, **le cas de figure suivant n'est pas un bug** : 
