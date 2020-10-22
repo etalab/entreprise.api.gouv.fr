@@ -21,6 +21,9 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/entreprise.api.gouv.fr" # the subpath of your site, e.g. /blog
 url: "https://etalab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 matomo_site_id: '45'
+hotjar:
+  production: 2055657
+  development: 2055659
 
 meta:
   title: *title
