@@ -93,6 +93,8 @@ services:
           comment: "Pour accéder aux entreprises nondiffusibles :"
       questions:
         qr1:
+          question: Qu'est-ce que l'état administratif  d'une entreprise ? <br> Comment y
+            accéder avec API Entreprise ?
           answer: >-
             ###### L'état administratif d'une entreprise
 
@@ -128,8 +130,6 @@ services:
 
 
             Il vous faudra ajouter l'option d'appel `with_etat_administratif`, deux champs seront alors disponibles dans la réponse JSON, vous indiquant l'état de l'entité et la date de cessation si tel est le cas.
-          question: Qu'est-ce que l'état administratif d'une entreprise ? <br> Comment y
-            accéder avec API Entreprise ?
         qr2:
           answer: >-
             ###### Qu'est-ce qu'un non diffusible ?
@@ -369,12 +369,16 @@ services:
 
             Le détail de chaque champ est indiqué en commentaire dans la réponse JSON ci-dessous ⬇️.
         qr3:
-          question: Une entreprise peut être "active" même si son établissement siège est fermé, en savoir plus ...
-          answer: >-
-            Même si tous les établissements d'une entreprise sont fermés, une entreprise reste active tant que la cessation juridique n'a pas été prononcée. En effet, une réactivation est encore possible. Le SIREN continue donc d'avoir un statut actif au répertoire.
+          question: Une entreprise est active mais tous ses établissements sont fermés, est-ce un bug ?
+          answer: >-  
+            Même si tous les établissements d'une entreprise sont fermés, une entreprise reste active tant que la cessation juridique n'a pas été prononcée. Une réactivation est même encore possible. Le SIREN continue donc d'avoir un statut actif au répertoire.
             
 
-            Concrêtement, dans la réponse JSON, le champ `etat_administratif` de l'`entreprise` peut être égal à `A` ; même si le champ `etat_administratif` de la partie `etablissement_siege` est égal à `C`.
+            Par conséquent, dans la réponse JSON, **le cas de figure suivant n'est pas un bug** : 
+
+            * Tous les établissements (ainsi que le siège) ont leur `etat_administratif` = `F` ;
+
+            * et l'entreprise a son `etat_administratif` = `A` (et non `C` si elle était réellement fermée).
 
 history: >-
   ##### 01/12/2019 Ajout de l'option d'appel `non_diffusable.`
