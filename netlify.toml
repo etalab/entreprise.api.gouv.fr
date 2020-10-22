@@ -3,7 +3,7 @@
   publish = "_site/"
 
 [build.environment]
-  JEKYLL_ENV = "production"
+  JEKYLL_ENV = "staging"
 
 # REDIRECT and HEADERS examples.
 # Uncomment to use. Directives in this file will ALWAYS override any identical
