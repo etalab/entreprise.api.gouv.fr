@@ -5,15 +5,14 @@ title: Dépôt et instruction des aides publiques
 
 ## À quoi sert API Entreprise ?
 
-L'API Entreprise **facilite l'instruction des demandes d'aides publiques** en permettant aux instructeurs d'obtenir les données et documents justificatifs sans les demander aux entreprises et associations. 
-40% des utilisateurs  d’API Entreprise (régionaux, départements, communes, Banque Publique d’Investissement  notamment) utilisent notre service dans ce cadre.
+L'API Entreprise **facilite le dépôt et l'instruction des demandes d'aides publiques** en permettant aux instructeurs d'obtenir les données et documents justificatifs sans les demander aux entreprises et associations. 
 
-Pour certains données, il est même possible de les **préremplir dans les formulaires de candidature**. Pour en savoir plus sur le préremplissage, vous pouvez consulter la rubrique [Les cas d'usage d'API Entreprise, partie pré-remplissage](https://entreprise.api.gouv.fr/doc/#cas-usage){:target="_blank"}.
+Il est même possible de **préremplir certaines données dans les formulaires de candidature**. Pour en savoir plus sur le préremplissage, vous pouvez consulter la rubrique [Les cas d'usage d'API Entreprise, partie pré-remplissage](https://entreprise.api.gouv.fr/doc/#cas-usage){:target="_blank"}.
 
 ## Qui peut utiliser l'API Entreprise ?
 
 L'API Entreprise est un service dont l'accès se fait [sous habilitation et sous certaines conditions](https://entreprise.api.gouv.fr/doc/#acces){:target="_blank"}.
-Dans le cadre des demandes d'aide publiques, l’API entreprise est notamment destinée aux agents habilités à récupérer automatiquement des informations.
+Dans le cadre des demandes d'aide publiques, l’API Entreprise est notamment destinée aux agents habilités à récupérer automatiquement des informations.
 
 ## Données utiles
 
