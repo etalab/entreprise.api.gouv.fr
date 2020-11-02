@@ -18,7 +18,9 @@ Dans le cadre des demandes d'aide publiques, l’API Entreprise est notamment de
 
 Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.**
 
-L'ensemble des données de l’API Entreprise est consultable dans [le catalogue de données](https://entreprise.api.gouv.fr/catalogue/){:target="_blank"}. Chaque endpoint est accompagné d'explications métier et technique.
+L'ensemble des données de l’API Entreprise est consultable dans le catalogue de données. Chaque endpoint est accompagné d'explications métier et technique.
+
+  <a class="tpl-button tpl-button--primary" href="https://entreprise.api.gouv.fr/catalogue/">Parcourir le catalogue des données</a>
 
 
 ## Demander un accès aux données
