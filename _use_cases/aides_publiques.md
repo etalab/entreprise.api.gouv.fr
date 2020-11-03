@@ -24,7 +24,7 @@ Par exemple, les [bilans de la Banque de France]({{ site.baseurl }}/catalogue/#b
 {:.example}
 L'ensemble des données de l’API Entreprise est consultable dans le catalogue de données. Chaque endpoint est accompagné d'explications métier et technique.
 
-  <a class="tpl-button tpl-button--primary" href="https://entreprise.api.gouv.fr/catalogue/">Parcourir le catalogue des données</a>
+  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
 
 
 ## Demander un accès aux données
