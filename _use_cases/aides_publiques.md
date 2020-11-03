@@ -11,13 +11,17 @@ Il est même possible de **préremplir certaines données dans les formulaires d
 
 ## Qui peut utiliser l'API Entreprise ?
 
-L'API Entreprise est un service dont l'accès se fait [sous habilitation et sous certaines conditions](https://entreprise.api.gouv.fr/doc/#acces){:target="_blank"}.
+L'API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions](https://entreprise.api.gouv.fr/doc/#acces){:target="_blank"}. 
 Dans le cadre des demandes d'aide publiques, l’API Entreprise est notamment destinée aux agents habilités à récupérer automatiquement des informations.
 
 ## Données utiles
 
-Les données utiles à l'instruction des demandes d'aides publiques sont nombreuses chez API Entreprise. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.**
+API Entreprise expose de nombreuses données utiles à l'instruction des demandes d'aides publiques. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.** Votre raccordement en sera alors grandement accéléré. 
 
+
+Par exemple, les [bilans de la Banque de France](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf), ou les [liasses fiscales de la DGFIP](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip), nécessitent d'avoir un cadre juridique spécifique pour être obtenues. Si vous en faîtes la demande sans justifier de ce cadre, votre demande sera plus longue à traiter, voire refusée.
+
+{:.example}
 L'ensemble des données de l’API Entreprise est consultable dans le catalogue de données. Chaque endpoint est accompagné d'explications métier et technique.
 
   <a class="tpl-button tpl-button--primary" href="https://entreprise.api.gouv.fr/catalogue/">Parcourir le catalogue des données</a>
