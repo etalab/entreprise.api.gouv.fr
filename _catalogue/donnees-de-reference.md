@@ -23,6 +23,10 @@ usecases:
   - Répertoire de tiers
   - Application de la loi énergie - Art.64
 opening: Données publiques et confidentielles pour les non-diffusibles.
+faq:
+ q1:
+  question: Une erreur est repérée dans la base de données par vous ou vos utilisateurs ? En savoir plus sur la procédure...
+  answer: La réponse D
 perimeter:
   label: Entreprises, entrepreneurs individuels, institutions administratives et
     certaines associations.
@@ -370,11 +374,11 @@ services:
             Le détail de chaque champ est indiqué en commentaire dans la réponse JSON ci-dessous ⬇️.
         qr3:
           question: Une entreprise est active mais tous ses établissements sont fermés, est-ce un bug ?
-          answer: >-  
+          answer: >-
             Même si tous les établissements d'une entreprise sont fermés (y compris son établissement siège), une entreprise reste active tant que la cessation juridique n'a pas été prononcée. Une réactivation est même encore possible. Le SIREN continue donc d'avoir un statut actif au répertoire.
-            
 
-            Par conséquent, dans la réponse JSON, **le cas de figure suivant n'est pas un bug** : 
+
+            Par conséquent, dans la réponse JSON, **le cas de figure suivant n'est pas un bug** :
 
             * Tous les établissements (ainsi que le siège) ont leur `etat_administratif` = `F` ;
 
