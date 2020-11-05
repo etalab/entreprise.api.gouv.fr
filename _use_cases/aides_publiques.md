@@ -18,10 +18,8 @@ Dans le cadre des demandes d'aide publiques, l’API Entreprise est notamment de
 
 API Entreprise expose de nombreuses données utiles à l'instruction des demandes d'aides publiques. Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires pour l'instruction de vos dossiers.** Votre raccordement en sera alors grandement accéléré.
 
-
-Par exemple, les [bilans de la Banque de France]({{ site.baseurl }}/catalogue/#bilans_entreprises_bdf), ou les [liasses fiscales de la DGFIP]({{ site.baseurl }}/catalogue/#liasses_fiscales_dgfip), nécessitent d'avoir un cadre juridique spécifique pour être obtenues. Si vous en faîtes la demande sans justifier de ce cadre, votre demande sera plus longue à traiter, voire refusée.
-
 {:.example}
+Par exemple, les [bilans de la Banque de France]({{ site.baseurl }}/catalogue/#bilans_entreprises_bdf), ou les [liasses fiscales de la DGFIP]({{ site.baseurl }}/catalogue/#liasses_fiscales_dgfip), nécessitent d'avoir un cadre juridique spécifique pour être obtenues. Si vous en faîtes la demande sans justifier de ce cadre, votre demande sera plus longue à traiter, voire refusée.
 
 L'ensemble des données de l’API Entreprise est consultable dans le catalogue de données. Chaque endpoint est accompagné d'explications métier et technique.
 
