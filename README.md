@@ -54,6 +54,16 @@ bundle exec jekyll algolia
 
 You have to set the admin API key in `_algolia_api_key`
 
+## Algolia
+
+You can index locally with the following command line:
+
+```sh
+bundle exec jekyll algolia
+```
+
+You have to set the admin API key in `\_algolia_api_key`
+
 -----
 -----
 -----
