@@ -61,7 +61,7 @@ L'accès à l'API Entreprise dans le cadre de ce cas d'usage sera strictement r�
 
 Chaque région doit effectuer une demande d'accès avec les données indiquées plus haut. Chaque région aura la charge de transmettre à ces prestataires la clé d'accès obtenue.
 
-Pour votre demande d'accès, veuillez consulter la page ["Demander un accès"]({{ site.baseurl }}/doc/#demande-habilitation), un déroulé des étapes vous sera décrit.
+Pour votre demande d'accès, veuillez consulter la page ["🔑 Demander un accès"]({{ site.baseurl }}/doc/#demande-habilitation), un déroulé des étapes vous sera décrit.
 
 ## Gestion des clés d'accès
 
