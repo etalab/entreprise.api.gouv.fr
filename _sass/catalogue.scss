@@ -4,7 +4,7 @@
     left: 0.5em;
     z-index: 10;
   }
-  
+
   .tpl-form__group {
     flex-direction: row;
   }
@@ -12,7 +12,7 @@
   #catalogue-search {
     padding: 0 var(--spacing-s) 0 var(--spacing-xl);
   }
-  
+
   @media (max-width: 800px) {
     .tpl-form__group {
       flex-wrap: wrap;
@@ -362,7 +362,7 @@
     resize: vertical;
   }
 
-  .technical-documentation .highlight { 
+  .technical-documentation .highlight {
     margin: 0;
   }
 
@@ -403,7 +403,7 @@
   .availability .tpl-description-list {
     margin-top: 0;
   }
-  
+
   .status-marker {
     background-color: #BFBFBF;
     border-radius: var(--border-radius-default);
@@ -451,7 +451,7 @@
       background-color: #D32121;
       display: block;
     }
-    
+
     &.spot--sub80 {
       background-color: #600462;
       display: block;
@@ -602,7 +602,7 @@
       font-weight: 700;
       cursor: default;
       position: relative;
-        
+
       &.legend--sup99 {
         background-color: #7ED321;
       }
@@ -712,11 +712,25 @@
       margin: 0;
     }
   }
-    
+
   @media (max-width: 500px) {
     .documentation-card {
       margin-left: -1.5em;
       margin-right: -1.5em;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .catalogue__category-title {
+      font-size: 1.5em;
+    }
+
+    .tpl-documentation__content {
+      max-width: 100%;
+    }
+
+    h3 {
+      font-size: 1.2em;
     }
   }
 }
