@@ -23,6 +23,10 @@ branch = ENV['branch'] || 'master'
 set :branch, branch
 ensure!(:branch)
 
+set :shared_files, fetch(:shared_files, []).push(*%w[
+  _algolia_api_key
+])
+
 task :remote_environment do
   if ENV['domain'] != 'localhost'
     # Be sure to commit your .ruby-version or .rbenv-version to your repository.
@@ -44,6 +48,7 @@ task :deploy do
     invoke :'bundle:install'
     command %( JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_production.yml )
     invoke :cgu_to_pdf
+    invoke :algolia_indexing
     invoke :'deploy:cleanup'
   end
 end
@@ -51,4 +56,9 @@ end
 task :cgu_to_pdf do
   comment 'Generating PDF version of CGU'.green
   command %(pandoc pages/cgu.md -o _site/assets/cgu.pdf --latex-engine=xelatex)
+end
+
+task :algolia_indexing do
+  comment 'Indexing content on Algolia'.green
+  command %{bundle exec jekyll algolia}
 end
