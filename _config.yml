@@ -31,6 +31,13 @@ meta:
 algolia:
   index_name: 'prod_api_entreprise_site'
   application_id: '4NUM23WKJI'
+  files_to_exclude:
+    - _data/*
+    - _providers/*
+    - about.md
+    - pages/mentions.md
+    - pages/stats.md
+    - pages/cgu.md
 
 # The baseurl option is set for links (especialy assets links) to work
 # with Github pages. For the production environment the website is built
@@ -52,7 +59,7 @@ collections:
   available_data:
     output: true
   use_cases:
-      output: true
+    output: true
   catalogue:
   documentation:
 
