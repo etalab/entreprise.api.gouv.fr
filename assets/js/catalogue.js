@@ -291,7 +291,12 @@ window.addEventListener('load', function (e) {
     event.stopPropagation()
     event.preventDefault()
 
-    const clickedTab = event.target
+    var clickedTab = event.target
+
+    if (!clickedTab.getAttribute('class').match('tab')) {
+      clickedTab = clickedTab.parentElement;
+    }
+
     const clickedParent = clickedTab.closest('.documentation__tabs')
     const activeTab = clickedParent.querySelectorAll('.tab--active')
     const activeTabContent = clickedParent.querySelectorAll('.tab-content--active')
@@ -384,7 +389,7 @@ window.addEventListener('load', function (e) {
           const availabilityRate = (100 - parseFloat(errorCount)).toFixed(3)
           const spots = panel.querySelectorAll('.spot')
           const rates = panel.querySelectorAll('.rate')
-          
+
           if (availabilityRate >= 99.5) { rateClass = 'spot--sup99' }
           else if (availabilityRate >= 90) { rateClass = 'spot--sup90' }
           else if (availabilityRate >= 80) { rateClass = 'spot--sup80' }
@@ -394,7 +399,7 @@ window.addEventListener('load', function (e) {
           for (let i = 0; i < spots.length; i++) { rates[i].innerHTML = availabilityRate.toString() + '%' }
           panel.querySelector('.call-count').innerHTML = (Math.round(callCount / 100) * 100).toLocaleString('fr-FR');
           panel.querySelector('.fd-errors').innerHTML = errorRate.toString() + '%'
-          
+
           const dataset = buildDataset(data, endpoint)
           buildChart(endpoint, dataset)
           buildTable(panel.querySelector('.availability-table'), dataset)
@@ -544,7 +549,7 @@ window.addEventListener('load', function (e) {
         .attr('x', -40)
         .attr('y', height - (height * 99) / 100 + 30)
         .attr('text-anchor', 'end')
-        
+
     // Create the gradient
     svg.append('linearGradient')
       .attr('id', "availability-gradient")
