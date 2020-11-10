@@ -26,9 +26,7 @@ opening: Données publiques et confidentielles pour les non-diffusibles.
 faq:
  q1:
   question: Une erreur est repérée dans la base de données Sirene par vous ou vos utilisateurs ? Quelle procédure ?
-  answer: Lors de la mise à disposition des données de l'endpoint entreprise dans votre service, un utilisateur ou vous-même repérez une erreur dans la base de données Sirene. L'INSEE a mis en place une procédure pour vous permettre de signaler cette inexactitude. Elle met à disposition un **formulaire de contact permettant aux utilisateurs de leur adresser une demande de modification d'information**. 
-  Notammnet, si vous utilisez cet endpoint pour du pré-remplissage, il peut être utile d'indiquer ce lien https://www.sirene.fr/sirene/public/nous-contacter à vos utilisateurs. Cela leur permettra de demander une rectification directement.
-
+  answer: Lors de la mise à disposition des données de l'endpoint entreprise dans votre service, un utilisateur ou vous-même repérez une erreur dans la base de données Sirene. L'INSEE a mis en place une procédure pour vous permettre de signaler cette inexactitude. Elle met à disposition un **formulaire de contact permettant aux utilisateurs de leur adresser une demande de modification d'information**. Notamment, si vous utilisez cet endpoint pour du pré-remplissage, il peut être utile d'indiquer ce lien <https://www.sirene.fr/sirene/public/nous-contacter> à vos utilisateurs. Cela leur permettra de demander une rectification directement.
 perimeter:
   label: Entreprises, entrepreneurs individuels, institutions administratives et
     certaines associations.
