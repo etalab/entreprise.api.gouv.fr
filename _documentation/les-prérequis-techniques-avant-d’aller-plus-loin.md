@@ -56,7 +56,7 @@ panels:
       |**Des paramètres de traçabilité**|`&context=CadreDeLaRequête`<br> `&recipientBénéficiareDeL'Appel=`<br> `&object=RaisonDeL'AppelOuIdentifiant`<br> `?user_id=IdentifiantDeL'UtilisateurPhysique`<br> et autres selon les endpoints ...|
 
 
-      **Tous ces éléments mis bout à bout constituent une requête HTTP qui appelle l'API :** 
+      **Tous ces éléments mis bout à bout constituent une requête HTTP qui appelle l'API :**
 
 
       ```
@@ -185,8 +185,8 @@ panels:
     title: Les fondamentaux à mettre en place avec l'équipe technique 🧰
     id: fondamentaux
     content: >
-      
-      Vous travaillez avec la DSI de votre administration ou avec un éditeur de logiciel, voici la liste des fondamentaux que votre équipe technique doit être en mesure de mettre en place pour un bon fonctionnement de l'API Entreprise : 
+
+      Vous travaillez avec la DSI de votre administration ou avec un éditeur de logiciel, voici la liste des fondamentaux que votre équipe technique doit être en mesure de mettre en place pour un bon fonctionnement de l'API Entreprise :
 
 
       ✅ Pouvoir prendre en charge la mise à jour des protocoles de sécurité HTTPS ;
@@ -202,6 +202,9 @@ panels:
 
 
       ✅ Anticiper les coûts de maintenance qui s'ajouteront aux coûts de mise en place.
+
+
+      ✅ S'assurer que nos Autorités de Certification (AC) pour les certificats SSL sont autorisées par vos systèmes. Consulter la _fin_ de la rubrique [configurer le logiciel métier](#configuration).
   panel4:
     title: Prévoir les incidents et la résilience de mon service 🧑‍🚒
     id: incidents
