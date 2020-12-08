@@ -35,6 +35,7 @@ Depuis le 12 décembre 2019, les acheteurs publics ont l'obligation légale de p
 |    Atexo                 | entreprise privée | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     |
 |    AWS                   |    entreprise privée |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}                                      |
 |    Dematis               |     entreprise privée |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}                                |
+|    Entr'ouvert               |     coopérative |       [entrouvert.com](https://www.entrouvert.com){:target="_blank"}                                |
 |    Klekoon          | entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"}                                        |
 |    Provigis              |    entreprise privée |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"}                                     |
 

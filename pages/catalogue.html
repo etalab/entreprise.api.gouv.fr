@@ -131,6 +131,23 @@ is_catalogue: true
                     </div>
                     <hr />
                     {% endif %}
+                    {% if endpoint.faq %}
+                      {% for panel in endpoint.faq %}
+                        <details class="fold">
+                          <summary>
+                            <p class="link-ref">
+                              {{ panel[1].question }}
+                              <button class="tpl-button tpl-button--alternate button-link">
+                                <svg class="tpl-icon" viewBox="0 0 24 24">
+                                  <use xlink:href="#link"></use>
+                                </svg>
+                              </button>
+                            </p>
+                          </summary>
+                          {{ panel[1].answer | markdownify }}
+                        </details>
+                      {% endfor %}
+                    {% endif %}
                     {% if endpoint.perimeter %}
                     <details class="perimeter" open>
                       <summary>

@@ -301,6 +301,18 @@ panels:
       Pour mettre à disposition les données API Entreprise depuis un navigateur, **il vous faut mettre en place un système de proxy** pour ne pas appeler directement nos APIs.
 
 
+      #### Certificats SSL et Autorités de certification
+
+
+      API Entreprise utilise [DHIMYOTIS](https://www.dhimyotis.com/) comme organisme de délivrance de ses certificats SSL principaux ainsi que [Let's Encrypt](https://letsencrypt.org/) pour certains services secondaires.
+
+
+      Il est conseillé d'ajouter ces Autorités de Certifications (AC) à votre base de confiance si vous en avez une. Une solution idéale est d'utiliser un paquet d'autorités mises à jour automatiquement ([Mozilla par exemple](https://wiki.mozilla.org/CA/Included_Certificates))
+
+
+      API Entreprise utilise des certificats multi-domaines ; c'est à dire avec un "nom courant" (_common name - CN_) et plusieurs "noms alternatifs du sujet" (_subject alternatives names - SAN_), soyez certains que vos outils fonctionnent correctement avec.
+
+
       #### Construire en compatibilité ascendante
 
 

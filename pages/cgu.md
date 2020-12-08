@@ -96,6 +96,13 @@ La DINUM s’engage à assurer la traçabilité de toutes les actions réalisée
 
 La DINUM s’engage à assurer le suivi et l’évaluation de l’utilisation du Service, et à communiquer les résultats obtenus aux Partenaires.
 
+### 3.3.	Cookies et mesures d'audience ##
+
+Le Service API Entreprise dépose des cookies de mesure d’audience (nombre de visites, pages
+consultées), respectant les conditions d’exemption du consentement de l’internaute
+définies par la [recommandation « Cookies » de la Commission nationale informatique et libertés (CNIL)](https://www.cnil.fr/fr/cookies-solutions-pour-les-outils-de-mesure-daudience){:target="_blank"}.
+Il utilise [Matomo](https://fr.matomo.org/){:target="_blank"}, un outil libre, paramétré pour ce faire. Cela signifie, notamment, que ces cookies ne servent qu’à la production de statistiques anonymes et ne permettent pas de suivre la navigation de l’internaute sur d’autres sites.
+
 ## 4 - Traitement des données à caractère personnel ##
 
 Le Service ne collecte que les données strictement nécessaires à sa mise en œuvre. 

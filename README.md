@@ -28,7 +28,21 @@ So it need to have installed:
 - texlive-xetex
 
 ## Deploy
-`bundle exec mina deploy to=[sandbox|production]
+
+This command deploy `master` by default, you probably should merge `gh-pages`
+into `master`
+
+`bundle exec mina deploy to=[sandbox|production] domain=[sandbox|production]
+
+## Algolia
+
+You can index locally with the following command line:
+
+```sh
+bundle exec jekyll algolia
+```
+
+You have to set the admin API key in `\_algolia_api_key`
 
 -----
 -----
