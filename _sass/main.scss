@@ -51,6 +51,7 @@ a.external-link::after {
   width: 1em;
   vertical-align: middle;
   background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='external-link' viewBox='0 0 24 24'%3E%3Ctitle%3Eexternal link%3C/title%3E%3Cg class='nc-icon-wrapper'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.704 13.707l7.293-7.293V11h2V3h-8v2h4.586l-7.293 7.293 1.414 1.414zM19 19v-5h-2v5H5V7h5V5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z' fill='currentColor' stroke-color='currentColor' /%3E%3C/g%3E%3C/svg%3E");
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='external-link' viewBox='0 0 24 24'%3E%3Ctitle%3Eexternal link%3C/title%3E%3Cg class='nc-icon-wrapper'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.704 13.707l7.293-7.293V11h2V3h-8v2h4.586l-7.293 7.293 1.414 1.414zM19 19v-5h-2v5H5V7h5V5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2z' fill='currentColor' stroke-color='currentColor' /%3E%3C/g%3E%3C/svg%3E");
 }
 
