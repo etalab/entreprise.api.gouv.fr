@@ -28,7 +28,7 @@ Depuis le 12 décembre 2019, les acheteurs publics ont l'obligation légale de p
 ###### Voici la liste des services et éditeurs connectés à l'API Entreprise : 
 
 {:.tpl-table}
-| Éditeurs et services connecté à l'API Entreprise        |     type d'entité  |    Profil acheteur ou service        |
+| Éditeurs et services connectés à l'API Entreprise        |     type d'entité  |    Profil acheteur ou service        |
 |------------------------|:-------------------------------------------:|:-------------------------------------------:|
 |    AIFE <br>(Agence pour l'Informatique Financière de l'État)       |  agence publique | [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |
 |      Achatpublic.com     | entreprise privée |[achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
