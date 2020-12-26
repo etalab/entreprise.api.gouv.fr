@@ -105,8 +105,9 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 
 ## Liste d'éditeurs
 
-Vous souhaitez vous connecter à l'API Entreprise mais vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée pour intégrer des APIs ? Vous pouvez passer par un éditeur. 
-<br> Nous dressons ici la liste de ceux étant déjà connectés à l'API Entreprise dans ce cas d'usage spécifique.
+Vous souhaitez vous connecter à l'API Entreprise mais vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée pour intégrer des APIs ? 
+<br> Vous pouvez passer par un éditeur. 
+<br><br> Nous dressons ici la liste de ceux étant déjà connectés à l'API Entreprise dans ce cas d'usage spécifique :
 
 
 {:.tpl-table}
@@ -119,8 +120,8 @@ Vous êtes un éditeur proposant une solution pour les aides publiqes et ne figu
 
 ## Formulaire d'accès spécifique au cas d'usage
 
-Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. 
-
 Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques".
 
   <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "aides publiques"</a>
+
+Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. 
