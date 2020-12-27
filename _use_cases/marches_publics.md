@@ -132,13 +132,15 @@ Nous dressons ici la liste de ceux étant déjà connectés à l'API Entreprise 
 | Éditeurs et services connectés à l'API Entreprise        |     type d'entité  |    Profil acheteur ou service        |
 |------------------------|:-------------------------------------------:|:-------------------------------------------:|
 |    AIFE <br>(Agence pour l'Informatique Financière de l'État)       |  agence publique | [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |
-|      Achatpublic.com     | entreprise privée |[achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
+|      Achatpublic    | entreprise privée |[achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
 |    Atexo                 | entreprise privée | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     |
-|    AWS                   |    entreprise privée |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}                                      |
+|    AWS                   |    entreprise privée |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}  |                           
+|    Atline Services                   |    entreprise privée |    [marchés-securises.fr](https://www.marches-securises.fr/entreprise/?){:target="_blank"}|        
 |    Dematis               |     entreprise privée |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}                                |
 |    Entr'ouvert               |     coopérative |       [entrouvert.com](https://www.entrouvert.com){:target="_blank"}                                |
 |    Klekoon          | entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"}                                        |
 |    Provigis              |    entreprise privée |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"}                                     |
+|    Territoires numériques               |    groupement d'intérêt public Bourgogne Franche-Comté |     [Pack commande publique](https://www.ternum-bfc.fr/services/pack-commande-publique){:target="_blank"}                                     |
 
 Vous êtes un éditeur proposant une solution pour les marchés publics et ne figurez pas sur cette liste ? Veuillez nous contacter à cette adresse mail : support@entreprise.api.gouv.fr
 
@@ -147,7 +149,7 @@ Vous êtes un éditeur proposant une solution pour les marchés publics et ne fi
 
 Si vous êtes un acheteur public, il est probable que vous ayez déjà accès aux données d'API Entreprise par l'intermédiaire de votre profil acheteur ou du DUME que peut remplir l'entreprise.
 
-Si vous n'êtes pas dans ce premier cas et que vous avez identifié les données nécessaires pour votre service dans le cadre des marchés publics ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques".
+Si vous n'êtes pas dans ce premier cas et que vous avez identifié les données nécessaires pour votre service dans le cadre des marchés publics ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "marchés publics" :
 
   <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "marchés publics"</a>
 
