@@ -57,7 +57,7 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 #### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>préremplissage accès sécurisé 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|:-	:|:-:	|
 | **Données de référence<br>d'une entreprise** 	<br>`entreprises` | INSEE & Infogreffe 	| ✅ <br>sauf les non-diffusibles 	| 💬 	| JSON 	| publiques et confidentielles	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}  	|
 | **Données de référence<br>d'un établissement** <br>	`etablissements` | INSEE 	| ✅ <br>sauf les non-diffusibles	| 💬	| JSON 	| publiques et confidentielles	| 	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}|
@@ -72,7 +72,7 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 #### Informations financières <a id="infos_financieres"></a>
 
 {:.tpl-table}
-| Données et endpoints	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints	| Producteur 	| Utilité<br>préremplissage accès sécurisé 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Chiffre d'affaires**<br>`exercices` 	| DGFIP 	| ⏺ 	| 📜 	| JSON 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"} 	|
 | **Bilans annuels**<br>`bilans_inpi` 	| INPI 	| *format inadapté* 	| 📜 	| ZIP (PDF et XML) 	| publiques et confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
@@ -86,7 +86,7 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation 	|
+| Données et endpoints 	| Producteur 	| Utilité<br>préremplissage accès sécurisé 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation 	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| *format inadapté* 	| 📜 	| PDF 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
 | **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| ACOSS 	| *format inadapté* 	| 📜 	| PDF 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
@@ -101,7 +101,7 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 #### Certificats professionnels <a id="certificats_pro"></a>
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>préremplissage accès sécurisé 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Certification RGE**<br>`certificats_rge_ademe` 	| ADEME 	| ⏺ 	| 💬 	| JSON et PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"} 	|
 | **Certification de qualification bâtiment**<br>`certificats_qualibat` 	| Qualibat 	| *format inadapté* 	| 💬 	| PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"} 	|
@@ -113,7 +113,7 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>préremplissage accès sécurisé 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	| ⏺ 	| 💬 	| JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
@@ -123,8 +123,8 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 
 ## Formulaire d'accès spécifique au cas d'usage
 
-Vous avez identifié les données nécessaires pour faciliter le remplissage de formulaires à destination des entreprises et/ou associations, en accès libre? Le lien ci-dessous vous permet d'accéder à un formulaire de demande d'accès spécifique "pré-remplissage - accès libre" : 
+Vous avez identifié les données nécessaires pour faciliter le remplissage de formulaires à destination des entreprises et/ou associations, disponibles sous authentification ? Le lien ci-dessous vous permet d'accéder à un formulaire de demande d'accès spécifique "pré-remplissage - accès sécurisé" : 
 
-  <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "pré-remplissage - accès libre"</a>
+  <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "pré-remplissage - accès sécurisé"</a>
 
 Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. 
