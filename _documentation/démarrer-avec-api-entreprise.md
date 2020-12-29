@@ -32,23 +32,22 @@ panels:
 
         Une demande d’accès ne peut pas couvrir plusieurs contextes métiers différents et doit être adaptée au public utilisateur final. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
-      {:.example}
+        {:.example}
 
-      **Exemple de la Région Occitanie :**<br><br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
-
-      <br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
-
-      {:.example}
+        **Exemple de la Région Occitanie :**<br><br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
+        {:.example}
 
 
-      * **le cadre juridique vous autorisant à traiter les données**.  L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une description précise de votre service et de l'utilité des données demandées dans ce contexte. Dans une majorité de cas, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de justificatifs :   
+      * **le cadre juridique vous autorisant à traiter les données**.  L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une description précise de votre service et de l'utilité des données demandées dans ce contexte. Dans une majorité des cas, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de justificatifs :   
 
-        * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre un **décrêt** ou un **arrêté** justifiant votre demande.
-        * Si vous êtes une collectivité, il vous faudra transmettre une **délibération** faisant acte du besoin demandé. Une délibération doit comporter certains éléments d'information pour avoir une légalité externe, ce [document de la Préfecture de l'AISNE](https://www.aisne.gouv.fr/content/download/20874/140668/file/Article_R%C3%A9dactionD%C3%A9lib%C3%A9rations) les présente en détail.
+        * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
+        * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées. 
+        <br>Par exemple, si la délibération indique que votre service concerne uniquement les entreprises de moins de 300 000 euros de chiffres d'affaires, l'endpoint `/exercices`, permettant d'avoir les déclarations de l'entreprise, vous sera accordé. 
+        <br>Enfin, pour être légale, une délibération doit comporter certains éléments administratifs. Ce [document de la Préfecture de l'AISNE](https://www.aisne.gouv.fr/content/download/20874/140668/file/Article_R%C3%A9dactionD%C3%A9lib%C3%A9rations) les présente en détail. 
 
-      {:.tpl-notification.tpl--danger}
+        {:.tpl-notification.tpl--danger}
 
-      Attention, le [**CRPA** (Code des relations entre le public et l'administration)](https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000031366350/2020-12-14/){:target="_blank"}, la [**loi ESSOC** (pour un État au service d'une société de confiance)](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037307624/){:target="_blank"} ou la **loi Lemaire** (pour une République numérique) **ne sont pas suffisants** car ils indiquent un principe d'échange qui doit être complété par un cadre juridique précis pour l'utilisation envisagée.
+        Attention, quel que soit votre statut, le [**CRPA** (Code des relations entre le public et l'administration)](https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000031366350/2020-12-14/){:target="_blank"}, la [**loi ESSOC** (pour un État au service d'une société de confiance)](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037307624/){:target="_blank"} ou la **loi Lemaire** (pour une République numérique) **ne sont pas suffisants** car ils indiquent un principe d'échange qui doit être complété par un cadre juridique précis pour l'utilisation envisagée.
 
 
       * **les coordonnées du responsable du traitement**.
