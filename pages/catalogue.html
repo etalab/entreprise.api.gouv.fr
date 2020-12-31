@@ -198,12 +198,8 @@ is_catalogue: true
                         <div class="request-json json-example">
                           <h5>Requête HTTP</h5>
                           <a class="link-to-swagger" href="https://api.gouv.fr/documentation/api-entreprise" target="_blank">Swagger</a>
-                          <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}
-{{ endpoint.label }}/</b>{%if service[1].request.id %}{{ service[1].request.id.label }}{% endif %}{%if service[1].request.id.extra1 %}
-/<b>{{ service[1].request.id.extra1 }}</b>{% endif %}{%if service[1].request.id.extra2 %}/{{ service[1].request.id.extra2 }}{% endif %}{% for param in service[1].request.parameters %}{% if forloop.index == 1 %}
-<b>?{{ param[1].label }}=</b>{{ param[1].description }}{% else %}
-<b>&{{ param[1].label }}=</b>{{ param[1].description }}{% endif %}{% endfor %}
-{% for option in service[1].request.options %}<br /><br />{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
+                          <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}{{ service[1].request.url | markdownify }}
+{% for option in service[1].request.options %}{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
 <b>{{ option[1].param }}</b>{% endfor %}</code></pre>
                         </div>
                         <div class="response-content">

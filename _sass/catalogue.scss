@@ -311,6 +311,10 @@
 
     .request-json {
       order: 3;
+
+      .tpl-code p {
+        margin: 0;
+      }
     }
 
     .response-description {

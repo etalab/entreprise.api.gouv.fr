@@ -291,6 +291,10 @@ collections:
                         name: 'answer'
                         required: false
                         widget: 'markdown'
+              - label: 'Url de l’endpoint'
+                name: 'url'
+                required: false
+                widget: 'markdown'
               - label: 'Paramètre d’appel'
                 name: 'id'
                 description: 'A remplir avec le paramètre permettant d’identifier une entité'
@@ -315,97 +319,6 @@ collections:
                     name: 'extra2'
                     required: false
                     widget: 'string'
-              - label: 'Paramètres'
-                name: 'parameters'
-                required: false
-                widget: 'object'
-                fields:
-                - label: 'Paramètre obligatoire 1'
-                  name: 'param1'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      default: 'token'
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'JetonD’Habilitation'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 2'
-                  name: 'param2'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'context'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'CadreDeLaRequête'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 3'
-                  name: 'param3'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'recipient'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'BénéficiaireDel’Appel'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 4'
-                  name: 'param4'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'object'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'RaisonDeL’AppelOuIdentifiant'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 5'
-                  name: 'param5'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 6'
-                  name: 'param6'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      required: false
-                      widget: 'string'
               - label: 'Paramètres optionnels'
                 name: 'options'
                 required: false
@@ -586,6 +499,10 @@ collections:
                         name: 'answer'
                         required: false
                         widget: 'markdown'
+              - label: 'Url de l’endpoint'
+                name: 'url'
+                required: false
+                widget: 'markdown'
               - label: 'Paramètre d’appel'
                 name: 'id'
                 description: 'A remplir avec le paramètre permettant d’identifier une entité'
@@ -610,97 +527,6 @@ collections:
                     name: 'extra2'
                     required: false
                     widget: 'string'
-              - label: 'Paramètres'
-                name: 'parameters'
-                required: false
-                widget: 'object'
-                fields:
-                - label: 'Paramètre obligatoire 1'
-                  name: 'param1'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      default: 'token'
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'JetonD’Habilitation'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 2'
-                  name: 'param2'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'context'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'CadreDeLaRequête'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 3'
-                  name: 'param3'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'recipient'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'BénéficiaireDel’Appel'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 4'
-                  name: 'param4'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'object'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'RaisonDeL’AppelOuIdentifiant'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 5'
-                  name: 'param5'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 6'
-                  name: 'param6'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      required: false
-                      widget: 'string'
               - label: 'Paramètres optionnels'
                 name: 'options'
                 required: false
@@ -882,6 +708,10 @@ collections:
                         name: 'answer'
                         required: false
                         widget: 'markdown'
+              - label: 'Url de l’endpoint'
+                name: 'url'
+                required: false
+                widget: 'markdown'
               - label: 'Paramètre d’appel'
                 name: 'id'
                 description: 'A remplir avec le paramètre permettant d’identifier une entité'
@@ -906,97 +736,6 @@ collections:
                     name: 'extra2'
                     required: false
                     widget: 'string'
-              - label: 'Paramètres'
-                name: 'parameters'
-                required: false
-                widget: 'object'
-                fields:
-                - label: 'Paramètre obligatoire 1'
-                  name: 'param1'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      default: 'token'
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'JetonD’Habilitation'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 2'
-                  name: 'param2'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'context'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'CadreDeLaRequête'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 3'
-                  name: 'param3'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'recipient'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'BénéficiaireDel’Appel'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 4'
-                  name: 'param4'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      default: 'object'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      default: 'RaisonDeL’AppelOuIdentifiant'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 5'
-                  name: 'param5'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      required: false
-                      widget: 'string'
-                - label: 'Paramètre obligatoire 6'
-                  name: 'param6'
-                  required: false
-                  widget: 'object'
-                  fields:
-                    - label: 'Paramètre'
-                      name: 'label'
-                      required: false
-                      widget: 'string'
-                    - label: 'Description'
-                      name: 'description'
-                      required: false
-                      widget: 'string'
               - label: 'Paramètres optionnels'
                 name: 'options'
                 required: false
