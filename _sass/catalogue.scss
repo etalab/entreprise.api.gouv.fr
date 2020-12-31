@@ -379,6 +379,10 @@
 
   .qa summary {
     padding-right: var(--spacing-s);
+
+    p {
+      margin: 0;
+    }
   }
 
   .qa summary::marker {
