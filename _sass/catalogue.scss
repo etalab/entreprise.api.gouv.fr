@@ -1,4 +1,21 @@
 .catalogue__search {
+  position: relative;
+  
+  .catalogue__search--main {
+    input,
+    select {
+      border-radius: 0;
+      border-left: transparent;
+
+      :focus {
+        z-index: 10;
+      }
+    }
+
+    :last-child {
+      border-radius: 0 1.5em 1.5em 0;
+    }
+  }
 
   .tpl-hero__search-button {
     left: 0.5em;
@@ -11,6 +28,8 @@
 
   #catalogue-search {
     padding: 0 var(--spacing-s) 0 var(--spacing-xl);
+    border-radius: 1.5em 0px 0px 1.5em;
+    border-left: 1px solid var(--border-color-default);
   }
 
   @media (max-width: 800px) {
@@ -20,6 +39,22 @@
       select {
         display: none;
       }
+    }
+  }
+
+  .catalogue__search--secondary {
+    justify-content: start;
+
+    select {
+      font-size: 0.75em;
+      border-radius: 1.5em;
+      flex-grow: 0;
+      flex-shrink: 1;
+      max-width: 250px;
+    }
+
+    select + select {
+      margin-left: 1em;
     }
   }
 }
