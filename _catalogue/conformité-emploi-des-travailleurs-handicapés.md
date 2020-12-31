@@ -32,6 +32,12 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
+      url: |-
+        **attestations_agefiph/**SiretDeL’Etablissement
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       sample:
         code: |

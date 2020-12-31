@@ -46,6 +46,12 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
+      url: |-
+        **actes_inpi/**SirenDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       timeout: 12 secondes
       format: Archive ZIP contenant PDF et XML

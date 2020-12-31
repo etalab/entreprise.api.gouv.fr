@@ -47,6 +47,12 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
+      url: |-
+        **exercices/**SiretDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       timeout: 5 secondes
       format: Donnée structurée JSON

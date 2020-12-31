@@ -53,6 +53,12 @@ services:
           param: ""
           description: ""
           comment: ""
+      url: |-
+        **associations/**SIRETdeL'AssociationOuNumeroRNA
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDeL'appel
+        **&object=**RaisonDeL'AppelOuIdentifiant
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
@@ -102,7 +108,7 @@ services:
               "mise_a_jour": "2013-06-28"
             }
           }
-history:
+history: null
 availability:
   normal_availability: 7jours/7 et 24h/24
   volumetry: 2000 requêtes/10 minutes par IP

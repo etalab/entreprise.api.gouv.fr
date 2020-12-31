@@ -56,6 +56,12 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
+      url: |-
+        **eligibilites_cotisation_retraite_probtp/**SiretDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       sample:
         code: |+
@@ -115,4 +121,10 @@ services:
         param4:
           description: RaisonDeL’AppelOuIdentifiant
           label: object
+      url: |-
+        **attestations_cotisation_retraite_probtp/**SiretDeL'Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
 ---

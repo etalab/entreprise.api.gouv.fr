@@ -2,7 +2,8 @@
 providers:
   - inpi
 access: Sous habilitation, <br>disponible partiellement (uniquement les bilans
-  publics) sur le [site de l'INPI](https://data.inpi.fr/swagger){:target="_blank"}.
+  publics) sur le [site de
+  l'INPI](https://data.inpi.fr/swagger){:target="_blank"}.
 weight: 8
 type: Informations financières
 title: Bilans annuels
@@ -54,6 +55,12 @@ services:
       questions:
         qr1:
           question: ""
+      url: |-
+        **bilans_inpi/**SirenDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       format: Archive ZIP contenant PDF et XML
       timeout: 12 secondes

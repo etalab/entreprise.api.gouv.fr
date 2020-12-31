@@ -46,6 +46,12 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
+      url: |-
+        **cartes_professionnelles_fntp/**SirenDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       sample:
         code: >-

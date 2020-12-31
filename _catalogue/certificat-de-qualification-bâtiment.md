@@ -115,6 +115,12 @@ services:
             ℹ️ Source : [Qualibat](https://www.qualibat.com/maitre-douvrage/nomenclature/consulter-la-nomenclature){:target="_blank"}
           question: Quelle est la différence entre une certification et une qualification
             ?
+      url: |-
+        **certificats_qualibat/**SiretDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       sample:
         code: >-

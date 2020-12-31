@@ -95,6 +95,13 @@ services:
 
 
             ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
+      url: |-
+        **attestations_fiscales_dgfip/**SirenDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&user_id=**IdentifiantUtilisateurPhysique
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       format: Document PDF
       timeout: 12 secondes
