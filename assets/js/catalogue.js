@@ -368,6 +368,10 @@ window.addEventListener('load', function (e) {
   }
 
   function fetchAvailability(endpoint) {
+    if (endpointMatching[endpoint] == null) {
+      return;
+    }
+
     fetch('https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=6M&endpoint=api/'+endpointMatching[endpoint].availability)
       .then(response => {
         if (response.ok) {
