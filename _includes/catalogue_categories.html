@@ -1,0 +1,17 @@
+<h3>Catalogue des données</h3>
+{% for type in catalogue_types %}
+  {% for category in categories %}
+    {% if category.name == type %}
+      <details>
+        <summary>{{ category.name }}</summary>
+        {% assign items = category.items | sort: 'weight' %}
+        {% for endpoint in items %}
+          {% capture anchor %}{{ '#' | append: endpoint.label }}{% endcapture %}
+          {% assign plist = site.empty_array %}
+          {% for provider in endpoint.providers %}{% assign plist = plist | push: providers[provider] %}{% endfor %}
+          <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }} – {{ plist | join: ', ' }}</a>
+        {% endfor %}
+      </details>
+    {% endif %}
+  {% endfor %}
+{% endfor %}

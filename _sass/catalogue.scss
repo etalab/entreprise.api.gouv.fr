@@ -1,6 +1,6 @@
 .catalogue__search {
   position: relative;
-  
+
   .catalogue__search--main {
     input,
     select {
@@ -69,6 +69,10 @@
     justify-content: center;
     margin-bottom: var(--spacing-s);
   }
+}
+
+.tpl-section.tpl-catalogue {
+  padding-top: 0;
 }
 
 .catalogue {
@@ -786,7 +790,7 @@
 
   @media (max-width: 800px) {
     .tpl-documentation__sidebar {
-      display: none;
+      // display: none;
     }
 
     .description .tpl-description-list {

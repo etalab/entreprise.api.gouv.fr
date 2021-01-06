@@ -1,4 +1,10 @@
-@media (max-width: 1000px) {
+@media (min-width: 800px) {
+  .hide-md {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
   .hide-xs {
     display: none !important;
   }

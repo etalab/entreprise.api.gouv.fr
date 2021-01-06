@@ -13,12 +13,19 @@ is_catalogue: true
 {% assign providers = site.providers_aliases %}
 {% assign catalogue_types = site.catalogue_types %}
 {% assign catalogue_usecases = site.catalogue_usecases %}
+{% assign categories = site.catalogue | group_by: 'type' | reverse %}
+
 <section class="catalogue">
+  <header class="tpl-documentation__sidebar hide-md">
+    <nav class="tpl-documentation__links">
+      {% include catalogue_categories.html %}
+      <!-- <a class="tpl&#45;button tpl&#45;button&#45;&#45;alternate" href="{{ site.baseurl }}/doc/#demande&#45;habilitation">🔑 Demander un accès</a> -->
+    </nav>
+  </header>
   <div id="flash"></div>
   <p>Visibilité de <span id="visible-endpoints">{{ site.catalogue.size }}</span> sur {{ site.catalogue.size }} données API Entreprise</p>
   <div class="tpl-documentation">
     <div class="tpl-documentation__content">
-      {% assign categories = site.catalogue | group_by: 'type' | reverse %}
       {% for type in catalogue_types %}
         {% assign index = forloop.index0 %}
         {% for category in categories %}
@@ -326,25 +333,9 @@ is_catalogue: true
         Aucun résultat disponible
       </div>
     </div>
-    <aside class="tpl-documentation__sidebar">
+    <aside class="tpl-documentation__sidebar hide-xs">
       <nav class="tpl-documentation__links">
-        <h3>Catalogue des données</h3>
-        {% for type in catalogue_types %}
-          {% for category in categories %}
-            {% if category.name == type %}
-              <details>
-                <summary>{{ category.name }}</summary>
-                {% assign items = category.items | sort: 'weight' %}
-                {% for endpoint in items %}
-                  {% capture anchor %}{{ '#' | append: endpoint.label }}{% endcapture %}
-                  {% assign plist = site.empty_array %}
-                  {% for provider in endpoint.providers %}{% assign plist = plist | push: providers[provider] %}{% endfor %}
-                  <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }} – {{ plist | join: ', ' }}</a>
-                {% endfor %}
-              </details>
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
+        {% include catalogue_categories.html %}
         <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}/doc/#demande-habilitation">🔑 Demander un accès</a>
       </nav>
     </aside>
