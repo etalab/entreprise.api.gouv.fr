@@ -206,18 +206,10 @@ is_catalogue: true
                             <h5>Requête HTTP</h5>
                             <a class="link-to-swagger" href="https://api.gouv.fr/documentation/api-entreprise" target="_blank">Swagger</a>
                             <pre class="tpl-pre">
-                              <code class="tpl-code">
-                                <b>
-                                  {{ site.api_url }}{{ service[1].request.url | markdownify }}
-                                  {% for option in service[1].request.options %}
-                                    {% if option[1].comment %}
-                                      <em>{{ option[1].comment }}</em>
-                                    {% endif %}
-
-                                    {{ option[1  ].param }}
-                                  {% endfor %}
-                                </b>
-                              </code>
+                              <code class="tpl-code"><b>{{ site.api_url }}{{ service[1].request.url | markdownify }}</b>
+{% for option in service[1].request.options %}{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
+{{ option[1].param }}
+{% endfor %}</code>
                             </pre>
                           </div>
                           <div class="response-content">
