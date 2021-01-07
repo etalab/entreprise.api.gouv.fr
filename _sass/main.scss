@@ -2,6 +2,10 @@ code {
   word-break: break-all;
 }
 
+.inherit {
+  position: inherit!important;
+}
+
 .tpl-container {
   max-width: 1400px;
 }

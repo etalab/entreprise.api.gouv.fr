@@ -16,7 +16,7 @@ is_catalogue: true
 {% assign categories = site.catalogue | group_by: 'type' | reverse %}
 
 <section class="catalogue">
-  <header class="tpl-documentation__sidebar hide-md">
+  <header class="tpl-documentation__sidebar inherit hide-md">
     <nav class="tpl-documentation__links">
       {% include catalogue_categories.html %}
       <!-- <a class="tpl&#45;button tpl&#45;button&#45;&#45;alternate" href="{{ site.baseurl }}/doc/#demande&#45;habilitation">🔑 Demander un accès</a> -->
