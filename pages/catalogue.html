@@ -205,9 +205,20 @@ is_catalogue: true
                           <div class="request-json json-example">
                             <h5>Requête HTTP</h5>
                             <a class="link-to-swagger" href="https://api.gouv.fr/documentation/api-entreprise" target="_blank">Swagger</a>
-                            <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}{{ service[1].request.url | markdownify }}
-{% for option   in service[1].request.options %}{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
-<b>{{ option[1  ].param }}</b>{% endfor %}</code></pre>
+                            <pre class="tpl-pre">
+                              <code class="tpl-code">
+                                <b>
+                                  {{ site.api_url }}{{ service[1].request.url | markdownify }}
+                                  {% for option in service[1].request.options %}
+                                    {% if option[1].comment %}
+                                      <em>{{ option[1].comment }}</em>
+                                    {% endif %}
+
+                                    {{ option[1  ].param }}
+                                  {% endfor %}
+                                </b>
+                              </code>
+                            </pre>
                           </div>
                           <div class="response-content">
                             <h4><img src="{{ site.baseurl }}/assets/images/icons/response.png" alt="" /> La réponse de l’API</h4>
