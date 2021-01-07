@@ -5,6 +5,8 @@ title: Faciliter le dépôt et l'instruction des aides publiques
 
 ## Le rôle d'API Entreprise
 
+![](/assets/images/cas-usage/fonctionnement-api-entreprise-cas-usage-aides-publiques.png)
+
 API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des demandes d'aides et subventions, en mettant à disposition plusieurs API afin : 
 
 - de faciliter le dépôt de la demande, **en [pré-remplissant le formulaire du demandeur]({{ site.baseurl }}/doc/#cas-usage)** grâce à son numéro de SIRET/RNA ; 
@@ -17,38 +19,33 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 ## Les données utiles "aides publiques"
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#cas-usage/#acces).
-
-Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'utilité de la donnée dans le cadre de la facilitation des demandes d'aides publiques, ainsi que le cadre juridique nécessaire.<br>
-<br>
-Le symbole ✅ indique que l'endpoint a déjà été **utile à nos utilisateurs pour ce cas d'usage**.<br> 
-Chaque service pouvant avoir ses propres spécificités, ce symbole ⏺ vous indique que l'endpoint n'est **pas encore utilisé à ce jour** pour ce cas d'usage, il vous est néanmoins possible de les demander si votre service le justifie.<br> 
-Enfin, ce symbole ❌ mentionne que l'endpoint n'est a priori **pas accessible** dans le cadre spécifique. Si vous estimez ces dernières données nécessaires, votre cadre juridique devra être explicite. <br>
-<br>
-Dans ce tableau de synthèse nous vous précisons également la nature du cadre juridique nécessaire pour bénéficier des données.
-L'accès à l'API Entreprise se fait sous réserve que le service le justifie. Les endpoints ne nécessitant qu'une explication précise par le demandeur sont indiqués par le symbole 💬.<br> 
-Dans certains cas, l'accès à la donnée requiert *en sus* la fourniture d'un cadre juridique précis accompagné de justificatifs tels qu'un décrêt ou un arrêté, ou une délibération dans le cas des collectivités. Les endpoints concernés sont alors signalés par le symbole 📜.
-
 Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires dans le cadre de la facilitation des démarches aux aides publiques.** Votre raccordement en sera alors grandement accéléré.
 
-Pour naviguer dans le tableau, vous pouvez également vous aider des catégories suivantes : 
-- [Informations générales](#infos_generales),
-- [Informations financières](#infos_financieres),
-- [Attestations sociales et fiscales](#attestations_sociales_fiscales),
-- [Certificats professionnels](#certificats_pro),
-- [Propriété intellectuelle](#propriete_intellectuelle).
+Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'utilité de la donnée dans le cadre de la facilitation des demandes d'aides publiques, ainsi que le cadre juridique nécessaire. 
+<br>
+
 
 ##### Légende du tableau 
 
 {:.tpl-table}
-| Symbole et signification | 
-| ---------|
-| ✅  déjà utilisé dans ce cadre |
-| ⏺  pas encore utilisé dans ce cadre |
-| ❌  a priori non-autorisé pour ce cas d'usage|
-| 💬  cadre juridique précis nécessaire |
-| 📜  cadre juridique précis et fourniture de justificatifs nécessaires|
+
+| Utilité : Dans ce cas d'usage, la donnée est-elle autorisée ? | 
+| ---------| 
+| ✅&nbsp; &nbsp; Oui |
+| ❌&nbsp; &nbsp; Non |
+| ⏺&nbsp; &nbsp; À étudier |
 
 <br>
+
+{:.tpl-table}
+
+| Cadre juridique : Quels éléments sont nécessaires pour justifier votre demande ? [En savoir plus](https://entreprise.api.gouv.fr/doc/#demande-habilitation){:target="_blank"} | 
+| ---------|
+| 💬&nbsp; &nbsp; La description de votre service et du contexte juridique |
+| 📜&nbsp; &nbsp; La description de votre service, du contexte juridique et la **fourniture de justificatifs**|
+
+<br>
+
 
 #### Informations générales <a id="infos_generales"></a>
 
@@ -137,5 +134,8 @@ Vous êtes un éditeur proposant une solution pour les aides publiques et ne fig
 Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques" : 
 
   <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "aides publiques"</a>
+
+
+{:.tpl-notification}
 
 Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. 
