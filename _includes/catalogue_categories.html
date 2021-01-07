@@ -6,10 +6,10 @@
         <summary>{{ category.name }}</summary>
         {% assign items = category.items | sort: 'weight' %}
         {% for endpoint in items %}
-          {% capture anchor %}{{ '#' | append: endpoint.label }}{% endcapture %}
+          {% capture anchor %}{{ '#a-' | append: endpoint.label }}{% endcapture %}
           {% assign plist = site.empty_array %}
           {% for provider in endpoint.providers %}{% assign plist = plist | push: providers[provider] %}{% endfor %}
-          <a class="tpl-documentation__link" href="#{{ endpoint.label }}">{{ endpoint.title }} – {{ plist | join: ', ' }}</a>
+          <a class="tpl-documentation__link" href="{{ anchor }}">{{ endpoint.title }} – {{ plist | join: ', ' }}</a>
         {% endfor %}
       </details>
     {% endif %}

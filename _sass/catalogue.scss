@@ -76,6 +76,24 @@
 }
 
 .catalogue {
+  .anchor {
+    $header-height: 53px;
+    $offset: $header-height + 0px;
+
+    padding-top: $offset;
+    margin-top: (-1)*$offset;
+  }
+
+  @media (max-width: 800px) {
+    .anchor {
+      $header-height: 67px;
+      $offset: $header-height - 40px;
+
+      padding-top: $offset;
+      margin-top: (-1)*$offset;
+    }
+  }
+
   .hidden {
     display: none;
   }
@@ -90,7 +108,7 @@
 
   .catalogue__category-title {
     font-size: 2em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
   }
 
   .fold {
@@ -140,9 +158,6 @@
     background-color: var(--white);
     padding: 0;
     position: relative;
-  }
-
-  .documentation-card+.documentation-card {
     margin-top: var(--spacing-l);
   }
 

@@ -2,12 +2,6 @@ code {
   word-break: break-all;
 }
 
-.anchor {
-  $header-height: 53px;
-
-  scroll-margin-top: $header-height + 15px;
-}
-
 .inherit {
   position: inherit!important;
 }

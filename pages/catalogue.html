@@ -34,290 +34,292 @@ is_catalogue: true
               <h3 class="catalogue__category-title" id="{{ category.name }}">{{ category.name }}</h3>
               {% assign items = category.items | sort: 'weight' %}
               {% for endpoint in items %}
-              <div class="tpl-panel documentation-card anchor" id="{{ endpoint.label }}"
-                {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %}
-                {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %}
-                {% for usecase in endpoint.usecases %}
-                  {% for case in catalogue_usecases %}
-                    {% if usecase == case[1] %}
-                      data-{{ case[0] }}="1"
-                    {% endif %}
+              <div class="anchor" id="a-{{ endpoint.label }}">
+                <div class="tpl-panel documentation-card" id="{{ endpoint.label }}"
+                  {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %}
+                  {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %}
+                  {% for usecase in endpoint.usecases %}
+                    {% for case in catalogue_usecases %}
+                      {% if usecase == case[1] %}
+                        data-{{ case[0] }}="1"
+                      {% endif %}
+                    {% endfor %}
                   {% endfor %}
-                {% endfor %}
-                {% for provider in endpoint.providers %}data-{{ provider }}="1"{% endfor %}
-                data-openstate="{{ endpoint.opening | remove: '.' }}">
-                <div class="documentation-card__header">
-                  <div class="endpoint-scope">
-                    {% for scope in endpoint.scope %}
-                    {% if scope == "entreprises" %}
-                    <div class="endpoint-scope__item tpl-bg--info" title="entreprises">
-                      <svg class="tpl-icon" viewBox="0 0 24 24">
-                        <use xlink:href="#icon-entreprises"></use>
-                      </svg>
-                    </div>
-                    {% elsif scope == "associations" %}
-                    <div class="endpoint-scope__item tpl-bg--warning" title="associations">
-                      <svg class="tpl-icon" viewBox="0 0 24 24">
-                        <use xlink:href="#icon-associations"></use>
-                      </svg>
-                    </div>
-                    {% else %}
-                    <div class="endpoint-scope__item tpl-bg--success" title="{{ scope }}">
-                      <svg class="tpl-icon" viewBox="0 0 24 24">
-                        <use xlink:href="#note"></use>
-                      </svg>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                  </div>
-                  <h3>
-                    {{ endpoint.title }}
-                    <code class="tpl-code">/{{ endpoint.label }}</code>
-                    <button class="tpl-button tpl-button--alternate button-link" data-link="catalogue/#{{ endpoint.label }}" title="Copier le lien vers cette section">
-                      <svg class="tpl-icon" viewBox="0 0 24 24">
-                        <use xlink:href="#link"></use>
-                      </svg>
-                    </button>
-                  </h3>
-                  <p class="documentation__description">{{ endpoint.description | markdownify }}</p>
-                  <div class="tpl-flex-row tpl-flex-jc-sb description">
-                    <dl class="tpl-description-list">
-                      <dt>Cas d’usage</dt>
-                      <dd>
-                        <ul>
-                          {% for usecase in endpoint.usecases %}
-                          <li>{{ usecase }}</li>
-                          {% endfor %}
-                        </ul>
-                      </dd>
-                    </dl>
-                    <dl class="tpl-description-list">
-                      <dt>Périmètre</dt>
-                      <dd>{{ endpoint.perimeter.label }}</dd>
-                      <dt>Ouverture</dt>
-                      <dd>{{ endpoint.opening }}</dd>
-                    </dl>
-                    <div class="providers">
-                      {% for provider in endpoint.providers %}
-                      <img src="{{ site.baseurl }}/assets/images/providers/{{ provider }}.png" alt="{{ provider }}" />
-                      {% endfor %}
-                    </div>
-                  </div>
-                </div>
-                <div class="documentation__tabs">
-                  <ul class="tab-list">
-                    <li>
-                      <a href="#technical-documentation--{{ endpoint.label }}" class="tab tab--documentation">
+                  {% for provider in endpoint.providers %}data-{{ provider }}="1"{% endfor %}
+                  data-openstate="{{ endpoint.opening | remove: '.' }}">
+                  <div class="documentation-card__header">
+                    <div class="endpoint-scope">
+                      {% for scope in endpoint.scope %}
+                      {% if scope == "entreprises" %}
+                      <div class="endpoint-scope__item tpl-bg--info" title="entreprises">
                         <svg class="tpl-icon" viewBox="0 0 24 24">
-                          <use xlink:href="#list"></use>
+                          <use xlink:href="#icon-entreprises"></use>
                         </svg>
-                        Documentation
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#availability--{{ endpoint.label }}" class="tab tab--availability">
-                        <svg class="tpl-icon" viewBox="0 0 24 24">
-                          <use xlink:href="#bar-chart"></use>
-                        </svg>
-                        Disponibilité
-                        <div class="spot hidden"></div>
-                        <div class="rate"></div>
-                      </a>
-                    </li>
-                  </ul>
-                  <div id="technical-documentation--{{ endpoint.label }}"
-                    class="technical-documentation tab-content tpl-bg--gradient-light">
-                    {% if endpoint.new %}
-                    <div class="new">
-                      <h4>
-                        <svg class="tpl-icon" viewBox="0 0 24 24">
-                          <use xlink:href="#gift"></use>
-                        </svg>
-                        Nouvelle option disponible
-                      </h4>
-                      <p>{{ endpoint.new | markdownify }}</p>
-                    </div>
-                    <hr />
-                    {% endif %}
-                    {% if endpoint.faq %}
-                      {% for panel in endpoint.faq %}
-                        <details class="qa">
-                          <summary>
-                            <p class="link-ref">
-                              {{ panel[1].question }}
-                              <button class="tpl-button tpl-button--alternate button-link">
-                                <svg class="tpl-icon" viewBox="0 0 24 24">
-                                  <use xlink:href="#link"></use>
-                                </svg>
-                              </button>
-                            </p>
-                          </summary>
-                          {{ panel[1].answer | markdownify }}
-                        </details>
-                      {% endfor %}
-                    {% endif %}
-                    {% if endpoint.perimeter %}
-                    <details class="perimeter" open>
-                      <summary>
-                        <h4>Périmètre</h4>
-                      </summary>
-                      <dl class="tpl-description-list">
-                        <dd>{{ endpoint.perimeter.description | markdownify }}</dd>
-                      </dl>
-                    </details>
-                    <hr />
-                    {% endif %}
-                    {% for service in endpoint.services %}
-                      {% if endpoint.services.size > 1 %}
-                        <details class="services" {% if forloop.index == 1%}open{% endif %}>
-                          <summary><h4>Service {{ forloop.index }} : {{ service[1].label }}</h4>{%if service[1].request.id.extra1 %}<code>/{{ service[1].request.id.extra1 }}/</code>{% endif %}</summary>
-                      {% endif %}
-                      <div class="service-description">
-                        <div class="request-description">
-                          <h4><img src="{{ site.baseurl }}/assets/images/icons/call.png" alt="" /> Votre appel</h4>
-                          <dl class="tpl-description-list">
-                            <dt>Paramètre d’appel :</dt>
-                            <dd>{{ service[1].request.id.description }}</dd>
-                          </dl>
-                          {% if service[1].request.options and service[1].request.options.option1.description != "" %}
-                            <dl class="tpl-description-list">
-                              <dt>Options d’appel à ajouter (voir requête HTTP ↓) :</dt>
-                              <dd>
-                                <ul>
-                                  {% for option in service[1].request.options %}
-                                    {% if option[1].description != "" %}
-                                    <li>{{ option[1].description }}</li>
-                                    {% endif %}
-                                  {% endfor %}
-                                </ul>
-                              </dd>
-                            </dl>
-                          {% endif %}
-                          {% for qr in service[1].request.questions %}
-                          {% unless qr[1].question == "" %}
-                          <details class="qa">
-                            <summary>{{ qr[1].question }}</summary>
-                            {{ qr[1].answer | markdownify }}
-                          </details>
-                          {% endunless %}
-                          {% endfor %}
-                        </div>
-                        <div class="request-json json-example">
-                          <h5>Requête HTTP</h5>
-                          <a class="link-to-swagger" href="https://api.gouv.fr/documentation/api-entreprise" target="_blank">Swagger</a>
-                          <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}{{ service[1].request.url | markdownify }}
-{% for option in service[1].request.options %}{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
-<b>{{ option[1].param }}</b>{% endfor %}</code></pre>
-                        </div>
-                        <div class="response-content">
-                          <h4><img src="{{ site.baseurl }}/assets/images/icons/response.png" alt="" /> La réponse de l’API</h4>
-                          <dl class="tpl-description-list">
-                            <dt>Format :</dt>
-                            <dd>{{ service[1].response.format }}</dd>
-                          </dl>
-                          <dl class="tpl-description-list">
-                            <dt>Timeout :</dt>
-                            <dd>{{ service[1].response.timeout }}</dd>
-                          </dl>
-                          <p>{{ service[1].response.description | markdownify }}</p>
-                          {% for qr in service[1].response.questions %}
-                          {% unless qr[1].question == "" %}
-                          <details class="qa">
-                            <summary>{{ qr[1].question }}</summary>
-                            {{ qr[1].answer | markdownify }}
-                          </details>
-                          {% endunless %}
-                          {% endfor %}
-                        </div>
-                        <div class="response-json json-example">
-                          <h5>Réponse JSON</h5>
-                          <div class="toggle-comments tpl-input__group">Commentaires on <input type="checkbox" class="tpl-input tpl-switch tpl-switch--active" name="switch" id="toggle-comments" checked></div>
-                          {% highlight json-doc %}{{ service[1].response.sample.code }}{% endhighlight %}
-                        </div>
                       </div>
-                      {% if endpoint.services.size > 1 %}
-                        </details>
+                      {% elsif scope == "associations" %}
+                      <div class="endpoint-scope__item tpl-bg--warning" title="associations">
+                        <svg class="tpl-icon" viewBox="0 0 24 24">
+                          <use xlink:href="#icon-associations"></use>
+                        </svg>
+                      </div>
+                      {% else %}
+                      <div class="endpoint-scope__item tpl-bg--success" title="{{ scope }}">
+                        <svg class="tpl-icon" viewBox="0 0 24 24">
+                          <use xlink:href="#note"></use>
+                        </svg>
+                      </div>
                       {% endif %}
-                    {% endfor %}
-                    <div class="documentation__content-footer">
-                      <dl class="tpl-description-list">
-                        <dt>Dernière mise à jour de la doc :</dt>
-                        <dd>{{ page.last_modified_at | date: '%d-%m-%y' }}</dd>
-                      </dl>
-                      {% if endpoint.history %}
-                      <hr />
-                      <details class="history">
-                        <summary>
-                          <h4>Historique</h4>
-                        </summary>
-                        {{ endpoint.history | markdownify }}
-                      </details>
-                      {% endif %}
+                      {% endfor %}
                     </div>
-                  </div>
-                  <div id="availability--{{ endpoint.label }}" class="availability tab-content tpl-bg--gradient-light">
-                    <div class="tpl-flex-row tpl-flex-jc-sb">
-                      <dl class="tpl-description-list current-status">
-                        <dt>Disponibilité actuelle :</dt>
-                        <dd class="availability-status">
-                          <div class="status-marker success">OK</div>
+                    <h3>
+                      {{ endpoint.title }}
+                      <code class="tpl-code">/{{ endpoint.label }}</code>
+                      <button class="tpl-button tpl-button--alternate button-link" data-link="catalogue/#{{ endpoint.label }}" title="Copier le lien vers cette section">
+                        <svg class="tpl-icon" viewBox="0 0 24 24">
+                          <use xlink:href="#link"></use>
+                        </svg>
+                      </button>
+                    </h3>
+                    <p class="documentation__description">{{ endpoint.description | markdownify }}</p>
+                    <div class="tpl-flex-row tpl-flex-jc-sb description">
+                      <dl class="tpl-description-list">
+                        <dt>Cas d’usage</dt>
+                        <dd>
+                          <ul>
+                            {% for usecase in endpoint.usecases %}
+                            <li>{{ usecase }}</li>
+                            {% endfor %}
+                          </ul>
                         </dd>
                       </dl>
                       <dl class="tpl-description-list">
-                        <dt>Volumétrie :</dt>
-                        <dd>{{ endpoint.availability.volumetry }}</dd>
+                        <dt>Périmètre</dt>
+                        <dd>{{ endpoint.perimeter.label }}</dd>
+                        <dt>Ouverture</dt>
+                        <dd>{{ endpoint.opening }}</dd>
                       </dl>
-                    </div>
-                    <dl class="tpl-description-list">
-                      <div class="tpl-description-group">
-                        <dt>Disponibilité normale :</dt>
-                        <dd>{{ endpoint.availability.normal_availability }}</dd>
+                      <div class="providers">
+                        {% for provider in endpoint.providers %}
+                        <img src="{{ site.baseurl }}/assets/images/providers/{{ provider }}.png" alt="{{ provider }}" />
+                        {% endfor %}
                       </div>
-                      <div class="tpl-description-group">
-                        <dt>Indisponibilités types :</dt>
-                        <dd>{{ endpoint.availability.unavailability_types }}</dd>
-                      </div>
-                    </dl>
-                    <hr />
-                    <div class="no-data hidden">
-                      <p>Les données de disponibilité n'ont pas pu être récupérées.</p>
                     </div>
-                    <div class="metrics">
-                      <h4>Historique des 6 derniers mois :</h4>
-                      <div class="tpl-flex-row">
-                        <div class="numbers">
-                          <div class="success-rate tpl-flex-row">
-                            <div class="spot"></div>
-                            <div>
-                              <div class="rate"></div>
-                              de succès
-                            </div>
+                  </div>
+                  <div class="documentation__tabs">
+                    <ul class="tab-list">
+                      <li>
+                        <a href="#technical-documentation--{{ endpoint.label }}" class="tab tab--documentation">
+                          <svg class="tpl-icon" viewBox="0 0 24 24">
+                            <use xlink:href="#list"></use>
+                          </svg>
+                          Documentation
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#availability--{{ endpoint.label }}" class="tab tab--availability">
+                          <svg class="tpl-icon" viewBox="0 0 24 24">
+                            <use xlink:href="#bar-chart"></use>
+                          </svg>
+                          Disponibilité
+                          <div class="spot hidden"></div>
+                          <div class="rate"></div>
+                        </a>
+                      </li>
+                    </ul>
+                    <div id="technical-documentation--{{ endpoint.label }}"
+                      class="technical-documentation tab-content tpl-bg--gradient-light">
+                      {% if endpoint.new %}
+                      <div class="new">
+                        <h4>
+                          <svg class="tpl-icon" viewBox="0 0 24 24">
+                            <use xlink:href="#gift"></use>
+                          </svg>
+                          Nouvelle option disponible
+                        </h4>
+                        <p>{{ endpoint.new | markdownify }}</p>
+                      </div>
+                      <hr />
+                      {% endif %}
+                      {% if endpoint.faq %}
+                        {% for panel in endpoint.faq %}
+                          <details class="qa">
+                            <summary>
+                              <p class="link-ref">
+                                {{ panel[1].question }}
+                                <button class="tpl-button tpl-button--alternate button-link">
+                                  <svg class="tpl-icon" viewBox="0 0 24 24">
+                                    <use xlink:href="#link"></use>
+                                  </svg>
+                                </button>
+                              </p>
+                            </summary>
+                            {{ panel[1].answer | markdownify }}
+                          </details>
+                        {% endfor %}
+                      {% endif %}
+                      {% if endpoint.perimeter %}
+                      <details class="perimeter" open>
+                        <summary>
+                          <h4>Périmètre</h4>
+                        </summary>
+                        <dl class="tpl-description-list">
+                          <dd>{{ endpoint.perimeter.description | markdownify }}</dd>
+                        </dl>
+                      </details>
+                      <hr />
+                      {% endif %}
+                      {% for service in endpoint.services %}
+                        {% if endpoint.services.size > 1 %}
+                          <details class="services" {% if forloop.index == 1%}open{% endif %}>
+                            <summary><h4>Service {{ forloop.index }} : {{ service[1].label }}</h4>{%if service[1].request.id.extra1 %}<code>/{{ service[1].request.id.extra1 }}/</code>{% endif %}</summary>
+                        {% endif %}
+                        <div class="service-description">
+                          <div class="request-description">
+                            <h4><img src="{{ site.baseurl }}/assets/images/icons/call.png" alt="" /> Votre appel</h4>
+                            <dl class="tpl-description-list">
+                              <dt>Paramètre d’appel :</dt>
+                              <dd>{{ service[1].request.id.description }}</dd>
+                            </dl>
+                            {% if service[1].request.options and service[1].request.options.option1.description != "" %}
+                              <dl class="tpl-description-list">
+                                <dt>Options d’appel à ajouter (voir requête HTTP ↓) :</dt>
+                                <dd>
+                                  <ul>
+                                    {% for option in service[1].request.options %}
+                                      {% if option[1].description != "" %}
+                                      <li>{{ option[1].description }}</li>
+                                      {% endif %}
+                                    {% endfor %}
+                                  </ul>
+                                </dd>
+                              </dl>
+                            {% endif %}
+                            {% for qr in service[1].request.questions %}
+                            {% unless qr[1].question == "" %}
+                            <details class="qa">
+                              <summary>{{ qr[1].question }}</summary>
+                              {{ qr[1].answer | markdownify }}
+                            </details>
+                            {% endunless %}
+                            {% endfor %}
                           </div>
-                          <dl class="tpl-description-list">
-                            <dt>Nombre d'appel :</dt>
-                            <dd class="call-count"></dd>
-                          </dl>
-                          <dl class="tpl-description-list">
-                            <dt>Erreur fournisseur :</dt>
-                            <dd class="fd-errors"></dd>
-                          </dl>
+                          <div class="request-json json-example">
+                            <h5>Requête HTTP</h5>
+                            <a class="link-to-swagger" href="https://api.gouv.fr/documentation/api-entreprise" target="_blank">Swagger</a>
+                            <pre class="tpl-pre"><code class="tpl-code"><b>{{ site.api_url }}{{ service[1].request.url | markdownify }}
+{% for option   in service[1].request.options %}{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
+<b>{{ option[1  ].param }}</b>{% endfor %}</code></pre>
+                          </div>
+                          <div class="response-content">
+                            <h4><img src="{{ site.baseurl }}/assets/images/icons/response.png" alt="" /> La réponse de l’API</h4>
+                            <dl class="tpl-description-list">
+                              <dt>Format :</dt>
+                              <dd>{{ service[1].response.format }}</dd>
+                            </dl>
+                            <dl class="tpl-description-list">
+                              <dt>Timeout :</dt>
+                              <dd>{{ service[1].response.timeout }}</dd>
+                            </dl>
+                            <p>{{ service[1].response.description | markdownify }}</p>
+                            {% for qr in service[1].response.questions %}
+                            {% unless qr[1].question == "" %}
+                            <details class="qa">
+                              <summary>{{ qr[1].question }}</summary>
+                              {{ qr[1].answer | markdownify }}
+                            </details>
+                            {% endunless %}
+                            {% endfor %}
+                          </div>
+                          <div class="response-json json-example">
+                            <h5>Réponse JSON</h5>
+                            <div class="toggle-comments tpl-input__group">Commentaires on <input type="checkbox" class="tpl-input tpl-switch tpl-switch--active" name="switch" id="toggle-comments" checked></div>
+                            {% highlight json-doc %}{{ service[1].response.sample.code }}{% endhighlight %}
+                          </div>
                         </div>
-                        <div class="chart-container">
-                          <div class="chart" id="{{ endpoint.label }}-chart"></div>
-                        </div>
+                        {% if endpoint.services.size > 1 %}
+                          </details>
+                        {% endif %}
+                      {% endfor %}
+                      <div class="documentation__content-footer">
+                        <dl class="tpl-description-list">
+                          <dt>Dernière mise à jour de la doc :</dt>
+                          <dd>{{ page.last_modified_at | date: '%d-%m-%y' }}</dd>
+                        </dl>
+                        {% if endpoint.history %}
+                        <hr />
+                        <details class="history">
+                          <summary>
+                            <h4>Historique</h4>
+                          </summary>
+                          {{ endpoint.history | markdownify }}
+                        </details>
+                        {% endif %}
                       </div>
-                      <div class="tpl-flex-row">
-                        <div class="availability-legend">
-                          <p>Dans une journée, l'endpoint fonctionne :</p>
-                          <ul>
-                            <li class="legend legend--sup99">au delà de 99,5%</li>
-                            <li class="legend legend--sup90">au delà de 90%</li>
-                            <li class="legend legend--sup80">au delà de 80%</li>
-                            <li class="legend legend--sub80">en dessous de 80%</li>
-                            <li class="legend">statistiques insuffisantes</li>
-                          </ul>
+                    </div>
+                    <div id="availability--{{ endpoint.label }}" class="availability tab-content tpl-bg--gradient-light">
+                      <div class="tpl-flex-row tpl-flex-jc-sb">
+                        <dl class="tpl-description-list current-status">
+                          <dt>Disponibilité actuelle :</dt>
+                          <dd class="availability-status">
+                            <div class="status-marker success">OK</div>
+                          </dd>
+                        </dl>
+                        <dl class="tpl-description-list">
+                          <dt>Volumétrie :</dt>
+                          <dd>{{ endpoint.availability.volumetry }}</dd>
+                        </dl>
+                      </div>
+                      <dl class="tpl-description-list">
+                        <div class="tpl-description-group">
+                          <dt>Disponibilité normale :</dt>
+                          <dd>{{ endpoint.availability.normal_availability }}</dd>
                         </div>
-                        <div class="availability-table tpl-flex-row">
+                        <div class="tpl-description-group">
+                          <dt>Indisponibilités types :</dt>
+                          <dd>{{ endpoint.availability.unavailability_types }}</dd>
+                        </div>
+                      </dl>
+                      <hr />
+                      <div class="no-data hidden">
+                        <p>Les données de disponibilité n'ont pas pu être récupérées.</p>
+                      </div>
+                      <div class="metrics">
+                        <h4>Historique des 6 derniers mois :</h4>
+                        <div class="tpl-flex-row">
+                          <div class="numbers">
+                            <div class="success-rate tpl-flex-row">
+                              <div class="spot"></div>
+                              <div>
+                                <div class="rate"></div>
+                                de succès
+                              </div>
+                            </div>
+                            <dl class="tpl-description-list">
+                              <dt>Nombre d'appel :</dt>
+                              <dd class="call-count"></dd>
+                            </dl>
+                            <dl class="tpl-description-list">
+                              <dt>Erreur fournisseur :</dt>
+                              <dd class="fd-errors"></dd>
+                            </dl>
+                          </div>
+                          <div class="chart-container">
+                            <div class="chart" id="{{ endpoint.label }}-chart"></div>
+                          </div>
+                        </div>
+                        <div class="tpl-flex-row">
+                          <div class="availability-legend">
+                            <p>Dans une journée, l'endpoint fonctionne :</p>
+                            <ul>
+                              <li class="legend legend--sup99">au delà de 99,5%</li>
+                              <li class="legend legend--sup90">au delà de 90%</li>
+                              <li class="legend legend--sup80">au delà de 80%</li>
+                              <li class="legend legend--sub80">en dessous de 80%</li>
+                              <li class="legend">statistiques insuffisantes</li>
+                            </ul>
+                          </div>
+                          <div class="availability-table tpl-flex-row">
+                          </div>
                         </div>
                       </div>
                     </div>
