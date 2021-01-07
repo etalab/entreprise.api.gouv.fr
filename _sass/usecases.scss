@@ -5,9 +5,45 @@
 }
 
 .tpl-usecase {
+  h1, h2, h3, h4, h5 {
+    $header-height: 56px;
+    $offset: $header-height + 15px;
+
+    padding-top: $offset;
+    margin-top: (-1)*$offset;
+  }
+
   .example {
     border-left: 3px solid var(--light-grey);
     color: var(--dark-grey);
     padding: var(--spacing-xs) var(--spacing-m);
+  }
+}
+
+@media (max-width: 800px) {
+  .tpl-usecase {
+    h1, h2, h3, h4, h5 {
+      $header-height: 67px;
+      $offset: $header-height + 15px;
+
+      padding-top: $offset;
+      margin-top: (-1)*$offset;
+    }
+
+    .tpl-documentation__links {
+      margin-top: -70px;
+    }
+
+    .tpl-documentation__content {
+      margin-top: 60px;
+      max-width: 100%;
+      margin-left: 0;
+    }
+
+    .tpl-table {
+      display: block;
+      max-width: 100%;
+      overflow-x: scroll;
+    }
   }
 }
