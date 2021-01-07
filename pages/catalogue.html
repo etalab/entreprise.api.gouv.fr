@@ -34,7 +34,7 @@ is_catalogue: true
               <h3 class="catalogue__category-title" id="{{ category.name }}">{{ category.name }}</h3>
               {% assign items = category.items | sort: 'weight' %}
               {% for endpoint in items %}
-              <div class="tpl-panel documentation-card" id="{{ endpoint.label }}"
+              <div class="tpl-panel documentation-card anchor" id="{{ endpoint.label }}"
                 {% if endpoint.scope contains "entreprises"%}data-entreprises="1"{% endif %}
                 {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %}
                 {% for usecase in endpoint.usecases %}
