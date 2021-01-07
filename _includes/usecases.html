@@ -25,6 +25,7 @@
     <p>Récupérez les justificatifs administratifs de vos utilisateurs demandant des aides publiques.</p>
   </div>
 </a>
+{% unless include.homepage %}
 <a href="{{ site.baseurl }}{% link _use_cases/preremplissage_public.md %}" class="tpl-card tpl-shadow">
   <div class="tpl-card__header">
     <h3 class="tpl-card__title"><strong>Pré-remplir</strong> un formulaire en <strong>accès libre</strong> et le personnaliser</h3>
@@ -52,4 +53,4 @@
     <p>Branchez-vous à l'API Entreprise pour améliorer vos services aux entreprises et associations</p>
   </div>
 </a>
-
+{% endunless %}
