@@ -38,7 +38,7 @@ services:
     label: Effectifs annuels d'une entreprise
     response:
       sample:
-        code:
+        code: >
           {
             "siren": "418166096",
             "annee": "2019",
@@ -73,7 +73,7 @@ services:
     label: Effectifs mensuels d'une entreprise
     response:
       sample:
-        code:
+        code: >
           {
             "siren": "418166096",
             "annee": "2020",
@@ -107,7 +107,7 @@ services:
     label: Effectifs mensuels d'un établissement
     response:
       sample:
-        code:
+        code: >
           {
             "siret": "41816609600026",
             "annee": "2020",
