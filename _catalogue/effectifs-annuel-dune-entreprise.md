@@ -16,7 +16,7 @@ opening: Données confidentielles.
 providers:
   - acoss
 perimeter:
-  label: Toutes les entreprises sauf celles dépendant de la MSA.
+  label: Toutes les entreprises sauf exceptions
 services:
   service1:
     request:
@@ -56,8 +56,7 @@ services:
       timeout: 5 secondes
       description: La réponse JSON se compose de l'effectif de l'année précédente. La
         date ainsi que l'effectif de l'entreprise sont indiqués pour un SIREN
-        donné. L'effectif est un équivalent temps plein et peut donc être un
-        décimal.
+        donné. L'effectif peut être un décimal.
   service2:
     request:
       id:
@@ -99,8 +98,7 @@ services:
       timeout: 5 secondes
       description: La réponse JSON se compose de l'effectif du mois indiqué en
         paramètre d'appel. La date ainsi que l'effectif de l'entreprise sont
-        indiqués pour un SIREN donné. L'effectif est un équivalent temps plein
-        et peut donc être un décimal.
+        indiqués pour un SIREN donné. L'effectif peut être un décimal.
   service3:
     request:
       id:
@@ -142,6 +140,5 @@ services:
       timeout: 5 secondes
       description: La réponse JSON se compose de l'effectif du mois indiqué en
         paramètre d'appel. La date ainsi que l'effectif de l'établissement sont
-        indiqués pour un SIREN donné. L'effectif est un équivalent temps plein
-        et peut donc être un décimal.
+        indiqués pour un SIREN donné. L'effectif peut être un décimal.
 ---
