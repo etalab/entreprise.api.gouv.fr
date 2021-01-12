@@ -17,6 +17,64 @@ providers:
   - acoss
 perimeter:
   label: Toutes les entreprises sauf exceptions
+  description: >-
+    Cette API permet d'accéder à ✅ **tous les effectifs des entreprises**, à
+    l'exception :
+
+
+    * ❌ des administrations et collectivités territoriales ;
+
+    * ❌ des entreprises de Mayotte (ce qui représente 3500 établissements) ;
+
+    * ❌ des entreprises des marins ;
+
+    * ❌ des entreprises des cultes ;
+
+    * ❌ des [junior-entreprises](https://fr.wikipedia.org/wiki/Junior-Entreprise) (environ 200).
+
+
+    \
+
+    Le **calcul des effectifs** se fait en prenant en compte de ✅ l'**ensemble des contrats** établis dans l'entreprise, ❌ mis à part les : 
+
+
+    * convention de stage ; 
+
+    * contrat d'apprentissage ;
+
+    * contrat de volontariat de service civique ; 
+
+    * contrat d'initiative emploi ;
+
+    * contrat d'accompagnement  ;
+
+    * contrat de professionnalisation ;
+
+    * contrat CDD en remplacement d'un salarié absent ; 
+
+    * contrat CDD en remplacement d'un salarié en formation professionnelle ; 
+
+    * contrat de soutien et d'aide par le travail ;  
+
+    * ligne de service ;
+
+    * mandat d'élu ;
+
+    * fonctionnaire en détachement ;
+
+    * vendeur à domicile indépendant ;
+
+    * mandat social ;
+
+    * contrat colporteurs de presse ;
+
+    * voyageurs et représentants de commerce multi-carte ;
+
+    * contrat collaborateur occasionnel du service public ;
+
+    * militaires de réserve ;
+
+    * parcours d'accès aux carrières (Pacte).
 services:
   service1:
     request:
