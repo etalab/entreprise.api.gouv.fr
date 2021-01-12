@@ -13,6 +13,7 @@
   </main>
 
   {% include footer.html %}
+
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
@@ -24,13 +25,16 @@
       });
     }
   </script>
-  <script type="text/javascript"
-  src="{{ site.baseurl }}/assets/js/main.js"></script>
-  <script type="text/javascript"
-  src="{{ site.baseurl }}/assets/js/menu.js"></script>
+
+  {% asset main.js %}
+  {% asset menu.js %}
+
   {% for file in page.additional_js %}
-  <script type="text/javascript"
-    src="{% if file contains '://' %}{{ file }}{% else %}{{ site.baseurl }}/assets/js/{{ file }}{% endif %}"></script>
+    {% if file contains '://' %}
+      <script type="text/javascript" src="{{ file }}"></script>
+    {% else %}
+      {% asset '{{file}}' %}
+    {% endif %}
   {% endfor %}
 </body>
 
