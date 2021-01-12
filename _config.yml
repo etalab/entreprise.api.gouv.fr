@@ -66,6 +66,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-target-blank
+  - jekyll-assets
   - jekyll-last-modified-at
 
 # jekyll-assets
