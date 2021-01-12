@@ -88,7 +88,7 @@ services:
         **&object=**RaisonDeL’AppelOuIdentifiant
       options:
         option1:
-          param: "&skip_pdf=boolean (false par défaut)"
+          param: "**&skip_pdf=**boolean (false par défaut)"
           description: Une option d'appel vous permet de ne pas appeler les fichiers PDF
             si seules les données brutes vous intéressent. Cela réduira le temps
             de réponse de l'API.

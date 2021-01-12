@@ -146,7 +146,7 @@ services:
         option1:
           description: Une option d'appel vous permet de connaître l'état administratif de
             l'entreprise, à savoir si l'entreprise est active ou cessée ;
-          param: "&with_etat_administratif=true"
+          param: "**&with_etat_administratif=**true"
           comment: "Pour connaître l'état administratif de l’entreprise, <br>ajouter le
             paramètre facultatif suivant :"
         option2:

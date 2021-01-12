@@ -208,7 +208,7 @@ is_catalogue: true
                             <pre class="tpl-pre" style="margin-top: -24px;">
                               <code class="tpl-code"><b>{{ site.api_url }}{{ service[1].request.url | markdownify }}</b>
 {% for option in service[1].request.options %}{% if option[1].comment %}<em>{{ option[1].comment }}</em>{% endif %}
-{{ option[1].param }}
+{{ option[1].param | markdownify }}
 {% endfor %}</code>
                             </pre>
                           </div>

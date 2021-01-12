@@ -63,7 +63,7 @@ services:
           label: object
       options:
         option1:
-          param: "&siren_is"
+          param: "**&siren_is=**SirenDuGroupeIS"
           description: Dans le cas où l'entreprise recherchée appartient à un groupe de
             sociétés imposé selon régime fiscal d’intégration visé à l’article
             223 A du CGI, dit groupe IS, c'est cette société mère qui est en
