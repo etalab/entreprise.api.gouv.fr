@@ -72,25 +72,27 @@ services:
         qr3:
           question: Pourquoi exclure les liens de PDF ?
           answer: >-
-            Lorsque l'API récupère les informations auprès de l'ADEME, par
-            défaut le système télécharge les PDFs directement depuis les
-            serveurs de l'ADEME, cela peut prendre du temps dans le cas où
+            Lorsque l'API récupère les informations auprès de l'ADEME, le
+            système télécharge par défaut les PDFs directement depuis les
+            serveurs de l'ADEME. Cela peut prendre du temps dans le cas où
             l'entreprise possède plusieurs certificats.
 
-            <br />
-            <br />
+            <br /> <br />
 
-            Le fait de pouvoir exclure les PDFs à l'aide de l'option `skip_pdf` permet de
-            drastiquement améliorer le temps de réponse du endpoint (de l'ordre
-            de plusieurs secondes dans le cas où il y a énormément de
-            certificats).
+            Exclure les PDFs à l'aide de l'option `skip_pdf`, permet d'améliorer drastiquement le temps de réponse de l'endpoint (de l'ordre de plusieurs secondes dans le cas où il y a plusieurs certificats).
       url: |-
         **certificats_rge_ademe/**SiretDeL’Entreprise
         **?token=**JetonD’Habilitation
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDel’Appel
         **&object=**RaisonDeL’AppelOuIdentifiant
-        **&skip_pdf=**boolean (false par défaut)
+      options:
+        option1:
+          param: "&skip_pdf=boolean (false par défaut)"
+          description: Une option d'appel vous permet de ne pas appeler les fichiers PDF
+            si seules les données brutes vous intéressent. Cela réduira le temps
+            de réponse de l'API.
+          comment: "Pour appeler uniquement les données brutes, sans les PDFs : "
     response:
       sample:
         code: >
@@ -108,7 +110,8 @@ services:
       timeout: 12 secondes
       description: La réponse se compose du nom de la qualification de l'entreprise,
         de l'URL de téléchargement de l'attestation au format PDF quand celle-ci
-        est disponible (et non exclut via l'option `skip_pdf`), du nom du certificat et du domaine.
+        est disponible (et non exclue via l'option `skip_pdf`), du nom du
+        certificat et du domaine.
       questions:
         qr1:
           question: Pourquoi certains certificats ne sont pas disponibles ?
