@@ -25,3 +25,32 @@
     <p>Récupérez les justificatifs administratifs de vos utilisateurs demandant des aides publiques.</p>
   </div>
 </a>
+{% unless include.homepage %}
+<a href="{{ site.baseurl }}{% link _use_cases/preremplissage_public.md %}" class="tpl-card tpl-shadow">
+  <div class="tpl-card__header">
+    <h3 class="tpl-card__title"><strong>Pré-remplir</strong> un formulaire en <strong>accès libre</strong> et le personnaliser</h3>
+  </div>
+  <div class="tpl-card__content">
+    <img class="card__icon" src="{{ site.baseurl }}{% link assets/images/usecases/preremplissage-public.svg %}" alt="" />
+    <p>Facilitez la saisie de vos formulaires avec les données publiques API Entreprise.</p>
+  </div>
+</a>
+<a href="{{ site.baseurl }}{% link _use_cases/preremplissage_securise.md %}" class="tpl-card tpl-shadow">
+  <div class="tpl-card__header">
+    <h3 class="tpl-card__title"><strong>Pré-remplir</strong> un formulaire avec <strong>accès sécurisé</strong> et le personnaliser</h3>
+  </div>
+  <div class="tpl-card__content">
+    <img class="card__icon" src="{{ site.baseurl }}{% link assets/images/usecases/preremplissage-securise.svg %}" alt="" />
+    <p>Facilitez la saisie de vos formulaires sous authentification avec les données API Entreprise.</p>
+  </div>
+</a>
+<a href="{{ site.baseurl }}{% link _use_cases/editeurs.md %}" class="tpl-card tpl-shadow">
+  <div class="tpl-card__header">
+    <h3 class="tpl-card__title">Intégrer l'API Entreprise<br>en tant qu'<strong>éditeur</strong></h3>
+  </div>
+  <div class="tpl-card__content">
+    <img class="card__icon" src="{{ site.baseurl }}{% link assets/images/usecases/editeurs.svg %}" alt="" />
+    <p>Branchez-vous à l'API Entreprise pour améliorer vos services aux entreprises et associations</p>
+  </div>
+</a>
+{% endunless %}
