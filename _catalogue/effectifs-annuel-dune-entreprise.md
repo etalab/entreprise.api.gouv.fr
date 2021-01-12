@@ -16,7 +16,7 @@ opening: Données confidentielles.
 providers:
   - acoss
 perimeter:
-  label: Toutes les entreprises sauf exceptions
+  label: Toutes les entreprises sauf exceptions.
   description: >-
     Cette API permet d'accéder à ✅ **tous les effectifs des entreprises**, à
     l'exception :
