@@ -344,6 +344,10 @@ window.addEventListener('load', function (e) {
       .then(data => {
         if (!data.error) {
           for (let i = 0; i < el.length; i++) {
+            if (endpointMatching[id] == null) {
+              continue;
+            }
+
             const id = el[i].getAttribute('id')
             const status = el[i].querySelector('.status-marker')
             const uname = endpointMatching[id].current_status
@@ -368,6 +372,10 @@ window.addEventListener('load', function (e) {
   }
 
   function fetchAvailability(endpoint) {
+    if (endpointMatching[endpoint] == null) {
+      return;
+    }
+
     fetch('https://dashboard.entreprise.api.gouv.fr/api/watchdoge/stats/provider_availabilities?period=6M&endpoint=api/'+endpointMatching[endpoint].availability)
       .then(response => {
         if (response.ok) {
