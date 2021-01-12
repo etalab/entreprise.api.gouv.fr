@@ -76,9 +76,11 @@ assets:
   source_maps: false
   sources:
     - _sass
-    - _assets/javascripts
-    - _assets/css
-    - _assets/fonts
+    - assets/js
+    - assets/css
+    - assets/fonts
+    - assets/images
+    - assets/videos
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

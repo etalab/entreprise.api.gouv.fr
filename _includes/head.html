@@ -4,28 +4,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ site.title }}</title>
 
-  <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ site.baseurl }}{% link assets/main.scss %}">
+  {% asset default.scss %}
+
   <script type="text/javascript">
     if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
       document.write('<script src="https://unpkg.com/@babel/polyfill@7.0.0/dist/polyfill.js"><\/script>');
       document.write('<script src="https://unpkg.com/url-polyfill@1.0.14/url-polyfill.js"><\/script>');
     }
   </script>
+
   <!-- Search Engine -->
   <meta name="description" content="{{ site.meta.description }}">
-  <meta name="image" content="{{ site.url}}{% link assets/images/preview.png %}">
+  <meta name="image" content="{% asset preview.png @path %}">
+
   <!-- Schema.org for Google -->
   <meta itemprop="name" content="{{ site.meta.title }}">
   <meta itemprop="description" content="{{ site.meta.description }}">
-  <meta itemprop="image" content="{{ site.url}}{% link assets/images/preview.png %}">
+  <meta itemprop="image" content="{% asset preview.png @path %}">
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ site.meta.title }}">
   <meta name="twitter:description" content="{{ site.meta.description }}">
+
   <!-- Open Graph general (Facebook, Pinterest & Google+) -->
   <meta property="og:title" content="{{ site.meta.title }}">
   <meta property="og:description" content="{{ site.meta.description }}">
-  <meta property="og:image" content="{{ site.url }}{% link assets/images/preview_fb.png %}">
+  <meta property="og:image" content="{% asset preview_fb.png @path %}">
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="fr_FR">
@@ -34,14 +39,17 @@
   <!-- Favicons -->
   <meta name="theme-color" content="#ffffff">
   <link rel="apple-touch-icon" sizes="180x180"
-    href="{{ site.baseurl }}{% link assets/images/favicons/apple-icon-180x180.png %}">
+    href="{% asset favicons/apple-icon-180x180.png @path %}">
   <link rel="icon" type="image/png" sizes="16x16"
-    href="{{ site.baseurl }}{% link assets/images/favicons/favicon-16x16.png %}">
+    href="{% asset favicons/favicon-16x16.png @path %}">
   <link rel="icon" type="image/png" sizes="32x32"
-    href="{{ site.baseurl }}{% link assets/images/favicons/favicon-32x32.png %}">
-  <link rel="manifest" href="{{ site.baseurl }}{% link assets/images/favicons/manifest.json %}">
-  <link rel="mask-icon" href="{{ site.baseurl }}{% link assets/images/favicons/safari-pinned-tab.svg %}"
+    href="{% asset favicons/favicon-32x32.png @path %}">
+  <link rel="manifest"
+    href="{% asset favicons/manifest.json @path %}">
+  <link rel="mask-icon"
+    href="{% asset favicons/safari-pinned-tab.svg @path %}"
     color="#5bbad5">
+
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   {% if jekyll.environment == 'production' %}
