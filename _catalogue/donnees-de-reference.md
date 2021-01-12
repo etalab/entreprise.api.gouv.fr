@@ -153,7 +153,7 @@ services:
           description: Une autre vous donne accès aux données des entreprises dîtes
             non-diffusibles, cette option nécessite une autorisation spécifique,
             accordée ou non par API&nbsp;Entreprise selon votre cas d'usage.
-          param: "&non_diffusable=true"
+          param: "**&non_diffusable=**true"
           comment: "Pour accéder aux entreprises nondiffusibles :"
       questions:
         qr1:
