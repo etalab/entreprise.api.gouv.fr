@@ -62,6 +62,12 @@ services:
         qr2:
           question: ""
           answer: ""
+      url: |-
+        **conventions_collectives/**SiretDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes

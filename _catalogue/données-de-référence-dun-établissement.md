@@ -27,13 +27,75 @@ questions:
 
       De fait, **les fonctionnalités de pré-remplissage de formulaires ne peuvent donc bénéficier de ces données au risque de les voir diffusées**. Il est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr.>{:target="_blank"}
     question: Comment utiliser les données privées des établissements non diffusibles ?
-weight: 2
-type: Informations générales
-title: Données de référence d'un établissement
 label: etablissements
 scope:
   - entreprises
   - associations
+history: >-
+  ##### 01/06/2019 La version 1 `etabilissement_legacy` est coupée
+  définitivement.
+
+
+  ###### 01/05/2019 Évolution de la source de données INSEE et impact sur les versions.
+
+
+  Les APIs INSEE (appelées sirene_v2 par l'INSEE) qui alimentent notre API seront fermées en juin 2019. L'INSEE nous à d'ores et déjà mis à disposition la nouvelle version (appelée sirene_v3). Les versions n'étant pas strictement identiques, il y a des impacts à anticiper. Vous pouvez :
+
+
+  * utiliser les nouvelles APIs de l'INSEE directement
+
+  * continuer à utiliser API Entreprise (voir détail ci dessous)
+
+
+  ###### Utiliser les nouvelles API de l’INSEE
+
+
+  Cette solution ajoute de la complexité et nécessitera des travaux de votre part pour intégrer ces nouvelles API. Les APIs INSEE ne comportent pas les informations de mandataires sociaux mais vous pourrez interroger des données d'historique. <https://api.insee.fr/catalogue/>{:target="_blank"}
+
+
+  ###### Continuer chez API Entreprise
+
+
+  Les endpoints `/v2/etablissements_legacy`, `/v2/entreprises_legacy` ne seront plus maintenus.
+
+
+  Les endpoints `/v2/entreprises` et `/v2/etablissements` seront reconstruits à partir de sirene_v3 avec une période de transition.
+
+
+  Les endpoints `/v2/etablissements/:siret/predecesseur` et `/v2/etablissements/:siret/successeur` seront coupés en attente de leur remise à disposition par l'INSEE normalement à la fin de l'année.
+
+
+  En ce qui concerne `/v2/entreprises` et `/v2/etablissements` nous mettons à votre disposition en parallèle :
+
+
+  * la version actuelle s'appuyant sur les API de l'INSEE sirene_v2 qui ferment en juin 2019
+
+  * une version reconstruite à partir des API de l'INSEE nouvelle version sirene_v3 qui prennent le relai
+
+
+  Jusqu'au 12 mai 2019, les deux version cohabitent. Par défaut nous servons les données comme d'habitude en nous appuyant sur sirene_v2. Vous pouvez dès à présent utiliser nos API basées les API sirene_v3 de l'INSEE en ajoutant le paramètre de requête `with_insee_v3=true`.
+
+
+  **À compter du 13 mai 2019 l'API renverra systématiquement les données issues l'API sirene_v3 de l'INSEE, indépendament de la valeur ou la présence du champ `with_insee_v3`, vous avez jusqu'à cette date pour impacter vos services**
+
+
+  Dans la nouvelle mouture, un champ a été ajouté à l'API actuelle ; le champ `etat_administratif` (cf JSON renvoyé).
+faq:
+  q1:
+    question: Une erreur est repérée dans la base de données Sirene par vous ou vos
+      utilisateurs ? Comment la signaler ?
+    answer: Lors de la mise à disposition des données de l'endpoint `etablissements`
+      dans votre service, une erreur dans la base de données Sirene est repérée.
+      <br> L'INSEE a mis en place une procédure pour vous permettre de signaler
+      cette inexactitude. Elle met à disposition un **formulaire de contact
+      permettant aux utilisateurs de leur adresser une demande de modification
+      d'information**. <br> <br> 💡Notamment si vous utilisez cet endpoint pour
+      du pré-remplissage, il peut être utile d'indiquer ce lien
+      <https://www.sirene.fr/sirene/public/nous-contacter> à vos utilisateurs.
+      Cela leur permettra de demander une rectification directement.
+weight: 2
+type: Informations générales
+title: Données de référence d'un établissement
 description: Obtenir des **informations générales, géographiques et juridiques
   concernant un établissement** du répertoire Sirene telles que les dates de
   création et de fin, l’adresse ou l’état administratif.
@@ -43,10 +105,6 @@ usecases:
   - Répertoire de tiers
   - Application de la loi énergie
 opening: Données publiques et confidentielles pour les non-diffusibles.
-faq:
- q1:
-  question: Une erreur est repérée dans la base de données Sirene par vous ou vos utilisateurs ? Comment la signaler ?
-  answer: Lors de la mise à disposition des données de l'endpoint `etablissements` dans votre service, une erreur dans la base de données Sirene est repérée. <br> L'INSEE a mis en place une procédure pour vous permettre de signaler cette inexactitude. Elle met à disposition un **formulaire de contact permettant aux utilisateurs de leur adresser une demande de modification d'information**. <br> <br> 💡Notamment si vous utilisez cet endpoint pour du pré-remplissage, il peut être utile d'indiquer ce lien <https://www.sirene.fr/sirene/public/nous-contacter> à vos utilisateurs. Cela leur permettra de demander une rectification directement.
 perimeter:
   description: >-
     L'endpoint `etablissements` vous donne accès aux données des établissements
@@ -141,6 +199,12 @@ services:
             Les établissements de gestion de paye de la fonction publique ont été immatriculés pour les seuls besoins de certaines administrations (les impôts, les URSSAF, la DGCP ...). Leur diffusion à d'autres administrations n'est donc pas prévue.
           question: ⚠️ Comment utiliser les données confidentielles des établissements non
             diffusibles ?
+      url: |-
+        **etablissements/**SiretDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDeL'appel
+        **&object=**RaisonDeL'AppelOuIdentifiant
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
@@ -225,55 +289,6 @@ services:
               },
             }
           }
-history: >-
-  ##### 01/06/2019 La version 1 `etabilissement_legacy` est coupée
-  définitivement.
-
-
-  ###### 01/05/2019 Évolution de la source de données INSEE et impact sur les versions.
-
-
-  Les APIs INSEE (appelées sirene_v2 par l'INSEE) qui alimentent notre API seront fermées en juin 2019. L'INSEE nous à d'ores et déjà mis à disposition la nouvelle version (appelée sirene_v3). Les versions n'étant pas strictement identiques, il y a des impacts à anticiper. Vous pouvez :
-
-
-  * utiliser les nouvelles APIs de l'INSEE directement
-
-  * continuer à utiliser API Entreprise (voir détail ci dessous)
-
-
-  ###### Utiliser les nouvelles API de l’INSEE
-
-
-  Cette solution ajoute de la complexité et nécessitera des travaux de votre part pour intégrer ces nouvelles API. Les APIs INSEE ne comportent pas les informations de mandataires sociaux mais vous pourrez interroger des données d'historique. <https://api.insee.fr/catalogue/>{:target="_blank"}
-
-
-  ###### Continuer chez API Entreprise
-
-
-  Les endpoints `/v2/etablissements_legacy`, `/v2/entreprises_legacy` ne seront plus maintenus.
-
-
-  Les endpoints `/v2/entreprises` et `/v2/etablissements` seront reconstruits à partir de sirene_v3 avec une période de transition.
-
-
-  Les endpoints `/v2/etablissements/:siret/predecesseur` et `/v2/etablissements/:siret/successeur` seront coupés en attente de leur remise à disposition par l'INSEE normalement à la fin de l'année.
-
-
-  En ce qui concerne `/v2/entreprises` et `/v2/etablissements` nous mettons à votre disposition en parallèle :
-
-
-  * la version actuelle s'appuyant sur les API de l'INSEE sirene_v2 qui ferment en juin 2019
-
-  * une version reconstruite à partir des API de l'INSEE nouvelle version sirene_v3 qui prennent le relai
-
-
-  Jusqu'au 12 mai 2019, les deux version cohabitent. Par défaut nous servons les données comme d'habitude en nous appuyant sur sirene_v2. Vous pouvez dès à présent utiliser nos API basées les API sirene_v3 de l'INSEE en ajoutant le paramètre de requête `with_insee_v3=true`.
-
-
-  **À compter du 13 mai 2019 l'API renverra systématiquement les données issues l'API sirene_v3 de l'INSEE, indépendament de la valeur ou la présence du champ `with_insee_v3`, vous avez jusqu'à cette date pour impacter vos services**
-
-
-  Dans la nouvelle mouture, un champ a été ajouté à l'API actuelle ; le champ `etat_administratif` (cf JSON renvoyé).
 availability:
   unavailability_types: /
   normal_availability: 7jours/7 et 24h/24

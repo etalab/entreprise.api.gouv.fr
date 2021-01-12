@@ -39,6 +39,12 @@ services:
         param4:
           label: object
           description: RaisonDeL'AppelOuIdentifiant
+      url: |-
+        **extraits_rcs_infogreffe/**SirenDeL'Entreprise
+        **?token=**JetonD'Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDeL'appel
+        **&object=**RaisonDeL'AppelOuIdentifiant
     response:
       format: Données structurées JSON
       timeout: 5 secondes
@@ -74,7 +80,7 @@ services:
               }
             ]
           }
-history:
+history: null
 availability:
   volumetry: 2000 requêtes/10 minutes par IP
   normal_availability: 7jours/7 et 24h/24

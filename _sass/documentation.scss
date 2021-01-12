@@ -83,7 +83,7 @@
       margin-right: var(--spacing-m);
     }
   }
-  
+
   table {
     border-collapse: none;
     width: calc(100% - 4em);
@@ -124,7 +124,7 @@
     left: var(--spacing-s);
     top: var(--spacing-s);
   }
-  
+
   blockquote::after {
     content: "”";
     right: var(--spacing-s);
@@ -181,7 +181,7 @@
         border: 1px solid var(--lighter-grey);
       }
     }
-    
+
     .fold code {
       word-wrap: anywhere;
     }
@@ -201,9 +201,9 @@
     .fold h4 ~ :not(h4) {
       margin-left: 0;
     }
-    
+
     table {
-      width: calc(100% - 2em);
+      width: 100%;
     }
   }
 }

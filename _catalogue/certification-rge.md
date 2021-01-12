@@ -69,6 +69,12 @@ services:
             * *Céquami* délivre des certifications à des professionnels à même de proposer des travaux de rénovation lourde dans le cadre d’une rénovation énergétique globale du logement.
 
             * *Certibat* délivre des certifications aux professionnels du bâtiment en mesure de réaliser des offres globales de rénovation énergétique.
+      url: |-
+        **certificats_rge_ademe/**SiretDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       sample:
         code: >

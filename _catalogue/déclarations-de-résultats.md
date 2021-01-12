@@ -107,6 +107,15 @@ services:
           param: ""
           description: ""
           comment: ""
+      url: |-
+        **liasses_fiscales_dgfip/**AnneeDeLaLiasseDemandée
+        **/declarations/**SirenDeL’entreprise
+        **?token=**JetonD’Habilitation
+        **&user_id=**IdentifiantUtilisateurPhysique
+        **&email=**(optionnel)EmailUtilisateurFaisantLaDemande
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
@@ -225,6 +234,15 @@ services:
 
             ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
           question: Qu'est-ce que le paramètre obligatoire user_id ?
+      url: |-
+        **liasses_fiscales_dgfip/**AnneeDeLaLiasseDemandée
+        **/dictionnaire/**
+        **?token=**JetonD’Habilitation
+        **&user_id=**IdentifiantUtilisateurPhysique
+        **&email=**(optionnel)EmailUtilisateurFaisantLaDemande
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       format: Donnée structurée JSON
       timeout: 5 secondes
@@ -317,6 +335,15 @@ services:
           description: ""
           param: ""
           comment: ""
+      url: |-
+        **liasses_fiscales_dgfip/**AnnéeDeLaLiasseDemandée
+        **/complete/**SirenDeL'Entreprise
+        **?token=**JetonD’Habilitation
+        **&user_id=**IdentifiantUtilisateurPhysique
+        **&email=**(optionnel)EmailUtilisateurFaisantLaDemande
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       sample:
         code: |-

@@ -95,6 +95,12 @@ services:
 
 
             **Une entreprise possède au moins une qualification ou une qualification probatoire.**
+      url: |-
+        **certificats_opqibi/**SirenDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       questions:
         qr1:
@@ -119,6 +125,7 @@ services:
             "duree_de_validite_du_certificat": "valable un an",
             "assurance": "GROUPAMA",
             "url": "http://opqibi.com/fiche.php?id=2975",
+
 
 
 

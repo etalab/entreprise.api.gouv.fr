@@ -9,8 +9,13 @@ layout: default
   </div>
 </section>
 <section class="tpl-section tpl-usecase tpl-documentation tpl-bg--lightest-grey">
+  <div class="hide-md">
+    <nav class="tpl-documentation__links">
+      {% include toc.html html=content h_min=2 h_max=2 %}
+    </nav>
+  </div>
   <div class="tpl-container">
-    <aside class="tpl-documentation__sidebar">
+    <aside class="tpl-documentation__sidebar hide-xs">
       <nav class="tpl-documentation__links">
         {% include toc.html html=content h_min=2 h_max=2 %}
       </nav>

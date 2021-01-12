@@ -70,6 +70,12 @@ services:
             ?
           answer: L'AMP a été supprimée. Les informations sont maintenant contenues dans
             l'attestation de vigilance.
+      url: |-
+        **attestations_sociales_acoss/**SirenDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       format: Document PDF
       timeout: 12 secondes

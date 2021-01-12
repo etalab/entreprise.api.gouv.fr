@@ -3,7 +3,7 @@
 {% assign catalogue_providers = site.providers_aliases %}
 {% assign catalogue_openstate = site.catalogue_openstate %}
 <div class="tpl-hero__form catalogue__search">
-  <div class="tpl-form__group">
+  <div class="tpl-form__group catalogue__search--main">
     <input type="button" class="tpl-hero__search-button" value="" role="button" aria-label="Chercher une information" />
     <input id="catalogue-search" type="text" class="tpl-hero__search" name="catalogue-search" placeholder="Chercher une information" />
     <select id="catalogue-scope" class="tpl-hero__search" name="catalogue-scope">
@@ -17,7 +17,7 @@
       {% endfor %}
     </select>
   </div>
-  <div class="tpl-form__group">
+  <div class="tpl-form__group catalogue__search--secondary">
     <select id="catalogue-usecase" class="tpl-hero__search" name="catalogue-usecase">
       <option value="">Tous les cas d’usage</option>
       {% for usecase in catalogue_usecases %}

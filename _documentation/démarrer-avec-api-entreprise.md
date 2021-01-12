@@ -32,16 +32,23 @@ panels:
 
         Une demande d’accès ne peut pas couvrir plusieurs contextes métiers différents et doit être adaptée au public utilisateur final. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
 
-      {:.example}
+        {:.example}
 
-      **Exemple de la Région Occitanie :**<br><br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.
-
-      <br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
-
-      {:.example}
+        **Exemple de la Région Occitanie :**<br><br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
+        {:.example}
 
 
-      * **le cadre administratif et légal** (texte ou délibération/décision) qui vous légitime à recevoir ces données. Il est possible de mettre un lien vers le texte de loi, ajouter des pièces jointes ou décrire votre contexte.
+      * **le cadre juridique vous autorisant à traiter les données**.  L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une description précise de votre service et de l'utilité des données demandées dans ce contexte. Dans une majorité des cas, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de justificatifs :   
+
+        * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
+        * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées. 
+        <br>Par exemple, si la délibération indique que votre service concerne uniquement les entreprises de moins de 300 000 euros de chiffres d'affaires, l'endpoint `/exercices`, permettant d'avoir les déclarations de l'entreprise, vous sera accordé. 
+        <br>Enfin, pour être légale, une délibération doit comporter certains éléments administratifs. Ce [document de la Préfecture de l'AISNE](https://www.aisne.gouv.fr/content/download/20874/140668/file/Article_R%C3%A9dactionD%C3%A9lib%C3%A9rations) les présente en détail. 
+
+        {:.tpl-notification.tpl--danger}
+
+        Attention, quel que soit votre statut, le [**CRPA** (Code des relations entre le public et l'administration)](https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000031366350/2020-12-14/){:target="_blank"}, la [**loi ESSOC** (pour un État au service d'une société de confiance)](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037307624/){:target="_blank"} ou la **loi Lemaire** (pour une République numérique) **ne sont pas suffisants** car ils indiquent un principe d'échange qui doit être complété par un cadre juridique précis pour l'utilisation envisagée.
+
 
       * **les coordonnées du responsable du traitement**.
         Le responsable du traitement des données est la personne physique ou morale qui, seul ou conjointement avec d’autres, détermine les finalités et les moyens du traitement des données à caractère personnel. Seule une personne appartenant à l'organisme demandeur peut être renseignée.

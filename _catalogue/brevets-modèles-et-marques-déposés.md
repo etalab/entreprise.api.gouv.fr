@@ -106,6 +106,12 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
+      url: |-
+        **extraits_courts_inpi/**SirenDeL’Entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       sample:
         code: >
@@ -153,6 +159,7 @@ services:
 
 
 
+
             
           // PARTIE MODELES
 
@@ -193,6 +200,7 @@ services:
                 }
               ]
             },
+
 
 
 

@@ -43,6 +43,12 @@ services:
         param4:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
+      url: |-
+        **cotisations_msa/**SiretDeL’Etablissement
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
+        **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       description: La réponse indique si l'entreprise est à jour de ses cotisations
         employeurs auprès de la MSA. Dans certains cas et sur un laps de temps
