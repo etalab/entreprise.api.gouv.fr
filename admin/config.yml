@@ -240,7 +240,11 @@ collections:
               value: "fabsocial",
             }
           - { label: "CMA France", value: "cma" }
-          - { label: "Direction générale des douanes et droits indirects", value: "douanes" }
+          - {
+              label: "Direction générale des douanes et droits indirects",
+              value: "douanes",
+            }
+          - { label: "Agence BIO", value: "agencebio" }
       - {
           label: "Message nouvelle actualité",
           name: "new",
@@ -946,14 +950,14 @@ collections:
         name: "question"
         required: true
       - label: "Section"
-        name: 'label'
-        widget: 'select'
+        name: "label"
+        widget: "select"
         options:
-          - '🎛 Tableau de bord'
+          - "🎛 Tableau de bord"
           - "📝 Habilitation"
           - "🚧 Incident"
-          - '🔑 Token'
-          - 'Autre'
+          - "🔑 Token"
+          - "Autre"
       - label: "Position"
         name: "position"
         required: true

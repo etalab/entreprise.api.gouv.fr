@@ -118,7 +118,7 @@ providers_aliases:
   fabsocial: 'Fabrique numérique des ministères sociaux'
   cma: 'CMA France'
   douanes: 'Douanes'
-
+  agencebio: 'Agence BIO '
 
 empty_array: []
 
