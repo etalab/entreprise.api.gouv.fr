@@ -4,19 +4,18 @@ title: Certifications en BIO
 label: nom de l'endpoint
 scope:
   - entreprises
-  - associations
 description: description courte
 usecases:
   - Aides publiques
-opening: Données confidentielles.
+opening: Données publiques.
 providers:
-  - infogreffe
+  - agencebio
 services:
   service1:
     request:
       id:
-        label: SirenDeL’Entreprise
-        description: Le numéro de siren de la personne physique ou morale recherchée
+        label: SiretDeL’Entreprise
+        description: Le numéro de SIRET de la personne physique ou morale recherchée
     response:
       timeout: 12 secondes
   service2:
