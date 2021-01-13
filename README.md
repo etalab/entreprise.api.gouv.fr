@@ -3,6 +3,8 @@
 You can view the sandbox branch at this url:
 https://api-entreprise-sandbox.netlify.app/
 
+Status of the sandbox site: [![Netlify Status](https://api.netlify.com/api/v1/badges/670fdaba-f65c-414d-8005-d7b99a873a3d/deploy-status)](https://app.netlify.com/sites/api-entreprise-sandbox/deploys)
+
 ## Local serve
 
 `bundle exec jekyll serve`
