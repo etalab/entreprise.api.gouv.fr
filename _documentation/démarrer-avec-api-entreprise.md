@@ -268,11 +268,8 @@ panels:
       Sur API Entreprise, vous avez le droit à **2000 requêtes par tranche de 10 minutes par IP** interrogeant nos services.
 
 
-      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs **pour une durée de 12h**. Les appels depuis une IP bannie ne renvoient pas de codes http, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil. 
-      <br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Toutefois, il est fort probable que le dépassement se reproduise car il intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré. Nous vous invitons donc à prendre les mesures nécessaires.
-
-
-      Dans certains cas exceptionnels, une volumétrie supérieure peut être indispensable. Ce contexte arrive très rarement et concerne uniquement XXXX.  Adressez-nous alors un email à [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr). Nous étudierons votre demande et si la situation s'y prête, nous whitelisterons votre ou vos IPs pour éviter qu'elles ne se fassent pas bannir.
+      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs **pour une durée de 12h**. Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil. 
+      <br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré. 
 
 
       {:.tpl-notification.tpl--danger}
