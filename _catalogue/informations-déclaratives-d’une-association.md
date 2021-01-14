@@ -54,7 +54,7 @@ services:
           description: ""
           comment: ""
       url: |-
-        **associations/**SIRETdeL'AssociationOuNumeroRNA
+        **associations/**SIRETdeL'AssociationOuNuméroRNA
         **?token=**JetonD’Habilitation
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDeL'appel
