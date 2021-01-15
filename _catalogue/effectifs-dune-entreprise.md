@@ -154,9 +154,14 @@ services:
           }
       format: Donnée structurée JSON
       timeout: 5 secondes
-      description: La réponse JSON se compose de l'effectif du mois indiqué en
-        paramètre d'appel. La date ainsi que l'effectif de l'entreprise sont
-        indiqués pour un SIREN donné. L'effectif peut être un décimal.
+      description: >-
+        La réponse JSON se compose de l'effectif du mois indiqué en paramètre
+        d'appel. La date ainsi que l'effectif de l'entreprise sont indiqués pour
+        un SIREN donné. L'effectif peut être un décimal.\
+
+        \
+
+        Les effectifs étant mis à jour le 15 de chaque mois, avant cette date, il n'est possible de demander les effectifs que du mois précédent. Si la donnée est indisponible pour le mois demandé, l'API renverra un 404 avec un message d'erreur explicite.
   service3:
     request:
       id:
@@ -196,7 +201,11 @@ services:
           }
       format: Donnée structurée JSON
       timeout: 5 secondes
-      description: La réponse JSON se compose de l'effectif du mois indiqué en
-        paramètre d'appel. La date ainsi que l'effectif de l'établissement sont
-        indiqués pour un SIREN donné. L'effectif peut être un décimal.
+      description: >-
+        La réponse JSON se compose de l'effectif du mois indiqué en paramètre
+        d'appel. La date ainsi que l'effectif de l'établissement sont indiqués
+        pour un SIREN donné. L'effectif peut être un décimal.
+
+
+        Les effectifs étant mis à jour le 15 de chaque mois, avant cette date, il n'est possible de demander les effectifs que du mois précédent. Si la donnée est indisponible pour le mois demandé, l'API renverra un 404 avec un message d'erreur explicite.
 ---

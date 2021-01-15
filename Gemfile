@@ -21,8 +21,11 @@ gem 'minima', '~> 2.0'
 group :jekyll_plugins do
   gem 'jekyll-feed', '~> 0.13.0'
   gem 'jekyll-target-blank'
+  gem 'jekyll-assets', tag: 'v3.0-current'
   gem "jekyll-last-modified-at"
 end
+
+gem "sprockets", "~> 3.7"
 
 # Deployment
 gem 'rake'

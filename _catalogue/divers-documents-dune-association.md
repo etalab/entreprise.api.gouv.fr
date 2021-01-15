@@ -39,7 +39,7 @@ services:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
       url: |-
-        **documents_associations/**SiretDel'Association ou NumeroRNA
+        **documents_associations/**SiretDel'AssociationOuNuméroRNA
         **?token=**JetonD’Habilitation
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDel’Appel
