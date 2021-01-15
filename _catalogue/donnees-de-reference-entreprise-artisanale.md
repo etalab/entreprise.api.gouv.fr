@@ -1,7 +1,7 @@
 ---
 weight: 7
 type: Informations générales
-title: Données de références d'une entreprise artisanale
+title: Données de références d'une entreprise enregistrée au registre des artisans
 label: entreprises_artisanales
 scope:
   - entreprises
@@ -57,6 +57,10 @@ perimeter:
   label:
     Entreprises artisanales
   description: >-
+    Ce endpoint est un mirroir de l'API publique, disponible à l'adresse
+    suivante : [API Répertoire National des Métiers](https://api.gouv.fr/les-api/api_rnm)
+      <br />
+      <br />
     Cet endpoint vous donne accès aux informations relatives aux entreprises
     enregistrée dans le RNM. Ces informations regroupent (liste non-exhaustive)
 
@@ -71,12 +75,6 @@ perimeter:
     * Les diverses dates (immatriculation, début d'activité, radiation ...) liées à l'entreprise
       <br />
     * Si l'entreprise possède une double immatriculation (dans le cas d'une EIRL), les informations liées à cette immatriculation
-
-      <br />
-      <br />
-    Ce endpoint est un mirroir de l'API publique, disponible à l'adresse
-    suivante : [API Répertoire National des
-    Métiers](https://api.gouv.fr/les-api/api_rnm)
 services:
   service1:
     request:
