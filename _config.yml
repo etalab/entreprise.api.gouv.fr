@@ -115,6 +115,7 @@ providers_aliases:
   agefiph: 'agefiph'
   ademe: 'ADEME'
   fabsocial: 'Fabrique numérique des ministères sociaux'
+  cma: 'CMA France'
 
 
 empty_array: []
