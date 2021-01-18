@@ -1,6 +1,6 @@
 ---
 title: CMA France
 label: cma
-logo: "/assets/images/providers/cmafrance.png"
+logo: "/assets/images/providers/cma.png"
 sources_url: https://cma-france.fr/
 ---
