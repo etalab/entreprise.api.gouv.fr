@@ -134,7 +134,7 @@ catalogue_usecases:
   marches_publics:
     name: 'Marchés publics'
     page: true
-  covid:
+  covid_19:
     name: "Aide d'urgence Covid-19"
     page: true
 
