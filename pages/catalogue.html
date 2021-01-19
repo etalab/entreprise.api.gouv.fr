@@ -38,7 +38,7 @@ is_catalogue: true
                   {% if endpoint.scope contains "associations"%}data-associations="1"{% endif %}
                   {% for usecase in endpoint.usecases %}
                     {% for case in catalogue_usecases %}
-                      {% if usecase == case[1] %}
+                      {% if usecase == case[1]['name'] %}
                         data-{{ case[0] }}="1"
                       {% endif %}
                     {% endfor %}
@@ -85,7 +85,23 @@ is_catalogue: true
                         <dd>
                           <ul>
                             {% for usecase in endpoint.usecases %}
-                            <li>{{ usecase }}</li>
+                              {% for case in catalogue_usecases %}
+                                {% if usecase == case[1]['name'] %}
+                                  {% if case[1]['page'] %}
+                                    {% assign page_exist = true %}
+                                    {% assign file_name = case[0] %}
+                                  {% else %}
+                                    {% assign page_exist = false %}
+                                  {% endif %}
+                                {% endif %}
+                              {% endfor %}
+                              <li>
+                                {% if page_exist %}
+                                  <a href="{{ site.baseurl }}/use_cases/{{ file_name }}/">{{usecase}}</a>
+                                {% else %}
+                                  {{ usecase }}
+                                {% endif %}
+                              </li>
                             {% endfor %}
                           </ul>
                         </dd>
