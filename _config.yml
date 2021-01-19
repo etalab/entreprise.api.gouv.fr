@@ -138,10 +138,7 @@ catalogue_usecases:
     name: "Aide d'urgence Covid-19"
     page: true
 
-  loienergie:
-    name: 'Application de la loi énergie - Art.64'
-    page: false
-  tepertoiredetiers:
+  repertoiredetiers:
     name: 'Répertoire de tiers'
     page: false
 

@@ -103,7 +103,6 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-  - Application de la loi énergie
 opening: Données publiques et confidentielles pour les non-diffusibles.
 perimeter:
   description: >-

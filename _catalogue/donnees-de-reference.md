@@ -85,7 +85,6 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-  - Application de la loi énergie - Art.64
 opening: Données publiques et confidentielles pour les non-diffusibles.
 perimeter:
   label: Entreprises, entrepreneurs individuels, institutions administratives et
