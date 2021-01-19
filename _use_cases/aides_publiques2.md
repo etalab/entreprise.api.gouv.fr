@@ -5,7 +5,7 @@ title: Faciliter le dépôt et l'instruction des aides publiques
 
 ## Le rôle d'API Entreprise
 
-![](/assets/images/cas-usage/fonctionnement-api-entreprise-cas-usage-aides-publiques.png)
+{% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-aides-publiques.png' %}
 
 API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des demandes d'aides et subventions, en mettant à disposition plusieurs API afin : 
 
