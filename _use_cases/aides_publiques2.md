@@ -47,7 +47,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 #### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|:-	:|:-:	|
 | **Données de référence<br>d'une entreprise** 	<br>`entreprises` | INSEE & Infogreffe 	| ✅ 	| 💬 	| JSON 	| publiques et confidentielles	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}  	|
 | **Données de référence<br>d'un établissement** <br>	`etablissements` | INSEE 	| ✅ 	| 💬	| JSON 	| publiques et confidentielles	| 	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}|
@@ -62,7 +62,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 #### Informations financières <a id="infos_financieres"></a>
 
 {:.tpl-table}
-| Données et endpoints	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Chiffre d'affaires**<br>`exercices` 	| DGFIP 	| ✅ 	| 📜 	| JSON 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"} 	|
 | **Bilans annuels**<br>`bilans_inpi` 	| INPI 	|  ⏺ 	| 📜 	| ZIP (PDF et XML) 	| publiques et confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
@@ -76,7 +76,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation 	|
+| Données et endpoints 	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation 	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| ✅ 	| 📜 	| PDF 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
 | **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| ACOSS 	| ✅ 	| 📜 	| PDF 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
@@ -91,7 +91,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 #### Certificats professionnels <a id="certificats_pro"></a>
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Certification RGE**<br>`certificats_rge_ademe` 	| ADEME 	|  ⏺	| 💬 	| JSON et PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"} 	|
 | **Certification de qualification bâtiment**<br>`certificats_qualibat` 	| Qualibat 	|  ⏺	| 💬 	| PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"} 	|
@@ -103,7 +103,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	|  ⏺ | 💬 	| JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
