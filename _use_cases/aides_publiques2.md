@@ -113,8 +113,8 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 ## Liste d'éditeurs
 
-Vous souhaitez vous connecter à l'API Entreprise mais vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée pour intégrer des APIs ? 
-<br> Vous pouvez passer par un éditeur. 
+Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ? 
+<br> **Vous pouvez passer par un éditeur.** 
 <br><br> Nous dressons ici la liste de ceux étant déjà connectés à l'API Entreprise dans ce cas d'usage spécifique :
 
 
