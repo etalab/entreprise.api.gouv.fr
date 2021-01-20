@@ -143,7 +143,7 @@ Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et l
 Ils utilisent déjà l'API Entreprise pour faciliter le dépôt des dossiers d'aides publiques et leur instruction 
 
 - **Des Communes et intercommunalités** : La Communauté d'agglomération Chauny-Tergnier-La Fère ;
-- **Des métropoles** : La métropole de Lyon
+- **Des métropoles** : La métropole de Lyon ; 
 - **Des régions** : La Région Normandie.
 
 {% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
