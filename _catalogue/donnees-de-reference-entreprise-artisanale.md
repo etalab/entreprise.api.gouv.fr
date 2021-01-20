@@ -95,21 +95,29 @@ services:
             
               "siren": 301123626,
               "denomination_sociale": "DUPOND Jean",
+              // Il s'agit du nom porté par la société.
               "sigle": "MSN",
+              // Forme réduite de la dénomination ou raison sociale de la personne morale ou de l'organisme public. Souvent les initiales.
               "categorie_personne": "PP",
+              // Indique s'il s'agit d'une personne physique "PP" ou d'une personne morale "PM".
               "forme_juridique_id": 5499,
               "forme_juridique_label": "Société à responsabilité limitée (sans autre indication)",
               "effectif_salarie": 12,
               "effectif_apprenti": 1,
               "etablissement_origine_id": 3,
+              // Indique l'origine du fond ou l'origine de l'activité, telle que déclarée par la personne morale ou physique au moment de la création de l'entreprise artisanale. Elle est donc tirée des formulaires P0 ou M0.
+              // Les valeurs possibles sont "1"(création), "3"(achat), "4"(apport), "6"(prise en location gérance", "7"(partage), "8"(reprise), "F"(gérance-mandat).   
               "modalite_exercice": "P",
+              // Détermine si l'entreprise a une activité permanente ("P") ou saisonnière ("S"). L'activité est dite saisonnière si chaque année, l'entreprise cesse totalement ses activités pendant plus de 3 mois consécutifs. La valeur "NR" est indiquée si l'information est non renseignée.
               "non_sedentaire": 0,
+              // Indique si l'entreprise a une activité ambulante.
               "code_cfe": "M7501",
               "declaration_procedures": "",
 
           // TYPE D’ACTITVITÉ
 
               "activite_artisanales_declarees": "PRESTATION DE SERVICE COMMERCE",
+              // Indique l'activité pour laquelle l'entreprise a demandé son inscription au répertoire des métiers. La valeur est reprise à l'identique de la liasse déclarative et est purement déclarative (variable E71 selon la norme d'échange).
               "code_norme_activite_entreprises": "9602A",
           //
               "code_nafa_principal": "9602AA",
