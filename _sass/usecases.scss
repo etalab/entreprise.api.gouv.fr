@@ -5,29 +5,50 @@
 }
 
 .tpl-usecase {
-  h1, h2, h3, h4, h5 {
+  h1, h3, h4, h5 {
     $header-height: 56px;
     $offset: $header-height + 15px;
 
     padding-top: $offset;
     margin-top: (-1)*$offset;
   }
+  h2 {
+    $header-height: 56px;
+    $offset: $header-height + 15px;
+    padding-top: $offset;
+    margin-top: (-0.3)*$offset;
+  }
+
 
   .example {
     border-left: 3px solid var(--light-grey);
     color: var(--dark-grey);
     padding: var(--spacing-xs) var(--spacing-m);
   }
+
+  .tpl-table {
+    margin-bottom: 30px;
+  }
+  
 }
+
+
 
 @media (max-width: 800px) {
   .tpl-usecase {
-    h1, h2, h3, h4, h5 {
+    h1, h3, h4, h5 {
       $header-height: 67px;
       $offset: $header-height + 15px;
 
       padding-top: $offset;
       margin-top: (-1)*$offset;
+    }
+
+    h2 {
+      $header-height: 67px;
+      $offset: $header-height + 15px;
+      padding-top: $offset;
+      margin-top: (-0.3)*$offset;
     }
 
     .tpl-documentation__links {
@@ -44,6 +65,6 @@
       display: block;
       max-width: 100%;
       overflow-x: scroll;
-    }
+      margin-bottom: 30px;
   }
 }

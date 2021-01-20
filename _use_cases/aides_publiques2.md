@@ -32,7 +32,6 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | ❌&nbsp; &nbsp; Non |
 | ⏺&nbsp; &nbsp; À étudier |
 
-<br>
 
 {:.tpl-table}
 
