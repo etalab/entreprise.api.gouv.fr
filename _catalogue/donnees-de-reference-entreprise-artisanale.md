@@ -208,12 +208,24 @@ services:
         qr1:
           question: Qu'est ce que les codes NAFA, NAR 4 et NAR 20 ?
           answer: >- 
-           Il s'agit de la Nomenclature D'Activités Française pour l'Artisanat. 
-           Les codes de la NAFA ont six caractères, quatre chiffres et deux lettres. Les cinq premiers caractères sont ceux de la NAF. La lettre située en sixième position permet de préciser le contenu des postes NAFA au sein d'une sous-classe NAF. <br /> <br /> **Ressources** <br /> <br />
-           Définition officielle : [Nomenclature d'activités française pour l'artisanat / NAFA](https://www.insee.fr/fr/metadonnees/definition/c1580) <br /> *Registre de tous les codes NAFA, proposée par CMA France* : [Nomenclature d'Activités Française de l'Artisanat](http://nafa.apcma.fr/jlbweb/jlbWeb?html=NAFA/accueil) <br /> *Le ministère de l'économie, des finances et de la relance possède une page dédiée à l'adresse suivante* : [LA NOMENCLATURE D'ACTIVITÉS FRANÇAISE DE L'ARTISANAT](https://www.entreprises.gouv.fr/fr/commerce-et-artisanat/la-nomenclature-d-activites-francaise-de-l-artisanat)
-           Il s'agit de la Nomemclature Artisanale Regroupée. <br /> <br />
-           Le site de CMA France tient un registre de tous les codes NAFA, accompagné des codes NARs, à l'adresse suivante: [Nomenclature d'Activités Française de l'Artisanat](http://nafa.apcma.fr/jlbweb/jlbWeb?html=NAFA/accueil) <br /> <br />
-           Vous pouvez trouver une liste (non-officielle) à l'adresse suivante: [liste-nar.pdf](https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf)  
+           ###### Le code NAFA
+
+           Le code NAFA est un identifiant permettant de naviguer dans la Nomenclature D'Activités Françaises de l'Artisanat qui décrit les activités artisanales. Il est composé de six caractères, quatre chiffres et deux lettres. Les cinq premiers caractères sont ceux de l'Activité Principale de l'Entreprise (APE) et correspondent au code NAF. La lettre située en sixième position permet de préciser le contenu du poste NAFA par rapport à la classe NAF.<br />
+           <br />
+           **Pour en savoir plus :**
+           <br>
+           La [page dédiée du Ministère de l'économie, des finances et de la relance](https://www.entreprises.gouv.fr/fr/commerce-et-artisanat/la-nomenclature-d-activites-francaise-de-l-artisanat) détaille les lois ayant défini cette nomenclature. Vous y trouverez également plus d'informations sur le lien entre code NAF et NAFA.<br />
+           CMA France propose un [registre de la nomenclature](http://nafa.apcma.fr/jlbweb/jlbWeb?html=NAFA/accueil), qui donne un descriptif précis de chaque activité. <br />
+
+           ###### Les codes NAR 4 et 20
+
+           Les codes NAR sont issus des Nomenclatures Artisanales Regroupées. Ils permettent de connaître le secteur d'activité de l'entreprise artisanale.
+           Le numéro associé correspond au degré de précision en nombre de secteurs. 
+           La NAR 4 comprend quatre secteurs d'activités, qui regroupent les vingt secteurs plus précis de la NAR 20.<br />
+           <br />
+           **Pour en savoir plus :**
+           <br> Le site de CMA France tient un [registre de tous les codes NAFA](http://nafa.apcma.fr/jlbweb/jlbWeb?html=NAFA/accueil), accompagné des codes NAR 4 et 20, et même des code NAR 8 et 80.
+           <br> Une [liste (non-officielle)](https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf) est consultable.
         qr2:
           question: Question 2
           answer: Question 2
