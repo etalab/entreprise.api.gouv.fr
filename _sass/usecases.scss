@@ -12,6 +12,7 @@
     padding-top: $offset;
     margin-top: (-1)*$offset;
   }
+
   h2 {
     $header-height: 56px;
     $offset: $header-height + 15px;
@@ -29,10 +30,7 @@
   .tpl-table {
     margin-bottom: 30px;
   }
-  
 }
-
-
 
 @media (max-width: 800px) {
   .tpl-usecase {
@@ -66,5 +64,6 @@
       max-width: 100%;
       overflow-x: scroll;
       margin-bottom: 30px;
+    }
   }
 }
