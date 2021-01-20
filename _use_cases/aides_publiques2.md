@@ -12,9 +12,6 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 - de faciliter le dépôt de la demande, **en [pré-remplissant le formulaire du demandeur]({{ site.baseurl }}/doc/#cas-usage)** grâce à son numéro de SIRET/RNA ; 
 - de faciliter la construction du dossier **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
 
-{:.example}
-
-**Ils utilisent déjà l'API Entreprise** : La Région Normandie, la Métropole de Lyon ainsi que la communauté d'agglomération Chauny-Tergnier-La Fère utilisent les données d'API Entreprise pour les demandes de subventions des entreprises et associations qui leurs sont relatives.
 
 ## Les données utiles "aides publiques"
 
@@ -139,3 +136,14 @@ Vous avez identifié les données nécessaires pour votre service dans le cadre 
 {:.tpl-notification}
 
 Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. 
+<br>
+
+## Ils utilisent l'API Entreprise
+
+Ils utilisent déjà l'API Entreprise pour faciliter le dépôt des dossiers d'aides publiques et leur instruction 
+
+- **Des Communes et intercommunalités** : La Communauté d'agglomération Chauny-Tergnier-La Fère ;
+- **Des métropoles** : La métropole de Lyon
+- **Des régions** : La Région Normandie.
+
+{% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
