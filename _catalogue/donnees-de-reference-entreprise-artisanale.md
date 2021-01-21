@@ -10,8 +10,8 @@ type: Informations générales
 title: Données de références d'une entreprise artisanale
 description: Obtenir des **informations concernant une entité du Répertoire
   National des Métiers (RNM)**, telles que des données générales et juridiques,
-  le type d'activité, l'adresse, des données sur les dirigeants et les dates
-  clés. Ces données sont fournies par la Chambre des Métiers de l'Artisanat
+  le type d'activité, des données sur les dirigeants, les dates
+  clés de l'entreprise et son adresse. Ces données sont fournies par la Chambre des Métiers de l'Artisanat
   France (CMA France) et sont également disponibles en [API publique et libre
   d'accès sur api.gouv.fr](https://api.gouv.fr/les-api/api_rnm).
 usecases:
@@ -21,8 +21,22 @@ usecases:
 opening: Données publiques.
 perimeter:
   label: Entreprises enregistrées au RNM.
-  description: Cet endpoint couvre toutes les entreprises enregistrées au
-    Répertoire National des Métiers.
+  description: >-
+         Cet endpoint couvre toutes les entreprises enregistrées au [Répertoire National des Métiers](https://rnm.artisanat.fr/).
+         <br> <br>
+         **Sont obligatoirement immatriculées au répertoire des métiers** : 
+         <br>
+
+          * ✅&nbsp;les entreprises individuelles et les sociétés qui n’emploient pas plus de dix salariés et exercent à titre principal ou secondaire une activité artisanale de production, de transformation, de réparation ou de prestation de service figurant en [annexe du décret du 2 avril 1998](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000021964896/2009-02-02/).
+
+
+          * ✅&nbsp;Les personnes qui exercent l’activité de fabrication de plats à consommer sur place peuvent également être immatriculées au répertoire des métiers.
+          <br>
+
+         **Peuvent être immatriculées au RNM** :
+         <br>
+
+          * ✅&nbsp;les entreprises qui dépassent le seuil de dix salariés si leur dirigeant peut se prévaloir de la qualité d’artisan, d’artisan d’art ou de maitre artisan.
 services:
   service1:
     request:
@@ -122,26 +136,6 @@ services:
               "secteur_activite_intitule_nar_20": "TRANSPORT",
               // Indique le secteur d'activité de l'entreprise selon le code Nomenclature Artisanale Regroupée NAR 20. La liste des code et leur libellé est disponible ici : https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf
 
-
-          // INFORMATIONS GÉOGRAPHIQUES
-
-              "adresse_numero_voie": 1,
-              "adresse_indice_repetition_voie": "B",
-              // indique si le numéro de voie est complété par un indicateur de répétition. "B" correspond à bis ; "T" correspond à ter ; "Q" correspond à quater ; et "C" correspond à quinquies.
-              "adresse_type_voie": "RUE",
-              // désigne le type de voie.
-              "adresse_libelle_voie": "DE BELLEVILLE",
-              // correspond au libellé de la voie ou au lieu-dit de l'entreprise
-              "adresse_complement": "Batiment C",
-              "adresse_code_postal": 75010,
-              "adresse_commune": "PARIS",
-              "adresse_commune_cog": 75119,
-              // Code officiel Géographique, plus d'infos : https://www.insee.fr/fr/information/3720946
-              "adresse_departement": "PARIS",
-              "adresse_region": "ILE-DE-FRANCE",
-              "libelle_epci": "Métropole du Grand Paris",
-              // Libellé de l'Établissement Public de Coopération Intercommunale correspondant au code officiel géographique de l'entreprise.
-
           // INFORMATIONS DIRIGEANTS
 
               "dirigeant_qualification": "ARTISAN",
@@ -177,6 +171,25 @@ services:
               "date_dissolution": "1989-02-03T12:00:00Z",
               // Date de dissolution de la personne morale.
 
+          // INFORMATIONS GÉOGRAPHIQUES
+
+              "adresse_numero_voie": 1,
+              "adresse_indice_repetition_voie": "B",
+              // indique si le numéro de voie est complété par un indicateur de répétition. "B" correspond à bis ; "T" correspond à ter ; "Q" correspond à quater ; et "C" correspond à quinquies.
+              "adresse_type_voie": "RUE",
+              // désigne le type de voie.
+              "adresse_libelle_voie": "DE BELLEVILLE",
+              // correspond au libellé de la voie ou au lieu-dit de l'entreprise
+              "adresse_complement": "Batiment C",
+              "adresse_code_postal": 75010,
+              "adresse_commune": "PARIS",
+              "adresse_commune_cog": 75119,
+              // Code officiel Géographique, plus d'infos : https://www.insee.fr/fr/information/3720946
+              "adresse_departement": "PARIS",
+              "adresse_region": "ILE-DE-FRANCE",
+              "libelle_epci": "Métropole du Grand Paris",
+              // Libellé de l'Établissement Public de Coopération Intercommunale correspondant au code officiel géographique de l'entreprise.
+
           // INFORMATIONS EN CAS DE DOUBLE IMMATRICULATION
 
           // Certaines entreprises sont assujetties à la double immatriculation Registre du Commerce et des Sociétés / Répertoire des métiers. Il en est notamment ainsi des artisans-commerçants.
@@ -211,7 +224,7 @@ services:
           answer: >- 
            ###### Le code NAFA
 
-           Le code NAFA est un identifiant permettant de naviguer dans la Nomenclature D'Activités Françaises de l'Artisanat qui décrit les activités artisanales. Il est composé de six caractères, quatre chiffres et deux lettres. Les cinq premiers caractères sont ceux de l'Activité Principale de l'Entreprise (APE) et correspondent au code NAF. La lettre située en sixième position permet de préciser le contenu du poste NAFA par rapport à la classe NAF.<br />
+           Le code NAFA est un identifiant permettant de naviguer dans la Nomenclature d'Activités Françaises de l'Artisanat qui décrit les activités artisanales. Il est composé de six caractères, quatre chiffres et deux lettres. Les cinq premiers caractères sont ceux de l'Activité Principale de l'Entreprise (APE) et correspondent au code NAF. La lettre située en sixième position permet de préciser le contenu du poste NAFA par rapport à la classe NAF.<br />
            <br />
            **Pour en savoir plus :**
            <br>
@@ -228,34 +241,46 @@ services:
            <br> Le site de CMA France tient un [registre de tous les codes NAFA](http://nafa.apcma.fr/jlbweb/jlbWeb?html=NAFA/accueil), accompagné des codes NAR 4 et 20, et même des code NAR 8 et 80.
            <br> Une [liste (non-officielle)](https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf) est consultable.
         qr2:
-          question: Différents noms donnés, quelles subtilités ?
+          question: Quelles sont les subtilités des différents noms envoyés ?
           answer: >- 
            La réponse JSON vous délivre plusieurs noms et prénoms du dirigeants. Voici l'explication détaillée de trois clés qui peuvent poser question.
 
            ##### Le nom de naissance
 
-           C'est le nom de famille donné à la personne le jour de la déclaration de sa naissance.
+           La clé `dirigeant_nom_de_naissance` délivre le nom de famille **donné à la personne le jour de la déclaration de sa naissance**.
            Ce peut être soit le nom du père, soit le nom de la mère, soit leurs deux noms accolés dans l'ordre choisi par eux dans la limite d'un nom de famille pour chacun d'eux (Article 311-21 du code civil). C'est aussi le nom qui figure au registre de l'état civil. Cette législation est récente et a pris effet au 1er septembre 2003. 
-           Ce nom peut être différent du nom de famille (qui n'est pas donné par l'API) dans le cas où la personne à demander un changement de nom.
+           Ce nom **peut être différent du nom de famille** (qui n'est pas donné par l'API) dans le cas où la personne à demander un changement de nom.
 
            ##### Le nom d'usage
 
-           Le nom d'usage est celui que la personne a choisi d'utiliser dans la vie quotidienne.
-           Toutefois, ne sont autorisées que trois formes de nom d'usage : 
-           - un doubl nom composé du nom de famille de la personne et du nom du parent qui n'a pas transmis son nom à la naissance.
+           La clé `dirigeant_nom_usage` indique le nom que la personne a **choisi d'utiliser dans la vie quotidienne**.
+           Toutefois, ne sont autorisées que **trois formes de noms d'usage** : 
+           - un double nom composé du nom de famille de la personne et du nom du parent qui n'a pas transmis son nom à la naissance.
            - un double nom composé du nom de famille de la personne et du nom de la personne avec qui elle est mariée.
            - le nom de la personne avec qui la personne est mariée, ce nom peut alors aussi être dénommé "nom marital". 
            <br>
-           Le nom d'usage ne figure ni à l'état civil ni sur le livret de famille ; il peut figurer sur la carte d'identité ou le passeport. Les administrations se doivent de l'utiliser si cela est demandé par la personne.
+           Le nom d'usage **ne figure ni à l'état civil ni sur le livret de famille** ; il peut figurer sur la carte d'identité ou le passeport. Les administrations se doivent de l'utiliser si cela est demandé par la personne.
 
            ##### Le pseudonyme
         
-           Le pseudonyme est un nom d'emprunt utilisé par le dirigeant pour se désigner dans l'exercice de son activité, généralement littéraire ou artistique. Le pseudonyme ne correspond pas à un changement de nom, et son choix doit remplir certaines conditions. Il ne doit pas porter atteinte à l'ordre public et il ne doit pas permettre à la personne de s'approprier la renommée ou la parenté d'une personne tiers.
+           La clé `dirigeant_pseudonyme` indique le **nom d'emprunt utilisé dans l'exercice de son activité** par le dirigeant pour se désigner, généralement littéraire ou artistique. Le pseudonyme ne correspond pas à un changement de nom, et son choix doit remplir certaines conditions. Il ne doit pas porter atteinte à l'ordre public et il ne doit pas permettre à la personne de s'approprier la renommée ou la parenté d'une personne tiers.
            Le pseudonyme peut être protégé en étant déposé sous la forme d'une marque à l'INPI.
 
         qr3:
-          question: Question 3
-          answer: Question 3
+          question: Quelles sont les différents types de déclarations renvoyées ?
+          answer: >-
+           La clé `declaration_procedures` permet d'obtenir différents types de déclarations : 
+           
+           * les déclarations de **cessation des paiements** et les décisions intervenues dans les **procédures de règlement judiciaire et de liquidation des biens** en application de la [loi n° 67-563 du 13 juillet 1967](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006398426/1980-05-13/) ;
+           
+           * les déclarations intervenues dans les procédures ouvertes en application de l'ordonnance n° 67-820 du 23 septembre 1967 tendant à faciliter le **redressement économique et financier** ;
+           
+           * les déclarations de **cessation des paiements** et les décisions suivantes intervenues dans les procédures de **redressement** ou de **liquidation judiciaires** des entreprises ouvertes avant le 1er janvier 2006 en application du code de commerce ;
+           
+           * les déclarations intervenues dans les procédures de **sauvegarde**, de **redressement judiciaire** ou de **liquidation judiciaire** ouvertes à compter du 1er janvier 2006.
+
+           
+           
 availability:
   volumetry: 2000 requêtes / 10 minutes par IP
   normal_availability: 7jours/7 et 24h/24
