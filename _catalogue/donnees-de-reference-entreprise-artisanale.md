@@ -91,7 +91,7 @@ services:
             
               "siren": 301123626,
               "denomination_sociale": "DUPOND Jean",
-              // Il s'agit du nom porté par la société.
+              // Il s'agit du nom porté par la société. Dans le cadre de la création d'une entreprise individuelle (EI, EIRL, ou micro-entreprise), la dénomination sociale se confond avec la raison sociale et correspond au nom de famille du créateur d'entreprise, qui peut s'accompagner de son prénom.
               "sigle": "MSN",
               // Forme réduite de la dénomination ou raison sociale de la personne morale ou de l'organisme public. Souvent les initiales.
               "categorie_personne": "PP",
