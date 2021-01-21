@@ -105,7 +105,7 @@ services:
               "effectif_apprenti": 1,
               // Nombre d'apprentis dans l'entreprise.
               "etablissement_origine_id": 3,
-              // Indique l'origine du fond ou l'origine de l'activité, telle que déclarée par la personne morale ou physique au moment de la création de l'entreprise artisanale. Elle est donc tirée des formulaires P0 ou M0.
+              // Indique l'origine du fond ou l'origine de l'activité, telle que déclarée par la personne morale ou physique au moment de la création de l'entreprise artisanale. Elle est donc tirée des formulaires P0 ou M0, disponibles à la lecture ici : https://www.cfe-metiers.com/HTM/cosa.aspx
               // Les valeurs possibles sont "1"(création), "3"(achat), "4"(apport), "6"(prise en location gérance", "7"(partage), "8"(reprise), "F"(gérance-mandat).   
               "modalite_exercice": "P",
               // Détermine si l'entreprise a une activité permanente ("P") ou saisonnière ("S"). L'activité est dite saisonnière si chaque année, l'entreprise cesse totalement ses activités pendant plus de 3 mois consécutifs. La valeur "NR" est indiquée si l'information est non renseignée.
