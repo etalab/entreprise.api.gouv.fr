@@ -117,7 +117,8 @@ services:
               "code_nafa_secondaire2": "",
               "code_nafa_secondaire3": "",
               "secteur_activite_intitule_nar_4": "SERVICES",
-              // Indique le secteur d'activité de l'entreprise selon le code Nomenclature Artisanale Regroupée NAR 4. La liste des code et leur libellé est disponible ici : https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf
+              // Indique le secteur d'activité de l'entreprise selon le code Nomenclature Artisanale Regroupée NAR 4. 
+              // Les variables possibles sont "ALIMENTATION", "BATIMENT", "PRODUCTION" et "SERVICES".
               "secteur_activite_intitule_nar_20": "TRANSPORT",
               // Indique le secteur d'activité de l'entreprise selon le code Nomenclature Artisanale Regroupée NAR 20. La liste des code et leur libellé est disponible ici : https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf
 
@@ -149,7 +150,7 @@ services:
               "dirigeant_nom_de_naissance": "DUPONT",
               // Nom dévolu à la personne le jour de la déclaration de sa naissance.
               "dirigeant_nom_usage": "DUTUNNEL",
-              // Nom choisi par la personne.
+              // Nom choisi par la personne dont la forme est encadrée (voir bloc question/réponse dans cette documentation).
               "dirigeant_prenom1": "Jean",
               // Le ou les prénoms figurant au registre de l'état civil.
               "dirigeant_prenom2": "Jean",
@@ -227,8 +228,31 @@ services:
            <br> Le site de CMA France tient un [registre de tous les codes NAFA](http://nafa.apcma.fr/jlbweb/jlbWeb?html=NAFA/accueil), accompagné des codes NAR 4 et 20, et même des code NAR 8 et 80.
            <br> Une [liste (non-officielle)](https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf) est consultable.
         qr2:
-          question: Question 2
-          answer: Question 2
+          question: Différents noms donnés, quelles subtilités ?
+          answer: >- 
+           La réponse JSON vous délivre plusieurs noms et prénoms du dirigeants. Voici l'explication détaillée de trois clés qui peuvent poser question.
+
+           ##### Le nom de naissance
+
+           C'est le nom de famille donné à la personne le jour de la déclaration de sa naissance.
+           Ce peut être soit le nom du père, soit le nom de la mère, soit leurs deux noms accolés dans l'ordre choisi par eux dans la limite d'un nom de famille pour chacun d'eux (Article 311-21 du code civil). C'est aussi le nom qui figure au registre de l'état civil. Cette législation est récente et a pris effet au 1er septembre 2003. 
+           Ce nom peut être différent du nom de famille (qui n'est pas donné par l'API) dans le cas où la personne à demander un changement de nom.
+
+           ##### Le nom d'usage
+
+           Le nom d'usage est celui que la personne a choisi d'utiliser dans la vie quotidienne.
+           Toutefois, ne sont autorisées que trois formes de nom d'usage : 
+           - un doubl nom composé du nom de famille de la personne et du nom du parent qui n'a pas transmis son nom à la naissance.
+           - un double nom composé du nom de famille de la personne et du nom de la personne avec qui elle est mariée.
+           - le nom de la personne avec qui la personne est mariée, ce nom peut alors aussi être dénommé "nom marital". 
+           <br>
+           Le nom d'usage ne figure ni à l'état civil ni sur le livret de famille ; il peut figurer sur la carte d'identité ou le passeport. Les administrations se doivent de l'utiliser si cela est demandé par la personne.
+
+           ##### Le pseudonyme
+        
+           Le pseudonyme est un nom d'emprunt utilisé par le dirigeant pour se désigner dans l'exercice de son activité, généralement littéraire ou artistique. Le pseudonyme ne correspond pas à un changement de nom, et son choix doit remplir certaines conditions. Il ne doit pas porter atteinte à l'ordre public et il ne doit pas permettre à la personne de s'approprier la renommée ou la parenté d'une personne tiers.
+           Le pseudonyme peut être protégé en étant déposé sous la forme d'une marque à l'INPI.
+
         qr3:
           question: Question 3
           answer: Question 3
