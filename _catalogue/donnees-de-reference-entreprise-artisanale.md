@@ -81,7 +81,7 @@ services:
 
         * des informations en cas de **double immatriculation** ; 
 
-        * des **informations spécifiques au RNM** (identifiants, dates d'import et mise à jour) ;
+        * des **informations spécifiques au RNM** (identifiants, dates d'import et **date de mise à jour** des données) ;
       sample:
         code: >+
           {
@@ -111,9 +111,10 @@ services:
               // Détermine si l'entreprise a une activité permanente ("P") ou saisonnière ("S"). L'activité est dite saisonnière si chaque année, l'entreprise cesse totalement ses activités pendant plus de 3 mois consécutifs. La valeur "NR" est indiquée si l'information est non renseignée.
               "non_sedentaire": 0,
               // Indique si l'entreprise a une activité ambulante.
+              // Les variables possibles sont "0" pour sédentaire, ou "1" pour non-sédentaire.
               "code_cfe": "M7501",
               // L'indentifiant communiqué désigne le Centre de Formalités des Entreprises (CFE) qui a inscrit l'entreprise. 
-              "declaration_procedures": "",
+              "declaration_procedures": "30.09.1994 Ouverture de procedure normale de redressement;15.10.1994 Prolongation periode d'observation;11.11.1994 Prolongation periode d'observation;18.01.1995 Prolongation periode d'observation;20.03.1995 Prolongation periode d'observation;10.05.1995 Prolongation periode d'observation;14.07.1995 Prolongation periode d'observation;19.09.1995 Arret du plan de continuation;09.04.2000 Modification des organes de la procedure;28.05.2002 Modification des organes de la procedure",
               //Cette clé regroupe les déclarations de cessation des paiements, des procédures de règlement judiciaire et liquidations des biens ; des procédures tendant à faciliter le redressement économique et financier ; des procédures de sauvegarde, de redressement judiciaire ou de liquidation judiciaire.
 
           // TYPE D’ACTITVITÉ
@@ -213,13 +214,32 @@ services:
               "rnm_date_import": "2019-11-02T09:09:25Z",
               // Il s'agit de la date de l'import des données de l'entreprise dans la base de données de l'API RNM.
               "rnm_date_mise_a_jour": "2019-12-02T09:09:25Z",
-              // Il s'agit de la date de mise à jour des données de la base de données de l'API RNM.
+              // Il s'agit de la date de mise à jour des données transmises. Elle indique donc l'état de fraicheur de chacune des clés de la réponse JSON. La fraicheur des clés effectifs est à prendre avec plus de vigileance (voir bloc question/réponse).
 
             }
           }
 
       questions:
         qr1:
+          question: Quelle est la fraîcheur de la donnée renvoyée ?
+          answer: >-
+           ##### Du côté de l'entreprise
+
+           Parmi les événements qui surviennent dans la vie d'une entreprise artisanale, certains d'entre eux doivent être obligatoirement déclarés par l'entreprise à sa chambre de commerce et d'artisanat, c'est à dire son centre de formalité des entreprises. 
+           **Généralement**, étant donné que toute modification du répertoire implique des coûts, **l'entreprise met à jour l'ensemble de ses données**. 
+           Voici la liste des évènements qui impliquent obligatoirement une déclaration : Changement d’adresse, changement de nom commercial, changement d’enseigne, modification d’activité(s) de l’entreprise, mise en location gérance, mention de conjoint collaborateur, ouverture ou fermeture d’un établissement, changement de la forme juridique, changement de dirigeant, dissolution de la société, cessation temporaire ou totale d’activité et régularisation d'immatriculation pour les micro-entrepreneurs.
+           <br><br>
+           Il est à noter que **l'entrepreneur n'a pas d'obligation légale à déclarer un changement d'effectif**. De fait, l'actualisation de cette donnée dépend donc du bon vouloir de l'entrepreneur à revérifier tous les champs du formulaire au moment de sa déclaration d'un événement dit obligatoire.
+
+           ##### Du côté de la réponse JSON
+
+           La fraîcheur des données communiquées par cet endpoint correspond à la date de mise à jour faite dans le RNM suite aux nouvelles informations déclarées par l'entrepreneur. Cette date est indiquée par la clé `rnm_date_mise_a_jour` dans la réponse JSON. 
+           Dans le cas où il n'y a pas encore eu de changement répertorié, la date d'import `rnm_date_import` fait alors référence.
+           <br><br>
+           ⚠️ La fraicheur des données d'effectifs `effectif_salarie` et `effectif_apprenti` est à prendre avec vigilance puisque leur mise à jour n'est pas obligatoire.
+
+
+        qr2:
           question: Qu'est ce que les codes NAFA, NAR 4 et NAR 20 ?
           answer: >- 
            ###### Le code NAFA
@@ -240,7 +260,7 @@ services:
            **Pour en savoir plus :**
            <br> Le site de CMA France tient un [registre de tous les codes NAFA](http://nafa.apcma.fr/jlbweb/jlbWeb?html=NAFA/accueil), accompagné des codes NAR 4 et 20, et même des code NAR 8 et 80.
            <br> Une [liste (non-officielle)](https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf) est consultable.
-        qr2:
+        qr3:
           question: Quelles sont les subtilités des différents noms envoyés ?
           answer: >- 
            La réponse JSON vous délivre plusieurs noms et prénoms du dirigeants. Voici l'explication détaillée de trois clés qui peuvent poser question.
@@ -266,7 +286,7 @@ services:
            La clé `dirigeant_pseudonyme` indique le **nom d'emprunt utilisé dans l'exercice de son activité** par le dirigeant pour se désigner, généralement littéraire ou artistique. Le pseudonyme ne correspond pas à un changement de nom, et son choix doit remplir certaines conditions. Il ne doit pas porter atteinte à l'ordre public et il ne doit pas permettre à la personne de s'approprier la renommée ou la parenté d'une personne tiers.
            Le pseudonyme peut être protégé en étant déposé sous la forme d'une marque à l'INPI.
 
-        qr3:
+        qr4:
           question: Quelles sont les différents types de déclarations renvoyées ?
           answer: >-
            La clé `declaration_procedures` permet d'obtenir différents types de déclarations : 
@@ -277,8 +297,8 @@ services:
            
            * les déclarations de **cessation des paiements** et les décisions suivantes intervenues dans les procédures de **redressement** ou de **liquidation judiciaires** des entreprises ouvertes avant le 1er janvier 2006 en application du code de commerce ;
            
-           * les déclarations intervenues dans les procédures de **sauvegarde**, de **redressement judiciaire** ou de **liquidation judiciaire** ouvertes à compter du 1er janvier 2006.
-
+           * les déclarations intervenues dans les procédures de **sauvegarde**, de **redressement judiciaire** ou de **liquidation judiciaire** ouvertes à compter du 1er janvier 2006. 
+           
            
            
 availability:
