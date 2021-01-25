@@ -7,7 +7,7 @@ providers:
 history: "##### 15/01/2021 Création de l'endpoint `entreprises_artisanales`"
 weight: 7
 type: Informations générales
-title: Données de références d'une entreprise artisanale
+title: Données de référence d'une entreprise artisanale
 description: Obtenir des **informations concernant une entité du Répertoire
   National des Métiers (RNM)**, telles que des données générales et juridiques,
   le type d'activité, des données sur les dirigeants, les dates
