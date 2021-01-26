@@ -1,10 +1,10 @@
 ---
-label: entreprises_artisanales
+label: entreprises_artisanales_cma
 scope:
   - entreprises
 providers:
   - cma
-history: "##### 15/01/2021 Création de l'endpoint `entreprises_artisanales`"
+history: "##### 15/01/2021 Création de l'endpoint `entreprises_artisanales_cma`"
 weight: 7
 type: Informations générales
 title: Données de référence d'une entreprise artisanale
@@ -24,7 +24,7 @@ perimeter:
   description: >-
          Cet endpoint couvre toutes les entreprises enregistrées au [Répertoire National des Métiers](https://rnm.artisanat.fr/).
          <br> <br>
-         **Sont obligatoirement immatriculées au répertoire des métiers** : 
+         **Sont obligatoirement immatriculées au répertoire des métiers** :
          <br>
 
           * ✅&nbsp;les entreprises individuelles et les sociétés qui n’emploient pas plus de dix salariés et exercent à titre principal ou secondaire une activité artisanale de production, de transformation, de réparation ou de prestation de service figurant en [annexe du décret du 2 avril 1998](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000021964896/2009-02-02/).
@@ -57,7 +57,7 @@ services:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
       url: |-
-        **entreprises_artisanales/**SirenDeL’Entreprise
+        **entreprises_artisanales_cma/**SirenDeL’Entreprise
         **?token=**JetonD’Habilitation
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDel’Appel
@@ -66,20 +66,20 @@ services:
       format: Donnée structurée JSON
       timeout: 5 secondes
       description: >-
-        La réponse se compose d'une clé 'entreprise' regroupant : 
+        La réponse se compose d'une clé 'entreprise' regroupant :
 
 
         * des **informations générales et juridiques** (nom de l'entreprise, personne physique/morale, forme juridique, effectif, l'origine du fond de commerce, activité permanente/saisonnière, activité ambulante, code du centre de formalité des entreprises (CFE) ayant fait l'inscription et les déclarations, s'il y en a, relatives à un redressement judiciaire ou une liquidation.)
 
         * le **type d'activité** de l'entreprise (code NAFA et secteur d'activité (NAR)) ;
 
-        * des **informations géographiques**, notamment l'adresse ; 
+        * des **informations géographiques**, notamment l'adresse ;
 
         * des informations sur les **dirigeants** ;
 
         * les **dates clés** (immatriculation, radiation, début d'activité ...)
 
-        * des informations en cas de **double immatriculation** ; 
+        * des informations en cas de **double immatriculation** ;
 
         * des **informations spécifiques au RNM** (identifiants, dates d'import et **date de mise à jour** des données) ;
       sample:
@@ -88,7 +88,7 @@ services:
             "entreprise": {
 
           // INFORMATIONS GÉNÉRALES ET JURIDIQUES
-            
+
               "siren": 301123626,
               "denomination_sociale": "DUPOND Jean",
               // Il s'agit du nom porté par la société. Dans le cadre de la création d'une entreprise individuelle (EI, EIRL, ou micro-entreprise), la dénomination sociale se confond avec la raison sociale et correspond au nom de famille du créateur d'entreprise, qui peut s'accompagner de son prénom.
@@ -106,14 +106,14 @@ services:
               // Nombre d'apprentis dans l'entreprise.
               "etablissement_origine_id": 3,
               // Indique l'origine du fond ou l'origine de l'activité, telle que déclarée par la personne morale ou physique au moment de la création de l'entreprise artisanale. Elle est donc tirée des formulaires P0 ou M0, disponibles à la lecture ici : https://www.cfe-metiers.com/HTM/cosa.aspx
-              // Les valeurs possibles sont "1"(création), "3"(achat), "4"(apport), "6"(prise en location gérance", "7"(partage), "8"(reprise), "F"(gérance-mandat).   
+              // Les valeurs possibles sont "1"(création), "3"(achat), "4"(apport), "6"(prise en location gérance", "7"(partage), "8"(reprise), "F"(gérance-mandat).
               "modalite_exercice": "P",
               // Détermine si l'entreprise a une activité permanente ("P") ou saisonnière ("S"). L'activité est dite saisonnière si chaque année, l'entreprise cesse totalement ses activités pendant plus de 3 mois consécutifs. La valeur "NR" est indiquée si l'information est non renseignée.
               "non_sedentaire": 0,
               // Indique si l'entreprise a une activité ambulante.
               // Les variables possibles sont "0" pour sédentaire, ou "1" pour non-sédentaire.
               "code_cfe": "M7501",
-              // L'indentifiant communiqué désigne le Centre de Formalités des Entreprises (CFE) qui a inscrit l'entreprise. 
+              // L'indentifiant communiqué désigne le Centre de Formalités des Entreprises (CFE) qui a inscrit l'entreprise.
               "declaration_procedures": "30.09.1994 Ouverture de procedure normale de redressement;15.10.1994 Prolongation periode d'observation;11.11.1994 Prolongation periode d'observation;18.01.1995 Prolongation periode d'observation;20.03.1995 Prolongation periode d'observation;10.05.1995 Prolongation periode d'observation;14.07.1995 Prolongation periode d'observation;19.09.1995 Arret du plan de continuation;09.04.2000 Modification des organes de la procedure;28.05.2002 Modification des organes de la procedure",
               //Cette clé regroupe les déclarations de cessation des paiements, des procédures de règlement judiciaire et liquidations des biens ; des procédures tendant à faciliter le redressement économique et financier ; des procédures de sauvegarde, de redressement judiciaire ou de liquidation judiciaire.
 
@@ -132,7 +132,7 @@ services:
               "code_nafa_secondaire2": "",
               "code_nafa_secondaire3": "",
               "secteur_activite_intitule_nar_4": "SERVICES",
-              // Indique le secteur d'activité de l'entreprise selon le code Nomenclature Artisanale Regroupée NAR 4. 
+              // Indique le secteur d'activité de l'entreprise selon le code Nomenclature Artisanale Regroupée NAR 4.
               // Les variables possibles sont "ALIMENTATION", "BATIMENT", "PRODUCTION" et "SERVICES".
               "secteur_activite_intitule_nar_20": "TRANSPORT",
               // Indique le secteur d'activité de l'entreprise selon le code Nomenclature Artisanale Regroupée NAR 20. La liste des code et leur libellé est disponible ici : https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf
@@ -140,7 +140,7 @@ services:
           // INFORMATIONS DIRIGEANTS
 
               "dirigeant_qualification": "ARTISAN",
-              // Indique la qualification artisanale de l'entrepreneur. 
+              // Indique la qualification artisanale de l'entrepreneur.
               // Les variables possibles sont "ARTISAN", "MAITRE ARTISAN", "ARTISAN D'ART", "MAITRE ARTISAN D'ART", "ARTISAN MAITRE" ET "ARTISAN MAITRE MÉTIERS D'ART". Les deux dernières qualifications sont spécifiques à l'Alsace et la Moselle. Si le dirigeant n'a pas de qualification la mention "SANS QUALIFICATION" est donnée.
               "dirigeant_nom_de_naissance": "DUPONT",
               // Nom dévolu à la personne le jour de la déclaration de sa naissance.
@@ -225,15 +225,15 @@ services:
           answer: >-
            ##### Du côté de l'entreprise
 
-           Parmi les événements qui surviennent dans la vie d'une entreprise artisanale, certains d'entre eux doivent être obligatoirement déclarés par l'entreprise à sa chambre de commerce et d'artisanat, c'est à dire son centre de formalité des entreprises. 
-           **Généralement**, étant donné que toute modification du répertoire implique des coûts, **l'entreprise met à jour l'ensemble de ses données**. 
+           Parmi les événements qui surviennent dans la vie d'une entreprise artisanale, certains d'entre eux doivent être obligatoirement déclarés par l'entreprise à sa chambre de commerce et d'artisanat, c'est à dire son centre de formalité des entreprises.
+           **Généralement**, étant donné que toute modification du répertoire implique des coûts, **l'entreprise met à jour l'ensemble de ses données**.
            Voici la liste des évènements qui impliquent obligatoirement une déclaration : Changement d’adresse, changement de nom commercial, changement d’enseigne, modification d’activité(s) de l’entreprise, mise en location gérance, mention de conjoint collaborateur, ouverture ou fermeture d’un établissement, changement de la forme juridique, changement de dirigeant, dissolution de la société, cessation temporaire ou totale d’activité et régularisation d'immatriculation pour les micro-entrepreneurs.
            <br><br>
            Il est à noter que **l'entrepreneur n'a pas d'obligation légale à déclarer un changement d'effectif**. De fait, l'actualisation de cette donnée dépend donc du bon vouloir de l'entrepreneur à revérifier tous les champs du formulaire au moment de sa déclaration d'un événement dit obligatoire.
 
            ##### Du côté de la réponse JSON
 
-           La fraîcheur des données communiquées par cet endpoint correspond à la date de mise à jour faite dans le RNM suite aux nouvelles informations déclarées par l'entrepreneur. Cette date est indiquée par la clé `rnm_date_mise_a_jour` dans la réponse JSON. 
+           La fraîcheur des données communiquées par cet endpoint correspond à la date de mise à jour faite dans le RNM suite aux nouvelles informations déclarées par l'entrepreneur. Cette date est indiquée par la clé `rnm_date_mise_a_jour` dans la réponse JSON.
            Dans le cas où il n'y a pas encore eu de changement répertorié, la date d'import `rnm_date_import` fait alors référence.
            <br><br>
            ⚠️ La fraicheur des données d'effectifs `effectif_salarie` et `effectif_apprenti` est à prendre avec vigilance puisque leur mise à jour n'est pas obligatoire.
@@ -241,7 +241,7 @@ services:
 
         qr2:
           question: Qu'est ce que les codes NAFA, NAR 4 et NAR 20 ?
-          answer: >- 
+          answer: >-
            ###### Le code NAFA
 
            Le code NAFA est un identifiant permettant de naviguer dans la Nomenclature d'Activités Françaises de l'Artisanat qui décrit les activités artisanales. Il est composé de six caractères, quatre chiffres et deux lettres. Les cinq premiers caractères sont ceux de l'Activité Principale de l'Entreprise (APE) et correspondent au code NAF. La lettre située en sixième position permet de préciser le contenu du poste NAFA par rapport à la classe NAF.<br />
@@ -254,7 +254,7 @@ services:
            ###### Les codes NAR 4 et 20
 
            Les codes NAR sont issus des Nomenclatures Artisanales Regroupées. Ils permettent de connaître le secteur d'activité de l'entreprise artisanale.
-           Le numéro associé correspond au degré de précision en nombre de secteurs. 
+           Le numéro associé correspond au degré de précision en nombre de secteurs.
            La NAR 4 comprend quatre secteurs d'activités, qui regroupent les vingt secteurs plus précis de la NAR 20.<br />
            <br />
            **Pour en savoir plus :**
@@ -262,45 +262,45 @@ services:
            <br> Une [liste (non-officielle)](https://entreprise.api.gouv.fr/assets/pdf/liste-nar.pdf) est consultable.
         qr3:
           question: Quelles sont les subtilités des différents noms envoyés ?
-          answer: >- 
+          answer: >-
            La réponse JSON vous délivre plusieurs noms et prénoms du dirigeants. Voici l'explication détaillée de trois clés qui peuvent poser question.
 
            ##### Le nom de naissance
 
            La clé `dirigeant_nom_de_naissance` délivre le nom de famille **donné à la personne le jour de la déclaration de sa naissance**.
-           Ce peut être soit le nom du père, soit le nom de la mère, soit leurs deux noms accolés dans l'ordre choisi par eux dans la limite d'un nom de famille pour chacun d'eux (Article 311-21 du code civil). C'est aussi le nom qui figure au registre de l'état civil. Cette législation est récente et a pris effet au 1er septembre 2003. 
+           Ce peut être soit le nom du père, soit le nom de la mère, soit leurs deux noms accolés dans l'ordre choisi par eux dans la limite d'un nom de famille pour chacun d'eux (Article 311-21 du code civil). C'est aussi le nom qui figure au registre de l'état civil. Cette législation est récente et a pris effet au 1er septembre 2003.
            Ce nom **peut être différent du nom de famille** (qui n'est pas donné par l'API) dans le cas où la personne à demander un changement de nom.
 
            ##### Le nom d'usage
 
            La clé `dirigeant_nom_usage` indique le nom que la personne a **choisi d'utiliser dans la vie quotidienne**.
-           Toutefois, ne sont autorisées que **trois formes de noms d'usage** : 
+           Toutefois, ne sont autorisées que **trois formes de noms d'usage** :
            - un double nom composé du nom de famille de la personne et du nom du parent qui n'a pas transmis son nom à la naissance.
            - un double nom composé du nom de famille de la personne et du nom de la personne avec qui elle est mariée.
-           - le nom de la personne avec qui la personne est mariée, ce nom peut alors aussi être dénommé "nom marital". 
+           - le nom de la personne avec qui la personne est mariée, ce nom peut alors aussi être dénommé "nom marital".
            <br>
            Le nom d'usage **ne figure ni à l'état civil ni sur le livret de famille** ; il peut figurer sur la carte d'identité ou le passeport. Les administrations se doivent de l'utiliser si cela est demandé par la personne.
 
            ##### Le pseudonyme
-        
+
            La clé `dirigeant_pseudonyme` indique le **nom d'emprunt utilisé dans l'exercice de son activité** par le dirigeant pour se désigner, généralement littéraire ou artistique. Le pseudonyme ne correspond pas à un changement de nom, et son choix doit remplir certaines conditions. Il ne doit pas porter atteinte à l'ordre public et il ne doit pas permettre à la personne de s'approprier la renommée ou la parenté d'une personne tiers.
            Le pseudonyme peut être protégé en étant déposé sous la forme d'une marque à l'INPI.
 
         qr4:
           question: Quelles sont les différents types de déclarations renvoyées ?
           answer: >-
-           La clé `declaration_procedures` permet d'obtenir différents types de déclarations : 
-           
+           La clé `declaration_procedures` permet d'obtenir différents types de déclarations :
+
            * les déclarations de **cessation des paiements** et les décisions intervenues dans les **procédures de règlement judiciaire et de liquidation des biens** en application de la [loi n° 67-563 du 13 juillet 1967](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006398426/1980-05-13/) ;
-           
+
            * les déclarations intervenues dans les procédures ouvertes en application de l'ordonnance n° 67-820 du 23 septembre 1967 tendant à faciliter le **redressement économique et financier** ;
-           
+
            * les déclarations de **cessation des paiements** et les décisions suivantes intervenues dans les procédures de **redressement** ou de **liquidation judiciaires** des entreprises ouvertes avant le 1er janvier 2006 en application du code de commerce ;
-           
-           * les déclarations intervenues dans les procédures de **sauvegarde**, de **redressement judiciaire** ou de **liquidation judiciaire** ouvertes à compter du 1er janvier 2006. 
-           
-           
-           
+
+           * les déclarations intervenues dans les procédures de **sauvegarde**, de **redressement judiciaire** ou de **liquidation judiciaire** ouvertes à compter du 1er janvier 2006.
+
+
+
 availability:
   volumetry: 2000 requêtes / 10 minutes par IP
   normal_availability: 7jours/7 et 24h/24
