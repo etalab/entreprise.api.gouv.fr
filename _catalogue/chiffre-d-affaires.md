@@ -13,7 +13,6 @@ description: Obtenir les **déclarations de chiffre d'affaire** faites auprès d
 usecases:
   - Aides publiques
   - Marchés publics
-  - Application de la loi énergie - Art.64
 opening: Données confidentielles.
 perimeter:
   description: >-
@@ -92,7 +91,7 @@ services:
             ###### Le cas du régime réel simplifié
 
 
-            Le chiffre d'affaire correspond à la somme des montants indiqués dans les cases 210, 214 et 218 du [formulaire 2033B - compte de résultat simplifié de l'exercice](https://www.impots.gouv.fr/portail/files/formulaires/2033-sd/2018/2033-sd_2094.pdf) ; c'est à dire le total : 
+            Le chiffre d'affaire correspond à la somme des montants indiqués dans les cases 210, 214 et 218 du [formulaire 2033B - compte de résultat simplifié de l'exercice](https://www.impots.gouv.fr/portail/files/formulaires/2033-sd/2018/2033-sd_2094.pdf) ; c'est à dire le total :
 
 
             * des ventes de marchandises (dont export et livraisons intracommunautaires) ;
@@ -105,7 +104,7 @@ services:
         Les exercices renvoyés par la DGFIP sont listés les uns après les
         autres, le premier étant le plus récent. Le nombre d'exercices renvoyés
         varie de 1 à 3. Pour chaque exercice, deux informations sont transmises
-        : 
+        :
 
 
         * le chiffre d'affaire en euros ;

@@ -115,6 +115,7 @@ providers_aliases:
   agefiph: 'agefiph'
   ademe: 'ADEME'
   fabsocial: 'Fabrique numérique des ministères sociaux'
+  cma: 'CMA France'
 
 
 empty_array: []
@@ -128,11 +129,19 @@ catalogue_types:
   - 'Propriété intellectuelle'
 
 catalogue_usecases:
-  aidespubliques: 'Aides publiques'
-  marchespublics: 'Marchés publics'
-  repertoiredetiers: 'Répertoire de tiers'
-  loienergie: 'Application de la loi énergie - Art.64'
-  covid: 'Aide d’urgence Covid-19'
+  aides_publiques:
+    name: 'Aides publiques'
+    page: true
+  marches_publics:
+    name: 'Marchés publics'
+    page: true
+  covid_19:
+    name: "Aide d'urgence Covid-19"
+    page: true
+
+  repertoiredetiers:
+    name: 'Répertoire de tiers'
+    page: false
 
 catalogue_openstate:
   - 'Données publiques'

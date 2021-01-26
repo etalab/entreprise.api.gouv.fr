@@ -5,16 +5,13 @@ title: Faciliter le dépôt et l'instruction des aides publiques
 
 ## Le rôle d'API Entreprise
 
-![](/assets/images/cas-usage/fonctionnement-api-entreprise-cas-usage-aides-publiques.png)
+{% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-aides-publiques.png' %}
 
 API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des demandes d'aides et subventions, en mettant à disposition plusieurs API afin : 
 
 - de faciliter le dépôt de la demande, **en [pré-remplissant le formulaire du demandeur]({{ site.baseurl }}/doc/#cas-usage)** grâce à son numéro de SIRET/RNA ; 
 - de faciliter la construction du dossier **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
 
-{:.example}
-
-**Ils utilisent déjà l'API Entreprise** : La Région Normandie, la Métropole de Lyon ainsi que la communauté d'agglomération Chauny-Tergnier-La Fère utilisent les données d'API Entreprise pour les demandes de subventions des entreprises et associations qui leurs sont relatives.
 
 ## Les données utiles "aides publiques"
 
@@ -29,13 +26,12 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 {:.tpl-table}
 
-| Utilité : Dans ce cas d'usage, la donnée est-elle autorisée ? | 
+| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? | 
 | ---------| 
 | ✅&nbsp; &nbsp; Oui |
 | ❌&nbsp; &nbsp; Non |
 | ⏺&nbsp; &nbsp; À étudier |
 
-<br>
 
 {:.tpl-table}
 
@@ -50,7 +46,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 #### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|:-	:|:-:	|
 | **Données de référence<br>d'une entreprise** 	<br>`entreprises` | INSEE & Infogreffe 	| ✅ 	| 💬 	| JSON 	| publiques et confidentielles	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}  	|
 | **Données de référence<br>d'un établissement** <br>	`etablissements` | INSEE 	| ✅ 	| 💬	| JSON 	| publiques et confidentielles	| 	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}|
@@ -65,7 +61,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 #### Informations financières <a id="infos_financieres"></a>
 
 {:.tpl-table}
-| Données et endpoints	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Chiffre d'affaires**<br>`exercices` 	| DGFIP 	| ✅ 	| 📜 	| JSON 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"} 	|
 | **Bilans annuels**<br>`bilans_inpi` 	| INPI 	|  ⏺ 	| 📜 	| ZIP (PDF et XML) 	| publiques et confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
@@ -79,7 +75,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation 	|
+| Données et endpoints 	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation 	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| ✅ 	| 📜 	| PDF 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
 | **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| ACOSS 	| ✅ 	| 📜 	| PDF 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
@@ -94,7 +90,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 #### Certificats professionnels <a id="certificats_pro"></a>
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Certification RGE**<br>`certificats_rge_ademe` 	| ADEME 	|  ⏺	| 💬 	| JSON et PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"} 	|
 | **Certification de qualification bâtiment**<br>`certificats_qualibat` 	| Qualibat 	|  ⏺	| 💬 	| PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"} 	|
@@ -106,7 +102,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 
 {:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>marchés publics 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
+| Données et endpoints 	| Producteur 	| Utilité<br>aides publiques 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	|  ⏺ | 💬 	| JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
@@ -116,8 +112,8 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 ## Liste d'éditeurs
 
-Vous souhaitez vous connecter à l'API Entreprise mais vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée pour intégrer des APIs ? 
-<br> Vous pouvez passer par un éditeur. 
+Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ? 
+<br> **Vous pouvez passer par un éditeur.** 
 <br><br> Nous dressons ici la liste de ceux étant déjà connectés à l'API Entreprise dans ce cas d'usage spécifique :
 
 
@@ -127,7 +123,7 @@ Vous souhaitez vous connecter à l'API Entreprise mais vous n'avez pas de Direct
 |    Entr'ouvert  |  Coopérative | [Publik](https://publik.entrouvert.com/){:target="_blank"}<br> logiciel libre|
 |    MGDIS   | Entreprise privée |[Portail des aides](https://www.mgdis.fr/nos-solutions/pilotage-des-aides-versees/){:target="_blank"}  |
 
-Vous êtes un éditeur proposant une solution pour les aides publiques et ne figurez pas sur cette liste ? Veuillez nous contacter à cette adresse mail : support@entreprise.api.gouv.fr
+Vous êtes un éditeur proposant une solution pour les aides publiques et ne figurez pas sur cette liste ? Veuillez nous contacter à cette adresse mail : [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
 
 ## Formulaire d'accès spécifique au cas d'usage
 
@@ -139,3 +135,14 @@ Vous avez identifié les données nécessaires pour votre service dans le cadre 
 {:.tpl-notification}
 
 Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. 
+<br>
+
+## Ils utilisent l'API Entreprise
+
+Ils utilisent déjà l'API Entreprise pour faciliter le dépôt des dossiers d'aides publiques et leur instruction 
+
+- **Des Communes et intercommunalités** : La Communauté d'agglomération Chauny-Tergnier-La Fère ;
+- **Des métropoles** : La métropole de Lyon ; 
+- **Des régions** : La Région Normandie.
+
+{% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}

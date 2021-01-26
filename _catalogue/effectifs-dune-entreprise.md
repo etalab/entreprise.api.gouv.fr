@@ -11,7 +11,7 @@ description: Dans le cadre du volet 2 des aides régionales aux TPE pour faire
   entreprise ou d'un établissement**. Ces informations sont délivrées par
   l'agence centrale des organismes de la sécurité sociale (ACOSS).
 usecases:
-  - Aide d’urgence Covid-19
+  - Aide d'urgence Covid-19
 opening: Données confidentielles.
 providers:
   - acoss
@@ -183,11 +183,11 @@ services:
           label: object
           description: RaisonDeL’AppelOuIdentifiant
       url: |-
-        **effectifs_mensuels_acoss_covid/**Année**/**Mois 
-        **/etablissement/**SiretDeL'entreprise 
-        **?token=**JetonD’Habilitation 
-        **&context=**CadreDeLaRequête 
-        **&recipient=**BénéficiaireDel’Appel 
+        **effectifs_mensuels_acoss_covid/**Année**/**Mois
+        **/etablissement/**SiretDeL'entreprise
+        **?token=**JetonD’Habilitation
+        **&context=**CadreDeLaRequête
+        **&recipient=**BénéficiaireDel’Appel
         **&object=**RaisonDeL’AppelOuIdentifiant
     label: Effectifs mensuels d'un établissement
     response:

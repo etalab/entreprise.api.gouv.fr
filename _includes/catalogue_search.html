@@ -21,7 +21,7 @@
     <select id="catalogue-usecase" class="tpl-hero__search" name="catalogue-usecase">
       <option value="">Tous les cas d’usage</option>
       {% for usecase in catalogue_usecases %}
-        <option value="{{ usecase[0] }}">{{ usecase[1] }}</option>
+        <option value="{{ usecase[0] }}">{{ usecase[1]['name'] }}</option>
       {% endfor %}
     </select>
     <select id="catalogue-providers" class="tpl-hero__search" name="catalogue-providers">

@@ -15,7 +15,6 @@ description: Obtenir les **données contenues dans les liasses fiscales,** issue
   seul, ou les deux réunis pour une entreprise donnée.
 usecases:
   - Aides publiques
-  - Application de la loi énergie - Art.64
 opening: Données confidentielles.
 perimeter:
   description: >-
