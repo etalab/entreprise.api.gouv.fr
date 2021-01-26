@@ -26,7 +26,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 {:.tpl-table}
 
-| Utilité : Dans ce cas d'usage, la donnée est-elle autorisée ? | 
+| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? | 
 | ---------| 
 | ✅&nbsp; &nbsp; Oui |
 | ❌&nbsp; &nbsp; Non |
