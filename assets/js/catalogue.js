@@ -117,6 +117,10 @@ window.addEventListener('load', function (e) {
     'extraits_courts_inpi': {
       'availability': 'v2/extraits_courts_inpi',
       'current_status': 'apie_2_extraits_courts_inpi'
+    },
+    'entreprises_artisanales_cma': {
+      'availability': 'v2/entreprises_artisanales',
+      'current_status': '',
     }
   }
 
