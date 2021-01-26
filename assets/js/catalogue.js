@@ -348,11 +348,12 @@ window.addEventListener('load', function (e) {
       .then(data => {
         if (!data.error) {
           for (let i = 0; i < el.length; i++) {
+            const id = el[i].getAttribute('id')
+
             if (endpointMatching[id] == null) {
               continue;
             }
 
-            const id = el[i].getAttribute('id')
             const status = el[i].querySelector('.status-marker')
             const uname = endpointMatching[id].current_status
 
