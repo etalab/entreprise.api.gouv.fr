@@ -122,11 +122,11 @@ services:
               "activite_artisanales_declarees": "PRESTATION DE SERVICE COMMERCE",
               // Indique l'activité pour laquelle l'entreprise a demandé son inscription au répertoire des métiers. La valeur est reprise à l'identique de la liasse déclarative et est purement déclarative (variable E71 selon la norme d'échange).
               "code_norme_activite_entreprises": "9602A",
-              // Ce code correspond au code APE de l'entreprise, issu de la nomenclature des activités françaises de l'INSEE. Il définit l'activité principale de l'entreprise.
+              // Ce code correspond au code APE de l'entreprise, issu de la nomenclature des activités françaises de l'INSEE. Il définit l'activité principale de l'entreprise. Il est parfois également nommé code NAF.
               "code_nafa_principal": "9602AA",
               // Code issu de la Nomenclature des Activités Françaises de l'Artisanat (NAFA Rèv2) pour l'activité principale au registre des métiers. La liste de ces codes est explorable sur le site de CMA France au lien suivant: http://nafa.apcma.fr/jlbweb/jlbWeb?html=NAFA/accueil
               "code_nafa_libelle": "Coiffure en salon",
-              // Libellé du code NAFA
+              // Libellé du code NAFA.
               "code_nafa_secondaire1": "",
               // Les entreprises artisanales peuvent avoir plusieurs activités d'artisanat. Ce code se réfère à la même nomenclature (NAFA Rèv2) que le code_nafa_principal.
               "code_nafa_secondaire2": "",
