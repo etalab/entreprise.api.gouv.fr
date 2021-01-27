@@ -19,7 +19,7 @@ API Entreprise est un service réservé aux acteurs publics investis d'une missi
 <br>
 Selon votre cas d'usage spécifique, veillez à demander uniquement les accès aux **données nécessaires** dans le cadre de la facilitation des démarches aux aides publiques et à [fournir les justificatifs]({{ site.baseurl }}/doc/#les-informations-demandees) notamment pour le [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique).Votre raccordement en sera alors grandement accéléré.
 
-Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'utilité de la donnée dans le cadre de la facilitation des demandes d'aides publiques.
+Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'**utilité de la donnée** dans le cadre de la facilitation des demandes d'aides publiques.
 <br>
 
 
@@ -132,10 +132,13 @@ Une partie de cette documentation vous permet notamment de mieux comprendre [**l
 
 ## Ils utilisent l'API Entreprise
 
-Ils utilisent déjà l'API Entreprise pour faciliter le dépôt des dossiers d'aides publiques et leur instruction 
+Ils utilisent déjà l'API Entreprise pour faciliter le dépôt des dossiers d'aides publiques/subventions et leur instruction :
 
-- **Des Communes et intercommunalités** : La Communauté d'agglomération Chauny-Tergnier-La Fère ;
-- **Des métropoles** : La métropole de Lyon ; 
-- **Des régions** : La Région Normandie.
+- **Des communes et intercommunalités** : Alsace collectivité européene, Corbas, Les Sables-D'olonne, Saint Chamond, Venissieux, communauté d'agglomération Chauny-Tergnier-La Fère, communaute urbaine d'Arras, Grand Poitiers communaute urbaine, .
+- **Des métropoles** : Grenoble-Alpes-Métropole, Grand Lyon.
+- **Des départements** : Drôme, Finistère, Isère, Vaucluse.
+- **Des régions** : Bourgogne-Franche-Comte, Bretagne, Centre-Val de Loire, Île-de-France, Normandie, Nouvelle-Aquitaine, Réunion.
+<br>
+<br>
 
 {% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
