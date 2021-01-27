@@ -49,7 +49,8 @@ function onTitleClick(evt) {
 }
 
 function openDetails(hash) {
-  const target = document.getElementById(hash.substring(1))
+  const target = document.getElementById(decodeURIComponent(hash.substring(1)))
+
   if (target) {
     let el = target
 
@@ -60,6 +61,8 @@ function openDetails(hash) {
       el = el.parentNode
     }
 
-    target.scrollIntoView()
+    setTimeout(function() {
+      target.scrollIntoView()
+    }, 100);
   }
 }
