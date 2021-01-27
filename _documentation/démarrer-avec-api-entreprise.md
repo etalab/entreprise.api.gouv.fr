@@ -7,25 +7,50 @@ panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
     content: >-2
-       La demande d'habilitation pour API Entreprise est relativement simple, et se compose de 3 étapes expliquées en détail ci-dessous :
+      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que votre service a les prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation. Celle-ci se déroule en deux étapes : 
 
       <details class="fold">
 
       <summary>
 
-      ###### Étape 0 : Anticiper sa demande 🔎
+      ###### Étape 1 : Le remplissage du formulaire sur api.gouv.fr
+
+      </summary>
+      
+      Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise){:target="_blank"}.<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à d'autres APIs, dont l'[API Particulier](https://api.gouv.fr/les-api/api-particulier).
+      
+      Après la création de votre compte, choisissez le formulaire API Entreprise.
+
+      </details>
+
+
+      <details class="fold">
+
+      <summary>
+
+      ###### Étape 2 : L'instruction de votre dossier par la DINUM
 
       </summary>
 
 
-      Après avoir lu les étapes 1 et 2, [ L'API Entreprise correspond-elle à mon besoin ?](#besoins) et [Les prérequis techniques avant d'aller plus loin](#prerequis), vous êtes désormais prêt à faire une demande d'accès.
-
-      Pour vous permettre d'anticiper, ci-dessous la liste des informations nécessaires :
+      Une fois le formulaire complêté et envoyé par vos soins, nous instruisons votre dossier puis prenons une décision d’acceptation ou de refus de la demande d’accès. Cette instruction prend **en moyenne 11 jours** selon l’affluence des demandes. La durée de traitement est aussi **dépendante de la précision et de l'exhaustivité des informations que vous nous transmettez**, qui influeront sur le nombre d'aller-retour que nous aurons à faire pour le finaliser.
 
 
-      * **le numéro siret de votre administration**. Vous pouvez vous aider du site [entreprise.data.gouv.fr](https://entreprise.data.gouv.fr){:target="_blank"} pour le retrouver.
+      * ❌ Si votre dossier est refusé, des précisions supplémentaires vous seront demandée avant tout refus définitif ;
 
-      * **les données que vous souhaitez obtenir**. Une sélection vous sera proposée parmi une liste de données décrites dans la section "données délivrées".
+      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé. [Connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"} avec vos identifiants api.gouv.fr.
+
+
+      </details>
+
+      ![](../assets/images/documentation/schema-procede-habilitation-api-entreprise.png)
+
+      
+      #### Les informations demandées
+
+      ##### La liste des données souhaitées
+      
+      Une sélection vous sera proposée parmi une liste de données décrites dans la section "données délivrées".
 
         Aidez-vous des [cas d'usage](../cas_usage/) décrits pour vous assurer de votre légitimité.
         L’ensemble des données disponibles sur API Entreprise est détaillé dans le [catalogue des données](../catalogue/). Vous pouvez filtrer les données par cas d’usage.
@@ -38,7 +63,9 @@ panels:
         {:.example}
 
 
-      * **le cadre juridique vous autorisant à traiter les données**.  L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une description précise de votre service et de l'utilité des données demandées dans ce contexte. Dans une majorité des cas, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de justificatifs :   
+      ##### Le cadre juridique 
+      
+      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une description précise de votre service et de l'utilité des données demandées dans ce contexte. Dans une majorité des cas, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de justificatifs :   
 
         * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
         * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées. 
@@ -50,91 +77,37 @@ panels:
         Attention, quel que soit votre statut, le [**CRPA** (Code des relations entre le public et l'administration)](https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000031366350/2020-12-14/){:target="_blank"}, la [**loi ESSOC** (pour un État au service d'une société de confiance)](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037307624/){:target="_blank"} ou la **loi Lemaire** (pour une République numérique) **ne sont pas suffisants** car ils indiquent un principe d'échange qui doit être complété par un cadre juridique précis pour l'utilisation envisagée.
 
 
-      * **les coordonnées du responsable du traitement**.
-        Le responsable du traitement des données est la personne physique ou morale qui, seul ou conjointement avec d’autres, détermine les finalités et les moyens du traitement des données à caractère personnel. Seule une personne appartenant à l'organisme demandeur peut être renseignée.
-      * **les coordonnées de votre délégué·e à la protection des données (DPD)**.
-        Le DPD est la personne qui s'assure que l'organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C'est généralement une personne appartenant à l'organisme demandeur.
+      ##### Les coordonnées des différents contacts
 
-       <details class="fold">
-       <summary>
+        L'ensemble des coordonnées renseignées seront strictement utilisées pour communiquer avec vous.
+
+      * **Le responsable du traitement des données**. C'est la personne physique ou morale qui, seule ou conjointement avec d’autres, détermine les finalités et les moyens du traitement des données à caractère personnel. Cette personne renseignée doit obligatoirement appartenir à l'organisation déclarée dans la demande.
+      
+      * **Le délégué·e à la protection des données**.
+        Le DPD est la personne qui s'assure que l'organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C'est généralement une personne appartenant à l'organisation effectuant la demande.
+
+        <details class="fold">
+
+        <summary>
+           
         Je n’ai pas de DPD, que faire ?
-       </summary>
 
-       Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
+        </summary>
 
-       </details>
+         Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
 
-      * **les coordonnées du contact métier**.
+        </details>
+      
+      * **le contact métier**
 
-      * **les coordonnées du contact technique**. La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise.
+      * **le contact technique** La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise.
 
 
-      L'ensemble des coordonnées renseignées seront strictement utilisées pour communiquer avec vous.
-
+      ##### L'acception des conditions d'utilisation API Entreprise
 
       Vous devrez également **[accepter nos conditions générales d’utilisation](../cgu/){:target="_blank"}**.
 
-
-      </details>
-
-
-      <details class="fold">
-
-      <summary>
-
-      ###### Étape 1 : Faire sa demande d'habilitation sur api.gouv.fr 📝
-
-      </summary>
-
-
-      **Création du compte api.gouv.fr**
-
-
-      |-------------------|-----------------|
-
-      | Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise){:target="_blank"}.<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à API Particulier.<br>Une fois que vous avez inscrit votre adresse mail et un mot de passe, la plateforme vous demande un code à 10 chiffres. Ce code vous est envoyé, sous quelques minutes, par l'équipe api.gouv.fr, sur l'adresse que vous avez indiqué.           |        ![](../assets/images/documentation/data-pass-creation-compte.png){:width="1000"}       |
-
-
-      | Ensuite, il vous est demandé **le numéro de SIRET de votre organisation**, celui-ci est indispensable pour toute création de compte.             |        ![](../assets/images/documentation/data-pass-creation-compte-siret.png){:width="1000"}        |
-
-
-      **Remplir le formulaire d’accès**
-
-
-      |-------------------|-----------------|
-
-      |Remplissez [le formulaire de demande d’accès api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise){:target="_blank"} puis validez-le.  |        ![](../assets/images/documentation/data-pass-remplir-formulaire.png){:width="1000"}        |
-
-      |Au cas où il vous manquerait une information, vous pourrez reprendre ultérieurement le formulaire. Pour cela, n'oubliez pas de cliquer sur le bouton "Sauvegarder le brouillon" se trouvant en bas du formulaire.        |        ![](../assets/images/documentation/data-pass-enregistrer-brouillon.png){:width="1000"}        |
-
-
-      <a class="tpl-button tpl-button--alternate" href="https://datapass.api.gouv.fr/api-entreprise" target="_blank">Se rendre sur api.gouv.fr</a>
-
-
-      </details>
-
-
-      <details class="fold">
-
-      <summary>
-
-      ###### Étape 2 : Suivre l'instruction du dossier par la DINUM ⚙️
-
-      </summary>
-
-
-      Une fois votre demande validée, nous instruisons alors votre dossier puis prenons une décision d’acceptation ou de refus de la demande d’accès. Cette instruction prend **en moyenne 11 jours** selon l’affluence des demandes. La durée de traitement est aussi **dépendante de la précision et de l'exhaustivité des informations que vous nous transmettez**, qui influeront sur le nombre d'aller-retour que nous aurons à faire pour le finaliser.
-
-
-      * ❌ Si votre dossier est refusé, des précisions supplémentaires vous seront demandée avant tout refus définitif ;
-
-      * ✅ Si votre dossier est validé, un mail de confirmation vous est envoyé. [Connectez-vous à votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"} avec vos identifiants api.gouv.fr.
-
-
-      </details>
-
-
-      ![](../assets/images/documentation/schema-procede-habilitation-api-entreprise.png)
+      
     id: demande-habilitation
   panel2:
     title: Habilitation validée ✅, récupérer son token 🔐
