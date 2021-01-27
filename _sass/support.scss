@@ -1,0 +1,87 @@
+.support {
+  padding-bottom: 80px;
+
+  .tpl-support__content {
+    width: 70%;
+    margin: auto;
+  }
+
+  @media (max-width: 1000px) {
+    .tpl-support__content {
+      width: 95%;
+    }
+  }
+
+  .fold {
+    summary {
+      cursor: pointer;
+    }
+  }
+
+  // FIXME refactor documentation
+  .fold {
+    background-color: var(--white);
+    border: 1px solid var(--lighter-grey);
+    border-radius: var(--border-radius-default);
+    margin-bottom: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-s);
+
+    & > :not(summary) {
+      margin-left: var(--spacing-s);
+      margin-right: var(--spacing-s);
+    }
+
+    h4 ~ *:not(h4) {
+      margin-left: var(--spacing-l);
+    }
+
+    h4,h5,h6 {
+      position: relative;
+    }
+
+    .panel-content {
+      margin-top: 1.33em;
+    }
+
+    summary {
+      position: relative;
+
+      h2, h3, h4, h5, h6 {
+        display: inline;
+        font-weight: 400;
+      }
+
+      h3 {
+        font-size: 1.25em;
+      }
+
+      p {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+
+    &[open] {
+      summary {
+        h2, h3, h4, h5, h6 {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  // FIXME refactor documentation
+  .fold:hover .button-link {
+    display: block;
+  }
+
+  a.tpl-button--alternate {
+    background-color: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-s);
+  }
+}
