@@ -154,6 +154,17 @@
     }
   }
 
+  .fold-underline {
+    & > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    & > summary {
+      text-decoration: underline;
+      list-style: none;
+    }
+  }
+
   .documentation-card {
     background-color: var(--white);
     padding: 0;
