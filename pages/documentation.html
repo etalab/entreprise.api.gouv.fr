@@ -32,7 +32,9 @@ additional_js:
             </button>
           </h3>
         </summary>
-        {{ panel[1].content | markdownify }}
+        <div class="panel-content">
+          {{ panel[1].content | markdownify }}
+        </div>
       </details>
     {% endfor %}
   {% endfor %}
