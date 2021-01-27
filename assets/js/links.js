@@ -37,13 +37,14 @@ function copyTextToClipboard(text) {
       fallbackCopyTextToClipboard(text)
       return
   }
+
   navigator.clipboard.writeText(text).then(function() {
-      const flash = document.getElementById('flash')
-      flash.innerHTML = 'Le lien a bien été copié'
-      flash.style.display = 'block'
-      setTimeout(() => {
+    const flash = document.getElementById('flash')
+    flash.innerHTML = 'Le lien a bien été copié'
+    flash.style.display = 'block'
+    setTimeout(() => {
       flash.style.display = 'none'
-      }, 2500)
+    }, 2500)
   }, function(err) {
       console.error('Le texte n’a pas pu être copié : ', err)
   })
