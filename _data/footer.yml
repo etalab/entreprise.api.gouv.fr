@@ -4,7 +4,7 @@ columns:
     label: Contact
     children:
       -
-        label: Contact
+        label: Support
         url: mailto:support@entreprise.api.gouv.fr
       -
         label: Nous rejoindre
