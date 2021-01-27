@@ -301,11 +301,10 @@ a.external-link::after {
     display: none;
     padding: 0.75em 1.25em;
     position: fixed;
-    top: 2em;
+    bottom: 1em;
+    right: 0.5em;
     background-color: var(--darker-grey);
     color: var(--white);
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 100;
   }
 
