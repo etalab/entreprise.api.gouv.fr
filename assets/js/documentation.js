@@ -14,7 +14,7 @@ window.addEventListener('load', function (e) {
 })
 
 function addAnchorButtonsToDocumentContentPanel() {
-  const panelsContentHeadings = document.querySelectorAll('.documentation .panel-content h2,h3,h4,h5,h6')
+  const panelsContentHeadings = document.querySelectorAll('.documentation .panel-content h4,h5,h6')
 
   for (let i = 0; i < panelsContentHeadings.length; i++) {
     buildAnchorButton(panelsContentHeadings[i]);
