@@ -32,6 +32,14 @@ perimeter:
 
     Toutes les attestations sont disponibles pour les entreprises en situation régulière ❌ sauf pour celles qui règlent les cotisations dues à la CNETP à l’URSSAF dans le cadre du Titre Emploi Service Entreprise (TESE).
 
+    <details class="fold-underline">
+
+    <summary>
+
+    Lire la suite
+
+    </summary>
+  
 
     ℹ️ Plus d'informations sur <https://www.cnetp.org/category/affiliation/>{:target="_blank"}
 
@@ -43,6 +51,7 @@ perimeter:
 
 
     L'[article D.3141-20 du code du travail](https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000020572131&cidTexte=LEGITEXT000006072050){:target="_blank"} dispose quant à lui que *"dans les entreprises dont l'activité principale relève des travaux publics, ce service est assuré par une caisse à compétence nationale."*
+    </details>
   label: Entreprises de travaux publics et bâtiment,<br>de certaines conventions
     collectives.
 services:

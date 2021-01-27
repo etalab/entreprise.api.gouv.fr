@@ -112,10 +112,16 @@ perimeter:
 
 
     ⚠️ Cet endpoint concerne uniquement les établissements, voir l'endpoint `entreprises` pour les données relatives aux sociétés.
+    
+    <details class="fold-underline">
 
+    <summary>
 
-    **Cet endpoint permet donc d'accéder aux informations de référence concernant les établissements:**
+    Lire la suite
+    
+    </summary>
 
+    **Cet endpoint permet donc d'accéder aux informations de référence concernant les établissements :**
 
     * ✅ des personnes morales de droit privé. <br> ℹ️ *Toutes les entreprises immatriculées au Registre du Commerce et des Sociétés et au Répertoire des Métiers figurent dans la base Sirene* ;
 
@@ -133,6 +139,7 @@ perimeter:
 
 
     **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904){:target="_blank"}
+    </details>
   label: Établissements d’entreprises, d'entrepreneurs individuels, d'institutions
     administratives et de certaines associations.
 services:

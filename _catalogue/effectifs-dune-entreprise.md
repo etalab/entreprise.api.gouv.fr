@@ -33,10 +33,15 @@ perimeter:
     * ❌ des [junior-entreprises](https://fr.wikipedia.org/wiki/Junior-Entreprise) (environ 200).
 
 
-    \
+    Le **calcul des effectifs** se fait en prenant en compte ✅ l'**ensemble des contrats** établis dans l'entreprise, ❌ mis à part les : 
 
-    Le **calcul des effectifs** se fait en prenant en compte de ✅ l'**ensemble des contrats** établis dans l'entreprise, ❌ mis à part les : 
+    <details class="fold-underline">
 
+    <summary>
+
+    Lire la suite
+    
+    </summary>
 
     * convention de stage ; 
 
@@ -75,6 +80,7 @@ perimeter:
     * militaires de réserve ;
 
     * parcours d'accès aux carrières (Pacte).
+    </details>
 services:
   service1:
     request:
