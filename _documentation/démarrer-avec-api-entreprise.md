@@ -7,7 +7,17 @@ panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
     content: >-2
-      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que votre service a les prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation. Celle-ci se déroule en deux étapes : 
+      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation. 
+      <br>
+      <br>
+    
+      Une demande d’accès doit couvrir **un seul contexte métier**. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte : 
+
+       {:.example}
+      **Exemple de la Région Occitanie :**<br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
+
+
+      La demande d'habilitation se déroule en deux étapes :
 
       <details class="fold">
 
@@ -18,7 +28,7 @@ panels:
       </summary>
       
       Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise){:target="_blank"}.<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à d'autres APIs, dont l'[API Particulier](https://api.gouv.fr/les-api/api-particulier).
-      
+      <br><br>
       Après la création de votre compte, choisissez le formulaire API Entreprise.
 
       </details>
@@ -50,22 +60,18 @@ panels:
 
       ##### La liste des données souhaitées
       
-      Une sélection vous sera proposée parmi une liste de données décrites dans la section "données délivrées".
+        Le formulaire vous permet de cocher les données que vous souhaitez demander.
+        Pour cela vous pouvez vous aider : 
+        
+        * du [catalogue de données](../catalogue/). Il présente l'ensemble des endpoints disponibles accompagnés d'une documentation fonctionnelle et technique.
 
-        Aidez-vous des [cas d'usage](../cas_usage/) décrits pour vous assurer de votre légitimité.
-        L’ensemble des données disponibles sur API Entreprise est détaillé dans le [catalogue des données](../catalogue/). Vous pouvez filtrer les données par cas d’usage.
-
-        Une demande d’accès ne peut pas couvrir plusieurs contextes métiers différents et doit être adaptée au public utilisateur final. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte.
-
-        {:.example}
-
-        **Exemple de la Région Occitanie :**<br><br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
-        {:.example}
+        * des [cas d'usage](../cas_usage/) proposés par API Entreprise.
+        Nous y décrivons les données utiles. Si votre besoin correspond à l'un de ses cas d'usage, vous pourrez vous appuyez sur le formulaire pré-rempli adéquat.
 
 
       ##### Le cadre juridique 
       
-      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une description précise de votre service et de l'utilité des données demandées dans ce contexte. Dans une majorité des cas, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de justificatifs :   
+      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une **description précise de votre service et de l'utilité des données demandées dans ce contexte**. Plus particulièrement pour les endpoints délivrant des données confidentielles, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de **justificatifs** :   
 
         * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
         * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées. 
@@ -98,14 +104,16 @@ panels:
 
         </details>
       
-      * **le contact métier**
+      * **le contact métier**. C'est une personne en responsabilité du projet, il peut s'agir du demandeur. API Entreprise contactera cette personne pour avertir de nouvelles fonctionnalités ou d'incidents majeurs sur nos APIs.
 
-      * **le contact technique** La personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise.
+      * **le contact technique** C'est une personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise. API Entreprise contactera cette personne pour avertir d'évolutions techniques, d'incidents et de l'expiration des jetons.
+
+      Le contact métier et le contact technique peuvent être confondus, notamment si vous passez par un éditeur.
 
 
       ##### L'acception des conditions d'utilisation API Entreprise
 
-      Vous devrez également **[accepter nos conditions générales d’utilisation](../cgu/){:target="_blank"}**.
+      Avant tout envoi de votre demande, vous devez **[accepter nos conditions générales d’utilisation](../cgu/){:target="_blank"}**.<br> Nous vous invitons à les lire attentivement car une grande partie des données circulant par le biais d'API Entreprise sont sensibles. **Votre futur accès à l'API s'accompagne d'engagements**, notamment, entre autres, ceux de présenter les données uniquement aux agents habilités et de tracer l'accès de ces données. 
 
       
     id: demande-habilitation
