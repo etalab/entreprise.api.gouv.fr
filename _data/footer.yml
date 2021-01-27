@@ -1,11 +1,14 @@
 ---
 columns:
   -
-    label: Aide
+    label: Contact
     children:
       -
         label: Contact
         url: mailto:support@entreprise.api.gouv.fr
+      -
+        label: Nous rejoindre
+        url: https://beta.gouv.fr/recrutement/
   -
     label: Produit
     children:
