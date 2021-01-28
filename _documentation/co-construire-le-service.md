@@ -63,5 +63,5 @@ panels:
   panel4:
     title: Nous rejoindre 💼
     id: nous-rejoindre
-    content: 🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
+    content: Vous êtes intéressé-e par l'API Entreprise et souhaitez nous rejoindre ? Nos offres sont publiées sur le [site de Beta.gouv.fr](https://beta.gouv.fr/recrutement/).
 ---

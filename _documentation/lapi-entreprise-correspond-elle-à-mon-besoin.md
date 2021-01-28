@@ -119,10 +119,12 @@ panels:
 
       | [Informations déclaratives d'une association](../catalogue/#associations){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 
-      | [Divers documents d'une association](../catalogue/#documents_associations){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
+      | [Divers documents d'une association](../catalogue/#documents_associations){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |\
+
+      | [Données de référence d'une entreprise artisanale](../catalogue/#a-entreprises_artisanales_cma){:target="_blank"}                     | CMA France |         `entreprises_artisanales_cma`          |      Données JSON   |    publiques    |
 
       | [Actes](../catalogue/#actes_inpi){:target="_blank"}                     | INPI |         `actes_inpi`          |       Archive ZIP (PDF et XML)   |    publiques    |
-      
+
       | [Conventions collectives](../catalogue/#conventions_collectives){:target="_blank"}                     | Fabrique numérique des Ministères Sociaux |         `conventions_collectives`          |     données JSON     |    publiques    |
 
 

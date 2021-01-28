@@ -48,9 +48,10 @@ collections:
   available_data:
     output: true
   use_cases:
-      output: true
+    output: true
   catalogue:
   documentation:
+  supports:
 
 # API Entreprise specific variables
 api_url: https://entreprise.api.gouv.fr/v2/

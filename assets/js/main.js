@@ -3,7 +3,8 @@ window.addEventListener('load', function() {
 
   function init() {
     checkExternalLinks()
-  } 
+    setupSearch()
+  }
 
   function checkExternalLinks() {
     const links = document.querySelectorAll('a')
@@ -13,5 +14,78 @@ window.addEventListener('load', function() {
         links[i].classList.add('external-link')
       }
     }
+  }
+
+  function setupSearch() {
+    const searchResultsId = '#hits';
+    const searchBoxId = '#search-box';
+
+    var searchClient = algoliasearch(
+      '4NUM23WKJI',
+      'b42036d3e76e8385accfb660836a59d1'
+    );
+    var search = instantsearch({
+      indexName: 'prod_api_entreprise_site',
+      searchClient,
+      routing: true
+    });
+
+    // https://www.algolia.com/doc/api-reference/api-parameters/filters/
+    search.addWidget(
+      instantsearch.widgets.configure({
+        filters: 'enable:true AND kind:support',
+        attributesToHighlight: [
+          'question',
+          'answer'
+        ],
+        highlightPreTag: '<span class="search-highlight">',
+        highlightPostTag: '</span>'
+      })
+    );
+
+    search.addWidget(
+      instantsearch.widgets.searchBox({
+        container: searchBoxId,
+        placeholder: 'Écrivez votre question ici',
+        cssClasses: {
+          root: 'algolia-search',
+        }
+      })
+    );
+
+    search.addWidget(
+      instantsearch.widgets.hits({
+        container: '#hits',
+        escapeHTML: false,
+        templates: {
+          empty: '',
+          item(result) {
+            var extra = '';
+            var searchBox = document.getElementsByClassName('ais-SearchBox-input')[0];
+
+            if (searchBox.value != '' && result.__hitIndex == 0) {
+              extra += ' open';
+            }
+
+            return `
+              <details class="entry fold" id="${ result.objectID }"${ extra }>
+                <summary>
+                  <h3>
+                    ${instantsearch.highlight({ attribute: 'question', hit: result })}
+                  </h3>
+                  <span class="label hide-xs">
+                    ${ result.label }
+                  </span>
+                </summary>
+                <div class="panel-content">
+                  ${instantsearch.highlight({ attribute: 'answer', hit: result })}
+                </div>
+            `;
+          }
+        }
+      })
+    );
+
+    search.start();
   }
 })

@@ -1,0 +1,60 @@
+---
+layout: support
+title: Support
+subtitle: Un problème, une question ?<br />Vous trouverez certainement votre réponse ci-dessous 👇
+permalink: /support
+additional_js:
+  - https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js
+  - https://cdn.jsdelivr.net/npm/instantsearch.js@4.13.1
+additional_css:
+  - https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css
+---
+
+<div id="search-box">
+</div>
+
+<div class="tpl-support__content">
+  <div id="hits">
+  </div>
+
+  <details class="fold" id="contact">
+    <summary>
+      <h3>
+        Une autre question ?
+      </h3>
+    </summary>
+    <div class="panel-content">
+      <p>
+        Vous pouvez nous contacter sur <a href="mailto:support@entreprise.api.gouv.fr">support@entreprise.api.gouv.fr</a>.
+
+        <br />
+        <br />
+        Pour améliorer le temps de traitement de votre demande,
+        il est important de nous fournir, au minimum, les informations suivantes :
+
+        <ul>
+          <li>
+            le ou les endpoints sur lesquels le problème est rencontré ;
+          </li>
+
+          <li>
+            le SIRET, SIREN ou tout autre paramètre passé à la requête ;
+          </li>
+          <li>
+            l'adresse email sous laquelle est enregistré votre jeton d'authentification ;
+          </li>
+          <li>
+            Toute autre information (capture d'écran, message d'erreur, etc.) détaillant l'erreur rencontrée est bienvenue.
+          </li>
+        </ul>
+
+        <div class="tpl-notification tpl--danger">
+          <strong>Ne pas partager votre jeton d'authentification dans votre demande de support !</strong>
+          <br />
+          <br />
+          L'échange d'emails n'est pas un support de communication sécurisé et certaines APIs donnent accès à des données sensibles. Le cas échéant, nous serons obligés de supprimer votre jeton, et vous devrez faire une nouvelle demande.
+        </div>
+      </p>
+    </div>
+  </details>
+</div>
