@@ -32,7 +32,13 @@ window.addEventListener('load', function() {
     // https://www.algolia.com/doc/api-reference/api-parameters/filters/
     search.addWidget(
       instantsearch.widgets.configure({
-        filters: 'enable:true AND kind:support'
+        filters: 'enable:true AND kind:support',
+        attributesToHighlight: [
+          'question',
+          'answer'
+        ],
+        highlightPreTag: '<span class="search-highlight">',
+        highlightPostTag: '</span>'
       })
     );
 
@@ -56,13 +62,15 @@ window.addEventListener('load', function() {
             return `
               <details class="entry fold" id="${ result.objectID }">
                 <summary>
-                  <h3>${ result.question }</h3>
+                  <h3>
+                    ${instantsearch.highlight({ attribute: 'question', hit: result })}
+                  </h3>
                   <span class="label">
                     ${ result.label }
                   </span>
                 </summary>
                 <div class="panel-content">
-                 ${ result.answer }
+                  ${instantsearch.highlight({ attribute: 'answer', hit: result })}
                 </div>
             `;
           }

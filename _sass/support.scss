@@ -64,6 +64,13 @@
     }
   }
 
+  #hits {
+    span.search-highlight {
+      font-style: initial;
+      background-color: yellow;
+    }
+  }
+
   @media (max-width: 1000px) {
     #search-box {
       width: 80%;
