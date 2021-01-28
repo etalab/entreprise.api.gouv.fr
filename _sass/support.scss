@@ -47,14 +47,28 @@
     }
 
     .ais-SearchBox-input {
-      padding: 12px 0px 12px 30px;
+      padding: 12px 0px 12px 50px;
       width: 100%;
+      font-size: 16px;
+      color: #0048B3;
+      border-radius: 100px;
+      border: 3px solid #0048B3;
     }
 
     .ais-SearchBox-submit {
       position: absolute;
       top: 17px;
       left: 11px;
+    }
+
+    .ais-SearchBox-submitIcon {
+      width: 18px;
+      margin-left: 12px;
+      
+    }
+
+    .ais-SearchBox-resetIcon {
+      margin-right: 12px;
     }
 
     .ais-SearchBox-reset {
@@ -67,7 +81,7 @@
   #hits {
     span.search-highlight {
       font-style: initial;
-      background-color: yellow;
+      background-color: rgba(255, 255, 154, 0.637);
     }
   }
 

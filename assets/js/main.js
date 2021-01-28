@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
     search.addWidget(
       instantsearch.widgets.searchBox({
         container: searchBoxId,
-        placeholder: 'Tapez votre question ici',
+        placeholder: 'Écrivez votre question ici',
         cssClasses: {
           root: 'algolia-search',
         }
