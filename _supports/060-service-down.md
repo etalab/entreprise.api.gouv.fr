@@ -2,7 +2,7 @@
 position: '060'
 enable: true
 question: "Le service ne répond plus"
-label: 'Service'
+label: '🚧 Incident'
 answer: >-
   Nous monitorons l’ensemble des services et sommes généralement déjà au courant si le service est partiellement ou totalement indisponible.
 

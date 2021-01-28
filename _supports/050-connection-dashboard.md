@@ -1,7 +1,7 @@
 ---
 position: '050'
 question: "Je n'arrive pas à me connecter au tableau de bord"
-label: "Tableau de bord"
+label: "🎛 Tableau de bord"
 enable: true
 answer: >-
   

@@ -2,7 +2,7 @@
 position: '040'
 enable: true
 question: "Comment utiliser mon jeton ?"
-label: "Token"
+label: "🔑 Token"
 answer: >-
   Vous trouverez toutes les informations nécessaires dans le lien suivant:
   [Démarrer avec API Entreprise](./doc/#demarrer), plus précisément dans les
