@@ -1,110 +1,168 @@
 ---
 layout: usecases
-title: Marchés Publics
+title: Faciliter la candidature aux marchés publics et leur instruction
 ---
 
-## À quoi sert API Entreprise ?
+## Le rôle d'API Entreprise
 
-L'API Entreprise vous permet de **faciliter la candidature des associations et entreprises a un marché public**, en obtenant pour elles des informations administratives.
-Pour certains données, il est même possible de les préremplir dans les formulaires de candidature.
+{% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-marches-publics.png' %}
 
-Elle **simplifie également le travail de l'instructeur** qui peut rapidement trouver les informations dont il a besoin (justificats, certificats, ...)
+API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des candidatures aux marchés publiques, en mettant à disposition plusieurs API afin de faciliter : 
 
-En savoir plus sur [le préremplissage d'un formulaire et l'obtention d'une donnée en back office par un agent habilité](https://entreprise.api.gouv.fr/doc/#cas-usage){:target="_blank"}
+- le dépôt de leur candidature, **en [pré-remplissant le formulaire du demandeur]({{ site.baseurl }}/doc/#le-pr-remplissage-dun-formulaire--destination-du-public)** grâce à leur numéro de SIRET/RNA ;
+- la construction du dossier et le travail de l'instructeur **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
 
-## Qui peut utiliser l'API Entreprise ?
 
-L'API Entreprise est un service dont l'accès se fait [sous habilitation et sous certaines conditions](https://entreprise.api.gouv.fr/doc/#acces){:target="_blank"}.
+## Les données utiles aux marchés publics
 
-Dans le cadre des marchés publics, voici les différentes catégories de nos utilisateurs : 
-- Les acheteurs publics ; 
-- Les éditeurs de place de marchés ; 
-- Le service DUME (Document Unique du Marché Européen) rendu par l'AIFE (Agence pour l'Informatique Financière de l'État).
+API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
+<br>
+Selon votre cas d'usage spécifique, veillez à demander uniquement les accès aux **données nécessaires** dans le cadre de la facilitation des candidatures et de l'instruction aux marchés publics et à [fournir les justificatifs]({{ site.baseurl }}/doc/#les-informations-demandees) notamment pour le [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique).Votre raccordement en sera alors grandement accéléré.
 
-## Les services et éditeurs connectés à l'API Entreprise
+  {:.example}
 
-Depuis le 12 décembre 2019, les acheteurs publics ont l'obligation légale de passer par une plateforme de dématérialisation des procédures de marchés publics (profil acheteur), pour tout marché dont le besoin estimé est supérieur à 40 000 € HT.
+  Par exemple, votre service s'adresse uniquement à des entreprises ? Inutile donc de demander les données des associations délivrées par les endpoints `associations` et `documents_associations`.
 
-###### Voici la liste des services et éditeurs connectés à l'API Entreprise : 
+Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'**utilité de la donnée** dans le cadre de la facilitation des marchés publics.
+<br>
+
+
+##### Légende du tableau 
 
 {:.tpl-table}
-| Éditeurs et services connecté à l'API Entreprise        |     type d'entité  |    Profil acheteur ou service        |
-|------------------------|:-------------------------------------------:|:-------------------------------------------:|
-|    AIFE <br>(Agence pour l'Informatique Financière de l'État)       |  agence publique | [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |
-|      Achatpublic.com     | entreprise privée |[achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
-|    Atexo                 | entreprise privée | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     |
-|    AWS                   |    entreprise privée |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}                                      |
-|    Dematis               |     entreprise privée |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}                                |
-|    Entr'ouvert               |     coopérative |       [entrouvert.com](https://www.entrouvert.com){:target="_blank"}                                |
-|    Klekoon          | entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"}                                        |
-|    Provigis              |    entreprise privée |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"}                                     |
 
-## Données utiles et aurorisées dans le cadre des marchés publics
-
-Vous trouverez ci-dessous les données autorisées et non autorisées dans le cadre des marchés publics et classées dans différentes catégories :
-- [Informations générales](#infos_generales),
-- [Informations financières](#infos_financieres),
-- [Attestations sociales et fiscales](#attestations_sociales_fiscales),
-- [Certificats professionnels](#certificats_pro),
-- [Propriété intellectuelle](#propriete_intellectuelle).
+| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? | 
+| ---------| 
+| ✅&nbsp; &nbsp; Oui |
+| ⏺&nbsp; &nbsp; À étudier |
+| ❌&nbsp; &nbsp; Non |
 
 
 #### Informations générales <a id="infos_generales"></a>
 
 {:.tpl-table}
-| Données   | Autorisation marchés publics   |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:----:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Données de référence d'une entreprise](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}                  | ✅ |  INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques et confidentielles pour les non-diffusibles    |
-| [Données de référence d'un établissement](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}                | ✅ |         INSEE           |          `etablissements`           |    données JSON     |    publiques et confidentielles pour les non-diffusibles    |
-| [Extrait  RCS](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe){:target="_blank"}                                           |     ✅ |   Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    confidentielles    |
-| [Données déclaratives d'une association](https://entreprise.api.gouv.fr/catalogue/#associations){:target="_blank"}                 | ✅ |Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
-| [Divers documents d'une association](https://entreprise.api.gouv.fr/catalogue/#documents_associations){:target="_blank"}                     | ✅ |Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
-| [Actes](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"}                     |✅ | INPI |         `actes_inpi`          |     Archive ZIP (PDF et XML)     |    publiques    |
-| [Conventions collectives](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"}                     |✅ | Fabrique numérique des Ministères Sociaux |         `conventions_collectives`          |     données JSON     |    publiques    |
+| Données et endpoints 	| Producteur 	| Utilité| Format 	| Ouverture 	| Documentation	|
+|-	|:-:	|:-:	|:-:	|:-:	|:-:	|:-	:|:-:	|
+| **Données de référence<br>d'une entreprise** 	<br>`entreprises` | INSEE & Infogreffe 	| ✅ 	|  JSON 	| publiques et confidentielles	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}  	|
+| **Données de référence<br>d'un établissement** <br>	`etablissements` | INSEE 	| ✅ 	|  JSON 	| publiques et confidentielles	| 	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}|
+| **Extrait  RCS** <br> `extraits_rcs_infogreffe` 	| Infogreffe 	|  ✅ 	|  JSON 	| confidentielles 🔐 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe){:target="_blank"}	|
+| **Données déclaratives<br>d'une association** <br> `associations`	| Ministère de l'Intérieur 	| ✅ 	 | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#associations){:target="_blank"} 	|
+| **Divers documents<br>d'une association** <br> `documents_associations`  	| Ministère de l'Intérieur 	| ✅ 	| PDF 	| publiques 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#documents_associations){:target="_blank"}	|
+| **Données de référence d'une entreprise artisanale**<br> `entreprises_artisanales_cma` 	| CMA France 	|  ✅ 	|  JSON 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-entreprises_artisanales_cma){:target="_blank"} |
+| **Actes**<br> `actes_inpi` 	| INPI 	|  ✅ 	|  ZIP (PDF et XML) 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"} |
+| **Conventions collectives** <br> `conventions_collectives` 	| Fabrique numérique des Ministères Sociaux 	|  ✅ 	|  JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"} 	|
+| **Effectif d'une entreprise** <br> `effectifs_..._acoss_covid` 	| ACOSS 	|  ✅ 	|  JSON 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid){:target="_blank"} 	|
+
+<br>
 
 #### Informations financières <a id="infos_financieres"></a>
 
 {:.tpl-table}
-| Données                                              | Autorisation marchés publics   |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Chiffre d'affaires](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"}                                     |     ✅ |     DGFIP           |                `exercices`                |    données JSON     | confidentielles |
-| [Bilans annuels](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"}                                     |     ✅ |  INPI     |         `bilans_inpi`          |    Archive ZIP (PDF et XML)     | publiques et confidentielles |
-| [3 derniers bilans entreprise](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"}                                     |     ❌ |  Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
-| [Déclarations et dictionnaire de liasses fiscales](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip)      |        ❌ |    DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
+| Données et endpoints	| Producteur 	| Utilité 	| Format 	| Ouverture 	|  Documentation	|
+|-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
+| **Chiffre d'affaires**<br>`exercices` 	| DGFIP 	| ✅ 	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"} 	|
+| **Bilans annuels**<br>`bilans_inpi` 	| INPI 	|  ✅ 	| ZIP (PDF et XML) 	| publiques et confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
+| **3 derniers bilans annuels**<br>`bilans_entreprises_bdf` 	| Banque de France 	| ❌ 	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"} 	|
+| **Déclarations de résultat**<br>`liasses_fiscales_dgfip` 	| DGFIP 	| ❌ 	| JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip){:target="_blank"} 	|
+
+<br>
+
 
 #### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
 
+
 {:.tpl-table}
-| Données              |  Autorisation marchés publics   |       Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Attestation fiscale](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"}                                    |      ✅ |    DGFIP           |       `attestations_fiscales_dgfip`       |     PDF     | confidentielles |
-| [Attestation de vigilance](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"}                               |  ✅ |        ACOSS           |       `attestations_sociales_acoss`       |     PDF    | confidentielles |
-| [Conformité emploi des travailleurs handicapés AGEFIPH](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"}  |   ✅ |      AGEFIPH          |          `attestations_agefiph`           |    données JSON     | confidentielles |
-| [Cotisations de sécurité sociale agricole](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"}                | ✅ |          MSA            |             `cotisations_msa`             |    données JSON     | confidentielles |
-| [Cotisations retraite bâtiment](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"}                       |  ✅ |        PROBTP          | `cotisation_retraite_probtp` |    données JSON     |   confidentielles    |
-| [Carte professionnelle travaux publics](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp){:target="_blank"}         |       ✅ |   FNTP           |            `cartes_professionnelles_fntp`            |         PDF         |    publiques    |
-| [Cotisations congés payés & chômage intempéries](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp){:target="_blank"}         |   ✅ |       CNETP           |            `certificats_cnetp`            |         PDF         |    confidentielles    |
+| Données et endpoints 	| Producteur 	| Utilité	| Format 	| Ouverture 	| Documentation 	|
+|-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
+| **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| ✅ 	| PDF 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
+| **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| ACOSS 	| ✅ 	|  PDF 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
+| **Conformité emploi des travailleurs handicapés**<br>`attestations_agefiph` 	| AGEFIPH 	|  ✅	| JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"} 	|
+| **Cotisations de sécurité sociale agricole**<br>`cotisations_msa` 	| MSA 	|  ✅	| JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"} 	|
+| **Cotisations retraite bâtiment**<br>`cotisation_retraite_probtp` 	| PROBTP 	|  ✅	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"} 	|
+| **Carte professionnelle travaux publics**<br>`cartes_professionnelles_fntp` 	| FNTP 	|  ✅	|PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp){:target="_blank"} 	|
+| **Cotisations congés payés & chômage intempéries**<br>`certificats_cnetp` 	| CNETP 	|  ✅	|  PDF 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp){:target="_blank"} 	|
+
+<br>
 
 #### Certificats professionnels <a id="certificats_pro"></a>
 
 {:.tpl-table}
-| Données      |  Autorisation marchés publics   |       Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Certification RGE](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"}                                      |    ✅ |      ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
-| [Certification de qualification bâtiment](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"}                  |    ✅ |      Qualibat          |           `certificats_qualibat`            |    PDF     |    publiques    |
-| [Certification de qualification d'ingénierie](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi){:target="_blank"}                  |   ✅ |       OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
+| Données et endpoints 	| Producteur 	| Utilité| Format 	| Ouverture 	|  Documentation	|
+|-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
+| **Certification RGE**<br>`certificats_rge_ademe` 	| ADEME 	|  ✅	| JSON et PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"} 	|
+| **Certification de qualification bâtiment**<br>`certificats_qualibat` 	| Qualibat 	|  ✅	| PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"} 	|
+| **Certification de qualification d'ingénierie**<br>`certificats_opqibi` 	| OPQIBI 	|  ✅	|JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi){:target="_blank"} 	|
 
+<br>
 
 #### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
 
+
 {:.tpl-table}
-| Données          |    Autorisation marchés publics   |     Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-| ----------------------------------------------------- |:------------------------:|:------------------------:|:-----------------------------------------:|:-------------------:|:---------------:|
-| [Brevets, modèles et marques déposées](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"}                   | ✅ |          INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
+| Données et endpoints 	| Producteur 	| Utilité	| Format 	| Ouverture 	|  Documentation	|
+|-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
+| **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	|  ✅ | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
 
-## Demander un accès à l'API Entreprise
+  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>  
 
-Si vous êtes un acheteur public, il est probable que vous ayez déjà accès aux données d'API Entreprise par l'intermédiaire de votre profil acheteur ou du DUME que peut remplir l'entreprise.
 
-Dans les autres cas, nous vous invitons à faire une demande d'habilitation à l'API Entreprise :
+## Liste d'éditeurs
+
+Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ? 
+<br> **Vous pouvez passer par un éditeur.** 
+
+{:.tpl-notification}
+Depuis le 12 décembre 2019, les acheteurs publics ont l'obligation légale de passer par une plateforme de dématérialisation des procédures de marchés publics (profil acheteur), pour tout marché dont le besoin estimé est supérieur à 40 000 € HT.
+
+<br> Nous dressons ici la liste de ceux étant déjà connectés à l'API Entreprise dans ce cas d'usage spécifique :
+
+
+{:.tpl-table}
+| Éditeurs et services connectés à l'API Entreprise        |     type d'entité  |    Profil acheteur ou service        |
+|------------------------|:-------------------------------------------:|:-------------------------------------------:|
+|    AIFE <br>(Agence pour l'Informatique Financière de l'État)       |  agence publique | [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |
+|      Achatpublic    | entreprise privée |[achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
+|    Atexo                 | entreprise privée | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     |
+|    AWS                   |    entreprise privée |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}  |                           
+|    Atline Services                   |    entreprise privée |    [marchés-securises.fr](https://www.marches-securises.fr/entreprise/?){:target="_blank"}|        
+|    Dematis               |     entreprise privée |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}                                |
+|    Entr'ouvert               |     coopérative |       [entrouvert.com](https://www.entrouvert.com){:target="_blank"}                                |
+|    Klekoon          | entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"}                                        |
+|    Provigis              |    entreprise privée |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"}                                     |
+|    Territoires numériques               |    groupement d'intérêt public Bourgogne Franche-Comté |     [Pack commande publique](https://www.ternum-bfc.fr/services/pack-commande-publique){:target="_blank"}                                     |
+
+Vous êtes un éditeur proposant une solution pour les marchés publics et ne figurez pas sur cette liste ? Veuillez nous contacter à cette adresse mail : [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
+
+
+
+## Formulaire d'accès spécifique au cas d'usage
+
+Si vous êtes un acheteur public, il est probable que vous ayez déjà accès aux données d'API Entreprise par l'intermédiaire de votre profil acheteur ou du DUME (Document Unique du Marché Européen) que peut remplir l'entreprise.
+
+Si vous n'êtes pas dans ce premier cas et que vous avez identifié les données nécessaires pour votre service dans le cadre des marchés publics, le lien ci-dessous vous permet d'accéder à un formulaire spécifique "marchés publics" :
+
+  <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "marchés publics"</a>
+
+
+{:.tpl-notification}
+
+Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
+Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formualire.
+<br>
+
+
+## Ils utilisent l'API Entreprise
+
+
+Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruction des marchés publics :
+
+- **Des communes et intercommunalités** : communauté de communes du grand Langres, communauté intercommunale Nord Réunion, Corbeil-Essonnes, Marseille, communauté d'agglomération du Territoire de la Côte Ouest
+.
+- **Des métropoles** : Grenoble-Alpes-Métropole, Grand Lyon.
+- **Des départements** : Drôme, Finistère, Isère, Vaucluse.
+- **Des régions** : Bourgogne-Franche-Comte, Bretagne, Centre-Val de Loire, Île-de-France, Normandie, Nouvelle-Aquitaine, Réunion.
+<br>
+<br>
+
+{% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
