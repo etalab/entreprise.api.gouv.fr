@@ -157,12 +157,14 @@ Une partie de cette documentation vous permet notamment de mieux comprendre [**l
 
 Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruction des marchés publics :
 
-- **Des communes et intercommunalités** : communauté de communes du grand Langres, communauté intercommunale Nord Réunion, Corbeil-Essonnes, Marseille, communauté d'agglomération du Territoire de la Côte Ouest
-.
-- **Des métropoles** : Grenoble-Alpes-Métropole, Grand Lyon.
-- **Des départements** : Drôme, Finistère, Isère, Vaucluse.
-- **Des régions** : Bourgogne-Franche-Comte, Bretagne, Centre-Val de Loire, Île-de-France, Normandie, Nouvelle-Aquitaine, Réunion.
+- **Des communes et intercommunalités** : Communauté d'agglomération du Territoire de la Côte Ouest, communauté de Communes du Grand-Langres, communauté Intercommunale du Nord de La Réunion, communauté urbaine du Grand Reims, commune de Corbeil-Essonnes, commune de Marseille.
+- **Des métropoles** : Bordeaux Métropole, eurométropole de Strasbourg, métropole Aix-Marseille-Provence, métropole du Grand Nancy, Nantes Métropole.
+- **Des départements** : Ain, Bouches-du-Rhône, Drôme, Eure, Loire-Atlantique, Meuse.
+- **Des régions** : Aquitaine, Auvergne-Rhône-Alpes, Centre-Val de Loire, Grand Est, Nouvelle-Aquitaine, Occitanie, Pays de la Loire.
+- **Des administrations centrales**: Agence pour l'informatique financière de l'État, Direction des achats de l'État.
+- **Des groupements d'intérêt publics**: Groupement d’Intérêt Public Maximilien, iMSA, Samusocial de Paris, Territoires Numériques – BFC.
+- **Des opérateurs**: Aéroport Marseille Provence, agence publique pour l'immobilier de la justice, centre de coopération internationale en recherche agronomique pour le développement, centre Hospitalier Universitaire de Montpellier, centre national de la fonction publique territoriale, centre national de la recherche scientifique, établissement public territorial de bassin Seine Grands Lacs, port autonome de Strasbourg, URSSAF Pays de la Loire.
 <br>
 <br>
 
-{% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
+{% asset 'cas-usage/cas-usage-marches-publics-exemples.png' %}
