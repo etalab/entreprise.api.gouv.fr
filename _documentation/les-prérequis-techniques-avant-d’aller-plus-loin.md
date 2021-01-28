@@ -180,7 +180,7 @@ panels:
 
       Le token peut également être supprimé s’il a été diffusé par mégarde.
 
-      Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"}. Pour en savoir plus sur le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](#tape-2--remplir-le-formulaire-de-renouvellement-).
+      Le **renouvellement d’un token est très facile et rapide**. C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr). Pour en savoir plus sur le renouvellement d’un token, consultez la rubrique [Renouveler un token en fin de vie](#tape-2--remplir-le-formulaire-de-renouvellement-).
   panel3:
     title: Les fondamentaux à mettre en place avec l'équipe technique 🧰
     id: fondamentaux
