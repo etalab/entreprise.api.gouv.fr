@@ -33,3 +33,5 @@ gem 'mina'
 gem 'colorize'
 
 gem 'kramdown-parser-gfm'
+
+gem 'algolia'
