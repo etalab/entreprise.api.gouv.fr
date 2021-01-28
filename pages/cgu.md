@@ -29,7 +29,7 @@ La liste exhaustive des données, des documents et des modalités techniques de 
 Département Étalab, Direction interministérielle du numérique (DINUM).
 
 -	Directeur de la publication
-M. Nadi BOU HANNA, Directeur Interministériel du Numérique 
+M. Nadi BOU HANNA, Directeur Interministériel du Numérique
 
 -	Prestataire d'hébergement
 OVH RCS Roubaix – Tourcoing 424 761 419 00045 Code APE 6202A N° TVA : FR 22 424 761 419 Siège social : 2 rue Kellermann - 59100 Roubaix - France.
@@ -41,7 +41,7 @@ L'utilisation du Service, est facultative et gratuite.
 ### 3.1.	Rôle et engagements du Partenaire
 
  _Adhésion_
- 
+
 Le Partenaire vérifie qu’il remplit les conditions d’accès présentées dans les présentes CGU et effectue sa demande d’adhésion à partir du site internet : https://signup.entreprise.api.gouv.fr
 
 Le Partenaire demande l’accès aux seules données strictement nécessaires à la réalisation d’une démarche administrative.
@@ -65,7 +65,7 @@ Le Partenaire s’engage à présenter les données obtenues par l’intermédia
 Pour ce qui concerne les données de la base Sirene, le Partenaire s’engage à tenir compte du statut de diffusion le plus récent de chaque personne physique, qui tient compte des oppositions formulées par certaines d’entre elles, à la  l’utilisation par des tiers autres que les organismes habilités au titre de l’article R. 123-224 du code de commerce ou les administrations à des fins de prospection, notamment commerciale. En cas d’octroi d’un accès aux données des personnes physiques pour lesquelles les variables statutDiffusionEtablissement et statutDiffusionUniteLegale sont à la valeur N, le Partenaire s’engage à n’utiliser ces informations que dans le cadre strict de ses missions de service public, et à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
 
 Le Partenaire s’engage à ne pas commercialiser les données reçues et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
-Le Partenaire s’engage à mettre en œuvre les mesures de sécurité techniques et organisationnelles nécessaires au bon fonctionnement du Service, notamment en matière de traçabilité interne, et à informer, le cas échéant, le DINUM de toute difficulté de nature à compromettre le bon fonctionnement du Service. En particulier, il garantit la confidentialité du jeton. Dès lors que la confidentialité du jeton a pu être compromise, y compris de manière accidentelle, le jeton est révoqué. A cette fin, le Partenaire s’engage à alerter sans délai la DINUM en envoyant un courriel à : support.api.gouv.fr.
+Le Partenaire s’engage à mettre en œuvre les mesures de sécurité techniques et organisationnelles nécessaires au bon fonctionnement du Service, notamment en matière de traçabilité interne, et à informer, le cas échéant, le DINUM de toute difficulté de nature à compromettre le bon fonctionnement du Service. En particulier, il garantit la confidentialité du jeton. Dès lors que la confidentialité du jeton a pu être compromise, y compris de manière accidentelle, le jeton est révoqué. A cette fin, le Partenaire s’engage à alerter sans délai la DINUM en envoyant un courriel à : support@entreprise.api.gouv.fr
 
 En cas d’incident grave dans l’utilisation du Service, le Partenaire s’engage à coopérer avec la DINUM dans la réalisation d’un audit, en fournissant toutes les informations nécessaires.
 
@@ -105,27 +105,27 @@ Il utilise [Matomo](https://fr.matomo.org/){:target="_blank"}, un outil libre, p
 
 ## 4 - Traitement des données à caractère personnel ##
 
-Le Service ne collecte que les données strictement nécessaires à sa mise en œuvre. 
+Le Service ne collecte que les données strictement nécessaires à sa mise en œuvre.
 
-Les catégories de données à caractère personnel traitées sont les suivantes :  
--	adresse email du correspondant de l’organisation disposant du compte API Gouv. 
+Les catégories de données à caractère personnel traitées sont les suivantes :
+-	adresse email du correspondant de l’organisation disposant du compte API Gouv.
 Ces informations permettent d’assurer l’accès du « Partenaire » au dashboard privé, de récupérer ses jetons, de recevoir les notifications de renouvellement, d’accéder aux les lettres d'informations, de consulter les invitations en OpenLab.
 -	adresse email et numéro de téléphone d'un responsable technique (renseigné pour chaque jeton).
 Ces informations constituent le point d'entrée pour toutes questions techniques, ils permettent également aux contacts de recevoir des invitations et des lettres d'informations.
--	adresse email et numéro de téléphone d'un responsable métier (renseigné pour chaque jeton). 
+-	adresse email et numéro de téléphone d'un responsable métier (renseigné pour chaque jeton).
 
 Ces informations permettent de développer le service API Entreprise (lettre d'informations, invitations aux Openlab)
 Enfin, d’autres informations techniques sont conservées via logs d'utilisations du service par les usagers (URL appelée, paramètres d'appel, jeton, adresse IP, date et heure, code réponse ...) afin de permettre la supervision du service et de faciliter la résolution d’incidents. La DINUM s'engage à prendre toutes précautions utiles pour préserver la sécurité des données collectées auprès de l'usager, et notamment empêcher qu'elles soient déformées et endommagées ou que des tiers non autorisés y aient accès.
 
-La DINUM garantit aux usagers du Service les droits d'accès, de rectification et d'opposition prévus par la loi n° 78-17 du 6 janvier 1978 relative à l'informatique aux fichiers et aux libertés. 
+La DINUM garantit aux usagers du Service les droits d'accès, de rectification et d'opposition prévus par la loi n° 78-17 du 6 janvier 1978 relative à l'informatique aux fichiers et aux libertés.
 
-Ces droits s’exercent via l’adresse mail : support@entreprise.api.gouv.fr.
+Ces droits s’exercent via l’adresse mail : support@entreprise.api.gouv.fr
 La DINUM s'engage à n'opérer aucune commercialisation des informations et documents transmis par l'usager au moyen du Service, et à ne pas les communiquer à des tiers, en dehors des cas prévus par la loi.
 
 
 ## 5 - Cadre légal et responsabilité ##
 
-Le présent Service est mis en œuvre selon les dispositions du code des relations entre le public et l’administration (CRPA). 
+Le présent Service est mis en œuvre selon les dispositions du code des relations entre le public et l’administration (CRPA).
 Les CGU s’inscrivent également dans le cadre :
 •	Des articles L. 114-8 et suivants du code des relations entre le public et l’administration relatifs à l’échange de données entre administrations
 •	De la loi n° 78-17 du 6 janvier 1978 modifiée relative à l’informatique, aux fichiers et aux libertés
@@ -135,9 +135,9 @@ Les CGU s’inscrivent également dans le cadre :
 L’adhésion du Partenaire au Service emporte l’acceptation des présentes CGU.
 
 Le Service est mis à disposition sans autres garanties expresses ou tacites que celles qui sont prévues par les présentes.
-Le service est développé conformément à l’état de l’art. Toutefois, il n’est pas garanti qu’il soit exempt d’anomalies ou erreurs. Le service est donc mis à disposition sans garantie sur sa disponibilité et ses performances. A ce titre, la DINUM ne peut être tenue responsable des pertes et/ou préjudices, de quelque nature qu’ils soient, qui pourraient être causés à la suite d’un dysfonctionnement ou une indisponibilité du service. De telles situations n'ouvriront droit à aucune compensation financière.  
+Le service est développé conformément à l’état de l’art. Toutefois, il n’est pas garanti qu’il soit exempt d’anomalies ou erreurs. Le service est donc mis à disposition sans garantie sur sa disponibilité et ses performances. A ce titre, la DINUM ne peut être tenue responsable des pertes et/ou préjudices, de quelque nature qu’ils soient, qui pourraient être causés à la suite d’un dysfonctionnement ou une indisponibilité du service. De telles situations n'ouvriront droit à aucune compensation financière.
 
-Le partenaire s’engage à respecter les présentes CGU et la législation en vigueur. Il s’engage notamment à ne fournir, dans le cadre de l'utilisation du Service, que des informations exactes, à jour et complètes. 
+Le partenaire s’engage à respecter les présentes CGU et la législation en vigueur. Il s’engage notamment à ne fournir, dans le cadre de l'utilisation du Service, que des informations exactes, à jour et complètes.
 
 Dans l'hypothèse où le partenaire ne s'acquitterait pas de ses engagements, la DINUM se réserve le droit de suspendre ou résilier le service pour ce partenaire, sans préjudice des éventuelles actions en responsabilité pénale et civile qui pourraient être engagées à son encontre.
 Il est rappelé que toute personne procédant à une fausse déclaration pour elle-même ou pour autrui s'expose, notamment, aux sanctions prévues à l'article 441-1 du Code Pénal, prévoyant des peines pouvant aller jusqu'à trois ans d'emprisonnement et 45 000 euros d'amende.
