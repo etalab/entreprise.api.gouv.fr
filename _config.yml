@@ -51,6 +51,7 @@ collections:
       output: true
   catalogue:
   documentation:
+  supports:
 
 # API Entreprise specific variables
 api_url: https://entreprise.api.gouv.fr/v2/

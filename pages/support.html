@@ -1,0 +1,70 @@
+---
+layout: support
+title: Support
+subtitle: Un problème, une question ?<br />Vous trouverez certainement votre réponse ci-dessous 👇
+permalink: /support
+---
+
+<div class="tpl-support__content">
+  <div id="flash"></div>
+  {% assign supports = site.supports | where_exp:'item', "item.enable != false" | sort: 'position' %}
+
+  {% for support in supports %}
+    {% assign supportId = support.path | replace: '.md', '' | replace: '_supports/', '' %}
+
+    <details class="fold" id="{{ supportId }}">
+      <summary>
+        <h3 class="link-ref">
+          {{ support.question }}
+        </h3>
+        <span class="label">
+          {{ support.label }}
+        </span>
+      </summary>
+      <div class="panel-content">
+        {{ support.answer | markdownify }}
+      </div>
+    </details>
+  {% endfor %}
+
+  <details class="fold" id="contact">
+    <summary>
+      <h3 class="link-ref">
+        Une autre question ?
+      </h3>
+    </summary>
+    <div class="panel-content">
+      <p>
+        Vous pouvez nous contacter sur <a href="mailto:support@entreprise.api.gouv.fr">support@entreprise.api.gouv.fr</a>.
+
+        <br />
+        <br />
+        Pour améliorer le temps de traitement de votre demande, 
+        il est important de nous fournir, au minimum, les informations suivantes :
+
+        <ul>
+          <li>
+            le ou les endpoints sur lesquels le problème est rencontré ;
+          </li>
+
+          <li>
+            le SIRET, SIREN ou tout autre paramètre passé à la requête ;
+          </li>
+          <li>
+            l'adresse email sous laquelle est enregistré votre jeton d'authentification ;
+          </li>
+          <li>
+            Toute autre information (capture d'écran, message d'erreur, etc.) détaillant l'erreur rencontrée est bienvenue.
+          </li>
+        </ul>
+
+        <div class="tpl-notification tpl--danger">
+          <strong>Ne pas partager votre jeton d'authentification dans votre demande de support !</strong> 
+          <br />
+          <br />
+          L'échange d'emails n'est pas un support de communication sécurisé et certaines APIs donnent accès à des données sensibles. Le cas échéant, nous serons obligés de supprimer votre jeton, et vous devrez faire une nouvelle demande.
+        </div>
+      </p>
+    </div>
+  </details>
+</div>

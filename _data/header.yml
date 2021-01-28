@@ -9,6 +9,9 @@
   label: Cas d’usage
   target: pages/use_cases.html
 -
+  label: Support
+  target: pages/support.html
+-
   label: Stats
   target: pages/stats.html
 -

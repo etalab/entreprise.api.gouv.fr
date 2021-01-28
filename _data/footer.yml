@@ -5,7 +5,7 @@ columns:
     children:
       -
         label: Support
-        url: mailto:support@entreprise.api.gouv.fr
+        target: pages/support.html
       -
         label: Nous rejoindre
         url: https://beta.gouv.fr/recrutement/
