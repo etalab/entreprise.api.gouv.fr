@@ -17,7 +17,11 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
-Selon votre cas d'usage spécifique, veillez à demander uniquement les accès aux **données nécessaires** dans le cadre de la facilitation des démarches aux aides publiques et à [fournir les justificatifs]({{ site.baseurl }}/doc/#les-informations-demandees) notamment pour le [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique).Votre raccordement en sera alors grandement accéléré.
+Selon votre cas d'usage spécifique, veillez à demander uniquement les accès aux **données nécessaires** dans le cadre de la facilitation des démarches aux aides et subventions publiques et à [fournir les justificatifs]({{ site.baseurl }}/doc/#les-informations-demandees) notamment pour le [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique).Votre raccordement en sera alors grandement accéléré.
+
+  {:.example}
+
+  Par exemple, votre service s'adresse uniquement à des entreprises ? Inutile donc de demander les données des associations délivrées par les endpoints `associations` et `documents_associations`.
 
 Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'**utilité de la donnée** dans le cadre de la facilitation des demandes d'aides publiques.
 <br>
