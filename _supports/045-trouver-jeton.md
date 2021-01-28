@@ -1,9 +1,9 @@
 ---
 position: '045'
 enable: true
-question: "Ma demande a été validée, je ne sais pas où se trouve mon jeton"
+question: "Où trouver mon jeton ?"
 label: "Token"
 answer: >-
-  Vous trouverez toutes les informations dans le lien suivant :
-  [Habilitation validée ✅, récupérer son token 🔐](./doc/#habilitation-validee)
+  Vous trouverez toutes les informations dans les rubriques suivantes :
+  [Habilitation validée ✅ et Récupérer son token 🔐](./doc/#habilitation-validee)
 ---

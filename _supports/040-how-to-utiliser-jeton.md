@@ -1,7 +1,7 @@
 ---
 position: '040'
 enable: true
-question: "J'ai récupéré mon jeton, comment l'utiliser ?"
+question: "Comment utiliser mon jeton ?"
 label: "Token"
 answer: >-
   Vous trouverez toutes les informations nécessaires dans le lien suivant:
