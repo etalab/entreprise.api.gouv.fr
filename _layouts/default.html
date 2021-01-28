@@ -36,6 +36,14 @@
       {% asset '{{file}}' %}
     {% endif %}
   {% endfor %}
+
+  {% for file in page.additional_css %}
+    {% if file contains '://' %}
+      <link rel="stylesheet" type="text/css" href="{{ file }}">
+    {% else %}
+      {% asset '{{file}}' %}
+    {% endif %}
+  {% endfor %}
 </body>
 
 </html>
