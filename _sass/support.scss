@@ -1,6 +1,8 @@
 .support {
   padding-bottom: 80px;
 
+  background-color: var(--lightest-grey);
+
   .tpl-support__content {
     width: 70%;
     margin: auto;
@@ -13,16 +15,20 @@
   }
 
   .fold {
+    margin-top: 20px;
     summary {
+      padding: 10px;
       cursor: pointer;
+
     }
 
     // FIXME not sure
     summary .label {
       color: white;
+      font-weight: bold;
       border-radius: 15px;
       padding: 4px 12px;
-      background-color: var(--info);
+      background-color: #C4C4C4;
 
       float: right;
     }
