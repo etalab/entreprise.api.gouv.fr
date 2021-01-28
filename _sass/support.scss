@@ -16,6 +16,16 @@
     summary {
       cursor: pointer;
     }
+
+    // FIXME not sure
+    summary .label {
+      color: white;
+      border-radius: 15px;
+      padding: 4px 12px;
+      background-color: var(--info);
+
+      float: right;
+    }
   }
 
   // FIXME refactor documentation
