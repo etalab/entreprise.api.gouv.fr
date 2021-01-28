@@ -59,8 +59,15 @@ window.addEventListener('load', function() {
         templates: {
           empty: '',
           item(result) {
+            var extra = '';
+            var searchBox = document.getElementsByClassName('ais-SearchBox-input')[0];
+
+            if (searchBox.value != '' && result.__hitIndex == 0) {
+              extra += ' open';
+            }
+
             return `
-              <details class="entry fold" id="${ result.objectID }">
+              <details class="entry fold" id="${ result.objectID }"${ extra }>
                 <summary>
                   <h3>
                     ${instantsearch.highlight({ attribute: 'question', hit: result })}
