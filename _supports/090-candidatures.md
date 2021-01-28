@@ -1,6 +1,6 @@
 ---
 position: '090'
-question: "J'aimerai rejoindre l'équipe, comment je postule ?"
+question: "J'aimerais rejoindre l'équipe, comment je postule ?"
 enable: true
 label: "Autre"
 answer: >-
