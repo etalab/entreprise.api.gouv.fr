@@ -948,10 +948,10 @@ collections:
         name: 'label'
         widget: 'select'
         options:
-          - 'Tableau de bord'
-          - "Demande d'habilitation"
-          - "Service"
-          - 'Token'
+          - '🎛 Tableau de bord'
+          - "📝 Habilitation"
+          - "🚧 Incident"
+          - '🔑 Token'
           - 'Autre'
       - label: "Position"
         name: "position"
