@@ -26,7 +26,8 @@ window.addEventListener('load', function() {
     );
     var search = instantsearch({
       indexName: 'prod_api_entreprise_site',
-      searchClient
+      searchClient,
+      routing: true
     });
 
     // https://www.algolia.com/doc/api-reference/api-parameters/filters/
