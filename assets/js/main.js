@@ -73,7 +73,7 @@ window.addEventListener('load', function() {
                   <h3>
                     ${instantsearch.highlight({ attribute: 'question', hit: result })}
                   </h3>
-                  <span class="label">
+                  <span class="label hide-xs">
                     ${ result.label }
                   </span>
                 </summary>
