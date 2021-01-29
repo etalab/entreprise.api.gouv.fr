@@ -16,11 +16,12 @@ Cette fiche pratique s'adresse aux parties prenantes de cette phase de vérifica
 {% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-covid-19.png' %}
 
 Dans le cadre de cette demande d'aide d'urgence, l'entreprise ou l'association déclare sur l'honneur qu'elle remplit les conditions demandées.<br>
-L'API Entreprise regroupe des **données administratives utiles à l'instruction de cette déclaration sur l'honneur**, et les met à disposition au travers d'une API unique.
+L'API Entreprise regroupe des **données administratives utiles à l'instruction de cette déclaration sur l'honneur**, et les met à disposition via un système unifié au standard API (REST).
 
-API Entreprise vous permet de :
-- **faciliter le traitement de la demande de subvention**, en vous donnant accès à des données déterminantes de l'éligibilité de l'entreprise ou association demandeuse ;
-- d'**éviter de demander ces documents administratifs aux entreprises et aux associations** (Mise en oeuvre du "Dîtes le nous une fois").
+API Entreprise vous permet :
+- d'**améliorer le traitement de la demande de subvention** par les régions, en accédant aux documents certifiés par d'autres administrations, ce qui **accélère et sécurise la vérification de l’éligibilité** au dispositif ;
+- de **faciliter les démarches administratives des entreprises et associations** puisqu'elles n'ont plus besoin de transmettre les documents administratifs requis. (Mise en oeuvre du "Dites le nous une fois" (DLNUF))
+
 
 {:.tpl-notification}
 Si vous souhaitez mettre en œuvre des aides ou subventions relatives ou non au covid-19, indépendantes de cette aide, merci de consulter la page dédiée ["aides et subventions"]({{ site.baseurl }}{% link _use_cases/aides_publiques.md %}).
@@ -45,7 +46,7 @@ Voici les deux décrets qui organisent les échanges :
 ## Données utiles à l'aide d'urgence
 
 
-Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'**utilité de la donnée** dans le cadre de cette aide spécifique.
+Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'**utilité estimée de la donnée** dans le cadre de cette aide spécifique.
 <br>
 
 

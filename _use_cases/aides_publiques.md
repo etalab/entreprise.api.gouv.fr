@@ -23,7 +23,7 @@ Selon votre cas d'usage spécifique, veillez à demander uniquement les accès a
 
   Par exemple, votre service s'adresse uniquement à des entreprises ? Inutile donc de demander les données des associations délivrées par les endpoints `associations` et `documents_associations`.
 
-Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'**utilité de la donnée** dans le cadre de la facilitation des demandes d'aides publiques.
+Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'**utilité estimée de la donnée** dans le cadre de la facilitation des demandes d'aides publiques.
 <br>
 
 
