@@ -2,7 +2,11 @@ window.addEventListener('load', function() {
   init()
 
   function init() {
-    setupSearch()
+    var disableSearch = new URLSearchParams(window.location.search).get('disable-search');
+
+    if (!disableSearch) {
+      setupSearch()
+    }
   }
 
   function setupSearch() {
@@ -18,6 +22,9 @@ window.addEventListener('load', function() {
       searchClient,
       routing: true
     });
+
+    document.getElementById('hits').classList.remove('hidden');
+    document.getElementById('hits-fallback').classList.add('hidden');
 
     // https://www.algolia.com/doc/api-reference/api-parameters/filters/
     search.addWidget(

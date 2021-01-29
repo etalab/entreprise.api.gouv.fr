@@ -15,7 +15,28 @@ additional_css:
 </div>
 
 <div class="tpl-support__content">
-  <div id="hits">
+  <div id="hits" class="hidden">
+  </div>
+  <div id="hits-fallback">
+    {% assign supports = site.supports | where_exp:'item', "item.enable != false" | sort: 'position' %}
+
+    {% for support in supports %}
+      {% assign supportId = support.path | replace: '.md', '' | replace: '_supports/', '' %}
+
+      <details class="fold" id="{{ supportId }}">
+        <summary>
+          <h3 class="link-ref">
+            {{ support.question }}
+          </h3>
+          <span class="label">
+            {{ support.label }}
+          </span>
+        </summary>
+        <div class="panel-content">
+          {{ support.answer | markdownify }}
+        </div>
+      </details>
+    {% endfor %}
   </div>
 
   <details class="fold" id="contact">
