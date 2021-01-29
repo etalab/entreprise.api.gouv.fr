@@ -2,6 +2,10 @@ code {
   word-break: break-all;
 }
 
+.hidden {
+  display: none;
+}
+
 .inherit {
   position: inherit!important;
 }
