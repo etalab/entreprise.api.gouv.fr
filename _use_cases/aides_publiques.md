@@ -126,7 +126,7 @@ Vous êtes un éditeur proposant une solution pour les aides publiques et ne fig
 
 Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques" : 
 
-  <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "aides publiques"</a>
+  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/doc/#demande-habilitation">🔑 Formulaire d'accès "aides publiques"</a>
 
 
 {:.tpl-notification}
