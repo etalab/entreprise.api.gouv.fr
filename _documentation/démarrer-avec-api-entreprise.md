@@ -7,15 +7,21 @@ panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
     content: >-2
-      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation. 
+      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation : 
+      <br>
+
+      <a class="tpl-button tpl-button--gradient" href="https://api.gouv.fr/les-api/api-entreprise/demande-acces">🔑 Demander un accès à l'API Entreprise</a>
       <br>
       <br>
-    
-      Une demande d’accès doit couvrir **un seul contexte métier**. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte : 
+
+      ⚠️ Une demande d’accès doit couvrir **un seul contexte métier**. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte : 
 
        {:.example}
       **Exemple de la Région Occitanie :**<br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
+       {:.example}
 
+
+      #### Le fonctionnement d'une demande
 
       La demande d'habilitation se déroule en deux étapes :
 
@@ -27,9 +33,8 @@ panels:
 
       </summary>
       
-      Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://datapass.api.gouv.fr/api-entreprise){:target="_blank"}.<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à d'autres APIs, dont l'[API Particulier](https://api.gouv.fr/les-api/api-particulier).
+      Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://api.gouv.fr/les-api/api-entreprise/demande-acces){:target="_blank"}.<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à d'autres APIs, dont l'[API Particulier](https://api.gouv.fr/les-api/api-particulier).
       <br><br>
-      Après la création de votre compte, choisissez le formulaire API Entreprise.
 
       </details>
 
@@ -111,7 +116,7 @@ panels:
       Le contact métier et le contact technique peuvent être confondus, notamment si vous passez par un éditeur.
 
 
-      ##### L'acception des conditions d'utilisation API Entreprise
+      ##### L'acceptation des conditions d'utilisation API Entreprise
 
       Avant tout envoi de votre demande, vous devez **[accepter nos conditions générales d’utilisation](../cgu/){:target="_blank"}**.<br> Nous vous invitons à les lire attentivement car une grande partie des données circulant par le biais d'API Entreprise sont sensibles. **Votre futur accès à l'API s'accompagne d'engagements**, notamment, entre autres, ceux de présenter les données uniquement aux agents habilités et de tracer l'accès de ces données. 
 
