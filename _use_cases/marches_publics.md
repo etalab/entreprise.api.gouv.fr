@@ -7,7 +7,7 @@ title: Faciliter la candidature aux marchés publics et leur instruction
 
 {% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-marches-publics.png' %}
 
-API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des candidatures aux marchés publiques, en mettant à disposition plusieurs API afin de faciliter : 
+API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des candidatures aux marchés publiques, en mettant à disposition plusieurs APIs afin de faciliter : 
 
 - le dépôt de leur candidature, **en [pré-remplissant le formulaire du demandeur]({{ site.baseurl }}/doc/#le-pr-remplissage-dun-formulaire--destination-du-public)** grâce à leur numéro de SIRET/RNA ;
 - la construction du dossier et le travail de l'instructeur **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
@@ -17,13 +17,13 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
-Selon votre cas d'usage spécifique, veillez à demander uniquement les accès aux **données nécessaires** dans le cadre de la facilitation des candidatures et de l'instruction aux marchés publics et à [fournir les justificatifs]({{ site.baseurl }}/doc/#les-informations-demandees) notamment pour le [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique).Votre raccordement en sera alors grandement accéléré.
+Selon votre cas d'usage spécifique, veillez à **demander uniquement les données nécessaires** dans le cadre des marchés publics et à [fournir les justificatifs]({{ site.baseurl }}/doc/#les-informations-demandees) notamment pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
 
   {:.example}
 
   Par exemple, votre service s'adresse uniquement à des entreprises ? Inutile donc de demander les données des associations délivrées par les endpoints `associations` et `documents_associations`.
 
-Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'**utilité estimée de la donnée** dans le cadre de la facilitation des marchés publics.
+Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'utilité estimée de la donnée pour ce cas d'usage :
 <br>
 
 
@@ -109,7 +109,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 ## Liste d'éditeurs
 
-Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ? 
+Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de direction des systèmes d'information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ? 
 <br> **Vous pouvez passer par un éditeur.** 
 
 {:.tpl-notification}

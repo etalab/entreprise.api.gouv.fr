@@ -46,7 +46,7 @@ Voici les deux décrets qui organisent les échanges :
 ## Données utiles à l'aide d'urgence
 
 
-Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'**utilité estimée de la donnée** dans le cadre de cette aide spécifique.
+Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'**utilité estimée de la donnée** pour ce cas d'usage :
 <br>
 
 
@@ -112,7 +112,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 {:.tpl-table}
 | Données et endpoints 	| Producteur 	| Utilité| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
-| **Certification RGE**<br>`certificats_rge_ademe` 	| ADEME 	|  	| JSON et PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"} 	|
+| **Certification RGE**<br>`certificats_rge_ademe` 	| ADEME 	|  ❌  	| JSON et PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"} 	|
 | **Certification de qualification bâtiment**<br>`certificats_qualibat` 	| Qualibat 	|  ❌	| PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"} 	|
 | **Certification de qualification d'ingénierie**<br>`certificats_opqibi` 	| OPQIBI 	|  ❌	|JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi){:target="_blank"} 	|
 

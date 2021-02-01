@@ -7,7 +7,7 @@ title: Faciliter le dépôt et l'instruction des aides et subventions publiques
 
 {% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-aides-publiques.png' %}
 
-API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des demandes d'aides et subventions, en mettant à disposition plusieurs API afin : 
+API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des demandes d'aides et subventions, en mettant à disposition plusieurs APIs afin : 
 
 - de faciliter le dépôt de la demande, **en [pré-remplissant le formulaire du demandeur]({{ site.baseurl }}/doc/#le-pr-remplissage-dun-formulaire--destination-du-public)** grâce à son numéro de SIRET/RNA ; 
 - de faciliter la construction du dossier **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
@@ -23,7 +23,7 @@ Selon votre cas d'usage spécifique, veillez à demander uniquement les accès a
 
   Par exemple, votre service s'adresse uniquement à des entreprises ? Inutile donc de demander les données des associations délivrées par les endpoints `associations` et `documents_associations`.
 
-Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'**utilité estimée de la donnée** dans le cadre de la facilitation des demandes d'aides publiques.
+Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'**utilité estimée de la donnée** pour ce cas d'usage :
 <br>
 
 
@@ -109,7 +109,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 ## Liste d'éditeurs
 
-Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de Direction des Systèmes d'Information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ? 
+Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de direction des systèmes d'information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ? 
 <br> **Vous pouvez passer par un éditeur.** 
 <br><br> Nous dressons ici la liste de ceux étant déjà connectés à l'API Entreprise dans ce cas d'usage spécifique :
 
