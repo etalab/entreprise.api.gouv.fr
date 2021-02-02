@@ -17,7 +17,8 @@ root_path = File.expand_path(
 algolia_secret_key = File.read(File.join(root_path, './_algolia_api_key')).strip
 client = Algolia::Search::Client.create('4NUM23WKJI', algolia_secret_key)
 
-index = client.init_index('prod_api_entreprise_site')
+## Support
+index = client.init_index('entreprise.api.gouv.fr_support')
 
 index.set_settings({
   searchableAttributes: [
@@ -46,7 +47,5 @@ support_entries = support_files.map do |support_file|
     enable:   attributes['enable'],
   }
 end
-
-# print support_entries
 
 index.replace_all_objects(support_entries, { safe: true })

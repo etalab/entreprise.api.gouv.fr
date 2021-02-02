@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
       'b42036d3e76e8385accfb660836a59d1'
     );
     var search = instantsearch({
-      indexName: 'prod_api_entreprise_site',
+      indexName: 'entreprise.api.gouv.fr_support',
       searchClient,
       routing: true
     });
