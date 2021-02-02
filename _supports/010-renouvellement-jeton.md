@@ -10,7 +10,7 @@ answer: >-
 
 
   La procédure de renouvellement est très simple et est décrite dans la rubrique
-  [Renouveler un token en fin de vie 💫](./doc/#renouvellement-token)
+  [Renouveler un token en fin de vie 💫](../doc/#renouvellement-token)
 
 
   {:.tpl-notification}

@@ -5,9 +5,9 @@ question: "Comment utiliser mon jeton ?"
 label: "🔑 Token"
 answer: >-
   Vous trouverez toutes les informations nécessaires dans le lien suivant:
-  [Démarrer avec API Entreprise](./doc/#demarrer), plus précisément dans les
-  sections [Faire ma première requête ☎️](./doc/#premiere-requete) et [Configurer
-  le logiciel métier ⚙️](./doc/#configuration)
+  [Démarrer avec API Entreprise](../doc/#demarrer), plus précisément dans les
+  sections [Faire ma première requête ☎️](../doc/#premiere-requete) et [Configurer
+  le logiciel métier ⚙️](../doc/#configuration)
 
 
   Si vous passez par un éditeur, contactez-le directement afin de connaître la

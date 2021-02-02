@@ -49,10 +49,12 @@ into `master`
 You can index locally with the following command line:
 
 ```sh
-bundle exec jekyll algolia
+bundle exec ruby ./bin/algolia_indexer.rb
 ```
 
 You have to set the admin API key in `_algolia_api_key`
+
+It only handles support for now.
 
 -----
 -----
@@ -250,3 +252,27 @@ provider_label: ademe
 * **provider_label** : il faut renseigner ici le *label* du fournisseur qui met à disposition la donnée.
   Cette information est renseignée pour chaque fournisseur (voire la [configuration des fournisseurs](#configuration-1)).
   Cette information permet de lister les données disponibles sous la description de leur fournisseur sur la page "Données Disponibles".
+
+#### Support
+
+La page de support permet de centraliser l'intégralité des questions les plus
+fréquemment posées, et dans le cas où la réponse à la question de l'utilisateur
+n'y est pas, on précise l'adresse email pour nous écrire.
+
+L'objectif est de réduire au maximum le support qu'on reçoit sur les requêtes
+récurrentes des utilisateurs : toutes les références au support doivent pointer
+sur cette page (ie `/support/`).
+
+Cette page utilise Algolia pour la recherche, ce qui implique que le contenu
+affiché est directement extrait d'Algolia.
+
+Ce que cela implique : les modifications effectuées en locale n'apparaissent pas
+directement car il faut à chaque fois réindexer le contenu sur Algolia à l'aide
+d'un script (`./bin/algolia_indexer.rb`). Cette tâche est effectuée lors des
+déploiements, et étant donné que l'on est limité en nombre d'opérations, on ne
+peut pas se permettre de le faire à chaque modification.
+
+Afin de pouvoir vérifier le contenu ajouté, il est possible de désactiver la
+recherche en se rendant sur l'URL ( `support/?disable-search=1` ) ou en
+désactivant le javascript (ce qui permet aussi de rendre la page utilisable en
+cas de javascript désactivé #accessibilité).
