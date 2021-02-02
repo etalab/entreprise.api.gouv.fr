@@ -32,61 +32,12 @@
     }
   }
 
-  // Algolia
   #search-box {
-    $blue-color: #0048B3;
-
     width: 60%;
     margin: auto;
 
     margin-top: -20px;
     margin-bottom: 40px;
-
-    .ais-SearchBox {
-      position: relative;
-      margin: auto;
-      max-width: 100%;
-
-      svg {
-        fill: $blue-color;
-      }
-    }
-
-    .ais-SearchBox-input {
-      padding: 12px 0px 12px 50px;
-      width: 100%;
-      font-size: 16px;
-      color: #0048B3;
-      border-radius: 100px;
-      border: 3px solid lighten($blue-color, 50%);
-      outline: none;
-      transition: 0.1s border linear;
-
-      &:focus {
-        border: 3px solid $blue-color;
-      }
-    }
-
-    .ais-SearchBox-submit {
-      position: absolute;
-      top: 15px;
-      left: 10px;
-    }
-
-    .ais-SearchBox-submitIcon {
-      width: 18px;
-      margin-left: 12px;
-    }
-
-    .ais-SearchBox-resetIcon {
-      margin-right: 12px;
-    }
-
-    .ais-SearchBox-reset {
-      position: absolute;
-      top: 19px;
-      right: 10px;
-    }
   }
 
   @media (max-width: 1000px) {

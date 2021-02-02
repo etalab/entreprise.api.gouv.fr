@@ -1,10 +1,14 @@
 window.addEventListener('load', function() {
+  initButtonLink();
+})
+
+function initButtonLink() {
   const linkButtons = document.querySelectorAll('.button-link')
 
   for (let j = 0; j < linkButtons.length; j++) {
     linkButtons[j].addEventListener('click', onButtonClick, false)
   }
-})
+}
 
 function getFullHostUrl() {
   const host = window.location.host;

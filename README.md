@@ -56,10 +56,13 @@ You have to set the admin API key in `_algolia_api_key`
 
 It only handles support for now.
 
------
------
------
------
+---
+
+---
+
+---
+
+---
 
 ### Informations tirées du SIADE, à remettre à jour => Concerne la rédaction de contenu pour un public non tech
 
@@ -69,27 +72,39 @@ Le site vitrine d'API Entreprise est disponible à l'adresse https://entreprise.
 
 Il s'agit d'un site statique en Jekyll dont les sources sont hostées sur [Github](https://github.com/etalab/entreprise.api.gouv.fr).
 
+## Pages
+
+### Support
+
+La page de support permet de centraliser l'intégralité des questions les plus
+fréquemment posées, et dans le cas où la réponse à la question de l'utilisateur
+n'y est pas, on précise l'adresse email pour nous écrire.
+
+L'objectif est de réduire au maximum le support qu'on reçoit sur les requêtes
+récurrentes des utilisateurs : toutes les références au support doivent pointer
+sur cette page (ie `/support/`).
+
 ## Aspects purement techniques
 
 En production, le site est servi à la racine du domaine entreprise.api.gouv.fr.
 
-En *sandbox*, sur Github Pages (plus d'information sur l'utilisation de Github Pages [ci-dessous](#environnement-de-sandbox)),
-le site est servi à l'adresse https://etalab.github.io/entreprise.api.gouv.fr/. La branche source pour Github Pages est *gh-pages*.
+En _sandbox_, sur Github Pages (plus d'information sur l'utilisation de Github Pages [ci-dessous](#environnement-de-sandbox)),
+le site est servi à l'adresse https://etalab.github.io/entreprise.api.gouv.fr/. La branche source pour Github Pages est _gh-pages_.
 
 Pour que le site soit fonctionnel dans les deux environnements il est nécessaire que la résolution des URLs soit indépendante de la présence
 ou non d'un préfixe d'URL. Pour cela, l'option `baseurl` dans le fichier `\_config.yml`, qui permet de spécifier un préfixe d'URL,
-est évaluée à "/entreprise.api.gouv.fr" pour que  le site fonctionne sur Github Pages. Pour que le site soit servi directement à la racine du
-domaine, le site est *build* avec l'option `--baseurl ''` fournie à la ligne de commande et qui efface le préfixe d'URL.
+est évaluée à "/entreprise.api.gouv.fr" pour que le site fonctionne sur Github Pages. Pour que le site soit servi directement à la racine du
+domaine, le site est _build_ avec l'option `--baseurl ''` fournie à la ligne de commande et qui efface le préfixe d'URL.
 
 ## Édition du contenu
 
-### Environnement de *sandbox*
+### Environnement de _sandbox_
 
 Il est indispensable que des profils non techniques puissent éditer du contenu sur le site statique d'API Entreprise, cela est même rédhibitoire
 quant au choix de la solution. Le site vitrine historiquement fait en Jekyll répond au besoin à deux pré-requis près :
 
-* utilisation de Markdown (pas vraiment technique, et c'est aujourd'hui un standard pour éditer du contenu *Web based*) ;
-* utilisation de Github (possible depuis l'interface et donc sans utiliser directement *Git* en ligne de commande).
+- utilisation de Markdown (pas vraiment technique, et c'est aujourd'hui un standard pour éditer du contenu _Web based_) ;
+- utilisation de Github (possible depuis l'interface et donc sans utiliser directement _Git_ en ligne de commande).
 
 Le gros avantage de Github ici c'est Github Pages car nous n'avons pas d'intégration continue en place à ce jour.
 Github Pages affichera automatiquement le résultat des changements appliqués poussés sur la branche `gh-pages`.
@@ -97,17 +112,17 @@ Une version à jour de cette branche sera donc disponible à la visualisation à
 
 **Qu'est-ce que cela veut dire concrètement pour les équipes fonctionnelles ?**
 
-* Ce n'est pas la peine d'ouvrir des PR aux équipes techniques pour demander une validation pour merge dans `gh-pages`.
+- Ce n'est pas la peine d'ouvrir des PR aux équipes techniques pour demander une validation pour merge dans `gh-pages`.
   Cela évite une sursoliciation des équipes techniques, favorise l'indépendance des équipes métier et surtout il n'y a aucun risque :
   Si tout est cassé, ce n'est pas grave car ce n'est pas en production, et grâce à Github Pages, vous pouvez être presque entièrement autonomes pour "réparer".
-* Les seuls moments ou vous avez besoin de l'aval de l'équipe technique, c'est pour demander à déployer en production
-* Les seuls Pull Request (PR) de merge dans `master` viennent de `gh-pages`. Pourquoi ? Déjà parce que vous avez vu ce que cela donne en sandbox,
+- Les seuls moments ou vous avez besoin de l'aval de l'équipe technique, c'est pour demander à déployer en production
+- Les seuls Pull Request (PR) de merge dans `master` viennent de `gh-pages`. Pourquoi ? Déjà parce que vous avez vu ce que cela donne en sandbox,
   vérifiez que ça ne cassait rien, et validez entre vous que c'était prêt pour la prod. Ensuite, pour l'équipe technique,
   cela permet de simplement aller voir en sandbox (et c'est bien plus agréable que via le diff dans github) avant de déployer.
 
 ##### En résumé
 
-1. La branche de *sandbox* est **gh-pages**. Les modifications doivent être appliquées
+1. La branche de _sandbox_ est **gh-pages**. Les modifications doivent être appliquées
    sur cette branche pour être automatiquement visualisées grâce à Github Pages.
 2. Les changements sont automatiquement visibles à l'URL **https://etalab.github.io/entreprise.api.gouv.fr/**.
    Il peut nécessiter quelques minutes avant que les modifications soient visibles après raffraichissement. De manière générale le site
@@ -115,14 +130,14 @@ Une version à jour de cette branche sera donc disponible à la visualisation à
 
 ### Ajouter des éléments
 
-Le *templating* du site Jekyll est en place pour que l'ajout d'élément de contenu au site web soit simple : uniquement en Markdown et
+Le _templating_ du site Jekyll est en place pour que l'ajout d'élément de contenu au site web soit simple : uniquement en Markdown et
 avec le minimum de configuration.
 
 La procédure d'ajout de contenu est détaillée ci-après. Aujourd'hui, il est possible d'éditer trois types d'éléments :
 
-* documenter des [cas d'usage](#editer-les-cas-dusage) d'API Entreprise ;
-* ajouter des [fournisseurs de données](#editer-les-fournisseurs-de-données) ;
-* documenter les [données disponibles](#documenter-les-données-disponibles).
+- documenter des [cas d'usage](#editer-les-cas-dusage) d'API Entreprise ;
+- ajouter des [fournisseurs de données](#editer-les-fournisseurs-de-données) ;
+- documenter les [données disponibles](#documenter-les-données-disponibles).
 
 Exemple de rendu pour le contenu suivant :
 
@@ -140,13 +155,13 @@ Wow sympa, tu sais que tu peux aussi écrire en **gras**.
 
 ### Deuxième sous titre
 
-En *italique* ça marche aussi, il y a aussi pleins de trucs et astuces :
+En _italique_ ça marche aussi, il y a aussi pleins de trucs et astuces :
 
 1. truc 1
 2. astuce 2
 
-* en fait une liste sans ordre c'est bien aussi
-* non ?
+- en fait une liste sans ordre c'est bien aussi
+- non ?
 
 On peut même ajouter des [liens](https://www.markdownguide.org/cheat-sheet/) vers la documentation de la syntaxe de Markdown !
 ```
@@ -177,11 +192,12 @@ Pour un cas d'usage, les éléments de configuration suivant sont nécessaires. 
 layout: article
 title: Mon cas d'usage
 ---
+
 ```
 
-* **layout** : il est nécessaire d'indiquer le layout, "article", pour que Jekyll sache quel style appliquer à la page où
+- **layout** : il est nécessaire d'indiquer le layout, "article", pour que Jekyll sache quel style appliquer à la page où
   sera détaillé le cas d'usage. Il faut indiquer le même pour tous les cas d'usage pour assurer une cohérence de présentation entre tous.
-* **title** : indiquer le titre du cas d'usage. C'est cette valeur qui sera utilisé dans la liste de la
+- **title** : indiquer le titre du cas d'usage. C'est cette valeur qui sera utilisé dans la liste de la
   page "Cas d'usage" (voire la capture d'écran ci-dessus) ; elle sera aussi disponible dans l'en-tête de la page du cas d'usage.
 
 #### Editer les fournisseurs de données
@@ -212,14 +228,15 @@ label: fournisseur
 logo: "/assets/images/providers/logo.png"
 sources_url: https://www.fournisseur.fr/lien/vers/une/éventuelle/documentation/fournisseur
 ---
+
 ```
 
-* **title** : généralement le nom du fournisseur, le "title" est utilisé comme sous-titre
+- **title** : généralement le nom du fournisseur, le "title" est utilisé comme sous-titre
   de section du fournisseur sur la page "Données disponibles" ;
-* **label** : la valeur est au choix ! Cette information n'a aucune incidence sur le rendu final,
+- **label** : la valeur est au choix ! Cette information n'a aucune incidence sur le rendu final,
   elle ne sert qu'à associer la page de description d'une donnée à son fournisseur (voire la [configuration des fichiers de description des données](#configuration-2));
-* **logo** : chemin vers le logo du fournisseur ;
-* **sources_url** : optionel, lien vers une page d'information en ligne, généralement sur le site du fournisseur lui même.
+- **logo** : chemin vers le logo du fournisseur ;
+- **sources_url** : optionel, lien vers une page d'information en ligne, généralement sur le site du fournisseur lui même.
 
 #### Documenter les données disponibles
 
@@ -243,27 +260,25 @@ layout: article
 title: Certificat RGE
 provider_label: ademe
 ---
+
 ```
 
-* **layout** : il est nécessaire d'indiquer le layout, "article", pour que Jekyll sache quel style
+- **layout** : il est nécessaire d'indiquer le layout, "article", pour que Jekyll sache quel style
   appliquer à la page où sera détaillé le cas d'usage. Il faut indiquer le même pour tous les cas d'usage pour assurer une cohérence de présentation entre tous ;
-* **title** : le titre de la donnée. C'est cette valeur qui est utilisée dans les listes des
+- **title** : le titre de la donnée. C'est cette valeur qui est utilisée dans les listes des
   données disponibles par fournisseurs à la page "Données disponibles" ; elle sera aussi disponible dans l'en-tête de la page de description de la dite donnée.
-* **provider_label** : il faut renseigner ici le *label* du fournisseur qui met à disposition la donnée.
+- **provider_label** : il faut renseigner ici le _label_ du fournisseur qui met à disposition la donnée.
   Cette information est renseignée pour chaque fournisseur (voire la [configuration des fournisseurs](#configuration-1)).
   Cette information permet de lister les données disponibles sous la description de leur fournisseur sur la page "Données Disponibles".
 
-#### Support
+### Recherche Algolia
 
-La page de support permet de centraliser l'intégralité des questions les plus
-fréquemment posées, et dans le cas où la réponse à la question de l'utilisateur
-n'y est pas, on précise l'adresse email pour nous écrire.
+#### Configuration générale
 
-L'objectif est de réduire au maximum le support qu'on reçoit sur les requêtes
-récurrentes des utilisateurs : toutes les références au support doivent pointer
-sur cette page (ie `/support/`).
+##### Modifications et preview des données
 
-Cette page utilise Algolia pour la recherche, ce qui implique que le contenu
+Les pages ayant une barre de recherche et du contenu dynamique
+utilisent Algolia, ce qui implique que le contenu
 affiché est directement extrait d'Algolia.
 
 Ce que cela implique : les modifications effectuées en locale n'apparaissent pas
@@ -273,6 +288,19 @@ déploiements, et étant donné que l'on est limité en nombre d'opérations, on
 peut pas se permettre de le faire à chaque modification.
 
 Afin de pouvoir vérifier le contenu ajouté, il est possible de désactiver la
-recherche en se rendant sur l'URL ( `support/?disable-search=1` ) ou en
+recherche en ajoutant à l'URL `?disable-search=1` ou en
 désactivant le javascript (ce qui permet aussi de rendre la page utilisable en
 cas de javascript désactivé #accessibilité).
+
+##### Synonyms
+
+Il est possible, afin d'affiner les résultats de recherche, de configurer des
+synonymes.
+
+Ceci se passe dans le fichier [\_config.yml](./_config.yml), sous la clé
+`algolia->synonyms`.
+
+La documentation générale se trouve ici:
+[Synonym](https://www.algolia.com/doc/guides/managing-results/optimize-search-results/adding-synonyms/)
+La documentation technique: [Save
+Synonym](https://www.algolia.com/doc/api-reference/api-methods/save-synonym/?client=ruby)
