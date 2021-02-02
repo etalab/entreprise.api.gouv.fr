@@ -21,6 +21,9 @@ client = Algolia::Search::Client.create('4NUM23WKJI', algolia_secret_key)
 index = client.init_index('entreprise.api.gouv.fr_support')
 
 index.set_settings({
+  ranking: [
+    'asc(position)',
+  ],
   searchableAttributes: [
     'question',
     'answer',
