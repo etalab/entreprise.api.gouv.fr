@@ -142,7 +142,7 @@ Si vous êtes un acheteur public, il est probable que vous ayez déjà accès au
 
 Si vous n'êtes pas dans ce premier cas et que vous avez identifié les données nécessaires pour votre service dans le cadre des marchés publics, le lien ci-dessous vous permet d'accéder à un formulaire spécifique "marchés publics" :
 
-  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/doc/#demande-habilitation">🔑 Formulaire d'accès "marchés publics"</a>
+  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=marches_publics">🔑 Formulaire d'accès "marchés publics"</a>
 
 
 {:.tpl-notification}

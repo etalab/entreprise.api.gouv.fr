@@ -144,7 +144,7 @@ Les données sur les associations sont disponibles en open data (sans demande d'
 
 Le lien ci-dessous vous permet d'accéder à un formulaire spécifique pour ce cas d'usage : 
 
-  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/doc/#demande-habilitation">🔑 Formulaire d'accès "aide d'urgence aux TPE"</a>
+  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=covid_19">🔑 Formulaire d'accès "aide d'urgence aux TPE"</a>
 
 
 {:.tpl-notification}
