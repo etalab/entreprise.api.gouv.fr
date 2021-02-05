@@ -11,7 +11,7 @@ title: Données de référence d'une entreprise artisanale
 description: Obtenir des **informations concernant une entité du Répertoire
   National des Métiers (RNM)**, telles que des données générales et juridiques,
   le type d'activité, des données sur les dirigeants, les dates
-  clés de l'entreprise et son adresse. Ces données sont fournies par la Chambre des Métiers de l'Artisanat
+  clés de l'entreprise et son adresse. Ces données sont fournies par la Chambre des Métiers et de l'Artisanat
   France (CMA France) et sont également disponibles en [API publique et libre
   d'accès sur api.gouv.fr](https://api.gouv.fr/les-api/api_rnm).
 usecases:
