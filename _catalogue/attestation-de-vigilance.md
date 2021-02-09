@@ -105,7 +105,7 @@ services:
           }
       description: La réponse se compose de l'URL permettant d'accéder à l’attestation
         de vigilance de l'entreprise demandée en PDF. [Voici un
-        exemple](https://doc.entreprise.api.gouv.fr/files/attestation_sociale.pdf).
+        exemple](https://entreprise.api.gouv.fr/assets/pdf/attestation_sociale.pdf).
 availability:
   normal_availability: 7jours/7 et 24h/24
   unavailability_types: /
