@@ -2,15 +2,15 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "css/template.min.css";
-@import "responsive_utilities";
-@import "main";
-@import "algolia";
-@import "home";
-@import "sidenav";
-@import "providers";
-@import "stats";
-@import "usecases";
-@import "catalogue";
-@import "documentation";
-@import "support";
+@import 'css/template.min.css';
+@import 'responsive_utilities';
+@import 'main';
+@import 'algolia';
+@import 'home';
+@import 'sidenav';
+@import 'providers';
+@import 'stats';
+@import 'usecases';
+@import 'catalogue';
+@import 'documentation';
+@import 'support';
