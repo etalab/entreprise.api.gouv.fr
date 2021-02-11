@@ -117,6 +117,7 @@ providers_aliases:
   ademe: 'ADEME'
   fabsocial: 'Fabrique numérique des ministères sociaux'
   cma: 'CMA France'
+  douanes: 'Direction générale des douanes et droits indirects'
 
 
 empty_array: []
