@@ -146,7 +146,7 @@ panels:
 
       Pour une information détaillée par endpoint, reportez-vous au [catalogue de données](../catalogue/).
   panel2:
-    title: Qu'est qu'un token ? 🔑
+    title: Qu'est-ce qu'un token ? 🔑
     id: tokens
     content: >-
       #### Le token, une clé unique et privée
