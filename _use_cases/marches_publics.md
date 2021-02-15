@@ -17,7 +17,7 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
-Selon votre cas d'usage spécifique, veillez à **demander uniquement les données nécessaires** dans le cadre des marchés publics et à [fournir les justificatifs]({{ site.baseurl }}/doc/#les-informations-demandees) notamment pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
+Selon votre cas d'usage spécifique, veillez à **demander uniquement les données nécessaires** dans le cadre des marchés publics et à fournir les justificatifs notamment pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
 
   {:.example}
 
@@ -148,7 +148,7 @@ Si vous n'êtes pas dans ce premier cas et que vous avez identifié les données
 {:.tpl-notification}
 
 Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
-Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formualire.
+Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formulaire.
 <br>
 
 
