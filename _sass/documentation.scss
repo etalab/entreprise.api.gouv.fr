@@ -1,4 +1,27 @@
+.documentation-hero {
+  #search-box-wrapper {
+    margin-top: 20px;
+    margin-bottom: -20px;
+
+    h5 {
+      margin: 0;
+      padding-left: 10px;
+      margin-bottom: 5px;
+
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
 .documentation {
+  .ais-Hits-item {
+    h2 {
+      margin-top: .83em;
+    }
+  }
+
   .tpl-documentation__links {
     background-color: transparent;
     box-shadow: none;

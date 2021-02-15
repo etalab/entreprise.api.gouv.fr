@@ -35,3 +35,7 @@ gem 'colorize'
 gem 'kramdown-parser-gfm'
 
 gem 'algolia'
+
+group :development do
+  gem 'pry'
+end
