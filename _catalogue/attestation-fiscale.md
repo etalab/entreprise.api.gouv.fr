@@ -49,9 +49,6 @@ services:
         param1:
           label: token
           description: JetonD’Habilitation
-        param2:
-          label: user_id
-          description: IdentifiantUtilisateurPhysique
         param3:
           label: context
           description: CadreDeLaRequête
@@ -80,25 +77,9 @@ services:
             faudra donc indiquer également le SIREN du groupe TVA.
           comment: "Si l'entreprise appartient à un groupe TVA, ajoutez le SIREN référent
             du groupe avec le paramètre suivant :"
-      questions:
-        qr1:
-          question: Qu'est-ce que le paramètre obligatoire user_id ?
-          answer: >-
-            Le paramètre `user_id` demandé et spécifique aux endpoints de la
-            Direction Générale des Finances Publiques, est **l'identifiant de
-            l'utilisateur physique qui réalise l'appel à l'API**. Ce paramètre
-            permet de tracer précisément la source de l'appel et de vérifier que
-            l'utilisateur a bien les droits d'accès à la donnée.
-
-
-            Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
-
-
-            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
       url: |-
         **attestations_fiscales_dgfip/**SirenDeL’Entreprise
         **?token=**JetonD’Habilitation
-        **&user_id=**IdentifiantUtilisateurPhysique
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDel’Appel
         **&object=**RaisonDeL’AppelOuIdentifiant

@@ -240,10 +240,6 @@ panels:
 
       |`&object= RaisonDeL'AppelOuIdentifiant`|**La raison de l'appel** <br> ou l'identifiant de la procédure. <br> L'identifiant peut être interne à votre organisation ou bien un numéro de marché publique, un nom de procédure ; l'essentiel est que celui-ci vous permette de tracer et de retrouver les informations relatives à l'appel. En effet, vous devez pouvoir justifier de la raison d'un appel auprès du fournisseur de données. Description courte (< 50 caractères).
 
-      |`&user_id= IdentifiantDeL'UtilisateurPhysique`|*\[obligatoire pour les endpoints DGFIP]*<br> **L'identifiant de l'utilisateur physique qui fait l'appel** <br>Par exemple dans le cas d'une place de marché, il s'agit de l'identifiant de l’acheteur public qui consulte la pièce. Il servira, en cas d’utilisation anormale de l’API, pour remonter à la source et vérifier que l’utilisateur avait bien le droit d’accéder à cette donnée.
-
-
-
   panel5:
     title: Configurer le logiciel métier ⚙️
     id: configuration

@@ -51,9 +51,6 @@ services:
         param1:
           label: token
           description: JetonD’Habilitation
-        param2:
-          label: user_id
-          description: IdentifiantUtilisateurPhysique
         param3:
           label: email
           description: (optionnel)EmailUtilisateurFaisantLaDemande
@@ -87,20 +84,6 @@ services:
             * à compter du lendemain de la date de dépôt (J+1) ;
 
             * trois jours plus tard (J+3) si le dépôt intervient une veille de week-end.
-        qr3:
-          question: Qu'est-ce que le paramètre obligatoire user_id ?
-          answer: >-
-            Le paramètre `user_id` demandé et spécifique aux endpoints de la
-            Direction Générale des Finances Publiques, est l'identifiant de
-            l'utilisateur physique qui réalise l'appel à l'API. Ce paramètre
-            permet de tracer précisément la source de l'appel et de vérifier que
-            l'utilisateur a bien les droits d'accès à la donnée.
-
-
-            Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
-
-
-            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
       options:
         option1:
           param: ""
@@ -110,7 +93,6 @@ services:
         **liasses_fiscales_dgfip/**AnneeDeLaLiasseDemandée
         **/declarations/**SirenDeL’entreprise
         **?token=**JetonD’Habilitation
-        **&user_id=**IdentifiantUtilisateurPhysique
         **&email=**(optionnel)EmailUtilisateurFaisantLaDemande
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDel’Appel
@@ -203,9 +185,6 @@ services:
         param1:
           label: token
           description: JetonD’Habilitation
-        param2:
-          label: user_id
-          description: IdentifiantUtilisateurPhysique
         param3:
           label: email
           description: (optionnel)EmailUtilisateurFaisantLaDemande
@@ -218,26 +197,10 @@ services:
         param6:
           description: RaisonDeL’AppelOuIdentifiant
           label: object
-      questions:
-        qr1:
-          answer: >-
-            Le paramètre `user_id` demandé et spécifique aux endpoints de la
-            Direction Générale des Finances Publiques, est l'identifiant de
-            l'utilisateur physique qui réalise l'appel à l'API. Ce paramètre
-            permet de tracer précisément la source de l'appel et de vérifier que
-            l'utilisateur a bien les droits d'accès à la donnée.
-
-
-            Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
-
-
-            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
-          question: Qu'est-ce que le paramètre obligatoire user_id ?
       url: |-
         **liasses_fiscales_dgfip/**AnneeDeLaLiasseDemandée
         **/dictionnaire/**
         **?token=**JetonD’Habilitation
-        **&user_id=**IdentifiantUtilisateurPhysique
         **&email=**(optionnel)EmailUtilisateurFaisantLaDemande
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDel’Appel
@@ -287,9 +250,6 @@ services:
         param1:
           label: token
           description: JetonD’Habilitation
-        param2:
-          label: user_id
-          description: IdentifiantUtilisateurPhysique
         param3:
           label: email
           description: (optionnel)EmailUtilisateurFaisantLaDemande
@@ -311,20 +271,6 @@ services:
             l'année demandée. Ce paramètre ne veut pas dire que toutes les
             liasses fiscales seront renvoyées. En effet, les déclarations
             disponibles sont restreintes par décret.
-        qr2:
-          answer: >-
-            Le paramètre `user_id` demandé et spécifique aux endpoints de la
-            Direction Générale des Finances Publiques, est l'identifiant de
-            l'utilisateur physique qui réalise l'appel à l'API. Ce paramètre
-            permet de tracer précisément la source de l'appel et de vérifier que
-            l'utilisateur a bien les droits d'accès à la donnée.
-
-
-            Par exemple, dans le cas d'une place de marché, il s'agit de l'identifiant de l'acheteur public qui consulte la pièce.
-
-
-            ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete).
-          question: Qu'est-ce que le paramètre obligatoire user_id ?
       options:
         option1:
           param: ""
@@ -338,7 +284,6 @@ services:
         **liasses_fiscales_dgfip/**AnnéeDeLaLiasseDemandée
         **/complete/**SirenDeL'Entreprise
         **?token=**JetonD’Habilitation
-        **&user_id=**IdentifiantUtilisateurPhysique
         **&email=**(optionnel)EmailUtilisateurFaisantLaDemande
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDel’Appel
