@@ -1,6 +1,6 @@
 ---
 layout: usecases
-title: Pré-remplir et personnaliser des formulaires en accès sécurisé
+title: Pré-remplir et personnaliser des formulaires sous accès sécurisé
 ---
 
 ## Le rôle d'API Entreprise
@@ -12,7 +12,7 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 - **personnaliser** ces mêmes formulaires grâce aux informations connues.
 
 {:.tpl-notification}
-Ce cas d'usage concerne uniquement les formulaires ayant une authentification préalable de l'utilisateur. Votre service pourra alors uniquement utiliser les données disponibles en JSON de l'API Entreprise.
+Ce cas d'usage concerne uniquement les formulaires ayant une authentification préalable de l'utilisateur. Mise à part certaines données jugées trop sensibles, votre service pourra accéder à l'ensemble des données disponibles au format adapté pour du pré-remplissage (le JSON) de l'API Entreprise.
 
 {:.tpl-notification.tpl--danger}
 **Votre formulaire est en accès libre ?** Nous vous invitons à consulter le cas d'usage ["Pré-remplir et personnaliser des formulaires en accès libre"]({{ site.baseurl }}use_cases/preremplissage_public/). Seuls les endpoints proposant des données publiques vous seront alors autorisés.
