@@ -18,7 +18,7 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
-Selon votre cas d'usage spécifique, veillez à **demander uniquement les données nécessaires** dans le cadre des marchés publics et à fournir les justificatifs notamment pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
+Selon votre cas d'usage spécifique, veillez à **demander uniquement les données nécessaires** dans le cadre des marchés publics et à fournir les documents nécessaires pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
 
   {:.example}
 
@@ -163,9 +163,9 @@ Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruc
 - **Des métropoles** : Bordeaux Métropole, eurométropole de Strasbourg, métropole Aix-Marseille-Provence, métropole du Grand Nancy, Nantes Métropole.
 - **Des départements** : Ain, Bouches-du-Rhône, Drôme, Eure, Loire-Atlantique, Meuse.
 - **Des régions** : Aquitaine, Auvergne-Rhône-Alpes, Centre-Val de Loire, Grand Est, Nouvelle-Aquitaine, Occitanie, Pays de la Loire.
-- **Des administrations centrales**: Agence pour l'informatique financière de l'État, Direction des achats de l'État.
-- **Des groupements d'intérêt publics**: Groupement d’Intérêt Public Maximilien, iMSA, Samusocial de Paris, Territoires Numériques – BFC.
-- **Des opérateurs**: Aéroport Marseille Provence, agence publique pour l'immobilier de la justice, centre de coopération internationale en recherche agronomique pour le développement, centre Hospitalier Universitaire de Montpellier, centre national de la fonction publique territoriale, centre national de la recherche scientifique, établissement public territorial de bassin Seine Grands Lacs, port autonome de Strasbourg, URSSAF Pays de la Loire.
+- **Des administrations centrales** : Agence pour l'informatique financière de l'État, Direction des achats de l'État.
+- **Des groupements d'intérêt publics** : Groupement d’Intérêt Public Maximilien, iMSA, Samusocial de Paris, Territoires Numériques – BFC.
+- **Des opérateurs** : Aéroport Marseille Provence, agence publique pour l'immobilier de la justice, centre de coopération internationale en recherche agronomique pour le développement, centre Hospitalier Universitaire de Montpellier, centre national de la fonction publique territoriale, centre national de la recherche scientifique, établissement public territorial de bassin Seine Grands Lacs, port autonome de Strasbourg, URSSAF Pays de la Loire.
 <br>
 <br>
 
