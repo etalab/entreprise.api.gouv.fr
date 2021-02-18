@@ -31,9 +31,9 @@ perimeter:
     **Appel avec un numéro de SIRET :**
 
 
-    * Pour les ✅ entreprises ayant réalisé leur immatriculation en France, vous pouvez utiliser le numéro de SIRET comme paramètre d'appel. 
+    * Pour les ✅ entreprises ayant réalisé leur immatriculation EORI en France, vous pouvez utiliser le numéro de SIRET comme paramètre d'appel.
 
-    * Pour les ❌ entreprises françaises ayant été immatriculées dans un autre pays européen ; l'appel par SIRET ne fonctionne pas, et vous renverra toujours un négatif, même si l'entreprise possède un numéro EORI actif.
+    * Pour les ❌ entreprises françaises ayant été fait leur immatriculation EORI dans un autre pays européen ; l'appel par SIRET ne fonctionne pas, et vous renverra toujours un négatif, même si l'entreprise possède un numéro EORI actif.
 
 
     ℹ️ Plus d'informations sur le site des [douanes](https://www.douane.gouv.fr/fiche/numero-eori-economic-operator-registration-and-identification) ou sur le site de l'[Union Européenne](https://ec.europa.eu/taxation_customs/business/customs-procedures/general-overview/economic-operators-registration-identification-number-eori_fr).
@@ -78,7 +78,7 @@ services:
           answer: >-
             Vous pouvez appeler cette API avec le SIRET de l'entreprise, si
             celle-ci a effectuée sa demande d'attribution de numéro EORI en
-            France nous la trouverons. 
+            France nous la trouverons.
 
 
             Cependant si cette entreprise a fait sa demande d’attribution de numéro EORI dans un autre pays membre de l'Union Européenne, il vous faudra demander ce numéro directement à l'entreprise. Il n'existe aucun moyen de trouver ce numéro.
