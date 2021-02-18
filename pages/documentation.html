@@ -4,40 +4,50 @@ title: Documentation générale
 permalink: /doc/
 class: documentation
 additional_js:
+  - https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js
+  - https://cdn.jsdelivr.net/npm/instantsearch.js@4.13.1
   - links.js
   - documentation.js
+additional_css:
+  - https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css
 ---
 
 <div class="tpl-documentation__content">
   <div id="flash"></div>
-  {% assign categories = site.documentation | sort: 'weight' %}
-  {% for category in categories %}
-    <h2 class="category-title" id="{{ category.identifier }}">
-      {{ category.title }}
-      <button class="tpl-button tpl-button--alternate button-link" data-link="doc/#{{ category.identifier }}" title="Copier le lien vers cette section">
-        <svg class="tpl-icon" viewBox="0 0 24 24">
-          <use xlink:href="#link"></use>
-        </svg>
-      </button>
-    </h2>
-    {% for panel in category.panels %}
-      <details class="fold" id="{{ panel[1].id }}">
-        <summary>
-          <h3 class="link-ref">
-            {{ panel[1].title }}
-            <button class="tpl-button tpl-button--alternate button-link" data-link="doc/#{{ panel[1].id }}" title="Copier le lien vers cette section">
-              <svg class="tpl-icon" viewBox="0 0 24 24">
-                <use xlink:href="#link"></use>
-              </svg>
-            </button>
-          </h3>
-        </summary>
-        <div class="panel-content">
-          {{ panel[1].content | markdownify }}
-        </div>
-      </details>
+
+  <div id="hits" class="hidden">
+  </div>
+
+  <div id="hits-fallback">
+    {% assign categories = site.documentation | sort: 'weight' %}
+    {% for category in categories %}
+      <h2 class="category-title" id="{{ category.identifier }}">
+        {{ category.title }}
+        <button class="tpl-button tpl-button--alternate button-link" data-link="doc/#{{ category.identifier }}" title="Copier le lien vers cette section">
+          <svg class="tpl-icon" viewBox="0 0 24 24">
+            <use xlink:href="#link"></use>
+          </svg>
+        </button>
+      </h2>
+      {% for panel in category.panels %}
+        <details class="fold" id="{{ panel[1].id }}">
+          <summary>
+            <h3 class="link-ref">
+              {{ panel[1].title }}
+              <button class="tpl-button tpl-button--alternate button-link" data-link="doc/#{{ panel[1].id }}" title="Copier le lien vers cette section">
+                <svg class="tpl-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#link"></use>
+                </svg>
+              </button>
+            </h3>
+          </summary>
+          <div class="panel-content">
+            {{ panel[1].content | markdownify }}
+          </div>
+        </details>
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
+  </div>
 </div>
 <aside class="tpl-documentation__sidebar">
   <nav class="tpl-documentation__links">

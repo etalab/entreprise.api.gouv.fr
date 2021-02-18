@@ -135,7 +135,7 @@ Les données sur les associations sont disponibles en open data (sans demande d'
 {:.tpl-table}
 | API en open data | Fournisseur        | Commentaire                                          | Documentation |
 | -------------    | ------------------ |------------------------------------------------------|--------------- |
-| API du Répertoire National des Associations (RNA)      | Étalab             | Données d'identité des associations (RNA)            | [`API RNA` disponible sur entreprise.data.gouv.fr](https://entreprise.data.gouv.fr/api_doc_rna){:target="_blank"}                                                                                |
+| API du Répertoire National des Associations (RNA)      | Direction Interministérielle du Numérique (DINUM) | Données d'identité des associations (RNA)            | [`API RNA` disponible sur api.gouv.fr](https://api.gouv.fr/les-api/api_rna){:target="_blank"}                                                                                |
 
 
 ## Formulaire d'accès spécifique au cas d'usage
@@ -150,14 +150,14 @@ Le lien ci-dessous vous permet d'accéder à un formulaire spécifique pour ce c
 {:.tpl-notification}
 
 Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
-Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formualire.
+Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formulaire.
 <br>
 
 ## Mise en production et paramètres obligatoires
 
 Vous réalisez les développements ?
 <br>
-Nous avons besoin que vous remplissiez [les paramètres obligatoires]({{ site.baseurl }}/doc/#parametres-tracabilite){:target="_blank"} de la façon suivante :
+Nous avons besoin que vous remplissiez [les paramètres obligatoires]({{ site.baseurl }}/doc/#parametres-tracabilite) de la façon suivante :
 
 {:.tpl-table}
 | Paramètre   | Présence      | Description                                           |

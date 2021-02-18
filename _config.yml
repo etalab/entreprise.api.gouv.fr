@@ -149,3 +149,18 @@ catalogue_openstate:
   - 'Données publiques et confidentielles pour les non-diffusibles'
   - 'Données confidentielles'
   - 'Données publiques et confidentielles'
+
+# For Algolia search, used in bin/algolia_indexer.rb
+algolia:
+  synonyms:
+    - type: 'synonym'
+      id: jeton_synonyms
+      words:
+        - jeton
+        - token
+    - type: 'oneWaySynonym'
+      id: jeton_alternatives
+      input: authentication
+      words:
+        - jeton
+        - token
