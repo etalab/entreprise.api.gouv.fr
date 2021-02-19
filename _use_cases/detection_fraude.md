@@ -133,5 +133,3 @@ Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruc
 - **Des opérateurs** : Direction des achats de l'État, DGCCRF (Direction générale de la concurrence, de la consommation et de la répression des fraudes).
 <br>
 <br>
-
-{% asset 'cas-usage/cas-usage-marches-publics-exemples.png' %}
