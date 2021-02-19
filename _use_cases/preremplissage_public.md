@@ -131,10 +131,8 @@ Une partie de cette documentation vous permet notamment de mieux comprendre [**l
 
 Ils utilisent déjà l'API Entreprise pour pré-remplir des formulaires en accès libre :
 
-- **Des communes et intercommunalités** : 
-- **Des métropoles** : Marseille
-- **Des départements** : Vaucluse
-- **Des régions** : 
-- **Des administrations centrales** : ANCT (Agence nationale de la cohésion des territoires)
-- **Des groupements d'intérêt publics** : 
-- **Des opérateurs** : 
+- **Des administrations centrales** : ANCT (Agence nationale de la cohésion des territoires) ;
+- **Des opérateurs** : Agence nationale pour la gestion des déchets radioactifs, CNIL (Commission Nationale de l'Informatique et des Libertés), CCI France ;
+- **Des administrations centrales** : DINUM (Direction interministérielle du numérique).
+
+{% asset 'cas-usage/cas-usage-preremplissage-public-exemples.png' %}

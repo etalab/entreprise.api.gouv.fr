@@ -131,13 +131,10 @@ Une partie de cette documentation vous permet notamment de mieux comprendre [**l
 
 Ils utilisent déjà l'API Entreprise pour pré-remplir des formulaires en accès libre :
 
+- **Des communes et intercommunalités** : 
 La communauté de communes de Vaison Ventoux propose une [carte aux professionnels permettant d'accéder aux déchetteries de son territoire](http://www.vaison-ventoux.fr/cadre-de-vie-solidarite/dechets/l-acces-a-la-carte-de-dechetterie-pour-les-professionnels.htm){:target="_blank"}. Le formulaire accessible sous connexion sécurisée FranceConnect, est directement pré-remplit des informations disponibles par API Entreprise.
+- **Des métropoles** : Eurométropole de Strasbourg
+- **Des régions** : Normandie
+- **Des opérateurs** : BPI France financement
 
-- **Des communes et intercommunalités** : communauté de communes de Vaison Ventoux 
-- **Des métropoles** : 
-- **Des départements** : 
-- **Des régions** : 
-- **Des administrations centrales** : 
-- **Des groupements d'intérêt publics** : 
-- **Des opérateurs** : 
-
+{% asset 'cas-usage/cas-usage-preremplissage-securise-exemples.png' %}
