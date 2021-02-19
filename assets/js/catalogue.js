@@ -121,6 +121,10 @@ window.addEventListener('load', function (e) {
     'entreprises_artisanales_cma': {
       'availability': 'v2/entreprises_artisanales',
       'current_status': '',
+    },
+    'eori_douanes': {
+      'availability': 'v2/eori_douanes',
+      'current_status': '',
     }
   }
 
@@ -486,18 +490,18 @@ window.addEventListener('load', function (e) {
 
     // X scale uses success rate by day
     const x = d3.scaleTime()
-                .domain(d3.extent(dataset, d => d.x)) // input
-                .rangeRound([0, width]) // output
+      .domain(d3.extent(dataset, d => d.x)) // input
+      .rangeRound([0, width]) // output
 
     // Y scale uses percentages
     const y = d3.scaleLinear()
-                .domain([0, 100]) // input
-                .range([height, 0]) // output
+      .domain([0, 100]) // input
+      .range([height, 0]) // output
 
     // Generate line
     const line = d3.line()
-                    .x(d => x(d.x))
-                    .y(d => y(d.y))
+      .x(d => x(d.x))
+      .y(d => y(d.y))
                     .curve(d3.curveMonotoneX)
 
     // Add the SVG to the page
@@ -505,63 +509,63 @@ window.addEventListener('load', function (e) {
                   .attr("width", width + margin.left + margin.right)
                   .attr("height", height + margin.top + margin.bottom)
                   .append("g")
-                  .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
     // Create the X axis
     svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).tickFormat(locale.format("%b"))) // Create an axis component with d3.axisBottom
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x).tickFormat(locale.format("%b"))) // Create an axis component with d3.axisBottom
 
     // Create the Y axis
     svg.append("g")
-        .attr("class", "y axis")
-        .call(d3.axisLeft(y))
+      .attr("class", "y axis")
+      .call(d3.axisLeft(y))
 
     // Append the path, bind the data, and call the line generator
     svg.append("path")
-        .datum(dataset) // 10. Binds data to the line
-        .attr("class", "line") // Assign a class for styling
-        .attr("d", line) // 11. Calls the line generator
+      .datum(dataset) // 10. Binds data to the line
+      .attr("class", "line") // Assign a class for styling
+      .attr("d", line) // 11. Calls the line generator
 
     // Append industrial standard marker, lowered to 99 so it doesn't mix with 100%
     svg.append('line')
-        .attr('class', 'standard')
-        .style('stroke', '#489CFF')
-        .style('stroke-width', '2px')
-        .style('stroke-dasharray', ('8, 3'))
-        .attr('x1', -35)
-        .attr('x2', width)
-        .attr('y1', height - (height * 99) / 100)
-        .attr('y2', height - (height * 99) / 100)
+      .attr('class', 'standard')
+      .style('stroke', '#489CFF')
+      .style('stroke-width', '2px')
+      .style('stroke-dasharray', ('8, 3'))
+      .attr('x1', -35)
+      .attr('x2', width)
+      .attr('y1', height - (height * 99) / 100)
+      .attr('y2', height - (height * 99) / 100)
 
     // Append industrial standard text, but no wrapping possible in svg
     svg.append('text')
-        .attr('class', 'standard-text')
-        .style('fill', '#489CFF')
-        .style('font-size', '12px')
-        .text('standard')
-        .attr('x', -40)
-        .attr('y', height - (height * 99) / 100)
-        .attr('text-anchor', 'end')
+      .attr('class', 'standard-text')
+      .style('fill', '#489CFF')
+      .style('font-size', '12px')
+      .text('standard')
+      .attr('x', -40)
+      .attr('y', height - (height * 99) / 100)
+      .attr('text-anchor', 'end')
 
     svg.append('text')
-        .attr('class', 'standard-text')
-        .style('fill', '#489CFF')
-        .style('font-size', '12px')
-        .text('industriel')
-        .attr('x', -40)
-        .attr('y', height - (height * 99) / 100 + 15)
-        .attr('text-anchor', 'end')
+      .attr('class', 'standard-text')
+      .style('fill', '#489CFF')
+      .style('font-size', '12px')
+      .text('industriel')
+      .attr('x', -40)
+      .attr('y', height - (height * 99) / 100 + 15)
+      .attr('text-anchor', 'end')
 
     svg.append('text')
-        .attr('class', 'standard-text')
-        .style('fill', '#489CFF')
-        .style('font-size', '12px')
-        .text('99,8%')
-        .attr('x', -40)
-        .attr('y', height - (height * 99) / 100 + 30)
-        .attr('text-anchor', 'end')
+      .attr('class', 'standard-text')
+      .style('fill', '#489CFF')
+      .style('font-size', '12px')
+      .text('99,8%')
+      .attr('x', -40)
+      .attr('y', height - (height * 99) / 100 + 30)
+      .attr('text-anchor', 'end')
 
     // Create the gradient
     svg.append('linearGradient')

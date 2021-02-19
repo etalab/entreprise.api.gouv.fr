@@ -240,6 +240,7 @@ collections:
               value: "fabsocial",
             }
           - { label: "CMA France", value: "cma" }
+          - { label: "Direction générale des douanes et droits indirects", value: "douanes" }
       - {
           label: "Message nouvelle actualité",
           name: "new",
