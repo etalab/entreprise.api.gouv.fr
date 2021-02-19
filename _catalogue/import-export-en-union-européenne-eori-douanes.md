@@ -1,6 +1,6 @@
 ---
 weight: 22
-type: Attestations sociales et fiscales
+type: Informations générales
 title: Immatriculation EORI
 label: eori_douanes
 scope:
