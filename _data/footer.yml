@@ -22,6 +22,9 @@ columns:
         label: Cas d’usage
         target: pages/use_cases.html
       -
+        label: Stats
+        target: pages/stats.html
+      -
         label: 🔑 Demander un accès
         url: https://entreprise.api.gouv.fr/doc/#demande-habilitation
   -

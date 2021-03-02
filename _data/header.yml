@@ -12,9 +12,6 @@
   label: Support
   target: pages/support.html
 -
-  label: Stats
-  target: pages/stats.html
--
   label: Tableau de bord
   url: https://dashboard.entreprise.api.gouv.fr
   button: true
