@@ -438,17 +438,17 @@ a.external-link::after {
   cursor: pointer;
 
   img {
-    width: 30px;
+    width: 20px;
   }
 
-  transition: opacity 0.2s;
+  transition: opacity 1s;
 
   &.scroll-hidden {
     opacity: 0;
   }
 
-  background-color: grey;
-  opacity: 0.8;
+  background-color: #b3d2ff;
+  opacity: 0.6;
 
   position: fixed;
   bottom: 20px;
@@ -456,7 +456,7 @@ a.external-link::after {
 
   padding: 20px 25px;
 
-  $border-radius: 10px;
+  $border-radius: 5px;
   border-top-left-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
 }
