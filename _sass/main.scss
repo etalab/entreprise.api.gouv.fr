@@ -433,3 +433,30 @@ a.external-link::after {
     margin-bottom: var(--spacing-s);
   }
 }
+
+.scroll-to-top {
+  cursor: pointer;
+
+  img {
+    width: 30px;
+  }
+
+  transition: opacity 0.2s;
+
+  &.scroll-hidden {
+    opacity: 0;
+  }
+
+  background-color: grey;
+  opacity: 0.8;
+
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+
+  padding: 20px 25px;
+
+  $border-radius: 10px;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
