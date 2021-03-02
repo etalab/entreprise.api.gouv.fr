@@ -184,7 +184,7 @@ panels:
 
       |------------------------------------------------------------|-----------------------------------------|
 
-      |**Domaine** <br>(ou préfixe) <br>qui conduit à l'API de façon sécurisée| prédéfini par endpoint|`http://entreprise.api.fouv.fr`|
+      |**Domaine** <br>(ou préfixe) <br>qui conduit à l'API de façon sécurisée| prédéfini par endpoint|`https://entreprise.api.gouv.fr`|
 
       |**Numéro de la version** <br>(par défaut désormais en V2)| prédéfini par endpoint| `/v2`|
 
