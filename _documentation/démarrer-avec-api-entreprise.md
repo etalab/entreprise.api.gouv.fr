@@ -7,14 +7,14 @@ panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
     content: >-2
-      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation : 
+      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation :
       <br>
 
       <a class="tpl-button tpl-button--gradient" href="https://api.gouv.fr/les-api/api-entreprise/demande-acces">🔑 Demander un accès à l'API Entreprise</a>
       <br>
       <br>
 
-      ⚠️ Une demande d’accès doit couvrir **un seul contexte métier**. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte : 
+      ⚠️ Une demande d’accès doit couvrir **un seul contexte métier**. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte :
 
        {:.example}
       **Exemple de la Région Occitanie :**<br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
@@ -32,7 +32,7 @@ panels:
       ###### Étape 1 : Le remplissage du formulaire sur api.gouv.fr
 
       </summary>
-      
+
       Toute demande d’accès à l’API Entreprise nécessite la création d’un compte sur la plateforme [api.gouv.fr](https://api.gouv.fr/les-api/api-entreprise/demande-acces){:target="_blank"}.<br> **Avec un même compte vous pouvez réaliser plusieurs demandes**, et également accéder à d'autres APIs, dont l'[API Particulier](https://api.gouv.fr/les-api/api-particulier).
       <br><br>
 
@@ -60,28 +60,28 @@ panels:
 
       ![](../assets/images/documentation/schema-procede-habilitation-api-entreprise.png)
 
-      
+
       #### Les informations demandées
 
       ##### La liste des données souhaitées
-      
+
         Le formulaire vous permet de cocher les données que vous souhaitez demander.
-        Pour cela vous pouvez vous aider : 
-        
+        Pour cela vous pouvez vous aider :
+
         * du [catalogue de données](../catalogue/). Il présente l'ensemble des endpoints disponibles accompagnés d'une documentation fonctionnelle et technique.
 
         * des [cas d'usage](../cas_usage/) proposés par API Entreprise.
         Nous y décrivons les données utiles. Si votre besoin correspond à l'un de ses cas d'usage, vous pourrez vous appuyez sur le formulaire pré-rempli adéquat.
 
 
-      ##### Le cadre juridique 
-      
+      ##### Le cadre juridique
+
       L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une **description précise de votre service et de l'utilité des données demandées dans ce contexte**. Plus particulièrement pour les endpoints délivrant des données confidentielles, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de **justificatifs** :   
 
         * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
-        * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées. 
-        <br>Par exemple, si la délibération indique que votre service concerne uniquement les entreprises de moins de 300 000 euros de chiffres d'affaires, l'endpoint `/exercices`, permettant d'avoir les déclarations de l'entreprise, vous sera accordé. 
-        <br>Enfin, pour être légale, une délibération doit comporter certains éléments administratifs. Ce [document de la Préfecture de l'AISNE](https://www.aisne.gouv.fr/content/download/20874/140668/file/Article_R%C3%A9dactionD%C3%A9lib%C3%A9rations) les présente en détail. 
+        * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées.
+        <br>Par exemple, si la délibération indique que votre service concerne uniquement les entreprises de moins de 300 000 euros de chiffres d'affaires, l'endpoint `/exercices`, permettant d'avoir les déclarations de l'entreprise, vous sera accordé.
+        <br>Enfin, pour être légale, une délibération doit comporter certains éléments administratifs. Ce [document de la Préfecture de l'AISNE](https://www.aisne.gouv.fr/content/download/20874/140668/file/Article_R%C3%A9dactionD%C3%A9lib%C3%A9rations) les présente en détail.
 
         {:.tpl-notification.tpl--danger}
 
@@ -93,14 +93,14 @@ panels:
         L'ensemble des coordonnées renseignées seront strictement utilisées pour communiquer avec vous.
 
       * **Le responsable du traitement des données**. C'est la personne physique ou morale qui, seule ou conjointement avec d’autres, détermine les finalités et les moyens du traitement des données à caractère personnel. Cette personne renseignée doit obligatoirement appartenir à l'organisation déclarée dans la demande.
-      
+
       * **Le délégué·e à la protection des données**.
         Le DPD est la personne qui s'assure que l'organisation protège convenablement les données à caractère personnel, conformément à la législation en vigueur. C'est généralement une personne appartenant à l'organisation effectuant la demande.
 
         <details class="fold">
 
         <summary>
-           
+
         Je n’ai pas de DPD, que faire ?
 
         </summary>
@@ -108,7 +108,7 @@ panels:
          Si vous n’avez pas de DPD, c’est que vous n’êtes probablement pas habilité à pouvoir utiliser API Entreprise. En effet, la nomination d’un DPD est obligatoire pour toute autorité publique ou tout organisme public, ainsi que pour toute entreprise effectuant un suivi régulier et systématique de données personnelles à grande échelle ou de données personnelles sensibles. Ce qui est au coeur de l’usage d’API Entreprise.
 
         </details>
-      
+
       * **le contact métier**. C'est une personne en responsabilité du projet, il peut s'agir du demandeur. API Entreprise contactera cette personne pour avertir de nouvelles fonctionnalités ou d'incidents majeurs sur nos APIs.
 
       * **le contact technique** C'est une personne ou l’équipe en charge du développement de l’interface logicielle qui va permettre l’interconnection effective avec API Entreprise. API Entreprise contactera cette personne pour avertir d'évolutions techniques, d'incidents et de l'expiration des jetons.
@@ -118,9 +118,9 @@ panels:
 
       ##### L'acceptation des conditions d'utilisation API Entreprise
 
-      Avant tout envoi de votre demande, vous devez **[accepter nos conditions générales d’utilisation](../cgu/){:target="_blank"}**.<br> Nous vous invitons à les lire attentivement car une grande partie des données circulant par le biais d'API Entreprise sont sensibles. **Votre futur accès à l'API s'accompagne d'engagements**, notamment, entre autres, ceux de présenter les données uniquement aux agents habilités et de tracer l'accès de ces données. 
+      Avant tout envoi de votre demande, vous devez **[accepter nos conditions générales d’utilisation](../cgu/){:target="_blank"}**.<br> Nous vous invitons à les lire attentivement car une grande partie des données circulant par le biais d'API Entreprise sont sensibles. **Votre futur accès à l'API s'accompagne d'engagements**, notamment, entre autres, ceux de présenter les données uniquement aux agents habilités et de tracer l'accès de ces données.
 
-      
+
     id: demande-habilitation
   panel2:
     title: Habilitation validée ✅, récupérer son token 🔐
@@ -254,8 +254,8 @@ panels:
       Sur API Entreprise, vous avez le droit à **2000 requêtes par tranche de 10 minutes par IP** interrogeant nos services.
 
 
-      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs **pour une durée de 12h**. Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil. 
-      <br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré. 
+      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs **pour une durée de 12h**. Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil.
+      <br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré.
 
 
       {:.tpl-notification.tpl--danger}
