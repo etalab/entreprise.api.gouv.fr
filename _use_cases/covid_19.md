@@ -50,12 +50,12 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 <br>
 
 
-##### Légende du tableau 
+##### Légende du tableau
 
 {:.tpl-table}
 
-| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? | 
-| ---------| 
+| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? |
+| ---------|
 | ✅&nbsp; &nbsp; Oui |
 | ⏺&nbsp; &nbsp; À étudier |
 | ❌&nbsp; &nbsp; Non |
@@ -127,7 +127,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	|  ❌ | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
 
-  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
+  <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
 
 
 Les données sur les associations sont disponibles en open data (sans demande d'accès préalable):
@@ -142,7 +142,7 @@ Les données sur les associations sont disponibles en open data (sans demande d'
 
 **Chaque région doit effectuer une demande d'accès** avec les données indiquées plus haut. Chaque région aura la charge de **transmettre la clé d'accès obtenue** à son prestataire éditeur.
 
-Le lien ci-dessous vous permet d'accéder à un formulaire spécifique pour ce cas d'usage : 
+Le lien ci-dessous vous permet d'accéder à un formulaire spécifique pour ce cas d'usage :
 
   <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=covid_19">🔑 Formulaire d'accès "aide d'urgence aux TPE"</a>
 

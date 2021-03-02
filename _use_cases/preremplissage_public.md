@@ -5,8 +5,8 @@ title: Pré-remplir et personnaliser des formulaires en accès libre
 
 ## Le rôle d'API Entreprise
 
-API Entreprise permet d'améliorer le service rendu aux entreprises et associations en : 
-- **[préremplissant directement un formulaire]({{ site.baseurl }}/doc/#cas-usage)** avec les données publiques connues les concernant, grâce à leur numéro de SIRET/RNA ; 
+API Entreprise permet d'améliorer le service rendu aux entreprises et associations en :
+- **[préremplissant directement un formulaire]({{ site.baseurl }}/doc/#cas-usage)** avec les données publiques connues les concernant, grâce à leur numéro de SIRET/RNA ;
 - personnalisant ces mêmes formulaires grâces aux informations connues.
 
 
@@ -23,30 +23,30 @@ API Entreprise est un service réservé aux acteurs publics investis d'une missi
 
 Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous l'utilité de la donnée dans le cadre du pré-remplissage de formulaires.<br>
 <br>
-Le symbole ✅ indique que l'endpoint a déjà été **utile à nos utilisateurs pour ce cas d'usage**.<br> 
-Chaque service pouvant avoir ses propres spécificités, ce symbole ⏺ vous indique que l'endpoint n'est **pas encore utilisé à ce jour** pour ce cas d'usage, il vous est néanmoins possible de les demander si votre service le justifie.<br> 
+Le symbole ✅ indique que l'endpoint a déjà été **utile à nos utilisateurs pour ce cas d'usage**.<br>
+Chaque service pouvant avoir ses propres spécificités, ce symbole ⏺ vous indique que l'endpoint n'est **pas encore utilisé à ce jour** pour ce cas d'usage, il vous est néanmoins possible de les demander si votre service le justifie.<br>
 Par ailleurs, le pré-remplissage nécessitant l'accès à une donnée structurée (format JSON), certains endpoints n'ont pas d'utilité pour ce cas d'usage spécifique. Ils sont alors accompagnés de la mention *format inadapté*.
 <br>
 Enfin, ce symbole ❌ mentionne que l'endpoint n'est a priori **pas accessible** dans le cadre spécifique. Si vous estimez ces dernières données nécessaires, votre cadre juridique devra être explicite. <br>
 <br>
 Dans ce tableau de synthèse nous vous précisons également la nature du cadre juridique nécessaire pour bénéficier des données.
-L'accès à l'API Entreprise se fait sous réserve que le service le justifie. Les endpoints ne nécessitant qu'une explication précise par le demandeur sont indiqués par le symbole 💬.<br> 
+L'accès à l'API Entreprise se fait sous réserve que le service le justifie. Les endpoints ne nécessitant qu'une explication précise par le demandeur sont indiqués par le symbole 💬.<br>
 Dans certains cas, l'accès à la donnée requiert *en sus* la fourniture d'un cadre juridique précis accompagné de justificatifs tels qu'un décrêt ou un arrêté, ou une délibération dans le cas des collectivités. Les endpoints concernés sont alors signalés par le symbole 📜.
 
 Selon votre cas d'usage spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires dans le cadre du préremplissage.** Votre raccordement en sera alors grandement accéléré.
 
 
-Pour naviguer dans le tableau, vous pouvez également vous aider des catégories suivantes : 
+Pour naviguer dans le tableau, vous pouvez également vous aider des catégories suivantes :
 - [Informations générales](#infos_generales),
 - [Informations financières](#infos_financieres),
 - [Attestations sociales et fiscales](#attestations_sociales_fiscales),
 - [Certificats professionnels](#certificats_pro),
 - [Propriété intellectuelle](#propriete_intellectuelle).
 
-##### Légende du tableau 
+##### Légende du tableau
 
 {:.tpl-table}
-| Symbole et signification | 
+| Symbole et signification |
 | ---------|
 | ✅  déjà utilisé dans ce cadre |
 | ⏺  pas encore utilisé dans ce cadre |
@@ -119,14 +119,13 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	| ⏺ 	| 💬 	| JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
-  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
-
+  <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
 
 
 ## Formulaire d'accès spécifique au cas d'usage
 
-Vous avez identifié les données nécessaires pour faciliter le remplissage de formulaires à destination des entreprises et/ou associations, en accès libre? Le lien ci-dessous vous permet d'accéder à un formulaire de demande d'accès spécifique "pré-remplissage - accès libre" : 
+Vous avez identifié les données nécessaires pour faciliter le remplissage de formulaires à destination des entreprises et/ou associations, en accès libre? Le lien ci-dessous vous permet d'accéder à un formulaire de demande d'accès spécifique "pré-remplissage - accès libre" :
 
   <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "pré-remplissage - accès libre"</a>
 
-Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. 
+Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale.
