@@ -22,7 +22,7 @@ columns:
         label: Cas d’usage
         target: pages/use_cases.html
       -
-        label: Stats
+        label: Statistiques
         target: pages/stats.html
       -
         label: 🔑 Demander un accès
