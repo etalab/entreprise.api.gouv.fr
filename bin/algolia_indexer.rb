@@ -5,8 +5,35 @@ require 'yaml'
 require 'digest'
 require 'kramdown'
 require 'kramdown-parser-gfm'
+require 'optparse'
 
-$send_to_algolia = true
+options = {}
+all_types = %w[
+  documentation
+  support
+  catalogue
+]
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{$0} [options]"
+
+  opts.on('-h', '--help', 'Print this help') do
+    puts opts
+    exit
+  end
+
+  opts.on('-d', '--dry-run', 'Do not send data to Algolia') do |exec|
+    options[:dry_run] = true
+  end
+
+  opts.on('-t', '--types TYPES', Array, "Filters on types (available options: #{all_types.join(', ')})") do |types|
+    options[:types] = types || all_types
+  end
+end.parse!
+
+$send_to_algolia = !options[:dry_run]
+
+print "DRY-MODE ACTIVATED" unless $send_to_algolia
 
 begin
   require 'pry'
