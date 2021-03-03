@@ -1,5 +1,6 @@
 ---
 layout: usecases
+enable: true
 title: Instruction régionale de l'aide d’urgence aux TPE
 ---
 

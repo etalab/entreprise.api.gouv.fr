@@ -12,6 +12,7 @@ all_types = %w[
   documentation
   support
   catalogue
+  use_cases
 ]
 
 OptionParser.new do |opts|
@@ -183,6 +184,44 @@ class AlgoliaIndexer
 
     index.replace_all_objects(catalogue_entries, { safe: true }) unless options[:dry_run]
     print_entries('catalogue', catalogue_entries) if options[:verbose]
+  end
+
+  def use_cases
+    index = client.init_index('entreprise.api.gouv.fr_use_cases')
+
+    index.set_settings({
+      ranking: [
+        'words',
+      ],
+      searchableAttributes: [
+        'title',
+        'content',
+      ],
+      attributesForFaceting: [
+        'kind',
+      ],
+    })
+    add_synonyms_to_index(algolia_config['synonyms'], index)
+
+    use_cases_files = Dir[File.join(root_path, './_use_cases/*.md')]
+
+    use_cases_entries = use_cases_files.map do |use_case_file|
+      attributes = YAML.load_file(use_case_file)
+      content = File.read(use_case_file).split("\n---\n")[-1].strip
+      file_name_without_extension = use_case_file.split('/')[-1].gsub('.md', '')
+      next unless attributes['enable']
+
+      {
+        objectID: Digest::MD5.hexdigest(use_case_file),
+        id: file_name_without_extension,
+        title: attributes['title'],
+        kind: 'use_case',
+        content: markdownify(content),
+      }
+    end.compact
+
+    index.replace_all_objects(use_cases_entries, { safe: true }) unless options[:dry_run]
+    print_entries('use_cases', use_cases_entries) if options[:verbose]
   end
 
   private

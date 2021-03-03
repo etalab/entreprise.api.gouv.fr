@@ -1,5 +1,6 @@
 ---
 layout: usecases
+enable: true
 title: Faciliter le dépôt et l'instruction des aides et subventions publiques
 ---
 
