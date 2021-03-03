@@ -11,6 +11,7 @@ options = {}
 all_types = %w[
   documentation
   support
+  catalogue
 ]
 
 OptionParser.new do |opts|
@@ -141,6 +142,47 @@ class AlgoliaIndexer
 
     index.replace_all_objects(documentation_entries, { safe: true }) unless options[:dry_run]
     print_entries('documentation', documentation_entries) if options[:verbose]
+  end
+
+  def catalogue
+    index = client.init_index('entreprise.api.gouv.fr_catalogue')
+
+    index.set_settings({
+      ranking: [
+        'asc(position)',
+        'words',
+      ],
+      searchableAttributes: [
+        'title',
+        'description',
+        'providers',
+      ],
+      attributesForFaceting: [
+        'kind',
+        'providers',
+      ],
+    })
+    add_synonyms_to_index(algolia_config['synonyms'], index)
+
+    catalogue_files = Dir[File.join(root_path, './_catalogue/*.md')]
+
+    catalogue_entries = catalogue_files.map do |catalogue_file|
+      attributes = YAML.load_file(catalogue_file)
+
+      {
+        objectID: Digest::MD5.hexdigest(catalogue_file),
+        kind: 'catalogue',
+        label: attributes['label'],
+        position: attributes['weight'].to_i,
+        type: attributes['type'],
+        title: attributes['title'],
+        description: markdownify(attributes['description']),
+        providers: attributes['providers'],
+      }
+    end
+
+    index.replace_all_objects(catalogue_entries, { safe: true }) unless options[:dry_run]
+    print_entries('catalogue', catalogue_entries) if options[:verbose]
   end
 
   private
