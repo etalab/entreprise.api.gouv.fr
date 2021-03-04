@@ -60,21 +60,38 @@ class AlgoliaIndexer
 
   def support
     index = client.init_index('entreprise.api.gouv.fr_support')
+    index.set_settings({
+      replicas: [
+        'entreprise.api.gouv.fr_support_home',
+      ],
+    })
+
+    index.set_settings(
+      {
+        ranking: default_index_ranking,
+        searchableAttributes: [
+          'question',
+          'answer',
+        ],
+        attributesForFaceting: [
+          'label',
+          'enable',
+          'kind',
+        ],
+      },
+      {
+        params: {
+          forwardToReplicas: true,
+        },
+      },
+    )
 
     index.set_settings({
       ranking: [
         'asc(position)',
-      ],
-      searchableAttributes: [
-        'question',
-        'answer',
-      ],
-      attributesForFaceting: [
-        'label',
-        'enable',
-        'kind',
-      ],
+      ].concat(default_index_ranking),
     })
+
     add_synonyms_to_index(algolia_config['synonyms'], index)
 
     support_files = Dir[File.join(root_path, './_supports/*.md')]
@@ -99,19 +116,33 @@ class AlgoliaIndexer
 
   def documentation
     index = client.init_index('entreprise.api.gouv.fr_documentation')
+    index.set_settings({
+      replicas: [
+        'entreprise.api.gouv.fr_documentation_home',
+      ],
+    })
 
+    index.set_settings(
+      {
+        ranking: default_index_ranking,
+        searchableAttributes: [
+          'panel_title',
+          'panel_content',
+        ],
+        attributesForFaceting: [
+          'kind',
+        ],
+      },
+      {
+        params: {
+          forwardToReplicas: true,
+        },
+      },
+    )
     index.set_settings({
       ranking: [
         'asc(position)',
-        'words',
-      ],
-      searchableAttributes: [
-        'panel_title',
-        'panel_content',
-      ],
-      attributesForFaceting: [
-        'kind',
-      ],
+      ].concat(default_index_ranking),
     })
     add_synonyms_to_index(algolia_config['synonyms'], index)
 
@@ -147,22 +178,37 @@ class AlgoliaIndexer
 
   def catalogue
     index = client.init_index('entreprise.api.gouv.fr_catalogue')
+    index.set_settings({
+      replicas: [
+        'entreprise.api.gouv.fr_catalogue_home',
+      ],
+    })
 
+    index.set_settings(
+      {
+        ranking: default_index_ranking,
+        searchableAttributes: [
+          'title',
+          'description',
+          'providers',
+        ],
+        attributesForFaceting: [
+          'kind',
+          'providers',
+        ],
+      },
+      {
+        params: {
+          forwardToReplicas: true,
+        }
+      },
+    )
     index.set_settings({
       ranking: [
         'asc(position)',
-        'words',
-      ],
-      searchableAttributes: [
-        'title',
-        'description',
-        'providers',
-      ],
-      attributesForFaceting: [
-        'kind',
-        'providers',
-      ],
+      ].concat(default_index_ranking)
     })
+
     add_synonyms_to_index(algolia_config['synonyms'], index)
 
     catalogue_files = Dir[File.join(root_path, './_catalogue/*.md')]
@@ -190,9 +236,7 @@ class AlgoliaIndexer
     index = client.init_index('entreprise.api.gouv.fr_use_cases')
 
     index.set_settings({
-      ranking: [
-        'words',
-      ],
+      ranking: default_index_ranking,
       searchableAttributes: [
         'title',
         'content',
@@ -259,8 +303,22 @@ class AlgoliaIndexer
         hash.merge(
           type: synonym_config['type'],
         ),
+        {
+          forwardToReplicas: true,
+        },
       ) unless options[:dry_run]
     end
+  end
+
+  def default_index_ranking
+    [
+      'typo',
+      'geo',
+      'words',
+      'proximity',
+      'attribute',
+      'exact',
+    ]
   end
 
   def print_entries(kind, entries)
