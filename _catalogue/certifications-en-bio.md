@@ -23,6 +23,7 @@ perimeter:
   description: >-
     **Cette API renvoie l'état des certifications de :**
 
+
     * ✅ toutes les entreprises certifiées BIO ; 
 
     * ✅ des associations certifiées BIO ayant un numéro de SIRET.
@@ -31,7 +32,8 @@ perimeter:
     Les données disponibles sont issues de l'annuaire officiel de l'Agence BIO, lui même alimenté par les différents organismes certificateurs : la donnée JSON renvoyée est elle-même certifiée.
 
 
-    **Seulement 60% (bientôt 90%) des certificats PDF sont accessibles :** 
+    **Seulement** ❌ **60% (bientôt 90%) des certificats PDF sont accessibles :** 
+
 
     <details class="fold-underline">
 
@@ -41,11 +43,9 @@ perimeter:
 
     </summary>
 
-    * Aujourd'hui, seuls ✅ **deux organismes certificateurs** (XXX et XXX) ont mis en ligne les certificats, d'où le pourcentage de PDF accessibles depuis le lien. 
+    \* Aujourd'hui, seuls ✅ \*\*deux organismes certificateurs\*\* (XXX et XXX) ont mis en ligne les certificats, d'où le pourcentage de PDF accessibles depuis le lien. 
 
-    * Pour les cas restants, correspondant à de ❌ **plus petits organismes de certification**, il peut être nécessaire de les contacter pour obtenir la pièce justificative.
-
-    ℹ️ Les certificats sont accessibles en suivant le lien transmis, permettant de se rendre sur la page HTML de l'annuaire en ligne sur lequel il est possible de télécharger les certificats.
+    \* Pour les cas restants, correspondant à de ❌ \*\*plus petits organismes de certification\*\*, il peut être nécessaire de les contacter pour obtenir la pièce justificative. <br> <br> ℹ️ Les certificats sont accessibles en suivant le lien transmis, permettant de se rendre sur la page HTML de l'annuaire en ligne sur lequel il est possible de télécharger les certificats.
 
     </details>
 services:
@@ -325,8 +325,18 @@ services:
       questions:
         qr1:
           question: Il n'y a aucun lien pour télécharger le certificat, est-ce normal ?
+          answer: "Oui, le certificat au format **PDF n'est pas disponible pour tous les
+            opérateurs**.  <br> Seuls 60% (bientôt 90%) sont accessibles sur
+            l'annuaire de l'Agence BIO. Cet endpoint vous donne l'URL d'accès à
+            la page HTML de l'annuaire dans le cas où le certificat est
+            disponible. <br><br> Aujourd’hui, **seuls deux organismes
+            certificateurs** (XXX et XXX) ont mis en ligne les certificats. Pour
+            les cas restants, correspondant à de plus petits organismes de
+            certification, il peut être nécessaire de les contacter pour obtenir
+            la pièce justificative. "
         qr2:
-          question: L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir ?
+          question: L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir
+            ?
           answer: >-
             Dans certains cas très minoritaires (environ 700 cas sur 90 000
             opérateurs), l'endpoint `/certificats_agence_bio` est susceptible de
@@ -347,4 +357,8 @@ services:
         * de la **liste des produits certifiés** ;
 
         * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat** depuis l'annuaire de l'Agence BIO .
+availability:
+  volumetry: 2000 requêtes/10 minutes par IP
+  unavailability_types: /
+  normal_availability: 2000 requêtes/10 minutes par IP
 ---
