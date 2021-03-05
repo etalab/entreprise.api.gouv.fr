@@ -224,7 +224,7 @@ class AlgoliaIndexer
         type: attributes['type'],
         title: attributes['title'],
         description: markdownify(attributes['description']),
-        providers: attributes['providers'],
+        providers: humanized_providers(attributes['providers']),
       }
     end
 
@@ -310,6 +310,12 @@ class AlgoliaIndexer
     end
   end
 
+  def humanized_providers(providers)
+    providers.map do |key|
+      providers_aliases[key]
+    end.compact
+  end
+
   def default_index_ranking
     [
       'typo',
@@ -344,7 +350,15 @@ class AlgoliaIndexer
   end
 
   def algolia_config
-    @algolia_config ||= YAML.load_file(File.join(root_path, '_config.yml'))['algolia']
+    @algolia_config ||= config['algolia']
+  end
+
+  def providers_aliases
+    @providers_aliases ||= config['providers_aliases']
+  end
+
+  def config
+    @config ||= YAML.load_file(File.join(root_path, '_config.yml'))
   end
 
   def algolia_secret_key
