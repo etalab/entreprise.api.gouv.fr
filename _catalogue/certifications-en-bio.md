@@ -60,6 +60,18 @@ services:
         **&context=**CadreDeLaRequête
         **&recipient=**BénéficiaireDeL'appel
         **&object=**RaisonDeL'AppelOuIdentifiant
+      questions:
+        qr1:
+          question: Je ne trouve pas le SIRET de l'association recherchée
+          answer: >-
+            Toutes les associations ne sont pas immatriculées au Répertoire
+            Sirene et n'ont donc pas forcément un numéro de SIRET.
+
+
+            Pour trouver le numéro de SIRET, vous pouvez vous aider de l'[annuaire des entreprises](https://annuaire-entreprises.data.gouv.fr/). En entrant le nom de l'association, si celle-ci est enregistrée, vous la retrouverez.
+
+
+            Si l'association recherché n'a pas de SIRET, il ne sera pas possible d'interroger l'API car il n'est pas encore possible d'appeler l'endpoint avec un numéro RNA.
     response:
       timeout: 5 secondes
       format: Donnée structurée JSON
