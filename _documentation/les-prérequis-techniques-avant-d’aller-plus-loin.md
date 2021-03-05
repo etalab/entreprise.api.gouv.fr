@@ -43,7 +43,7 @@ panels:
 
       |------------------------------------------------------------|-------------------------------------------|
 
-      |**Domaine** <br>(ou préfixe) <br>qui conduit à l'API de façon sécurisée|`http://entreprise.api.fouv.fr`|
+      |**Domaine** <br>(ou préfixe) <br>qui conduit à l'API de façon sécurisée|`https://entreprise.api.gouv.fr`|
 
       |**Numéro de la version** <br>(par défaut désormais en V2)|`/v2`|
 

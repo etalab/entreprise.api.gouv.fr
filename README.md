@@ -277,9 +277,11 @@ provider_label: ademe
 
 ##### Modifications et preview des données
 
-Les pages ayant une barre de recherche et du contenu dynamique
-utilisent Algolia, ce qui implique que le contenu
-affiché est directement extrait d'Algolia.
+⚠️ En environnement de développement, les modifications peuvent ne pas être
+visible car par défaut, le contenu affiché provient du cache d'Algolia.
+
+Les pages ayant une barre de recherche et du contenu dynamique utilisent
+Algolia, ce qui implique que le contenu affiché est directement extrait d'Algolia.
 
 Ce que cela implique : les modifications effectuées en locale n'apparaissent pas
 directement car il faut à chaque fois réindexer le contenu sur Algolia à l'aide
@@ -287,10 +289,14 @@ d'un script (`./bin/algolia_indexer.rb`). Cette tâche est effectuée lors des
 déploiements, et étant donné que l'on est limité en nombre d'opérations, on ne
 peut pas se permettre de le faire à chaque modification.
 
-Afin de pouvoir vérifier le contenu ajouté, il est possible de désactiver la
-recherche en ajoutant à l'URL `?disable-search=1` ou en
-désactivant le javascript (ce qui permet aussi de rendre la page utilisable en
+###### Visualiser les mises à jour
+
+Afin de pouvoir vérifier le contenu ajouté sans réindexer le contenu sur Algolia,
+il est possible de désactiver la recherche en ajoutant à l'URL `?disable-search=1`
+ou en désactivant le javascript (ce qui permet aussi de rendre la page utilisable en
 cas de javascript désactivé #accessibilité).
+
+Exemple : http://127.0.0.1:4000/entreprise.api.gouv.fr/doc/?disable-search=1
 
 ##### Synonyms
 

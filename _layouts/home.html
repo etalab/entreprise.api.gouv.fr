@@ -14,6 +14,69 @@ layout: default
         <div class="subtext">Simplifiez les démarches des entreprises et des associations<br />en récupérant pour elles
           leurs informations administratives</div>
     </div>
+
+    <div id="search-box-wrapper" class="hidden">
+      <div id="search-box">
+      </div>
+
+      <div id="hits" class="hidden">
+        <div id="hits-catalogue-wrapper">
+          <a class="category" href="{{ site.baseurl }}{% link pages/catalogue.html %}">
+            <svg class="tpl-icon" viewBox="0 0 24 24">
+              <use xlink:href="#database"></use>
+            </svg>
+
+            <span>
+              Catalogue de données
+            </span>
+          </a>
+          <div class="results" id="hits-catalogue">
+          </div>
+        </div>
+
+        <div id="hits-documentation-wrapper">
+          <a class="category" href="{{ site.baseurl }}{% link pages/documentation.html %}">
+            <svg class="tpl-icon" viewBox="0 0 24 24">
+              <use xlink:href="#book"></use>
+            </svg>
+
+            <span>
+              Documentation
+            </span>
+          </a>
+          <div class="results" id="hits-documentation">
+          </div>
+        </div>
+
+        <div id="hits-use-cases-wrapper">
+          <a class="category" href="{{ site.baseurl }}{% link pages/use_cases.html %}">
+            <svg class="tpl-icon" viewBox="0 0 24 24">
+              <use xlink:href="#file"></use>
+            </svg>
+
+            <span>
+              Cas d'usage
+            </span>
+          </a>
+          <div class="results" id="hits-use-cases">
+          </div>
+        </div>
+
+        <div id="hits-support-wrapper">
+          <a class="category" href="{{ site.baseurl }}{% link pages/support.html %}">
+            <svg class="tpl-icon" viewBox="0 0 24 24">
+              <use xlink:href="#question"></use>
+            </svg>
+            <span>
+              Support
+            </span>
+          </a>
+          <div class="results" id="hits-support">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
   <section class="tpl-section use-cases">
     <div class="tpl-container">
@@ -52,7 +115,7 @@ layout: default
           <div class="tpl-card__content">
             <dl class="tpl-description-list">
               <dt>Avant :</dt>
-              <dd>Vous deviez aller demander toutes les données dont vous aviez besoins auprès des différentes des
+              <dd>Vous deviez aller demander toutes les données dont vous aviez besoins auprès des différentes
                 administrations. Cette recherche n’était pas toujours fructueuse car les organisations n'ont pas
                 toujours un site ou un contact public pour leurs API.
               </dd>
@@ -163,3 +226,9 @@ layout: default
     </div>
   </section>
 </div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.13.1"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css">
+
+{% asset 'home.js' %}

@@ -23,6 +23,7 @@ group :jekyll_plugins do
   gem 'jekyll-target-blank'
   gem 'jekyll-assets', tag: 'v3.0-current'
   gem "jekyll-last-modified-at"
+  gem 'jekyll-sitemap'
 end
 
 gem "sprockets", "~> 3.7"

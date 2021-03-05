@@ -1,5 +1,6 @@
 ---
 layout: usecases
+enable: true
 title: Faciliter le dépôt et l'instruction des aides et subventions publiques
 ---
 
@@ -7,9 +8,9 @@ title: Faciliter le dépôt et l'instruction des aides et subventions publiques
 
 {% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-aides-publiques.png' %}
 
-API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des demandes d'aides et subventions, en mettant à disposition plusieurs APIs afin : 
+API Entreprise permet d'améliorer le service rendu aux entreprises et associations dans le cadre des demandes d'aides et subventions, en mettant à disposition plusieurs APIs afin :
 
-- de faciliter le dépôt de la demande, **en [pré-remplissant le formulaire du demandeur]({{ site.baseurl }}/doc/#le-pr-remplissage-dun-formulaire--destination-du-public)** grâce à son numéro de SIRET/RNA ; 
+- de faciliter le dépôt de la demande, **en [pré-remplissant le formulaire du demandeur]({{ site.baseurl }}/doc/#le-pr-remplissage-dun-formulaire--destination-du-public)** grâce à son numéro de SIRET/RNA ;
 - de faciliter la construction du dossier **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
 
 
@@ -27,12 +28,12 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 <br>
 
 
-##### Légende du tableau 
+##### Légende du tableau
 
 {:.tpl-table}
 
-| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? | 
-| ---------| 
+| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? |
+| ---------|
 | ✅&nbsp; &nbsp; Oui |
 | ⏺&nbsp; &nbsp; À étudier |
 | ❌&nbsp; &nbsp; Non |
@@ -104,13 +105,13 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	|  ⏺ | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
 
-  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
+  <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
 
 
 ## Liste d'éditeurs
 
-Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de direction des systèmes d'information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ? 
-<br> **Vous pouvez passer par un éditeur.** 
+Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de direction des systèmes d'information ou bien une équipe technique interne qualifiée** pour intégrer des APIs ?
+<br> **Vous pouvez passer par un éditeur.**
 <br><br> Nous dressons ici la liste de ceux étant déjà connectés à l'API Entreprise dans ce cas d'usage spécifique :
 
 
@@ -124,7 +125,7 @@ Vous êtes un éditeur proposant une solution pour les aides publiques et ne fig
 
 ## Formulaire d'accès spécifique au cas d'usage
 
-Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques" : 
+Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques" :
 
   <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=aides_publiques">🔑 Formulaire d'accès "aides publiques"</a>
 

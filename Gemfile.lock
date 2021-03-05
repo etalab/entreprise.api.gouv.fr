@@ -73,6 +73,8 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.6.1)
       jekyll (>= 3.3, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-target-blank (2.0.0)
       jekyll (>= 3.0, < 5.0)
       nokogiri (~> 1.10)
@@ -150,6 +152,7 @@ DEPENDENCIES
   jekyll-assets
   jekyll-feed (~> 0.13.0)
   jekyll-last-modified-at
+  jekyll-sitemap
   jekyll-target-blank
   kramdown-parser-gfm
   mina
@@ -159,4 +162,4 @@ DEPENDENCIES
   sprockets (~> 3.7)
 
 BUNDLED WITH
-   2.1.4
+   2.2.4

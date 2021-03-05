@@ -165,3 +165,21 @@ algolia:
       words:
         - jeton
         - token
+
+# Sitemap
+defaults:
+  -
+    scope:
+      path: "assets/**/*.pdf"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "files/**/*.pdf"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "admin"
+    values:
+      sitemap: false

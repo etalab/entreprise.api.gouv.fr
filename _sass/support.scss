@@ -13,6 +13,14 @@
     }
   }
 
+  .anchor {
+    $header-height: 53px;
+    $offset: $header-height + 0px;
+
+    padding-top: $offset;
+    margin-top: (-1)*$offset;
+  }
+
   .fold {
     margin-top: 20px;
 

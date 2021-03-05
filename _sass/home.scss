@@ -161,3 +161,149 @@
 .providers {
   text-align: center;
 }
+
+// Aloglia
+.home {
+  #search-box-wrapper {
+    position: relative;
+    width: 80%;
+    margin: auto;
+  }
+
+  #hits {
+    color: var(--text-color-primary);
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 70%;
+
+    z-index: 10;
+
+    background-color: white;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.5);
+
+    padding: 20px;
+
+    h3 {
+      font-size: 1.2em;
+      text-decoration: underline;
+    }
+
+    .ais-Hits--empty {
+      color: var(--text-color-alternate);
+      font-style: italic;
+      padding: 10px;
+    }
+
+    a.category {
+      font-size: 1.3em;
+      text-decoration: none;
+
+      span {
+        text-decoration: underline;
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    .results {
+      margin: 10px 0;
+    }
+
+    a.result {
+      color: #0048b3;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 0px;
+
+      margin-left: -10px;
+
+      &:hover {
+        // FIXME primary color
+        background-color: #0048b3;
+        color: #ffffff;
+      }
+    }
+  }
+
+  #hits-catalogue {
+    a.result {
+     border-color: #b6b6b630;
+     border: 0.1em solid;
+     margin-bottom: 10px;
+    }
+
+    .ais-Hits-item {
+      margin: 0;
+      padding: 0;
+    }
+
+    .type {
+      font-size: .6em;
+      margin-top: -8px;
+    }
+
+    .providers{
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+      font-variant-caps: small-caps;
+    }
+
+    .description {
+      background-color: #b6b6b630;
+      border-radius: 4px;
+      font-size: 14px;
+      padding: 10px;
+      line-height: 14px;
+      margin: 0px;
+    }
+
+    p {
+      margin: 0px;
+    }
+  }
+
+  #hits-documentation {
+    .see-more {
+      margin-top: 10px;
+      font-size: 0.9em;
+
+      font-style: italic;
+      padding: 5px 15px;
+      background-color: #0048b326;
+    }
+  }
+
+  #hits-use-cases {
+    a.result {
+      margin: 0px;
+    }
+    .ais-Hits-item {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+  }
+
+  #hits-support {
+  }
+}
+
+@media (max-width: 1000px) {
+  .home {
+    #search-box-wrapper {
+      width: 90%;
+    }
+
+    #hits {
+      width: 100%;
+    }
+  }
+}
