@@ -23,19 +23,21 @@ additional_css:
     {% for support in supports %}
       {% assign supportId = support.path | replace: '.md', '' | replace: '_supports/', '' %}
 
-      <details class="fold" id="{{ supportId }}">
-        <summary>
-          <h3 class="link-ref">
-            {{ support.question }}
-          </h3>
-          <span class="label">
-            {{ support.label }}
-          </span>
-        </summary>
-        <div class="panel-content">
-          {{ support.answer | markdownify }}
-        </div>
-      </details>
+      <div class="anchor" id="{{ supportId }}">
+        <details class="fold">
+          <summary>
+            <h3 class="link-ref">
+              {{ support.question }}
+            </h3>
+            <span class="label">
+              {{ support.label }}
+            </span>
+          </summary>
+          <div class="panel-content">
+            {{ support.answer | markdownify }}
+          </div>
+        </details>
+      </div>
     {% endfor %}
   </div>
 
