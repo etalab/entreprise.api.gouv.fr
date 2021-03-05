@@ -98,10 +98,12 @@ class AlgoliaIndexer
 
     support_entries = support_files.map do |support_file|
       attributes = YAML.load_file(support_file)
+      file_name_without_extension = support_file.split('/')[-1].gsub('.md', '')
 
       {
         objectID: Digest::MD5.hexdigest(support_file),
         kind:     'support',
+        id:       file_name_without_extension,
         position: attributes['position'].to_i,
         question: attributes['question'],
         answer:   markdownify(attributes['answer']),
