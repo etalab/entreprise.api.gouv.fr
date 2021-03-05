@@ -21,25 +21,33 @@ providers:
 perimeter:
   label: Les entités ayant une certification BIO
   description: >-
-    **Cette API vous permet de connaître l**'**état des certifications de ✅
-    toute entité certifiée :**\
+    **Cette API renvoie l'état des certifications de :**
 
-    \
+    * ✅ toutes les entreprises certifiées BIO ; 
 
-    Les données disponibles sont issues de l'annuaire officiel de l'Agence BIO, lui même alimenté par les différents organismes certificateurs. \
-
-    La donnée JSON renvoyée est certifiée.
+    * ✅ des associations certifiées BIO ayant un numéro de SIRET.
 
 
-    **Les certificats PDF accessibles seulement pour 60% des opérateurs :** 
+    Les données disponibles sont issues de l'annuaire officiel de l'Agence BIO, lui même alimenté par les différents organismes certificateurs : la donnée JSON renvoyée est elle-même certifiée.
 
 
-    L'API Entreprise transmet un lien permettant de se rendre sur la page HTML de l'annuaire en ligne sur lequel il est possible de télécharger les certificats pour environ 60% (bientôt 90%) des entités certifiées : 
+    **Seulement 60% (bientôt 90%) des certificats PDF sont accessibles :** 
 
+    <details class="fold-underline">
+
+    <summary>
+
+    Lire la suite
+
+    </summary>
 
     * Aujourd'hui, seuls ✅ **deux organismes certificateurs** (XXX et XXX) ont mis en ligne les certificats, d'où le pourcentage de PDF accessibles depuis le lien. 
 
     * Pour les cas restants, correspondant à de ❌ **plus petits organismes de certification**, il peut être nécessaire de les contacter pour obtenir la pièce justificative.
+
+    ℹ️ Les certificats sont accessibles en suivant le lien transmis, permettant de se rendre sur la page HTML de l'annuaire en ligne sur lequel il est possible de télécharger les certificats.
+
+    </details>
 services:
   service1:
     request:
@@ -314,4 +322,23 @@ services:
                 ]
              }
           ]
+      questions:
+        qr1:
+          question: Il n'y a aucun lien pour télécharger le certificat, est-ce normal ?
+        qr2:
+          question: L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir
+            ?
+        qr3:
+          answer: ""
+      description: >-
+        La réponse se compose : 
+
+
+        * d'informations générale sur l'opérateur (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO et les adresses postales ;
+
+        * des types d'activités de l'opérateur ;
+
+        * de la production de l'opérateur
+
+        * et enfin des informations sur les différents certificats (état de la certification, nom de l'organisme, dates clés) accompagnées d'une URL vers l'annuaire de l'Agence BIO pour télécharger le certificat.
 ---
