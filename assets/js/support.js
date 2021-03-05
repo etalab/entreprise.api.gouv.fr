@@ -4,7 +4,12 @@ window.addEventListener('load', function() {
   function init() {
     var disableSearch = new URLSearchParams(window.location.search).get('disable-search');
 
-    if (!disableSearch) {
+    if (window.location.hash) {
+      const hash = window.location.hash
+      openDetails(hash)
+    }
+
+    if (!disableSearch && !window.location.hash) {
       setupSearch()
     }
   }
@@ -84,5 +89,21 @@ window.addEventListener('load', function() {
     );
 
     search.start();
+  }
+
+  function openDetails(hash) {
+    const target = document.getElementById(decodeURIComponent(hash.substring(1)))
+
+    if (target) {
+      let el = target.children[0]
+
+      if (el) {
+        el.open = true
+      }
+
+      setTimeout(function() {
+        target.scrollIntoView()
+      }, 100);
+    }
   }
 })

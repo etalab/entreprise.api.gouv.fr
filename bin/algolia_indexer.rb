@@ -11,6 +11,8 @@ options = {}
 all_types = %w[
   documentation
   support
+  catalogue
+  use_cases
 ]
 
 OptionParser.new do |opts|
@@ -58,31 +60,50 @@ class AlgoliaIndexer
 
   def support
     index = client.init_index('entreprise.api.gouv.fr_support')
+    index.set_settings({
+      replicas: [
+        'entreprise.api.gouv.fr_support_home',
+      ],
+    })
+
+    index.set_settings(
+      {
+        ranking: default_index_ranking,
+        searchableAttributes: [
+          'question',
+          'answer',
+        ],
+        attributesForFaceting: [
+          'label',
+          'enable',
+          'kind',
+        ],
+      },
+      {
+        params: {
+          forwardToReplicas: true,
+        },
+      },
+    )
 
     index.set_settings({
       ranking: [
         'asc(position)',
-      ],
-      searchableAttributes: [
-        'question',
-        'answer',
-      ],
-      attributesForFaceting: [
-        'label',
-        'enable',
-        'kind',
-      ],
+      ].concat(default_index_ranking),
     })
+
     add_synonyms_to_index(algolia_config['synonyms'], index)
 
     support_files = Dir[File.join(root_path, './_supports/*.md')]
 
     support_entries = support_files.map do |support_file|
       attributes = YAML.load_file(support_file)
+      file_name_without_extension = support_file.split('/')[-1].gsub('.md', '')
 
       {
         objectID: Digest::MD5.hexdigest(support_file),
         kind:     'support',
+        id:       file_name_without_extension,
         position: attributes['position'].to_i,
         question: attributes['question'],
         answer:   markdownify(attributes['answer']),
@@ -97,19 +118,33 @@ class AlgoliaIndexer
 
   def documentation
     index = client.init_index('entreprise.api.gouv.fr_documentation')
+    index.set_settings({
+      replicas: [
+        'entreprise.api.gouv.fr_documentation_home',
+      ],
+    })
 
+    index.set_settings(
+      {
+        ranking: default_index_ranking,
+        searchableAttributes: [
+          'panel_title',
+          'panel_content',
+        ],
+        attributesForFaceting: [
+          'kind',
+        ],
+      },
+      {
+        params: {
+          forwardToReplicas: true,
+        },
+      },
+    )
     index.set_settings({
       ranking: [
         'asc(position)',
-        'words',
-      ],
-      searchableAttributes: [
-        'panel_title',
-        'panel_content',
-      ],
-      attributesForFaceting: [
-        'kind',
-      ],
+      ].concat(default_index_ranking),
     })
     add_synonyms_to_index(algolia_config['synonyms'], index)
 
@@ -141,6 +176,98 @@ class AlgoliaIndexer
 
     index.replace_all_objects(documentation_entries, { safe: true }) unless options[:dry_run]
     print_entries('documentation', documentation_entries) if options[:verbose]
+  end
+
+  def catalogue
+    index = client.init_index('entreprise.api.gouv.fr_catalogue')
+    index.set_settings({
+      replicas: [
+        'entreprise.api.gouv.fr_catalogue_home',
+      ],
+    })
+
+    index.set_settings(
+      {
+        ranking: default_index_ranking,
+        searchableAttributes: [
+          'title',
+          'description',
+          'providers',
+        ],
+        attributesForFaceting: [
+          'kind',
+          'providers',
+        ],
+      },
+      {
+        params: {
+          forwardToReplicas: true,
+        }
+      },
+    )
+    index.set_settings({
+      ranking: [
+        'asc(position)',
+      ].concat(default_index_ranking)
+    })
+
+    add_synonyms_to_index(algolia_config['synonyms'], index)
+
+    catalogue_files = Dir[File.join(root_path, './_catalogue/*.md')]
+
+    catalogue_entries = catalogue_files.map do |catalogue_file|
+      attributes = YAML.load_file(catalogue_file)
+
+      {
+        objectID: Digest::MD5.hexdigest(catalogue_file),
+        kind: 'catalogue',
+        label: attributes['label'],
+        position: attributes['weight'].to_i,
+        type: attributes['type'],
+        title: attributes['title'],
+        description: markdownify(attributes['description']),
+        providers: humanized_providers(attributes['providers']),
+      }
+    end
+
+    index.replace_all_objects(catalogue_entries, { safe: true }) unless options[:dry_run]
+    print_entries('catalogue', catalogue_entries) if options[:verbose]
+  end
+
+  def use_cases
+    index = client.init_index('entreprise.api.gouv.fr_use_cases')
+
+    index.set_settings({
+      ranking: default_index_ranking,
+      searchableAttributes: [
+        'title',
+        'content',
+      ],
+      attributesForFaceting: [
+        'kind',
+      ],
+    })
+    add_synonyms_to_index(algolia_config['synonyms'], index)
+
+    use_cases_files = Dir[File.join(root_path, './_use_cases/*.md')]
+
+    use_cases_entries = use_cases_files.map do |use_case_file|
+      attributes = YAML.load_file(use_case_file)
+      content = File.read(use_case_file).split("\n---\n")[-1].strip
+      file_name_without_extension = use_case_file.split('/')[-1].gsub('.md', '')
+      next unless attributes['enable']
+
+      {
+        objectID: Digest::MD5.hexdigest(use_case_file),
+        id: file_name_without_extension,
+        title: attributes['title'],
+        kind: 'use_case',
+        content: markdownify(content),
+      }
+    end.compact
+
+    index.replace_all_objects(use_cases_entries, { safe: true }) unless options[:dry_run]
+    print_entries('use_cases', use_cases_entries) if options[:verbose]
   end
 
   private
@@ -178,8 +305,28 @@ class AlgoliaIndexer
         hash.merge(
           type: synonym_config['type'],
         ),
+        {
+          forwardToReplicas: true,
+        },
       ) unless options[:dry_run]
     end
+  end
+
+  def humanized_providers(providers)
+    providers.map do |key|
+      providers_aliases[key]
+    end.compact
+  end
+
+  def default_index_ranking
+    [
+      'typo',
+      'geo',
+      'words',
+      'proximity',
+      'attribute',
+      'exact',
+    ]
   end
 
   def print_entries(kind, entries)
@@ -205,7 +352,15 @@ class AlgoliaIndexer
   end
 
   def algolia_config
-    @algolia_config ||= YAML.load_file(File.join(root_path, '_config.yml'))['algolia']
+    @algolia_config ||= config['algolia']
+  end
+
+  def providers_aliases
+    @providers_aliases ||= config['providers_aliases']
+  end
+
+  def config
+    @config ||= YAML.load_file(File.join(root_path, '_config.yml'))
   end
 
   def algolia_secret_key

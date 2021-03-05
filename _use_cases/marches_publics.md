@@ -1,5 +1,6 @@
 ---
 layout: usecases
+enable: true
 title: Faciliter la candidature aux marchés publics et leur instruction
 ---
 
