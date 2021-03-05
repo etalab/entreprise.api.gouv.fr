@@ -326,19 +326,25 @@ services:
         qr1:
           question: Il n'y a aucun lien pour télécharger le certificat, est-ce normal ?
         qr2:
-          question: L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir
-            ?
-        qr3:
-          answer: ""
+          question: L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir ?
+          answer: >-
+            Dans certains cas très minoritaires (environ 700 cas sur 90 000
+            opérateurs), l'endpoint `/certificats_agence_bio` est susceptible de
+            renvoyer plusieurs items au lieu d'un.\
+
+            Ce doublon est un résidu de migration que l'Agence BIO est en train de progressivement résorber.
+
+
+            *  Dans le cas où sur les deux items, l'un présente un `"etat_certification" = "ARRETEE"`. Vous pouvez tenir compte uniquement de l'item présentant un `"etat_certification" = "ENGAGEE"`.
+
+            * Dans le cas où les deux items présentent un `'etat_certification'` engagé. Il n'y aucun moyen de savoir lequel est à jour. L'Agence BIO elle-même résorbe progressivement ces doublons en collaboration avec les organismes certificateurs.
       description: >-
         La réponse se compose : 
 
 
-        * d'informations générale sur l'opérateur (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO et les adresses postales ;
+        * d'**informations générale sur l'opérateur** (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO, ses activités et ses adresses postales ;
 
-        * des types d'activités de l'opérateur ;
+        * de la **liste des produits certifiés** ;
 
-        * de la production de l'opérateur
-
-        * et enfin des informations sur les différents certificats (état de la certification, nom de l'organisme, dates clés) accompagnées d'une URL vers l'annuaire de l'Agence BIO pour télécharger le certificat.
+        * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat** depuis l'annuaire de l'Agence BIO .
 ---
