@@ -32,7 +32,7 @@ perimeter:
     Les données disponibles sont issues de l'annuaire officiel de l'Agence BIO, lui même alimenté par les différents organismes certificateurs : la donnée JSON renvoyée est elle-même certifiée.
 
 
-    **Seulement** ❌ **60% (bientôt 90%) des certificats PDF sont accessibles :** 
+    **❌ 10% des certificats PDF ne sont pas accessibles :** 
 
 
     <details class="fold-underline">
@@ -43,16 +43,20 @@ perimeter:
 
     </summary>
 
-    \* Aujourd'hui, seuls ✅ \*\*deux organismes certificateurs\*\* (XXX et XXX) ont mis en ligne les certificats, d'où le pourcentage de PDF accessibles depuis le lien. 
 
-    \* Pour les cas restants, correspondant à de ❌ \*\*plus petits organismes de certification\*\*, il peut être nécessaire de les contacter pour obtenir la pièce justificative. <br> <br> ℹ️ Les certificats sont accessibles en suivant le lien transmis, permettant de se rendre sur la page HTML de l'annuaire en ligne sur lequel il est possible de télécharger les certificats.
+    * Aujourd'hui, l'endpoint permet d'accéder à 90% des certificats au format PDF correspondant aux opérateurs des ✅ **six organismes certificateurs** (*Ecocert, Bureau Veritas, Certipaq, Alpes contrôles, Certis* et *Control Union*) ayant mis en ligne ces documents.
+
+    * Pour ❌ les 10% de cas restants, il peut être nécessaire de contacter l'organisme certificateur pour obtenir la pièce justificative.
+
+
+    ℹ️ L'accès aux certificats n'est pas direct comme pour autres endpoint API Entreprise. Les documents sont accessibles en suivant le lien transmis, permettant de se rendre sur la page HTML de l'annuaire en ligne sur lequel il est possible de télécharger les certificats.
 
     </details>
 services:
   service1:
     request:
       id:
-        label: SiretDeL’entité
+        label: SiretDeL’Entité
         description: Le numéro de SIRET de l'entreprise ou de l'association
       url: |-
         **certificats_agence_bio/**SiretDeL'entité
@@ -62,16 +66,20 @@ services:
         **&object=**RaisonDeL'AppelOuIdentifiant
       questions:
         qr1:
-          question: Je ne trouve pas le SIRET de l'association recherchée
+          question: Est-ce que je peux appeler une association sans numéro de SIRET ?
           answer: >-
-            Toutes les associations ne sont pas immatriculées au Répertoire
-            Sirene et n'ont donc pas forcément un numéro de SIRET.
+            L'unique paramètre d'appel de l'API est actuellement le numéro de
+            SIRET. Il n'est donc pas possible d'interroger l'API avec un numéro
+            RNA.
 
 
-            Pour trouver le numéro de SIRET, vous pouvez vous aider de l'[annuaire des entreprises](https://annuaire-entreprises.data.gouv.fr/). En entrant le nom de l'association, si celle-ci est enregistrée, vous la retrouverez.
+            Par conséquent, seules les associations ayant été immatriculées au Répertoire Sirene, et donc dotées d'un numéro de SIRET, sont accessibles depuis cet endpoint.
 
 
-            Si l'association recherché n'a pas de SIRET, il ne sera pas possible d'interroger l'API car il n'est pas encore possible d'appeler l'endpoint avec un numéro RNA.
+            ℹ️ Pour trouver le numéro de SIRET d'une association, vous pouvez vous aider de l'[annuaire des entreprises](https://annuaire-entreprises.data.gouv.fr/). En entrant le nom de l'association, si celle-ci est enregistrée, vous la retrouverez.
+        qr2:
+          answer: ""
+          question: ""
     response:
       timeout: 5 secondes
       format: Donnée structurée JSON
@@ -336,19 +344,26 @@ services:
           ]
       questions:
         qr1:
-          question: Il n'y a aucun lien pour télécharger le certificat, est-ce normal ?
-          answer: "Oui, le certificat au format **PDF n'est pas disponible pour tous les
-            opérateurs**.  <br> Seuls 60% (bientôt 90%) sont accessibles sur
-            l'annuaire de l'Agence BIO. Cet endpoint vous donne l'URL d'accès à
-            la page HTML de l'annuaire dans le cas où le certificat est
-            disponible. <br><br> Aujourd’hui, **seuls deux organismes
-            certificateurs** (XXX et XXX) ont mis en ligne les certificats. Pour
-            les cas restants, correspondant à de plus petits organismes de
-            certification, il peut être nécessaire de les contacter pour obtenir
-            la pièce justificative. "
+          question: La réponse JSON fait-elle foi ? Est-elle certifiante ?
+          answer: >-
+            ✅ Indiqué dans la réponse JSON par la clé `etat_certification`,
+            **l'état de la certification est une donnée faisant foi** de la
+            certification en BIO de l'entité.
+
+
+            ❌ Concernant la **liste des produits certifiés** renvoyée, **un décalage avec la réalité du terrain peut subvenir** car les données correspondent actuellement à la déclaration de l'opérateur. L'Agence BIO travaille avec les organismes certificateurs pour récupérer de façon automatique les productions certifiées.
         qr2:
-          question: L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir
-            ?
+          question: Il n'y a aucun lien pour télécharger le certificat, est-ce normal ?
+          answer: >-
+            Oui, le certificat au format **PDF n'est pas disponible pour tous
+            les opérateurs**.
+
+
+            **10% des certificats ne sont pas accessibles** sur l'annuaire de l'Agence BIO. Cet endpoint vous donne l'URL d'accès à la page HTML de l'annuaire dans le cas où le certificat est disponible.
+
+
+            Aujourd’hui, six organismes certificateurs (*Ecocert, Bureau Veritas, Certipaq, Alpes controles, Certis* et *Control Union*) ont mis en ligne les certificats. Pour les 10% restants, il peut être nécessaire de contacter l'organisme certificateur indiqué dans la réponse JSON pour obtenir la pièce justificative.
+        qr3:
           answer: >-
             Dans certains cas très minoritaires (environ 700 cas sur 90 000
             opérateurs), l'endpoint `/certificats_agence_bio` est susceptible de
@@ -357,9 +372,11 @@ services:
             Ce doublon est un résidu de migration que l'Agence BIO est en train de progressivement résorber.
 
 
-            *  Dans le cas où sur les deux items, l'un présente un `"etat_certification" = "ARRETEE"`. Vous pouvez tenir compte uniquement de l'item présentant un `"etat_certification" = "ENGAGEE"`.
+            * Dans le cas où sur les deux items, l'un présente un `"etat_certification" = "ARRETEE"`/`"SUSPENDUE"`/`"RETIREE"` ; et le doublon, un `"etat_certification" = "ENGAGEE"`. Vous pouvez tenir compte uniquement de ce dernier. La section présentant un état engagé prévalant sur l'autre.
 
             * Dans le cas où les deux items présentent un `'etat_certification'` engagé. Il n'y aucun moyen de savoir lequel est à jour. L'Agence BIO elle-même résorbe progressivement ces doublons en collaboration avec les organismes certificateurs.
+          question: L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir
+            ?
       description: >-
         La réponse se compose : 
 
