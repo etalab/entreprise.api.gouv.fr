@@ -13,7 +13,7 @@ description: Obtenir les **déclarations de chiffre d'affaire** faites auprès d
 usecases:
   - Aides publiques
   - Marchés publics
-opening: Données confidentielles.
+opening: Données protégées.
 perimeter:
   description: >-
     Sont disponibles uniquement les chiffres d'affaire des **entreprises qui

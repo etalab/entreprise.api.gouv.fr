@@ -147,9 +147,9 @@ catalogue_usecases:
 
 catalogue_openstate:
   - 'Données publiques'
-  - 'Données publiques et confidentielles pour les non-diffusibles'
-  - 'Données confidentielles'
-  - 'Données publiques et confidentielles'
+  - 'Données publiques et protégées pour les non-diffusibles'
+  - 'Données protégées'
+  - 'Données publiques et protégées'
 
 # For Algolia search, used in bin/algolia_indexer.rb
 algolia:

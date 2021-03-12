@@ -14,7 +14,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-opening: Données confidentielles.
+opening: Données protégées.
 perimeter:
   description: |-
     Sont éligibles à la MSA les entreprises de : 

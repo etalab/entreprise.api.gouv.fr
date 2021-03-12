@@ -45,7 +45,7 @@ panels:
 
       **Le pré-remplissage est possible uniquement pour des APIs distribuant des informations publiques.**
 
-      Par exemple, [l’endpoint `entreprise`](../catalogue/#entreprises){:target="_blank"} qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont confidentielles) ne sont pas appelées.
+      Par exemple, [l’endpoint `entreprise`](../catalogue/#entreprises){:target="_blank"} qui regroupe des données ouvertes et fermées, ne peut être utilisé pour le pré-remplissage, que **si et seulement si** les entreprises non-diffusibles (dont les données sont protégées) ne sont pas appelées.
 
 
       {:.tpl-notification.tpl--success}
@@ -111,11 +111,11 @@ panels:
 
       | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
-      | [Données de référence d'une entreprise](../catalogue/#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques et confidentielles   |
+      | [Données de référence d'une entreprise](../catalogue/#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques et protégées   |
 
-      | [Données de référence d'un établissement](../catalogue/#etablissements){:target="_blank"}                |          INSEE           |          `etablissements`           |    données JSON     |    publiques  et confidentielles   |
+      | [Données de référence d'un établissement](../catalogue/#etablissements){:target="_blank"}                |          INSEE           |          `etablissements`           |    données JSON     |    publiques  et protégées   |
 
-      | [Extrait  RCS](../catalogue/#extrait_rcs_infogreffe){:target="_blank"}                                           |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    confidentielles    |
+      | [Extrait  RCS](../catalogue/#extrait_rcs_infogreffe){:target="_blank"}                                           |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    protégées    |
 
       | [Informations déclaratives d'une association](../catalogue/#associations){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 
@@ -137,13 +137,13 @@ panels:
 
       | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
-      | [Chiffre d'affaires](../catalogue/#exercices){:target="_blank"}                                     |          DGFIP           |                `exercices`                |    données JSON     | confidentielles |
+      | [Chiffre d'affaires](../catalogue/#exercices){:target="_blank"}                                     |          DGFIP           |                `exercices`                |    données JSON     | protégées |
 
-      | [Bilans annuels](../catalogue/#bilans_inpi){:target="_blank"}                                      |     INPI     |         `bilans_inpi`          |    données JSON     | publiques et confidentielles |
+      | [Bilans annuels](../catalogue/#bilans_inpi){:target="_blank"}                                      |     INPI     |         `bilans_inpi`          |    données JSON     | publiques et protégées |
 
-      | [3 derniers bilans annuels](../catalogue/#bilans_entreprises_bdf){:target="_blank"}                                      |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | confidentielles |
+      | [3 derniers bilans annuels](../catalogue/#bilans_entreprises_bdf){:target="_blank"}                                      |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | protégées |
 
-      | [Déclarations de résultats](../catalogue/#liasses_fiscales_dgfip){:target="_blank"}       |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | confidentielles |
+      | [Déclarations de résultats](../catalogue/#liasses_fiscales_dgfip){:target="_blank"}       |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | protégées |
 
 
       ##### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
@@ -155,19 +155,19 @@ panels:
 
       | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
 
-      | [Attestation fiscale](../catalogue/#liasses_fiscales_dgfip){:target="_blank"}                                    |          DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | confidentielles |
+      | [Attestation fiscale](../catalogue/#liasses_fiscales_dgfip){:target="_blank"}                                    |          DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | protégées |
 
-      | [Attestation de vigilance](../catalogue/#attestations_sociales_acoss){:target="_blank"}                               |          ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | confidentielles |
+      | [Attestation de vigilance](../catalogue/#attestations_sociales_acoss){:target="_blank"}                               |          ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | protégées |
 
-      | [Conformité emploi des travailleurs handicapés](../catalogue/#attestations_agefiph){:target="_blank"}  |         AGEFIPH          |          `attestations_agefiph`           |    données JSON     | confidentielles |
+      | [Conformité emploi des travailleurs handicapés](../catalogue/#attestations_agefiph){:target="_blank"}  |         AGEFIPH          |          `attestations_agefiph`           |    données JSON     | protégées |
 
-      | [Cotisation de sécurité sociale agricole](../catalogue/#cotisations_msa){:target="_blank"}                |           MSA            |             `cotisations_msa`             |    données JSON     | confidentielles |
+      | [Cotisation de sécurité sociale agricole](../catalogue/#cotisations_msa){:target="_blank"}                |           MSA            |             `cotisations_msa`             |    données JSON     | protégées |
 
-      | [Cotisations retraite bâtiment](../catalogue/#cotisation_retraite_probtp){:target="_blank"}                       |          PROBTP          | `attestations_cotisation_retraite_probtp` |    données JSON     |    confidentielles    |
+      | [Cotisations retraite bâtiment](../catalogue/#cotisation_retraite_probtp){:target="_blank"}                       |          PROBTP          | `attestations_cotisation_retraite_probtp` |    données JSON     |    protégées    |
 
       | [Carte professionnelle travaux publics](../catalogue/#cartes_professionnelles_fntp){:target="_blank"}         |          FNTP           |            `cartes_professionnelles_ftp`            |         PDF         |    publiques    |
 
-      | [Cotisations congés payés & chômage intempéries](../catalogue/#certificats_cnetp){:target="_blank"}         |          CNETP           |            `certificats_cnetp`            |         PDF         |    confidentielles    |
+      | [Cotisations congés payés & chômage intempéries](../catalogue/#certificats_cnetp){:target="_blank"}         |          CNETP           |            `certificats_cnetp`            |         PDF         |    protégées    |
 
 
       ##### Certifications professionnelles <a id="certificats_pro"></a>
@@ -268,7 +268,7 @@ panels:
       ###### Dans le cas d’un pré-remplissage à destination du public
 
 
-      Une partie des données des endpoints `entreprise`, `etablissement` et `associations`, les données publiques, peuvent servir au pré-remplissage de formulaires publics. Même si ces données ne sont pas confidentielles, le fournisseur de service s’engage à ne pas commercialiser les données reçues au travers d'API Entreprise et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
+      Une partie des données des endpoints `entreprise`, `etablissement` et `associations`, les données publiques, peuvent servir au pré-remplissage de formulaires publics. Même si ces données ne sont pas protégées, le fournisseur de service s’engage à ne pas commercialiser les données reçues au travers d'API Entreprise et à ne pas les communiquer à des tiers en dehors des cas prévus par la loi.
 
 
       ###### Dans le cas d’une utilisation par un agent habilité en back office

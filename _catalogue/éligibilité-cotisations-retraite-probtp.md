@@ -15,7 +15,7 @@ description: Savoir si une **entreprise est à jour de ses cotisations retraite*
 usecases:
   - Aides publiques
   - Marchés publics
-opening: Données confidentielles.
+opening: Données protégées.
 availability:
   normal_availability: 7jours/7 et 24h/24
   volumetry: 2000 requêtes/10 minutes par IP

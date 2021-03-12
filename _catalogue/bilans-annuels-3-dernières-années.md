@@ -14,7 +14,7 @@ description: "Obtenir les trois derniers bilans d’une entreprise détenus par 
   confondus."
 usecases:
   - Aides publiques
-opening: Données confidentielles.
+opening: Données protégées.
 perimeter:
   label: Les entreprises ayant au moins 3 bilans et réalisant plus 750 000€ de CA.
   description: >-

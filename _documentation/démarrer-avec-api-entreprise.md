@@ -76,7 +76,7 @@ panels:
 
       ##### Le cadre juridique
 
-      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une **description précise de votre service et de l'utilité des données demandées dans ce contexte**. Plus particulièrement pour les endpoints délivrant des données confidentielles, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de **justificatifs** :   
+      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une **description précise de votre service et de l'utilité des données demandées dans ce contexte**. Plus particulièrement pour les endpoints délivrant des données protégées, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de **justificatifs** :   
 
         * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
         * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées.

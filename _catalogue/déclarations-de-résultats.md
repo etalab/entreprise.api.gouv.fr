@@ -15,7 +15,7 @@ description: Obtenir les **données contenues dans les liasses fiscales,** issue
   seul, ou les deux réunis pour une entreprise donnée.
 usecases:
   - Aides publiques
-opening: Données confidentielles.
+opening: Données protégées.
 perimeter:
   description: >-
     La liasse fiscale est limitée aux entreprises  :
