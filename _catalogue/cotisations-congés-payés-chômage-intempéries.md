@@ -15,7 +15,7 @@ usecases:
   - Aides publiques
   - Répertoire de tiers
   - Marchés publics
-opening: Données confidentielles.
+opening: Données protégées.
 perimeter:
   description: >-
     L'endpoint de la CNETP couvre **l'ensemble des entreprises** exerçant une ou
@@ -99,20 +99,20 @@ services:
 
             Notamment, certaines entreprises règlent leurs cotisations dues à la CNETP à l'URSAFF (dans le cadre du TESE) ; leurs attestations ne sont pas accessibles depuis cette API.
         qr3:
-          question: Comment utiliser ces données confidentielles ?
+          question: Comment utiliser ces données protégées ?
           answer: >-
-            ###### Les attestations de la CNETP, confidentielles au titre du
+            ###### Les attestations de la CNETP, protégées au titre du
             secret des affaires
 
 
             Dans le cadre d'un Marché public, les attestations de Marché ont pour objet de prouver à l'acheteur public que le candidat a satisfait à ses obligations fiscales et sociales. Il en est ainsi des attestations de Marchés délivrées par la CNETP aux entreprises de Travaux Publics.
 
 
-            Or, c**onformément au code de la commande publique, l'acheteur public ne peut communiquer les informations confidentielles** dont il a eu connaissance lors de la procédure de passation et notamment celles dont la divulgation violerait le secret des affaires.
+            Or, **conformément au code de la commande publique, l'acheteur public ne peut communiquer les informations protégées** dont il a eu connaissance lors de la procédure de passation et notamment celles dont la divulgation violerait le secret des affaires.
 
 
 
-            C'est pourquoi, les attestations délivrées par la CNETP constituent des données confidentielles et non publiques. 
+            C'est pourquoi, les attestations délivrées par la CNETP constituent des données protégées et non publiques. 
 
 
             ###### Des informations à ne pas divulguer

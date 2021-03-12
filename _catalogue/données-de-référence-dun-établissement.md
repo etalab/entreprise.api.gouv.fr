@@ -103,7 +103,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-opening: Données publiques et confidentielles pour les non-diffusibles.
+opening: Données publiques et protégées pour les non-diffusibles.
 perimeter:
   description: >-
     L'endpoint `etablissements` vous donne accès aux données des établissements
@@ -203,7 +203,7 @@ services:
 
 
             Les établissements de gestion de paye de la fonction publique ont été immatriculés pour les seuls besoins de certaines administrations (les impôts, les URSSAF, la DGCP ...). Leur diffusion à d'autres administrations n'est donc pas prévue.
-          question: ⚠️ Comment utiliser les données confidentielles des établissements non
+          question: ⚠️ Comment utiliser les données protégées des établissements non
             diffusibles ?
       url: |-
         **etablissements/**SiretDeL’Entreprise

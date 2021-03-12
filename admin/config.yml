@@ -211,9 +211,9 @@ collections:
         options:
           [
             "Données publiques.",
-            "Données publiques et confidentielles pour les non-diffusibles.",
-            "Données confidentielles.",
-            "Données publiques et confidentielles.",
+            "Données publiques et protégées pour les non-diffusibles.",
+            "Données protégées.",
+            "Données publiques et protégées.",
           ]
       - label: "Fournisseurs"
         name: "providers"

@@ -20,7 +20,7 @@ description: Obtenir l’attestation validant que l’**entreprise s’acquitte 
 usecases:
   - Aides publiques
   - Marchés publics
-opening: Données confidentielles.
+opening: Données protégées.
 perimeter:
   description: >-
     Toutes les entreprises sont concernées.

@@ -85,7 +85,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-opening: Données publiques et confidentielles pour les non-diffusibles.
+opening: Données publiques et protégées pour les non-diffusibles.
 perimeter:
   label: Entreprises, entrepreneurs individuels, institutions administratives et
     certaines associations.
@@ -239,7 +239,7 @@ services:
             * des unités de gestion de paye de la fonction publique ;
 
             * des unités provisoires (c'est à dire des entreprises ayant obtenu un numéro SIREN provisoire au gichet du Centre de Formalités des Entreprises (CFE) au moment de leur déclaration ; numéro qui sera par la suite confirmé, à la réception de la déclaration de création, et fera entrer ces entreprises dans le Répertoire.
-          question: ⚠️ Comment utiliser les données confidentielles <br>des entreprises
+          question: ⚠️ Comment utiliser les données protégées <br>des entreprises
             non diffusibles ?
       url: |-
         **entreprises/**SirenDeL’Entreprise

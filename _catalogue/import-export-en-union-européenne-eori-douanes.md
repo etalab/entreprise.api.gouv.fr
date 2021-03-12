@@ -12,7 +12,7 @@ description: Savoir si une entreprise est **immatriculée auprès des douanes**
 usecases:
   - Aides publiques
   - Marchés publics
-opening: Données confidentielles.
+opening: Données protégées.
 providers:
   - douanes
 perimeter:

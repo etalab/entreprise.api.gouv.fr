@@ -13,7 +13,7 @@ description: Obtenir l’**attestation fiscale**, délivrée par la Direction
 usecases:
   - Aides publiques
   - Marchés publics
-opening: Données confidentielles.
+opening: Données protégées.
 perimeter:
   description: >-
     L'attestation de régularité fiscale est **limitée aux ✅ entreprises soumises

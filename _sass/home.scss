@@ -63,17 +63,6 @@
   animation-timing-function: steps(1, end);
 }
 
-.home .notification {
-  font-size: 1.2rem;
-  color: #0053b3;
-  background-color: #ffcb00;
-  width: 100%;
-  margin-bottom: 0;
-  text-align: center;
-  border: 0;
-  padding: 1em;
-}
-
 @keyframes typewriter {
   0%, 50%, 100% {
     width: 0;

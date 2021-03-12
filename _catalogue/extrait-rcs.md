@@ -15,7 +15,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Répertoire de tiers
-opening: Données confidentielles.
+opening: Données protégées.
 perimeter:
   description: Toutes les entreprises présentes au registre du commerce et des sociétés.
   label: Toutes les entreprises présentes dans le RCS.
