@@ -7,13 +7,13 @@ title: Faciliter la detection de la fraude
 
 {% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-marches-publics.png' %}
 
-API Entreprise permet de simplifier les procédures de detection de la fraude, en mettant à disposition plusieurs APIs afin de faciliter : 
+API Entreprise permet de simplifier les procédures de detection de la fraude, qu'elle soit financière ou sociale, en mettant à disposition plusieurs APIs afin de faciliter : 
 
 - la constitution du dossier d'enquête, en **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
 
 - le **ciblage** des entreprises ou associations à contrôler. 
 
-- le travail des enquêteurs en leur permettant d'**accéder et exploiter rapidement** les informations économiques et financières des entités contrôlées.
+- le travail des enquêteurs en leur permettant d'**accéder et exploiter rapidement** les informations sociales, économiques et financières des entités contrôlées.
 
 ## Les données utiles à la détection de la fraude
 
