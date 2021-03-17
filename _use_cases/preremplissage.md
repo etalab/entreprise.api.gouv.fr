@@ -33,7 +33,7 @@ Mise à part certaines données jugées trop sensibles, votre service pourra acc
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
 
-Selon votre cas d'usage spécifique, veillez à **demander uniquement les données nécessaires** dans le cadre du pré-remplissage d'un formulaire et à fournir les documents nécessaires pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
+Selon votre cas d'usage spécifique, veillez à **demander uniquement les données strictement nécessaires** dans le cadre du pré-remplissage d'un formulaire et à fournir les documents nécessaires pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
 
   {:.example}
 
