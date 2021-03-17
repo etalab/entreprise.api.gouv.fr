@@ -122,18 +122,6 @@ Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de dire
 
 Vous êtes un éditeur proposant une solution pour les aides publiques et ne figurez pas sur cette liste ? Veuillez nous contacter à cette adresse mail : [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
 
-## Formulaire d'accès spécifique au cas d'usage
-
-Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques" : 
-
-  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=aides_publiques">🔑 Formulaire d'accès "aides publiques"</a>
-
-
-{:.tpl-notification}
-
-Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
-Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formualire.
-<br>
 
 ## Ils utilisent l'API Entreprise
 
@@ -147,3 +135,17 @@ Ils utilisent déjà l'API Entreprise pour faciliter le dépôt des dossiers d'a
 <br>
 
 {% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
+
+
+## Faire sa demande d'accès
+
+Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques" : 
+
+  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=aides_publiques">🔑 Formulaire d'accès "aides publiques"</a>
+
+
+{:.tpl-notification}
+
+Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
+Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formualire.
+<br>

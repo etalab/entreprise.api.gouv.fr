@@ -138,7 +138,7 @@ Les données sur les associations sont disponibles en open data (sans demande d'
 | API du Répertoire National des Associations (RNA)      | Direction Interministérielle du Numérique (DINUM) | Données d'identité des associations (RNA)            | [`API RNA` disponible sur api.gouv.fr](https://api.gouv.fr/les-api/api_rna){:target="_blank"}                                                                                |
 
 
-## Formulaire d'accès spécifique au cas d'usage
+## Faire sa demande d'accès
 
 **Chaque région doit effectuer une demande d'accès** avec les données indiquées plus haut. Chaque région aura la charge de **transmettre la clé d'accès obtenue** à son prestataire éditeur.
 
