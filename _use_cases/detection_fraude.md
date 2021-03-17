@@ -1,11 +1,11 @@
 ---
 layout: usecases
-title: Faciliter la detection de la fraude
+title: Simplifier la détection de la fraude
 ---
 
 ## Le rôle d'API Entreprise
 
-{% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-marches-publics.png' %}
+{% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-fraude.png' %}
 
 API Entreprise permet de simplifier les procédures de detection de la fraude, qu'elle soit financière ou sociale, en mettant à disposition plusieurs APIs afin de faciliter : 
 
@@ -19,7 +19,7 @@ API Entreprise permet de simplifier les procédures de detection de la fraude, q
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
-Selon la détection de fraude à laquelle votre service est habilité, veillez à **demander uniquement les données nécessaires** et à fournir les documents nécessaires pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
+Selon la détection de fraude à laquelle votre service est habilité, veillez à **demander uniquement les données strictement nécessaires** et à fournir les documents nécessaires pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
 
   {:.example}
 
@@ -108,8 +108,19 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
   <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>  
 
+## Ils utilisent l'API Entreprise
 
-## Formulaire d'accès spécifique au cas d'usage
+
+Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruction des marchés publics :
+
+- **Des administrations centrales** : Ministère de l'économie, des finances et de la relance ;
+
+- **Des opérateurs** : Direction des achats de l'État, DGCCRF (Direction générale de la concurrence, de la consommation et de la répression des fraudes).
+<br>
+<br>
+
+
+## Faire sa demande d'accès
 
 Vous avez identifié les données nécessaires pour votre service dans le cadre de la détection de fraude ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "détection de la fraude" : 
 
@@ -120,16 +131,4 @@ Vous avez identifié les données nécessaires pour votre service dans le cadre 
 
 Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
 Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formulaire.
-<br>
-
-
-## Ils utilisent l'API Entreprise
-
-
-Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruction des marchés publics :
-
-- **Des administrations centrales** : Ministère de l'économie, des finances et de la relance ;
-
-- **Des opérateurs** : Direction des achats de l'État, DGCCRF (Direction générale de la concurrence, de la consommation et de la répression des fraudes).
-<br>
 <br>
