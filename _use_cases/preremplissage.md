@@ -124,7 +124,21 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
   <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>  
 
 
-## Formulaires d'accès spécifique au cas d'usage
+## Ils utilisent l'API Entreprise
+
+
+Ils utilisent déjà l'API Entreprise pour pré-remplir leurs formulaires à destination des entreprises et des associations : 
+
+- **Des communes et intercommunalités** : 
+La communauté de communes de Vaison Ventoux propose une [carte aux professionnels permettant d'accéder aux déchetteries de son territoire](http://www.vaison-ventoux.fr/cadre-de-vie-solidarite/dechets/l-acces-a-la-carte-de-dechetterie-pour-les-professionnels.htm){:target="_blank"}. Le formulaire accessible sous connexion sécurisée FranceConnect, est directement pré-rempli des informations disponibles par API Entreprise.
+- **Des administrations centrales** : ANCT (Agence nationale de la cohésion des territoires), DINUM (Direction interministérielle du numérique) ;
+- **Des opérateurs** : BPI France financement, Agence nationale pour la gestion des déchets radioactifs, CNIL (Commission Nationale de l’Informatique et des Libertés), CCI France.
+
+
+{% asset 'cas-usage/cas-usage-preremplissage-exemples.png' %}
+
+
+## Faire sa demande d'accès
 
 Vous avez identifié les données nécessaires pour faciliter le pré-remplissage de formulaires à destination des entreprises et/ou associations ? <br>Les liens ci-dessous vous permettent de faire plus facilement votre demande d'accès : 
 <br><br>
@@ -141,17 +155,3 @@ Votre formulaire est en accès **public** :
 Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
 Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formulaire.
 <br>
-
-
-## Ils utilisent l'API Entreprise
-
-
-Ils utilisent déjà l'API Entreprise pour pré-remplir leurs formulaires à destination des entreprises et des associations : 
-
-- **Des communes et intercommunalités** : 
-La communauté de communes de Vaison Ventoux propose une [carte aux professionnels permettant d'accéder aux déchetteries de son territoire](http://www.vaison-ventoux.fr/cadre-de-vie-solidarite/dechets/l-acces-a-la-carte-de-dechetterie-pour-les-professionnels.htm){:target="_blank"}. Le formulaire accessible sous connexion sécurisée FranceConnect, est directement pré-remplit des informations disponibles par API Entreprise.
-- **Des administrations centrales** : ANCT (Agence nationale de la cohésion des territoires), DINUM (Direction interministérielle du numérique) ;
-- **Des opérateurs** : BPI France financement, Agence nationale pour la gestion des déchets radioactifs, CNIL (Commission Nationale de l’Informatique et des Libertés), CCI France.
-
-
-{% asset 'cas-usage/cas-usage-preremplissage-exemples.png' %}
