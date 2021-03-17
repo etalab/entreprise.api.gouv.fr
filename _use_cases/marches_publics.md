@@ -138,22 +138,6 @@ Vous êtes un éditeur proposant une solution pour les marchés publics et ne fi
 
 
 
-## Formulaire d'accès spécifique au cas d'usage
-
-Si vous êtes un acheteur public, il est probable que vous ayez déjà accès aux données d'API Entreprise par l'intermédiaire de votre profil acheteur ou du DUME (Document Unique du Marché Européen) que peut remplir l'entreprise.
-
-Si vous n'êtes pas dans ce premier cas et que vous avez identifié les données nécessaires pour votre service dans le cadre des marchés publics, le lien ci-dessous vous permet d'accéder à un formulaire spécifique "marchés publics" :
-
-  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=marches_publics">🔑 Formulaire d'accès "marchés publics"</a>
-
-
-{:.tpl-notification}
-
-Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
-Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formulaire.
-<br>
-
-
 ## Ils utilisent l'API Entreprise
 
 
@@ -170,3 +154,18 @@ Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruc
 <br>
 
 {% asset 'cas-usage/cas-usage-marches-publics-exemples.png' %}
+
+## Faire sa demande d'accès
+
+Si vous êtes un acheteur public, il est probable que vous ayez déjà accès aux données d'API Entreprise par l'intermédiaire de votre profil acheteur ou du DUME (Document Unique du Marché Européen) que peut remplir l'entreprise.
+
+Si vous n'êtes pas dans ce premier cas et que vous avez identifié les données nécessaires pour votre service dans le cadre des marchés publics, le lien ci-dessous vous permet d'accéder à un formulaire spécifique "marchés publics" :
+
+  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=marches_publics">🔑 Formulaire d'accès "marchés publics"</a>
+
+
+{:.tpl-notification}
+
+Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
+Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formulaire.
+<br>
