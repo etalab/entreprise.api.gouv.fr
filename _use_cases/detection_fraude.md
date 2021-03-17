@@ -9,7 +9,7 @@ title: Faciliter la detection de la fraude
 
 API Entreprise permet de simplifier les procédures de detection de la fraude, qu'elle soit financière ou sociale, en mettant à disposition plusieurs APIs afin de faciliter : 
 
-- la constitution du dossier d'enquête, en **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
+- la constitution du dossier d'enquête, **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
 
 - le **ciblage** des entreprises ou associations à contrôler. 
 
