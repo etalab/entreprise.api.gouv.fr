@@ -85,7 +85,7 @@ services:
         code: >-
           [
              {
-             // LES INFORMATIONS GÉNÉRALES DE L'OPÉRATEUR ÉCONOMIQUE
+          // LES INFORMATIONS GÉNÉRALES DE L'OPÉRATEUR ÉCONOMIQUE
              
                 "raison_sociale":"La bio pep's",
                 "denomination_courante":"Donnée indisponible",
@@ -135,8 +135,9 @@ services:
                       ]
                    }
                 ],
+
                 
-             // LES ACTIVITÉS DE L'ENTREPRISE ET LES PRODUITS CERTIFIÉS LE CAS ÉCHÉANT
+          // LES ACTIVITÉS DE L'ENTREPRISE ET LES PRODUITS CERTIFIÉS
              
                 "activites": [
                 // Ce champ liste les activités certifiées de l'opérateur économique : "Production", "Preparation", "Distribution", "Stockage", "Importation" et/ou "Restauration".
@@ -160,6 +161,9 @@ services:
                       "code":"01.13.13",
                    }
                 ],
+
+                
+          // LES CERTIFICATIONS
                 "certificats":[
                 // Cette clé délivre la liste des certifications en BIO de l'opérateur. Un opérateur peut avoir plusieurs certificats s'il a plusieurs organismes certificateurs.
                    {
@@ -170,11 +174,11 @@ services:
                       "date_arret":null,
                       // Il s'agit de la date d'arrêt d'une certification. Ce cas assez rare.
                       "date_suspension":null,
-                      // Dans certain cas, l'état de la certifcation en BIO d'un opérateur peut être "SUSPENDU" (voir ci-dessous), cette date correspond à cette suspension.
+                      // Dans certains cas, la certifcation en BIO d'un opérateur peut être "SUSPENDUE" (voir ci-dessous), cette date correspond à cette suspension.
                       "url":"https://www.certipaq.solutions/bio/certificats/fiche/56530/barbot-fabrice/",
-                      // Pour 90% des certifications, une URL est donnée, permettant de se rendre sur le site de l'organisme certificateur donnant accès au certificat au format PDF. Pour en savoir plus, consulter les blocs question/réponse de cette documentation.
+                      // Pour 90% des certifications, une URL est donnée, permettant de se rendre sur le site de l'organisme certificateur donnant accès au certificat au format PDF. Pour en savoir plus, consulter le bloc question/réponse de cette documentation.
                       "etat_certification":"ENGAGEE"
-                      // C'est l'état de la certifiction en BIO de l'opérateur. Lorsque la certification est active, la certification est dite "ENGAGEE". La certification peut également présenter les états suivants. "SUSPENDUE" : la certification est aerrêtée temporairement par l'organisme de certification, généralement parce qu'un écart a été observé avec le règlement. Cette suspension est temporaire. Si la suspension dure un an, l'état indique "RETIREE". Si la suspension est définitive, l'état indique "ARRETEE".
+                      // C'est l'état de la certifiction en BIO de l'opérateur. Lorsque la certification est active, la certification est dite "ENGAGEE". Lorsque la certification est arrêtée temporairement par l'organisme de certification, généralement parce qu'un écart a été observé avec le règlement, la certification est"SUSPENDUE". Cette suspension est temporaire. Si la suspension dure un an, l'état indique "RETIREE". Si la suspension est définitive, l'état indique "ARRETEE".
                    }
                 ]
              }
@@ -220,7 +224,7 @@ services:
 
         * d'**informations générale sur l'opérateur** (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO, ses adresses postales ;
 
-        * de la **liste des activités** et des **produits certifiés** le cas échéant ;
+        * de la **liste des activités** et des **produits certifiés** ;
 
         * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat** depuis l'annuaire de l'Agence BIO.
 
