@@ -72,6 +72,13 @@ Le site vitrine d'API Entreprise est disponible à l'adresse https://entreprise.
 
 Il s'agit d'un site statique en Jekyll dont les sources sont hostées sur [Github](https://github.com/etalab/entreprise.api.gouv.fr).
 
+## Notification en haut de la homepage
+
+Vous pouvez désactiver / activer une notification en haut de page directement
+depuis le fichier `_config.yml`.
+
+Plus d'infos sur les options dans la clé `notification` du fichier.
+
 ## Pages
 
 ### Support

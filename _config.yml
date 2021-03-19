@@ -183,3 +183,12 @@ defaults:
       path: "admin"
     values:
       sitemap: false
+
+notification:
+  # false = hide
+  enable: true
+  # only info and notice for now
+  kind: info
+  text: "Webinaire API Entreprise du 30 mars 2021 à 15h : <strong>Simplifiez vos démarches en utilisant les données de l’Insee !</strong>
+    <br />
+    📆<a href='https://app.livestorm.co/dinum-3/webinaire-api-entreprise-donnees-de-linsee' target='_blank'>Inscrivez-vous !</a>"

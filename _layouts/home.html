@@ -3,6 +3,11 @@ layout: default
 ---
 
 <div class="home">
+  {% if site.notification.enable %}
+  <div class="home notification notification-{{site.notification.kind}}">
+    {{ site.notification.text}}
+  </div>
+  {% endif %}
   <section class="tpl-hero">
     <div class="tpl-container tpl-flex-row tpl-flex-jc-sa">
       <h1 class="tpl-hero__title">
