@@ -92,9 +92,9 @@ services:
                 // Parfois identique à la raison sociale, il s'agit du nom donné à l'entité concernée.
                 "siret":"48311105000025",
                 "numero_bio":18344,
-                // C'est le numéro qui accompagne l'opérateur économique (entreprise ou association certifiées en BIO) tout au long de sa vie, même en cas de changement d'activité, ou d'orgnanisme de certification. Seule le changement de numéro de SIRET implique un changement du numéro BIO.
-                "numeroPacage": null,
-                // Cette donnée n'es actuellement pas disponible. Le numéro de PACAGE est l'identifiant de l'exploitation de l'opérateur dans sa déclaration d'aide PAC.
+                // C'est le numéro qui accompagne l'opérateur économique (entreprise ou association certifiées en BIO) tout au long de sa vie, même en cas de changement d'activité, ou d'orgnanisme de certification. Seul le changement de numéro de SIRET implique un changement du numéro BIO.
+                "numero_pacage": null,
+                // Cette donnée n'est actuellement pas disponible. Le numéro de PACAGE est l'identifiant de l'exploitation de l'opérateur dans sa déclaration d'aide PAC.
                 "date_derniere_mise_a_jour":"2020-10-27",
                 // Il s'agit de la dernière mise à jour faite par l'opérateur économique. Celle-ci n'implique donc pas une mise à jour de toutes les données.
                 "reseau":"",
@@ -143,7 +143,7 @@ services:
           // LES ACTIVITÉS DE L'ENTREPRISE ET LES PRODUITS CERTIFIÉS
              
                 "activites": [
-                // Ce champ liste les activités certifiées de l'opérateur économique : "Production", "Preparation", "Distribution", "Stockage", "Importation" et/ou "Restauration".
+                // Ce champ liste les activités certifiées de l'opérateur économique parmi : "Production", "Preparation", "Distribution", "Stockage", "Importation" et/ou "Restauration".
                    "Production", 
                    "Distribution", 
                    "Stockage"
@@ -176,13 +176,13 @@ services:
                       "date_engagement":"2020-09-29",
                       // Il s'agit de la date à laquelle l'opérateur économique s'engage à respecter le cahier des charges BIO. Cette donnée est fournie par l'organisme certificateur et fait référence. Cette date ne correspond pas forcément au démarrage concrêt de l'activité.
                       "date_arret":null,
-                      // Il s'agit de la date d'arrêt d'une certification. Ce cas assez rare.
+                      // Il s'agit de la date d'arrêt d'une certification. Ce cas est assez rare.
                       "date_suspension":null,
                       // Dans certains cas, la certifcation en BIO d'un opérateur peut être "SUSPENDUE" (voir ci-dessous), cette date correspond à cette suspension.
                       "url":"https://www.certipaq.solutions/bio/certificats/fiche/56530/barbot-fabrice/",
                       // Pour 90% des certifications, une URL est donnée, permettant de se rendre sur le site de l'organisme certificateur donnant accès au certificat au format PDF. Pour en savoir plus, consulter le bloc question/réponse de cette documentation.
                       "etat_certification":"ENGAGEE"
-                      // C'est l'état de la certifiction en BIO de l'opérateur. Lorsque la certification est active, la certification est dite "ENGAGEE". Lorsque la certification est arrêtée temporairement par l'organisme de certification, généralement parce qu'un écart a été observé avec le règlement, la certification est"SUSPENDUE". Cette suspension est temporaire. Si la suspension dure un an, l'état indique "RETIREE". Si la suspension est définitive, l'état indique "ARRETEE".
+                      // C'est l'état de la certifiction en BIO de l'opérateur. Lorsque la certification est active, la certification est dite "ENGAGEE". Lorsque la certification est arrêtée temporairement par l'organisme de certification, généralement parce qu'un écart a été observé avec le règlement, la certification est "SUSPENDUE". Cette suspension est temporaire. Si la suspension dure un an, l'état indique "RETIREE". Si la suspension est définitive, l'état indique "ARRETEE".
                    }
                 ]
              }
