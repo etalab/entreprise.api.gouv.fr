@@ -89,14 +89,19 @@ services:
              {
                 "raison_sociale":"La bio pep's",
                 "denomination_courante":"Donnée indisponible",
+                // Parfois identique à la raison sociale, il s'agit du nom donné à l'entité concernée.
                 "siret":"48311105000025",
                 "numero_bio":18344,
+                // C'est le numéro qui accompagne l'opérateur économique (entreprise ou association certifiées en BIO) tout au long de sa vie, même en cas de changement d'activité, ou d'orgnanisme de certification. Seule le changement de numéro de SIRET implique un changement du numéro BIO.
                 "date_derniere_mise_a_jour":"2020-10-27",
+                // Il s'agit de la dernière mise à jour faite par l'opérateur économique. Celle-ci n'implique donc pas une mise à jour de toutes les données.
                 "reseau":"",
+                // Ce champ est completé lorsque l'entité concernée est rattachée à un réseau. C'est souvent le cas pour les distributeurs. Cette donnée est déclarative.
                 "categories":[
                    "Vente aux consommateurs",
                    "Artisans/commerçants"
                 ],
+                // Ce champs, déclaratif, permet aux utilisateurs de l'Annuaire de l'Agence BIO (https://www.agencebio.org/vos-outils/annuaire/) de filtrer les opérateurs économiques avec six catégories : "Artisans/commerçants" ; "Grandes surfaces généralistes" ; "Grossistes" ; "Magasins spécialisés" ; "Restaurants" ; "Vente aux consommateurs".
                 "activites": [
                    "Production", 
                    "Distribution", 
@@ -138,6 +143,7 @@ services:
                    {
                       "nom":"Framboises",
                       "code":"01.25.12",
+                      // Ce code renvoit à la Nomenclature des produits français de l'INSEE, disponible par en suivant ce lien : https://www.insee.fr/fr/metadonnees/cpfr21?champRecherche=true 
                    },
                    {
                       "nom":"Maïs doux",
