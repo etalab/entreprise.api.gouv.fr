@@ -5,13 +5,11 @@ label: certificats_agence_bio
 scope:
   - entreprises
   - associations
-description: Obtenir les **certifications biologiques** d'une entreprise ou
-  d'une association, ainsi que leur **organisme de certification** et la **liste
-  des catégories de produits certifiés** si elles ont une activité de
-  production. Ces données sont fournies par l'Agence Française pour le
-  Développement et la Promotion de l'Agriculture Biologique (Agence BIO) qui
-  agrège les données de l'ensemble des organismes certificateurs. Ces
-  informations sont aussi consultables sur leur [annuaire
+description: Connaître les **certifications biologiques en cours** d'une
+  entreprise ou d'une association. Ces données sont fournies par l'Agence
+  Française pour le Développement et la Promotion de l'Agriculture Biologique
+  (Agence BIO) qui agrège les données de l'ensemble des organismes
+  certificateurs. Ces informations sont aussi consultables sur leur [annuaire
   officiel](https://annuaire.agencebio.org/).
 usecases:
   - Aides publiques
@@ -87,6 +85,8 @@ services:
         code: >-
           [
              {
+             // LES INFORMATIONS GÉNÉRALES DE L'OPÉRATEUR ÉCONOMIQUE
+             
                 "raison_sociale":"La bio pep's",
                 "denomination_courante":"Donnée indisponible",
                 // Parfois identique à la raison sociale, il s'agit du nom donné à l'entité concernée.
@@ -98,16 +98,12 @@ services:
                 "reseau":"",
                 // Ce champ est completé lorsque l'entité concernée est rattachée à un réseau. C'est souvent le cas pour les distributeurs. Cette donnée est déclarative.
                 "categories":[
+                // Ce champs, déclaratif, permet aux utilisateurs de l'Annuaire de l'Agence BIO (https://www.agencebio.org/vos-outils/annuaire/) de filtrer les opérateurs économiques avec six catégories : "Artisans/commerçants" ; "Grandes surfaces généralistes" ; "Grossistes" ; "Magasins spécialisés" ; "Restaurants" ; "Vente aux consommateurs".
                    "Vente aux consommateurs",
                    "Artisans/commerçants"
                 ],
-                // Ce champs, déclaratif, permet aux utilisateurs de l'Annuaire de l'Agence BIO (https://www.agencebio.org/vos-outils/annuaire/) de filtrer les opérateurs économiques avec six catégories : "Artisans/commerçants" ; "Grandes surfaces généralistes" ; "Grossistes" ; "Magasins spécialisés" ; "Restaurants" ; "Vente aux consommateurs".
-                "activites": [
-                   "Production", 
-                   "Distribution", 
-                   "Stockage"
-                ]
                 "adresses_operateurs":[
+                // Quand l'entreprise se notifie auprès de l'Agence BIO, une adresse postale récupérée auprès de l'INSEE est automatiquement proposée. L'opérateur économique peut décider d'ajouter d'autres adresses. Ce qui est le cas dans l'exemple ci-dessous avec le lieu de vente, le lieu d'activité et le siège social. Dans la grande majortié des cas, les opérateurs ne déclarent qu'une seule adresse.
                    {
                       "lieu":"26 RUE ELISEE RECLUS",
                       "code_postal":"49800",
@@ -139,7 +135,17 @@ services:
                       ]
                    }
                 ],
+                
+             // LES ACTIVITÉS DE L'ENTREPRISE ET LES PRODUITS CERTIFIÉS LE CAS ÉCHÉANT
+             
+                "activites": [
+                // Ce champ liste les activités certifiées de l'opérateur économique : "Production", "Preparation", "Distribution", "Stockage", "Importation" et/ou "Restauration".
+                   "Production", 
+                   "Distribution", 
+                   "Stockage"
+                ]      
                 "productions":[
+                // Cette clé délivre la liste des produits certifiés de l'opérateur économique. Cette liste n'est disponible que si l'opérateur a déclaré une activité de "Production".
                    {
                       "nom":"Framboises",
                       "code":"01.25.12",
@@ -155,13 +161,20 @@ services:
                    }
                 ],
                 "certificats":[
+                // Cette clé délivre la liste des certifications en BIO de l'opérateur. Un opérateur peut avoir plusieurs certificats s'il a plusieurs organismes certificateurs.
                    {
                       "organisme":"Certipaq",
+                      // Nom de l'organisme certificateur.
                       "date_engagement":"2020-09-29",
+                      // Il s'agit de la date à laquelle l'opérateur économique s'engage à respecter le cahier des charges BIO. Cette donnée est fournie par l'organisme certificateur et fait référence. Cette date ne correspond pas forcément au démarrage concrêt de l'activité.
                       "date_arret":null,
+                      // Il s'agit de la date d'arrêt d'une certification. Ce cas assez rare.
                       "date_suspension":null,
+                      // Dans certain cas, l'état de la certifcation en BIO d'un opérateur peut être "SUSPENDU" (voir ci-dessous), cette date correspond à cette suspension.
                       "url":"https://www.certipaq.solutions/bio/certificats/fiche/56530/barbot-fabrice/",
+                      // Pour 90% des certifications, une URL est donnée, permettant de se rendre sur le site de l'organisme certificateur donnant accès au certificat au format PDF. Pour en savoir plus, consulter les blocs question/réponse de cette documentation.
                       "etat_certification":"ENGAGEE"
+                      // C'est l'état de la certifiction en BIO de l'opérateur. Lorsque la certification est active, la certification est dite "ENGAGEE". La certification peut également présenter les états suivants. "SUSPENDUE" : la certification est aerrêtée temporairement par l'organisme de certification, généralement parce qu'un écart a été observé avec le règlement. Cette suspension est temporaire. Si la suspension dure un an, l'état indique "RETIREE". Si la suspension est définitive, l'état indique "ARRETEE".
                    }
                 ]
              }
@@ -205,11 +218,14 @@ services:
         La réponse se compose : 
 
 
-        * d'**informations générale sur l'opérateur** (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO, ses activités et ses adresses postales ;
+        * d'**informations générale sur l'opérateur** (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO, ses adresses postales ;
 
-        * de la **liste des produits certifiés** ;
+        * de la **liste des activités** et des **produits certifiés** le cas échéant ;
 
-        * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat** depuis l'annuaire de l'Agence BIO .
+        * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat** depuis l'annuaire de l'Agence BIO.
+
+
+        **Le numéro de PACAGE est une donnée vous permettant de simplifier vos démarches ?** il n'est actuellement pas disponible mais pourrait l'être à l'avenir, merci de nous transmettre votre besoin à l'adresse [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
 availability:
   volumetry: 2000 requêtes/10 minutes par IP
   unavailability_types: /
