@@ -186,7 +186,7 @@ defaults:
 
 notification:
   # false = hide
-  enable: false
+  enable: true
   # only info and notice for now
   kind: info
   text: "Webinaire API Entreprise du 30 mars 2021 à 15h : <strong>Simplifiez vos démarches en utilisant les données de l’Insee !</strong>
