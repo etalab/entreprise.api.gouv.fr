@@ -22,7 +22,7 @@ perimeter:
     **Cette API renvoie l'état des certifications de :**
 
 
-    * ✅ toutes les entreprises certifiées BIO ; 
+    * ✅ toutes les entreprises certifiées BIO ;
 
     * ✅ des associations certifiées BIO ayant un numéro de SIRET.
 
@@ -30,7 +30,7 @@ perimeter:
     Les données disponibles sont issues de l'annuaire officiel de l'Agence BIO, lui même alimenté par les différents organismes certificateurs : la donnée JSON renvoyée est elle-même certifiée.
 
 
-    **❌ 10% des certificats PDF ne sont pas accessibles :** 
+    **❌ 10% des certificats PDF ne sont pas accessibles :**
 
 
     <details class="fold-underline">
@@ -86,7 +86,7 @@ services:
           [
              {
           // LES INFORMATIONS GÉNÉRALES DE L'OPÉRATEUR ÉCONOMIQUE
-             
+
                 "raison_sociale":"La bio pep's",
                 "denomination_courante":"Donnée indisponible",
                 // Parfois identique à la raison sociale, il s'agit du nom donné à l'entité concernée.
@@ -139,21 +139,21 @@ services:
                 ],
 
 
-                
+
           // LES ACTIVITÉS DE L'ENTREPRISE ET LES PRODUITS CERTIFIÉS
-             
+
                 "activites": [
                 // Ce champ liste les activités certifiées de l'opérateur économique parmi : "Production", "Preparation", "Distribution", "Stockage", "Importation" et/ou "Restauration".
-                   "Production", 
-                   "Distribution", 
+                   "Production",
+                   "Distribution",
                    "Stockage"
-                ]      
+                ]
                 "productions":[
                 // Cette clé délivre la liste des produits certifiés de l'opérateur économique. Cette liste n'est disponible que si l'opérateur a déclaré une activité de "Production".
                    {
                       "nom":"Framboises",
                       "code":"01.25.12",
-                      // Ce code renvoit à la Nomenclature des produits français de l'INSEE, disponible par en suivant ce lien : https://www.insee.fr/fr/metadonnees/cpfr21?champRecherche=true 
+                      // Ce code renvoit à la Nomenclature des produits français de l'INSEE, disponible par en suivant ce lien : https://www.insee.fr/fr/metadonnees/cpfr21?champRecherche=true
                    },
                    {
                       "nom":"Maïs doux",
@@ -166,7 +166,7 @@ services:
                 ],
 
 
-                
+
           // LES CERTIFICATIONS
                 "certificats":[
                 // Cette clé délivre la liste des certifications en BIO de l'opérateur. Un opérateur peut avoir plusieurs certificats s'il a plusieurs organismes certificateurs.
@@ -220,10 +220,11 @@ services:
             * Dans le cas où sur les deux items, l'un présente un `"etat_certification" = "ARRETEE"`/`"SUSPENDUE"`/`"RETIREE"` ; et le doublon, un `"etat_certification" = "ENGAGEE"`. Vous pouvez tenir compte uniquement de ce dernier. La section présentant un état engagé prévalant sur l'autre.
 
             * Dans le cas où les deux items présentent un `'etat_certification'` engagé. Il n'y aucun moyen de savoir lequel est à jour. L'Agence BIO elle-même résorbe progressivement ces doublons en collaboration avec les organismes certificateurs.
-          question: L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir
+          question:
+            L'appel de certains SIRET renvoie plusieurs réponses, laquelle choisir
             ?
       description: >-
-        La réponse se compose : 
+        La réponse se compose :
 
 
         * d'**informations générale sur l'opérateur** (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO, ses adresses postales ;
@@ -232,8 +233,6 @@ services:
 
         * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat** depuis l'annuaire de l'Agence BIO.
 
-
-        **Le numéro de PACAGE est une donnée vous permettant de simplifier vos démarches ?** il n'est actuellement pas disponible mais pourrait l'être à l'avenir, merci de nous transmettre votre besoin à l'adresse [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
 availability:
   volumetry: 2000 requêtes/10 minutes par IP
   unavailability_types: /
