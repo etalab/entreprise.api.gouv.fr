@@ -93,6 +93,8 @@ services:
                 "siret":"48311105000025",
                 "numero_bio":18344,
                 // C'est le numéro qui accompagne l'opérateur économique (entreprise ou association certifiées en BIO) tout au long de sa vie, même en cas de changement d'activité, ou d'orgnanisme de certification. Seule le changement de numéro de SIRET implique un changement du numéro BIO.
+                "numeroPacage": null,
+                // Cette donnée n'es actuellement pas disponible. Le numéro de PACAGE est l'identifiant de l'exploitation de l'opérateur dans sa déclaration d'aide PAC.
                 "date_derniere_mise_a_jour":"2020-10-27",
                 // Il s'agit de la dernière mise à jour faite par l'opérateur économique. Celle-ci n'implique donc pas une mise à jour de toutes les données.
                 "reseau":"",
@@ -136,6 +138,7 @@ services:
                    }
                 ],
 
+
                 
           // LES ACTIVITÉS DE L'ENTREPRISE ET LES PRODUITS CERTIFIÉS
              
@@ -161,6 +164,7 @@ services:
                       "code":"01.13.13",
                    }
                 ],
+
 
                 
           // LES CERTIFICATIONS
