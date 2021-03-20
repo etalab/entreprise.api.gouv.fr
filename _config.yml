@@ -52,6 +52,7 @@ collections:
   catalogue:
   documentation:
   supports:
+  newsletters:
 
 # API Entreprise specific variables
 api_url: https://entreprise.api.gouv.fr/v2/
@@ -183,6 +184,11 @@ defaults:
       path: "admin"
     values:
       sitemap: false
+
+newsletters_kinds:
+  incident: '🚧 Incidents'
+  techlettre: '🛠 Techlettre'
+  infolettre: '📮  Infolettre'
 
 notification:
   # false = hide
