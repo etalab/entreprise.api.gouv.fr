@@ -1,0 +1,92 @@
+.tpl-newsletters {
+  .title-archives {
+    margin-bottom: 60px;
+  }
+
+  .tpl-newsletters__content {
+    margin-top: -50px;
+  }
+
+  .mailjet {
+    width: 100%;
+    margin: auto;
+
+    iframe {
+      display: block;
+      margin: auto;
+
+      width: 900px;
+      height: 600px;
+    }
+  }
+
+  .newsletter-kind {
+    border-radius: 50px;
+    padding: 5px 10px;
+
+    &.newsletter-kind-incident {
+      background-color: #fdcf41;
+    }
+
+    &.newsletter-kind-techlettre {
+      background-color: #cac5b1;
+    }
+
+    &.newsletter-kind-infolettre {
+      background-color: #abb8de;
+    }
+  }
+
+
+  .newsletters-entries {
+    list-style-type: none;
+    margin: auto;
+    width: 80%;
+
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+
+    .tpl-button {
+      background-color: white;
+    }
+  }
+
+  .newsletter-entry {
+    background-color: var(--lightest-grey);
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .tpl-newsletters {
+    .newsletters-entries {
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .newsletter-entry {
+      .title {
+        margin: 20px 0px;
+      }
+    }
+
+    .mailjet iframe {
+      width: 100%;
+      height: 1000px;
+    }
+  }
+}
