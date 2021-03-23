@@ -140,15 +140,10 @@ La communauté de communes de Vaison Ventoux propose une [carte aux professionne
 
 ## Faire sa demande d'accès
 
-Vous avez identifié les données nécessaires pour faciliter le pré-remplissage de formulaires à destination des entreprises et/ou associations ? <br>Les liens ci-dessous vous permettent de faire plus facilement votre demande d'accès : 
-<br><br>
-Votre formulaire est **accessible uniquement par l'utilisateur authentifié** :
+Vous avez identifié les données nécessaires pour faciliter le pré-remplissage de formulaires à destination des entreprises et/ou associations ? <br>le lien ci-dessous vous permet d'accéder à un formulaire spécifique "pré-remplissage d'un formulaire" : 
 
-  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=preremplissage_securise">🔑 Demande d'accès "pré-remplissage - formulaire sous authentification"</a>
-<br><br>
-Votre formulaire est en accès **public** : 
+  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=preremplissage">🔑 Demande d'accès "pré-remplissage"</a>
 
-  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=preremplissage_public">🔑 Demande d'accès "pré-remplissage - formulaire public"</a>
 
 {:.tpl-notification}
 
