@@ -27,7 +27,7 @@
     <p>Récupérez les justificatifs administratifs de vos utilisateurs demandant des aides publiques.</p>
   </div>
 </a>
-
+{% unless include.homepage %}
 <a href="{{ site.baseurl }}{% link _use_cases/preremplissage.md %}" class="tpl-card tpl-shadow">
   <div class="tpl-card__header">
     <h3 class="tpl-card__title"><strong>Pré-remplir</strong> et personnaliser un <strong>formulaire</strong></h3>
@@ -47,3 +47,4 @@
     <p>Accédez rapidement à des informations sociales, financières et économiques pour instruire les dossiers de fraude.</p>
   </div>
 </a>
+{% endunless %}
