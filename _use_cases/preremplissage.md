@@ -7,28 +7,28 @@ title: Pré-remplir et personnaliser des formulaires
 
 {% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-preremplissage.png' %}
 
-API Entreprise permet d'améliorer le service rendu aux entreprises et associations, en mettant à disposition plusieurs APIs afin de : 
-- **préremplir directement un formulaire** avec les données publiques connues les concernant, grâce à leur numéro de SIRET ou RNA ; 
+API Entreprise permet d'améliorer le service rendu aux entreprises et associations, en mettant à disposition plusieurs APIs afin de :
+- **préremplir directement un formulaire** avec les données publiques connues les concernant, grâce à leur numéro de SIRET ou RNA ;
 - **personnaliser** ces mêmes formulaires grâce aux informations connues.
 
 
 {:.tpl-notification.tpl--danger}
-***Votre formulaire est accessible uniquement par l'utilisateur après une authentification sécurisée ?*** 
+***Votre formulaire est accessible uniquement par l'utilisateur après une authentification sécurisée ?***
 Mise à part certaines données jugées trop sensibles, votre service pourra accéder à l’ensemble des données disponibles de l’API Entreprise, au format adapté (le JSON).<br>
 <br>
-***Votre formulaire est en accès libre ?*** 
+***Votre formulaire est en accès libre ?***
 **Seuls les endpoints proposant des données publiques sont autorisés.**
 
  {:.example}
   **L'exemple du formulaire DUME**<br>
   L'AIFE a mis en place une démarche dématérialisée pour permettre aux entreprises d’obtenir leur [document Unique de Marché Européen](https://dume.chorus-pro.gouv.fr/){:target="_blank"}. Elle utilise l'API Entreprise pour pré-remplir les formulaires de ses utilisateurs. Le formulaire étant public, seuls les endpoints proposant des données publiques ont été utilisés par l'AIFE dans ce cadre.
-  <video controls width="400"><source src="../assets/videos/video-cas-usage-preremplissage-dume.mp4" type="video/mp4">
+  <video controls width="400"><source src="{{ site.baseurl }}/assets/videos/video-cas-usage-preremplissage-dume.mp4" type="video/mp4">
   Nous sommes désolés, votre navigateur ne supporte pas les vidéos.
   </video>
   {:.example}
 
 
-## Les données utiles au pré-remplissage 
+## Les données utiles au pré-remplissage
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
@@ -44,12 +44,12 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 <br>
 
 
-##### Légende du tableau 
+##### Légende du tableau
 
 {:.tpl-table}
 
-| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? | 
-| ---------| 
+| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? |
+| ---------|
 | ✅&nbsp; &nbsp; Oui |
 | ⏺&nbsp; &nbsp; À étudier |
 | ❌&nbsp; &nbsp; Non |
@@ -121,15 +121,15 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	|  ⏺ | ⏺	| JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
 
-  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>  
+  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
 
 
 ## Ils utilisent l'API Entreprise
 
 
-Ils utilisent déjà l'API Entreprise pour pré-remplir leurs formulaires à destination des entreprises et des associations : 
+Ils utilisent déjà l'API Entreprise pour pré-remplir leurs formulaires à destination des entreprises et des associations :
 
-- **Des communes et intercommunalités** : 
+- **Des communes et intercommunalités** :
 La communauté de communes de Vaison Ventoux propose une [carte aux professionnels permettant d'accéder aux déchetteries de son territoire](http://www.vaison-ventoux.fr/cadre-de-vie-solidarite/dechets/l-acces-a-la-carte-de-dechetterie-pour-les-professionnels.htm){:target="_blank"}. Le formulaire accessible sous connexion sécurisée FranceConnect, est directement pré-rempli des informations disponibles par API Entreprise.
 - **Des administrations centrales** : ANCT (Agence nationale de la cohésion des territoires), DINUM (Direction interministérielle du numérique) ;
 - **Des opérateurs** : BPI France financement, Agence nationale pour la gestion des déchets radioactifs, CNIL (Commission Nationale de l’Informatique et des Libertés), CCI France.
@@ -140,7 +140,7 @@ La communauté de communes de Vaison Ventoux propose une [carte aux professionne
 
 ## Faire sa demande d'accès
 
-Vous avez identifié les données nécessaires pour faciliter le pré-remplissage de formulaires à destination des entreprises et/ou associations ? <br>le lien ci-dessous vous permet d'accéder à un formulaire spécifique "pré-remplissage d'un formulaire" : 
+Vous avez identifié les données nécessaires pour faciliter le pré-remplissage de formulaires à destination des entreprises et/ou associations ? <br>le lien ci-dessous vous permet d'accéder à un formulaire spécifique "pré-remplissage d'un formulaire" :
 
   <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=preremplissage">🔑 Demande d'accès "pré-remplissage"</a>
 
