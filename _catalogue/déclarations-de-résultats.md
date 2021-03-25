@@ -101,6 +101,20 @@ services:
 
 
             ℹ️ Pour mieux comprendre les paramètre obligatoires d'un appel, consulter la rubrique ["Instruire les paramètres de traçabilité"](../doc/#premiere-requete){:target="_blank"}.
+        qr4:
+          question: Comment distinguer l'imprimé rectificatif de l'initial ?
+          answer: >-
+            Il peut arriver que pour un même exercice il y ait plusieurs fois le même imprimé ;
+            il s'agit de corrections qui ont été apportées par une déclaration ultérieure.
+
+
+            Les déclarations dans le JSON sont triées de l'imprimé le plus récent au plus ancien.
+            Ainsi **le premier imprimé est toujours le plus récent**.
+
+
+            P.S: les deux imprimés auront toujours la même `date_declaration` qui correspond à la date du correctif ;
+            ainsi il n'est pas possible de connaître la date de déclaration initiale.
+            Et il n'est pas non plus possible de se baser sur cette date pour prendre le dernier imprimé.
       options:
         option1:
           param: ""
