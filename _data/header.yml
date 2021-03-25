@@ -10,7 +10,13 @@
   target: pages/use_cases.html
 -
   label: Support
-  target: pages/support.html
+  children:
+    -
+      label: FAQ et contact
+      target: pages/support.html
+    -
+      label: Lettre d'information
+      target: pages/infolettres.html
 -
   label: Tableau de bord
   url: https://dashboard.entreprise.api.gouv.fr

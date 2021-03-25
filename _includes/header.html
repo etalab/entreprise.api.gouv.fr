@@ -39,6 +39,22 @@
                 </svg>
               {% endif %}
             </li>
+          {% elsif link.children %}
+            <li class="tpl-site-nav__item no-underline dropdown">
+              <a href="#">
+                {{ link.label }}
+              </a>
+
+              <div class="dropdown-content">
+                {% for child in link.children %}
+                  {% assign target = site.pages | where:"path",child.target | first %}
+
+                  <a href="{{ site.baseurl }}{{ target.url }}">
+                    {{ child.label }}
+                  </a>
+                {% endfor %}
+              </div>
+            </li>
           {% endif %}
         {% endfor %}
       </ul>
