@@ -50,7 +50,9 @@
     href="{% asset favicons/safari-pinned-tab.svg @path %}"
     color="#5bbad5">
 
+  {% unless jekyll.environment == 'production' %}
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {% endunless %}
 
   {% if jekyll.environment == 'production' %}
     {% include matomo.html %}
