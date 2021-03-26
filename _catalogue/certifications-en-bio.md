@@ -43,10 +43,10 @@ perimeter:
 
     * Aujourd'hui, l'endpoint permet d'accéder à 90% des certificats au format PDF correspondant aux opérateurs des ✅ **six organismes certificateurs** (*Ecocert, Bureau Veritas, Certipaq, Alpes contrôles, Certis* et *Control Union*) ayant mis en ligne ces documents.
 
-    * Pour ❌ les 10% de cas restants, il peut être nécessaire de contacter l'organisme certificateur pour obtenir la pièce justificative.
+    * Pour ❌ les 10% de cas restants, le certificat PDF n'est pas disponible. En cas de besoin, il est nécessaire de contacter l'organisme certificateur pour obtenir la pièce justificative.
 
 
-    ℹ️ L'accès aux certificats n'est pas direct comme pour autres endpoint API Entreprise. Les documents sont accessibles en suivant le lien transmis, permettant de se rendre sur la page HTML de l'annuaire en ligne sur lequel il est possible de télécharger les certificats.
+    ℹ️ L'accès aux certificats n'est pas direct comme pour les autres endpoints API Entreprise. Les documents sont accessibles en suivant le lien transmis, permettant de se rendre sur la page HTML de l'organisme certificateur, sur laquelle il est possible de télécharger le certificat.
 
     </details>
 services:
@@ -200,18 +200,14 @@ services:
           question: Il n'y a aucun lien pour télécharger le certificat, est-ce normal ?
           answer: >-
             Oui, le certificat au format **PDF n'est pas disponible pour tous
-            les opérateurs**.
-
-
-            **10% des certificats ne sont pas accessibles** sur l'annuaire de l'Agence BIO. Cet endpoint vous donne l'URL d'accès à la page HTML de l'annuaire dans le cas où le certificat est disponible.
-
-
-            Aujourd’hui, six organismes certificateurs (*Ecocert, Bureau Veritas, Certipaq, Alpes controles, Certis* et *Control Union*) ont mis en ligne les certificats. Pour les 10% restants, il peut être nécessaire de contacter l'organisme certificateur indiqué dans la réponse JSON pour obtenir la pièce justificative.
+            les opérateurs, 10% des certificats ne sont pas accessibles**. 
+            <br><br>
+            Dans le cas où celui-ci est disponible, cet endpoint vous renvoie l'URL d'accès à la page HTML de l'organisme certificateur permettant de télécharger le certificat. Aujourd’hui, six organismes certificateurs (*Ecocert, Bureau Veritas, Certipaq, Alpes controles, Certis* et *Control Union*) ont mis en ligne les certificats.
         qr3:
           answer: >-
             Dans certains cas très minoritaires (environ 700 cas sur 90 000
-            opérateurs), l'endpoint `/certificats_agence_bio` est susceptible de
-            renvoyer plusieurs items au lieu d'un.\
+            opérateurs), cet endpoint est susceptible de
+            renvoyer plusieurs items au lieu d'un.
 
             Ce doublon est un résidu de migration que l'Agence BIO est en train de progressivement résorber.
 
