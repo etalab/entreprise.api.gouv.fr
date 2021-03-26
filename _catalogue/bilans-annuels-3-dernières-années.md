@@ -13,6 +13,7 @@ description: "Obtenir les trois derniers bilans d’une entreprise détenus par 
   contenues dans la liasse fiscale** : bilans, compte de résultat et annexes
   confondus."
 usecases:
+  - Détection de la fraude
 opening: Données protégées.
 perimeter:
   label: Les entreprises ayant au moins 3 bilans et réalisant plus 750 000€ de CA.
