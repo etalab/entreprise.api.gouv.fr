@@ -16,7 +16,7 @@ opening: Données publiques.
 providers:
   - agencebio
 perimeter:
-  label: Les entités ayant une certification BIO
+  label: Les entités ayant une certification BIO.
   description: >-
     **Cette API renvoie l'état des certifications de :**
 
@@ -54,7 +54,7 @@ services:
     request:
       id:
         label: SiretDeL’Entité
-        description: Le numéro de SIRET de l'entreprise ou de l'association
+        description: Le numéro de SIRET de l'entreprise ou de l'association.
       url: |-
         **certificats_agence_bio/**SiretDeL'entité
         **?token=**JetonD'Habilitation
