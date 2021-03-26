@@ -190,11 +190,10 @@ services:
         qr1:
           question: La réponse JSON fait-elle foi ? Est-elle certifiante ?
           answer: >-
-            ✅ Indiqué dans la réponse JSON par la clé `etat_certification`,
-            **l'état de la certification est une donnée faisant foi** de la
-            certification en BIO de l'entité.
+            Cela dépend de l'information renvoyée :<br><br>
 
-
+            ✅ **l'état de la certification fait foi**, il permet de savoir si l'entité est bien certifiée. Cette information est indiquée dans la réponse JSON par la clé `etat_certification` ;
+            <br><br>
             ❌ Concernant la **liste des produits certifiés** renvoyée, **un décalage avec la réalité du terrain peut subvenir** car les données correspondent actuellement à la déclaration de l'opérateur. L'Agence BIO travaille avec les organismes certificateurs pour récupérer de façon automatique les productions certifiées.
         qr2:
           question: Il n'y a aucun lien pour télécharger le certificat, est-ce normal ?
