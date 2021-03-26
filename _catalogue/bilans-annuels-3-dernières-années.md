@@ -13,7 +13,6 @@ description: "Obtenir les trois derniers bilans d’une entreprise détenus par 
   contenues dans la liasse fiscale** : bilans, compte de résultat et annexes
   confondus."
 usecases:
-  - Aides publiques
 opening: Données confidentielles.
 perimeter:
   label: Les entreprises ayant au moins 3 bilans et réalisant plus 750 000€ de CA.
