@@ -13,6 +13,7 @@ description: Obtenir l’**attestation fiscale**, délivrée par la Direction
 usecases:
   - Aides publiques
   - Marchés publics
+  - Détection de la fraude
 opening: Données confidentielles.
 perimeter:
   description: >-

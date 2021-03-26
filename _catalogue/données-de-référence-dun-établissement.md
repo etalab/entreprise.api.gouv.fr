@@ -102,6 +102,8 @@ description: Obtenir des **informations générales, géographiques et juridique
 usecases:
   - Aides publiques
   - Marchés publics
+  - Préremplissage d'un formulaire
+  - Détection de la fraude
   - Répertoire de tiers
 opening: Données publiques et confidentielles pour les non-diffusibles.
 perimeter:

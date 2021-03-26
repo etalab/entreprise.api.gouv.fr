@@ -13,6 +13,7 @@ description: Obtenir les **déclarations de chiffre d'affaire** faites auprès d
 usecases:
   - Aides publiques
   - Marchés publics
+  - Détection de la fraude
 opening: Données confidentielles.
 perimeter:
   description: >-
