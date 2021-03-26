@@ -1,19 +1,19 @@
 ---
 layout: usecases
-title: Simplifier la détection de la fraude
+title: Simplifier la détection de la fraude des entreprises
 ---
 
 ## Le rôle d'API Entreprise
 
 {% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-fraude.png' %}
 
-API Entreprise permet de simplifier les procédures de detection de la fraude, qu'elle soit financière ou sociale, en mettant à disposition plusieurs APIs afin de faciliter : 
+API Entreprise simplifie les procédures de détection de la fraude des entreprises, qu'elle soit financière ou sociale, en mettant à disposition plusieurs API ce qui permet : 
 
-- la constitution du dossier d'enquête, **en récupérant les justificatifs nécessaires à l'instruction**, sans les réclamer aux entreprises et associations demandeuses.
+- la constitution du dossier d'enquête, **en récupérant les justificatifs nécessaires à l'instruction**, sans solliciter les entreprises ;
 
-- le **ciblage** des entreprises ou associations à contrôler. 
+- le **ciblage** des entreprises à contrôler de manière plus approfondie et dans le respect des procédures contradictoires ;
 
-- le travail des enquêteurs en leur permettant d'**accéder et exploiter rapidement** les informations sociales, économiques et financières des entités contrôlées.
+- l'optimisation du travail des enquêteurs en leur offrant un **accès et une exploitation rapide** aux informations sociales, économiques et financières des entités surveillées.
 
 ## Les données utiles à la détection de la fraude
 
@@ -23,7 +23,7 @@ Selon la détection de fraude à laquelle votre service est habilité, veillez �
 
   {:.example}
 
-  Par exemple, votre service effectue un contrôle uniquement sur les entreprises ? Inutile donc de demander les données des associations délivrées par les endpoints `associations` et `documents_associations`.
+  Par exemple, votre service effectue des contrôles concernant uniquement la fraude sociale ? Inutile alors de demander les attestations fiscales `attestations_fiscales_dgfip`.
 
 Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous une première évaluation de l'utilité estimée de la donnée pour la détection de la fraude :
 <br>
