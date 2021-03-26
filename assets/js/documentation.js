@@ -67,7 +67,7 @@ function setupSearch() {
     instantsearch.widgets.searchBox({
       container: searchBoxId,
       autofocus: true,
-      placeholder: 'Écrivez vos mots clés ici',
+      placeholder: 'Rechercher par mots clés',
       cssClasses: {
         root: 'algolia-search',
       }

@@ -13,25 +13,33 @@
       </button>
       <ul class="tpl-site-nav__links">
         {% for link in site.data.header %}
-        {% if link.target %}
-        {% assign target = site.pages | where:"path",link.target | first %}
-        <li class="tpl-site-nav__item 
-            {% if link.button %}no-underline{% endif %}">
-          <a href="{{ site.baseurl }}{{ target.url }}" {% if link.class %}class="tpl-button {{ link.button }}"
-            {% endif %}>{{ link.label }}</a>
-          {% if link.icon %}<svg class="tpl-icon" viewBox="0 0 24 24">
-            <use xlink:href="#{{ link.icon }}"></use>
-          </svg>{% endif %}
-        </li>
-        {% elsif link.url %}
-        <li class="tpl-site-nav__item {% if link.button %}no-underline{% endif %}">
-          <a href="{{ link.url }}" {% if link.button %}class="tpl-button {{ link.buttonclass }}"
-            {% endif %}>{{ link.label }}</a>
-          {% if link.icon %}<svg class="tpl-icon" viewBox="0 0 24 24">
-            <use xlink:href="#{{ link.icon }}"></use>
-          </svg>{% endif %}
-        </li>
-        {% endif %}
+          {% if link.target %}
+            {% assign target = site.pages | where:"path",link.target | first %}
+
+            <li class="tpl-site-nav__item
+                {% if link.button %}no-underline{% endif %}">
+              <a href="{{ site.baseurl }}{{ target.url }}" {% if link.class %}class="tpl-button {{ link.button }}"
+                {% endif %}>{{ link.label }}
+              </a>
+              {% if link.icon %}
+                <svg class="tpl-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#{{ link.icon }}"></use>
+                </svg>
+              {% endif %}
+            </li>
+          {% elsif link.url %}
+            <li class="tpl-site-nav__item {% if link.button %}no-underline{% endif %}">
+              <a href="{{ link.url }}" {% if link.button %}class="tpl-button {{ link.buttonclass }}"
+                {% endif %}>
+                {{ link.label }}
+              </a>
+              {% if link.icon %}
+                <svg class="tpl-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#{{ link.icon }}"></use>
+                </svg>
+              {% endif %}
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </nav>

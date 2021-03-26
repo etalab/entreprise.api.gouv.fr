@@ -22,7 +22,7 @@ questions:
       En utilisant l'endpoint `entreprise`, vous vous engagez à tenir compte du statut de diffusion le plus récent de chaque personne physique.
 
 
-      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
+      Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusables`, et que le champ `"diffusable_commercialement"` de la réponse JSON affiche `=false`, cela signifie que l'entreprise est non diffusible et que vous vous engagez à n’utiliser ces informations que dans le cadre strict de vos missions de service public, à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés.
 
 
       De fait, **les fonctionnalités de pré-remplissage de formulaires ne peuvent donc bénéficier de ces données au risque de les voir diffusées**. Il est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr.>{:target="_blank"}
@@ -112,13 +112,13 @@ perimeter:
 
 
     ⚠️ Cet endpoint concerne uniquement les établissements, voir l'endpoint `entreprises` pour les données relatives aux sociétés.
-    
+
     <details class="fold-underline">
 
     <summary>
 
     Lire la suite
-    
+
     </summary>
 
     **Cet endpoint permet donc d'accéder aux informations de référence concernant les établissements :**
@@ -163,7 +163,7 @@ services:
           description: RaisonDeL'AppelOuIdentifiant
       options:
         option1:
-          param: "**&non_diffusable=**true"
+          param: "**&non_diffusables=**true"
           description: Une option d'appel vous permet d'accéder aux données des
             établissements dîts non-diffusibles, cette option nécessite une
             autorisation spécifique, accordée ou non par API Entreprise selon
@@ -184,7 +184,7 @@ services:
             ###### Comment utiliser les données des non diffusibles ?
 
 
-            En utilisant l'endpoint `etablissements`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser les informations de leur établissement que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
+            En utilisant l'endpoint `etablissements`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas où vous utilisez l'endpoint avec l'option d'appel `non_diffusables`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser les informations de leur établissement que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
 
 
             ⚠️ **Vous ne pouvez pas donc pas faire usage de ces données pour du pré-remplissage.** Il vous est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr>{:target="_blank"}.
