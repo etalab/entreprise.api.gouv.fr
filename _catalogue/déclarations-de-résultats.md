@@ -14,7 +14,6 @@ description: Obtenir les **données contenues dans les liasses fiscales,** issue
   plusieurs services sont disponibles, les déclarations seules, le dictionnaire
   seul, ou les deux réunis pour une entreprise donnée.
 usecases:
-  - Aides publiques
 opening: Données protégées.
 perimeter:
   description: >-
@@ -119,7 +118,7 @@ services:
       format: Donnée structurée JSON
       timeout: 5 secondes
       questions:
-        qr2:
+        qr1:
           question: Comment faire le lien avec le dictionnaire ?
           answer: >-
             Chaque liasse fiscale renvoyée est accompagnée d'un millésime, et
@@ -131,6 +130,18 @@ services:
             \
 
             ℹ️ Il vous faudra à chaque fois préciser le millésime, car les nomenclatures évoluent chaque année.
+        qr2:
+          question: Comment distinguer l'imprimé rectificatif de l'initial ?
+          answer: >-
+            Il peut arriver que pour un même exercice il y ait plusieurs fois le même imprimé ;
+            il s'agit de corrections qui ont été apportées par une déclaration ultérieure.
+
+
+            Les déclarations dans le JSON sont triées de l'imprimé le plus récent au plus ancien.
+            Ainsi **le premier imprimé est toujours le plus récent**.
+
+
+            Par ailleurs, les deux imprimés auront toujours la même `date_declaration` qui correspond à la date du correctif. Celle-ci ne vous permet donc pas de distinguer l'imprimé rectificatif de l'imprimé initial, pour lequel il n'est pas possible de connaître la date de déclaration.
       sample:
         code: >-
           {
