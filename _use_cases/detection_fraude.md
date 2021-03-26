@@ -110,14 +110,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 ## Ils utilisent l'API Entreprise
 
-
-Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruction des marchés publics :
-
-- **Des administrations centrales** : Ministère de l'économie, des finances et de la relance ;
-
-- **Des opérateurs** : Direction des achats de l'État, DGCCRF (Direction générale de la concurrence, de la consommation et de la répression des fraudes).
-<br>
-<br>
+La **Direction des Achats de l'État** (DAE), et la **Direction générale de la concurrence, de la consommation et de la répression des fraudes** (DGCCRF), utilisent déjà l'API Entreprise pour simplifier leurs procédures de détection de la fraude.
 
 
 ## Faire sa demande d'accès
