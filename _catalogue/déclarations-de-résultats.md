@@ -133,7 +133,7 @@ services:
       format: Donnée structurée JSON
       timeout: 5 secondes
       questions:
-        qr2:
+        qr1:
           question: Comment faire le lien avec le dictionnaire ?
           answer: >-
             Chaque liasse fiscale renvoyée est accompagnée d'un millésime, et
@@ -145,6 +145,20 @@ services:
             \
 
             ℹ️ Il vous faudra à chaque fois préciser le millésime, car les nomenclatures évoluent chaque année.
+        qr2:
+          question: Comment distinguer l'imprimé rectificatif de l'initial ?
+          answer: >-
+            Il peut arriver que pour un même exercice il y ait plusieurs fois le même imprimé ;
+            il s'agit de corrections qui ont été apportées par une déclaration ultérieure.
+
+
+            Les déclarations dans le JSON sont triées de l'imprimé le plus récent au plus ancien.
+            Ainsi **le premier imprimé est toujours le plus récent**.
+
+
+            P.S: les deux imprimés auront toujours la même `date_declaration` qui correspond à la date du correctif ;
+            ainsi il n'est pas possible de connaître la date de déclaration initiale.
+            Et il n'est pas non plus possible de se baser sur cette date pour prendre le dernier imprimé.
       sample:
         code: >-
           {
