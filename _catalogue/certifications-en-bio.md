@@ -26,7 +26,7 @@ perimeter:
     * ✅ des associations certifiées BIO ayant un numéro de SIRET.
 
 
-    Les données disponibles sont issues de l'annuaire officiel de l'Agence BIO, lui même alimenté par les différents organismes certificateurs : la donnée JSON renvoyée est elle-même certifiée.
+    Les données disponibles sont issues de l'[annuaire officiel de l'Agence BIO](https://annuaire.agencebio.org/), lui même alimenté par les différents organismes certificateurs : la donnée JSON renvoyée est elle-même certifiée.
 
 
     **❌ 10% des certificats PDF ne sont pas accessibles :**
