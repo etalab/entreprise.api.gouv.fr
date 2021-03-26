@@ -2,6 +2,7 @@
 weight: 1
 title: "Étape 1 : L’API Entreprise correspond-elle à mon besoin ?"
 identifier: besoins
+id: besoins
 panels:
   panel1:
     title: Les cas d’usage d’API Entreprise
@@ -119,13 +120,17 @@ panels:
 
       | [Informations déclaratives d'une association](../catalogue/#associations){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 
-      | [Divers documents d'une association](../catalogue/#documents_associations){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |\
+      | [Divers documents d'une association](../catalogue/#documents_associations){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |
 
       | [Données de référence d'une entreprise artisanale](../catalogue/#a-entreprises_artisanales_cma){:target="_blank"}                     | CMA France |         `entreprises_artisanales_cma`          |      Données JSON   |    publiques    |
 
       | [Actes](../catalogue/#actes_inpi){:target="_blank"}                     | INPI |         `actes_inpi`          |       Archive ZIP (PDF et XML)   |    publiques    |
 
       | [Conventions collectives](../catalogue/#conventions_collectives){:target="_blank"}                     | Fabrique numérique des Ministères Sociaux |         `conventions_collectives`          |     données JSON     |    publiques    |
+
+      | [Effectif d’une entreprise](#a-effectifs...acoss_covid){:target="_blank"}                     | ACOSS |         `effectifs..._acoss_covid`|     données JSON     |    protégées    |  
+
+      | [Immatriculation EORI](#a-eori_douanes){:target="_blank"}                     | Douanes |`eori_douanes`          |     données JSON     |    protégées    |  
 
 
       ##### Informations financières <a id="infos_financieres"></a>
@@ -178,6 +183,8 @@ panels:
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
       | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
+
+      | [Certification en BIO](#a-certificats_agence_bio){:target="_blank"}                     | Agence BIO |         `certificats_agence_bio`          |     données JSON     |    protégées    |\
 
       | [Certification RGE](../catalogue/#certificats_rge_ademe){:target="_blank"}                                      |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
 
