@@ -1,6 +1,6 @@
 ---
 type: Certifications professionnelles
-title: Certifications en BIO
+title: Certification en BIO
 label: certificats_agence_bio
 scope:
   - entreprises
