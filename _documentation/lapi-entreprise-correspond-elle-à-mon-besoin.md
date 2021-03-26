@@ -117,7 +117,7 @@ panels:
 
       | [Extrait  RCS](../catalogue/#extrait_rcs_infogreffe){:target="_blank"}                                           |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    protégées    |
 
-      | [Informations déclaratives d'une association](../catalogue/#associations){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
+      | [Données déclaratives d'une association](../catalogue/#associations){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
 
       | [Divers documents d'une association](../catalogue/#documents_associations){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |\
 
@@ -126,6 +126,8 @@ panels:
       | [Actes](../catalogue/#actes_inpi){:target="_blank"}                     | INPI |         `actes_inpi`          |       Archive ZIP (PDF et XML)   |    publiques    |
 
       | [Conventions collectives](../catalogue/#conventions_collectives){:target="_blank"}                     | Fabrique numérique des Ministères Sociaux |         `conventions_collectives`          |     données JSON     |    publiques    |
+      
+      | [Effectifs d'une entreprise](../catalogue/#a-effectifs_..._acoss_covid){:target="_blank"}                     | ACOSS |         `effectifs_..._acoss_covid`          |     données JSON     |    protégées    |
 
 
       ##### Informations financières <a id="infos_financieres"></a>
@@ -178,6 +180,8 @@ panels:
       | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
 
       | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
+
+      | [Certification en BIO](../catalogue/#a-certificats_agence_bio){:target="_blank"}   |   Agence BIO         |  `certificats_agence_bio`   | données JSON |    publiques    |
 
       | [Certification RGE](../catalogue/#certificats_rge_ademe){:target="_blank"}                                      |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
 
