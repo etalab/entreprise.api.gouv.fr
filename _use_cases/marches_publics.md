@@ -52,6 +52,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | **Actes**<br> `actes_inpi` 	| INPI 	|  ✅ 	|  ZIP (PDF et XML) 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"} |
 | **Conventions collectives** <br> `conventions_collectives` 	| Fabrique numérique des Ministères Sociaux 	|  ✅ 	|  JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"} 	|
 | **Effectif d'une entreprise** <br> `effectifs_..._acoss_covid` 	| ACOSS 	|  ✅ 	|  JSON 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid){:target="_blank"} 	|
+| **Immatriculation EORI** <br> `eori_douanes` 	| Douanes 	|  ✅ 	|  JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-eori_douanes){:target="_blank"} 	|
 
 <br>
 
