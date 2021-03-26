@@ -142,9 +142,7 @@ services:
             Ainsi **le premier imprimé est toujours le plus récent**.
 
 
-            P.S: les deux imprimés auront toujours la même `date_declaration` qui correspond à la date du correctif ;
-            ainsi il n'est pas possible de connaître la date de déclaration initiale.
-            Et il n'est pas non plus possible de se baser sur cette date pour prendre le dernier imprimé.
+            Par ailleurs, les deux imprimés auront toujours la même `date_declaration` qui correspond à la date du correctif. Celle-ci ne vous permet donc pas de distinguer l'imprimé rectificatif de l'imprimé initial, pour lequel il n'est pas possible de connaître la date de déclaration.
       sample:
         code: >-
           {
