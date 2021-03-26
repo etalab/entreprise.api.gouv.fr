@@ -113,6 +113,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 {:.tpl-table}
 | Données et endpoints 	| Producteur 	| Utilité| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
+| **Certification en BIO**<br>`certificats_agence_bio` 	| Agence BIO 	|  ❌	| JSON	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-certificats_agence_bio){:target="_blank"} 	|
 | **Certification RGE**<br>`certificats_rge_ademe` 	| ADEME 	|  ❌  	| JSON et PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"} 	|
 | **Certification de qualification bâtiment**<br>`certificats_qualibat` 	| Qualibat 	|  ❌	| PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"} 	|
 | **Certification de qualification d'ingénierie**<br>`certificats_opqibi` 	| OPQIBI 	|  ❌	|JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi){:target="_blank"} 	|
