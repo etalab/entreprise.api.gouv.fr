@@ -8,9 +8,8 @@ scope:
 description: Connaître les **certifications biologiques en cours** d'une
   entreprise ou d'une association. Ces données sont fournies par l'Agence
   Française pour le Développement et la Promotion de l'Agriculture Biologique
-  (Agence BIO) qui agrège les données de l'ensemble des organismes
-  certificateurs. Ces informations sont aussi consultables sur leur [annuaire
-  officiel](https://annuaire.agencebio.org/).
+  (Agence BIO) qui agrège les **données de l'ensemble des organismes
+  certificateurs**.
 usecases:
   - Aides publiques
 opening: Données publiques.
