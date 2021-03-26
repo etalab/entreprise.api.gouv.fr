@@ -17,6 +17,7 @@ description: Obtenir les **actes d’une entreprise** tels que connus par les
 usecases:
   - Marchés publics
   - Aides publiques
+  - Détection de la fraude
 opening: Données publiques.
 perimeter:
   description: >-

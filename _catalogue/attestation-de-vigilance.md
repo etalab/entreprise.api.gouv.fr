@@ -20,6 +20,7 @@ description: Obtenir l’attestation validant que l’**entreprise s’acquitte 
 usecases:
   - Aides publiques
   - Marchés publics
+  - Détection de la fraude
 opening: Données protégées.
 perimeter:
   description: >-

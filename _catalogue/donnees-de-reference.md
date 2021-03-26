@@ -84,6 +84,8 @@ description: Obtenir des **informations concernant une entité du répertoire
 usecases:
   - Aides publiques
   - Marchés publics
+  - Préremplissage d'un formulaire
+  - Détection de la fraude
   - Répertoire de tiers
 opening: Données publiques et protégées pour les non-diffusibles.
 perimeter:
