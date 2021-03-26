@@ -11,7 +11,7 @@ scope:
   - entreprises
   - associations
 history: >-
-  ##### 01/12/2019 Ajout de l'option d'appel `non_diffusable.`
+  ##### 01/12/2019 Ajout de l'option d'appel `non_diffusables.`
 
 
   ##### 01/06/2019 Version 1 `Entreprises_Legacy` coupée définitivement.
@@ -160,7 +160,7 @@ services:
           description: Une autre vous donne accès aux données des entreprises dîtes
             non-diffusibles, cette option nécessite une autorisation spécifique,
             accordée ou non par API&nbsp;Entreprise selon votre cas d'usage.
-          param: "**&non_diffusable=**true"
+          param: "**&non_diffusables=**true"
           comment: "Pour accéder aux entreprises nondiffusibles :"
       questions:
         qr1:
@@ -215,7 +215,7 @@ services:
             ###### Comment utiliser les données des non diffusibles ?
 
 
-            En utilisant l'endpoint `entreprises`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusable`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
+            En utilisant l'endpoint `entreprises`, vous vous engagez à tenir compte du statut de diffusion le plus récent de l'entité appelée. Dans le cas, où vous utilisez l'endpoint avec l'option d'appel `non_diffusables`, et que le champ `diffusable_commercialement`de la réponse JSON affiche `=false,` cela signifie que l'entreprise est non diffusible et que **vous vous engagez** à n’utiliser ces informations que dans le cadre strict de vos missions de service public, **à ne pas les rediffuser ni les divulguer auprès de tiers non autorisés**.
 
 
             ⚠️ **Vous ne pouvez pas en faire usage pour du pré-remplissage.** Il vous est par contre possible d’indiquer aux entreprises qu’elles peuvent modifier leur statut, même provisoirement, auprès de l’INSEE à l’adresse suivante : <https://statut-diffusion-sirene.insee.fr>{:target="_blank"}.
