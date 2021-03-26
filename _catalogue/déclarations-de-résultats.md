@@ -14,7 +14,6 @@ description: Obtenir les **données contenues dans les liasses fiscales,** issue
   plusieurs services sont disponibles, les déclarations seules, le dictionnaire
   seul, ou les deux réunis pour une entreprise donnée.
 usecases:
-  - Aides publiques
 opening: Données protégées.
 perimeter:
   description: >-
