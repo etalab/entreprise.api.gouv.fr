@@ -91,15 +91,15 @@ services:
                 // Parfois identique à la raison sociale, il s'agit du nom donné à l'entité concernée.
                 "siret":"48311105000025",
                 "numero_bio":18344,
-                // C'est le numéro qui accompagne l'opérateur économique (entreprise ou association certifiées en BIO) tout au long de sa vie, même en cas de changement d'activité, ou d'orgnanisme de certification. Seul le changement de numéro de SIRET implique un changement du numéro BIO.
+                // C'est le numéro qui accompagne l'opérateur économique (entreprise ou association certifiées en BIO) tout au long de sa vie, même en cas de changement d'activité, ou d'organisme de certification. Seul le changement de numéro de SIRET implique un changement du numéro BIO.
                 "numero_pacage": null,
                 // Cette donnée n'est actuellement pas disponible. Le numéro de PACAGE est l'identifiant de l'exploitation de l'opérateur dans sa déclaration d'aide PAC.
                 "date_derniere_mise_a_jour":"2020-10-27",
                 // Il s'agit de la dernière mise à jour faite par l'opérateur économique. Celle-ci n'implique donc pas une mise à jour de toutes les données.
                 "reseau":"",
-                // Ce champ est completé lorsque l'entité concernée est rattachée à un réseau. C'est souvent le cas pour les distributeurs. Cette donnée est déclarative.
+                // Ce champ est complété lorsque l'entité concernée est rattachée à un réseau. C'est souvent le cas pour les distributeurs. Cette donnée est déclarative.
                 "categories":[
-                // Ce champs, déclaratif, permet aux utilisateurs de l'Annuaire de l'Agence BIO (https://www.agencebio.org/vos-outils/annuaire/) de filtrer les opérateurs économiques avec six catégories : "Artisans/commerçants" ; "Grandes surfaces généralistes" ; "Grossistes" ; "Magasins spécialisés" ; "Restaurants" ; "Vente aux consommateurs".
+                // Ce champs, déclaratif, permet aux utilisateurs de l'annuaire de l'Agence BIO (https://www.agencebio.org/vos-outils/annuaire/) de filtrer les opérateurs économiques avec six catégories : "Artisans/commerçants" ; "Grandes surfaces généralistes" ; "Grossistes" ; "Magasins spécialisés" ; "Restaurants" ; "Vente aux consommateurs".
                    "Vente aux consommateurs",
                    "Artisans/commerçants"
                 ],
@@ -226,11 +226,11 @@ services:
         La réponse se compose :
 
 
-        * d'**informations générale sur l'opérateur** (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO, ses adresses postales ;
+        * d'**informations générales sur l'opérateur** (l'entreprise ou l'association certifiée), telles que sa raison sociale, son numéro BIO et ses adresses postales ;
 
         * de la **liste des activités** et des **produits certifiés** ;
 
-        * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat** depuis l'annuaire de l'Agence BIO.
+        * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat**.
 
 availability:
   volumetry: 2000 requêtes/10 minutes par IP
