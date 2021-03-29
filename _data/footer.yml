@@ -7,6 +7,9 @@ columns:
         label: Support
         target: pages/support.html
       -
+        label: Infolettres
+        target: pages/infolettres.html
+      -
         label: Nous rejoindre
         url: https://beta.gouv.fr/recrutement/
   -
