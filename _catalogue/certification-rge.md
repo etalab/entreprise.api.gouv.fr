@@ -15,7 +15,6 @@ description: Obtenir le certificat “Reconnu Garant de l’Environnement” d�
   [endpoint dédié](#certificats_qualibat){:target="_blank"} existe.
 usecases:
   - Marchés publics
-  - Répertoire de tiers
 opening: Données publiques.
 perimeter:
   label: Entreprises de rénovation énergétique.

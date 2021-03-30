@@ -14,7 +14,6 @@ description: Obtenir l’**attestation de cotisation des congés payés et chôm
 usecases:
   - Aides publiques
   - Marchés publics
-  - Répertoire de tiers
   - Détection de la fraude
 opening: Données protégées.
 perimeter:

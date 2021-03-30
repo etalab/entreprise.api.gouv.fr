@@ -86,7 +86,6 @@ usecases:
   - Marchés publics
   - Préremplissage d'un formulaire
   - Détection de la fraude
-  - Répertoire de tiers
 opening: Données publiques et protégées pour les non-diffusibles.
 perimeter:
   label: Entreprises, entrepreneurs individuels, institutions administratives et

@@ -141,9 +141,6 @@ catalogue_usecases:
   covid_19:
     name: "Aide d'urgence Covid-19"
     page: true
-  repertoiredetiers:
-    name: 'Répertoire de tiers'
-    page: false
   detection_fraude:
     name: 'Détection de la fraude'
     page: true

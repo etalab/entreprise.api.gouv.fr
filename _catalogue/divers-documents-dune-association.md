@@ -15,7 +15,6 @@ description: Obtenir **divers documents**, différents selon l’association ; t
 usecases:
   - Aides publiques
   - Marchés publics
-  - Répertoire de tiers
 opening: Données publiques.
 perimeter:
   label: Toutes les associations ayant des documents.

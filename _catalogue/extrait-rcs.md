@@ -16,7 +16,6 @@ usecases:
   - Marchés publics
   - Préremplissage d'un formulaire
   - Détection de la fraude
-  - Répertoire de tiers
 opening: Données protégées.
 perimeter:
   description: Toutes les entreprises présentes au registre du commerce et des sociétés.
