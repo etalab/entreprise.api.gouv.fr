@@ -13,8 +13,9 @@ description: Obtenir l’**attestation de cotisation des congés payés et chôm
   Entrepreneurs de Travaux Publics (CNETP).
 usecases:
   - Aides publiques
-  - Répertoire de tiers
   - Marchés publics
+  - Détection de la fraude
+  - Répertoire de tiers
 opening: Données confidentielles.
 perimeter:
   description: >-
