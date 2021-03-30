@@ -12,6 +12,7 @@ description: Obtenir la **dernière année connue de conformité** d’une entre
   au regard de l'obligation d'emploi des travailleurs handicapés.
 usecases:
   - Marchés publics
+  - Détection de la fraude
 opening: Données protégées.
 services:
   service1:

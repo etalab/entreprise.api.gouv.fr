@@ -13,6 +13,7 @@ description: Savoir si une **entreprise est à jour de ses cotisations sociales*
 usecases:
   - Aides publiques
   - Marchés publics
+  - Détection de la fraude
   - Répertoire de tiers
 opening: Données protégées.
 perimeter:

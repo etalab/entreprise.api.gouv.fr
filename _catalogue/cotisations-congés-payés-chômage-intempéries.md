@@ -13,17 +13,18 @@ description: Obtenir l’**attestation de cotisation des congés payés et chôm
   Entrepreneurs de Travaux Publics (CNETP).
 usecases:
   - Aides publiques
-  - Répertoire de tiers
   - Marchés publics
+  - Répertoire de tiers
+  - Détection de la fraude
 opening: Données protégées.
 perimeter:
   description: >-
     L'endpoint de la CNETP couvre **l'ensemble des entreprises** exerçant une ou
     plusieurs activités entrant **dans le champ d'application des conventions
-    collectives nationales** étendues des Travaux Publics et du Bâtiment : 
+    collectives nationales** étendues des Travaux Publics et du Bâtiment :
 
 
-    * ✅ Convention Collective Nationale des **Ouvriers des Travaux Publics** du 15 décembre 1992 (étendue par arrêté du 27 mai 1993) ; 
+    * ✅ Convention Collective Nationale des **Ouvriers des Travaux Publics** du 15 décembre 1992 (étendue par arrêté du 27 mai 1993) ;
 
     * ✅ Convention Collective Nationale des **ETAM des Travaux Publics** du 12 juillet 2006 (étendue par arrêté du 28 juin 2007)
 
@@ -39,7 +40,7 @@ perimeter:
     Lire la suite
 
     </summary>
-  
+
 
     ℹ️ Plus d'informations sur <https://www.cnetp.org/category/affiliation/>{:target="_blank"}
 
@@ -112,7 +113,7 @@ services:
 
 
 
-            C'est pourquoi, les attestations délivrées par la CNETP constituent des données protégées et non publiques. 
+            C'est pourquoi, les attestations délivrées par la CNETP constituent des données protégées et non publiques.
 
 
             ###### Des informations à ne pas divulguer
