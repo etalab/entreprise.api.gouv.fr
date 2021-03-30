@@ -114,6 +114,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 
 La **Direction des Achats de l'État** (DAE), et la **Direction générale de la concurrence, de la consommation et de la répression des fraudes** (DGCCRF), utilisent déjà l'API Entreprise pour simplifier leurs procédures de détection de la fraude.
 
+{% asset 'cas-usage/cas-usage-fraude-exemples.png' %}
 
 ## Faire sa demande d'accès
 
