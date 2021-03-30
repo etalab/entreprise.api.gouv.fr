@@ -104,15 +104,14 @@ panels:
 
       Toutes les données sont détaillées dans le catalogue de données :
 
+      <center>
 
+      <a class="tpl-button tpl-button--primary" href="../catalogue/">Consulter les données disponibles</a>
 
-      <br>
+      </center>
 
 
       #### Une documentation technique et métier par endpoint
-
-
-      Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
 
       |-------------------|-----------------|
