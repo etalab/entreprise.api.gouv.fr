@@ -64,9 +64,9 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | Données et endpoints	| Producteur 	| Utilité 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Chiffre d'affaires**<br>`exercices` 	| DGFIP 	| ✅ 	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"} 	|
-| **Bilans annuels**<br>`bilans_inpi` 	| INPI 	|  ⏺ 	| ZIP (PDF et XML) 	| publiques et confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
-| **3 derniers bilans annuels**<br>`bilans_entreprises_bdf` 	| Banque de France 	| ⏺ 	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"} 	|
-| **Déclarations de résultat**<br>`liasses_fiscales_dgfip` 	| DGFIP 	| ⏺ 	| JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip){:target="_blank"} 	|
+| **Bilans annuels**<br>`bilans_inpi` 	| INPI 	|  ✅ 	| ZIP (PDF et XML) 	| publiques et confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
+| **3 derniers bilans annuels**<br>`bilans_entreprises_bdf` 	| Banque de France 	| ✅ 	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"} 	|
+| **Déclarations de résultat**<br>`liasses_fiscales_dgfip` 	| DGFIP 	| ✅ 	| JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip){:target="_blank"} 	|
 
 <br>
 
