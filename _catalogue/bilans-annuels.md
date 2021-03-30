@@ -15,6 +15,7 @@ description: Obtenir les **comptes annuels d’une entreprise** tels que transmi
 usecases:
   - Aides publiques
   - Marchés publics
+  - Détection de la fraude
 opening: Données publiques et confidentielles.
 perimeter:
   label: Certaines entreprises. <br>Tous les bilans depuis 2017.
