@@ -11,7 +11,6 @@ description: Connaître les **conventions collectives d'un établissement** et
 usecases:
   - Marchés publics
   - Aides publiques
-  - Répertoire de tiers
 opening: Données publiques.
 providers:
   - fabsocial

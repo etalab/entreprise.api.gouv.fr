@@ -16,7 +16,6 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Préremplissage d'un formulaire
-  - Répertoire de tiers
 opening: Données publiques.
 perimeter:
   label: Toutes les associations.

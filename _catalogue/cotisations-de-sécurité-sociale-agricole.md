@@ -14,7 +14,6 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Détection de la fraude
-  - Répertoire de tiers
 opening: Données confidentielles.
 perimeter:
   description: |-

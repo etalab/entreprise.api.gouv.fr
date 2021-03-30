@@ -19,7 +19,6 @@ description: >-
   ⚠️ Le périmètre de cet endpoint n'est pas exhaustif, les données doivent donc être utilisées de manière qualitative et indicative.
 usecases:
   - Marchés publics
-  - Répertoire de tiers
 opening: Données publiques.
 history: "###### 2017-06-01 : Ouverture de l'endpoint"
 availability:

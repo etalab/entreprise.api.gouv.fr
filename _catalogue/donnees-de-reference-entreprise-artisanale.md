@@ -19,7 +19,6 @@ usecases:
   - Marchés publics
   - Préremplissage d'un formulaire
   - Détection de la fraude
-  - Répertoire de tiers
 opening: Données publiques.
 perimeter:
   label: Entreprises enregistrées au RNM.
