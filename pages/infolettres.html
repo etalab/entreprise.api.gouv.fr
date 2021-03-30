@@ -1,0 +1,56 @@
+---
+layout: newsletters
+title: Lettres d'informations 💌
+permalink: /infolettres/
+class: newsletters
+---
+
+
+<div class="tpl-newsletters__content">
+  <h2 class="tpl-text-center">
+   S'abonner aux listes API Entreprise
+  </h2>
+  <div class="mailjet">
+    <iframe
+      class="mj-w-res-iframe"
+      frameborder="0"
+      scrolling="no"
+      marginheight="0"
+      marginwidth="0"
+      src="https://app.mailjet.com/widget/iframe/zR1/IjQ">
+    </iframe>
+    <script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
+  </div>
+
+  <h2 class="tpl-text-center title-archives">
+    Consulter les archives
+  </h2>
+
+  {% assign newsletters = site.newsletters | reverse %}
+  {% assign newsletters_kinds = site.newsletters_kinds %}
+
+  <ul class="newsletters-entries">
+    {% for newsletter in newsletters %}
+      <li class="newsletter-entry row" id="{{ newsletter.id }}">
+        <div class="col-xs-6 col-sm-2 tpl-text-center">
+          <span class="newsletter-kind newsletter-kind-{{newsletter.kind}}">
+            {{ newsletters_kinds[newsletter.kind] }}
+          </span>
+        </div>
+        <div class="col-xs-6 col-sm-2 tpl-text-center">
+          {{ newsletter.date | date: '%d/%m/%Y' }}
+        </div>
+        <div class="col-xs-12 col-sm-6 xs-clear">
+          <h6 class="title">
+            {{ newsletter.title }}
+          </h6>
+        </div>
+        <div class="col-xs-12 col-sm-2 cta tpl-text-center">
+          <a class="tpl-button tpl-button--alternate" href="{{ newsletter.external_link }}" target="_blank">
+            Consulter
+          </a>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

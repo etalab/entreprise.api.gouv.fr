@@ -50,6 +50,21 @@ a.tpl-main-header__link:hover {
   content: none;
 }
 
+.tpl-main-header .dropdown-content {
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,.5);
+}
+
+.tpl-main-header .dropdown-content a {
+  padding: 0;
+  margin: 5px 0;
+  text-decoration: underline;
+  left: -15px;
+
+  &:hover {
+    background-color: var(--lightest-grey);
+  }
+}
+
 #toggle-nav {
   display: none;
   background-color: var(--white);
