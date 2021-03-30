@@ -15,6 +15,7 @@ description: Obtenir les **comptes annuels d’une entreprise** tels que transmi
 usecases:
   - Aides publiques
   - Marchés publics
+  - Détection de la fraude
 opening: Données publiques et protégées.
 perimeter:
   label: Certaines entreprises. <br>Tous les bilans depuis 2017.
@@ -24,7 +25,7 @@ perimeter:
     confidentiels**.
 
 
-    ✅ **Toutes les entreprises** sont concernées sauf : 
+    ✅ **Toutes les entreprises** sont concernées sauf :
 
 
     * ❌ les sociétés en micro-BNC ou micro-BIC ;
@@ -87,16 +88,16 @@ services:
             "url_documents": "https://storage.entreprise.api.gouv.fr/siade_dev/1565607027-91ac7ac7e80b866055d23b9203e41fa0de487bc0-all_documents.zip",
             "bilans": [
               {
-                "id_fichier": 11439992, 
+                "id_fichier": 11439992,
                 // Cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
                 "siren": "788242667",
                 "denomination_sociale": null,
                 "code_greffe": 7402,
                 // Ce code indique le greffe auquel est rattaché l'entreprise. 7402 correspond par exemple au greffe de Thonon-les-Bains.
                 "date_depot": "20180116",
-                "nature_archive": "B-S", 
+                "nature_archive": "B-S",
                 // indique la nature du bilan, "B_C" pour bilan consolidé, "B-S" pour bilan simplifié, "B-CO" pour bilan complet et "B-BA" pour les bilans de banques et assurances.
-                "confidentiel": 0, 
+                "confidentiel": 0,
                 // Ce champ peut contenir plusieurs valeurs, "0" signifie que le bilan est public, "1" indique que le bilan est confidentiel, "2", que le bilan est partiellement confidentiel.
                 "date_cloture": "2016-12-31T00:00:00.000Z",
                 "numero_gestion": "1973B00101"
@@ -111,7 +112,7 @@ services:
                     "code_greffe": 7402,
                     "date_depot": "20180116",
                     "nature_archive": "B-S",
-                    "confidentiel": 0, 
+                    "confidentiel": 0,
                     "numero_gestion": "1973B00101"
                   },
                   {
@@ -133,7 +134,7 @@ services:
             Certaines entreprises (PME) peuvent décider de ne pas publier leurs
             comptes annuels. Elles ont toutefois l’obligation de les déposer.
             Leurs bilans sont donc présents à l'INPI et cet endpoint permet d'y
-            accéder. 
+            accéder.
 
 
             ###### Bilans confidentiels
