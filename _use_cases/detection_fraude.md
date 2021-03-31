@@ -7,7 +7,7 @@ title: Simplifier la détection de la fraude des entreprises
 
 {% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-fraude.png' %}
 
-API Entreprise simplifie les procédures de détection de la fraude des entreprises, qu'elle soit financière ou sociale, en mettant à disposition plusieurs API ce qui permet : 
+API Entreprise simplifie les procédures de détection de la fraude des entreprises, qu'elle soit financière ou sociale, en mettant à disposition plusieurs API ce qui permet :
 
 - la constitution du dossier d'enquête, **en récupérant les justificatifs nécessaires à l'instruction**, sans solliciter les entreprises ;
 
@@ -29,12 +29,12 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 <br>
 
 
-##### Légende du tableau 
+##### Légende du tableau
 
 {:.tpl-table}
 
-| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? | 
-| ---------| 
+| Utilité : Dans ce cas d'usage, la donnée est-elle utile ? |
+| ---------|
 | ✅&nbsp; &nbsp; Oui |
 | ⏺&nbsp; &nbsp; À étudier |
 | ❌&nbsp; &nbsp; Non |
@@ -45,15 +45,15 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 {:.tpl-table}
 | Données et endpoints 	| Producteur 	| Utilité| Format 	| Ouverture 	| Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|:-	:|:-:	|
-| **Données de référence<br>d'une entreprise** 	<br>`entreprises` | INSEE & Infogreffe 	| ✅ 	|  JSON 	| publiques et confidentielles	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}  	|
-| **Données de référence<br>d'un établissement** <br>	`etablissements` | INSEE 	| ✅ 	|  JSON 	| publiques et confidentielles	| 	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}|
-| **Extrait  RCS** <br> `extraits_rcs_infogreffe` 	| Infogreffe 	|  ✅ 	|  JSON 	| confidentielles 🔐 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe){:target="_blank"}	|
+| **Données de référence<br>d'une entreprise** 	<br>`entreprises` | INSEE & Infogreffe 	| ✅ 	|  JSON 	| publiques et protégées	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}  	|
+| **Données de référence<br>d'un établissement** <br>	`etablissements` | INSEE 	| ✅ 	|  JSON 	| publiques et protégées	| 	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}|
+| **Extrait  RCS** <br> `extraits_rcs_infogreffe` 	| Infogreffe 	|  ✅ 	|  JSON 	| protégées 🔐 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe){:target="_blank"}	|
 | **Données déclaratives<br>d'une association** <br> `associations`	| Ministère de l'Intérieur 	| ⏺ 	 | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#associations){:target="_blank"} 	|
 | **Divers documents<br>d'une association** <br> `documents_associations`  	| Ministère de l'Intérieur 	| ⏺ 	| PDF 	| publiques 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#documents_associations){:target="_blank"}	|
 | **Données de référence d'une entreprise artisanale**<br> `entreprises_artisanales_cma` 	| CMA France 	|  ⏺ 	|  JSON 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-entreprises_artisanales_cma){:target="_blank"} |
 | **Actes**<br> `actes_inpi` 	| INPI 	|  ✅ 	|  ZIP (PDF et XML) 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"} |
 | **Conventions collectives** <br> `conventions_collectives` 	| Fabrique numérique des Ministères Sociaux 	|  ⏺ 	|  JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"} 	|
-| **Effectif d'une entreprise** <br> `effectifs_..._acoss_covid` 	| ACOSS 	|  ✅ 	|  JSON 	| confidentielles 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid){:target="_blank"} 	|
+| **Effectif d'une entreprise** <br> `effectifs_..._acoss_covid` 	| ACOSS 	|  ✅ 	|  JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid){:target="_blank"} 	|
 | **Immatriculation EORI** <br> `eori_douanes` 	| Douanes 	|  ✅ 	|  JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-eori_douanes){:target="_blank"} 	|
 
 <br>
@@ -63,10 +63,10 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 {:.tpl-table}
 | Données et endpoints	| Producteur 	| Utilité 	| Format 	| Ouverture 	|  Documentation	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
-| **Chiffre d'affaires**<br>`exercices` 	| DGFIP 	| ✅ 	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"} 	|
-| **Bilans annuels**<br>`bilans_inpi` 	| INPI 	|  ✅ 	| ZIP (PDF et XML) 	| publiques et confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
-| **3 derniers bilans annuels**<br>`bilans_entreprises_bdf` 	| Banque de France 	| ✅ 	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"} 	|
-| **Déclarations de résultat**<br>`liasses_fiscales_dgfip` 	| DGFIP 	| ✅ 	| JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip){:target="_blank"} 	|
+| **Chiffre d'affaires**<br>`exercices` 	| DGFIP 	| ✅ 	|  JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"} 	|
+| **Bilans annuels**<br>`bilans_inpi` 	| INPI 	|  ✅ 	| ZIP (PDF et XML) 	| publiques et protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
+| **3 derniers bilans annuels**<br>`bilans_entreprises_bdf` 	| Banque de France 	| ✅ 	|  JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"} 	|
+| **Déclarations de résultat**<br>`liasses_fiscales_dgfip` 	| DGFIP 	| ✅ 	| JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip){:target="_blank"} 	|
 
 <br>
 
@@ -77,13 +77,13 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 {:.tpl-table}
 | Données et endpoints 	| Producteur 	| Utilité	| Format 	| Ouverture 	| Documentation 	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
-| **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| ✅ 	| PDF 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
-| **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| ACOSS 	| ✅ 	|  PDF 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
-| **Conformité emploi des travailleurs handicapés**<br>`attestations_agefiph` 	| AGEFIPH 	|  ⏺	| JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"} 	|
-| **Cotisations de sécurité sociale agricole**<br>`cotisations_msa` 	| MSA 	|  ⏺	| JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"} 	|
-| **Cotisations retraite bâtiment**<br>`cotisation_retraite_probtp` 	| PROBTP 	|  ⏺	|  JSON 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"} 	|
+| **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| ✅ 	| PDF 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
+| **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| ACOSS 	| ✅ 	|  PDF 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
+| **Conformité emploi des travailleurs handicapés**<br>`attestations_agefiph` 	| AGEFIPH 	|  ⏺	| JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"} 	|
+| **Cotisations de sécurité sociale agricole**<br>`cotisations_msa` 	| MSA 	|  ⏺	| JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"} 	|
+| **Cotisations retraite bâtiment**<br>`cotisation_retraite_probtp` 	| PROBTP 	|  ⏺	|  JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"} 	|
 | **Carte professionnelle travaux publics**<br>`cartes_professionnelles_fntp` 	| FNTP 	|  ⏺	|PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp){:target="_blank"} 	|
-| **Cotisations congés payés & chômage intempéries**<br>`certificats_cnetp` 	| CNETP 	|  ⏺	|  PDF 	| confidentielles 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp){:target="_blank"} 	|
+| **Cotisations congés payés & chômage intempéries**<br>`certificats_cnetp` 	| CNETP 	|  ⏺	|  PDF 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp){:target="_blank"} 	|
 
 <br>
 
@@ -108,7 +108,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	|  ⏺ | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
 
 
-  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>  
+  <a class="tpl-button tpl-button--primary" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
 
 ## Ils utilisent l'API Entreprise
 
@@ -118,7 +118,7 @@ La **Direction des Achats de l'État** (DAE), et la **Direction générale de la
 
 ## Faire sa demande d'accès
 
-Vous avez identifié les données nécessaires pour votre service dans le cadre de la détection de fraude ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "détection de la fraude" : 
+Vous avez identifié les données nécessaires pour votre service dans le cadre de la détection de fraude ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "détection de la fraude" :
 
   <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=detection_fraude">🔑 détection de la fraude"</a>
 
