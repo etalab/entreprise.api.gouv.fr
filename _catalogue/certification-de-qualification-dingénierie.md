@@ -14,7 +14,6 @@ description: Obtenir le certificat délivré par l'OPQIBI attestant de la
 usecases:
   - Aides publiques
   - Marchés publics
-  - Répertoire de tiers
 opening: Données publiques.
 availability:
   volumetry: 2000 requêtes/10 minutes par IP

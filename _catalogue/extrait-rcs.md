@@ -14,7 +14,8 @@ description: Obtenir un **extrait des données présentes dans le RCS**, registr
 usecases:
   - Aides publiques
   - Marchés publics
-  - Répertoire de tiers
+  - Préremplissage d'un formulaire
+  - Détection de la fraude
 opening: Données protégées.
 perimeter:
   description: Toutes les entreprises présentes au registre du commerce et des sociétés.

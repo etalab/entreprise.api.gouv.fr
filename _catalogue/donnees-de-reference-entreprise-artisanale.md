@@ -17,7 +17,8 @@ description: Obtenir des **informations concernant une entité du Répertoire
 usecases:
   - Aides publiques
   - Marchés publics
-  - Répertoire de tiers
+  - Préremplissage d'un formulaire
+  - Détection de la fraude
 opening: Données publiques.
 perimeter:
   label: Entreprises enregistrées au RNM.

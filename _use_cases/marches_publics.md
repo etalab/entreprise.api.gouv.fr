@@ -18,7 +18,7 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
-Selon votre cas d'usage spécifique, veillez à **demander uniquement les données nécessaires** dans le cadre des marchés publics et à fournir les justificatifs notamment pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
+Selon votre cas d'usage spécifique, veillez à **demander uniquement les données strictement nécessaires** dans le cadre des marchés publics et à fournir les documents nécessaires pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
 
   {:.example}
 
@@ -53,6 +53,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | **Actes**<br> `actes_inpi` 	| INPI 	|  ✅ 	|  ZIP (PDF et XML) 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"} |
 | **Conventions collectives** <br> `conventions_collectives` 	| Fabrique numérique des Ministères Sociaux 	|  ✅ 	|  JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"} 	|
 | **Effectif d'une entreprise** <br> `effectifs_..._acoss_covid` 	| ACOSS 	|  ✅ 	|  JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid){:target="_blank"} 	|
+| **Immatriculation EORI** <br> `eori_douanes` 	| Douanes 	|  ✅ 	|  JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-eori_douanes){:target="_blank"} 	|
 
 <br>
 
@@ -138,7 +139,24 @@ Vous êtes un éditeur proposant une solution pour les marchés publics et ne fi
 
 
 
-## Formulaire d'accès spécifique au cas d'usage
+## Ils utilisent l'API Entreprise
+
+
+Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruction des marchés publics :
+
+- **Des communes et intercommunalités** : Communauté d'agglomération du Territoire de la Côte Ouest, communauté de Communes du Grand-Langres, communauté Intercommunale du Nord de La Réunion, communauté urbaine du Grand Reims, commune de Corbeil-Essonnes, commune de Marseille.
+- **Des métropoles** : Bordeaux Métropole, eurométropole de Strasbourg, métropole Aix-Marseille-Provence, métropole du Grand Nancy, Nantes Métropole.
+- **Des départements** : Ain, Bouches-du-Rhône, Drôme, Eure, Loire-Atlantique, Meuse.
+- **Des régions** : Aquitaine, Auvergne-Rhône-Alpes, Centre-Val de Loire, Grand Est, Nouvelle-Aquitaine, Occitanie, Pays de la Loire.
+- **Des administrations centrales** : Agence pour l'informatique financière de l'État, Direction des achats de l'État.
+- **Des groupements d'intérêt publics** : Groupement d’Intérêt Public Maximilien, iMSA, Samusocial de Paris, Territoires Numériques – BFC.
+- **Des opérateurs** : Aéroport Marseille Provence, agence publique pour l'immobilier de la justice, centre de coopération internationale en recherche agronomique pour le développement, centre Hospitalier Universitaire de Montpellier, centre national de la fonction publique territoriale, centre national de la recherche scientifique, établissement public territorial de bassin Seine Grands Lacs, port autonome de Strasbourg, URSSAF Pays de la Loire.
+<br>
+<br>
+
+{% asset 'cas-usage/cas-usage-marches-publics-exemples.png' %}
+
+## Faire sa demande d'accès
 
 Si vous êtes un acheteur public, il est probable que vous ayez déjà accès aux données d'API Entreprise par l'intermédiaire de votre profil acheteur ou du DUME (Document Unique du Marché Européen) que peut remplir l'entreprise.
 
@@ -152,21 +170,3 @@ Si vous n'êtes pas dans ce premier cas et que vous avez identifié les données
 Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
 Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formulaire.
 <br>
-
-
-## Ils utilisent l'API Entreprise
-
-
-Ils utilisent déjà l'API Entreprise pour faciliter la candidature et l'instruction des marchés publics :
-
-- **Des communes et intercommunalités** : Communauté d'agglomération du Territoire de la Côte Ouest, communauté de Communes du Grand-Langres, communauté Intercommunale du Nord de La Réunion, communauté urbaine du Grand Reims, commune de Corbeil-Essonnes, commune de Marseille.
-- **Des métropoles** : Bordeaux Métropole, eurométropole de Strasbourg, métropole Aix-Marseille-Provence, métropole du Grand Nancy, Nantes Métropole.
-- **Des départements** : Ain, Bouches-du-Rhône, Drôme, Eure, Loire-Atlantique, Meuse.
-- **Des régions** : Aquitaine, Auvergne-Rhône-Alpes, Centre-Val de Loire, Grand Est, Nouvelle-Aquitaine, Occitanie, Pays de la Loire.
-- **Des administrations centrales**: Agence pour l'informatique financière de l'État, Direction des achats de l'État.
-- **Des groupements d'intérêt publics**: Groupement d’Intérêt Public Maximilien, iMSA, Samusocial de Paris, Territoires Numériques – BFC.
-- **Des opérateurs**: Aéroport Marseille Provence, agence publique pour l'immobilier de la justice, centre de coopération internationale en recherche agronomique pour le développement, centre Hospitalier Universitaire de Montpellier, centre national de la fonction publique territoriale, centre national de la recherche scientifique, établissement public territorial de bassin Seine Grands Lacs, port autonome de Strasbourg, URSSAF Pays de la Loire.
-<br>
-<br>
-
-{% asset 'cas-usage/cas-usage-marches-publics-exemples.png' %}

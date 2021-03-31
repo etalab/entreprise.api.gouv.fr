@@ -13,7 +13,7 @@ description: "Obtenir les trois derniers bilans d’une entreprise détenus par 
   contenues dans la liasse fiscale** : bilans, compte de résultat et annexes
   confondus."
 usecases:
-  - Aides publiques
+  - Détection de la fraude
 opening: Données protégées.
 perimeter:
   label: Les entreprises ayant au moins 3 bilans et réalisant plus 750 000€ de CA.
@@ -21,7 +21,7 @@ perimeter:
     ###### Entreprises concernées
 
 
-    Les données Banque de France ne couvrent pas de manière exhaustive tous les SIREN. Notamment, seules les entreprises réalisant un chiffre d'affaire supérieur à 750 000 euros et ayant *a minima* trois bilans sont disponibles. 
+    Les données Banque de France ne couvrent pas de manière exhaustive tous les SIREN. Notamment, seules les entreprises réalisant un chiffre d'affaire supérieur à 750 000 euros et ayant *a minima* trois bilans sont disponibles.
 
 
     ###### Bilans renvoyés
@@ -62,10 +62,10 @@ services:
       description: >-
         Les trois bilans de la Banque de France sont listés les uns après les
         autres, le premier étant le plus récent. Chacun d'eux est accompagné
-        d'informations en majeure partie tirées : 
+        d'informations en majeure partie tirées :
 
 
-        * des bilans (passif de l'entreprise - [liasse 2051](https://www.impots.gouv.fr/portail/files/formulaires/2051-sd/2018/2051-sd_2146.pdf)) ; 
+        * des bilans (passif de l'entreprise - [liasse 2051](https://www.impots.gouv.fr/portail/files/formulaires/2051-sd/2018/2051-sd_2146.pdf)) ;
 
         * des comptes de résultat ([liasse 2052](https://www.impots.gouv.fr/portail/files/formulaires/2052-sd/2018/2052-sd_2117.pdf) et [liasse 2053](https://www.impots.gouv.fr/portail/files/formulaires/2053-sd/2018/2053-sd_2116.pdf)) ;
 
@@ -90,7 +90,7 @@ services:
 
                 "capitaux_propres_et_assimiles": "5928663",
                 // Correspond à la case 'DL' de la liasse fiscale 2051, soit le total des capitaux propres inscrits dans le passif.
-                "capital_social_inclus_dans_capitaux_propres_et_assimiles": "3800000", 
+                "capital_social_inclus_dans_capitaux_propres_et_assimiles": "3800000",
                 // Correspond au capital social ou individuel de la case 'DA' de la liasse fiscale 2051, ce montant est inclu dans la somme précédente 'capitaux_propres_et_assimilés'.
                 "autres_fonds_propres": "0",
                 // Correspond à la case 'DO' de la liasse fiscale 2051.
@@ -140,12 +140,12 @@ services:
           // ÉVOLUTION
 
 
-          // En plus, des informations précédentes de l'exercice concerné, la Banque de France renvoit également des données d'évolution par rapport à l'année précédente. 
+          // En plus, des informations précédentes de l'exercice concerné, la Banque de France renvoit également des données d'évolution par rapport à l'année précédente.
 
           // Les calculs d'évolution sont calculés en comparant l'année N par rapport à l'année N-1. Ces montants ne sont fournis que si les liasses fiscales N et N-1 ont la même durée d'exercice.
 
-          // Les champs sont calculés par la Banque de France sur le mode suivant : (valeur à date N - valeur à date N-1) * 100 / valeur absolue (valeur à date N-1).    
-                
+          // Les champs sont calculés par la Banque de France sur le mode suivant : (valeur à date N - valeur à date N-1) * 100 / valeur absolue (valeur à date N-1).
+
                 "evolution_valeur_ajoutee_bdf": "",
                 "evolution_resultat_exercice": "",
                 "evolution_capitaux_propres_et_assimiles": "",
@@ -167,7 +167,7 @@ services:
                 "evolution_fonds_roulement_net_global": "",
                 "evolution_ratio_fonds_roulement_net_global_sur_besoin_en_fonds_de_roulement": "",
                 "evolution_total_dettes_stables": ""
-                
+
                 }, "bilan 2", "bilan 3"
             ]
           }

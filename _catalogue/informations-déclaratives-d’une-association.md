@@ -15,7 +15,7 @@ description: Obtenir les **informations déclarées par une association** à la
 usecases:
   - Aides publiques
   - Marchés publics
-  - Répertoire de tiers
+  - Préremplissage d'un formulaire
 opening: Données publiques.
 perimeter:
   label: Toutes les associations.

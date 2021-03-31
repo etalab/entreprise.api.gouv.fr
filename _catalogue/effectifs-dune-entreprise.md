@@ -12,6 +12,8 @@ description: Dans le cadre du volet 2 des aides régionales aux TPE pour faire
   l'agence centrale des organismes de la sécurité sociale (ACOSS).
 usecases:
   - Aide d'urgence Covid-19
+  - Préremplissage d'un formulaire
+  - Détection de la fraude
 opening: Données protégées.
 providers:
   - acoss
@@ -40,7 +42,7 @@ perimeter:
     <summary>
 
     Lire la suite
-    
+
     </summary>
 
     * convention de stage ; 

@@ -201,8 +201,9 @@ collections:
           [
             "Aides publiques",
             "Marchés publics",
-            "Répertoire de tiers",
             "Aide d’urgence Covid-19",
+            "Préremplissage d'un formulaire",
+            "Détection de la fraude",
           ]
       - label: "Ouverture"
         name: "opening"

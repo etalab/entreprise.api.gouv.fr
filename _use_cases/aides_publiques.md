@@ -18,7 +18,7 @@ API Entreprise permet d'améliorer le service rendu aux entreprises et associati
 
 API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#acces).
 <br>
-Selon votre cas d'usage spécifique, veillez à demander uniquement les accès aux **données nécessaires** dans le cadre de la facilitation des démarches aux aides et subventions publiques et à fournir les justificatifs notamment pour le [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
+Selon votre cas d'usage spécifique, veillez à **demander uniquement les données strictement nécessaires** dans le cadre de la facilitation des démarches aux aides et subventions publiques et à fournir les documents nécessaires pour justifier votre [cadre juridique]({{ site.baseurl }}/doc/#le-cadre-juridique). Votre raccordement en sera alors grandement accéléré.
 
   {:.example}
 
@@ -53,6 +53,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 | **Actes**<br> `actes_inpi` 	| INPI 	|  ⏺ 	|  ZIP (PDF et XML) 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"} |
 | **Conventions collectives** <br> `conventions_collectives` 	| Fabrique numérique des Ministères Sociaux 	|  ⏺ 	|  JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"} 	|
 | **Effectif d'une entreprise** <br> `effectifs_..._acoss_covid` 	| ACOSS 	|  ⏺ 	|  JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid){:target="_blank"} 	|
+| **Immatriculation EORI** <br> `eori_douanes` 	| Douanes 	|  ⏺ 	|  JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-eori_douanes){:target="_blank"} 	|
 
 <br>
 
@@ -124,19 +125,6 @@ Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de dire
 
 Vous êtes un éditeur proposant une solution pour les aides publiques et ne figurez pas sur cette liste ? Veuillez nous contacter à cette adresse mail : [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
 
-## Formulaire d'accès spécifique au cas d'usage
-
-Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques" :
-
-  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=aides_publiques">🔑 Formulaire d'accès "aides publiques"</a>
-
-
-{:.tpl-notification}
-
-Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
-Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formualire.
-<br>
-
 ## Ils utilisent l'API Entreprise
 
 Ils utilisent déjà l'API Entreprise pour faciliter le dépôt des dossiers d'aides publiques/subventions et leur instruction :
@@ -149,3 +137,18 @@ Ils utilisent déjà l'API Entreprise pour faciliter le dépôt des dossiers d'a
 <br>
 
 {% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
+
+
+## Faire sa demande d'accès
+
+Vous avez identifié les données nécessaires pour votre service dans le cadre de la facilitation des démarches de demande d'aides publiques ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "aides publiques" :
+
+  <a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=aides_publiques">🔑 Formulaire d'accès "aides publiques"</a>
+
+
+{:.tpl-notification}
+
+Pour bien comprendre les **étapes d'une demande d'accès** à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale. <br><br>
+Une partie de cette documentation vous permet notamment de mieux comprendre [**les attendus de l'encadré "Cadre juridique"**]({{ site.baseurl }}/doc/#le-cadre-juridique) du formualire.
+<br>
+>>>>>>> 0239cea... Schéma mis à jour et structure de la page pour tous les cas d'usage
