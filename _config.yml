@@ -145,7 +145,7 @@ catalogue_usecases:
     name: 'Détection de la fraude'
     page: true
   preremplissage:
-    name: 'Préremplissage d&apos;un formulaire'
+    name: "Préremplissage d'un formulaire"
     page: true
 
 catalogue_openstate:
