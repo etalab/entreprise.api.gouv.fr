@@ -15,6 +15,7 @@ description: Savoir si une **entreprise est à jour de ses cotisations retraite*
 usecases:
   - Aides publiques
   - Marchés publics
+  - Détection de la fraude
 opening: Données protégées.
 availability:
   normal_availability: 7jours/7 et 24h/24
@@ -74,7 +75,7 @@ services:
           // Lorque l'entreprise n'est pas à jour de ses cotisations retraite :
 
           {
-            "eligible": false 
+            "eligible": false
             "message": "01 Compte non éligible pour attestation de cotisation"
           }
 
@@ -82,7 +83,7 @@ services:
       format: Donnée structurée JSON
       description: >-
         La réponse indique, par un champ `true`/`false`, si l'entreprise est
-        éligible à l'attestation de cotisation retraite, 
+        éligible à l'attestation de cotisation retraite,
 
 
         ℹ️ Si l'entreprise est éligible, cela signifie en creux qu'elle est en règle de ses cotisations retraites.

@@ -102,109 +102,35 @@ panels:
       #### La liste exhaustive des données
 
 
-      ##### Informations générales <a id="infos_generales"></a>
+      Toutes les données sont détaillées dans le catalogue de données :
+
+      <center>
+
+      <a class="tpl-button tpl-button--primary" href="../catalogue/">Consulter les données disponibles</a>
+
+      </center>
+
+      #### Nos engagements
 
 
-      {:.tpl-table}
-
-      | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-
-      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
-
-      | [Données de référence d'une entreprise](../catalogue/#entreprises){:target="_blank"}                  |    INSEE & Infogreffe    |            `entreprises`            |    données JSON     |    publiques et protégées   |
-
-      | [Données de référence d'un établissement](../catalogue/#etablissements){:target="_blank"}                |          INSEE           |          `etablissements`           |    données JSON     |    publiques  et protégées   |
-
-      | [Extrait  RCS](../catalogue/#extrait_rcs_infogreffe){:target="_blank"}                                           |        Infogreffe        |         `extraits_rcs_infogreffe`         |    données JSON     |    protégées    |
-
-      | [Informations déclaratives d'une association](../catalogue/#associations){:target="_blank"}                 | Ministère de l'Intérieur |              `associations`               |    données JSON     |    publiques    |
-
-      | [Divers documents d'une association](../catalogue/#documents_associations){:target="_blank"}                     | Ministère de l'Intérieur |         `documents_associations`          |     PDF (image)     |    publiques    |\
-
-      | [Données de référence d'une entreprise artisanale](../catalogue/#a-entreprises_artisanales_cma){:target="_blank"}                     | CMA France |         `entreprises_artisanales_cma`          |      Données JSON   |    publiques    |
-
-      | [Actes](../catalogue/#actes_inpi){:target="_blank"}                     | INPI |         `actes_inpi`          |       Archive ZIP (PDF et XML)   |    publiques    |
-
-      | [Conventions collectives](../catalogue/#conventions_collectives){:target="_blank"}                     | Fabrique numérique des Ministères Sociaux |         `conventions_collectives`          |     données JSON     |    publiques    |
+      Utiliser le service API Entreprise, c'est aussi bénéficier des engagements de la Direction du Numérique : 
 
 
-      ##### Informations financières <a id="infos_financieres"></a>
+      * **L’engagement de disponibilité est de 99,5 %.**
+        La disponibilité des données est consultable en temps réel pour chaque endpoint dans le catalogue des donnée. Une historisation est aussi publiée, ainsi que les rapports d’incidents et les perspectives de résolution. Par ailleurs, les informations sur votre consommation sont disponibles dans votre tableau de bord.
 
+        {:.tpl-notification}
+        Toutefois, ce service agrégeant de nombreux fournisseurs de données et étant donc dépendant de leurs disponibilités, **API Entreprise ne porte donc aucune responsabilité s’agissant de la qualité ou du contenu intrinsèque des données.** Par ailleurs, le service ne modifie pas les données à l’exception d’une standardisation contextuelle limitée (minuscule vers majuscule, format de date, nombre d’espaces).
+      * **L’utilisation d’API Entreprise est gratuite.**
+        Les coûts d’investissements et de fonctionnement sont pris en charge par la DINUM. En revanche, les coûts de raccordement à API Entreprise vous incombent.
+      * **API Entreprise propose une assistance technique et fonctionnelle** permettant aux utilisateurs de définir et de mettre en œuvre au mieux leur projet.
 
-      {:.tpl-table}
-
-      | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-
-      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
-
-      | [Chiffre d'affaires](../catalogue/#exercices){:target="_blank"}                                     |          DGFIP           |                `exercices`                |    données JSON     | protégées |
-
-      | [Bilans annuels](../catalogue/#bilans_inpi){:target="_blank"}                                      |     INPI     |         `bilans_inpi`          |    données JSON     | publiques et protégées |
-
-      | [3 derniers bilans annuels](../catalogue/#bilans_entreprises_bdf){:target="_blank"}                                      |     Banque de France     |         `bilans_entreprises_bdf`          |    données JSON     | protégées |
-
-      | [Déclarations de résultats](../catalogue/#liasses_fiscales_dgfip){:target="_blank"}       |          DGFIP           |         `liasses_fiscales_dgfip`          |    données JSON     | protégées |
-
-
-      ##### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
-
-
-      {:.tpl-table}
-
-      | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-
-      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
-
-      | [Attestation fiscale](../catalogue/#liasses_fiscales_dgfip){:target="_blank"}                                    |          DGFIP           |       `attestations_fiscales_dgfip`       |     PDF (texte)     | protégées |
-
-      | [Attestation de vigilance](../catalogue/#attestations_sociales_acoss){:target="_blank"}                               |          ACOSS           |       `attestations_sociales_acoss`       |     PDF (texte)     | protégées |
-
-      | [Conformité emploi des travailleurs handicapés](../catalogue/#attestations_agefiph){:target="_blank"}  |         AGEFIPH          |          `attestations_agefiph`           |    données JSON     | protégées |
-
-      | [Cotisation de sécurité sociale agricole](../catalogue/#cotisations_msa){:target="_blank"}                |           MSA            |             `cotisations_msa`             |    données JSON     | protégées |
-
-      | [Cotisations retraite bâtiment](../catalogue/#cotisation_retraite_probtp){:target="_blank"}                       |          PROBTP          | `attestations_cotisation_retraite_probtp` |    données JSON     |    protégées    |
-
-      | [Carte professionnelle travaux publics](../catalogue/#cartes_professionnelles_fntp){:target="_blank"}         |          FNTP           |            `cartes_professionnelles_ftp`            |         PDF         |    publiques    |
-
-      | [Cotisations congés payés & chômage intempéries](../catalogue/#certificats_cnetp){:target="_blank"}         |          CNETP           |            `certificats_cnetp`            |         PDF         |    protégées    |
-
-
-      ##### Certifications professionnelles <a id="certificats_pro"></a>
-
-
-      {:.tpl-table}
-
-      | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-
-      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
-
-      | [Certification RGE](../catalogue/#certificats_rge_ademe){:target="_blank"}                                      |          ADEME           |          `certificats_rge_ademe`          | données JSON et PDF |    publiques    |
-
-      | [Certification de qualification bâtiment](../catalogue/#certificats_qualibat){:target="_blank"}                  |          OPQIBI          |           `certificats_qualibat`            |    données JSON     |    publiques    |
-
-      | [Certification de qualification d'ingénierie](../catalogue/#certificats_opqibi){:target="_blank"}                  |          OPQIBI          |           `certificats_opqibi`            |    données JSON     |    publiques    |
-
-
-      ##### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
-
-
-      {:.tpl-table}
-
-      | Données                                              |        Producteur        |                 Endpoint                  |        Type         |    Ouverture    |
-
-      | ----------------------------------------------------- |--------------------------|-------------------------------------------|---------------------|-----------------|
-
-      | [Brevets, modèles et marques déposés](../catalogue/#extraits_courts_inpi){:target="_blank"}                   |           INPI           |          `extraits_courts_inpi`           |    données JSON     |    publiques    |
-
-
+      * **API Entreprise respecte le cadre légal.**
+        Le service s'engage à respecter en totalité les conditions de protection des données et les règles de confidentialité.
+      
       <br>
 
-
       #### Une documentation technique et métier par endpoint
-
-
-      Toutes les données de la liste précédente sont détaillées dans le [catalogue de données](../catalogue/).
 
 
       |-------------------|-----------------|
@@ -226,24 +152,6 @@ panels:
 
       </center>
 
-
-      #### Nos engagements
-
-
-      Utiliser le service API Entreprise, c'est aussi bénéficier des engagements de la Direction du Numérique : 
-
-
-      * **L’engagement de disponibilité est de 99,5 %.**
-        La disponibilité des données est consultable en temps réel pour chaque endpoint dans le catalogue des donnée. Une historisation est aussi publiée, ainsi que les rapports d’incidents et les perspectives de résolution. Par ailleurs, les informations sur votre consommation sont disponibles dans votre tableau de bord.
-
-        {:.tpl-notification}
-        Toutefois, ce service agrégeant de nombreux fournisseurs de données et étant donc dépendant de leurs disponibilités, **API Entreprise ne porte donc aucune responsabilité s’agissant de la qualité ou du contenu intrinsèque des données.** Par ailleurs, le service ne modifie pas les données à l’exception d’une standardisation contextuelle limitée (minuscule vers majuscule, format de date, nombre d’espaces).
-      * **L’utilisation d’API Entreprise est gratuite.**
-        Les coûts d’investissements et de fonctionnement sont pris en charge par la DINUM. En revanche, les coûts de raccordement à API Entreprise vous incombent.
-      * **API Entreprise propose une assistance technique et fonctionnelle** permettant aux utilisateurs de définir et de mettre en œuvre au mieux leur projet.
-
-      * **API Entreprise respecte le cadre légal.**
-        Le service s'engage à respecter en totalité les conditions de protection des données et les règles de confidentialité.
   panel3:
     title: "Un accès sous habilitation et sous conditions 🔐 "
     id: acces

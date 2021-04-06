@@ -13,11 +13,11 @@ description: Savoir si une **entreprise est à jour de ses cotisations sociales*
 usecases:
   - Aides publiques
   - Marchés publics
-  - Répertoire de tiers
+  - Détection de la fraude
 opening: Données protégées.
 perimeter:
   description: |-
-    Sont éligibles à la MSA les entreprises de : 
+    Sont éligibles à la MSA les entreprises de :
 
     * l'agriculture
     * l'élevage

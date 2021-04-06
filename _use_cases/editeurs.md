@@ -112,7 +112,7 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
   <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
 
 
-## Formulaire d'accès spécifique au cas d'usage
+## Faire sa demande d'accès
 
 Vous êtes un éditeur et avez identifié les données nécessaires pour votre service ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "éditeurs" :
 
