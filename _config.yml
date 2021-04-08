@@ -198,4 +198,4 @@ notification:
   enable: true
   # only info and notice for now
   kind: notice
-  text: "Maintenance DGFIP le jeudi 8 avril (aujourd'hui) de 7h30 à 20h pour cause de mise à jour logiciel"
+  text: "Maintenance DGFIP du jeudi 8 avril 7h30 au vendredi 9 avril 10h pour cause de mise à jour logiciel"
