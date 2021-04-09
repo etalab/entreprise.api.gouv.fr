@@ -810,6 +810,19 @@
     }
   }
 
+  .include-typeform {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .include-typeform-titre {
+    text-decoration: underline;
+    margin-bottom: 3px;
+  }
+
   @media (max-width: 800px) {
     .tpl-documentation__sidebar {
       // display: none;
