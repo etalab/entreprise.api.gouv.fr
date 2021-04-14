@@ -177,13 +177,18 @@ window.addEventListener("load", function (e) {
   );
   const el = document.getElementsByClassName("documentation-card");
   const tabs = document.querySelectorAll(".tab-list a");
-  const commentSwitches = document.getElementsByClassName("toggle-comments");
+  const commentSwitches = document;
 
   init();
 
   function init() {
     for (let i = 0; i < el.length; i++) {
-      commentSwitches[i].addEventListener("click", toggleComments, false);
+      var commentSwitches = el[i].getElementsByClassName("toggle-comments");
+
+      for (let j = 0; j < commentSwitches.length; j++) {
+        commentSwitches[j].addEventListener("click", toggleComments, false);
+      }
+
       fetchAvailability(el[i].getAttribute("id"));
     }
     for (let i = 0; i < tabs.length; i++) {
