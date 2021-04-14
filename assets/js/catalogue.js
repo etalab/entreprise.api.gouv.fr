@@ -330,7 +330,9 @@ window.addEventListener("load", function (e) {
       }
     }
 
-    visibleEndpoints.innerHTML = panelCount;
+    if (visibleEndpoints) {
+      visibleEndpoints.innerHTML = panelCount;
+    }
   }
 
   // hide a category if no children match search criteria
