@@ -14,7 +14,7 @@ scope:
   - entreprises
 description: Obtenir l’attestation validant que l’**entreprise s’acquitte de ses
   obligations déclaratives** et du **paiement des cotisations et contributions
-  sociales** auprès de l'URSSAF Caisse nationale. L’attestation de vigilance permet également de
+  sociales** auprès de l'URSSAF Caisse nationale (anciennement ACOSS). L’attestation de vigilance permet également de
   prouver que l’entreprise respecte les règles applicables en matière de lutte
   contre le travail dissimulé.
 usecases:
