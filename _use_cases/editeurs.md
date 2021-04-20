@@ -81,7 +81,7 @@ Pour naviguer dans le tableau, vous pouvez également vous aider des catégories
 | Données et endpoints 	| Producteur 	| Utilité<br>éditeurs 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation 	|
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| ✅ 	| 📜 	| PDF 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
-| **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| ACOSS 	| ✅ 	| 📜 	| PDF 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
+| **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| URSSAF Caisse nationale 	| ✅ 	| 📜 	| PDF 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
 | **Conformité emploi des travailleurs handicapés**<br>`attestations_agefiph` 	| AGEFIPH 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"} 	|
 | **Cotisations de sécurité sociale agricole**<br>`cotisations_msa` 	| MSA 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"} 	|
 | **Cotisations retraite bâtiment**<br>`cotisation_retraite_probtp` 	| PROBTP 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"} 	|

@@ -4,7 +4,7 @@ providers:
 new: >-
   À compter du 25 septembre 2019 :
 
-  Pour un SIREN donné, il ne sera possible d'accéder à l'attestation que 10 fois par jour ; là où avant il n'y avait pas limite. Une fois cette limite atteinte il faudra attendre le lendemain (à partir de 00h00) pour obtenir de nouveau cette attestation. Cette limitation est mise en place directement par le fournisseur de données (ACOSS). **Il est donc recommandé de ré-utiliser la pièce fournie et hosté par API Entreprise plutôt que de renouveler vos appels pour une même attestation à quelques jours voire semaines d'interval**
+  Pour un SIREN donné, il ne sera possible d'accéder à l'attestation que 10 fois par jour ; là où avant il n'y avait pas limite. Une fois cette limite atteinte il faudra attendre le lendemain (à partir de 00h00) pour obtenir de nouveau cette attestation. Cette limitation est mise en place directement par le fournisseur de données (URSSAF Caisse nationale). **Il est donc recommandé de ré-utiliser la pièce fournie et hosté par API Entreprise plutôt que de renouveler vos appels pour une même attestation à quelques jours voire semaines d'interval**
 access: Restreint
 weight: 14
 type: Attestations sociales et fiscales
@@ -14,7 +14,7 @@ scope:
   - entreprises
 description: Obtenir l’attestation validant que l’**entreprise s’acquitte de ses
   obligations déclaratives** et du **paiement des cotisations et contributions
-  sociales** auprès de l'ACOSS. L’attestation de vigilance permet également de
+  sociales** auprès de l'URSSAF Caisse nationale. L’attestation de vigilance permet également de
   prouver que l’entreprise respecte les règles applicables en matière de lutte
   contre le travail dissimulé.
 usecases:
@@ -51,7 +51,7 @@ services:
       questions:
         qr1:
           question: À quelles conditions l'attestation de vigilance est délivrée à une
-            entreprise par l'ACOSS ?
+            entreprise par l'URSSAF Caisse nationale ?
           answer: >-
             L'entreprise ou micro entreprise reçoit l'attestation quand :
 
@@ -65,7 +65,7 @@ services:
             * ou elle ne s'est pas acquittée des cotisations et contributions dues mais en conteste le montant par recours contentieux.
 
 
-            ℹ️ Le cadre précis de la demande par le donneur d'ordre et de la délivrance de l'attestation à l'entreprise est expliqué sur le site de l'ACOSS :[ https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html](<Quand est-ce que l'attestation de vigilance est délivrée par l'ACOSS ?>){:target="_blank"}
+            ℹ️ Le cadre précis de la demande par le donneur d'ordre et de la délivrance de l'attestation à l'entreprise est expliqué sur le site de l'URSSAF :[ https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html](<Quand est-ce que l'attestation de vigilance est délivrée par l'URSSAF ?>){:target="_blank"}
         qr2:
           question: Pourquoi ne puis-je plus avoir l'Attestation de Marché Publique (AMP)
             ?
@@ -96,7 +96,7 @@ services:
           question: L’api ne renvoie pas la pièce, est ce que ça veut dire qu’elle ne sera
             jamais disponible ?
           answer: Non, dans certain cas, la requête lance une demande dans le système de
-            l’ACOSS qui necessite un traitement par un gestionnaire avant que
+            l’URSSAF qui necessite un traitement par un gestionnaire avant que
             l’attestation soit disponible.
       sample:
         code: >
