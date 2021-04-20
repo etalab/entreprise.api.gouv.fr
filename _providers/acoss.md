@@ -1,7 +1,7 @@
 ---
 title: URSSAF Caisse nationale
 label: acoss
-logo: "/assets/images/providers/URSSAF-caisse-nationale.png"
+logo: "/assets/images/providers/acoss.png"
 sources_url: https://www.urssaf.fr/portail/home/employeur/declarer-et-payer/obtenir-une-attestation/attestation-de-vigilance.html
 ---
 
