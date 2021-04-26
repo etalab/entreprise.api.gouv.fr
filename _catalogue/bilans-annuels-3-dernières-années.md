@@ -173,7 +173,7 @@ services:
           }
 history: "##### 01/06/2018 Ouverture de l'endpoint `bilans_entreprises_bdf`"
 availability:
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: 250 requêtes/min. par jeton
   normal_availability: 7 jours/7, de 8h à 23h.
   unavailability_types: Opérations de maintenance toutes les nuits entre 23h et
     8h.  Durant ce laps de temps, la base de données ou une partie de

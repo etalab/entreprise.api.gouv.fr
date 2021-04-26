@@ -66,5 +66,5 @@ services:
 availability:
   normal_availability: 7jours/7 et 24h/24
   unavailability_types: /
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: 50 requêtes/min. par jeton
 ---

@@ -16,7 +16,7 @@ usecases:
   - Marchés publics
 opening: Données publiques.
 availability:
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: 250 requêtes/min. par jeton
   unavailability_types: /
   normal_availability: 7jours/7 et 24h/24
 service2:

@@ -160,4 +160,6 @@ services:
 
 
             Les **données** du bilan mises à disposition sous forme XML nécessitent un délai plus long de **deux semaines**.
+availability:
+  volumetry: 5 requêtes/min. par jeton
 ---

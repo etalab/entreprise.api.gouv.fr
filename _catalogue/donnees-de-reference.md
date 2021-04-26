@@ -468,7 +468,7 @@ services:
             * et l'entreprise a son `etat_administratif` = `A` (et non `C` si elle était réellement fermée).
 availability:
   normal_availability: 7jours/7 et 24h/24
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: 250 requêtes/min. par jeton
   unavailability_types: /
 category: Informations générales
 ---

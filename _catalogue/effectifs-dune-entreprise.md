@@ -216,4 +216,9 @@ services:
 
 
         Les effectifs étant mis à jour le 15 de chaque mois, avant cette date, il n'est possible de demander les effectifs que du mois précédent. Si la donnée est indisponible pour le mois demandé, l'API renverra un 404 avec un message d'erreur explicite.
+availability:
+  normal_availability: 7jours/7 et 24h/24
+  unavailability_types: /
+  volumetry: 250 requêtes/min. par jeton
+
 ---
