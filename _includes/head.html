@@ -58,5 +58,11 @@
 
   {% if jekyll.environment == 'production' %}
     {% include matomo.html %}
+  {% else %}
+    <script type="text/javascript">
+      var _paq = window._paq || {
+        push: function(elt) { console.log('Tracking', elt); }
+      };
+    </script>
   {% endif %}
 </head>
