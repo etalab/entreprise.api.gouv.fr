@@ -1,0 +1,33 @@
+<div class="modal micromodal-slide" id="modal-popup" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-popup-title">
+      <header class="modal__header">
+        <h2 class="modal__title text-center" id="modal-popup-title">
+          {{ site.data.popup.title }}
+        </h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+      </header>
+      <main class="modal__content text-center" id="modal-popup-content">
+        {{ site.data.popup.body }}
+      </main>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load', function() {
+      if (Cookies.get('modal-{{ site.data.popup.cookie_identifier }}-shown') === undefined) {
+      setTimeout(function() {
+        _paq.push([
+          'trackEvent',
+          'Popup',
+          'Popup showed',
+          document.getElementById('modal-popup-content').innerText
+        ]);
+
+        Cookies.set('modal-{{ site.data.popup.cookie_identifier }}-shown', true);
+        MicroModal.show('modal-popup');
+        }, {{ site.data.popup.wait }}*1000)
+    }
+  });
+</script>
