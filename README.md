@@ -84,7 +84,7 @@ Plus d'infos sur les options dans la clé `notification` du fichier.
 Vous pouvez désactiver / activer l'affichage d'une modal sur le site de manière
 globale.
 
-Plus d'infos dans le fichier [`_data/popup.yml`])(_data/popup.yml)
+Plus d'infos dans le fichier [`_data/popup.yml`](_data/popup.yml)
 
 ## Pages
 
