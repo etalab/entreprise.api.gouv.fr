@@ -224,7 +224,7 @@ collections:
           - { label: "Infogreffe", value: "infogreffe" }
           - { label: "Insee", value: "insee" }
           - { label: "DGFIP", value: "dgfip" }
-          - { label: "Acoss", value: "acoss" }
+          - { label: "URSSAF Caisse nationale", value: "acoss" }
           - { label: "INPI", value: "inpi" }
           - { label: "Qualibat", value: "qualibat" }
           - { label: "Ministère de l’Intérieur", value: "mi" }

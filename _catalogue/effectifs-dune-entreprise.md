@@ -9,7 +9,7 @@ description: Dans le cadre du volet 2 des aides régionales aux TPE pour faire
   face au Covid-19, API Entreprise a mis temporairement à disposition trois
   endpoints permettant de **connaître les effectifs mensuels ou annuels d'une
   entreprise ou d'un établissement**. Ces informations sont délivrées par
-  l'agence centrale des organismes de la sécurité sociale (ACOSS).
+  la caisse nationale de l'URSSAF (anciennement ACOSS).
 usecases:
   - Aide d'urgence Covid-19
   - Préremplissage d'un formulaire

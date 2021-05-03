@@ -104,7 +104,7 @@ providers_aliases:
   infogreffe: 'Infogreffe'
   insee: 'INSEE'
   dgfip: 'DGFIP'
-  acoss: 'ACOSS'
+  acoss: 'URSSAF Caisse nationale'
   inpi: 'INPI'
   bdf: 'Banque de France'
   qualibat: 'Qualibat'
@@ -191,11 +191,3 @@ newsletters_kinds:
   incident: '🚧 Incidents'
   techlettre: '🛠 Techlettre'
   infolettre: '📮  Infolettre'
-
-notification:
-  # false = hide
-  # true = show
-  enable: false
-  # only info and notice for now
-  kind: notice
-  text: "Maintenance DGFIP du jeudi 8 avril 7h30 au vendredi 9 avril 10h pour cause de mise à jour logiciel"

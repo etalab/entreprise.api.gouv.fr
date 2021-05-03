@@ -59,3 +59,16 @@ $search-box-color: #0048B3;
     right: 10px;
   }
 }
+
+.algolia-brand {
+  text-align: right;
+  font-size: 14px;
+  padding-right: 5px;
+
+  img {
+    height: 14px;
+    display: inline;
+    width: 60px;
+    margin-top: -2px;
+  }
+}

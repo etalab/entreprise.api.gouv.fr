@@ -54,9 +54,17 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   {% endunless %}
 
+  <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js" integrity="sha512-Meww2sXqNHxI1+5Dyh/9KAtvI9RZSA4c1K2k5iL02oiPO/RH3Q30L3M1albtqMg50u4gRTYdV4EXOQqXEI336A==" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flexboxgrid@6.3.1/dist/flexboxgrid.min.css">
 
   {% if jekyll.environment == 'production' %}
     {% include matomo.html %}
+  {% else %}
+    <script type="text/javascript">
+      var _paq = window._paq || {
+        push: function(elt) { console.log('Tracking', elt); }
+      };
+    </script>
   {% endif %}
 </head>

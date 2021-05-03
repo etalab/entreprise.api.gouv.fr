@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="home">
-  {% if site.notification.enable %}
-  <div class="home notification notification-{{site.notification.kind}}">
-    {{ site.notification.text}}
+  {% if site.data.notification.enable %}
+  <div class="home notification notification-{{site.data.notification.kind}}">
+    {{ site.data.notification.text}}
   </div>
   {% endif %}
   <section class="tpl-hero">
@@ -78,6 +78,9 @@ layout: default
           </a>
           <div class="results" id="hits-support">
           </div>
+        </div>
+        <div class="algolia-brand">
+          Propulsé par {% asset 'algolia-logo.svg' %}
         </div>
       </div>
     </div>
@@ -188,7 +191,7 @@ layout: default
             alt="Direction Générale des Finances Publiques">
         </li>
         <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/acoss.png %}" alt="ACOSS">
+          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/acoss.png %}" alt="URSSAF Caisse nationale">
         </li>
       </ul>
       <ul class="providers__others text-center">
