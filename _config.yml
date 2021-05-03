@@ -199,3 +199,4 @@ notification:
   # only info and notice for now
   kind: notice
   text: "Maintenance DGFIP du jeudi 8 avril 7h30 au vendredi 9 avril 10h pour cause de mise à jour logiciel"
+
