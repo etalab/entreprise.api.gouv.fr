@@ -74,10 +74,9 @@ Il s'agit d'un site statique en Jekyll dont les sources sont hostées sur [Githu
 
 ## Notification en haut de la homepage
 
-Vous pouvez désactiver / activer une notification en haut de page directement
-depuis le fichier `_config.yml`.
+Vous pouvez désactiver / activer une notification en haut de page.
 
-Plus d'infos sur les options dans la clé `notification` du fichier.
+Plus d'infos dans le fichier [`_data/notification.yml`](_data/notification.yml)
 
 ## Popup système
 
