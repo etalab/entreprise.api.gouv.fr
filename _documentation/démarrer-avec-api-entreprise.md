@@ -246,12 +246,43 @@ panels:
     content: >-
       #### Respecter la volumétrie
 
+      ##### Limites
 
-      Sur API Entreprise, vous avez le droit à **2000 requêtes par tranche de 10 minutes par IP** interrogeant nos services.
+      Les limites de volumétrie sur API Entreprise se décomposent en plusieurs règles, synthétisées ci-dessous : 
 
 
-      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs **pour une durée de 12h**. Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil.
-      <br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré.
+      * **Maximum 550 requête par minute, par jeton** ;
+
+      * **Une volumétrie variable et spécifique par endpoint** suivant deux règles principales : 
+
+          * Les endpoint transmettant du JSON ont une volumétrie de 250 requêtes/min/jeton ;
+
+          * Les endpoints transmettant des documents ont une volumétrie de 50 requêtes/min/jeton.
+
+          * Trois endpoints échappent aux deux règles précédentes et présentent une volumétrie de 5 requêtes/min/jeton : l'[attestation fiscale](../catalogue/#a-attestations_fiscales_dgfip) de la DGFIP, les [actes](../catalogue/#a-actes_inpi) et [bilans](../catalogue/#a-bilans_inpi) de l'INPI.
+          
+          Pour vous assurer de la volumétrie d'un endpoint en particulier, vous pouvez consulter la partie "disponibilité" de sa documentation dans le [catalogue de données](../catalogue/).
+
+      * **Un plafond général par IP de 8000 requêtes par minute**. 
+      <br>
+
+      
+      ##### Alertes et bannissement
+
+      Un **code erreur 429** est systématiquement envoyé lorsque votre logiciel dépasse la limite de volumétrie. Ce code est accompagné d'un **message indiquant le nombre de secondes à attendre** pour effectuer à nouveau une requête avec succès.
+      <br>
+      
+
+      {:.tpl-notification}
+
+      Vous pouvez donc **utiliser ce code pour optimiser votre consommation de l'API Entreprise**.
+      <br>
+
+
+      **En cas de non prise en compte des codes erreurs 429**, et par conséquent de dépassement des limites de volumétrie, votre IP sera temporairement bannie de nos serveurs **pour une durée fixe et non révocable de 12h**. Si vous avez plusieurs jetons, tous seront donc bloqués pendant ce laps de temps.
+      <br>Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. 
+      Vous pouvez en revanche vérifier si vous avez dépassé ce seuil depuis votre tableau de bord.
+      <br><br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré.
 
 
       {:.tpl-notification.tpl--danger}
