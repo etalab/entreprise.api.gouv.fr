@@ -263,7 +263,7 @@ panels:
           
           Pour vous assurer de la volumétrie d'un endpoint en particulier, vous pouvez consulter la partie "disponibilité" de sa documentation dans le [catalogue de données](../catalogue/).
 
-      * **Un plafond général par IP de 8000 requêtes par minute**. 
+      * **Un plafond général par IP de 8000 requêtes par tranche de 10 minute**. 
       <br>
 
       
