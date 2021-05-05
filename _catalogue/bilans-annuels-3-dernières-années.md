@@ -11,7 +11,8 @@ scope:
 description: "Obtenir les trois derniers bilans d’une entreprise détenus par la
   Banque de France. Ces bilans permettent d'accéder à **certaines informations
   contenues dans la liasse fiscale** : bilans, compte de résultat et annexes
-  confondus."
+  confondus. Ces données proviennent de la base **FIBEN (Fichier bancaire des
+  entreprises)** - hors cotation."
 usecases:
   - Détection de la fraude
 opening: Données protégées.
