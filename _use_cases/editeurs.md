@@ -5,117 +5,49 @@ title: Intégrer l'API Entreprise en tant qu'éditeur
 
 ## Le rôle d'API Entreprise
 
-API Entreprise permet de simplifier les démarches des entreprises et associations en donnant un accès automatisé à un certain nombre de leurs données administratives. API Entreprise est un hub d'APIs, l'ensemble des données est consultable dans le [catalogue des données](https://entreprise.api.gouv.fr/catalogue){:target="_blank"}.
-
-**Ils utilisent déjà l'API Entreprise** : Le service "DUME" (AIFE), le "Portail des aides" (MGDIS), le profil acheteur "Place" (Atexo) ou encore la solution "Publik" (Entr'ouvert) utilisent l'API Entreprise pour donner un accès direct et automatisé à leurs utilisateurs.
+API Entreprise permet de simplifier les démarches des entreprises et associations en donnant un **accès automatisé à un certain nombre de leurs données administratives**. API Entreprise est un **hub d'APIs**, l'ensemble des données est consultable dans le [catalogue des données](https://entreprise.api.gouv.fr/catalogue){:target="_blank"}.
 
 
-## Les données utiles aux éditeurs
+## Se connecter en tant qu'éditeur
 
-API Entreprise est un service réservé aux acteurs publics investis d'une mission de service public dont l'accès se fait [sous habilitation et sous certaines conditions]({{ site.baseurl }}/doc/#cas-usage/#acces).
+*Vous êtes un éditeur et avez identifié les données nécessaires aux services que vous proposez à des administrations ou entités ayant une mission de service public ?*
+Écrivez-nous à [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
 
-Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl }}/catalogue), retrouvez ci-dessous les données qui peuvent vous être utiles en tant qu'éditeur.<br>
-<br>
-Le symbole ✅ indique que l'endpoint a déjà été **utile à d'autres éditeurs**.<br>
-Chaque service pouvant avoir ses propres spécificités, ce symbole ⏺ vous indique que l'endpoint n'est **pas encore utilisé à ce jour** par d'autres éditeurs, il vous est néanmoins possible de les demander si votre service le justifie.<br>
-<br>
+Le périmètre des données accessibles par vos services se fera en fonction des cas d'usage que vous proposez à vos utilisateurs habilités à accéder à l'API Entreprise. Vous pouvez d'ores et déjà consulter nos [cas d'usage génériques](https://entreprise.api.gouv.fr/cas_usage/), nous y détaillons les données utiles.
 
-A REECRIRE !!!!!!
-Dans ce tableau de synthèse nous vous précisons également la nature du cadre juridique nécessaire pour bénéficier des données.
-L'accès à l'API Entreprise se fait sous réserve que le service le justifie. Les endpoints ne nécessitant qu'une explication précise par le demandeur sont indiqués par le symbole 💬.<br>
-Dans certains cas, l'accès à la donnée requiert *en sus* la fourniture d'un cadre juridique précis accompagné de justificatifs tels qu'un décrêt ou un arrêté, ou une délibération dans le cas des collectivités. Les endpoints concernés sont alors signalés par le symbole 📜.
+## Faire sa demande d'accès spécifique éditeur
 
-Selon votre utilisation spécifique, **veillez à demander uniquement les accès aux données qui vous seront nécessaires.** Votre raccordement en sera alors grandement accéléré.
+*Vous êtes une administration, une collectivité ou une entité ayant une mission de service public et utilisez une solution proposée par un éditeur ?* 
 
-Pour naviguer dans le tableau, vous pouvez également vous aider des catégories suivantes :
-- [Informations générales](#infos_generales),
-- [Informations financières](#infos_financieres),
-- [Attestations sociales et fiscales](#attestations_sociales_fiscales),
-- [Certificats professionnels](#certificats_pro),
-- [Propriété intellectuelle](#propriete_intellectuelle).
-
-##### Légende du tableau
+Retrouvez ci-après les différents formulaires d'habilitation pré-rempli à compléter pour bénéficier de l'API Entreprise au travers de votre éditeur. ⚠️ **Il est impératif d'être déjà en contact avec un éditeur avant de pouvoir faire une demande d'accès spécifique par éditeur**. Si vous n'avez pas d'éditeur, vous pouvez effectuer une demande directement à l'API Entreprise en consultant nos cas d'usage et ayant vérifié au préalable que vous remplissiez les [conditions nécessaires](https://entreprise.api.gouv.fr/doc/#une-habilitation-instruite-par-la-dinum).
 
 {:.tpl-table}
-| Symbole et signification |
-| ---------|
-| ✅  déjà utilisé par des éditeurs |
-| ⏺  pas encore utilisé par des éditeurs|
-| 💬  cadre juridique précis nécessaire |
-| 📜  cadre juridique précis et fourniture de justificatifs nécessaires|
+| Éditeurs    |   Solution      |  Demande d'accès d'habilitation pré-rempli
+|------------------------|:-------------------------------------------:|:------:|
+|    **AIFE** <br>(Agence pour l'Informatique Financière de l'État)<br> agence publique        | [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |   <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès AIFE</a> |
+|      **Achatpublic** <br> entreprise privée    | [achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |   <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Achatpublic</a> |
+|    **Atexo**  <br> entreprise privée    | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Atexo</a> |
+|    **AWS** <br> entreprise privée  |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}  | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès AWS</a> |
+|    **Atline Services**  <br> entreprise privée |    [marchés-securises.fr](https://www.marches-securises.fr/entreprise/?){:target="_blank"}| <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Atline</a> |
+|    **Dematis** <br> entreprise privée  |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}  | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Dematis</a> |
+|    **Entr'ouvert** <br> coopérative |       [entrouvert.com](https://www.entrouvert.com){:target="_blank"} <br> [Publik](https://publik.entrouvert.com/){:target="_blank"}|<a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Entr'Ouvert</a> |
+|    **Klekoon** <br> entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"} |<a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Klekoon</a> |
+|    **MGDIS** <br> entreprise privée  |[Portail des aides](https://www.mgdis.fr/nos-solutions/pilotage-des-aides-versees/){:target="_blank"}  |<a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès MGDIS</a> |
+|    **Provigis** <br> entreprise privée  |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"} | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Provigis</a> |
+|    **Territoires numériques** <br> groupement d'intérêt public Bourgogne Franche-Comté |     [Pack commande publique](https://www.ternum-bfc.fr/services/pack-commande-publique){:target="_blank"} | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Territoires numériques</a> |
 
+
+## Ils utilisent l'API Entreprise
+
+Les éditeurs suivants sont déjà connectés à l'API Entreprise : 
+
+- **Des éditeurs publics** : l'AIFE (Agence pour l'Informatique Financière de l'Etat ) propose le service "DUME", Document Unique du marché européen.
+- **Des éditeurs privés** : Atexo, proposant le profil acheteur "Place" ; E-attestation ; MGDIS, "Portail des aides" ; 
+- **Des coopératives** : Entr'Ouvert avec sa solution "Publik".
+
+À travers eux, ce sont des centaines de collectivités et administrations qui simplifient les démarches administratives des entreprises et des associations.
 <br>
 
-#### Informations générales <a id="infos_generales"></a>
-
-{:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>éditeurs 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation	|
-|-	|:-:	|:-:	|:-:	|:-:	|:-:	|:-	:|:-:	|
-| **Données de référence<br>d'une entreprise** 	<br>`entreprises` | INSEE & Infogreffe 	| ✅ 	| 💬 	| JSON 	| publiques et protégées	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}  	|
-| **Données de référence<br>d'un établissement** <br>	`etablissements` | INSEE 	| ✅ 	| 💬	| JSON 	| publiques et protégées	| 	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}|
-| **Extrait  RCS** <br> `extraits_rcs_infogreffe` 	| Infogreffe 	| ✅ 	| 💬| JSON 	| protégées 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe){:target="_blank"}	|
-| **Données déclaratives<br>d'une association** <br> `associations`	| Ministère de l'Intérieur 	| ✅ 	| 💬 | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#associations){:target="_blank"} 	|
-| **Divers documents<br>d'une association** <br> `documents_associations`  	| Ministère de l'Intérieur 	| ✅ 	| 💬| PDF 	| publiques 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#documents_associations){:target="_blank"}	|
-| **Actes**<br> `actes_inpi` 	| INPI 	| ✅ 	| 📜 | ZIP (PDF et XML) 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"} |
-| **Conventions collectives** <br> `conventions_collectives` 	| Fabrique numérique des Ministères Sociaux 	| ✅ 	| 📜 | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"} 	|
-
-<br>
-
-#### Informations financières <a id="infos_financieres"></a>
-
-{:.tpl-table}
-| Données et endpoints	| Producteur 	| Utilité<br>éditeurs 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
-|-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
-| **Chiffre d'affaires**<br>`exercices` 	| DGFIP 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#exercices){:target="_blank"} 	|
-| **Bilans annuels**<br>`bilans_inpi` 	| INPI 	| ✅ 	| 📜 	| ZIP (PDF et XML) 	| publiques et protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_inpi){:target="_blank"} 	|
-| **3 derniers bilans annuels**<br>`bilans_entreprises_bdf` 	| Banque de France 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#bilans_entreprises_bdf){:target="_blank"} 	|
-| **Déclarations de résultat**<br>`liasses_fiscales_dgfip` 	| DGFIP 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#liasses_fiscales_dgfip){:target="_blank"} 	|
-
-<br>
+{% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
 
 
-#### Attestations sociales et fiscales <a id="attestations_sociales_fiscales"></a>
-
-
-{:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>éditeurs 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	| Documentation 	|
-|-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
-| **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| ✅ 	| 📜 	| PDF 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
-| **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| URSSAF Caisse nationale 	| ✅ 	| 📜 	| PDF 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
-| **Conformité emploi des travailleurs handicapés**<br>`attestations_agefiph` 	| AGEFIPH 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"} 	|
-| **Cotisations de sécurité sociale agricole**<br>`cotisations_msa` 	| MSA 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"} 	|
-| **Cotisations retraite bâtiment**<br>`cotisation_retraite_probtp` 	| PROBTP 	| ✅ 	| 📜 	| JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"} 	|
-| **Carte professionnelle travaux publics**<br>`cartes_professionnelles_fntp` 	| FNTP 	| ✅ 	| 📜 	| PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp){:target="_blank"} 	|
-| **Cotisations congés payés & chômage intempéries**<br>`certificats_cnetp` 	| CNETP 	| ✅ 	| 📜 	| PDF 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_cnetp){:target="_blank"} 	|
-
-<br>
-
-#### Certificats professionnels <a id="certificats_pro"></a>
-
-{:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>éditeurs 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
-|-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
-| **Certification RGE**<br>`certificats_rge_ademe` 	| ADEME 	| ✅ 	| 💬 	| JSON et PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_rge_ademe){:target="_blank"} 	|
-| **Certification de qualification bâtiment**<br>`certificats_qualibat` 	| Qualibat 	| ✅ 	| 💬 	| PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_qualibat){:target="_blank"} 	|
-| **Certification de qualification d'ingénierie**<br>`certificats_opqibi` 	| OPQIBI 	| ✅ 	| 💬 	| JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#certificats_opqibi){:target="_blank"} 	|
-
-<br>
-
-#### Propriété intellectuelle <a id="propriete_intellectuelle"></a>
-
-
-{:.tpl-table}
-| Données et endpoints 	| Producteur 	| Utilité<br>éditeurs 	| Cadre juridique nécessaire 	| Format 	| Ouverture 	|  Documentation	|
-|-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
-| **Brevets, modèles et marques déposées**<br>`extraits_courts_inpi` 	| INPI  	| ✅ 	| 💬 	| JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_courts_inpi){:target="_blank"} 	|
-
-  <a class="tpl-button tpl-button--alternate" href="{{ site.baseurl }}/catalogue/">Parcourir le catalogue des données</a>
-
-
-## Faire sa demande d'accès
-
-Vous êtes un éditeur et avez identifié les données nécessaires pour votre service ? Le lien ci-dessous vous permet d'accéder à un formulaire spécifique "éditeurs" :
-
-  <a class="tpl-button tpl-button--primary" href="">🔑 Formulaire d'accès "éditeurs"</a>
-
-Pour bien comprendre les étapes d'une demande d'accès à l'API Entreprise et les éléments qui vous seront nécessaires, veuillez consulter la partie [Effectuer sa demande d'habilitation]({{ site.baseurl }}/doc/#demande-habilitation) présente dans la documentation générale.
