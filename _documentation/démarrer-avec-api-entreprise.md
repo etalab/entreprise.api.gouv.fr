@@ -266,23 +266,34 @@ panels:
 
       ###### 📆 À compter du mardi 1er juin 2021
 
-      Les limites de volumétrie sur API Entreprise se décomposent en plusieurs règles, synthétisées ci-dessous : 
+      Les limites de volumétrie sur API Entreprise se décomposent en deux règles principales : 
 
-
-      * **Maximum 555 requête par minute, par jeton** ;
-
-      * **Une volumétrie variable et spécifique par endpoint** suivant deux règles principales : 
-
-          * Les endpoint transmettant du JSON ont une volumétrie de 250 requêtes/min/jeton ;
-
-          * Les endpoints transmettant des documents ont une volumétrie de 50 requêtes/min/jeton.
-
-          * Trois endpoints échappent aux deux règles précédentes et présentent une volumétrie de 5 requêtes/min/jeton : l'[attestation fiscale](../catalogue/#a-attestations_fiscales_dgfip) de la DGFIP, les [actes](../catalogue/#a-actes_inpi) et [bilans](../catalogue/#a-bilans_inpi) de l'INPI.
-          
-          Pour vous assurer de la volumétrie d'un endpoint en particulier, vous pouvez consulter la partie "disponibilité" de sa documentation dans le [catalogue de données](../catalogue/).
-
-      * **Un plafond général par IP de 8000 requêtes par tranche de 10 minute**. 
+      * **Un plafond général par IP de 1000 requêtes/minute**. 
       <br>
+
+      * **Une volumétrie par jeton par groupe d'endpoints** :
+
+          * *1er groupe* : Les endpoints renvoyant du **JSON** constituent un premier groupe. Vous pouvez effectuer jusqu'à **250 requêtes/min/jeton** sur ce groupe.
+
+          * *2ème groupe* : Les endpoints transmettant des **documents** constituent un autre groupe. La volumétrie maximale d'appel concernant ce groupe est de **50 requêtes/min/jeton**.
+
+          * *Exceptions* : Certains endpoints échappent à cette règle et présentent une volumétrie spécifique par endpoint : 
+
+               * L'[attestation fiscale](../catalogue/#a-attestations_fiscales_dgfip) de la DGFIP : 5 requêtes/min/jeton ;
+
+               * Les [actes](../catalogue/#a-actes_inpi) de l'INPI : 5 requêtes/min/jeton ;
+
+               * Les [bilans](../catalogue/#a-bilans_inpi) de l'INPI : 5 requêtes/min/jeton ; 
+
+               * Les [effectifs](../catalogue/#a-effectifs_..._acoss_covid) de l'URSSAF : 250 requêtes/min/jeton ;
+
+               * La [conformité des travailleurs handicapés](../catalogue/#a-attestations_agefiph) de l'Agefiph : 250 requêtes/min/jeton. 
+          
+      {:.tpl-notification}
+
+      Pour vous assurer de la volumétrie d'un endpoint en particulier, vous pouvez consulter la partie "disponibilité" de sa documentation dans le [catalogue de données](../catalogue/).
+
+      
 
       
       ##### Informations actionnables et alertes
