@@ -63,7 +63,7 @@ services:
         d'accès, le type et la date du/des documents.
 history: "##### 01/07/2020 Création de l'endpoint."
 availability:
-  volumetry: 50 requêtes/min. par jeton
+  volumetry: max. 50 requêtes/min/jeton cumulées sur tous les endpoints envoyant des documents.
   normal_availability: 7jours/7 et 24h/24
   unavailability_types: /
 ---

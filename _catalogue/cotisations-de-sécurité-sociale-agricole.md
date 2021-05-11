@@ -81,7 +81,7 @@ services:
 
             ℹ️ Ces trois situations correspondent à un fonctionnement normal de l'endpoint, quand il n'y a pas d'erreur à signaler. S'il y a une erreur, les champs seront vides et un code erreur HTTP vous sera envoyé.
 availability:
-  volumetry: 250 requêtes/min. par jeton
+  volumetry: max. 250 requêtes/min/jeton cumulées sur tous les endpoints renvoyant du JSON.
   unavailability_types: /
   normal_availability: 7jours/7 et 24h/24
 ---

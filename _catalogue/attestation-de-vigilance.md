@@ -110,6 +110,5 @@ services:
 availability:
   normal_availability: 7jours/7 et 24h/24
   unavailability_types: /
-  volumetry: 50 requêtes/min. par jeton <br>et max.10 requêtes/jour par SIREN
-    et par token
+  volumetry: max. 50 requêtes/min/jeton cumulées sur tous les endpoints envoyant des documents ; <br>et max. 10 requêtes/jour par SIREN (contrainte fournisseur).
 ---
