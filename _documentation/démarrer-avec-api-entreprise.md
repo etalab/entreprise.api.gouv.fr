@@ -296,9 +296,9 @@ panels:
       
 
       
-      ##### Informations actionnables et alertes
+      ##### Informations actionnables et alertes 📆 À compter du mardi 1er juin 2021
 
-      ###### 📆 À compter du mardi 1er juin 2021
+      ###### Header associé à chaque réponse
 
       Le Header de chaque réponse de l'API Entreprise est complété de trois champs concernant les limites de volumétrie, respectant les spécifications des `RateLimit` définie dans la RFC suivante <https://tools.ietf.org/id/draft-polli-ratelimit-headers-00.html>{:target="_blank"}.
       <br>
@@ -320,7 +320,6 @@ panels:
       | `RateLimit-Reset` |La **fin de la période** courante. | Timestamp |
 
 
-
       {:.example}
 
       **Exemple** : 
@@ -332,9 +331,30 @@ panels:
       <br><br>Vous pouvez donc jusqu'à 10h01 pile effectuer 47 appels, le compteur sera réinitialisé à 50 à ce moment-là.
 
       
-      
+      ###### Header associé à un code erreur 429
+
       Si vous dépassez le nombre d'appels autorisés (`RateLimit-Remaining = 0`), le serveur répondra avec le **status 429** sur tous les appels suivants dans la même période. 
-      <br>Le header de ce code erreur 429 sera également accompagné des trois champs précédents indiquant notamment l'**horaire de fin de la période permettant d'effectuer à nouveau une requête avec succès dans la nouvelle période**.
+      <br>
+      Le header associé à ce code erreur 429 sera accompagné : 
+      
+      *  des trois champs précédents ;
+
+      *  d'un champ supplémentaire indiquant le temps à attendre avant de pouvoir effectuer des nouveaux appels.
+
+
+      {:.tpl-table}
+
+      | Champs du header    |   Signification    |     Format           |
+
+      |:------------------------------|:------------------|:------------:|
+
+      | `RateLimit-Limit` |La **limite** concernant l'endpoint appelé, soit le nombre de requête/minute. | Nombre|
+
+      | `RateLimit-Remaining` |Le **nombre d'appels restants** durant la période courante d'une minute. | Nombre |
+
+      | `RateLimit-Reset` |La **fin de la période** courante. | Timestamp |
+
+      | *Uniquement pour le header associé au code erreur 429* <br> `Retry-after`| **Décompte du nombre de secondes restantes** avant la prochaine période | Secondes |
 
 
       {:.tpl-notification}
@@ -344,7 +364,7 @@ panels:
 
       ##### Bannissement
 
-      **En cas de non prise en compte des codes erreurs 429**, et par conséquent de dépassement des limites de volumétrie se traduisant par un volume important de retours 429, votre IP sera temporairement bannie de nos serveurs **pour une durée fixe et non révocable de 12h**. Si vous avez plusieurs jetons, tous seront donc bloqués pendant ce laps de temps.
+      En cas de **non prise en compte des codes erreurs 429**ou en cas de **dépassement de la limite de volumétrie globale**, votre IP sera temporairement bannie de nos serveurs **pour une durée fixe et non révocable de 12h**. Si vous avez plusieurs jetons, tous seront donc bloqués pendant ce laps de temps.
       <br>Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. 
       Vous pouvez en revanche vérifier si vous avez dépassé ce seuil depuis votre tableau de bord.
       <br><br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré.
