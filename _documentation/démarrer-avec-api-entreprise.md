@@ -344,7 +344,7 @@ panels:
 
       ##### Bannissement
 
-      **En cas de non prise en compte des codes erreurs 429**, et par conséquent de dépassement des limites de volumétrie, votre IP sera temporairement bannie de nos serveurs **pour une durée fixe et non révocable de 12h**. Si vous avez plusieurs jetons, tous seront donc bloqués pendant ce laps de temps.
+      **En cas de non prise en compte des codes erreurs 429**, et par conséquent de dépassement des limites de volumétrie se traduisant par un volume important de retours 429, votre IP sera temporairement bannie de nos serveurs **pour une durée fixe et non révocable de 12h**. Si vous avez plusieurs jetons, tous seront donc bloqués pendant ce laps de temps.
       <br>Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. 
       Vous pouvez en revanche vérifier si vous avez dépassé ce seuil depuis votre tableau de bord.
       <br><br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré.
