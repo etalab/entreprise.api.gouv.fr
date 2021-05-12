@@ -246,12 +246,108 @@ panels:
     content: >-
       #### Respecter la volumétrie
 
+      ##### Limites
+
+      ###### 📆 Jusqu'au mardi 1er juin 2021
 
       Sur API Entreprise, vous avez le droit à **2000 requêtes par tranche de 10 minutes par IP** interrogeant nos services.
+      <br>
+      <br>
+      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs **pour une durée de 12h**. Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil.<br>
+      Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d’écrire au support**.<br>
+      Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n’a pas été correctement configuré.
+      <br>
 
 
-      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs **pour une durée de 12h**. Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil.
-      <br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré.
+      {:.tpl-notification.tpl--danger}
+
+      Pour les appels de traitement de masse, il est souhaitable que vous fassiez vos batchs automatiques la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.
+
+
+      ###### 📆 À compter du mardi 1er juin 2021
+
+      Les limites de volumétrie sur API Entreprise se décomposent en deux règles principales : 
+
+      * **Un plafond général par IP de 1000 requêtes/minute**. 
+      <br>
+
+      * **Une volumétrie par jeton par groupe d'endpoints** :
+
+          * *1er groupe* : Les endpoints renvoyant du **JSON** constituent un premier groupe. Vous pouvez effectuer jusqu'à **250 requêtes/min/jeton** sur ce groupe.
+
+          * *2ème groupe* : Les endpoints transmettant des **documents** constituent un autre groupe. La volumétrie maximale d'appel concernant ce groupe est de **50 requêtes/min/jeton**.
+
+          * *Exceptions* : Certains endpoints échappent à cette règle et présentent une volumétrie spécifique par endpoint : 
+
+               * L'[attestation fiscale](../catalogue/#a-attestations_fiscales_dgfip) de la DGFIP : 5 requêtes/min/jeton ;
+
+               * Les [actes](../catalogue/#a-actes_inpi) de l'INPI : 5 requêtes/min/jeton ;
+
+               * Les [bilans](../catalogue/#a-bilans_inpi) de l'INPI : 5 requêtes/min/jeton ; 
+
+               * Les [effectifs](../catalogue/#a-effectifs_..._acoss_covid) de l'URSSAF : 250 requêtes/min/jeton ;
+
+               * La [conformité des travailleurs handicapés](../catalogue/#a-attestations_agefiph) de l'Agefiph : 250 requêtes/min/jeton. 
+          
+      {:.tpl-notification}
+
+      Pour vous assurer de la volumétrie d'un endpoint en particulier, vous pouvez consulter la partie "disponibilité" de sa documentation dans le [catalogue de données](../catalogue/).
+
+      
+
+      
+      ##### Informations actionnables et alertes
+
+      ###### 📆 À compter du mardi 1er juin 2021
+
+      Le Header de chaque réponse de l'API Entreprise est complété de trois champs concernant les limites de volumétrie, respectant les spécifications des `RateLimit` définie dans la RFC suivante <https://tools.ietf.org/id/draft-polli-ratelimit-headers-00.html>{:target="_blank"}.
+      <br>
+      <br>
+      Ce header vous permet donc d'avoir une **visibilité constante et en temps réel de la volumétrie**, et de **gérer un dépassement**.
+
+
+
+      {:.tpl-table}
+
+      | Champs du header    |   Signification    |     Format           |
+
+      |:------------------------------|:------------------|:------------:|
+
+      | `RateLimit-Limit` |La **limite** concernant l'endpoint appelé, soit le nombre de requête/minute. | Nombre|
+
+      | `RateLimit-Remaining` |Le **nombre d'appels restants** durant la période courante d'une minute. | Nombre |
+
+      | `RateLimit-Reset` |La **fin de la période** courante. | Timestamp |
+
+
+
+      {:.example}
+
+      **Exemple** : 
+      <br> Considérons un endpoint ayant une limite de 50 appels /minute.
+      Vous faîtes un premier appel à 10h00 pile, et effectuez un second appel 20 secondes plus tard, puis un troisième 10 secondes plus tard, vous aurez les valeurs suivantes :<br>
+      - RateLimit-Limit : 50 ;<br>
+      - RateLimit-Remaining : 47 (50 moins les 3 appels effectués) ;<br>
+      - RateLimit-Reset : [*Timestamp correspondant au jour présent à 10h01*]. Le premier appel initialise le compteur (à 10h00 pile), la période se termine 1m plus tard.
+      <br><br>Vous pouvez donc jusqu'à 10h01 pile effectuer 47 appels, le compteur sera réinitialisé à 50 à ce moment-là.
+
+      
+      
+      Si vous dépassez le nombre d'appels autorisés (`RateLimit-Remaining = 0`), le serveur répondra avec le **status 429** sur tous les appels suivants dans la même période. 
+      <br>Le header de ce code erreur 429 sera également accompagné des trois champs précédents indiquant notamment l'**horaire de fin de la période permettant d'effectuer à nouveau une requête avec succès dans la nouvelle période**.
+
+
+      {:.tpl-notification}
+
+      Vous pouvez donc **utiliser les champs du header pour optimiser votre consommation de l'API Entreprise**.
+      <br>
+
+      ##### Bannissement
+
+      **En cas de non prise en compte des codes erreurs 429**, et par conséquent de dépassement des limites de volumétrie se traduisant par un volume important de retours 429, votre IP sera temporairement bannie de nos serveurs **pour une durée fixe et non révocable de 12h**. Si vous avez plusieurs jetons, tous seront donc bloqués pendant ce laps de temps.
+      <br>Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. 
+      Vous pouvez en revanche vérifier si vous avez dépassé ce seuil depuis votre tableau de bord.
+      <br><br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré.
 
 
       {:.tpl-notification.tpl--danger}

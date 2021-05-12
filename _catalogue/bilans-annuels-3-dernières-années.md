@@ -11,7 +11,8 @@ scope:
 description: "Obtenir les trois derniers bilans d’une entreprise détenus par la
   Banque de France. Ces bilans permettent d'accéder à **certaines informations
   contenues dans la liasse fiscale** : bilans, compte de résultat et annexes
-  confondus."
+  confondus. Ces données proviennent de la base **FIBEN (Fichier bancaire des
+  entreprises)** - hors cotation."
 usecases:
   - Détection de la fraude
 opening: Données protégées.
@@ -173,7 +174,7 @@ services:
           }
 history: "##### 01/06/2018 Ouverture de l'endpoint `bilans_entreprises_bdf`"
 availability:
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: max. 250 requêtes/min/jeton cumulées sur tous les endpoints renvoyant du JSON.
   normal_availability: 7 jours/7, de 8h à 23h.
   unavailability_types: Opérations de maintenance toutes les nuits entre 23h et
     8h.  Durant ce laps de temps, la base de données ou une partie de

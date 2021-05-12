@@ -19,7 +19,7 @@ usecases:
 opening: Données protégées.
 availability:
   normal_availability: 7jours/7 et 24h/24
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: max. 250 requêtes/min/jeton cumulées sur tous les endpoints renvoyant du JSON.
   unavailability_types: /
 service2:
   label: Obtenir l'attestation de l'entreprise

@@ -228,7 +228,7 @@ services:
         * et enfin des **informations sur les différents certificats** (état de la certification, nom de l'organisme, dates clés) accompagnées d'une **URL pour télécharger le certificat**.
 
 availability:
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: max. 250 requêtes/min/jeton cumulées sur tous les endpoints renvoyant du JSON.
   unavailability_types: /
-  normal_availability: 2000 requêtes/10 minutes par IP
+  normal_availability: 7jours/7 et 24h/24
 ---
