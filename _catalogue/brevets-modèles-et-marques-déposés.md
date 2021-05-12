@@ -22,7 +22,7 @@ usecases:
 opening: Données publiques.
 history: "###### 2017-06-01 : Ouverture de l'endpoint"
 availability:
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: max. 250 requêtes/min/jeton cumulées sur tous les endpoints renvoyant du JSON.
   normal_availability: 7jours/7 et 24h/24
   unavailability_types: /
 service2:

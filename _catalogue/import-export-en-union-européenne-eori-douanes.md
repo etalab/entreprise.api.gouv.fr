@@ -118,7 +118,7 @@ services:
           }
 history: "##### 11/02/2021 Création de l'endpoint `eori_douanes`"
 availability:
-  volumetry: 2000 requêtes/10 minutes par IP
+  volumetry: max. 250 requêtes/min/jeton cumulées sur tous les endpoints renvoyant du JSON.
   normal_availability: 7jours/7 et 24h/24
   unavailability_types: /
 ---
