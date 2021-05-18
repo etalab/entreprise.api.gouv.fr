@@ -1,18 +1,17 @@
 ---
-  # true / false
-  enable: true
-  # wait (in seconds), before showing
-  wait: 90
-  # identifier for the cookie, has to be different if the popup changed to trigger again
-  cookie_identifier: 'pacage'
-  title: Donnez-nous votre avis
-  body: |-
-    <p>
-      Le <b>numéro de PACAGE</b> peut-il vous être utile ?
-    </p>
+# true / false
+enable: true
+# wait (in seconds), before showing
+wait: 90
+# identifier for the cookie, has to be different if the popup changed to trigger again
+cookie_identifier: "pacage"
+title: Donnez-nous votre avis
+body: |-
+  <p>
+    Le <b>numéro de PACAGE</b> peut-il vous être utile ?
+  </p>
 
-    <a class="tpl-button tpl-button--primary" href="https://startupdetat.typeform.com/to/bH4QO4dc">
-      Donner son avis<br />
-      sur le numéro de PACAGE
-    </a>
-
+  <a class="tpl-button tpl-button--primary" href="https://startupdetat.typeform.com/to/bH4QO4dc">
+    Donner son avis<br />
+    sur le numéro de PACAGE
+  </a>
