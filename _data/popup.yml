@@ -2,7 +2,7 @@
 # true / false
 enable: true
 # wait (in seconds), before showing
-wait: 90
+wait: 45
 # identifier for the cookie, has to be different if the popup changed to trigger again
 cookie_identifier: "pacage"
 title: Donnez-nous votre avis
