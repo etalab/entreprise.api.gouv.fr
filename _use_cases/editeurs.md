@@ -50,6 +50,6 @@ Les éditeurs suivants sont déjà connectés à l'API Entreprise :
 À travers eux, ce sont des centaines de collectivités et administrations qui simplifient les démarches administratives des entreprises et des associations.
 <br>
 
-{% asset 'cas-usage/cas-usage-aides-publiques-exemples.png' %}
+## Gestion des tokens pour les éditeurs
 
 
