@@ -5,7 +5,9 @@ title: Intégrer l'API Entreprise en tant qu'éditeur
 
 ## Le rôle d'API Entreprise
 
-API Entreprise permet de simplifier les démarches des entreprises et associations en donnant un **accès automatisé à un certain nombre de leurs données administratives**. API Entreprise est un **hub d'APIs**, l'ensemble des données est consultable dans le [catalogue des données](https://entreprise.api.gouv.fr/catalogue){:target="_blank"}.
+{% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-editeurs.png' %}
+
+API Entreprise permet de **simplifier les démarches administratives des entreprises et associations**, en mettant à disposition des acteurs publics, au travers de leurs éditeurs, plusieurs APIs. L'ensemble des données disponibles est consultable dans le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/).
 
 
 ## Se connecter en tant qu'éditeur
@@ -15,11 +17,11 @@ API Entreprise permet de simplifier les démarches des entreprises et associatio
 
 Le périmètre des données accessibles par vos services se fera en fonction des cas d'usage que vous proposez à vos utilisateurs habilités à accéder à l'API Entreprise. Vous pouvez d'ores et déjà consulter nos [cas d'usage génériques](https://entreprise.api.gouv.fr/cas_usage/), nous y détaillons les données utiles.
 
-## Faire sa demande d'accès spécifique éditeur
+## Faire sa demande d'accès "éditeur" en tant qu'administration
 
-*Vous êtes une administration, une collectivité ou une entité ayant une mission de service public et utilisez une solution proposée par un éditeur ?* 
+*Vous êtes une administration, une collectivité ou une entité ayant une mission de service public et utilisez une solution proposée par un éditeur connecté à l'API Entreprise ?* 
 
-Retrouvez ci-après les différents formulaires d'habilitation pré-rempli à compléter pour bénéficier de l'API Entreprise au travers de votre éditeur. ⚠️ **Il est impératif d'être déjà en contact avec un éditeur avant de pouvoir faire une demande d'accès spécifique par éditeur**. Si vous n'avez pas d'éditeur, vous pouvez effectuer une demande directement à l'API Entreprise en consultant nos cas d'usage et ayant vérifié au préalable que vous remplissiez les [conditions nécessaires](https://entreprise.api.gouv.fr/doc/#une-habilitation-instruite-par-la-dinum).
+Retrouvez ci-après les différents formulaires d'habilitation pré-rempli à compléter pour bénéficier de l'API Entreprise au travers de votre éditeur. ⚠️ **Il est impératif d'être déjà en contact avec un éditeur avant de pouvoir faire une demande d'accès spécifique par éditeur**. Si vous n'avez pas d'éditeur, vous pouvez effectuer une demande directement à l'API Entreprise en consultant nos cas d'usage et en vérifiant au préalable que vous remplissez les [conditions nécessaires](https://entreprise.api.gouv.fr/doc/#une-habilitation-instruite-par-la-dinum).
 
 {:.tpl-table}
 | Éditeurs    |   Solution      |  Demande d'accès d'habilitation pré-rempli
