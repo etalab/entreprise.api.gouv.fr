@@ -243,61 +243,76 @@ services:
         code: >
           {
             "etablissement": {
-              "siren": "418166096",
-              "nic": "00051",
-              // Numéro interne de classement, l'identifiant à 5 chiffres de l'établissement, qui se trouve à la fin du numéro de SIRET.
-              "siret": "41816609600051",
-              "statut_diffusion": true,
-              // Indique si les données de l'établissement sont diffusables ("true") ou non ("false").
-              "date_creation": 1108594800,
-              // Format timestamp UNIX.
-              "tranche_effectif_code": "11",
-              // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE (http://www.sirene.fr/sirene/public/variable/tefen)
-              "activite_principale_rnm_code": "123456",
-              // Cette série de 6 chiffres désigne le code de l'activité exercée par l'artisan inscrit au registe des métiers, et renvoie à la Nomenclature d'Activités Françaises de l'Artisanat (NAFA), disponible à cette adresse : https://www.entreprises.gouv.fr/secteurs-professionnels/artisanat/la-nafa).
-              "date_dernier_traitement": 1538217704,
-              // Informe du dernier traitement de l'unité légale dans le répertoire Sirene. Cette date peut concerner des mises à jour de données du répertoire Sirene, qui ne sont pas diffusées par l'API. Cette date est délivrée au format timestamp UNIX. Cette variable peut-être à "null", notamment pour les unités cessées qui ont été purgées.
               "siege_social": true,
               // Ce champ vous permet de savoir si l'établissement appelé est le siège social d'une entreprise ("true") ou non ("false").
-              "enseigne_1": null,
-              "enseigne_2": null,
-              "enseigne_3": null,
-              // Ces trois derniers champs indique le nom de l'enseigne, c'est à dire l'appelation qui permet de facilement identifier l'établissement. Un établissement peut avoir plusieurs enseignes. Le nom de l'enseigne est parfois découpé sur les trois champs.
-              "denomination_usuelle": null,
-              // C'est le nom sous lequel l'établissement est connu du grand public. Cet élément d'identification de l'établissement a été enregistré au niveau établissement depuis l'application de la norme d'échanges CFE de 2008.
-              "activite_principale_code": "62.02A",
+              "siret": "41816609600051",
+              "naf": "6202A",
               // Il s'agit du code APE de l'établissement (code APET), toujours composé de 4 chiffres et une lettre et codifié selon la Nomenclature d'Activité Française (https://www.insee.fr/fr/information/2120875). Les établissements d'une même entreprise peuvent avoir des activités différentes et de fait des APET différents. Le code APET peut également être identique à l'APE de l'entreprise (APEN) lorsque celle-ci n'a qu'un établissement.
-              "activite_principale_nomenclature": "NAFRev2",
-              // Ce champ indique la nomenclature en vigueur pour l'etablissement appelé. Depuis 2015, la version est la "NAF rév.2."
-              "activite_principale_libelle": "Conseil en systèmes et logiciels informatiques", // indique le libellé du code APET de l'établissement selon la nomenclature concernée.
-              "caractere_employeur": "O",
-              // Indique si l'établissement a ou non des employés. La variable est "O" si l'établissement est employeur ; la variable est "N" si l'établissement ne l'est pas. La variable est historisée pour les établissements ouverts depuis 2005.
-              "etat_administratif": {
-                "value": "A",
-                // Indique si l'établissement est actif, par "A". Ou s'il est jurdiquement fermé, par "F".
-                "date_fermeture": null
-                // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F" (fermé).
+              "libelle_naf": "Conseil en systèmes et logiciels informatiques",
+              // indique le libellé du code APET de l'établissement selon la nomenclature concernée.
+              "date_mise_a_jour": 1449183600,
+              // Informe du dernier traitement de l'unité légale dans le répertoire Sirene. Cette date peut concerner des mises à jour de données du répertoire Sirene, qui ne sont pas diffusées par l'API. Cette date est délivrée au format timestamp UNIX. Cette variable peut-être à "null", notamment pour les unités cessées qui ont été purgées.
+              "tranche_effectif_salarie_etablissement": {
+                "de": 200,
+                "a": 249,
+                "code": "31",
+                // Le code effectif correspond à une fourchette de nombre de salariés, et correspond à la nomenclature de l'INSEE (http://www.sirene.fr/sirene/public/variable/tefen)
+                "date_reference": "2014",
+                "intitule": "200 à 249 salariés"
               },
-              "adresse_1": {
-              // Une entité peut dans certains cas avoir plusieurs adresses, par exemple quand le bâtiment a deux entrées.
-                "complement": "LA PIOLINE",
-                "numero_voie": "10",
-                "indice_repetition": null,
-                "type_voie": "ALL",
-                "libelle_voie": "DES PLATANES LES MILLES",
-                "code_postal": "13290",
-                "commune_code": "13001",
+              "date_creation_etablissement": 1108594800,
+              // Format timestamp UNIX.
+              "region_implantation": {
+                "code": "11",
+                "value": "Île-de-France"
+              },
+              "commune_implantation": {
+                "code": "75108",
+                "value": "PARIS 8"
+              },
+              "pays_implantation": {
+                "code": "FR",
+                "value": "FRANCE"
+              },
+              "diffusable_commercialement": true,
+              // Indique si les données de l'établissement sont diffusables ("true") ou non ("false").
+              "enseigne": null,
+              "adresse": {
+                // Depuis 2018, l'INSEE ne fournit plus d'adresse au format RNVP, nous opérons donc une reconstruction de l'adresse à partir des champs disponibles dans leur nouvelle API ; cette reconstruction n'est en aucun cas un traitement RNVP : Des différences minimes résultant de l'arrêt du RNVP peuvent être constatées.
+                "l1": "OCTO TECHNOLOGY",
+                // Raison sociale, ou civilité + prénom + nom.
+                "l2": null,
+                // Raisons sociales usuelles
+                "l3": null,
+                // Complément d'adresse
+                "l4": "50 AVENUE DES CHAMPS ELYSEES",
+                // Numéro de voie +  indice de répétition + type de voie + libellé voie.
+                "l5": null,
+                // Distribution spéciale
+                "l6": "75008 PARIS",
+                // Code cedex + code cedex ou code postal + libellé commune ou libellé commune à l'étranger.
+                "l7": "FRANCE",
+                // Pays
+                "numero_voie": "50",
+                "type_voie": "AV",
+                "nom_voie": "DES CHAMPS ELYSEES",
+                "complement_adresse": null,
+                "code_postal": "75008",
+                "localite": "PARIS 8",
+                "code_insee_localite": "75108",
                 // Cette suite de 5 chiffres correspond au code des communes tel que défini dans le code officiel géographique (COG) géré par l'INSEE et disponible à cette adresse : https://www.insee.fr/fr/information/2028028
-                "commune_libelle": "AIX-EN-PROVENCE",
-                "commune_etranger_libelle": null,
-                "distribution_speciale": null,
-                "cedex_code": "13546",
-                "cedex_libelle": "AIX EN PROVENCE CEDEX 4",
-                "pays_etranger_code": "",
-                // Cette suite de chiffres correspond au code des pays étrangers, tels que définis dans la Codification des pays et territoires étrangers, disponible à cette adresse : https://www.insee.fr/fr/information/2028273
-                "pays_etranger_libelle": ""
+                "cedex": null
               },
-            }
+              "etat_administratif": {
+                // Lors de son inscription au répertoire, un établissement est, sauf exception, à l’état ouvert. Le passage à l’état fermé découle de la prise en compte d’une déclaration de fermeture.
+                "value": "F",
+                // Lorsqu'un établissement est ouvert, la valeur indiquée est "A" (actif). S'il est fermé, l'endpoint renverra "F"(fermé).
+                "date_fermeture": 1315173600
+                // Indique "null" quand le champ précédent est "A" (actif), et renvoit un entier au format timestamp si le champ précédent est "F".
+              }
+            },
+            "gateway_error": false
+            // Indique si un des deux fournisseurs de données n'a pas fonctionné : INSEE ou Infogreffe.
           }
 availability:
   unavailability_types: /
