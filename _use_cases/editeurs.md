@@ -38,9 +38,11 @@ Vous êtes habilités à proposer le service API Entreprise à vos clients publi
 Pour donner accès aux données de l'API Entreprise à vos clients publics délivrant un service aux entreprises et associations, il est **impératif que chacun d'entre eux ait une clé d'accès (token) spécifique**.
 
 Par conséquence, l'ensemble de vos donneurs d'ordre utilisant l'API Entreprise doivent avoir effecuté une demande d'habilitation.
+L'explication du processus les concernant est détaillée dans [cette page dédiée](https://entreprise.api.gouv.fr/use_cases/formulaires_preremplis_editeurs/).
+
 
 {:.tpl-notification.tpl--success}
-Pour simplifier ce processus permettant un contrôle stric de la distribution des données, nous pouvons créer un **formulaire spécifique à votre organisation et à vos cas d'usage**.    
+Pour simplifier ce processus, nous pouvons créer un **formulaire spécifique à votre organisation et à vos cas d'usage**.    
 
 
 #### 1 jeton pour effectuer des tests
@@ -57,9 +59,10 @@ L'utilisation de ce token doit seulement vous permettre de gérer les APIs, mais
 
 Les éditeurs suivants sont déjà connectés à l'API Entreprise : 
 
-- **Des éditeurs publics** : l'AIFE (Agence pour l'Informatique Financière de l'Etat ) propose le service "DUME", Document Unique du marché européen.
-- **Des éditeurs privés** : Atexo, proposant le profil acheteur "Place" ; E-attestation ; MGDIS, "Portail des aides" ; 
-- **Des coopératives** : Entr'Ouvert avec sa solution "Publik".
+- **Des éditeurs publics** : l'AIFE (Agence pour l'Informatique Financière de l'Etat ) propose le service "DUME", Document Unique du marché européen ;
+- **Des éditeurs privés** : Achatpublic, Achat Solutions, Achat Solution, Atexo, AWS, Atline Services, Dematis, Entr'ouvert,  E-attestation, Klekoon, MGDIS, Provigis ;
+- **Des coopératives** : Entr'Ouvert.
+- **Des groupements d'intérêt public** : Territoires Numériques (Bourgnogne Franche-Comté).
 
 À travers eux, ce sont des centaines de collectivités et administrations qui simplifient les démarches administratives des entreprises et des associations.
 <br>

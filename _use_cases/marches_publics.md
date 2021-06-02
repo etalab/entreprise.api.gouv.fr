@@ -125,12 +125,13 @@ Depuis le 12 décembre 2019, les acheteurs publics ont l'obligation légale de p
 | Éditeurs et services connectés à l'API Entreprise        |     type d'entité  |    Profil acheteur ou service        |
 |------------------------|:-------------------------------------------:|:-------------------------------------------:|
 |    AIFE <br>(Agence pour l'Informatique Financière de l'État)       |  agence publique | [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |
-|      Achatpublic    | entreprise privée |[achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
+|    Achatpublic    | entreprise privée |[achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |
 |    Atexo                 | entreprise privée | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     |
 |    AWS                   |    entreprise privée |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}  |
 |    Atline Services                   |    entreprise privée |    [marchés-securises.fr](https://www.marches-securises.fr/entreprise/?){:target="_blank"}|
 |    Dematis               |     entreprise privée |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}                                |
 |    Entr'ouvert               |     coopérative |       [entrouvert.com](https://www.entrouvert.com){:target="_blank"}                                |
+|    E-attestation              |  entreprise privée |       [E-attestations](https://www.e-attestations.com/){:target="_blank"}                                |
 |    Klekoon          | entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"}                                        |
 |    Provigis              |    entreprise privée |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"}                                     |
 |    Territoires numériques               |    groupement d'intérêt public Bourgogne Franche-Comté |     [Pack commande publique](https://www.ternum-bfc.fr/services/pack-commande-publique){:target="_blank"}                                     |
