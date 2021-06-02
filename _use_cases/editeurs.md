@@ -9,37 +9,51 @@ title: Intégrer l'API Entreprise en tant qu'éditeur
 
 API Entreprise permet de **simplifier les démarches administratives des entreprises et associations**, en mettant à disposition des acteurs publics, au travers de leurs éditeurs, plusieurs APIs. L'ensemble des données disponibles est consultable dans le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/).
 
+## Conditions d'habilitation "éditeur" à l'API Entreprise.
 
-## Se connecter en tant qu'éditeur
+L'accès à l'API Entreprise se fait [sous certaines conditions](https://entreprise.api.gouv.fr/doc/#une-habilitation-instruite-par-la-dinum). De fait, les **prestataires privés des acteurs publics investis d'une mission de service public auprès des entreprises et des associations**, peuvent être habilités à faire usage de l'API.
 
-*Vous êtes un éditeur et avez identifié les données nécessaires aux services que vous proposez à des administrations ou entités ayant une mission de service public ?*
-Écrivez-nous à [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
+{:.tpl-notification.tpl--danger}
+Attention, la connection d'un éditeur à l'API Entreprise est possible mais le prestataire ne peut en aucun cas être destinataires des données issues de l'API Entreprise.
 
-Le périmètre des données accessibles par vos services se fera en fonction des cas d'usage que vous proposez à vos utilisateurs habilités à accéder à l'API Entreprise. Vous pouvez d'ores et déjà consulter nos [cas d'usage génériques](https://entreprise.api.gouv.fr/cas_usage/), nous y détaillons les données utiles.
+## Les données utiles aux éditeurs
 
-## Faire sa demande d'accès "éditeur" en tant qu'administration
+Le périmètre des données accessibles par vos services se fait **en fonction des cas d'usage que vous proposez à vos utilisateurs habilités** à accéder à l'API Entreprise. 
+Pour déterminer la liste des données à demander Vous pouvez d'ores et déjà consulter nos [cas d'usage génériques](https://entreprise.api.gouv.fr/cas_usage/), nous y détaillons les données utiles.
 
-*Vous êtes une administration, une collectivité ou une entité ayant une mission de service public et utilisez une solution proposée par un éditeur connecté à l'API Entreprise ?* 
+<a class="tpl-button tpl-button--primary" href="https://entreprise.api.gouv.fr/cas_usage/">Données par cas d'usage</a>   <a class="tpl-button tpl-button--alternate" href="https://entreprise.api.gouv.fr/catalogue/">Toute les données</a>
 
-Retrouvez ci-après les différents formulaires d'habilitation pré-rempli à compléter pour bénéficier de l'API Entreprise au travers de votre éditeur. ⚠️ **Il est impératif d'être déjà en contact avec un éditeur avant de pouvoir faire une demande d'accès spécifique par éditeur**. Si vous n'avez pas d'éditeur, vous pouvez effectuer une demande directement à l'API Entreprise en consultant nos cas d'usage et en vérifiant au préalable que vous remplissez les [conditions nécessaires](https://entreprise.api.gouv.fr/doc/#une-habilitation-instruite-par-la-dinum).
+## Demander un accès à l'API Entreprise
 
-{:.tpl-table}
-| Éditeurs    |   Solution      |  Demande d'accès d'habilitation pré-rempli
-|------------------------|:-------------------------------------------:|:------:|
-|    **AIFE** <br>(Agence pour l'Informatique Financière de l'État)<br> agence publique        | [Service DUME](https://dume.chorus-pro.gouv.fr/#/){:target="_blank"} |   <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès AIFE</a> |
-|      **Achatpublic** <br> entreprise privée    | [achatpublic.com](https://www.achatpublic.com/){:target="_blank"}  |   <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Achatpublic</a> |
-|    **Atexo**  <br> entreprise privée    | [Place](https://www.marches-publics.gouv.fr/){:target="_blank"}     | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Atexo</a> |
-|    **AWS** <br> entreprise privée  |    [AWS-achat](https://www.marches-publics.info){:target="_blank"}  | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès AWS</a> |
-|    **Atline Services**  <br> entreprise privée |    [marchés-securises.fr](https://www.marches-securises.fr/entreprise/?){:target="_blank"}| <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Atline</a> |
-|    **Dematis** <br> entreprise privée  |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}  | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Dematis</a> |
-|    **Entr'ouvert** <br> coopérative |       [entrouvert.com](https://www.entrouvert.com){:target="_blank"} <br> [Publik](https://publik.entrouvert.com/){:target="_blank"}|<a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Entr'Ouvert</a> |
-|    **Klekoon** <br> entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"} |<a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Klekoon</a> |
-|    **MGDIS** <br> entreprise privée  |[Portail des aides](https://www.mgdis.fr/nos-solutions/pilotage-des-aides-versees/){:target="_blank"}  |<a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès MGDIS</a> |
-|    **Provigis** <br> entreprise privée  |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"} | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Provigis</a> |
-|    **Territoires numériques** <br> groupement d'intérêt public Bourgogne Franche-Comté |     [Pack commande publique](https://www.ternum-bfc.fr/services/pack-commande-publique){:target="_blank"} | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Territoires numériques</a> |
+*Vous êtes éditeur et vous pensez remplir les conditions d'habilition ?* **Vous pouvez faire une demande d'accès à l'API Entreprise par le biais de ce formulaire** :
+<a class="tpl-button tpl-button--primary" href="href à remplir">Demander un accès à l'API Entreprise en tant qu'éditeur</a>
 
 
-## Ils utilisent l'API Entreprise
+## Utilisation de l'API Entreprise
+
+Vous êtes habilités à proposer le service API Entreprise à vos clients publics, retrouvez ci-dessous les éléments régissant l'utilisation de l'API Entreprise. 
+
+#### 1 client public = 1 jeton d'accès
+
+Pour donner accès aux données de l'API Entreprise à vos clients publics délivrant un service aux entreprises et associations, il est **impératif que chacun d'entre eux ait une clé d'accès (token) spécifique**.
+
+Par conséquence, l'ensemble de vos donneurs d'ordre utilisant l'API Entreprise doivent avoir effecuté une demande d'habilitation.
+
+{:.tpl-notification.tpl--success}
+Pour simplifier ce processus permettant un contrôle stric de la distribution des données, nous pouvons créer un **formulaire spécifique à votre organisation et à vos cas d'usage**.    
+
+
+#### 1 jeton pour effectuer des tests
+
+Afin de vous permettre d'effectuer la mise en production, le monitoring et la maintenance d'une bonne connection à nos APIs, nous vous délivrons un jeton. Ce token doit **strictement être utilisé pour des raisons techniques**.
+
+{:.tpl-notification.tpl--danger}
+L'utilisation de ce token doit seulement vous permettre de gérer les APIs, mais en aucun cas de devenir destinataire des données issues de l'API Entreprise.
+
+
+<br>
+
+## Ils sont connectés à l'API Entreprise
 
 Les éditeurs suivants sont déjà connectés à l'API Entreprise : 
 
@@ -50,6 +64,6 @@ Les éditeurs suivants sont déjà connectés à l'API Entreprise :
 À travers eux, ce sont des centaines de collectivités et administrations qui simplifient les démarches administratives des entreprises et des associations.
 <br>
 
-## Gestion des tokens pour les éditeurs
+
 
 
