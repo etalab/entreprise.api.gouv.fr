@@ -116,7 +116,7 @@ function setupSearch() {
                 <h3 class="link-ref">
                   ${instantsearch.highlight({ attribute: 'panel_title', hit: result })}
 
-                  <button class="tpl-button tpl-button--alternate button-link" data-link="doc/#{{ panel[1].id }}" title="Copier le lien vers cette section">
+                  <button class="tpl-button tpl-button--alternate button-link" data-link="doc/#${ result.panel_id }" title="Copier le lien vers cette section">
                     <svg class="tpl-icon" viewBox="0 0 24 24">
                       <use xlink:href="#link"></use>
                     </svg>
