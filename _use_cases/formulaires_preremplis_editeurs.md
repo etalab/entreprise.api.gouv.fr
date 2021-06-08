@@ -16,7 +16,7 @@ Cette page s'adresse aux acteurs publics ayant une mission de service public, si
 
 ##### Vous n'avez pas d'éditeur
 
-Si vous remplissez [conditions nécessaires](https://entreprise.api.gouv.fr/doc/#une-habilitation-instruite-par-la-dinum), vous pouvez effectuer une demande directement à l'API Entreprise en consultant nos [cas d'usage](https://entreprise.api.gouv.fr/use_cases/).
+Si vous remplissez les [conditions nécessaires](https://entreprise.api.gouv.fr/doc/#une-habilitation-instruite-par-la-dinum), vous pouvez effectuer une demande directement à l'API Entreprise en consultant nos [cas d'usage](https://entreprise.api.gouv.fr/use_cases/).
 
 ##### Votre éditeur ne propose pas encore le service API Entreprise
 
