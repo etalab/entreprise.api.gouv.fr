@@ -5,7 +5,7 @@ title: Accéder au service API Entreprise par mon éditeur
 
 ## Le rôle d'API Entreprise
 
-{% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-editeurs.png' %}
+{% asset 'cas-usage/fonctionnement-api-entreprise-cas-usage-editeurs-administration.png' %}
 
 API Entreprise permet de **simplifier les démarches administratives des entreprises et associations**, en mettant à disposition des acteurs publics, au travers de leurs éditeurs, plusieurs APIs. L'ensemble des données disponibles est consultable dans le [catalogue des données](https://entreprise.api.gouv.fr/catalogue/).
 
