@@ -45,7 +45,7 @@ Retrouvez ci-dessous la liste des éditeurs étant connectés à l'API Entrepris
 |    **E-attestation** <br> entreprise privée |       [E-attestations](https://www.e-attestations.com/){:target="_blank"}|<a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès E-attestion "marchés publics"</a> <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès E-attestion "aides publiques"</a>|
 |    **Klekoon** <br> entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"} |Contacter l'éditeur |
 |    **MGDIS** <br> entreprise privée  |[Portail des aides](https://www.mgdis.fr/nos-solutions/pilotage-des-aides-versees/){:target="_blank"}  |Contacter l'éditeur |
-|    **Provigis** <br> entreprise privée  |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"} | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Provigis "Conformité titulaires de marchés"</a> |
+|    **Provigis** <br> entreprise privée  |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"} | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Provigis</a> |
 |    **Smart Public** <br>entreprise privée |     [Smart Public](https://www.smartpublic.fr/){:target="_blank"} | Contacter l'éditeur  |
 |    **Territoires numériques** <br> groupement d'intérêt public Bourgogne Franche-Comté |     [Pack commande publique](https://www.ternum-bfc.fr/services/pack-commande-publique){:target="_blank"} | Contacter l'éditeur  |
 

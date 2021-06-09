@@ -27,7 +27,7 @@ Pour déterminer la liste des données à demander, vous pouvez d'ores et déjà
 
 *Vous êtes éditeur et vous pensez remplir les conditions d'habilition ?* **Vous pouvez faire une demande d'accès à l'API Entreprise par le biais de ce formulaire** :
 
-<a class="tpl-button tpl-button--primary" href="href à remplir">**Demander un accès** à l'API Entreprise en tant qu'éditeur</a>
+<a class="tpl-button tpl-button--primary" href="href à remplir">**Demander un accès**&nbsp;à l'API Entreprise en tant qu'éditeur</a>
 
 
 ## Utilisation de l'API Entreprise
@@ -60,11 +60,10 @@ L'utilisation de ce token doit seulement vous permettre de gérer les APIs, mais
 
 Les éditeurs suivants sont déjà connectés à l'API Entreprise : 
 
-- **Des éditeurs publics** : l'AIFE (Agence pour l'Informatique Financière de l'Etat ) propose le service "DUME", Document Unique du marché européen ;
 - **Des éditeurs privés** : Achatpublic, Achat Solutions, Achat Solution, Atexo, AWS, Atline Services, Dematis, Entr'ouvert,  E-attestation, Klekoon, MGDIS, Provigis ;
 - **Des coopératives** : Entr'Ouvert.
 - **Des groupements d'intérêt public** : Territoires Numériques (Bourgnogne Franche-Comté).
-
+- **Des éditeurs publics** : AIFE (Agence pour l'Informatique Financière de l'Etat ) propose le service "DUME", Document Unique du marché européen ;
 
 
 
