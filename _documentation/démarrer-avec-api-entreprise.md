@@ -124,17 +124,30 @@ panels:
   panel2:
     title: Habilitation validée ✅, récupérer son token 🔐
     id: habilitation-validee
-    content: >
+    content: >-
+      Seule la personne ayant fait la demande d'habilitation a accès au [token](../entreprise.api.gouv.fr/doc/#tokens), au travers du tableau de bord. **Elle est responsable de cette clé et de sa transmission sécurisée** si cela est nécessaire dans le cadre de l'intégration de l'API Entreprise.
 
-      Pour récupérer vos tokens ou jetons d'accès, il faut vous rendre dans [votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"} à l'onglet "Jetons" :
+
+      #### Récupérer le jeton d'accès
+
+      Si vous avez réalisé la demande d'habilitation, vous pouvez récupérer vos tokens ou jetons d'accès directement depuis [votre tableau de bord](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"}, à l'onglet "Jetons" :
 
 
       ![](../assets/images/documentation/tableaudebord-recuperer-son-token.png)
 
 
-      {:.tpl-notification.tpl--danger}
+      #### Transmettre le jeton d'accès
 
-      Tous vos jetons sont valables pour une durée de 18 mois.
+      Si vous avez réalisé la demande d'habilitation mais que vous n'êtes pas la personne en charge d'intégrer l'API Entreprise, **vous pouvez transmettre le token de façon sécurisée depuis le tableau de bord**, en cliquant sur le bouton "Transmettre le jeton à mon équipe technique". 
+      <br>
+      ⚠️ Votre clé d'accès est unique et privée. L'utilisation de cette fonctionnalité du tableau de bord doit avoir pour unique objectif la transmission sécurisée de votre clé à vos services techniques qui intégreront l'API Entreprise. **Vous ne devez jamais transmettre votre clé d'accès par e-mail.**
+      
+      
+      {:.tpl-notification}
+
+      **Le renouvellement d’un token est très facile et rapide.** C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr). 
+
+
   panel3:
     title: Faire ma première requête ☎️
     id: premiere-requete
