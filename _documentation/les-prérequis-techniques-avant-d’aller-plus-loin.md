@@ -155,7 +155,7 @@ panels:
       Le token est **votre code secret** vous permettant d’accéder à API Entreprise.
 
 
-      Si votre demande d’habilitation est validée, il vous est délivré dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"}.
+      Si votre demande d’habilitation est validée, il vous est délivré dans [votre espace personnel](https://dashboard.entreprise.api.gouv.fr/login){:target="_blank"}. Pour comprendre comment trouver le jeton d'accès, veuillez consulter la rubrique [Habilitation validée, récupérer son token](../doc/#habilitation-validee).
 
 
       **Cette clé est unique et privée** ; nous nous appuyons sur un standard ouvert et normalisé de l’industrie : le Json Web Token (aka JWT) ([RFC 7519](https://tools.ietf.org/html/rfc7519){:target="_blank"}). Ce jeton est autonome et permet de transmettre de façon sécurisée les informations d'authentifications nécessaires pour utiliser l'API. Ces jetons sont vérifiés et fiables car **signés numériquement avec une date d'expiration**.
