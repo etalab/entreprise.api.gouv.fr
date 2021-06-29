@@ -42,10 +42,10 @@ Retrouvez ci-dessous la liste des éditeurs étant connectés à l'API Entrepris
 |    **Atline Services**  <br> entreprise privée |    [marchés-securises.fr](https://www.marches-securises.fr/entreprise/?){:target="_blank"}| Contacter l'éditeur |
 |    **Dematis** <br> entreprise privée  |       [e-marchespublics.com](https://www.e-marchespublics.com/){:target="_blank"}  | Contacter l'éditeur |
 |    **Entr'ouvert** <br> coopérative |       [entrouvert.com](https://www.entrouvert.com){:target="_blank"} <br> [Publik](https://publik.entrouvert.com/){:target="_blank"}|Contacter l'éditeur |
-|    **E-attestation** <br> entreprise privée |       [E-attestations](https://www.e-attestations.com/){:target="_blank"}|<a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès E-attestion "marchés publics"</a> <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès E-attestion "aides publiques"</a>|
+|    **E-attestation** <br> entreprise privée |       [E-attestations](https://www.e-attestations.com/){:target="_blank"}|Contacter l'éditeur |
 |    **Klekoon** <br> entreprise privée |     [klekoon.com](https://www.klekoon.com/){:target="_blank"} |Contacter l'éditeur |
 |    **MGDIS** <br> entreprise privée  |[Portail des aides](https://www.mgdis.fr/nos-solutions/pilotage-des-aides-versees/){:target="_blank"}  |Contacter l'éditeur |
-|    **Provigis** <br> entreprise privée  |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"} | <a class="tpl-button tpl-button--primary" href="href à remplir">Demande d'accès Provigis</a> |
+|    **Provigis** <br> entreprise privée  |     [Provigis plateforme](https://www.provigis.com/connexion-plateforme-donneur-dordres/){:target="_blank"} | Contacter l'éditeur|
 |    **Smart Public** <br>entreprise privée |     [Smart Public](https://www.smartpublic.fr/){:target="_blank"} | Contacter l'éditeur  |
 |    **Territoires numériques** <br> groupement d'intérêt public Bourgogne Franche-Comté |     [Pack commande publique](https://www.ternum-bfc.fr/services/pack-commande-publique){:target="_blank"} | Contacter l'éditeur  |
 
