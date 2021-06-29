@@ -76,12 +76,11 @@ panels:
 
       ##### Le cadre juridique
 
-      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une **description précise de votre service et de l'utilité des données demandées dans ce contexte**. Plus particulièrement pour les endpoints délivrant des données protégées, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de **justificatifs** :   
+      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. L'accès à la donnée requiert la fourniture d'un cadre juridique précis, c'est pourquoi, il vous sera systématiquement demandé :   
 
+        * une **description précise de votre service et de l'utilité des données demandées dans ce contexte**
+        
         * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
-        * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées.
-        <br>Par exemple, si la délibération indique que votre service concerne uniquement les entreprises de moins de 300 000 euros de chiffres d'affaires, l'endpoint `/exercices`, permettant d'avoir les déclarations de l'entreprise, vous sera accordé.
-        <br>Enfin, pour être légale, une délibération doit comporter certains éléments administratifs. Ce [document de la Préfecture de l'AISNE](https://www.aisne.gouv.fr/content/download/20874/140668/file/Article_R%C3%A9dactionD%C3%A9lib%C3%A9rations) les présente en détail.
 
         {:.tpl-notification.tpl--danger}
 
