@@ -138,9 +138,15 @@ panels:
 
       #### Transmettre le jeton d'accès
 
-      Si vous avez réalisé la demande d'habilitation mais que vous n'êtes pas la personne en charge d'intégrer l'API Entreprise, **vous pouvez transmettre le token de façon sécurisée depuis le tableau de bord**, en cliquant sur le bouton "Transmettre le jeton à mon équipe technique". 
+      Si vous avez réalisé la demande d'habilitation mais que vous n'êtes pas la personne en charge d'intégrer l'API Entreprise, **vous pouvez transmettre le token de façon sécurisée depuis le tableau de bord**, en cliquant sur le bouton *"Transmettre le jeton à mon équipe technique"*. 
       <br>
-      ⚠️ Votre clé d'accès est unique et privée. L'utilisation de cette fonctionnalité du tableau de bord doit avoir pour unique objectif la transmission sécurisée de votre clé à vos services techniques qui intégreront l'API Entreprise. **Vous ne devez jamais transmettre votre clé d'accès par e-mail.**
+      **Le destinataire recevra, par e-mail, un lien d'une durée de 4 heures**, où il pourra copier/coller le token.
+    
+
+
+      {:.tpl-notification.tpl--danger}
+
+      Votre clé d'accès est unique et privée. L'utilisation de cette fonctionnalité du tableau de bord doit avoir pour unique objectif la transmission sécurisée de votre clé à vos services techniques qui intégreront l'API Entreprise. **Vous ne devez jamais transmettre votre clé d'accès par e-mail.**
       
       
       {:.tpl-notification}
