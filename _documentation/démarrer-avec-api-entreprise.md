@@ -7,18 +7,36 @@ panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
     content: >-2
-      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation :
+      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation.
       <br>
-
-      <a class="tpl-button tpl-button--gradient" href="https://api.gouv.fr/les-api/api-entreprise/demande-acces">🔑 Demander un accès à l'API Entreprise</a>
-      <br>
-      <br>
-
       ⚠️ Une demande d’accès doit couvrir **un seul contexte métier**. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte :
 
        {:.example}
       **Exemple de la Région Occitanie :**<br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
        {:.example}
+  
+      <br>
+
+      **Demande d'accès pour un cas d'usage standard** (formulaires pré-remplis) :
+      <br>
+      *En passant, par les formulaires pré-remplis proposés pour chaque cas d'usage standard, l'instruction de votre demande sera accélérée.* 
+      <br> <a class="tpl-button tpl-button--primary" href="../cas_usage/">🔑 **Demande par cas d'usage**</a>
+      <br>
+      <br>
+
+      **Demande d'accès préremplie pour les éditeurs** : <br> 
+      <a class="tpl-button tpl-button--alternate" href="../use_cases/editeurs/">🔑 Demande éditeur </a>
+      <br>
+      <br>
+
+      **Demande d'accès avec formulaire libre** :
+      <br> *Utilisez la demande libre, uniquement si votre situation ne correspond pas aux [cas d'usage](../cas_usage/) déjà proposés*. 
+      <a class="tpl-button tpl-button--alternate" href="https://api.gouv.fr/les-api/api-entreprise/demande-acces">🔑 Demande libre</a>
+      <br>
+      <br>
+
+
+      
 
 
       #### Le fonctionnement d'une demande

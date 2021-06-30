@@ -121,6 +121,7 @@ Vous souhaitez vous connecter à l'API Entreprise mais **vous n'avez pas de dire
 | Éditeurs connectés à l'API Entreprise        |     type d'entité  |    Service ou solution     |
 |------------------------|:-------------------------------------------:|:-------------------------------------------:|
 |    Entr'ouvert  |  Coopérative | [Publik](https://publik.entrouvert.com/){:target="_blank"}<br> logiciel libre|
+|    E-attestation              |  entreprise privée |       [E-attestations](https://www.e-attestations.com/){:target="_blank"}                                |
 |    MGDIS   | Entreprise privée |[Portail des aides](https://www.mgdis.fr/nos-solutions/pilotage-des-aides-versees/){:target="_blank"}  |
 
 Vous êtes un éditeur proposant une solution pour les aides publiques et ne figurez pas sur cette liste ? Veuillez nous contacter à cette adresse mail : [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
