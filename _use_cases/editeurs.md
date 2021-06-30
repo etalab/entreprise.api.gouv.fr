@@ -27,7 +27,7 @@ Pour déterminer la liste des données à demander, vous pouvez d'ores et déjà
 
 *Vous êtes éditeur et vous pensez remplir les conditions d'habilition ?* **Vous pouvez faire une demande d'accès à l'API Entreprise par le biais de ce formulaire** :
 
-<a class="tpl-button tpl-button--primary" href="href à remplir">**Demander un accès**&nbsp;à l'API Entreprise en tant qu'éditeur</a>
+<a class="tpl-button tpl-button--primary" href="https://datapass.api.gouv.fr/api-entreprise?demarche=editeur">**Demander un accès**&nbsp;à l'API Entreprise en tant qu'éditeur</a>
 
 
 ## Utilisation de l'API Entreprise
@@ -64,6 +64,5 @@ Les éditeurs suivants sont déjà connectés à l'API Entreprise :
 - **Des coopératives** : Entr'Ouvert.
 - **Des groupements d'intérêt public** : Territoires Numériques (Bourgnogne Franche-Comté).
 - **Des éditeurs publics** : AIFE (Agence pour l'Informatique Financière de l'Etat ) propose le service "DUME", Document Unique du marché européen ;
-
 
 
