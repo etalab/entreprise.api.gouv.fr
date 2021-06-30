@@ -195,7 +195,7 @@ panels:
       ✅ Anticiper la mise à jour du logiciel métier ;
 
 
-      ✅ Avoir une version de langage suffisamment récente. API Entreprise ne fonctionne qu’avec Java 1.8 minimum (pour la gestion des certificats de +1024 bit, du TLS 1.2 minimum et des suite cryptographique - ciphers) ;
+      ✅ Avoir une version de langage suffisamment récente. API Entreprise ne fonctionne qu’avec Java 1.8 minimum (pour la gestion des certificats de +1024 bit, du TLS 1.2 minimum et des suites cryptographiques - ciphers) ;
 
 
       ✅ Prévoir de whitelister l'adresse IP du service API Entreprise si votre réseau est derrière un pare-feu. En effet, l'API Entreprise est accessible depuis internet.
