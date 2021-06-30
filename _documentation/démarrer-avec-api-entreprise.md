@@ -7,18 +7,36 @@ panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
     content: >-2
-      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation :
+      Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation.
       <br>
-
-      <a class="tpl-button tpl-button--gradient" href="https://api.gouv.fr/les-api/api-entreprise/demande-acces">🔑 Demander un accès à l'API Entreprise</a>
-      <br>
-      <br>
-
       ⚠️ Une demande d’accès doit couvrir **un seul contexte métier**. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte :
 
        {:.example}
       **Exemple de la Région Occitanie :**<br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
        {:.example}
+  
+      <br>
+
+      **Demande d'accès pour un cas d'usage standard** (formulaires pré-remplis) :
+      <br>
+      *En passant, par les formulaires pré-remplis proposés pour chaque cas d'usage standard, l'instruction de votre demande sera accélérée.* 
+      <br> <a class="tpl-button tpl-button--primary" href="../cas_usage/">🔑 **Demande par cas d'usage**</a>
+      <br>
+      <br>
+
+      **Demande d'accès préremplie pour les éditeurs** : <br> 
+      <a class="tpl-button tpl-button--alternate" href="../use_cases/editeurs/">🔑 Demande éditeur </a>
+      <br>
+      <br>
+
+      **Demande d'accès avec formulaire libre** :
+      <br> *Utilisez la demande libre, uniquement si votre situation ne correspond pas aux [cas d'usage](../cas_usage/) déjà proposés*. 
+      <a class="tpl-button tpl-button--alternate" href="https://api.gouv.fr/les-api/api-entreprise/demande-acces">🔑 Demande libre</a>
+      <br>
+      <br>
+
+
+      
 
 
       #### Le fonctionnement d'une demande
@@ -76,12 +94,11 @@ panels:
 
       ##### Le cadre juridique
 
-      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. C'est pourquoi, il vous sera systématiquement demandé une **description précise de votre service et de l'utilité des données demandées dans ce contexte**. Plus particulièrement pour les endpoints délivrant des données protégées, l'accès à la donnée requiert la fourniture d'un cadre juridique précis accompagné de **justificatifs** :   
+      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. L'accès à la donnée requiert la fourniture d'un cadre juridique précis, c'est pourquoi, il vous sera systématiquement demandé :   
 
+        * une **description précise de votre service et de l'utilité des données demandées dans ce contexte**
+        
         * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
-        * Si vous êtes une collectivité, une **délibération** faisant acte du besoin est nécessaire. Lors de l'instruction de votre dossier, API Entreprise consultera ce document et s'appuiera sur les informations qui y sont inscrites, c'est à dire notamment la description de votre service, pour évaluer la pertinence des données demandées.
-        <br>Par exemple, si la délibération indique que votre service concerne uniquement les entreprises de moins de 300 000 euros de chiffres d'affaires, l'endpoint `/exercices`, permettant d'avoir les déclarations de l'entreprise, vous sera accordé.
-        <br>Enfin, pour être légale, une délibération doit comporter certains éléments administratifs. Ce [document de la Préfecture de l'AISNE](https://www.aisne.gouv.fr/content/download/20874/140668/file/Article_R%C3%A9dactionD%C3%A9lib%C3%A9rations) les présente en détail.
 
         {:.tpl-notification.tpl--danger}
 
