@@ -1,6 +1,6 @@
 ---
 # true / false
-enable: true
+enable: false
 # wait (in seconds), before showing
 wait: 45
 # identifier for the cookie, has to be different if the popup changed to trigger again
