@@ -36,5 +36,9 @@ panels:
       Cette page vous permet également de consulter les archives des communications envoyées par API Entreprise.
 
 
+      <a class="tpl-button tpl-button--primary" href="../infolettres/">S'abonner aux lettres d'informations</a>
+
+
+
 
 ---
