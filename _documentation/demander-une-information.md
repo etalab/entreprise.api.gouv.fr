@@ -31,7 +31,7 @@ panels:
 
 
       <br>
-      **Vous souhaitez vous abonner à nos différentes lettres d'informations ?** Une [page dédiée](../infolettres/) vous permet de vous abonner aux infolettres 📮, aux techlettres ⚙️ et aux notifications de maintenance et d'incidents 🚧.
+      **Vous souhaitez vous abonner à nos différentes lettres d'informations ?** Une [page dédiée](../infolettres/) vous permet de vous abonner aux infolettres, aux techlettres et aux notifications de maintenance et d'incidents.
 
       Cette page vous permet également de consulter les archives des communications envoyées par API Entreprise.
 
