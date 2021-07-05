@@ -27,7 +27,7 @@ panels:
 
       {:.tpl-notification}
 
-      **Si vous n'avez pas demandé expressement de vous désabonner, et que vous ne recevez pas nos lettres d'information, il se peut qu'elle soit dans vos spams**. Autrement, écrivez-nous à [support@entreprise.api.gouv.fr](<mailto:support@entreprise.api.gouv.fr?subject=Non reception de l'infolettre API Entreprise>)
+      **Si vous n'avez pas demandé expressement de vous désabonner, et que vous ne recevez pas nos lettres d'information, il se peut qu'elles soient dans vos spams**. Autrement, écrivez-nous à [support@entreprise.api.gouv.fr](<mailto:support@entreprise.api.gouv.fr?subject=Non reception de l'infolettre API Entreprise>)
 
 
       <br>
