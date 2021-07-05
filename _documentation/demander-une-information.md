@@ -18,7 +18,7 @@ panels:
     content: >-
       API Entreprise rédige régulièrement des lettres d'information faisant état des
       dernières évolutions. Après validation de vos accès à l'API Entreprise, vous
-      êtes automatiquement abonnés à ces lettres d'information selon votre statut&nbsp;:
+      êtes automatiquement abonné à ces lettres d'information selon votre statut&nbsp;:
 
       * le demandeur et le contact métier reçoivent les infolettres 📮 ;
       
@@ -27,7 +27,7 @@ panels:
 
       {:.tpl-notification}
 
-      **Si vous n'avez pas demandé expressement de vous désabonner, et que vous ne recevez pas nos infolettres, il se peut qu'elle soit dans vos spams**. Autrement, écrivez-nous à [support@entreprise.api.gouv.fr](<mailto:support@entreprise.api.gouv.fr?subject=Non reception de l'infolettre API Entreprise>)
+      **Si vous n'avez pas demandé expressement de vous désabonner, et que vous ne recevez pas nos lettres d'information, il se peut qu'elle soit dans vos spams**. Autrement, écrivez-nous à [support@entreprise.api.gouv.fr](<mailto:support@entreprise.api.gouv.fr?subject=Non reception de l'infolettre API Entreprise>)
 
 
       <br>
