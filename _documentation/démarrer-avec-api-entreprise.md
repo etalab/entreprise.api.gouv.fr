@@ -6,7 +6,7 @@ id: demarrer
 panels:
   panel1:
     title: Effectuer sa demande d’habilitation 📝
-    content: >-2
+    content: >2-
       Après avoir déterminé que [l'API Entreprise répond à votre besoin](#besoins) et [que vous disposez des prérequis techniques nécessaires](#prerequis), vous pouvez effectuer une demande d'habilitation.
       <br>
       ⚠️ Une demande d’accès doit couvrir **un seul contexte métier**. Si vous avez plusieurs contextes métiers pour lesquels vous souhaitez demander un accès, il vous faudra formuler une demande par contexte :
@@ -14,29 +14,29 @@ panels:
        {:.example}
       **Exemple de la Région Occitanie :**<br>Dans le cadre de son hub entreprises, **trois demandes différentes ont été faites** : une demande pour faciliter le renseignement des données par l’usager en pré-remplissant des formulaires à partir d’un numéro de SIRET ; une demande pour la pré-qualification des dossiers d’aides publiques avec l’accès à quelques données sensibles ; une demande pour l’instruction de dossiers avec l’accès à un nombre important de données sensibles pour aider les agents instructeurs.<br>**La région s’est vue remettre un espace client avec 3 tokens d’accès aux permissions différentes.**
        {:.example}
-  
+
       <br>
 
       **Demande d'accès pour un cas d'usage standard** (formulaires pré-remplis) :
       <br>
-      *En passant, par les formulaires pré-remplis proposés pour chaque cas d'usage standard, l'instruction de votre demande sera accélérée.* 
+      *En passant, par les formulaires pré-remplis proposés pour chaque cas d'usage standard, l'instruction de votre demande sera accélérée.*
       <br> <a class="tpl-button tpl-button--primary" href="../cas_usage/">🔑 **Demande par cas d'usage**</a>
       <br>
       <br>
 
-      **Demande d'accès préremplie pour les éditeurs** : <br> 
+      **Demande d'accès préremplie pour les éditeurs** : <br>
       <a class="tpl-button tpl-button--alternate" href="../use_cases/editeurs/">🔑 Demande éditeur </a>
       <br>
       <br>
 
       **Demande d'accès avec formulaire libre** :
-      <br> *Utilisez la demande libre, uniquement si votre situation ne correspond pas aux [cas d'usage](../cas_usage/) déjà proposés*. 
+      <br> *Utilisez la demande libre, uniquement si votre situation ne correspond pas aux [cas d'usage](../cas_usage/) déjà proposés*.
       <a class="tpl-button tpl-button--alternate" href="https://api.gouv.fr/les-api/api-entreprise/demande-acces">🔑 Demande libre</a>
       <br>
       <br>
 
 
-      
+
 
 
       #### Le fonctionnement d'une demande
@@ -94,10 +94,10 @@ panels:
 
       ##### Le cadre juridique
 
-      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. L'accès à la donnée requiert la fourniture d'un cadre juridique précis, c'est pourquoi, il vous sera systématiquement demandé :   
+      L'accès à un endpoint de l'API Entreprise se fait sous réserve que son utilisation soit justifiée. L'accès à la donnée requiert la fourniture d'un cadre juridique précis, c'est pourquoi, il vous sera systématiquement demandé :
 
         * une **description précise de votre service et de l'utilité des données demandées dans ce contexte**
-        
+
         * Si vous êtes une administration centrale, une agence d'État, un opérateur, ou un service déconcentré, il vous faudra transmettre le **décrêt** ou l'**arrêté** justifiant votre demande.
 
         {:.tpl-notification.tpl--danger}
@@ -137,7 +137,6 @@ panels:
 
       Avant tout envoi de votre demande, vous devez **[accepter nos conditions générales d’utilisation](../cgu/){:target="_blank"}**.<br> Nous vous invitons à les lire attentivement car une grande partie des données circulant par le biais d'API Entreprise sont sensibles. **Votre futur accès à l'API s'accompagne d'engagements**, notamment, entre autres, ceux de présenter les données uniquement aux agents habilités et de tracer l'accès de ces données.
 
-
     id: demande-habilitation
   panel2:
     title: Habilitation validée ✅, récupérer son token 🔐
@@ -156,21 +155,20 @@ panels:
 
       #### Transmettre le jeton d'accès
 
-      Si vous avez réalisé la demande d'habilitation mais que vous n'êtes pas la personne en charge d'intégrer l'API Entreprise, **vous pouvez transmettre le token de façon sécurisée depuis le tableau de bord**, en cliquant sur le bouton *"Transmettre le jeton à mon équipe technique"*. 
+      Si vous avez réalisé la demande d'habilitation mais que vous n'êtes pas la personne en charge d'intégrer l'API Entreprise, **vous pouvez transmettre le token de façon sécurisée depuis le tableau de bord**, en cliquant sur le bouton *"Transmettre le jeton à mon équipe technique"*.
       <br>
       **Le destinataire recevra, par e-mail, un lien d'une durée de 4 heures**, où il pourra copier/coller le token.
-    
+
 
 
       {:.tpl-notification.tpl--danger}
 
       Votre clé d'accès est unique et privée. L'utilisation de cette fonctionnalité du tableau de bord doit avoir pour unique objectif la transmission sécurisée de votre clé à vos services techniques qui intégreront l'API Entreprise. **Vous ne devez jamais transmettre votre clé d'accès par e-mail.**
-      
-      
+
+
       {:.tpl-notification}
 
-      **Le renouvellement d’un token est très facile et rapide.** C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr). 
-
+      **Le renouvellement d’un token est très facile et rapide.** C’est pourquoi, si vous avez divulgué votre token par erreur, n’hésitez pas à écrire rapidement à [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
 
   panel3:
     title: Faire ma première requête ☎️
@@ -284,27 +282,9 @@ panels:
 
       ##### Limites
 
-      ###### 📆 Jusqu'au mardi 1er juin 2021
+      Les limites de volumétrie sur API Entreprise se décomposent en deux règles principales :
 
-      Sur API Entreprise, vous avez le droit à **2000 requêtes par tranche de 10 minutes par IP** interrogeant nos services.
-      <br>
-      <br>
-      **Au delà de ce taux, votre IP sera bannie** temporairement de nos serveurs **pour une durée de 12h**. Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. Par contre, dans votre tableau de bord, vous pouvez vérifier si vous avez dépassé ce seuil.<br>
-      Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d’écrire au support**.<br>
-      Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n’a pas été correctement configuré.
-      <br>
-
-
-      {:.tpl-notification.tpl--danger}
-
-      Pour les appels de traitement de masse, il est souhaitable que vous fassiez vos batchs automatiques la nuit ou durant les heures creuses afin de ne pas affecter la qualité du service pour le reste des usagers.
-
-
-      ###### 📆 À compter du mardi 1er juin 2021
-
-      Les limites de volumétrie sur API Entreprise se décomposent en deux règles principales : 
-
-      * **Un plafond général par IP de 1000 requêtes/minute**. 
+      * **Un plafond général par IP de 1000 requêtes/minute**.
       <br>
 
       * **Une volumétrie par jeton par groupe d'endpoints** :
@@ -313,26 +293,26 @@ panels:
 
           * *2ème groupe* : Les endpoints transmettant des **documents** constituent un autre groupe. La volumétrie maximale d'appel concernant ce groupe est de **50 requêtes/min/jeton**.
 
-          * *Exceptions* : Certains endpoints échappent à cette règle et présentent une volumétrie spécifique par endpoint : 
+          * *Exceptions* : Certains endpoints échappent à cette règle et présentent une volumétrie spécifique par endpoint :
 
                * L'[attestation fiscale](../catalogue/#a-attestations_fiscales_dgfip) de la DGFIP : 5 requêtes/min/jeton ;
 
                * Les [actes](../catalogue/#a-actes_inpi) de l'INPI : 5 requêtes/min/jeton ;
 
-               * Les [bilans](../catalogue/#a-bilans_inpi) de l'INPI : 5 requêtes/min/jeton ; 
+               * Les [bilans](../catalogue/#a-bilans_inpi) de l'INPI : 5 requêtes/min/jeton ;
 
                * Les [effectifs](../catalogue/#a-effectifs_..._acoss_covid) de l'URSSAF : 250 requêtes/min/jeton ;
 
-               * La [conformité des travailleurs handicapés](../catalogue/#a-attestations_agefiph) de l'Agefiph : 250 requêtes/min/jeton. 
-          
+               * La [conformité des travailleurs handicapés](../catalogue/#a-attestations_agefiph) de l'Agefiph : 250 requêtes/min/jeton.
+
       {:.tpl-notification}
 
       Pour vous assurer de la volumétrie d'un endpoint en particulier, vous pouvez consulter la partie "disponibilité" de sa documentation dans le [catalogue de données](../catalogue/).
 
-      
 
-      
-      ##### Informations actionnables et alertes 📆 À compter du mardi 1er juin 2021
+
+
+      ##### Informations actionnables et alertes
 
       ###### Header associé à chaque réponse
 
@@ -358,7 +338,7 @@ panels:
 
       {:.example}
 
-      **Exemple** : 
+      **Exemple** :
       <br> Considérons un endpoint ayant une limite de 50 appels /minute.
       Vous faîtes un premier appel à 10h00 pile, et effectuez un second appel 20 secondes plus tard, puis un troisième 10 secondes plus tard, vous aurez les valeurs suivantes :<br>
       - RateLimit-Limit : 50 ;<br>
@@ -366,13 +346,13 @@ panels:
       - RateLimit-Reset : [*Timestamp correspondant au jour présent à 10h01*]. Le premier appel initialise le compteur (à 10h00 pile), la période se termine 1m plus tard.
       <br><br>Vous pouvez donc jusqu'à 10h01 pile effectuer 47 appels, le compteur sera réinitialisé à 50 à ce moment-là.
 
-      
+
       ###### Header associé à un code erreur 429
 
       Si vous dépassez le nombre d'appels autorisés (`RateLimit-Remaining = 0`), le serveur répondra avec le **status 429** sur tous les appels suivants dans la même période. 
       <br>
-      Le header associé à ce code erreur 429 sera accompagné : 
-      
+      Le header associé à ce code erreur 429 sera accompagné :
+
       *  des trois champs précédents ;
 
       *  d'un champ supplémentaire indiquant le temps à attendre avant de pouvoir effectuer des nouveaux appels.
@@ -401,7 +381,7 @@ panels:
       ##### Bannissement
 
       En cas de **non prise en compte des codes erreurs 429**ou en cas de **dépassement de la limite de volumétrie globale**, votre IP sera temporairement bannie de nos serveurs **pour une durée fixe et non révocable de 12h**. Si vous avez plusieurs jetons, tous seront donc bloqués pendant ce laps de temps.
-      <br>Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas. 
+      <br>Les appels depuis une IP bannie ne renvoient pas de codes HTTP, le serveur ne répond tout simplement pas.
       Vous pouvez en revanche vérifier si vous avez dépassé ce seuil depuis votre tableau de bord.
       <br><br>Au bout de ces 12 heures, vos accès sont automatiquement rétablis ; **il est donc inutile d'écrire au support**. <br>Nous vous invitons à prendre les mesures nécessaires car le dépassement intervient généralement chez nos utilisateurs lorsque leur programme n'a pas été correctement configuré.
 
@@ -456,5 +436,4 @@ panels:
 
 
       🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
-
 ---
