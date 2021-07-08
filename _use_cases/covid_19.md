@@ -69,13 +69,14 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|:-	:|:-:	|
 | **Données de référence<br>d'une entreprise** 	<br>`entreprises` | INSEE & Infogreffe 	| ✅ 	|  JSON 	| publiques et protégées	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#entreprises){:target="_blank"}  	|
 | **Données de référence<br>d'un établissement** <br>	`etablissements` | INSEE 	|  ❌|  JSON 	| publiques et protégées	| 	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#etablissements){:target="_blank"}|
-| **Extrait  RCS** <br> `extraits_rcs_infogreffe` 	| Infogreffe 	|  ❌ 	|  JSON 	| protégées 🔐 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe){:target="_blank"}	|
+| **Extrait  RCS** <br> `extraits_rcs_infogreffe` 	| Infogreffe 	|  ❌ 	|  JSON 	| publiques 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#extraits_rcs_infogreffe){:target="_blank"}	|
 | **Données déclaratives<br>d'une association** <br> `associations`	| Ministère de l'Intérieur 	|  ⏺	 | JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#associations){:target="_blank"} 	|
 | **Divers documents<br>d'une association** <br> `documents_associations`  	| Ministère de l'Intérieur 	| ❌ 	| PDF 	| publiques 	|  [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#documents_associations){:target="_blank"}	|
 | **Données de référence d'une entreprise artisanale**<br> `entreprises_artisanales_cma` 	| CMA France 	|  ⏺ 	|  JSON 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-entreprises_artisanales_cma){:target="_blank"} |
 | **Actes**<br> `actes_inpi` 	| INPI 	|  ❌ 	|  ZIP (PDF et XML) 	| publiques 	|  	[Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#actes_inpi){:target="_blank"} |
 | **Conventions collectives** <br> `conventions_collectives` 	| Fabrique numérique des Ministères Sociaux 	|  ❌ 	|  JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#conventions_collectives){:target="_blank"} 	|
 | **Effectif d'une entreprise** <br> `effectifs_..._acoss_covid` 	| URSSAF Caisse nationale 	|  ✅ 	|  JSON 	| protégées 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-effectifs_..._acoss_covid){:target="_blank"} 	|
+| **Immatriculation EORI** <br> `eori_douanes` 	| Douanes 	|  ⏺ 	|  JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#a-eori_douanes){:target="_blank"} 	|
 
 <br>
 
@@ -100,7 +101,7 @@ Pour chaque endpoint présent dans le [catalogue API Entreprise]({{ site.baseurl
 |-	|:-:	|:-:	|:-:	|:-:	|:-:	|-	|
 | **Attestation fiscale**<br>`attestations_fiscales_dgfip` 	| DGFIP 	| ❌ 	| PDF 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_fiscales_dgfip){:target="_blank"} 	|
 | **Attestation de vigilance**<br>`attestations_sociales_acoss` 	| URSSAF Caisse nationale 	| ❌ 	|  PDF 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_sociales_acoss){:target="_blank"} 	|
-| **Conformité emploi des travailleurs handicapés**<br>`attestations_agefiph` 	| AGEFIPH 	|  ❌	| JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"} 	|
+| **Conformité emploi des travailleurs handicapés**<br>`attestations_agefiph` 	| AGEFIPH 	|  ❌	| JSON 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#attestations_agefiph){:target="_blank"} 	|
 | **Cotisations de sécurité sociale agricole**<br>`cotisations_msa` 	| MSA 	|  ❌	| JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisations_msa){:target="_blank"} 	|
 | **Cotisations retraite bâtiment**<br>`cotisation_retraite_probtp` 	| PROBTP 	|  ❌	|  JSON 	| protégées 🔐 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cotisation_retraite_probtp){:target="_blank"} 	|
 | **Carte professionnelle travaux publics**<br>`cartes_professionnelles_fntp` 	| FNTP 	|  ❌	|PDF 	| publiques 	| [Lien vers la documentation](https://entreprise.api.gouv.fr/catalogue/#cartes_professionnelles_fntp){:target="_blank"} 	|
