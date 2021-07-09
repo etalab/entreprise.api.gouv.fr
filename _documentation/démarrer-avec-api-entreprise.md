@@ -430,10 +430,4 @@ panels:
 
 
       API Entreprise utilise des certificats multi-domaines ; c'est à dire avec un "nom courant" (_common name - CN_) et plusieurs "noms alternatifs du sujet" (_subject alternatives names - SAN_), soyez certains que vos outils fonctionnent correctement avec.
-
-
-      #### Construire en compatibilité ascendante
-
-
-      🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
 ---
