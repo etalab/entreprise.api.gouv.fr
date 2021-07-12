@@ -13,7 +13,7 @@ description: Obtenir la **dernière année connue de conformité** d’une entre
 usecases:
   - Marchés publics
   - Détection de la fraude
-opening: Données protégées.
+opening: Données publiques.
 services:
   service1:
     request:

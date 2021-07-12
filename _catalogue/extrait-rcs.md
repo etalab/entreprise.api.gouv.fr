@@ -16,7 +16,7 @@ usecases:
   - Marchés publics
   - Préremplissage d'un formulaire
   - Détection de la fraude
-opening: Données protégées.
+opening: Données publiques.
 perimeter:
   description: Toutes les entreprises présentes au registre du commerce et des sociétés.
   label: Toutes les entreprises présentes dans le RCS.
