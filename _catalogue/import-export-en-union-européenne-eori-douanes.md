@@ -13,7 +13,7 @@ usecases:
   - Aides publiques
   - Marchés publics
   - Détection de la fraude
-opening: Données protégées.
+opening: Données publiques.
 providers:
   - douanes
 perimeter:
