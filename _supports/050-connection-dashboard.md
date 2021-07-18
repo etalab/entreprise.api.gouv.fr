@@ -19,6 +19,8 @@ answer: >-
 
   **Je n'ai pas effectué la demande d'habilitation :** Pour accéder au tableau de bord, vous devez vous référer à la personne qui a effectué la demande d'habilitation.
   <br><br> 
-  Dans certains cas spécifiques *(par exemple, départ à la retraite du demandeur, changement de poste …)*, un transfert de compte peut être nécessaire. 
+  *Vous faîtes partie du service technique et avez besoin du jeton d'accès car vous participez à l'intégration de l'API Entreprise*, vous pouvez demander au responsable du tableau de bord d'utiliser une fonctionnalité vous transmettant un lien d'accès temporaire au jeton. Pour en savoir plus, référez vous à la rubrique [Transmettre le jeton d'accès](../doc/#transmettre-le-jeton-daccès) de la documentation.
+  <br><br> 
+  *Dans certains cas spécifiques, par exemple départ à la retraite du demandeur, changement de poste, etc.*, un transfert de compte peut être nécessaire. 
   <br>Une fonctionnalité est à disposition dans le tableau de bord. Cette opération nécessite l’accord explicite du demandeur et est instruite manuellement par nos services. 
 ---
