@@ -10,7 +10,7 @@ answer: >-
 
   #### Cas n°1
 
-  **J'ai effecuté la demande d'habilitation :** Préalablement au remplissage du formulaire d'habilitation, vous avez créé un compte sur la plateforme api.gouv.fr. Pour accéder au tableau de bord API Entreprise, vous avez besoin des mêmes identifiants API.gouv : adresse mail et mot de passe.
+  **J'ai effectué la demande d'habilitation :** Préalablement au remplissage du formulaire d'habilitation, vous avez créé un compte sur la plateforme api.gouv.fr. Pour accéder au tableau de bord API Entreprise, vous avez besoin des mêmes identifiants API.gouv : adresse mail et mot de passe.
   <br><br>
   Vous avez oublié votre mot de passe ? Un lien, situé juste en dessous du formulaire de connection vous permet de le régénérer. Écrivez votre adresse mail, un courriel vous sera envoyé automatiquement pour changer votre mot de passe et vous connecter.
 
