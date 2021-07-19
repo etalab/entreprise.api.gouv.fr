@@ -17,6 +17,9 @@
     -
       label: Lettre d'information
       target: pages/infolettres.html
+    -
+      label: Page de statut
+      url: https://status.entreprise.api.gouv.fr/
 -
   label: Tableau de bord
   url: https://dashboard.entreprise.api.gouv.fr
