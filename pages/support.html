@@ -6,12 +6,15 @@ permalink: /support/
 additional_js:
   - https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js
   - https://cdn.jsdelivr.net/npm/instantsearch.js@4.13.1
+  - links.js
   - support.js
 additional_css:
   - https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css
 ---
 
 <div id="search-box-wrapper">
+  <div id="flash"></div>
+
   <div id="search-box">
   </div>
 
@@ -38,6 +41,12 @@ additional_css:
             <span class="label">
               {{ support.label }}
             </span>
+
+            <button class="tpl-button tpl-button--alternate button-link" data-link="support/#{{ supportId }}" title="Copier le lien vers cette section">
+              <svg class="tpl-icon" viewBox="0 0 24 24">
+                <use xlink:href="#link"></use>
+              </svg>
+            </button>
           </summary>
           <div class="panel-content">
             {{ support.answer | markdownify }}

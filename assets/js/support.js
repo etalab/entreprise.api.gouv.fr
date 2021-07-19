@@ -6,6 +6,8 @@ window.addEventListener('load', function() {
 
     if (window.location.hash) {
       const hash = window.location.hash
+
+      initButtonLink();
       openDetails(hash)
     }
 
@@ -70,7 +72,7 @@ window.addEventListener('load', function() {
             }
 
             return `
-              <details class="entry fold" id="${ result.objectID }"${ extra }>
+              <details class="entry fold" id="${ result.id }"${ extra }>
                 <summary>
                   <h3>
                     ${instantsearch.highlight({ attribute: 'question', hit: result })}
@@ -78,6 +80,12 @@ window.addEventListener('load', function() {
                   <span class="label hide-xs">
                     ${ result.label }
                   </span>
+
+                  <button class="tpl-button tpl-button--alternate button-link" data-link="support/#${ result.id }" title="Copier le lien vers cette section">
+                    <svg class="tpl-icon" viewBox="0 0 24 24">
+                      <use xlink:href="#link"></use>
+                    </svg>
+                  </button>
                 </summary>
                 <div class="panel-content">
                   ${instantsearch.highlight({ attribute: 'answer', hit: result })}
@@ -89,6 +97,10 @@ window.addEventListener('load', function() {
     );
 
     search.start();
+
+    search.on('render', () => {
+      initButtonLink();
+    });
   }
 
   function openDetails(hash) {
