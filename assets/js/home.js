@@ -51,7 +51,8 @@ function setupHomeSearch() {
       container: '#hits-documentation',
       escapeHTML: false,
       templates: {
-        empty() {
+        empty(results) {
+          handleSiretSearch(results.query);
           return 'Aucun résultat';
         },
         item(result) {
@@ -182,4 +183,30 @@ function setupHomeSearch() {
   );
 
   search.start();
+}
+
+function handleSiretSearch(query) {
+  var sirenRegex = /\d{9}/;
+  var siretRegex = /\d{14}/;
+
+  var sanitizedQuery = query.replace(/\s/g, '');
+  var sirenMatches = sanitizedQuery.match(sirenRegex);
+  var siretMatches = sanitizedQuery.match(siretRegex);
+  var str;
+
+  if (sirenMatches) {
+    str = 'Il semblerait que vous essayez de rechercher des informations sur un siret ou siren spécifique, vous pouvez effectuer cette recherche sur le site <a href="https://annuaire-entreprises.data.gouv.fr/" target="_blank">https://annuaire-entreprises.data.gouv.fr/</a>.';
+
+    if (siretMatches) {
+      str += '<br /><br />';
+      str += 'Vous pouvez obtenir les informations du siret '+siretMatches[0]+' en suivant <a href="https://annuaire-entreprises.data.gouv.fr/etablissement/'+siretMatches[0]+'" target="_blank">ce lien</a>.';
+    }
+
+    str += '<br /><br />';
+  }
+  else {
+    str = '';
+  }
+
+  document.getElementById('hits-disclaimer').innerHTML = str;
 }
