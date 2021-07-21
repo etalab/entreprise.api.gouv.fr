@@ -73,6 +73,7 @@ plugins:
 
 # jekyll-assets
 assets:
+  compression: true
   plugins:
     css: { autoprefixer: {}}
     img: { optim: {}}
