@@ -103,13 +103,13 @@ services:
             ###### Les qualifications professionnelles Qualibat
 
 
-            Elles constituent la reconnaissance des compétences de l’entreprise, de sa capacité à réaliser des travaux dans une activité donnée, à un niveau de technicité défini. Elles donnent à l’entreprise les moyens de faire-valoir son expertise technique et permettent au maître d’ouvrage d’identifier précisément les professionnels capables de répondre à sa demande. 
+            Elles constituent la reconnaissance des compétences de l’entreprise, de sa capacité à réaliser des travaux dans une activité donnée, à un niveau de technicité défini. Elles donnent à l’entreprise les moyens de faire-valoir son expertise technique et permettent au maître d’ouvrage d’identifier précisément les professionnels capables de répondre à sa demande.
 
 
-            ###### Les certifications métiers Qualibat 
+            ###### Les certifications métiers Qualibat
 
 
-            Elles caractérisent les entreprises aptes à répondre à certaines activités nécessitant le respect de réglementations particulières en matière d’environnement, de sécurité ou de protection de la santé. Elles sont attribuées à partir de référentiels techniques spécifiques. En plus de la reconnaissance du savoir-faire, elles supposent la mise en place d’un système d’organisation et de procédures au sein de l’entreprise. 
+            Elles caractérisent les entreprises aptes à répondre à certaines activités nécessitant le respect de réglementations particulières en matière d’environnement, de sécurité ou de protection de la santé. Elles sont attribuées à partir de référentiels techniques spécifiques. En plus de la reconnaissance du savoir-faire, elles supposent la mise en place d’un système d’organisation et de procédures au sein de l’entreprise.
 
 
             ℹ️ Source : [Qualibat](https://www.qualibat.com/maitre-douvrage/nomenclature/consulter-la-nomenclature){:target="_blank"}
@@ -140,13 +140,13 @@ services:
 
             * La durée de validité, de date à date ;
 
-            * Un numéro d'identification. 
+            * Un numéro d'identification.
 
 
             ###### Les informations recueillies et contrôlées sur l'entreprise :
 
 
-            1. La situation administrative et juridique : 
+            1. La situation administrative et juridique :
 
                * la raison sociale de l'entreprise ;
                * ses coordonnées complètes ;
@@ -160,13 +160,13 @@ services:
                * ses compagnies d'assurances ;
                * la régularité de sa situation fiscale et sociale.
 
-            2. La classification : 
+            2. La classification :
 
                * son effectif ;
                * son classement dans une catégorie d'entreprise ;
                * son chiffre d'affaires hors taxes / son classement dans une catégorie d'entreprise
 
-            3. La qualification : 
+            3. La qualification :
 
                * Le code à quatre chiffre de la capacité technique reconnue à l'entreprise dans une activité donnée ;
                * Le titre de cette capacité ;
@@ -175,12 +175,12 @@ services:
             4. La classification partielle : les moyens humains dont dispose l'entreprise dans l'activité pour laquelle elle est qualifiée sont précisés.
 
 
-            5. Les dates de validité : 
+            5. Les dates de validité :
 
-               * La date d'attribution : la date à laquelle la qualification a été attribuée ou du plus récent renouvellement. 
+               * La date d'attribution : la date à laquelle la qualification a été attribuée ou du plus récent renouvellement.
                * La date d'échéance : est portée la date d'expiration de validité de la qualification.
 
-            6. Le système qualité : dans la mesure où l'entreprise a mis en place une démarche qualité certifiée par QUALIBAT, la certification de son système qualité est mentionnée en annexe. 
+            6. Le système qualité : dans la mesure où l'entreprise a mis en place une démarche qualité certifiée par QUALIBAT, la certification de son système qualité est mentionnée en annexe.
 
 
             ℹ️ Source : [Qualibat ](https://www.qualibat.com/)
