@@ -180,67 +180,11 @@ layout: default
     <div class="tpl-container">
       <h2>Nos fournisseurs de données</h2>
       <ul class="providers__main text-center">
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/insee.png %}" alt="INSEE">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/infogreffe.png %}" alt="Infogreffe">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/dgfip.png %}"
-            alt="Direction Générale des Finances Publiques">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/acoss.png %}" alt="URSSAF Caisse nationale">
-        </li>
-      </ul>
-      <ul class="providers__others text-center">
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/inpi.png %}" alt="INPI">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/qualibat.png %}" alt="Qualibat">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/rna.png %}"
-            alt="Répertoire National des Associations">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/cnetp.png %}" alt="CNETP">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/probtp.png %}" alt="ProBTP">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/msa.png %}" alt="MSA">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/opqibi.png %}" alt="OPQIBI">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/fntp.png %}" alt="FNTP">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/agefiph.png %}" alt="AGEFIPH">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/fabsocial.png %}"
-            alt="Fabrique numérique des Ministères Sociaux">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/cma.png %}" alt="CMA France">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/ademe.png %}"
-            alt="Agence de la transition écologique">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/douanes.png %}"
-            alt="Direction générale des douanes et droits indirects">
-        </li>
-        <li>
-          <img class="" src="{{ site.baseurl }}{% link assets/images/providers/agencebio.png %}" alt="Agence BIO">
-        </li>
+        {% for provider in site.data.providers %}
+          <li>
+            {% asset "{{ 'providers/' | append: provider.logo }}" magick:format='.webp' alt='{{ provider.name }}' %}
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </section>
