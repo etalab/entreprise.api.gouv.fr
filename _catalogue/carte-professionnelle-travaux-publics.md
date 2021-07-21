@@ -62,7 +62,8 @@ services:
       format: Document PDF
       timeout: 12 secondes
       description: La réponse se compose de l'URL d'accès à la carte professionnelle
-        de l'entreprise au format PDF.
+        de l'entreprise au format PDF. [Voici un
+        exemple](https://entreprise.api.gouv.fr/assets/pdf/carte-professionnelle.pdf)
 availability:
   normal_availability: 7jours/7 et 24h/24
   unavailability_types: /
