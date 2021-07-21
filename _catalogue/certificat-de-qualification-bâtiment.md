@@ -185,5 +185,6 @@ services:
 
             ℹ️ Source : [Qualibat ](https://www.qualibat.com/)
       description: La réponse se compose de l'URL de téléchargement de l'attestation
-        au format PDF quand celle-ci est disponible.
+        au format PDF quand celle-ci est disponible. [Voici un
+        exemple](https://entreprise.api.gouv.fr/assets/pdf/certificat_qualibat.pdf)
 ---
