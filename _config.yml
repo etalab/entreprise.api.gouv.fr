@@ -24,9 +24,8 @@ matomo_site_id: '45'
 
 meta:
   title: *title
-  description: Administrations, retrouvez les données des entreprises
-    et des associations directement sur entreprise.api.gouv.fr.
-    Ensemble mettons en place le “ Dîtes-le nous une fois ! ”
+  description: Administrations, récupérez les données administratives des entreprises
+    et des associations pour simplifier leurs démarches.
 
 # The baseurl option is set for links (especialy assets links) to work
 # with Github pages. For the production environment the website is built
