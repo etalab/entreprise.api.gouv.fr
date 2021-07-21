@@ -96,7 +96,7 @@ services:
         L'archive ZIP fournie permet d'accéder à :
 
 
-        * tous les actes au format PDF ;
+        * tous les actes au format PDF ([Voici un exemple](https://entreprise.api.gouv.fr/assets/pdf/actes-inpi.zip));
 
         * toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
 
