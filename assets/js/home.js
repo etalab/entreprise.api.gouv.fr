@@ -195,15 +195,15 @@ function handleSiretSearch(query) {
   var str;
 
   if (sirenMatches || siretMatches) {
-    str = 'Il semblerait que vous essayez de rechercher des informations sur un siret ou siren spécifique, vous pouvez effectuer cette recherche sur le site <a href="https://annuaire-entreprises.data.gouv.fr/" target="_blank">https://annuaire-entreprises.data.gouv.fr/</a>.';
+    str = 'Il semblerait que vous essayez de rechercher des informations sur un SIRET ou SIREN spécifique, vous pouvez effectuer cette recherche sur le site <a href="https://annuaire-entreprises.data.gouv.fr/" target="_blank">https://annuaire-entreprises.data.gouv.fr/</a>.';
   }
 
   if (siretMatches) {
     str += '<br /><br />';
-    str += 'Vous pouvez obtenir les informations du siret '+siretMatches[0]+' en suivant <a href="https://annuaire-entreprises.data.gouv.fr/etablissement/'+siretMatches[0]+'" target="_blank">ce lien</a>.';
+    str += 'Vous pouvez obtenir les informations du SIRET '+siretMatches[0]+' en suivant <a href="https://annuaire-entreprises.data.gouv.fr/etablissement/'+siretMatches[0]+'" target="_blank">ce lien</a>.';
   } else if (sirenMatches) {
     str += '<br /><br />';
-    str += 'Vous pouvez obtenir les informations du siren '+sirenMatches[0]+' en suivant <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/'+sirenMatches[0]+'" target="_blank">ce lien</a>.';
+    str += 'Vous pouvez obtenir les informations du SIREN '+sirenMatches[0]+' en suivant <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/'+sirenMatches[0]+'" target="_blank">ce lien</a>.';
   }
 
   if (sirenMatches || siretMatches) {
