@@ -105,7 +105,7 @@ services:
               "https://storage.entreprise.api.gouv.fr/siade/1569156881-f749d75e2bfd443316e2e02d59015f-attestation_vigilance_acoss.pdf"
           }
       description: La réponse se compose de l'URL permettant d'accéder à l’attestation
-        de vigilance de l'entreprise demandée en PDF. **[Voici un
+        de vigilance de l'entreprise demandée en PDF, dont **[voici un
         exemple](https://entreprise.api.gouv.fr/assets/pdf/attestation_sociale.pdf)**.
 availability:
   normal_availability: 7jours/7 et 24h/24
