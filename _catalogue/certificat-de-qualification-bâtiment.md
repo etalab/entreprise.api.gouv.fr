@@ -188,5 +188,5 @@ services:
         au format PDF quand celle-ci est disponible.
 
         **[Voici un
-        exemple](https://entreprise.api.gouv.fr/assets/pdf/certificat_qualibat.pdf)**.
+        exemple de certificat au format PDF](https://entreprise.api.gouv.fr/assets/pdf/certificat_qualibat.pdf)**.
 ---
