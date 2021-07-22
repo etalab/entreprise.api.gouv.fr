@@ -63,8 +63,7 @@ services:
         d'accès, le type et la date du/des documents.
 
 
-        **[Voici un
-        exemple des fichiers disponibles dans cette payload](https://entreprise.api.gouv.fr/assets/pdf/documents-association.zip)**.
+        **[Voici différents exemples de documents PDF possiblement renvoyés par cet endpoint](https://entreprise.api.gouv.fr/assets/pdf/documents-association.zip)**.
 history: "##### 01/07/2020 Création de l'endpoint."
 availability:
   volumetry: max. 50 requêtes/min/jeton cumulées sur tous les endpoints envoyant des documents.
