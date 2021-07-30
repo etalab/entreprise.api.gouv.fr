@@ -27,6 +27,7 @@ group :jekyll_plugins do
 end
 
 gem "sprockets", "~> 3.7"
+gem "mini_magick"
 
 # Deployment
 gem 'rake'

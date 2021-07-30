@@ -1,0 +1,53 @@
+- name: "INSEE"
+  logo: "insee.png"
+
+- name: "Infogreffe"
+  logo: "infogreffe.png"
+
+- name: "Direction Générale des Finances Publiques"
+  logo: "dgfip.png"
+
+- name: "URSSAF Caisse nationale"
+  logo: "acoss.png"
+
+- name: "INPI"
+  logo: "inpi.png"
+
+- name: "Qualibat"
+  logo: "qualibat.png"
+
+- name: "Répertoire National des Associations"
+  logo: "rna.png"
+
+- name: "CNETP"
+  logo: "cnetp.png"
+
+- name: "ProBTP"
+  logo: "probtp.png"
+
+- name: "MSA"
+  logo: "msa.png"
+
+- name: "OPQIBI"
+  logo: "opqibi.png"
+
+- name: "FNTP"
+  logo: "fntp.png"
+
+- name: "AGEFIPH"
+  logo: "agefiph.png"
+
+- name: "Fabrique numérique des Ministères Sociaux"
+  logo: "fabsocial.png"
+
+- name: "CMA France"
+  logo: "cma.png"
+
+- name: "Agence de la transition écologique"
+  logo: "ademe.png"
+
+- name: "Direction générale des douanes et droits indirects"
+  logo: "douanes.png"
+
+- name: "Agence BIO"
+  logo: "agencebio.png"
