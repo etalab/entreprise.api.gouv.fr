@@ -45,7 +45,7 @@ services:
         **&object=**RaisonDeL’AppelOuIdentifiant
     response:
       timeout: 12 secondes
-      format: Document PDF
+      format: Documents PDF
       sample:
         code: >-
           {
@@ -61,6 +61,9 @@ services:
           }
       description: La réponse JSON indique le nombre de documents à télécharger, l'URL
         d'accès, le type et la date du/des documents.
+
+
+        **[Voici différents exemples de documents PDF possiblement renvoyés par cet endpoint](https://entreprise.api.gouv.fr/assets/pdf/documents-association.zip)**.
 history: "##### 01/07/2020 Création de l'endpoint."
 availability:
   volumetry: max. 50 requêtes/min/jeton cumulées sur tous les endpoints envoyant des documents.
