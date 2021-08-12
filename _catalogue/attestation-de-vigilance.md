@@ -28,6 +28,9 @@ perimeter:
 
 
     ⚠️ **L’attestation est délivrée si l'entreprise s'est acquitée de ses contributions et cotisations.**
+
+
+    Depuis 2021, l'attestation de vigilance n'est délivrée que si la contribution annuelle de l'OETH (Obligation d'Emploi de Travailleur Handicapé) a été acquittée par l'entreprise. Cette compétence était auparavant attribuée à l'AGEFIPH.
   label: Toutes les entreprises.
 services:
   service1:
