@@ -42,7 +42,26 @@ So it need to have installed:
 This command deploy `master` by default, you probably should merge `gh-pages`
 into `master`
 
-`bundle exec mina deploy to=[sandbox|production] domain=[sandbox|production]`
+```sh
+bundle exec mina deploy to=[sandbox|production] domain=[sandbox|production]
+```
+
+If you want to deploy on all domains:
+
+```sh
+bundle exec rake deploy
+```
+
+### Fresh deployment
+
+For `production1.entreprise.api.gouv.fr`
+
+```sh
+domain=production1.entreprise.api.gouv.fr
+
+bundle exex mina setup domain=$domain to=production
+bundle exex mina deploy domain=$domain to=production
+```
 
 ## Algolia
 
