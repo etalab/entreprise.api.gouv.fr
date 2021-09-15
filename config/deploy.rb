@@ -55,7 +55,7 @@ end
 
 task :cgu_to_pdf do
   comment 'Generating PDF version of CGU'.green
-  command %(pandoc pages/cgu.md -o _site/assets/cgu.pdf --latex-engine=xelatex)
+  command %(pandoc pages/cgu.md -o _site/assets/cgu.pdf --pdf-engine=xelatex)
 end
 
 task :algolia_indexing do

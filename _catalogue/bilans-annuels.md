@@ -77,7 +77,7 @@ services:
         L'archive ZIP fournie par l'URL se compose de :
 
 
-        * de tous les comptes annuels au format PDF ;
+        * de tous les comptes annuels au format PDF (**[Voici un exemple de document](https://entreprise.api.gouv.fr/assets/pdf/bilans_inpi.pdf)**) ;
 
         * de toutes les métadonnées de chaque bilan, au format XML, portant le même nom que le PDF associé ;
 

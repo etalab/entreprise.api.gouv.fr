@@ -1,8 +1,22 @@
+{% if page.meta.title %}
+  {% assign title = page.meta.title %}
+{% else %}
+  {% assign title = site.meta.title %}
+{% endif %}
+
+{% if page.meta.description %}
+  {% assign description = page.meta.description %}
+{% else %}
+  {% assign description = site.meta.description %}
+{% endif %}
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
+  <title>
+    {{ title }}
+  </title>
 
   {% asset default.scss %}
 
@@ -14,25 +28,25 @@
   </script>
 
   <!-- Search Engine -->
-  <meta name="description" content="{{ site.meta.description }}">
+  <meta name="description" content="{{ description }}">
   <meta name="image" content="{% asset preview.png @path %}">
 
   <!-- Schema.org for Google -->
-  <meta itemprop="name" content="{{ site.meta.title }}">
-  <meta itemprop="description" content="{{ site.meta.description }}">
+  <meta itemprop="name" content="{{ title }}">
+  <meta itemprop="description" content="{{ description }}">
   <meta itemprop="image" content="{% asset preview.png @path %}">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ site.meta.title }}">
-  <meta name="twitter:description" content="{{ site.meta.description }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
 
   <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-  <meta property="og:title" content="{{ site.meta.title }}">
-  <meta property="og:description" content="{{ site.meta.description }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
   <meta property="og:image" content="{% asset preview_fb.png @path %}">
   <meta property="og:url" content="{{ site.url }}">
-  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:site_name" content="{{ title }}">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="website">
 

@@ -105,12 +105,14 @@ services:
             ],
             "domaines": ["Chauffage et\/ou eau chaude solaire"]
           }
-      format: Nom du certificat et document PDF
+      format: Nom du certificat et documents PDF
       timeout: 12 secondes
       description: La réponse se compose du nom de la qualification de l'entreprise,
         de l'URL de téléchargement de l'attestation au format PDF quand celle-ci
         est disponible (et non exclue via l'option `skip_pdf`), du nom du
         certificat et du domaine.
+        **[Voici différents exemples de certificats au format PDF](https://entreprise.api.gouv.fr/assets/pdf/rge.zip)**.
+
       questions:
         qr1:
           question: Pourquoi certains certificats ne sont pas disponibles ?

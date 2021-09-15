@@ -88,8 +88,8 @@ services:
       format: Document PDF
       timeout: 12 secondes
       description: La réponse est composée d'une URL permettant de télécharger
-        l'attestation en PDF, dont [voici un
-        exemple](https://entreprise.api.gouv.fr/assets/pdf/attestation_fiscale.pdf).
+        l'attestation en PDF, dont **[voici un
+        exemple](https://entreprise.api.gouv.fr/assets/pdf/attestation_fiscale.pdf)**.
       questions:
         qr1:
           question: Qu'atteste ce document ? et quelle est sa durée de validité ?

@@ -8,7 +8,8 @@ title: Cotisations de sécurité sociale agricole
 label: cotisations_msa
 scope:
   - entreprises
-description: Savoir si une **entreprise est à jour de ses cotisations sociales**
+description: |-
+  Savoir si une **entreprise est à jour de ses cotisations sociales**
   auprès de la sécurité sociale agricole (MSA).
 usecases:
   - Aides publiques
@@ -23,6 +24,9 @@ perimeter:
     * l'élevage
     * la pèche
     * le forestier.
+
+
+    Depuis 2021, l'attestation de vigilance n'est délivrée que si la contribution annuelle de l'OETH (Obligation d'Emploi de Travailleur Handicapé) a été acquittée par l'entreprise. Cette compétence était auparavant attribuée à l'AGEFIPH.
   label: Entreprises d'agriculture, élevage, pèche et forestier.
 services:
   service1:

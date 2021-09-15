@@ -357,30 +357,20 @@ panels:
 
       </summary>
 
-
       Un renouvellement de jeton est en pratique une nouvelle demande d'accès.
-
-      Il existe deux possibilités de renouvellement de votre token selon que vous ayez fait votre dernière demande avant septembre 2019 ou après. Nous avons en effet transformé l'outil pour effectuer une demande d'accès à l'API Entreprise. Hier, il s'agissait de demarches-simplifiees.fr ; aujourd'hui, il s'agit d'api.gouv.fr.
-
-
-      **Cas n°1 : Votre dernière demande remonte avant septembre 2019** et a été réalisée au travers de demarches-simplifiees.fr
-
-
-      La notification d'expiration vous a conduit directement sur cette documentation. Effectivement, la plateforme demarches-simplifiees.fr n'étant plus la plateforme utilisée par API Entreprise, nous allons devoir vous demander de créer un compte sur api.gouv.fr. Nous vous prions d'accepter nos excuses pour la gêne occasionnée, ce transfert étant dans l'objectif de vous fournir un meilleur service.
-
-
-      Pour renouveler votre token, vous allez donc **suivre la démarche d'une demande d'accès**. [Tout est expliqué en détail ici](../doc/#demande-habilitation).
+  
+      La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement**. Le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de votre demande initiale. 
+      <br><br> Pensez à mettre à jour les informations de contacts. Si votre situation d'usage de l'API Entreprise a changé, il vous faudra mettre à jour la demande. 
 
 
       {:.tpl-notification}
 
-      Si votre situation d'usage de l'API Entreprise n'a pas changé, inscrivez les mêmes informations utilisées dans votre demande sur demarches-simplifiees.fr. Pensez surtout à mettre à jour les informations de contact.
+      Le renouvellement d'un jeton est aussi une bonne occasion de **faire la demande de nouvelles données si celles-ci correspondent à votre cas d'usage**. Vous pouvez parcourir le [catalogue des données](../catalogue/) pour voir si API Entreprise propose de nouvelles API.
 
+      
 
-      **Cas n°2 : Votre dernière demande est intervenue après septembre 2019**, et a été réalisée au travers d'api.gouv.fr.
+      Vous pouvez également accéder au formulaire de renouvellement depuis votre tableau de bord. Un bouton "Renouveler ou étendre mes droits" se situe à côté de votre jeton d'accès et vous mènera directement vers le formulaire pré-rempli.
 
-
-      La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement api.gouv.fr**. Le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de la demande initiale. Pensez à mettre à jour les informations de contacts.
 
 
       </details>
@@ -410,8 +400,10 @@ panels:
       peut que ce soit dû à un incident côté fournisseurs de données.
 
 
-      1. Dans une telle situation, **la première chose à faire est de consulter la [page incident](https://dashboard.entreprise.api.gouv.fr/incidents){:target="_blank"}** et de vérifier si l'indisponibilité n'y est pas répertoriée. Toutes les indisponibilités y sont inscrites dans le délai le plus court possible et parfois même anticipées lorsque le fournisseur de donnée nous prévient à l'avance d'une indisponibilité pour maintenance.\
+      1. Dans une telle situation, **la première chose à faire est de consulter la [*status page* d'API Entreprise](https://status.entreprise.api.gouv.fr/){:target="_blank"}** et vérifier si l'indisponibilité n'y est pas répertoriée. Toutes les indisponibilités y sont inscrites dans le délai le plus court possible et parfois même anticipées lorsque le fournisseur de donnée nous prévient à l'avance d'une opération de maintenance.
+      <br><br>
          Vous pouvez **également consulter la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time){:target="_blank"}** et ainsi vérifier si l'endpoint ne fonctionnant pas est indiqué comme DOWN dans l'interface. API Entreprise a effectivement mis en place un système de test permettant de vérifier l'état de disponibilité de tous les endpoints.
+         <br><br>
       2. Si l'incident n'est pas répertorié, deux options se présentent : l'erreur provient de votre côté, ou bien elle n'a pas encore été identifiée par API Entreprise. Après avoir pris soin de regarder qu'il ne s'agit pas de la première option, vous pouvez nous contacter sur [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
   panel7:
     title: Réagir en cas d’indisponibilité globale 🚧
@@ -425,8 +417,9 @@ panels:
 
       #### Agir en cas d'indisponibilité globale avérée
 
-
-      🚧 Ce contenu est en cours de construction et sera bientôt disponible. 🚧
+      En cas d'indisponibilité globale, l'ensemble des **endpoints seront indiqués comme DOWN dans l'interface de la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time){:target="_blank"}**.
+      <br> <br>
+      L'**état et les informations de l'incident seront disponibles dans la [*status page*](https://status.entreprise.api.gouv.fr/){:target="_blank"}**, mise à jour manuellement par API Entreprise. Vous y trouverez les informations les plus fraiches.
   panel8:
     title: Élargir le périmètre des données demandées 🧩
     id: elargissement-perimetre

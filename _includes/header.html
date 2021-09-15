@@ -47,11 +47,17 @@
 
               <div class="dropdown-content">
                 {% for child in link.children %}
-                  {% assign target = site.pages | where:"path",child.target | first %}
+                  {% if child.target %}
+                    {% assign target = site.pages | where:"path",child.target | first %}
 
-                  <a href="{{ site.baseurl }}{{ target.url }}">
-                    {{ child.label }}
-                  </a>
+                    <a href="{{ site.baseurl }}{{ target.url }}">
+                      {{ child.label }}
+                    </a>
+                  {% elsif child.url %}
+                    <a href="{{ child.url }}">
+                      {{ child.label }}
+                    </a>
+                  {% endif %}
                 {% endfor %}
               </div>
             </li>

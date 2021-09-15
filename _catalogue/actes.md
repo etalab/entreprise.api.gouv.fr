@@ -65,13 +65,13 @@ services:
                 "url_documents": "https://storage.entreprise.api.gouv.fr/siade_dev/1565606929-1a01ac932854e5632c7534ff4c18e18ec2845ec0-all_documents.zip",
                 "actes": [
                   {
-                    "id_fichier": 24924080, 
+                    "id_fichier": 24924080,
                     // cet identifiant permet de retrouver le document dans l'archive ZIP, à l'aide du fichier "Response.json" permettant de faire lien entre cet ID et le nom du PDF.
                     "siren": "788242667",
                     "denomination_sociale": null,
                     "code_greffe": 7402,
                     "date_depot": "20170925",
-                    "nature_archive": "A" 
+                    "nature_archive": "A"
                     // indique la nature de l'archive, "A" pour un acte, "R" pour une ordonnance et "P" pour une personne physique.
                   },
                   {
@@ -96,7 +96,7 @@ services:
         L'archive ZIP fournie permet d'accéder à :
 
 
-        * tous les actes au format PDF ;
+        * tous les actes au format PDF (**[Voici différents exemples de documents PDF possiblement renvoyés par cet endpoint](https://entreprise.api.gouv.fr/assets/pdf/actes-inpi.zip)**);
 
         * toutes les métadonnées de chaque acte, au format XML, portant le même nom que le PDF associé ;
 
