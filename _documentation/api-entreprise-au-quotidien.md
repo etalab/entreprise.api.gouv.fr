@@ -358,16 +358,16 @@ panels:
       </summary>
 
       Un renouvellement de jeton est en pratique une nouvelle demande d'accès.
-  
-      La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement**. Le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de votre demande initiale. 
-      <br><br> Pensez à mettre à jour les informations de contacts. Si votre situation d'usage de l'API Entreprise a changé, il vous faudra mettre à jour la demande. 
+
+      La notification de d'expiration contient directement **un lien vers le formulaire de renouvellement**. Le formulaire de renouvellement de token est directement **pré-rempli avec les informations renseignées** lors de votre demande initiale.
+      <br><br> Pensez à mettre à jour les informations de contacts. Si votre situation d'usage de l'API Entreprise a changé, il vous faudra mettre à jour la demande.
 
 
       {:.tpl-notification}
 
       Le renouvellement d'un jeton est aussi une bonne occasion de **faire la demande de nouvelles données si celles-ci correspondent à votre cas d'usage**. Vous pouvez parcourir le [catalogue des données](../catalogue/) pour voir si API Entreprise propose de nouvelles API.
 
-      
+
 
       Vous pouvez également accéder au formulaire de renouvellement depuis votre tableau de bord. Un bouton "Renouveler ou étendre mes droits" se situe à côté de votre jeton d'accès et vous mènera directement vers le formulaire pré-rempli.
 
@@ -402,7 +402,7 @@ panels:
 
       1. Dans une telle situation, **la première chose à faire est de consulter la [*status page* d'API Entreprise](https://status.entreprise.api.gouv.fr/){:target="_blank"}** et vérifier si l'indisponibilité n'y est pas répertoriée. Toutes les indisponibilités y sont inscrites dans le délai le plus court possible et parfois même anticipées lorsque le fournisseur de donnée nous prévient à l'avance d'une opération de maintenance.
       <br><br>
-         Vous pouvez **également consulter la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time){:target="_blank"}** et ainsi vérifier si l'endpoint ne fonctionnant pas est indiqué comme DOWN dans l'interface. API Entreprise a effectivement mis en place un système de test permettant de vérifier l'état de disponibilité de tous les endpoints.
+         Vous pouvez **également consulter la [page temps réel](http://temps-reel.entreprise.api.gouv.fr){:target="_blank"}** et ainsi vérifier si l'endpoint ne fonctionnant pas est indiqué comme DOWN dans l'interface. API Entreprise a effectivement mis en place un système de test permettant de vérifier l'état de disponibilité de tous les endpoints.
          <br><br>
       2. Si l'incident n'est pas répertorié, deux options se présentent : l'erreur provient de votre côté, ou bien elle n'a pas encore été identifiée par API Entreprise. Après avoir pris soin de regarder qu'il ne s'agit pas de la première option, vous pouvez nous contacter sur [support@entreprise.api.gouv.fr](mailto:support@entreprise.api.gouv.fr).
   panel7:
@@ -417,7 +417,7 @@ panels:
 
       #### Agir en cas d'indisponibilité globale avérée
 
-      En cas d'indisponibilité globale, l'ensemble des **endpoints seront indiqués comme DOWN dans l'interface de la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time){:target="_blank"}**.
+      En cas d'indisponibilité globale, l'ensemble des **endpoints seront indiqués comme DOWN dans l'interface de la [page temps réel](http://temps-reel.entreprise.api.gouv.fr){:target="_blank"}**.
       <br> <br>
       L'**état et les informations de l'incident seront disponibles dans la [*status page*](https://status.entreprise.api.gouv.fr/){:target="_blank"}**, mise à jour manuellement par API Entreprise. Vous y trouverez les informations les plus fraiches.
   panel8:
