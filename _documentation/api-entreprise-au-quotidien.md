@@ -410,7 +410,7 @@ panels:
       peut que ce soit dû à un incident côté fournisseurs de données.
 
 
-      1. Dans une telle situation, **la première chose à faire est de consulter la [*status page* d'API Entreprise](https://api-entreprise.instatus.com/){:target="_blank"}** et vérifier si l'indisponibilité n'y est pas répertoriée. Toutes les indisponibilités y sont inscrites dans le délai le plus court possible et parfois même anticipées lorsque le fournisseur de donnée nous prévient à l'avance d'une opération de maintenance.
+      1. Dans une telle situation, **la première chose à faire est de consulter la [*status page* d'API Entreprise](https://status.entreprise.api.gouv.fr/){:target="_blank"}** et vérifier si l'indisponibilité n'y est pas répertoriée. Toutes les indisponibilités y sont inscrites dans le délai le plus court possible et parfois même anticipées lorsque le fournisseur de donnée nous prévient à l'avance d'une opération de maintenance.
       <br><br>
          Vous pouvez **également consulter la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time){:target="_blank"}** et ainsi vérifier si l'endpoint ne fonctionnant pas est indiqué comme DOWN dans l'interface. API Entreprise a effectivement mis en place un système de test permettant de vérifier l'état de disponibilité de tous les endpoints.
          <br><br>
@@ -427,9 +427,9 @@ panels:
 
       #### Agir en cas d'indisponibilité globale avérée
 
-      En cas d'indisponibilité globale, l'ensemble des **endpoints seront indiqués comme DOWN dans l'interface de la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time){:target="_blank"}**. 
+      En cas d'indisponibilité globale, l'ensemble des **endpoints seront indiqués comme DOWN dans l'interface de la [page temps réel](https://dashboard.entreprise.api.gouv.fr/real_time){:target="_blank"}**.
       <br> <br>
-      L'**état et les informations de l'incident seront disponibles dans la [*status page*](https://api-entreprise.instatus.com/){:target="_blank"}**, mise à jour manuellement par API Entreprise. Vous y trouverez les informations les plus fraiches.    
+      L'**état et les informations de l'incident seront disponibles dans la [*status page*](https://status.entreprise.api.gouv.fr/){:target="_blank"}**, mise à jour manuellement par API Entreprise. Vous y trouverez les informations les plus fraiches.
   panel8:
     title: Élargir le périmètre des données demandées 🧩
     id: elargissement-perimetre
