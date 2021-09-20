@@ -86,14 +86,9 @@ services:
              {
           // LES INFORMATIONS GÉNÉRALES DE L'OPÉRATEUR ÉCONOMIQUE
 
-                "raison_sociale":"La bio pep's",
-                "denomination_courante":"Donnée indisponible",
-                // Parfois identique à la raison sociale, il s'agit du nom donné à l'entité concernée.
                 "siret":"48311105000025",
                 "numero_bio":18344,
                 // C'est le numéro qui accompagne l'opérateur économique (entreprise ou association certifiées en BIO) tout au long de sa vie, même en cas de changement d'activité, ou d'organisme de certification. Seul le changement de numéro de SIRET implique un changement du numéro BIO.
-                "numero_pacage": null,
-                // Cette donnée n'est actuellement pas disponible. Le numéro de PACAGE est l'identifiant de l'exploitation de l'opérateur dans sa déclaration d'aide PAC.
                 "date_derniere_mise_a_jour":"2020-10-27",
                 // Il s'agit de la dernière mise à jour faite par l'opérateur économique. Celle-ci n'implique donc pas une mise à jour de toutes les données.
                 "reseau":"",
@@ -199,7 +194,7 @@ services:
           question: Il n'y a aucun lien pour télécharger le certificat, est-ce normal ?
           answer: >-
             Oui, le certificat au format **PDF n'est pas disponible pour tous
-            les opérateurs, 10% des certificats ne sont pas accessibles**. 
+            les opérateurs, 10% des certificats ne sont pas accessibles**.
             <br><br>
             Dans le cas où celui-ci est disponible, cet endpoint vous renvoie l'URL d'accès à la page HTML de l'organisme certificateur permettant de télécharger le certificat. Aujourd’hui, six organismes certificateurs (*Ecocert, Bureau Veritas, Certipaq, Alpes controles, Certis* et *Control Union*) ont mis en ligne les certificats.
         qr3:
