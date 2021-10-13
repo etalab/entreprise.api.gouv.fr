@@ -130,7 +130,7 @@ perimeter:
 
 
 
-    **Fraicheur de la donnée :** <br>La mise a jour des données est faite quotidiennement entre 0h et 3h à l'INSEE.<br>
+    **Fraicheur de la donnée :** <br>La mise a jour des données est faite quotidiennement entre 0h et 3h à l'INSEE.<br>Concernant les données provenant d'Infogreffe (mandataires sociaux et observations), celles-ci sont mises à jour en temps réel avec les greffes. La donnée est donc la plus récente possible, modulo le temps de saisie nécessaire pour les greffiers.
 
 
     **Pour en savoir plus :** <br> [Contexte juridique du Répertoire National d’identification des entreprises et des établissements](https://www.legifrance.gouv.fr/affichCode.do;jsessionid=134EFA0EE7BDCA89C2D6B31E02C48430.tplgfr30s_3?idSectionTA=LEGISCTA000006178890&cidTexte=LEGITEXT000005634379&dateTexte=20100904){:target="_blank"}
