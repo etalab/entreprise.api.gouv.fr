@@ -3,6 +3,7 @@ require 'mina/bundler'
 require 'mina/git'
 require 'mina/rbenv'
 require 'colorize'
+require 'securerandom'
 
 ENV['domain'] || raise('no domain provided'.red)
 
@@ -26,6 +27,15 @@ ensure!(:branch)
 set :shared_files, fetch(:shared_files, []).push(*%w[
   _algolia_api_key
 ])
+
+def samhain_db_update
+  samhain_listfile = "/tmp/listfile-#{SecureRandom.hex(48)}"
+
+  comment %{Updating Samhain signature database}
+  command %{find "/var/www/entreprise.api.gouv.fr" >#{samhain_listfile}}
+  command %{sudo /usr/local/sbin/update-samhain-db.sh #{samhain_listfile}}
+  command %{rm -f #{samhain_listfile}}
+end
 
 task :remote_environment do
   if ENV['domain'] != 'localhost'
@@ -51,6 +61,7 @@ task :deploy do
     invoke :algolia_indexing
     invoke :'deploy:cleanup'
   end
+  samhain_db_update
 end
 
 task :cgu_to_pdf do
