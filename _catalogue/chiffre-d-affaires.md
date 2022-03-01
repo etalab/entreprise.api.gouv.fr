@@ -29,7 +29,7 @@ perimeter:
     Seuls les trois derniers exercices sont renvoyés. <br>ℹ️ Ceux-ci ne sont pas forcément les exercices des trois dernières années car il peut y avoir plusieurs exercices dans une même année.
 
 
-    P.S: les autoentrepreneurs ne sont pas soumis à l'IS mais à l'IR ; le chiffre d'affaire n'est donc pas disponible via API Entreprise.
+    P-S : les micro-entrepreneurs ne sont pas soumis à l'IS mais à l'IR ; le chiffre d'affaire n'est donc pas disponible via API Entreprise.
   label: Entreprises soumises à l'IS, en régime normal ou simplifié.
 services:
   service1:
