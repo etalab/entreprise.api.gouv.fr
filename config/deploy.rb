@@ -11,7 +11,6 @@ ENV['to'] = 'production'
 comment "Deploy to #{ENV['domain'].green}"
 
 set :commit, ENV['commit']
-set :user, 'deploy'
 set :application_name, 'entreprise.api.gouv.fr'
 
 set :deploy_to, '/var/www/entreprise.api.gouv.fr'
@@ -28,13 +27,8 @@ set :shared_files, fetch(:shared_files, []).push(*%w[
   _algolia_api_key
 ])
 
-def samhain_db_update
-  samhain_listfile = "/tmp/listfile-#{SecureRandom.hex(48)}"
-
-  comment %{Updating Samhain signature database}
-  command %{find "/var/www/entreprise.api.gouv.fr" >#{samhain_listfile}}
-  command %{sudo /usr/local/sbin/update-samhain-db.sh #{samhain_listfile}}
-  command %{rm -f #{samhain_listfile}}
+task :samhain_db_update do
+  command %{sudo /usr/local/sbin/update-samhain-db.sh "/var/www/entreprise.api.gouv.fr"}
 end
 
 task :remote_environment do
@@ -60,8 +54,9 @@ task :deploy do
     invoke :cgu_to_pdf
     invoke :algolia_indexing
     invoke :'deploy:cleanup'
+    invoke :'ownership'
   end
-  samhain_db_update
+  invoke :'samhain_db_update'
 end
 
 task :cgu_to_pdf do
@@ -72,4 +67,8 @@ end
 task :algolia_indexing do
   comment 'Indexing content on Algolia'.green
   command %{bundle exec ruby ./bin/algolia_indexer.rb}
+end
+
+task :ownership do
+  command %{sudo chown -R deploy /var/www/entreprise.api.gouv.fr}
 end
