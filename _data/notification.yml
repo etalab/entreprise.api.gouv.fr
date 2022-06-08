@@ -1,7 +1,7 @@
 ---
 # false = hide
 # true = show
-enable: true
+enable: false
 # only info and notice for now
 kind: info
 text: <b>Nouvelle fonctionnalité !</b> Consultez l'état de toutes nos API depuis <a href="https://status.entreprise.api.gouv.fr//">notre page de statut</a>. <br> Pour être informé des opérations de maintenance et des incidents, <a href="https://status.entreprise.api.gouv.fr/subscribe/email">abonnez-vous aux 📬 notifications</a>.
