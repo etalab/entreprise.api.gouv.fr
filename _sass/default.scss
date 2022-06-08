@@ -19,3 +19,11 @@
 @import 'documentation';
 @import 'support';
 @import 'newsletters';
+
+.fixed-banner {
+  background-color: var(--danger);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
