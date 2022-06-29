@@ -1,3 +1,8 @@
+# Projet archivé 
+
+Ce répertoire est archivé au profit de https://github.com/etalab/admin_api_entreprise/
+Il reste cependant en production jusqu'à fin 2023 ici : https://v2.entreprise.api.gouv.fr/
+
 # Website for API Entreprise
 
 You can view the sandbox branch at this url:
