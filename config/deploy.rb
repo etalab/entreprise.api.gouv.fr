@@ -54,7 +54,6 @@ task :deploy do
     invoke :cgu_to_pdf
     invoke :algolia_indexing
     invoke :'deploy:cleanup'
-    invoke :'ownership'
   end
   invoke :'samhain_db_update'
 end
@@ -67,8 +66,4 @@ end
 task :algolia_indexing do
   comment 'Indexing content on Algolia'.green
   command %{bundle exec ruby ./bin/algolia_indexer.rb}
-end
-
-task :ownership do
-  command %{sudo chown -R deploy /var/www/entreprise.api.gouv.fr}
 end
