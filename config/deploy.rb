@@ -27,8 +27,19 @@ set :shared_files, fetch(:shared_files, []).push(*%w[
   _algolia_api_key
 ])
 
+namespace :bundle do
+  desc 'Sets the Bundler config options.'
+  task :config do
+    comment %{Setting the Bundler config options (and cleaning default options)}
+    set :bundle_options, -> { '' }
+    command %{#{fetch(:bundle_bin)} config set --local deployment 'true'}
+    command %{#{fetch(:bundle_bin)} config set --local path '#{fetch(:bundle_path)}'}
+    command %{#{fetch(:bundle_bin)} config set --local without '#{fetch(:bundle_withouts)}'}
+  end
+end
+
 task :samhain_db_update do
-  command %{sudo /usr/local/sbin/update-samhain-db.sh "/var/www/entreprise.api.gouv.fr"}
+  command %{sudo /usr/local/sbin/update-samhain-db.sh "#{fetch(:deploy_to)}"}
 end
 
 task :remote_environment do
@@ -48,8 +59,9 @@ task :deploy do
     # instance of your project.
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
-    set :bundle_options, fetch(:bundle_options) + ' --clean'
+    invoke :'bundle:config'
     invoke :'bundle:install'
+    invoke :'bundle:clean'
     command %( JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_production.yml )
     invoke :cgu_to_pdf
     invoke :algolia_indexing
